@@ -1,7 +1,6 @@
 angular.module('AnalyticsApp')
 
 .controller("commonController", ['$scope','$rootScope','$location','$window',function ($scope, $rootScope, $location, $window) {
-
     window.requestStack = {};
     var idleTimeout = window.appConstants.IDLE_TIMEOUT * 60 * 1000;
 	var date = new Date();
