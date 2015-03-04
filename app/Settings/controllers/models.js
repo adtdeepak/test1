@@ -182,9 +182,10 @@ angular.module("Settings")
         param:"file",
         submit: function () {
         	$scope.uploadingModels = true;
-            addModelRequest[requestConstants.MODEL_ID] = sharedProperties.getModelId();
+            addModelRequest[requestConstants.MODEL_ID] = parseInt(sharedProperties.getModelId());
             //addModelRequest[requestConstants.MODEL_DETAILS] = modelName;
-            addModelRequest[requestConstants.MODEL_VERSION] = modelVersion;
+			addModelRequest[requestConstants.NEW_MODEL] = true;
+            //addModelRequest[requestConstants.MODEL_VERSION] = modelVersion;
         },
         done: function (data) {
             console.log("Done Func", arguments);

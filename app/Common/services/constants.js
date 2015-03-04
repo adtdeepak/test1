@@ -224,6 +224,7 @@ angular.module('AnalyticsApp')
 	//for Models Page
 	MODELS.MODEL_ID = "modelId";
 	MODELS.MODEL_DETAILS = "modelDetails";
+	MODELS.NEW_MODEL = "newModel";
 	MODELS.MODEL_FILE = "modelFile";
 	MODELS.MODEL_VERSION = "modelVersion";
 	
