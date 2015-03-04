@@ -17,11 +17,7 @@ angular.module('Home')
 		console.log('$scope.loadingChangePwdResult',data)
 		if(data.status==responseConstants.STATUS_OKAY){
 			$scope.showNetworkError = false;
-//			if(data.updateSuccess == true){
-				console.log("success");
 				$window.location="home.htm";
-//			}else{
-//			}
 		}else{
 			$scope.showNetworkError = true;
 		}
@@ -49,10 +45,7 @@ angular.module('Home')
 	function loadChangePasswordDetails(){
 		$scope.loadingChangePwdResult = true;
 		//request
-		//requestData[requestConstants.OLD_PASSWORD] = $scope.oldPassword;
 		requestData[requestConstants.NEW_PASSWORD] = $scope.newPassword;
-		//requestData[requestConstants.CONFIRM_PASSWORD] = $scope.confirmPassword;
-		console.log("change Password request:", requestData)
 		//DataService call
 		DataService.getChangePasswordDetails(requestData, $scope.success, $scope);
 		//temporary have to remove the below code
