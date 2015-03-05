@@ -354,12 +354,14 @@
 				listOfConvActivity.push(tempObj);
 			}
 		});
-		  var fromDate = ($scope.fromDate!="na")? moment($scope.fromDate).format(window.appConstants.DATE_FORMAT):"";
+		
+		//Temporarily removing active till date
+		/*  var fromDate = ($scope.fromDate!="na")? moment($scope.fromDate).format(window.appConstants.DATE_FORMAT):"";
 	      var toDate = ($scope.toDate!="na")? moment($scope.toDate).format(window.appConstants.DATE_FORMAT):"";
 		filter['activeTillDate'] = {
 				"greaterThanDate": fromDate,
 				"lessThanDate": toDate
-		};
+		};*/
 		filter['convUplift'] = {
 				"greaterThan": $scope.value.num,
 				"asPercentage": false
@@ -413,12 +415,14 @@
 		             };
 		             listOfConvActivity.push(tempObj);
 		      });
-		      var fromDate = ($scope.fromDate!="na")? moment($scope.fromDate).format(window.appConstants.DATE_FORMAT):"";
+			  
+			//Temporarily removing active till date
+		    /*  var fromDate = ($scope.fromDate!="na")? moment($scope.fromDate).format(window.appConstants.DATE_FORMAT):"";
 		      var toDate = ($scope.toDate!="na")? moment($scope.toDate).format(window.appConstants.DATE_FORMAT):"";
 		      requestSetDO['activeTillDate'] = {
 		                   "greaterThanDate": fromDate,
 		              "lessThanDate": toDate
-		      };
+		      };*/
 		      requestSetDO['convUplift'] = {
 		                   "greaterThan": $scope.value.num,
 		              "asPercentage": false
