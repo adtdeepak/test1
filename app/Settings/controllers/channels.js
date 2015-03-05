@@ -71,12 +71,13 @@ angular.module("Settings")
 		sharedProperties.setDefaultChannelId(channelId);
 		$.each(tableData.channelList, function (key, eachRow) {
 			if(eachRow.channelId == channelId){
+				var lastModifiedDate =  moment(eachRow.lastModifiedDate).format(window.appConstants.DATE_FORMAT);
 				//Request
 				editChannelsSaveRequest[requestConstants.CHANNEL_ID] = channelId;
 				editChannelsSaveRequest[requestConstants.CHANNEL_TYPE] = eachRow.channelType;
 				editChannelsSaveRequest[requestConstants.ESTIMATE_COST] = eachRow.estimateCost;
 				editChannelsSaveRequest[requestConstants.ESTIMATE_TIME] = eachRow.estimateTime;
-				editChannelsSaveRequest[requestConstants.LAST_MODIFIED_DATE] = eachRow.lastModifiedDate;
+				editChannelsSaveRequest[requestConstants.LAST_MODIFIED_DATE] = lastModifiedDate;
 				editChannelsSaveRequest[requestConstants.LAST_MODIFIED_BY] = eachRow.lastModifiedBy;
 				editChannelsSaveRequest[requestConstants.DEFAULT_CHANNEL] = true;
 				editRequest['channel'] = editChannelsSaveRequest;
