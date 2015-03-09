@@ -290,7 +290,7 @@ angular.module('AnalyticsApp')
 	
 	/*-----------------------login-----------------------------*/
 	var LOGIN_URL = BASE_URL_VERSION + "/login";
-	var LOGOUT_URL = BASE_URL_VERSION + "/logout";
+	var LOGOUT_URL = BASE_URL_VERSION + "/session";
 	var CHANGE_PASS_URL = BASE_URL_VERSION + "/settings/changePassword";
 	
 	/*-----------------Decision Workbench module------------------*/

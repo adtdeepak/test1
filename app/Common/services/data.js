@@ -31,7 +31,7 @@ angular.module('AnalyticsApp')
 	};	
 	
 	this.logoutCall = function(){
-		NetworkService.get(RequestConstantsFactory['LOGOUT_URL']);
+		NetworkService.delete(RequestConstantsFactory['LOGOUT_URL']);
 	}
 	
 }])

@@ -22,8 +22,9 @@ angular.module('AnalyticsApp',['ngRoute','jmdobry.angular-cache'])
 		}
 	});
 	
+	//Function to be executed when logout
 	$scope.logout = function(){
-		//CommonDataService.logoutCall();
+		CommonDataService.logoutCall();
 		$window.location="login.htm";
 	}
 
