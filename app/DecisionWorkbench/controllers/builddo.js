@@ -160,7 +160,7 @@ angular.module('DecisionWorkbench')
 			});
 			var channelId = $scope.selectChannel;
 			if($scope.selectChannel == null){
-				channelId = "";
+				channelId = "na";
 			}
 			var requestDoSave = {
 					"doId": dOptionId,
