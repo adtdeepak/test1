@@ -15,9 +15,16 @@ angular.module("Settings")
 	//Loading constants for the request
 	var requestConstants = RequestConstantsFactory['CHANNELS'];
 	var errorConstants = RequestConstantsFactory['ERROR_MSGS'];
+	
 	//This is for loading the table when 'add', 'edit' or 'delete' functionality is done
-	$rootScope.$on('channelsDataChange',function(event, data){
-		$scope.addData(data);
+	$rootScope.$on('channelsDataChange',function(event, data, isDefaultChannelDeleted){
+		if(isDefaultChannelDeleted == true || isDefaultChannelDeleted == false){
+			//loading success after deleting channel
+			$scope.addDataAfterDeleteChannel(data, isDefaultChannelDeleted);
+		}else{
+		//loading success after add or edit channel
+			$scope.addData(data, isDefaultChannelDeleted);
+		}
 	});
 
 	var tableData = {}; 
@@ -26,7 +33,7 @@ angular.module("Settings")
 	$scope.dataLoaded = false;
 	$scope.options = UtilitiesService.getDataTableOptions();
 
-	//For loading the table data
+	//For loading the table data at initial load,after add channel and edit channel
 	$scope.addData = function (data) {
 		try {
 			tableData = data;
@@ -36,6 +43,40 @@ angular.module("Settings")
 
 			if(!data){
 				throw "noDataError";
+			}
+			$.each(data.channelList, function (key, obj) {
+				if($scope.isChannelsEditable){
+					$scope.options.aaData.push([key+1, obj.channelType, UtilitiesService.getLocaleString(obj.estimateCost), obj.estimateTime, obj.lastModifiedDate, obj.lastModifiedBy,"<a class='editleft' title='Edit' name='modal' href='#' data-id='"+obj.channelId+"' data-modal='#channelEditDialog'></a>"
+					                            +"<a class='delete' title='Delete' name='modal' data-id='"+obj.channelId+"' href='#' data-modal='#deleteChannelDialog'></a>","<input type='radio' name='defaultChannel' ng-modal='channelDefault' data-id='"+obj.channelId+"' ng-checked='"+obj.defaultChannel+"' ng-click=\"tableData('"+obj.channelId+"')\"/>"]);
+				}else{
+					$scope.options.aaData.push([key+1, obj.channelType, obj.estimateCost, obj.estimateTime, obj.lastModifiedDate, obj.lastModifiedBy]);
+				}
+				//set the default channel
+				if(obj.defaultChannel == true){
+					sharedProperties.setDefaultChannelId(obj.channelId);
+				}
+			})
+		} catch (e) {
+			$scope.fail(errorConstants.DATA_ERR);
+		}
+	};
+	
+	//For loading the table data after delete channel
+	$scope.addDataAfterDeleteChannel = function (data, isDefaultChannelDeleted) {
+		try {
+			tableData = data;
+			$scope.dataLoaded = true;
+			$scope.error = false;
+			$scope.options.aaData = [];
+
+			if(!data){
+				throw "noDataError";
+			}
+			
+			//Setting the channel in the first row of table as default after default channel is deleted
+			if(isDefaultChannelDeleted == true){
+				data.channelList[0].defaultChannel = true;
+				$scope.channelsInfo(data.channelList[0].channelId);
 			}
 			$.each(data.channelList, function (key, obj) {
 				if($scope.isChannelsEditable){
@@ -236,7 +277,7 @@ angular.module("Settings")
 		deleteChannels(deleteRequest);
 	}
 
-	//Common success function for add, edit and delete channel
+	//Common success function for add and edit channel
 	$scope.success = function (data) {
 		try {
 			$scope.dataLoaded = true;
@@ -248,6 +289,34 @@ angular.module("Settings")
 				UtilitiesService.getNotifyMessage("Channels Updated Successfully",notifyRequestConstants.SUCCESS);
 				$scope.savingChannels = false;
 				$rootScope.$broadcast('channelsDataChange', data);
+				$('#mask, .window').hide();
+			}
+			else {
+				$scope.showError = true;
+				$scope.savingChannels = false;
+			}
+			
+		} catch (e) {
+			UtilitiesService.throwError(e);
+		}
+	};
+	
+	//Success function for delete channel
+	$scope.deleteChannelSuccess = function (data) {
+		try {
+			$scope.dataLoaded = true;
+			if(!data){
+				throw "noDataError";
+			}
+			if(data.status == 'OK'){
+				$scope.showError = false;
+				UtilitiesService.getNotifyMessage("Channels Updated Successfully",notifyRequestConstants.SUCCESS);
+				$scope.savingChannels = false;
+				var isDefaultChannelDeleted = false;
+				if(deleteRequest.channelId == sharedProperties.getDefaultChannelId()){
+					isDefaultChannelDeleted = true;
+				}
+				$rootScope.$broadcast('channelsDataChange', data, isDefaultChannelDeleted);
 				$('#mask, .window').hide();
 			}
 			else {
@@ -275,7 +344,7 @@ angular.module("Settings")
 
 	//to delete the particular channel
 	function deleteChannels(requestData){
-		var func = $scope.success;
+		var func = $scope.deleteChannelSuccess;
 		DataService.deleteChannels(requestData, func, $scope.fail);
 	}
 
@@ -307,7 +376,7 @@ angular.module("Settings")
 		$scope.showError = false;
 		$scope.savingChannels = false;
 		$scope.$apply();
-		$scope.$apply();
+		//$scope.$apply();
 	}
 	//Function calls the dataservice for getting the last modifiedby userlist data for setup
 	function loadUserListForSetup(){
