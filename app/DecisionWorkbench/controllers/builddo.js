@@ -33,6 +33,10 @@ angular.module('DecisionWorkbench')
 			$scope.modifyTableData = data;
 			if( $scope.modifyTableData.doDetails.doId == $scope.currentIndex)
 			{	
+				$scope.isChannelAvailable = true;
+				if($scope.modifyTableData.doDetails.channelList.length == 0 || $scope.modifyTableData.doDetails.channelList[0].channelId == "na"){
+					$scope.isChannelAvailable = false;
+				}
 				$scope.modifyData = $scope.modifyTableData.doDetails;
 				dOptionId = data['doDetails'].doId;	
 			}
