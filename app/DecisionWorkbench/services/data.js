@@ -162,38 +162,13 @@ angular.module('DecisionWorkbench')
 				success, 
 				fail,
 				function(result) {
-					var cData = DataConversionService.toGetBuildDoChartData(result);
+					//var cData = DataConversionService.toGetBuildDoChartData(result);
+					var cData = result.doDetails;
 					return cData;
 				}
 		);
 		sendRequest(cacheKey, "decision-workbench-reviewdoCache", success, requestWS);
-		/*var result = {
-				"doId": "4",
-				"targetConvActivityList": 
-				{
-					"convActivityId": "files_sent_archival_flag",
-					"convActivityName": "Search"
-				},
-				"channelList": 
-				{
-					"channelId": "ch1",
-					"channelName": "Recipient Page"
-				},
-				"userGroupList": 
-				{
-					"groupId": "UsrGrp0",
-					"groupName": "User Group 0"
-				},
-				"expectedNewSub": "1890",
-				"usersTargeted": "2000",
-				"convUplift": {
-					"value": "4.67284",
-					"trend": "+ive"
-				}
-		};
-		success(result);
-		//requestWS();
-*/	};
+	};
 
 	this.getDecisionOptionsTableData = function(reqData, success, fail) {
 		var cacheKey = "ReviewDoTable" + JSON.stringify(reqData);

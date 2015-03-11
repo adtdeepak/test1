@@ -232,6 +232,7 @@ angular.module('DecisionWorkbench')
 
 	var errorConstants = RequestConstantsFactory['ERROR_MSGS'];
 	$scope.dataLoaded = false;
+	$rootScope.chartError = false;
 	var requestData = {
 			"groupBy" : "cmpgnView",
 	};
@@ -240,6 +241,7 @@ angular.module('DecisionWorkbench')
 	$scope.showChart = false;
 	var buildDoChartOptions = ChartOptionsService.getBuildDoData();
 	$scope.success = function (builddoChart) {
+		$rootScope.chartError = false;
 		$scope.currentAchievableChart = builddoChart;
 		try {
 			$scope.dataLoaded = true;
@@ -261,6 +263,7 @@ angular.module('DecisionWorkbench')
 		}
 	}
 	$scope.fail = function (msg) {
+		$rootScope.chartError = true;
 		$scope.error = true;
 		$scope.hasErrorMsg = true;
 		$rootScope.$emit('chartError');
@@ -286,10 +289,14 @@ angular.module('DecisionWorkbench')
 		var achievableUplift = DataConversionService.toGetChartFromCombinedDO($scope.currentData, $scope.currentAchievableChart['paidUsers']);
 		buildDoChartOptions.xAxis.categories[4] = "Conv Uplift "+ data.doId;
 		
-		if(achievableUplift.data)
+		if(achievableUplift.data){
+            $rootScope.chartError = false;
 			chartsService.waterfall.call($("#buildDoChart"), achievableUplift, buildDoChartOptions, $scope);	
-        else
+		}
+        else{
             $scope.error = true;
+			$rootScope.chartError = true;
+		}
 	}
 	
 	function loadCombinedDO(event, selectedIndex){
@@ -369,6 +376,10 @@ angular.module('DecisionWorkbench')
 	}
 	//adds the selected dos to the review panel
 	$scope.addSelectedDOs = function() {
+		//Checking whether the chart is loaded or not
+		if($rootScope.chartError == true){
+			return false;
+		}
 		var expectedNewSub;
 		if($rootScope.selectDOs.length > 0) {
 			var selectedDO = {
@@ -452,9 +463,9 @@ angular.module('DecisionWorkbench')
 			}
 		}
 	}
-	$rootScope.$on('chartError',function(){
+	/*$rootScope.$on('chartError',function(){
 		$scope.fail(errorConstants.DATA_ERR);
-	})
+	})*/
 	$scope.$on('chartLoaded', function () {
 		$rootScope.chartLoading = false;
 		var selectedIndex = [];
