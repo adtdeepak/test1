@@ -268,6 +268,7 @@ angular.module('DecisionWorkbench')
 	}
 	$scope.fail = function (msg) {
 		$rootScope.chartError = true;
+		//for enable check box in builddo table
 		$rootScope.chartLoading = false;
 		$scope.error = true;
 		$scope.hasErrorMsg = true;
@@ -288,6 +289,7 @@ angular.module('DecisionWorkbench')
 
 	$scope.$on('doSelected',loadCombinedDO);
 	$scope.addChart = function(data){
+		$scope.error = false;
 		$rootScope.chartLoading = false;
 		$scope.showChart = true;
 		$scope.currentData =  data;
@@ -304,13 +306,17 @@ angular.module('DecisionWorkbench')
 		}
 	}
 	
+	var combinedDOLength = 0;
 	function loadCombinedDO(event, selectedIndex){
-		console.log("ppp getCombinedDO", selectedIndex)
-		var requestData = {
-				"doIdList":selectedIndex
-		};
-		var func = $scope.addChart; 
-		DataService.getCombinedDO(requestData, func,$scope.fail);
+		if(selectedIndex.length != combinedDOLength){
+			console.log("ppp getCombinedDO", selectedIndex)
+			combinedDOLength = selectedIndex.length;
+			var requestData = {
+					"doIdList":selectedIndex
+			};
+			var func = $scope.addChart; 
+			DataService.getCombinedDO(requestData, func,$scope.fail);
+		}
 	}
 }])
 
@@ -507,26 +513,30 @@ angular.module('DecisionWorkbench')
 				$scope.fail(errorConstants.DATA_ERR);
 			}
 		};
+		var oldID = 0;
 		$scope.getDONumber = function(doId) {
-			$rootScope.dosUpdated = true;
-			actualData.forEach(function(data){
-				if(doId == data.doId) {
-					if($('#DORow_'+ doId).is(':checked')) {
-						$rootScope.selectDOs.push(data);
-						selectedIndex.push(doId);
-					} else {
-						$rootScope.selectDOs = $rootScope.selectDOs.filter(function( obj ) {
-							return obj.doId != doId;
-						});
-						selectedIndex = [];
-						$rootScope.selectDOs.forEach(function(DO){
-							selectedIndex.push(DO.doId);
-						});
+			if(oldID != doId || !($('#DORow_'+ doId).is(':checked'))){
+				$rootScope.dosUpdated = true;
+				actualData.forEach(function(data){
+					if(doId == data.doId) {
+						if($('#DORow_'+ doId).is(':checked')) {
+							$rootScope.selectDOs.push(data);
+							selectedIndex.push(doId);
+						} else {
+							$rootScope.selectDOs = $rootScope.selectDOs.filter(function( obj ) {
+								return obj.doId != doId;
+							});
+							selectedIndex = [];
+							$rootScope.selectDOs.forEach(function(DO){
+								selectedIndex.push(DO.doId);
+							});
+						}
 					}
-				}
-			});
-			$rootScope.chartLoading = true;
-			$rootScope.$broadcast('doSelected', selectedIndex);
+				});
+				$rootScope.chartLoading = true;
+				$rootScope.$broadcast('doSelected', selectedIndex);
+				oldID = doId;
+			}
 		}
 		
 		$scope.$watch(

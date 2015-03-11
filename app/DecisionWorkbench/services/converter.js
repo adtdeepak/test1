@@ -479,7 +479,7 @@ angular.module('DecisionWorkbench')
 					value : deficitValue
 				},{
 					name :"Maximum Uplift",
-					value : parseInt("0" + eachData.paidUsers.covUplift)
+					value : parseFloat("0" + eachData.paidUsers.covUplift).toFixed(10)
 				});
 
 				//datas of top and least engaged activities
