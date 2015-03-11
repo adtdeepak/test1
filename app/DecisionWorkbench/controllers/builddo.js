@@ -264,6 +264,7 @@ angular.module('DecisionWorkbench')
 	}
 	$scope.fail = function (msg) {
 		$rootScope.chartError = true;
+		$rootScope.chartLoading = false;
 		$scope.error = true;
 		$scope.hasErrorMsg = true;
 		$rootScope.$emit('chartError');
@@ -569,5 +570,13 @@ angular.module('DecisionWorkbench')
 		loadData();
 	});
 }])
+
+
+
+
+
+
+
+
 
 
