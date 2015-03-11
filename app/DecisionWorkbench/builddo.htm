@@ -13,7 +13,8 @@
 						</figure> <span><img alt="Tooltip" src="images/tooltip-arrow.png"
 							class="callout">{{Tooltip.TOOLTIP_DECISIONWB_ACHIEVABLE_UPLIFT}}</span>
 					</a>
-					<div id="buildDoChart" ng-hide="error" class="clearfix" ng-show="!error && showChart"></div>				</div>
+					<div id="buildDoChart" ng-hide="error || !dataLoaded" class="clearfix"></div>			
+					</div>
 				<div ng-controller="reviewPanel">
 					<a href="#" class="chartarrow"> <img src="images/chartarrow.png" ng-click="addSelectedDOs()"/>
 					</a>
