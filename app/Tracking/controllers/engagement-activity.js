@@ -156,7 +156,7 @@ angular.module('Tracking')
                 throw { message: "Selected period data not available!", type: "internal" };
                 
             engagementActivity = engagementActivity[$rootScope.selectedPeriod];
-            if(eaScoreWidget){
+            if(eaScoreWidget && !(UtilitiesService.isObjectEmpty(eaScoreWidget))){
             	//to avoid repeated adding of eascore widget
     			var updateWidgets = true;
             	$.each(engagementActivity, function(key, obj){
@@ -167,7 +167,9 @@ angular.module('Tracking')
             	if(updateWidgets){
                 	engagementActivity.push(eaScoreWidget);
             	}
-            }
+            }else if(UtilitiesService.isObjectEmpty(eaScoreWidget)){
+				loadData();
+			}
             $scope.engagementActivity = engagementActivity;
             $scope.menu.setData($scope.engagementActivity);
         } catch (e) {
@@ -181,6 +183,7 @@ angular.module('Tracking')
     		"actualToDate":eaScore.score,
     		"subgroupName":"EA Score",
     		"subGroupBy":"enScore",
+			"groupBy":"EA",
     		"monthlyAvg":eaScore.versusLastMonth
     	};
     	eaScoreWidget = tempObj;
@@ -258,7 +261,17 @@ angular.module('Tracking')
         $scope.error = false;
 		loadData();
 	});
-    $scope.$on('dataReady', loadData);
+    //$scope.$on('dataReady', loadData);
+	$scope.$on('dataReady', function(event, widgetType){
+		if(widgetType == "EA"){
+			loadData();
+		}
+   })
+	$rootScope.$on('widgetSelected', function(event, widgetType){
+		if(widgetType == "EA"){
+			loadData();
+		}
+   })
     $rootScope.$on('EngagementActivityDataError',function(){
 		$scope.fail(errorConstants.DATA_ERR);
 	})
@@ -324,7 +337,17 @@ angular.module('Tracking')
         $scope.error = false;
 		loadData();
 	});
-   $scope.$on('dataReady', loadData);
+  // $scope.$on('dataReady', loadData);
+   $scope.$on('dataReady', function(event, widgetType){
+		if(widgetType == "EA"){
+			loadData();
+		}
+   })
+   $rootScope.$on('widgetSelected', function(event, widgetType){
+		if(widgetType == "EA"){
+			loadData();
+		}
+   })
     $rootScope.$on('EngagementActivityDataError',function(){
 		$scope.fail(errorConstants.DATA_ERR);
 	})
@@ -381,7 +404,7 @@ angular.module('Tracking')
             DataService.getEngagementActivityTrendData(requestData, func, $scope.fail);
     	}
     }
-  loadData();
+  //loadData();
 }])
 
 .controller("engagementActivityDeepDiveController",['$scope' ,'$rootScope','chartsService','DataService','Permission','DataConversionService','RequestConstantsFactory','UtilitiesService','sharedProperties',
@@ -395,7 +418,17 @@ angular.module('Tracking')
 		loadData();
 	});
     $rootScope.$on('onCacheExpiry', loadData);
-    $scope.$on('dataReady', loadData);
+    //$scope.$on('dataReady', loadData);
+	$scope.$on('dataReady', function(event, widgetType){
+		if(widgetType == "EA"){
+			loadData();
+		}
+   })
+	$rootScope.$on('widgetSelected', function(event, widgetType){
+		if(widgetType == "EA"){
+			loadData();
+		}
+   })
     $rootScope.$on('EngagementActivityDataError',function(){
 		$scope.fail(errorConstants.DATA_ERR);
 	})

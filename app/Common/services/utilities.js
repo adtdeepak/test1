@@ -486,6 +486,7 @@ throw exception;
 .service('sharedProperties', function () {
 
     var subGroupBy = null;
+	var widgetType = null;
     var headingStr = "";
     var maxValue = 1000;
     var deficitValue = 500;
@@ -502,6 +503,12 @@ throw exception;
         setSubGroupBy: function (value) {
         	console.log('VALUE',value)
             subGroupBy = value;
+        },
+		getWidgetType: function () {
+            return widgetType;
+        },
+		setWidgetType: function (wdgtType) {
+            widgetType = wdgtType;
         },
         getHeading: function () {
             return headingStr;

@@ -130,11 +130,13 @@ angular.module('AnalyticsApp')
 	    };
 	    	
 	    function menuSync() {
+			var widget;
 	    	//Sync menu only when both userSetting and data is available
 	    	if(userSettings && data && !menuSyncActive) {
                 menuSyncActive = true;
 		    	userSettings.menus.forEach(function(menu) {
 		    		data.forEach(function(dataEntry) {
+					widget = dataEntry.groupBy;
 		    			//"window.MENU_WIDGET_LINK[menu.menuItemID] == dataEntry.groupBy" condition has to be removed once API is updated
 			    		if(window.MENU_WIDGET_LINK[menu.menuId] && (window.MENU_WIDGET_LINK[menu.menuId] == dataEntry.subGroupBy || window.MENU_WIDGET_LINK[menu.menuId] == dataEntry.groupBy)) {
 			    			var typeSame = true;
@@ -166,7 +168,7 @@ angular.module('AnalyticsApp')
 		    		sharedProperties.setSubGroupBy($scope.urlIndex.currentlySelected);
 		            sharedProperties.setHeading($scope.urlIndex.name);
 		    	}
-                $rootScope.$broadcast('dataReady');
+                $rootScope.$broadcast('dataReady',widget);
                 menuSyncActive = false;
 	        }
         }
@@ -174,8 +176,10 @@ angular.module('AnalyticsApp')
 	    function loadSharedProperty(data) {
 	    	if(data.subGroupBy) {
 	    		sharedProperties.setSubGroupBy(data.subGroupBy);
+				sharedProperties.setWidgetType(data.groupBy);
 	    	} else {
 	    		sharedProperties.setSubGroupBy(data.groupBy);
+				sharedProperties.setWidgetType(data.groupBy);
 	    	}
 	    	if(data.subgroupName) {
 	    		sharedProperties.setHeading(data.subgroupName);
@@ -192,7 +196,8 @@ angular.module('AnalyticsApp')
 			function (newValue, oldValue) {
 				//load the data as per the selection
                 if(newValue != null && newValue != oldValue){
-		    	    $rootScope.$broadcast('dataReady');
+		    	  //  $rootScope.$broadcast('dataReady');
+					$rootScope.$broadcast('widgetSelected', sharedProperties.getWidgetType());
 				    $rootScope.heading = sharedProperties.getHeading();
                 }
 			}

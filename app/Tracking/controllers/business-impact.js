@@ -122,7 +122,17 @@ angular.module('Tracking')
         $scope.error = false;
 		loadData();
 	});
-    $scope.$on('dataReady', loadData);
+   // $scope.$on('dataReady', loadData);
+   $scope.$on('dataReady', function(event, widgetType){
+		if(widgetType == "BI"){
+			loadData();
+		}
+   })
+   $rootScope.$on('widgetSelected', function(event, widgetType){
+		if(widgetType == "BI"){
+			loadData();
+		}
+   })
     $rootScope.$on('onCacheExpiry', loadData);
     
     $rootScope.$on('businessImpactDataError',function(){
@@ -183,7 +193,17 @@ angular.module('Tracking')
         $scope.error = false;
 		loadData();
 	});
-    $scope.$on('dataReady', loadData);
+    //$scope.$on('dataReady', loadData);
+	 $scope.$on('dataReady', function(event, widgetType){
+		if(widgetType == "BI"){
+			loadData();
+		}
+   })
+	 $rootScope.$on('widgetSelected', function(event, widgetType){
+		if(widgetType == "BI"){
+			loadData();
+		}
+   })
     $rootScope.$on('onCacheExpiry', loadData);
     $rootScope.$on('businessImpactDataError',function(){
 		$scope.fail(errorConstants.DATA_ERR);
@@ -242,11 +262,18 @@ angular.module('Tracking')
         $scope.error = false;
 		loadData();
 	});
-    $scope.$on('dataReady', function(){
-        $scope.trigger = false;
-        $scope.$apply();
-        loadData();
-    });
+	 $scope.$on('dataReady', function(event, widgetType){
+		if(widgetType == "BI"){
+			loadData();
+		}
+   })
+    $rootScope.$on('widgetSelected', function(event, widgetType){
+		if(widgetType == "BI"){
+			$scope.trigger = false;
+			$scope.$apply();
+			loadData();
+		}
+   })
     
     $rootScope.$on('businessImpactDataError',function(){
 		$scope.fail(errorConstants.DATA_ERR);

@@ -162,6 +162,11 @@ angular.module('Tracking')
 		loadData();
 	});
 	$scope.$on('dataReady', loadData);
+	$rootScope.$on('widgetSelected', function(event, widgetType){
+		if(widgetType != "BI" && widgetType != "EA"){
+			loadData();
+		}
+   })
 	//To load the summary once the ajax call complete
 	$scope.loadingIsDone = false;
 	$scope.activeUserPerText = "";

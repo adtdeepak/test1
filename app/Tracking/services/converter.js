@@ -479,7 +479,7 @@ this.toTrackSummaryAcqTrend= function(data) {
 			}*/
 			_data[timeRange.periodName] = children;
 		});
-		console.log("iiii here:", _data)
+		//console.log("iiii here:", _data)
 		return _data;
 	}
 
