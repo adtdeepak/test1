@@ -117,16 +117,6 @@ angular.module('Tracking')
         }
     }
 
-//	$scope.$watch(
-//			function(){
-//				return sharedProperties.getSubGroupBy();
-//			},
-//			function (newValue) {
-//				console.log("iiiiiii2", newValue)
-//				loadData();
-//			}
-//	);
-
 	function loadData(forceSilent) { 
 		var requestData = UtilitiesService.getRequestData();
 		var func = $scope.success; 

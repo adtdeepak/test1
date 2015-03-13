@@ -81,8 +81,11 @@
 						 <ul ng-hide="error || !dataLoaded" class="summary-list clearfix">
                                         <li ng-show="businessImpactSummary.versusLast.value!=null">
                                             <div class="summarylistInnerwrap">
-                                                <div class="{{businessImpactSummary.versusLast.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
+                                                <div ng-if="businessImpactSummary.versusLast.value !='na'" class="{{businessImpactSummary.versusLast.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
                                                     {{businessImpactSummary.versusLast.value | number}}
+                                                </div>
+												<div ng-if="businessImpactSummary.versusLast.value =='na'" class="summary-value">
+                                                    Not Available
                                                 </div>
                                                 <p>
                                                     {{toLastText}}
@@ -91,8 +94,11 @@
                                         </li>
                                         <li ng-show="businessImpactSummary.versusSameLastYear.value!=null">
                                             <div class="summarylistInnerwrap">
-                                                <div class="{{businessImpactSummary.versusSameLastYear.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
+                                                <div ng-if="businessImpactSummary.versusSameLastYear.value!='na'" class="{{businessImpactSummary.versusSameLastYear.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
                                                     {{businessImpactSummary.versusSameLastYear.value| number}}
+                                                </div>
+												<div ng-if="businessImpactSummary.versusSameLastYear.value =='na'" class="summary-value">
+                                                    Not Available
                                                 </div>
                                                 <p>
                                                     {{toLastLYText}}
@@ -101,8 +107,11 @@
                                         </li>
                                         <li ng-show="businessImpactSummary.actualToDate!=null">
                                             <div class="summarylistInnerwrap ">
-                                                <div class="summary-value">
+                                                <div ng-if="businessImpactSummary.actualToDate!='na'" class="summary-value">
                                                    {{businessImpactSummary.actualToDate| number}}
+                                                </div>
+												<div ng-if="businessImpactSummary.actualToDate=='na'" class="summary-value">
+                                                   Not Available
                                                 </div>
                                                 <p>
                                                      {{businessImpactSummary.subgroupName}}
@@ -111,8 +120,11 @@
                                         </li>
                                         <li ng-show="businessImpactSummary.diffFromTarget.value!=null">
                                             <div class="summarylistInnerwrap">
-                                                <div class="{{businessImpactSummary.diffFromTarget.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
+                                                <div ng-if="businessImpactSummary.diffFromTarget.value!='na'" class="{{businessImpactSummary.diffFromTarget.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
                                                    {{businessImpactSummary.diffFromTarget.value| number}}
+                                                </div>
+												<div ng-if="businessImpactSummary.diffFromTarget.value=='na'" class="summary-value">
+                                                   Not Available
                                                 </div>
                                                 <p>
                                                     Difference from Target
@@ -121,8 +133,11 @@
                                         </li>
                                         <li ng-show="businessImpactSummary.forecast.value!=null">
                                             <div class="summarylistInnerwrap">
-                                                <div class="{{businessImpactSummary.forecast.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
+                                                <div ng-if="businessImpactSummary.forecast.value !='na'" class="{{businessImpactSummary.forecast.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
                                                      {{businessImpactSummary.forecast.value| number}}
+                                                </div>
+												<div ng-if="businessImpactSummary.forecast.value=='na'" class="summary-value">
+                                                   Not Available
                                                 </div>
                                                 <p>
                                                     {{forecastText}}

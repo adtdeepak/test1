@@ -32,7 +32,6 @@ angular.module('Tracking')
         $scope.error = false;
 		loadData();
 	});
-   // $scope.$on('dataReady', loadData);
 
     $scope.success = function (engagementScore) {
         try {
@@ -201,16 +200,7 @@ angular.module('Tracking')
             }
         }
     }
-//    $scope.$watch(
-//			function () {
-//			    return sharedProperties.getSubGroupBy();
-//			},
-//			function (newValue) {
-//				console.log("iiiiiii3", newValue)
-//			    loadData();
-//			}
-//	);
-//    
+	
     function loadData(forceSilent) {
     	var queryDate =  moment($rootScope.selectedDate).format(window.appConstants.DATE_FORMAT);
     	var requestData = {"groupBy": "EA"};
@@ -261,7 +251,7 @@ angular.module('Tracking')
         $scope.error = false;
 		loadData();
 	});
-    //$scope.$on('dataReady', loadData);
+	
 	$scope.$on('dataReady', function(event, widgetType){
 		if(widgetType == "EA"){
 			loadData();
@@ -337,7 +327,7 @@ angular.module('Tracking')
         $scope.error = false;
 		loadData();
 	});
-  // $scope.$on('dataReady', loadData);
+	
    $scope.$on('dataReady', function(event, widgetType){
 		if(widgetType == "EA"){
 			loadData();
@@ -387,7 +377,7 @@ angular.module('Tracking')
     	                                  {"maxRows": requestConstants.EA_SCORE_MAX_ROWS}, 
     	                                  {"maxRows": requestConstants.EA_SCORE_MAX_ROWS}],
     	                                   "queryDate" : queryDate};
-    //	var requestData = {"timeRanges": [{"maxRows": "5"}, {"maxRows": "5"}, {"maxRows": "5"}, {"maxRows": "5"}]};
+										   
         var utilData = UtilitiesService.getRequestData();
         requestData['groupBy'] = sharedProperties.getSubGroupBy();
         $.extend(true, requestData, utilData);
@@ -404,7 +394,7 @@ angular.module('Tracking')
             DataService.getEngagementActivityTrendData(requestData, func, $scope.fail);
     	}
     }
-  //loadData();
+	
 }])
 
 .controller("engagementActivityDeepDiveController",['$scope' ,'$rootScope','chartsService','DataService','Permission','DataConversionService','RequestConstantsFactory','UtilitiesService','sharedProperties',
@@ -418,7 +408,7 @@ angular.module('Tracking')
 		loadData();
 	});
     $rootScope.$on('onCacheExpiry', loadData);
-    //$scope.$on('dataReady', loadData);
+	
 	$scope.$on('dataReady', function(event, widgetType){
 		if(widgetType == "EA"){
 			loadData();
@@ -445,7 +435,6 @@ angular.module('Tracking')
         try {
             engagementActivityDeepDive = DataConversionService.toGetEngagementActivityDeepDiveData(engagementActivityDeepDive);
             $scope.dataLoaded = true;
-        	//console.log("iiiii:", engagementActivityDeepDive[$rootScope.selectedPeriod].moduleData)
             $scope.error = false;
             chartOBJ = chartsService.treemap.call($('.heatMap1'), engagementActivityDeepDive[$rootScope.selectedPeriod].moduleData, null, $scope);
            // chartOBJ = chartsService.treemap.call($('.heatMap2'), engagementActivityDeepDive[$rootScope.selectedPeriod].activityData, null, $scope);
@@ -545,14 +534,7 @@ angular.module('Tracking')
             }
         }
     }
-   /* $scope.$watch(
-			function () {
-			    return sharedProperties.getSubGroupBy();
-			},
-			function (newValue) {
-				 $scope.addData();
-			}
-	);*/
+	
     //var requestData = {"timeRanges": [{"maxRows": "5"}, {"maxRows": "5"}, {"maxRows": "5"}, {"maxRows": "5"}]};
     function loadData(forceSilent) {
     	var requestData = UtilitiesService.getRequestData();

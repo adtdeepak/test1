@@ -76,17 +76,6 @@ angular.module('Tracking')
         }
     }
 
-//    //Watching the value of shared property
-//    $scope.$watch(
-//		function () {
-//		    return sharedProperties.getSubGroupBy();
-//		},
-//		function (newValue) {
-//			console.log("iiiiiii1", newValue)
-//		    loadData();
-//		}
-//	);
-
     function loadData(forceSilent) {
     	var requestData = {"groupBy": "BI"};
     	var utilData = UtilitiesService.getRequestData();
@@ -346,5 +335,4 @@ angular.module('Tracking')
     	DataService.getBusinessImpactDeepDiveTableData(requestData, func, $scope.fail);
 
     }
-  //  loadData();
 }])

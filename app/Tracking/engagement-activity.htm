@@ -114,9 +114,12 @@
 					<ul ng-hide="error || !dataLoaded" class="summary-list clearfix">
                                         <li ng-show="engagementActivitySummary.versusLast.value!=null">
                                             <div class="summarylistInnerwrap">
-                                                <div class="{{engagementActivitySummary.versusLast.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
+                                                <div ng-if="engagementActivitySummary.versusLast.value !='na'" class="{{engagementActivitySummary.versusLast.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
                                                 	<!-- -212 -->
                                                     {{engagementActivitySummary.versusLast.value| number}}
+                                                </div>
+												<div ng-if="engagementActivitySummary.versusLast.value =='na'" class="summary-value">
+                                                    Not Available
                                                 </div>
                                                 <p>
                                                     {{toLastText}}
@@ -125,8 +128,11 @@
                                         </li>
                                         <li ng-show="engagementActivitySummary.versusSameLastYear.value!=null">
                                             <div class="summarylistInnerwrap">
-                                                <div class="{{engagementActivitySummary.versusSameLastYear.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
+                                                <div ng-if="engagementActivitySummary.versusSameLastYear.value !='na'" class="{{engagementActivitySummary.versusSameLastYear.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
                                                     {{engagementActivitySummary.versusSameLastYear.value| number}}
+                                                </div>
+												<div ng-if="engagementActivitySummary.versusSameLastYear.value =='na'" class="summary-value">
+                                                    Not Available
                                                 </div>
                                                 <p>
                                                     {{toLastLYText}}
@@ -135,9 +141,12 @@
                                         </li>
                                         <li ng-show="engagementActivitySummary.actualToDate!=null">
                                             <div class="summarylistInnerwrap">
-                                                <div class="summary-value">
+                                                <div ng-if="engagementActivitySummary.actualToDate !='na'" class="summary-value">
                                                    <!--  23,765 -->
                                                    {{engagementActivitySummary.actualToDate| number}}
+                                                </div>
+												<div ng-if="engagementActivitySummary.actualToDate =='na'" class="summary-value">
+                                                    Not Available
                                                 </div>
                                                 <p >
                                                     {{heading}}
@@ -146,9 +155,11 @@
                                         </li>
                                         <li ng-show="engagementActivitySummary.diffFromTarget.value!=null">
                                             <div class="summarylistInnerwrap">
-                                                <div class="{{businessImpactSummary.diffFromTarget.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
-                                                   <!--  3,235 -->
+                                                <div ng-if="engagementActivitySummary.diffFromTarget.value !='na'" class="{{engagementActivitySummary.diffFromTarget.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
                                                    {{engagementActivitySummary.diffFromTarget.value| number}}
+                                                </div>
+												<div ng-if="engagementActivitySummary.diffFromTarget.value =='na'" class="summary-value">
+                                                    Not Available
                                                 </div>
                                                 <p>
                                                     Difference from Target
@@ -157,9 +168,11 @@
                                         </li>
                                         <li ng-show="engagementActivitySummary.forecast.value!=null">
                                             <div class="summarylistInnerwrap last">
-                                                <div class="{{businessImpactSummary.forecast.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
-                                                    <!-- 27,000 -->
+                                                <div ng-if="engagementActivitySummary.forecast.value !='na'" class="{{engagementActivitySummary.forecast.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
                                                      {{engagementActivitySummary.forecast.value| number}}
+                                                </div>
+												<div ng-if="engagementActivitySummary.forecast.value =='na'" class="summary-value">
+                                                    Not Available
                                                 </div>
                                                 <p>
                                                     {{forecastText}}
