@@ -108,6 +108,12 @@ angular.module('AnalyticsApp')
 			  return new Date(a.forDateSorting) - new Date(b.forDateSorting);
 			});
     }
+	//Sort object based on the compareData passed
+	this.sortObject = function(object, compareData){
+    	object.sort(function(a,b){
+			  return a[compareData].localeCompare(b[compareData]);
+			});
+    }
     
     this.dateFormatConverterYearFirst = function(date){
     	var parts = date.split('/');

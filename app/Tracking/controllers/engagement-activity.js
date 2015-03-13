@@ -166,6 +166,7 @@ angular.module('Tracking')
             	if(updateWidgets){
                 	engagementActivity.push(eaScoreWidget);
             	}
+				UtilitiesService.sortObject(engagementActivity, "subGroupBy");
             }else if(UtilitiesService.isObjectEmpty(eaScoreWidget)){
 				loadData();
 			}
