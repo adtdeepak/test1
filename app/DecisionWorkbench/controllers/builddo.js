@@ -237,7 +237,6 @@ angular.module('DecisionWorkbench')
 	var errorConstants = RequestConstantsFactory['ERROR_MSGS'];
 	$scope.dataLoaded = false;
 	$rootScope.chartError = false;
-	var selectedDOForUpift = [];
 	var requestData = {
 			"groupBy" : "cmpgnView",
 	};
@@ -296,7 +295,7 @@ angular.module('DecisionWorkbench')
 		$scope.showChart = true;
 		$scope.currentData =  data;
 		var achievableUplift = DataConversionService.toGetChartFromCombinedDO($scope.currentData, $scope.currentAchievableChart['paidUsers']);
-		buildDoChartOptions.xAxis.categories[4] = "Conv Uplift "+ selectedDOForUpift;
+		buildDoChartOptions.xAxis.categories[4] = "Conv Uplift "+ data.doId;
 		
 		if(achievableUplift.data){
             $rootScope.chartError = false;
@@ -315,7 +314,6 @@ angular.module('DecisionWorkbench')
 			$scope.dataLoaded = false;
 			$scope.error = false;
 			combinedDOLength = selectedIndex.length;
-			selectedDOForUpift = selectedIndex;
 			var requestData = {
 					"doIdList":selectedIndex
 			};
@@ -511,36 +509,39 @@ angular.module('DecisionWorkbench')
 						: $scope.img = "<img  src='images/arrow-red.png' />";
 					$scope.options.aaData.push([obj.doId,obj.targetconvList,obj.channelList,obj.userGroup,obj.expectedNewSub,obj.usersTargetted,$scope.img+obj.convUplift.value,"<a href='#' data-modal='#modifyDialog' name='modal' data-id='"+obj.doId+"' class='edit'"
 					                            +"title='Edit'></a><a title='Validate' href='#' data-modal='#dialog' data-id='"+obj.doId+"'"
-					                            +"name='modal' class='save'> </a> <input type='checkbox' ng-model='DORow_"+obj.doId+"' id='DORow_"+obj.doId+"' ng-checked='"+obj.checked+"' ng-disabled='otherData' data-id='"+obj.doId+"' ng-change=\"tableData('"+obj.doId+"')\"/>"]);
+					                            +"name='modal' class='save'> </a> <input type='checkbox' id='DORow_"+obj.doId+"' ng-checked='"+obj.checked+"' ng-disabled='otherData' data-id='"+obj.doId+"' ng-click=\"tableData('"+obj.doId+"')\"/>"]);
 				})
 				$rootScope.$broadcast('doInitialSelected', data, selectedIndex);
 			} catch (e) {
 				$scope.fail(errorConstants.DATA_ERR);
 			}
 		};
-		
-		//when the checkbox in the row is checked or unchecked
+		var oldID = 0;
 		$scope.getDONumber = function(doId) {
-			$rootScope.dosUpdated = true;
-			actualData.forEach(function(data){
-				if(doId == data.doId) {
-					if($('#DORow_'+ doId).is(':checked')) {
-						$rootScope.selectDOs.push(data);
-						selectedIndex.push(doId);
-					} else {
-						$rootScope.selectDOs = $rootScope.selectDOs.filter(function( obj ) {
-							return obj.doId != doId;
-						});
-						selectedIndex = [];
-						$rootScope.selectDOs.forEach(function(DO){
-							selectedIndex.push(DO.doId);
-						});
+			if(oldID != doId || !($('#DORow_'+ doId).is(':checked'))){
+				$rootScope.dosUpdated = true;
+				actualData.forEach(function(data){
+					if(doId == data.doId) {
+						if($('#DORow_'+ doId).is(':checked')) {
+							$rootScope.selectDOs.push(data);
+							selectedIndex.push(doId);
+						} else {
+							$rootScope.selectDOs = $rootScope.selectDOs.filter(function( obj ) {
+								return obj.doId != doId;
+							});
+							selectedIndex = [];
+							$rootScope.selectDOs.forEach(function(DO){
+								selectedIndex.push(DO.doId);
+							});
+						}
 					}
-				}
-			});
-			$rootScope.chartLoading = true;
-			$rootScope.$broadcast('doSelected', selectedIndex);
-			return true;
+				});
+				$rootScope.chartLoading = true;
+				$rootScope.$broadcast('doSelected', selectedIndex);
+				oldID = doId;
+			}else{
+				oldID = 0;
+			}
 		}
 		
 		$scope.$watch(
