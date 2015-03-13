@@ -23,7 +23,7 @@ angular.module('AnalyticsApp')
                 }
                 $compile(element.contents())(scope);
             }
-            $timeout(function () { $compile(element.contents())(scope); },10);
+ 
         },
         scope: {
             options: "=",
