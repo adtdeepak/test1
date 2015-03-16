@@ -1,6 +1,13 @@
 angular.module('AnalyticsApp')
 
-.controller("commonController", ['$scope','$rootScope','$location','$window',function ($scope, $rootScope, $location, $window) {
+.controller("commonController", ['$scope','$rootScope','$location','$window','UtilitiesService',
+                                 function ($scope, $rootScope, $location, $window, UtilitiesService) {
+
+	// code for 401 and unauthorised entry
+	if(!localStorage.getItem('token') || !localStorage.getItem('permissionList')) {
+		UtilitiesService.redirect(location);
+	}
+			
     window.requestStack = {};
     var idleTimeout = window.appConstants.IDLE_TIMEOUT * 60 * 1000;
 	var date = new Date();
@@ -25,11 +32,6 @@ angular.module('AnalyticsApp')
     //$rootScope.selectedDate = defaultDate; 
     $rootScope.selectedDate = "04/24/2014"; 
 
-//    $scope.broadcastPeriodChange = function(){
-//    	  $rootScope.selectedPeriod = $scope.selected.key;
-//    	  $rootScope.selectedDate = $scope.selectedDate;
-//    	  $rootScope.$broadcast('periodChange');
-//    }
  // broadcast periodChange when filter is clicked
     $scope.broadcastTimeFilterValues = function(){
   	  $rootScope.selectedPeriod = $scope.selected.key;

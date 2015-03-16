@@ -30,10 +30,10 @@ angular.module('AnalyticsApp')
 				deferred.resolve(response);
 			}
 		}, function(response){
-//	code for 401
-//			if(response.status == 401) {
-//			location.replace('/dollarConvertor/login.htm');
-//			}
+//			code for 401
+			if(response.status == 401) {
+				UtilitiesService.redirect(location);
+			}
             deferred.reject(response);
         }).catch(function(e){
             UtilitiesService.throwError(undefined, {message: "Network Error?! [NTWRK-SRVC]", type: "internal"});
@@ -69,10 +69,10 @@ angular.module('AnalyticsApp')
 				deferred.resolve(response);
 			}
 		}, function(response){
-			//		code for 401
-//			if(response.status == 401) {
-//				location.replace('/dollarConvertor/login.htm');
-//			}
+//			code for 401
+			if(response.status == 401) {
+				UtilitiesService.redirect(location);
+			}
             deferred.reject(response);
         }).catch(function(e){
             UtilitiesService.throwError(undefined, {message: "Network Error?! [NTWRK-SRVC]", type: "internal"});
@@ -104,10 +104,10 @@ angular.module('AnalyticsApp')
 				deferred.resolve(response);
 			}
 		}, function(response){
-			//		code for 401
-//			if(response.status == 401) {
-//				location.replace('/dollarConvertor/login.htm');
-//			}
+//			code for 401
+			if(response.status == 401) {
+				UtilitiesService.redirect(location);
+			}
             deferred.reject(response);
         }).catch(function(e){
             UtilitiesService.throwError(undefined, {message: "Network Error?! [NTWRK-SRVC]", type: "internal"});

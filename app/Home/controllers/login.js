@@ -15,6 +15,11 @@ angular.module('Home')
 	var responseConstants = RequestConstantsFactory['RESPONSE'];
 	//Request Initialization
 	var requestData ={};
+	
+	//For unauthorised user
+	$scope.unauthorisedUser = false;
+	var urlIndex = $location.search();
+
 	$scope.loadingLoginResult = false;
 	//Function to be executed after response from the server
 	$scope.success = function(data){
@@ -28,6 +33,11 @@ angular.module('Home')
 		}
 	}
 	
+	if(urlIndex && urlIndex.unauthorised == "true"){
+		//Unauthorised user
+		$scope.unauthorisedUser = true;
+	}
+	
 	$scope.fail = function(){
 		$scope.loadingLoginResult = false;
 		$scope.showNetworkError = true;
@@ -35,6 +45,7 @@ angular.module('Home')
 
 	//function executed when 'login' is clicked
 	$scope.signIn = function(){
+		$scope.unauthorisedUser = false;
 		$scope.loginError = false;
 		$scope.showNetworkError = false;
 		$scope.loadingLoginResult = true;
@@ -43,8 +54,6 @@ angular.module('Home')
 		requestData[requestConstants.PASSWORD] = $scope.password;
 		//DataService call
 		DataService.getLoginDetails(requestData, $scope.success, $scope.fail);
-		//temporary have to remove the below code
-		//$window.location="home.htm";
 	}
 }])
 
