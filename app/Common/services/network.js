@@ -32,7 +32,7 @@ angular.module('AnalyticsApp')
 		}, function(response){
 //			code for 401
 			if(response.status == 401) {
-				UtilitiesService.redirect(location);
+				UtilitiesService.unauthorisedRedirect(location);
 			}
             deferred.reject(response);
         }).catch(function(e){
@@ -71,7 +71,7 @@ angular.module('AnalyticsApp')
 		}, function(response){
 //			code for 401
 			if(response.status == 401) {
-				UtilitiesService.redirect(location);
+				UtilitiesService.unauthorisedRedirect(location);
 			}
             deferred.reject(response);
         }).catch(function(e){
@@ -106,7 +106,7 @@ angular.module('AnalyticsApp')
 		}, function(response){
 //			code for 401
 			if(response.status == 401) {
-				UtilitiesService.redirect(location);
+				UtilitiesService.unauthorisedRedirect(location);
 			}
             deferred.reject(response);
         }).catch(function(e){

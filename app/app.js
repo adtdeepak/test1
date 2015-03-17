@@ -22,6 +22,11 @@ angular.module('AnalyticsApp',['ngRoute','jmdobry.angular-cache'])
 		}
 	});
 	
+	// code for 401 and unauthorised entry
+	if(!localStorage.getItem('token') || !localStorage.getItem('permissionList')) {
+		UtilitiesService.unauthorisedRedirect(location);
+	}
+	
 	//Function to be executed when logout
 	$scope.logout = function(){
 		CommonDataService.logoutCall();

@@ -2,11 +2,6 @@ angular.module('AnalyticsApp')
 
 .controller("commonController", ['$scope','$rootScope','$location','$window','UtilitiesService',
                                  function ($scope, $rootScope, $location, $window, UtilitiesService) {
-
-	// code for 401 and unauthorised entry
-	if(!localStorage.getItem('token') || !localStorage.getItem('permissionList')) {
-		UtilitiesService.redirect(location);
-	}
 			
     window.requestStack = {};
     var idleTimeout = window.appConstants.IDLE_TIMEOUT * 60 * 1000;
