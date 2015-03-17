@@ -54,11 +54,9 @@ angular.module('AnalyticsApp')
 
     var setTabsEnable = function () {
         $scope.urlIndex = $location.search();
-        
         if ($scope.urlIndex.flow == "false") {
             $scope.enable = false;
-        }
-        else {
+        } else {
             $scope.enable = true;
         }
     }
