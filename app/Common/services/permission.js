@@ -2,12 +2,13 @@ angular.module('AnalyticsApp')
 
 .service("Permission", ['RequestConstantsFactory',function (RequestConstantsFactory) {
 	var permissionConstants = RequestConstantsFactory['PERMISSIONS'];
+	
 	this.hasPermission = function(permInternalName) {
-		if(localStorage.getItem('permissionList')){
+		if(localStorage.getItem('permissionList')) {
 			var permissionList = localStorage.getItem('permissionList').split(',');
 			var permissionFlag = false;
-			for(list = 0; list < permissionList.length; list++){
-				if(permissionList[list] == permInternalName){
+			for(list = 0; list < permissionList.length; list++) {
+				if(permissionList[list] == permInternalName) {
 					permissionFlag = true;
 					break;
 				}

@@ -41,9 +41,6 @@ angular.module('AnalyticsApp')
     };
 	
 	this.put = function(key, data, ngCache) {
-		//if(ngCache.get(key, data)) {
-		//	ngCache.remove(key);
-		//}
 		appCache.put(key, data);
         if(CONFIG.persistantCache)
             ngCache.put(key, data);

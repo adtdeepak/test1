@@ -19,11 +19,11 @@ angular.module('AnalyticsApp')
 		console.log('RESPONSE',response)
 		// The return value gets picked up by the then in the controller.
 		if(response.status == 200) {
-			if(response.headers('AuthToken')){
+			if(response.headers('AuthToken')) {
 				localStorage.setItem('token', response.headers('AuthToken'));
 			}
 			deferred.resolve(response.data);
-		}else {
+		} else {
 			console.info('DATA FETCH IS NOT SUCCESS!!!', response);
 			deferred.resolve(response);
 		}
@@ -39,7 +39,6 @@ angular.module('AnalyticsApp')
 	
 	this.get = function(url, scope){
 		// $http returns a promise, which has a then function, which also returns a promise
-		//Define headers in Options here
         var options = getOptions();
 		var deferred = $q.defer();
 		var promise = $http.get(url, options).then(function (response) {
@@ -50,18 +49,15 @@ angular.module('AnalyticsApp')
             UtilitiesService.throwError(undefined, {message: "Network Error?! [NTWRK-SRVC]", type: "internal"});
         });
       
-	  // Return the promise to the data service
-      return deferred.promise;
+		// Return the promise to the data service
+		return deferred.promise;
 	};
 	
 	this.post = function(url, data, scope) {
 		// $http returns a promise, which has a then function, which also returns a promise
-        //Define headers in Options here
         var options = getOptions();
         var deferred = $q.defer();
 		var promise = $http.post(url, data, options).then(function (response) {
-			// The then function here is an opportunity to modify the response
-			// The return value gets picked up by the then in the controller.
 			success(response, deferred);
 		}, function(response){
 			failure(response, deferred);
@@ -69,13 +65,11 @@ angular.module('AnalyticsApp')
             UtilitiesService.throwError(undefined, {message: "Network Error?! [NTWRK-SRVC]", type: "internal"});
         });
 		// Return the promise to the data service
-
 		return deferred.promise;
 	};
 	
 	this.delete = function(url, data, scope) {
 		// $http returns a promise, which has a then function, which also returns a promise
-        //Define headers in Options here
         var options = getOptions();
         var deferred = $q.defer();
 		var promise = $http.delete(url, data, options).then(function (response) {
