@@ -25,18 +25,17 @@ angular.module('AnalyticsApp')
     $rootScope.selectedUserMode = window.appConstants.DEFAULT_USER_MODE;
     // This selectedPeriod will be used across the app
     $rootScope.selectedPeriod = $scope.selected.key;
-//    default selected date as current date
+    // default selected date as current date
     var defaultDate = new Date();
     defaultDate = moment(defaultDate).format('MM/DD/YYYY')
     //$rootScope.selectedDate = defaultDate; 
     $rootScope.selectedDate = "04/24/2014"; 
-
- // broadcast periodChange when filter is clicked
-    $scope.broadcastTimeFilterValues = function(){
-  	  $rootScope.selectedPeriod = $scope.selected.key;
-  	  $rootScope.selectedDate = $scope.selectedDate;
-  	  $rootScope.$broadcast('periodChange');
-  }
+	// broadcast periodChange when filter is clicked
+	$scope.broadcastTimeFilterValues = function() {
+		$rootScope.selectedPeriod = $scope.selected.key;
+		$rootScope.selectedDate = $scope.selectedDate;
+		$rootScope.$broadcast('periodChange');
+	}
     $scope.userModeSelected = function (selectedUserMode) {
         angular.element('.freeMode').each(function () {
             if (angular.element(this).parent().hasClass('active')) {
