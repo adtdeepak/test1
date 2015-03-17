@@ -467,7 +467,9 @@ angular.module('DecisionWorkbench')
 	var errorConstants = RequestConstantsFactory['ERROR_MSGS'];
 	var notifyRequestConstants = RequestConstantsFactory['NOTIFICATION'];
 	$scope.dataLoaded = false;
-	$scope.options= UtilitiesService.getDataTableOptions();
+	$scope.options = UtilitiesService.getDataTableOptions();
+    //Sort by expected new subs default
+    $scope.options.aaSorting = [[ 4, "desc" ]];
 	$scope.fail = function (msg) {
 		$scope.error = true;
 		$scope.hasErrorMsg = true;
@@ -490,6 +492,7 @@ angular.module('DecisionWorkbench')
 		$rootScope.$on('builddoTableData', function (event, tableData) {
 			$scope.addData(tableData);
 		});
+
 		$scope.addData = function (data) {
 			UtilitiesService.getNotifyMessage(window.notifyConstants.NOTIFY_DW_DO_UPDATED,notifyRequestConstants.SUCCESS);
 			$scope.dataLoaded = true;
