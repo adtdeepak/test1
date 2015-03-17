@@ -17,12 +17,10 @@ angular.module('AnalyticsApp')
 	function success(response, deferred) {
 		// The return value gets picked up by the then in the controller.
 		if(response.status == 200) {
-			if(response.headers('AuthToken')){
 			if(response.headers('AuthToken')) {
 				localStorage.setItem('token', response.headers('AuthToken'));
 			}
 			deferred.resolve(response.data);
-		}else {
 		} else {
 			console.info('DATA FETCH IS NOT SUCCESS!!!', response);
 			deferred.resolve(response);
@@ -50,8 +48,6 @@ angular.module('AnalyticsApp')
             UtilitiesService.throwError(undefined, {message: "Network Error?! [NTWRK-SRVC]", type: "internal"});
         });
       
-	  // Return the promise to the data service
-      return deferred.promise;
 		// Return the promise to the data service
 		return deferred.promise;
 	};
@@ -70,7 +66,6 @@ angular.module('AnalyticsApp')
             UtilitiesService.throwError(undefined, {message: "Network Error?! [NTWRK-SRVC]", type: "internal"});
         });
 		// Return the promise to the data service
-
 		return deferred.promise;
 	};
 	
