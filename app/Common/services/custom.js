@@ -303,51 +303,6 @@ angular.module('AnalyticsApp')
 
 			//////////////////////POPOVER ENDS///////////////////////
 
-			//Clear Filters red X
-			/*$('.sclose').on('click', function(){
-				$(this).prev().remove();
-				$(this).remove();
-			});*/
-
-			//Activate toggle
-			/*$(document).off('click', '[rel="activateBtn"]').on('click', '[rel="activateBtn"]', function(e) {
-				console.log('SOMETHING');
-				var id = $(this).data('modal');
-				console.log("ID",id)
-				if(id == 'responsibiltyModal'){
-					$rootScope.$broadcast('activated',$(this).attr("data-id"))
-				}
-				if($(this).closest('div').hasClass('deactivated')) {
-					e.preventDefault();
-					return false;
-			}
-				if($(this).closest('div').hasClass('on')) {
-					//Get the screen height and width
-					var maskHeight = $(document).height();
-					var maskWidth = $(window).width();
-
-					//Set height and width to mask to fill up the whole screen
-					$('#mask').css({ 'width': maskWidth, 'height': maskHeight });
-
-					//transition effect        
-					$('#mask').fadeIn(1000);
-					$('#mask').fadeTo("slow", 0.8);
-
-					//Get the window height and width
-					var winH = $(window).height();
-					var winW = $(window).width();
-					
-					var responsibiltyModal = $('#responsibiltyModal');
-					//Set the popup window to center
-					responsibiltyModal.css('top', winH / 2 - responsibiltyModal.height() / 2);
-					responsibiltyModal.css('left', winW / 2 - responsibiltyModal.width() / 2);
-
-					//transition effect
-					responsibiltyModal.fadeIn(2000);
-					window.temp = $(this);
-				}
-			})*/
-
 			//Activate Table zoom
 			$(document).off('click', '.zoomThis').on('click', '.zoomThis', function(e) {
 				e.preventDefault();
@@ -447,6 +402,7 @@ angular.module('AnalyticsApp')
 	};
 	
 	
+	//For adding engagement score circle in engagement activity page
 	this.addDonutCircle = function(containerId, options) {
 		var defaultOptions = {
 			id:         containerId,

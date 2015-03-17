@@ -15,8 +15,6 @@ angular.module('AnalyticsApp')
 	}
 	
 	function success(response, deferred) {
-		// The then function here is an opportunity to modify the response
-		console.log('RESPONSE',response)
 		// The return value gets picked up by the then in the controller.
 		if(response.status == 200) {
 			if(response.headers('AuthToken')){
@@ -42,6 +40,7 @@ angular.module('AnalyticsApp')
 		//Define headers in Options here
         var options = getOptions();
 		var deferred = $q.defer();
+		// The then function here is an opportunity to modify the response
 		var promise = $http.get(url, options).then(function (response) {
 			success(response, deferred);
 		}, function(response){
@@ -59,8 +58,8 @@ angular.module('AnalyticsApp')
         //Define headers in Options here
         var options = getOptions();
         var deferred = $q.defer();
+		// The then function here is an opportunity to modify the response
 		var promise = $http.post(url, data, options).then(function (response) {
-			// The then function here is an opportunity to modify the response
 			// The return value gets picked up by the then in the controller.
 			success(response, deferred);
 		}, function(response){
@@ -78,6 +77,7 @@ angular.module('AnalyticsApp')
         //Define headers in Options here
         var options = getOptions();
         var deferred = $q.defer();
+		// The then function here is an opportunity to modify the response
 		var promise = $http.delete(url, data, options).then(function (response) {
 			success(response, deferred);
 		}, function(response){

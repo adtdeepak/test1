@@ -11,14 +11,14 @@ angular.module('Tracking')
 		$rootScope.title = $scope.Constants[$scope.Constants.SUMMARY_Prefix + 'Title_' + $scope.selectedPeriod];
 	});
 	$rootScope.currentDate = new Date();
+
 	angular.element(document).ready(function () {
 		setTimeout(function(){CustomService.appInit();},1);
 	});	
-    UtilitiesService.getTotalMemory();
-    $rootScope.$broadcast('periodChange');
-    
-    
-    
+
+	//For getting amount of local storage used
+	UtilitiesService.getTotalMemory();
+	$rootScope.$broadcast('periodChange');
 }])
 
 .controller("acquisitionFunnelController",['$scope','$rootScope','Permission','chartsService','$element','UtilitiesService','RequestConstantsFactory','DataService','DataConversionService','ChartOptionsService','UtilitiesService','StorageService',
@@ -31,7 +31,7 @@ angular.module('Tracking')
         $scope.error = false;
 		loadData();
 	});
-	//Watch for SummaryExpired
+	//Watch for cache Expired
     $rootScope.$on('onCacheExpiry', loadData);
     $scope.dataLoaded = false;
 	$scope.visitors = {};
@@ -39,6 +39,7 @@ angular.module('Tracking')
 	$scope.subscriptions = {};
 	$scope.registrations = {};
 	
+	//Success function for getting funnel widgets values only
 	$scope.success = function(funnelData) {
         $scope.dataLoaded = true;
         var funnelConstants = RequestConstantsFactory['WIDGETS']
@@ -75,6 +76,7 @@ angular.module('Tracking')
 		}
 	}
 	
+	//Success function for getting sparkline chart values only
 	$scope.sparkLineSuccess = function(sparkLineData){
 		 $scope.dataLoaded = true;
 	        var funnelConstants = RequestConstantsFactory['WIDGETS']
@@ -121,6 +123,7 @@ angular.module('Tracking')
 				$scope.fail(errorConstants.DATA_ERR);
 			}
 	}
+	//Failure function after API response
 	$scope.fail = function (msg) {
         $scope.error = true;
         $scope.hasErrorMsg = true;
@@ -133,6 +136,7 @@ angular.module('Tracking')
         }
     }
 	
+	//Load function for summary - funnel section
 	function loadData(forceSilent) { 
 		var requestData = UtilitiesService.getRequestData();
 		var func = $scope.success; 
@@ -151,6 +155,7 @@ angular.module('Tracking')
 	    		} 
 	    	} 
 	    var sparkLineRequest = UtilitiesService.getInitialRequestData();
+	    //Needs to be in specific format before using moment 
 	    var date= new Date(UtilitiesService.dateFormatConvertor($rootScope.selectedDate)); 
 	    var startDate = moment(date).startOf('year').format(window.appConstants.DATE_FORMAT);
 	    //Setting startDate as start of the selected year
@@ -158,9 +163,10 @@ angular.module('Tracking')
 	    sparkLineRequest.timeRanges[0]['reportingInterval'] = "weekly";
 	    sparkLineRequest.timeRanges[0]['periodName'] = "byWeek";
 	    
+	    //Data service call for funnel widgets
     	DataService.getTrackSummaryFunnelData(requestData, func, $scope.fail);
+    	//Data service call for sparkline values in funnel widgets
     	DataService.getTrackSummaryFunnelData(sparkLineRequest, $scope.sparkLineSuccess, $scope.fail); 
-    	
     } 
     loadData();
     loadData(true);
@@ -171,59 +177,64 @@ angular.module('Tracking')
 	
 	var errorConstants = RequestConstantsFactory['ERROR_MSGS'];
 	$scope.initialFlag = true;
-	 $scope.dataLoaded = false;
-	 $scope.chartVariables = $scope.labelConstants;
-		 //Watch for SummaryExpired
-    $rootScope.$on('onCacheExpiry', loadData);
+	$scope.dataLoaded = false;
+	$scope.chartVariables = $scope.labelConstants;
+	//Watch for SummaryExpired
+	$rootScope.$on('onCacheExpiry', loadData);
 	$scope.$on('periodChange',function(){
-        $scope.error = false;
-	    $scope.dataLoaded = false;
+		$scope.error = false;
+		$scope.dataLoaded = false;
 		loadData();
 	});
-    $scope.success = function (acqTrendData) {
-    	try{
-    		$scope.dataLoaded = true;
-    		$scope.error = false;
-    		chartOBJ = chartsService.combinedStackedBarLine.call($('#acquisitionTrendChart'), acqTrendData[$rootScope.selectedPeriod], acqTrendData[$rootScope.selectedPeriod].chartOptions, $scope);
-    	} catch (e) {
-    		console.log(e);
-    		$scope.fail(errorConstants.DATA_ERR);
-    	}
-    }
-    $scope.fail = function (msg) {
-        $scope.error = true;
-        $scope.hasErrorMsg = true;
-        if(msg){
-        	if(msg instanceof Object){
-        		$scope.errorMsg = (msg.message == "" ? errorConstants.NETWORK_ERR  : msg.status+" : "+msg.message);
-        	} else {
-                $scope.errorMsg = msg;
-        	}
-        }
-    }
-  
-    
-    function loadData(forceSilent) { 
-    	var requestData = UtilitiesService.getRequestData();
-    	var func = $scope.success; 
-    	if($scope.initialFlag == true){
-    		$scope.initialFlag = false;
-    		var requestData = UtilitiesService.getInitialRequestData();
-    	}else if(forceSilent == true){
-    		var func = null; 
-    	}
-    	var cacheKey = "summaryTrend" + JSON.stringify(requestData);
-    	if (arguments[1]) { 
-    		if (arguments[1].key == cacheKey) { 
-    			func = null; 
-    		} else { 
-    			return false; 
-    		} 
-    	} 
-    	DataService.getTrackSummaryAcqTrend(requestData, func, $scope.fail); 
-    } 
-    loadData();
-    loadData(true);
+	
+	//Success function for acquisition trend response
+	$scope.success = function (acqTrendData) {
+		try{
+			$scope.dataLoaded = true;
+			$scope.error = false;
+			chartOBJ = chartsService.combinedStackedBarLine.call($('#acquisitionTrendChart'), acqTrendData[$rootScope.selectedPeriod], acqTrendData[$rootScope.selectedPeriod].chartOptions, $scope);
+		} catch (e) {
+			console.log(e);
+			$scope.fail(errorConstants.DATA_ERR);
+		}
+	}
+	
+	//Failure function for acquisition trend response
+	$scope.fail = function (msg) {
+		$scope.error = true;
+		$scope.hasErrorMsg = true;
+		if(msg){
+			if(msg instanceof Object){
+				$scope.errorMsg = (msg.message == "" ? errorConstants.NETWORK_ERR  : msg.status+" : "+msg.message);
+			} else {
+				$scope.errorMsg = msg;
+			}
+		}
+	}
+
+
+	function loadData(forceSilent) { 
+		var requestData = UtilitiesService.getRequestData();
+		var func = $scope.success; 
+		if($scope.initialFlag == true){
+			$scope.initialFlag = false;
+			var requestData = UtilitiesService.getInitialRequestData();
+		}else if(forceSilent == true){
+			var func = null; 
+		}
+		var cacheKey = "summaryTrend" + JSON.stringify(requestData);
+		if (arguments[1]) { 
+			if (arguments[1].key == cacheKey) { 
+				func = null; 
+			} else { 
+				return false; 
+			} 
+		} 
+		//Data service call for Acquisition trend
+		DataService.getTrackSummaryAcqTrend(requestData, func, $scope.fail); 
+	} 
+	loadData();
+	loadData(true);
     
 }])
 

@@ -9,10 +9,12 @@ angular.module('Tracking')
 	$('.groupTime.week').addClass('active');
 
 	setTimeout(function(){CustomService.appInit();},1);
+    //For getting amount of local storage used
 	UtilitiesService.getTotalMemory();
 	$rootScope.$broadcast('periodChange');
 }])
 
+//As UI Deep Dive is removed from UI, this controller is not needed
 .controller("modalContentController",['$scope','UtilitiesService','RequestConstantsFactory','$rootScope',
                                       function($scope,UtilitiesService,RequestConstantsFactory,$rootScope){
 	
@@ -62,6 +64,7 @@ angular.module('Tracking')
 	        }
 	    }
 }])
+
 .controller("overallUserGroupSummaryController",['$scope','$rootScope','MenuService','RequestConstantsFactory','sharedProperties','Permission','NetworkService','DataConversionService','DataService','sharedProperties','$location','UtilitiesService',
                                                  function($scope, $rootScope, MenuService, RequestConstantsFactory,sharedProperties,Permission, NetworkService, DataConversionService, DataService, sharedProperties, $location, UtilitiesService){
 
@@ -82,51 +85,56 @@ angular.module('Tracking')
 	});
 
 	$scope.$on('periodChange',function(){
-	    $scope.dataLoaded = false;
-        $scope.error = false;
+		$scope.dataLoaded = false;
+		$scope.error = false;
 		loadData();
 	});
+	//Watching cache expiry
 	$rootScope.$on('onCacheExpiry', loadData);
 	$scope.$on('menuSave', function () {
 		$scope.menu.saveMenu("UG", "User Group", $scope.userSettings);
 	});
 
+	//Success function for UG widgets matrices section
 	$scope.success = function(userGroup) {
 		try{
-					
+
 			$scope.dataLoaded = true;
 			$scope.error = false;
-			 if (userGroup[$rootScope.selectedPeriod].length == 0)
-	                throw { message: "Selected period data not available!", type: "internal" };
-			$scope.userGroup = userGroup[$rootScope.selectedPeriod];
-			$scope.menu.setData($scope.userGroup);
+			if (userGroup[$rootScope.selectedPeriod].length == 0)
+				throw { message: "Selected period data not available!", type: "internal" };
+				$scope.userGroup = userGroup[$rootScope.selectedPeriod];
+				$scope.menu.setData($scope.userGroup);
 		} catch (e) {
 			$scope.fail(errorConstants.DATA_ERR);
 		}
 	}
+	
+	//Failure function for UG widgets matrices section
 	$scope.fail = function (msg) {
 		$rootScope.$emit('UserGroupError')
-        $scope.error = true;
-        $scope.hasErrorMsg = true;
-        if(msg){
-        	if(msg instanceof Object){
-        		$scope.errorMsg = (msg.message == "" ? errorConstants.NETWORK_ERR  : msg.status+" : "+msg.message);
-        	} else {
-                $scope.errorMsg = msg;
-        	}
-        }
-    }
+		$scope.error = true;
+		$scope.hasErrorMsg = true;
+		if(msg){
+			if(msg instanceof Object){
+				$scope.errorMsg = (msg.message == "" ? errorConstants.NETWORK_ERR  : msg.status+" : "+msg.message);
+			} else {
+				$scope.errorMsg = msg;
+			}
+		}
+	}
 
+	//Load function for UG widgets matrices section
 	function loadData(forceSilent) { 
 		var requestData = UtilitiesService.getRequestData();
 		var func = $scope.success; 
-    	if($scope.initialFlag == true){
-    		$scope.initialFlag = false;
+		if($scope.initialFlag == true){
+			$scope.initialFlag = false;
 			var requestData = UtilitiesService.getInitialRequestData();
 		}else if(forceSilent == true){
-    		var func = null; 
+			var func = null; 
 		}
-    	var cacheKey = "UGS" + JSON.stringify(requestData);
+		var cacheKey = "UGS" + JSON.stringify(requestData);
 		if (arguments[1]) { 
 			if (arguments[1].key == cacheKey) { 
 				func = null; 
@@ -134,10 +142,9 @@ angular.module('Tracking')
 				return false; 
 			} 
 		} 
+		//Data service call for UG widgets matrices section
 		DataService.getTrackSummaryUserGroup(requestData, func, $scope.fail); 
-
 	} 
-
 	loadData(true);
 }])
 
@@ -145,26 +152,33 @@ angular.module('Tracking')
                                           function($scope, $rootScope, Permission,RequestConstantsFactory,sharedProperties, DataService, UtilitiesService){
 	var errorConstants = RequestConstantsFactory['ERROR_MSGS'];
 	$scope.dataLoaded = false;
+	//Watching cache expiry
 	$rootScope.$on('onCacheExpiry', loadData);
 	$scope.$on('periodChange',function(){
-	    $scope.dataLoaded = false;
-        $scope.error = false;
+		$scope.dataLoaded = false;
+		$scope.error = false;
 		loadData();
 	});
 	$scope.$on('dataReady', loadData);
+
+	//Watching any selection in widget
 	$rootScope.$on('widgetSelected', function(event, widgetType){
+		//Checking whether the widget selection is made in UG 
 		if(widgetType != "BI" && widgetType != "EA"){
 			loadData();
 		}
-   })
+	})
 	//To load the summary once the ajax call complete
 	$scope.loadingIsDone = false;
 	$scope.activeUserPerText = "";
 	$scope.avgLoginPerText = "";
 
-	 $rootScope.$on('UserGroupError',function(){
-			$scope.fail(errorConstants.DATA_ERR);
-		})
+	//Watching widget error(matrices section) - if error, this widgets summary section should not be shown 
+	$rootScope.$on('UserGroupError',function(){
+		$scope.fail(errorConstants.DATA_ERR);
+	})
+	
+	//Success function for summary of UG widgets
 	$scope.success = function (UserGroupSummary) {
 		try{
 			$scope.dataLoaded = true;
@@ -186,29 +200,22 @@ angular.module('Tracking')
 		} catch (e) {
 			$scope.fail(errorConstants.DATA_ERR);
 		}
-
 	}
-	$scope.fail = function (msg) {
-        $scope.error = true;
-        $scope.hasErrorMsg = true;
-        if(msg){
-        	if(msg instanceof Object){
-        		$scope.errorMsg = (msg.message == "" ? errorConstants.NETWORK_ERR  : msg.status+" : "+msg.message);
-        	} else {
-                $scope.errorMsg = msg;
-        	}
-        }
-    }
-	//Watching the value of shared property
-	$scope.$watch(
-			function () {
-				return sharedProperties.getSubGroupBy();
-			},
-			function (newValue) {
-				loadData();
-			}
-	);
 	
+	//Failure function for summary of UG widgets
+	$scope.fail = function (msg) {
+		$scope.error = true;
+		$scope.hasErrorMsg = true;
+		if(msg){
+			if(msg instanceof Object){
+				$scope.errorMsg = (msg.message == "" ? errorConstants.NETWORK_ERR  : msg.status+" : "+msg.message);
+			} else {
+				$scope.errorMsg = msg;
+			}
+		}
+	}
+
+	//load function for summary of UG widgets
 	function loadData() {
 		var requestData = UtilitiesService.getRequestData();
 		var cacheKey = "UGS" + JSON.stringify(requestData);
@@ -220,6 +227,7 @@ angular.module('Tracking')
 				return false; 
 			} 
 		} 
+		//Data service call for summary of EA widgets
 		DataService.getTrackSummaryUserGroup(requestData, func, $scope.fail); 
 
 	} 
@@ -231,16 +239,19 @@ angular.module('Tracking')
 	$scope.initialFlag = true;
 	$scope.dataLoaded = false;
 	$scope.$on('periodChange',function(){
-	    $scope.dataLoaded = false;
-        $scope.error = false;
+		$scope.dataLoaded = false;
+		$scope.error = false;
 		loadData();
 	});
+	//Watching cache expiry
 	$rootScope.$on('onCacheExpiry', loadData);
-	//$scope.$on('dataReady', loadData);
 
-	 $rootScope.$on('UserGroupError',function(){
-			$scope.fail(errorConstants.DATA_ERR);
-		})
+	//Watching widget error(matrices section) - if error, this trend section should not be shown 
+	$rootScope.$on('UserGroupError',function(){
+		$scope.fail(errorConstants.DATA_ERR);
+	})
+	
+	//Success function for UG Trend
 	$scope.success = function(uGTrendData) {
 		try{
 			$scope.dataLoaded = true;
@@ -251,28 +262,29 @@ angular.module('Tracking')
 			$scope.fail(errorConstants.DATA_ERR);
 		}
 	}
-	$scope.fail = function (msg) {
-        $scope.error = true;
-        $scope.hasErrorMsg = true;
-        if(msg){
-        	if(msg instanceof Object){
-        		$scope.errorMsg = (msg.message == "" ? errorConstants.NETWORK_ERR  : msg.status+" : "+msg.message);
-        	} else {
-                $scope.errorMsg = msg;
-        	}
-        }
-    }
-
 	
-
+	//Failure function for UG Trend
+	$scope.fail = function (msg) {
+		$scope.error = true;
+		$scope.hasErrorMsg = true;
+		if(msg){
+			if(msg instanceof Object){
+				$scope.errorMsg = (msg.message == "" ? errorConstants.NETWORK_ERR  : msg.status+" : "+msg.message);
+			} else {
+				$scope.errorMsg = msg;
+			}
+		}
+	}
+	
+	//Load function for UG Trend
 	function loadData(forceSilent) { 
 		var requestData = UtilitiesService.getRequestData();
 		var func = $scope.success;    	
 		if($scope.initialFlag == true){
-    		$scope.initialFlag = false;
+			$scope.initialFlag = false;
 			var requestData = UtilitiesService.getInitialRequestData();
 		}else if(forceSilent == true){
-    		var func = null; 
+			var func = null; 
 		}
 		var cacheKey = "UGTrend" + JSON.stringify(requestData);
 		if (arguments[1]) { 
@@ -282,13 +294,14 @@ angular.module('Tracking')
 				return false; 
 			} 
 		} 
+		//Data service call for UG Trend
 		DataService.getUserGroupTrendData(requestData, func, $scope.fail); 
-
 	} 
 	loadData();
 	loadData(true);
 }])
 
+//UI Deep Dive is removed from UI
 .controller("userGroupDeepDiveController",['$scope','$rootScope','DataService','Permission','DataConversionService','RequestConstantsFactory','UtilitiesService',
                                            function($scope, $rootScope, DataService, Permission,DataConversionService, RequestConstantsFactory,UtilitiesService){
 	var errorConstants = RequestConstantsFactory['ERROR_MSGS'];
