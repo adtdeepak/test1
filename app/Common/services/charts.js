@@ -10,7 +10,6 @@ angular.module('AnalyticsApp')
 					renderTo:container,              
 					type: 'column',
 					margin: [2, 0, 2, 0]
-
 				},
 				title: {
 					text: ''

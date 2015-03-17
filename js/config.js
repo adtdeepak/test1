@@ -37,7 +37,8 @@ window.appConstants = {
 	
 	DATE_FORMAT : "MM-DD-YYYY",
 	CHART_LABEL_DATE_FORMAT : "MM/DD/YYYY",
-	IDLE_TIMEOUT : 15, //in minute(s)
+	//Session timeout
+	IDLE_TIMEOUT : 30, //in minute(s)
 	CACHE_MAX_AGE : 60, //in minute(s)
 	
 	//Grid table in  target page - read only columns - column index starts from 1

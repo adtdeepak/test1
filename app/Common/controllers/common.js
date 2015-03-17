@@ -16,7 +16,8 @@ angular.module('AnalyticsApp')
     	var date = new Date();
     	var milliSeconds = date.getTime();
     	if(milliSeconds > $scope.sessionEndTime){
-    		$window.location = 'login.htm';
+    		//Redirecting to login page when session is timed out
+			UtilitiesService.unauthorisedRedirect(location);
     	}
     	$scope.sessionEndTime = date.getTime() + idleTimeout;
       });
