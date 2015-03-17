@@ -482,10 +482,10 @@ this.getChartLabels = function (periodName, date) {
     
     this.unauthorisedRedirect = function(location){
     	var originUrl = location.origin;
-		var pathName = location.pathname.split('/');
-		pathName[pathName.length-1] = 'login.htm#?unauthorised=true';
-		pathName = pathName.join('/');
-		location.replace(originUrl + pathName);
+	var pathName = location.pathname.split('/');
+	pathName[pathName.length-1] = 'login.htm#?unauthorised=true';
+	pathName = pathName.join('/');
+	location.replace(originUrl + pathName);
     }
     
     
