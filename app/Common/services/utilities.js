@@ -50,6 +50,7 @@ angular.module('AnalyticsApp')
 		return true;
 	}
 	
+	//Function for getting default table options in the data table
     this.getDataTableOptions = function () {
     	console.log("GETTING OPTIONS!!!")
         return {
@@ -84,11 +85,6 @@ angular.module('AnalyticsApp')
 
         }
     }
-    
-    this.getLastWeek = function(today){
-    	var now = moment();
-        var dateDetails = moment(now).format('MM/DD/YYYY');
-    }
 
     //returns the name of month from date
     this.dateFormatConvertor = function dateFormatConvertor(date) {
@@ -103,11 +99,13 @@ angular.module('AnalyticsApp')
     	}
     };
     
+	//Sort object based on the date
     this.sortObjectbyDate = function(object){
     	object.sort(function(a,b){
 			  return new Date(a.forDateSorting) - new Date(b.forDateSorting);
 			});
     }
+    
 	//Sort object based on the compareData passed
 	this.sortObject = function(object, compareData){
     	object.sort(function(a,b){
@@ -115,54 +113,68 @@ angular.module('AnalyticsApp')
 			});
     }
     
+	//Function to get year 1st in a date - which is used for sorting chart datas based on date
     this.dateFormatConverterYearFirst = function(date){
     	var parts = date.split('/');
     	var dateString = parts[2] + '-' + parts[0] + '-' + parts[1];
     	return dateString;
     }
     
+    //Function to get month name
     this.getMonthName = function (date) {
-
         var monthName = moment(date).format('YYYY/MMM/DD').split("/");
         return monthName[1];
-
     };
+    
+    //Function to get month number
     this.getMonthNumber = function (date) {
         var monthName = moment(date).format('YYYY/M/DD').split("/");
         return monthName[1];
 
     };
+    
+    //Function to get day in a date
     this.getDay = function (date) {
         var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         return days[date.getDay()];
     }
+    
+    //Function to get year in a date
     this.getYear = function (date) {
         var year = moment(date).format('MMM/DD/YYYY').split("/");
         return year[2];
     }
+    
+    //Function to get Date number in a date
     this.getDateInNumber = function (date) {
         var dateInNumber = moment(date).format('MMM/DD/YYYY').split("/");
         return dateInNumber[1];
     }
+    
+    //Function to get details for current date
     this.getTodayDetails = function () {
         var now = moment();
         var dateDetails = moment(now).format('MMM/DD/YYYY').split("/");
         return dateDetails;
     }
+    
     //returns week number in a month from date
-
     this.getWeekOfMonth = function (date) {
         var firstDay = new Date(date.getFullYear(), date.getMonth(), 1).getDay();
         var weekNumber = Math.ceil((date.getDate() + firstDay) / 7);
         return RequestConstantsFactory['DATE'].WEEK_LABLES[weekNumber-1];
 
     };
+    
+    //Function to get start of week
     this.getStartOfWeek = function (date) {
         var day = date.getDay();
         var startOfWeek = moment(date).weekday(day).format('YYYY/MMM/DD');
         var monthName = moment(startOfWeek).format('YYYY/MMM/DD').split("/");
         return monthName[1] + " " + monthName[2];
     }
+    
+    //Function to get end of week
     this.getEndOfWeek = function (date) {
         var startDay = date.getDay();
         var endDay = startDay + 6;
@@ -170,6 +182,8 @@ angular.module('AnalyticsApp')
         var monthName = moment(endOfWeek).format('YYYY/MMM/DD').split("/");
         return monthName[1] + " " + monthName[2];
     }
+    
+    //Function to get endDate to display chart xAxis tooltip
     this.getChartLabelEndDate = function (periodName, date) {
     	var now = moment();
         if(periodName == window.appConstants.PERIOD_NAME_WEEK){
@@ -186,73 +200,77 @@ angular.module('AnalyticsApp')
         	return endDate;
         }
     }
-this.getChartLabels = function (periodName, date) {
-    	
-        var now = moment();
-        if (periodName == 'tooltipDate'){
-        	var endDate = moment(date).weekday(date.getDay()+7).format(window.appConstants.DATE_FORMAT);
-        	return endDate;
-        }
-        if (periodName == window.appConstants.PERIOD_NAME_WEEK) {
-        	var thisWeekStart= moment(now).startOf('week').format('MM-DD-YYYY');
-        	var dateHere = moment(date).weekday(date.getDay()).format('MM-DD-YYYY');
-            if ((moment(date).diff(moment(thisWeekStart), 'day'))>=0 && (moment(date).diff(moment(thisWeekStart), 'day')) <7) {
-                return "This Week";
-            }
-            else {
-            	/*var monthNumber = this.getMonthNumber(date);
+    
+    //Function for getting xAxis chart labels
+    this.getChartLabels = function (periodName, date) {
+
+    	var now = moment();
+    	if (periodName == 'tooltipDate'){
+    		var endDate = moment(date).weekday(date.getDay()+7).format(window.appConstants.DATE_FORMAT);
+    		return endDate;
+    	}
+    	if (periodName == window.appConstants.PERIOD_NAME_WEEK) {
+    		var thisWeekStart= moment(now).startOf('week').format('MM-DD-YYYY');
+    		var dateHere = moment(date).weekday(date.getDay()).format('MM-DD-YYYY');
+    		if ((moment(date).diff(moment(thisWeekStart), 'day'))>=0 && (moment(date).diff(moment(thisWeekStart), 'day')) <7) {
+    			return "This Week";
+    		}
+    		else {
+    			/*var monthNumber = this.getMonthNumber(date);
                 var weekNumber = this.getWeekOfMonth(date);
                 return monthNumber + weekNumber;*/
-            	var fromMonthName = this.getMonthName(date);
-            	var fromDate = moment(date).weekday(date.getDay()).format('MM-DD-YYYY').split('-');
-            	var toMonthName = this.getMonthName(moment(date).weekday(date.getDay()+7));
-            	var toDate = moment(date).weekday(date.getDay()+6).format('MM-DD-YYYY').split('-');
-            	return fromMonthName+" "+fromDate[1] +"- " + toMonthName +" "+toDate[1];
-            }
-        }
-        if (periodName == window.appConstants.PERIOD_NAME_MONTH) {
-        	
-        	var thisMonthStart= moment(now).startOf('month').format('MM-DD-YYYY');
-            if (moment(thisMonthStart).diff(moment(date), 'month') == 0) {
-                return "This Month";
-            }
-            else {
-            	
-                var month = this.getMonthName(date);
-                var year = this.getYear(date);
-                return month + " " + year;
-            }
-        }
-        if (periodName == window.appConstants.PERIOD_NAME_QUARTER) {
-        	var month = this.getMonthNumber(date);
-         	var periodFrom = moment(date).subtract(month % 3, 'month').startOf('month').format('MM-DD-YYYY');
-         	periodFrom = new Date(this.dateFormatConvertor(periodFrom));
-            var periodTo = moment(date).add(2 - (month % 3), 'month').endOf('month').format('MM-DD-YYYY');
-            periodTo = new Date(this.dateFormatConvertor(periodTo));
-            var thisQuarterStart= moment(periodFrom).startOf('month').format('MM-DD-YYYY');
-	        if((moment(periodFrom)<= moment(now)) && (moment(now)<= moment(periodTo))) {
-	        	return "This Quarter";
-	        }
-	        else{
-	            var startMonth= this.getMonthName(periodFrom);
-	            var endMonth = this.getMonthName(periodTo);
-	            var startYear = this.getYear(periodFrom);
-	            var endYear = this.getYear(periodTo);
-	            return startMonth+" "+startYear +"- " + endMonth +" "+endYear;
-	        }
-           
-        }
-        if (periodName == window.appConstants.PERIOD_NAME_YEAR) {
-        	var thisYearStart= moment(now).startOf('year').format('MM-DD-YYYY');
-            if (moment(thisYearStart).diff(moment(date), 'year') == 0) {
-                return "This Year";
-            }
-            else {
-                var year = this.getYear(date);
-                return  year;
-            }
-        }
+    			var fromMonthName = this.getMonthName(date);
+    			var fromDate = moment(date).weekday(date.getDay()).format('MM-DD-YYYY').split('-');
+    			var toMonthName = this.getMonthName(moment(date).weekday(date.getDay()+7));
+    			var toDate = moment(date).weekday(date.getDay()+6).format('MM-DD-YYYY').split('-');
+    			return fromMonthName+" "+fromDate[1] +"- " + toMonthName +" "+toDate[1];
+    		}
+    	}
+    	if (periodName == window.appConstants.PERIOD_NAME_MONTH) {
+
+    		var thisMonthStart= moment(now).startOf('month').format('MM-DD-YYYY');
+    		if (moment(thisMonthStart).diff(moment(date), 'month') == 0) {
+    			return "This Month";
+    		}
+    		else {
+
+    			var month = this.getMonthName(date);
+    			var year = this.getYear(date);
+    			return month + " " + year;
+    		}
+    	}
+    	if (periodName == window.appConstants.PERIOD_NAME_QUARTER) {
+    		var month = this.getMonthNumber(date);
+    		var periodFrom = moment(date).subtract(month % 3, 'month').startOf('month').format('MM-DD-YYYY');
+    		periodFrom = new Date(this.dateFormatConvertor(periodFrom));
+    		var periodTo = moment(date).add(2 - (month % 3), 'month').endOf('month').format('MM-DD-YYYY');
+    		periodTo = new Date(this.dateFormatConvertor(periodTo));
+    		var thisQuarterStart= moment(periodFrom).startOf('month').format('MM-DD-YYYY');
+    		if((moment(periodFrom)<= moment(now)) && (moment(now)<= moment(periodTo))) {
+    			return "This Quarter";
+    		}
+    		else{
+    			var startMonth= this.getMonthName(periodFrom);
+    			var endMonth = this.getMonthName(periodTo);
+    			var startYear = this.getYear(periodFrom);
+    			var endYear = this.getYear(periodTo);
+    			return startMonth+" "+startYear +"- " + endMonth +" "+endYear;
+    		}
+
+    	}
+    	if (periodName == window.appConstants.PERIOD_NAME_YEAR) {
+    		var thisYearStart= moment(now).startOf('year').format('MM-DD-YYYY');
+    		if (moment(thisYearStart).diff(moment(date), 'year') == 0) {
+    			return "This Year";
+    		}
+    		else {
+    			var year = this.getYear(date);
+    			return  year;
+    		}
+    	}
     }
+
+	//Function which returns data as comma separated
     this.getLocaleString = function (data) {
         var numberRegex = "^[0-9]*$";
 
@@ -305,6 +323,7 @@ this.getChartLabels = function (periodName, date) {
         }
     };
 
+    //Function for getting data range for the plot band
     this.getPlotBandRange = function (data) {
         var plotBandRange = [];
         var from;
@@ -327,6 +346,7 @@ this.getChartLabels = function (periodName, date) {
         return getPeriodDataFunc(obj);
     };
 
+    //Function for getting periodFrom and periodTo for the particular object
     function getPeriodDataFunc(obj) {
         var date = Date();
         date = moment(date).format('MM-DD-YYYY')
@@ -360,6 +380,7 @@ this.getChartLabels = function (periodName, date) {
         return data;
     }
 
+    //Function for getting all the available time periods
     this.getAvailablePeriods = function () {
         var availablePeriods = window.appConstants.AVAILABLE_PERIODS;
         var periodData = [];
@@ -379,9 +400,13 @@ this.getChartLabels = function (periodName, date) {
         }
         return request;
     };
+    
+    //Function for getting integer from comma separated number string
     this.getIntFromString = function(data){
     	return parseInt(data.split(',').join(''));
     }
+    
+    //Function for getting request data with available time ranges
     this.getRequestData = function () {
         var periodData = this.getAvailablePeriods();
         var request = {
@@ -402,6 +427,8 @@ this.getChartLabels = function (periodName, date) {
     	return getPeriodDataFunc(selectedPeriod);
     	
     };
+    
+    //Function for getting the initial request request with single time range
     this.getInitialRequestData = function(){
     	var availablePeriods = window.appConstants.AVAILABLE_PERIODS;
     	var initialPeriod = {};
@@ -470,16 +497,17 @@ this.getChartLabels = function (periodName, date) {
     	}
     
     //to get label name from labelConfigService
-    
     this.getLabel = function(labelPath){
     	return labelConfigService.getLabel(labelPath);
     } 
     
+    //Function to check whether an object is empty
     this.isObjectEmpty = function(obj){
     	console.log("ppp console:", Object.keys(obj).length)
     	return Object.keys(obj).length === 0;
     }
     
+    //Function for redirecting when session is timedout or unauthorised entry
     this.unauthorisedRedirect = function(location){
     	var originUrl = location.origin;
 		var pathName = location.pathname.split('/');
