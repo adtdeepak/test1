@@ -307,8 +307,11 @@ this.toTrackSummaryAcqTrend= function(data) {
 					var startDate = UtilitiesService.dateFormatConvertor(timeRange.data[index].startdate);
 					var endDate =  UtilitiesService.getChartLabelEndDate(timeRange.periodName,date);
 					var axisLabel = UtilitiesService.getChartLabels(timeRange.periodName,date);
-					actualData.push(parseInt(column.actual));
-					targetData.push(parseInt(column.target));
+					//If data is not available, giving the value as 0
+					var actualVal = column.actual == "na" ? 0 :column.actual;
+					var targetVal = column.target == "na" ? 0 :column.target;
+					actualData.push(parseInt(actualVal));
+					targetData.push(parseInt(targetVal));
 					xAxis.push(axisLabel);
 					startDateArray.push(startDate);
 					endDateArray.push(endDate);
