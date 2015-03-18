@@ -207,6 +207,7 @@ this.toTrackSummaryAcqTrend= function(data) {
 	}
 
 	this.toBusinessImpactTrend = function(data) {
+		//For sorting the data according to the date - changes in date format
 		$.each(data.timeRanges, function(key, timeRange) {
 			$.each(timeRange.data, function(index, column) {
 				var date= new Date(UtilitiesService.dateFormatConvertor(column.startDate)); 
@@ -231,14 +232,16 @@ this.toTrackSummaryAcqTrend= function(data) {
 			var startDateArray = [];
 			var endDateArray = [];
 			var plotBandRange = [];
+			//This will sort the data according to date
 			UtilitiesService.sortObjectbyDate(timeRange.data);
 			$.each(timeRange.data, function(index, column) {
 				var date= new Date(UtilitiesService.dateFormatConvertor(column.startDate)); 
 				var startDate = UtilitiesService.dateFormatConvertor(column.startDate);
 				var axisLabel = UtilitiesService.getChartLabels(timeRange.periodName,date);
 				var endDate =  UtilitiesService.getChartLabelEndDate(timeRange.periodName, date);
-				var actualVal = column.actual != null ? 0 :column.actual;
-				var targetVal = column.target != null ? 0 :column.target;
+				//If data is not available, giving the value as 0
+				var actualVal = column.actual == "na" ? 0 :column.actual;
+				var targetVal = column.target == "na" ? 0 :column.target;
 				actual.push(parseInt(actualVal));
 				target.push(parseInt(targetVal));
 				xAxis.push(axisLabel);
