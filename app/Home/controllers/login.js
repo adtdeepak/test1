@@ -1,6 +1,7 @@
 angular.module('Home')
 
 .controller( "loginInit",['$scope','CustomService', function($scope, CustomService) {
+	//Clearing the local storage
 	localStorage.clear();
 	setTimeout(function(){CustomService.appInit();},1);
 	
@@ -21,11 +22,13 @@ angular.module('Home')
 	var urlIndex = $location.search();
 
 	$scope.loadingLoginResult = false;
-	//Function to be executed after response from the server
+	//Success function to be executed after response from the server
 	$scope.success = function(data){
 		$scope.loadingLoginResult = false;
 		if(data.user){
+			//Set token in local storage
 			localStorage.setItem('token',data.token);
+			//Set permission List in local storage
 			localStorage.setItem('permissionList',data.permissionList);
 			$window.location="home.htm";
 		}else{
@@ -38,6 +41,7 @@ angular.module('Home')
 		$scope.unauthorisedUser = true;
 	}
 	
+	//Failure function for login
 	$scope.fail = function(){
 		$scope.loadingLoginResult = false;
 		$scope.showNetworkError = true;

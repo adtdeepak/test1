@@ -14,7 +14,7 @@ angular.module('Home')
 	//Function to be executed after response from the server
 	$scope.success = function(data){
 		$scope.loadingChangePwdResult = false;
-		console.log('$scope.loadingChangePwdResult',data)
+		
 		if(data.status==responseConstants.STATUS_OKAY){
 			$scope.showNetworkError = false;
 				$window.location="home.htm";

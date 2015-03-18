@@ -1,6 +1,7 @@
 angular.module('DecisionWorkbench')
 
 .controller( "setDoInit",['$scope','DataService','CustomService','ChartOptionsService','$rootScope', function($scope, DataService, CustomService, ChartOptionsService, $rootScope) {
+	//Broadcasting when the page is loaded - for making free trial/ freemium tabs enable or disable
 	$rootScope.$broadcast('DWPageChange', "changed");
 	setTimeout(function(){CustomService.appInit();},1);
 
@@ -15,9 +16,11 @@ angular.module('DecisionWorkbench')
 		loadData();
 	});
 
+	//Success function for waterfall chart and showing data section
 	$scope.success = function (setGoalsData) {
 		try {
 			$scope.dataLoaded = true;
+			//Function call for periodFrom and periodTo date in Showing data section
 			loadPeriodData();
 			$scope.error = false;
 			$scope.weeklyListData = setGoalsData['showingPeriodData'][$rootScope.selectedPeriod];
@@ -31,6 +34,8 @@ angular.module('DecisionWorkbench')
 			$scope.fail(errorConstants.DATA_ERR);
 		}
 	}
+	
+	//Failure function for waterfall chart and showing data section
 	$scope.fail = function (msg) {
         $scope.error = true;
         $scope.hasErrorMsg = true;
@@ -42,7 +47,8 @@ angular.module('DecisionWorkbench')
         	}
         }
     }
-
+	
+	//For getting periodFrom and periodTo date in Showing data section
 	function loadPeriodData() {
 		$scope.periodText = window.appConstants.SETGOALS[$rootScope.selectedPeriod];
 		var availablePeriods = UtilitiesService.getAvailablePeriods();
@@ -55,6 +61,8 @@ angular.module('DecisionWorkbench')
 		});
 		return periodData; 
 	}
+	
+	//Load function for waterfall chart and showing data section
 	function loadData(forceSilent) {
 		var requestData = {"groupBy" : "cmpgnView"};
 		var func = $scope.success; 
@@ -74,6 +82,7 @@ angular.module('DecisionWorkbench')
 				return false; 
 			} 
 		}
+		//Data service call for waterfall chart and showing data section
 		DataService.getSetGoalsChartData(requestData, func, $scope.fail);
 	}
 	loadData();
@@ -90,6 +99,8 @@ angular.module('DecisionWorkbench')
 	$scope.$on('periodChange', function(event, period) {
 		loadData();
 	});
+	
+	//Success function for engagement activities chart
 	$scope.success = function (engagedData) {
 		try {
 			$scope.dataLoaded = true;
@@ -104,7 +115,8 @@ angular.module('DecisionWorkbench')
 			$scope.fail(errorConstants.DATA_ERR);
 		}
 	}
-
+	
+	//Failure function for engagement activities chart
 	$scope.fail = function (msg) {
         $scope.error = true;
         $scope.hasErrorMsg = true;
@@ -116,6 +128,8 @@ angular.module('DecisionWorkbench')
         	}
         }
     }
+	
+	//Load function for engagement activities chart
 	function loadData(forceSilent) {
 		var requestData = {"groupBy" : "cmpgnView"};
 		var func = $scope.success; 
@@ -135,6 +149,7 @@ angular.module('DecisionWorkbench')
 				return false; 
 			} 
 		}
+		//Data service call for engagement activities chart
 		DataService.getSetGoalsChartData(requestData, func, $scope.fail);
 	}
 	loadData();
