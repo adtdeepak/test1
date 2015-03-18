@@ -167,6 +167,8 @@ angular.module("Settings")
 	var targetItems = [];
 	$rootScope.$on('getGridData', loadGridData);
 	$scope.gridDateRangeSuccess = function(result){
+		//Making 'targetItems' empty will affect the scope, so new variable 'tempTargetItems'
+		var tempTargetItems = [];
 		//For the sheet - target 
 		$.each(result.dateRangeList, function(key , week){
 			var tempObj =  {
@@ -186,8 +188,10 @@ angular.module("Settings")
 		            "sendPdf": 0.00,
 		            "workSpaceShare": 0.00,
 		        };
+			tempTargetItems.push(tempObj);
 			targetItems.push(tempObj);
 		})
+		targetItems = tempTargetItems;
 		loadGridInitialData();
 	}
 
