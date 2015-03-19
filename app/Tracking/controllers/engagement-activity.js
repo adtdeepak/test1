@@ -176,6 +176,7 @@ angular.module('Tracking')
             	})
             	if(updateWidgets){
                 	engagementActivity.push(eaScoreWidget);
+    				sharedProperties.setEAScoreWidget(eaScoreWidget);
             	}
             	//Sort function to make the EAscore widget as the 1st widget
 				UtilitiesService.sortObject(engagementActivity, "subGroupBy");
@@ -193,12 +194,32 @@ angular.module('Tracking')
  	//Success function for only EAScore widget
     $scope.eaScoreSuccess = function(eaScore){
     	eaScore = eaScore['engagementScore'];
+    	var vslastPeriodData = {
+    			"value":eaScore.versusLastWeek,
+    			"trend":eaScore.versusLastMonthTrend
+    	};
+    	var vsSameLastPeriodData = {
+    			"value":eaScore.versusLastMonth,
+    			"trend":eaScore.versusLastWeekTrend
+    	};
+    	var diffFromTarget ={
+    			"value":eaScore.versusTarget,
+    			"trend":eaScore.versusTargetTrend
+    	};
+    	var forecast = {
+    			"value":"na",
+    			"trend":"na"
+    	}
     	var tempObj = {
     		"actualToDate":eaScore.score,
     		"subgroupName":"EA Score",
     		"subGroupBy":"enScore",
 			"groupBy":"EA",
-    		"monthlyAvg":eaScore.versusLastMonth
+    		"monthlyAvg":eaScore.versusLastMonth,
+    		"versusLast":vslastPeriodData,
+    		"versusSameLastYear":vsSameLastPeriodData,
+    		"diffFromTarget":diffFromTarget,
+    		"forecast":forecast
     	};
     	eaScoreWidget = tempObj;
     }
@@ -295,6 +316,13 @@ angular.module('Tracking')
 			$scope.dataLoaded = true;
 			if (engagementActivitySummary[$rootScope.selectedPeriod].length == 0) {
 				$scope.error = true;
+			}
+			else if(sharedProperties.getSubGroupBy() == "enScore"){
+				$scope.engagementActivitySummary = sharedProperties.getEAScoreWidget();
+				$scope.heading = sharedProperties.getHeading();
+				$scope.forecastText = $scope.Constants[$scope.Constants.EA_Prefix + 'summary_forecast_' + $rootScope.selectedPeriod];
+				$scope.toLastText = $scope.Constants[$scope.Constants.EA_Prefix + 'comparedLast_' + $rootScope.selectedPeriod];
+				$scope.toLastLYText = $scope.Constants[$scope.Constants.EA_Prefix + 'comparedLastYear_' + $rootScope.selectedPeriod];
 			}
 			else {
 				$scope.error = false;
