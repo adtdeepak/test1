@@ -539,7 +539,6 @@ throw exception;
     var labelId;
     var requestObjDO = {};
     var reviewDOReqObj = {};
-    var eaScoreWidget = {};
     return {
         getSubGroupBy: function () {
             return subGroupBy;
@@ -553,12 +552,6 @@ throw exception;
         },
 		setWidgetType: function (wdgtType) {
             widgetType = wdgtType;
-        },
-        getEAScoreWidget: function () {
-            return eaScoreWidget;
-        },
-        setEAScoreWidget: function (EAScorewdgt) {
-        	eaScoreWidget = EAScorewdgt;
         },
         getHeading: function () {
             return headingStr;

@@ -121,8 +121,8 @@ angular.module('Tracking')
     loadData(true);
 }])
 
-.controller("engagementActivityMatricesController",['$scope','$rootScope','MenuService','Permission','RequestConstantsFactory','NetworkService','DataService','$location','sharedProperties','DataConversionService','UtilitiesService',
-                                                    function ($scope, $rootScope, MenuService, Permission, RequestConstantsFactory, NetworkService, DataService, $location, sharedProperties, DataConversionService, UtilitiesService) {
+.controller("engagementActivityMatricesController",['$scope','$rootScope','MenuService','Permission','RequestConstantsFactory','NetworkService','DataService','$location','sharedProperties','DataConversionService','UtilitiesService','StorageService',
+                                                    function ($scope, $rootScope, MenuService, Permission, RequestConstantsFactory, NetworkService, DataService, $location, sharedProperties, DataConversionService, UtilitiesService, StorageService) {
     var errorConstants = RequestConstantsFactory['ERROR_MSGS'];
     var requestConstants = RequestConstantsFactory['REQUEST'];
     $scope.initialFlag = true;
@@ -176,7 +176,8 @@ angular.module('Tracking')
             	})
             	if(updateWidgets){
                 	engagementActivity.push(eaScoreWidget);
-    				sharedProperties.setEAScoreWidget(eaScoreWidget);
+        			//Set Eascore widget in cache so that it will be available in "Widgets summary" controller
+                	StorageService.put("eaScoreWidget", eaScoreWidget, StorageService.getCache("engagement-activityCache"));
             	}
             	//Sort function to make the EAscore widget as the 1st widget
 				UtilitiesService.sortObject(engagementActivity, "subGroupBy");
@@ -280,8 +281,8 @@ angular.module('Tracking')
     loadData(true);
 }])
 
-.controller("engagementActivitySummaryController",['$scope','$rootScope','DataService','Permission','sharedProperties','RequestConstantsFactory','UtilitiesService',
-                                                   function ($scope, $rootScope, DataService, Permission, sharedProperties, RequestConstantsFactory, UtilitiesService) {
+.controller("engagementActivitySummaryController",['$scope','$rootScope','DataService','Permission','sharedProperties','RequestConstantsFactory','UtilitiesService','StorageService',
+                                                   function ($scope, $rootScope, DataService, Permission, sharedProperties, RequestConstantsFactory, UtilitiesService, StorageService) {
 	var errorConstants = RequestConstantsFactory['ERROR_MSGS'];
 	$scope.dataLoaded = false;
 	//Watch for Cache expired
@@ -318,7 +319,8 @@ angular.module('Tracking')
 				$scope.error = true;
 			}
 			else if(sharedProperties.getSubGroupBy() == "enScore"){
-				$scope.engagementActivitySummary = sharedProperties.getEAScoreWidget();
+				//Getting EAScore widget details from cache
+				$scope.engagementActivitySummary = StorageService.get("eaScoreWidget", StorageService.getCache("engagement-activityCache"));
 				$scope.heading = sharedProperties.getHeading();
 				$scope.forecastText = $scope.Constants[$scope.Constants.EA_Prefix + 'summary_forecast_' + $rootScope.selectedPeriod];
 				$scope.toLastText = $scope.Constants[$scope.Constants.EA_Prefix + 'comparedLast_' + $rootScope.selectedPeriod];
