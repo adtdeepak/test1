@@ -7174,7 +7174,13 @@ div.DTTT_collection {
 	margin: auto;
 	position: relative;
 }
-
+.login-notify{
+	width: 384px;
+	margin: auto;
+	position: relative;
+	color: #4FC9D9;
+	background-color: rgb(231, 241, 245);
+}
 .homeMenuBtns
 {
     position: relative;
