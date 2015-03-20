@@ -66,8 +66,11 @@
 						<ul ng-hide="error || !dataLoaded" class="summary-list clearfix">
 										<li ng-show="UserGroupSummary.eaScore!=null" class="width">
                                             <div class="summarylistInnerwrap">
-                                                <div class="summary-value">
+                                                <div ng-if="UserGroupSummary.eaScore !='na'" class="summary-value">
                                                     {{UserGroupSummary.eaScore | number}}
+                                                </div>
+                                                <div ng-if="UserGroupSummary.eaScore =='na'" class="summary-value">
+                                                    Data Not Available
                                                 </div>
                                                 <p>
                                                     Engagement Score
@@ -76,8 +79,11 @@
                                         </li>
                                         <li ng-show="UserGroupSummary.activeUsers!=null" class="width">
                                             <div class="summarylistInnerwrap">
-                                                <div class="summary-value">
+                                                <div ng-if="UserGroupSummary.activeUsers !='na'" class="summary-value">
                                                     {{UserGroupSummary.activeUsers | number}}
+                                                </div>
+                                                 <div ng-if="UserGroupSummary.activeUsers =='na'" class="summary-value">
+                                                    Data Not Available
                                                 </div>
                                                 <p>
                                                     Active Users
@@ -86,8 +92,11 @@
                                         </li>
                                         <li ng-show="UserGroupSummary.newSubsActual!=null" class="width">
                                             <div class="summarylistInnerwrap">
-                                                <div class="summary-value">
+                                                <div ng-if="UserGroupSummary.newSubsActual !='na'" class="summary-value">
                                                       {{UserGroupSummary.newSubsActual | number}}
+                                                </div>
+                                                 <div ng-if="UserGroupSummary.newSubsActual =='na'" class="summary-value">
+                                                    Data Not Available
                                                 </div>
                                                 <p>
                                                     Subscriptions
@@ -96,8 +105,11 @@
                                         </li>
                                         <li ng-show="UserGroupSummary.conversionRate!=null" class="width">
                                             <div class="summarylistInnerwrap">
-                                                <div class="summary-value">
+                                                <div ng-if="UserGroupSummary.conversionRate !='na'" class="summary-value">
                                                       {{UserGroupSummary.conversionRate | number}}%
+                                                </div>
+                                                 <div ng-if="UserGroupSummary.conversionRate =='na'" class="summary-value">
+                                                    Data Not Available
                                                 </div>
                                                 <p>
                                                     Conversion Rate
@@ -106,8 +118,11 @@
                                         </li>
                                         <li ng-show="UserGroupSummary.newUsersAdded!=null" class="width">
                                             <div class="summarylistInnerwrap">
-                                                <div class="summary-value">
+                                                <div ng-if="UserGroupSummary.newUsersAdded !='na'" class="summary-value">
                                                       {{UserGroupSummary.newUsersAdded | number}}
+                                                </div>
+                                                 <div ng-if="UserGroupSummary.newUsersAdded =='na'" class="summary-value">
+                                                    Data Not Available
                                                 </div>
                                                 <p>
                                                     New Users Added
