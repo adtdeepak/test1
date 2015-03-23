@@ -2,13 +2,6 @@ angular.module('AnalyticsApp')
 
 .controller("commonController", ['$scope','$rootScope','$location','$window','UtilitiesService',
                                  function ($scope, $rootScope, $location, $window, UtilitiesService) {
-	$scope.validSession = false;
-	// code for 401 and unauthorised entry
-	if(!localStorage.getItem('token') || !localStorage.getItem('permissionList')) {
-		UtilitiesService.unauthorisedRedirect(location);
-	} else {
-		$scope.validSession = true;
-	}
     window.requestStack = {};
     
     //Getting the time of session timeout

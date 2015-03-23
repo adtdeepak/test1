@@ -6,7 +6,13 @@
 angular.module('AnalyticsApp',['ngRoute','jmdobry.angular-cache'])
 .controller('mainAppContent',['$scope','$rootScope','$angularCacheFactory','UtilitiesService','Permission','labelConfigService','CommonDataService','$window',
                               function($scope, $rootScope, $angularCacheFactory, UtilitiesService, Permission,labelConfigService,CommonDataService, $window){
-
+	$scope.validSession = false;
+	// code for 401 and unauthorised entry
+	if(!localStorage.getItem('token') || !localStorage.getItem('permissionList')) {
+		UtilitiesService.unauthorisedRedirect(location);
+	} else {
+		$scope.validSession = true;
+	}
 	//Synchronously loading the Constants file from server
 	//Request file based on tenant ID (params) set on the current domain.
 
