@@ -38,7 +38,7 @@
 
 </head>
 <body ng-controller="mainAppContent" ng-cloak>
-	<div class="mainContainer">
+	<div class="mainContainer" ng-hide="validSession">
 		<div class="header-bg clearfix">
 			<ng-include src="'partials/header.htm'"> </ng-include>
 			<nav id="menu-container" class="has-submenu">
