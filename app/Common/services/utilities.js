@@ -510,7 +510,8 @@ angular.module('AnalyticsApp')
     //Function for redirecting when session is timedout or unauthorised entry
     this.unauthorisedRedirect = function(location){
     	var urlString = location.href;
-    	if(urlString.indexOf('login')<0){
+    	//To check current page is not the login page - login page should not be redirected to login page
+    	if(urlString.indexOf('login') < 0){
         	var originUrl = location.origin;
     		var pathName = location.pathname.split('/');
     		pathName[pathName.length-1] = 'login.htm#?unauthorised=true';
