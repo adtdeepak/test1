@@ -3439,6 +3439,10 @@ select.small {
 	width: 50%;
 }
 
+#editPermissionsDialog .modalcontent{
+	max-height: 230px;
+}
+
 #editPermissionsDialog col:nth-child(2),#editPermissionsDialog col:nth-child(3)
 	{
 	width: 10%;
