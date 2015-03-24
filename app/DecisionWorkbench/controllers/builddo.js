@@ -493,8 +493,12 @@ angular.module('DecisionWorkbench')
 			$scope.addData(tableData);
 		});
 
-		$scope.addData = function (data) {
-			UtilitiesService.getNotifyMessage(window.notifyConstants.NOTIFY_DW_DO_UPDATED,notifyRequestConstants.SUCCESS);
+		$scope.addData = function (data, tableReloadInternalCall) {
+			//To notify only after the table load from API response - if it is internal reload, it should not notify
+			if(tableReloadInternalCall != true){
+				//Notify to the user - DO's are updated
+				UtilitiesService.getNotifyMessage(window.notifyConstants.NOTIFY_DW_DO_UPDATED,notifyRequestConstants.SUCCESS);
+			}
 			$scope.dataLoaded = true;
 			if(!data)
 				throw "noDataError";
@@ -528,9 +532,16 @@ angular.module('DecisionWorkbench')
 			actualData.forEach(function(data){
 				if(doId == data.doId) {
 					if($('#DORow_'+ doId).is(':checked')) {
+						/*
+						 * (data.checked = true) - To be remembered even after user goes to the next page in table
+						 * Generally the table content reloads when user goes to the next page
+						 * This should be done to prevent any loss of checked/unchecked row that is made after API response
+						 * */
+						data.checked = true;
 						$rootScope.selectDOs.push(data);
 						selectedIndex.push(doId);
 					} else {
+						data.checked = false;
 						$rootScope.selectDOs = $rootScope.selectDOs.filter(function( obj ) {
 							return obj.doId != doId;
 						});
@@ -541,6 +552,8 @@ angular.module('DecisionWorkbench')
 					}
 				}
 			});
+			//To reload the contents of the table after change is made (checked/ unchecked row) and sending "tableReloadInternalCall" as "true".
+			$scope.addData(actualData, true);
 			$rootScope.chartLoading = true;
 			$rootScope.$broadcast('doSelected', selectedIndex);
 			return true;
