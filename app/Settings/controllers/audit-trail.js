@@ -9,7 +9,8 @@ angular.module("Settings")
 }])
 .controller("auditTrailController",['$scope','UtilitiesService','DataService','RequestConstantsFactory',
                                     function($scope, UtilitiesService, DataService, RequestConstantsFactory ) {
-
+	//This will check session is valid or not
+	UtilitiesService.checkValidSession(location, $scope);
 	//Constants needed for requests
 	var requestContants = RequestConstantsFactory['AUDIT_TRAIL'];
 	var errorConstants = RequestConstantsFactory['ERROR_MSGS'];

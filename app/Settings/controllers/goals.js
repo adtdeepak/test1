@@ -8,9 +8,10 @@ angular.module("Settings")
 
 }])
 
-.controller("businessImpactTargetController",['$scope','$q','ngTreetableParams','DataService','RequestConstantsFactory','$rootScope',
-                                              function ($scope, $q, ngTreetableParams, DataService, RequestConstantsFactory , $rootScope) {
-
+.controller("businessImpactTargetController",['$scope','$q','ngTreetableParams','DataService','RequestConstantsFactory','$rootScope','UtilitiesService',
+                                              function ($scope, $q, ngTreetableParams, DataService, RequestConstantsFactory , $rootScope, UtilitiesService) {
+	//This will check session is valid or not
+	UtilitiesService.checkValidSession(location, $scope);
 	$scope.dataLoaded = false;
 	$rootScope.$on('targetTableData',function(event,data){
 		$scope.addData(data);

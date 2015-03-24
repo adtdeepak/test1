@@ -9,6 +9,8 @@ angular.module('DecisionWorkbench')
 
 .controller( "setGoalsDataController",['$scope','$rootScope','chartsService','NetworkService','DataService','RequestConstantsFactory','ChartOptionsService','UtilitiesService','sharedProperties',
                                        function($scope, $rootScope, chartsService, NetworkService, DataService, RequestConstantsFactory,ChartOptionsService, UtilitiesService, sharedProperties) {
+	//This will check session is valid or not
+	UtilitiesService.checkValidSession(location, $scope);
 	var errorConstants = RequestConstantsFactory['ERROR_MSGS'];
 	$scope.initialFlag = true;
 	$scope.dataLoaded = false;

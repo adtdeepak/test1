@@ -10,7 +10,9 @@ angular.module("Settings")
 
 .controller("uploadModelsController",['$scope' ,'UtilitiesService','DataService','RequestConstantsFactory','sharedProperties','$rootScope',
                                       function ($scope, UtilitiesService, DataService, RequestConstantsFactory,sharedProperties, $rootScope) {
-    //When the cache expires
+	//This will check session is valid or not
+	UtilitiesService.checkValidSession(location, $scope);
+	//When the cache expires
     $rootScope.$on('onCacheExpiry', loadUploadData);
 
     $rootScope.$on('modelsDataChange', function (event, data) {

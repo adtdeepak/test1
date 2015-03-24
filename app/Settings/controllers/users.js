@@ -10,7 +10,8 @@ angular.module("Settings")
 
 .controller("usersListController",['$scope','UtilitiesService','DataService','RequestConstantsFactory','$rootScope',
                                    function ($scope, UtilitiesService, DataService, RequestConstantsFactory, $rootScope) {
-
+	//This will check session is valid or not
+	UtilitiesService.checkValidSession(location, $scope);
     $scope.dataLoaded = false;
     $scope.options = UtilitiesService.getDataTableOptions();
     var errorConstants = RequestConstantsFactory['ERROR_MSGS'];

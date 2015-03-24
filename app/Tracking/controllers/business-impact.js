@@ -15,8 +15,7 @@ angular.module('Tracking')
             $('.deepDive2, #deepDive2, .deepDive1, #deepDive1').toggleClass('hidden');
         });
         setTimeout(function () { CustomService.appInit(); }, 1000);
-    });
-    
+    });    
     //For getting amount of local storage used
     UtilitiesService.getTotalMemory();
     $rootScope.$broadcast('periodChange');
@@ -24,7 +23,8 @@ angular.module('Tracking')
 
 .controller("businessImpactMatricesController",['$scope','$rootScope','Permission','MenuService','NetworkService','DataService','RequestConstantsFactory','UtilitiesService','sharedProperties','$location','DataConversionService','StorageService',
                                                 function ($scope, $rootScope,Permission, MenuService, NetworkService, DataService, RequestConstantsFactory ,UtilitiesService, sharedProperties, $location, DataConversionService, StorageService) {
-	
+	//This will check session is valid or not
+	UtilitiesService.checkValidSession(location, $scope);
 	var errorConstants = RequestConstantsFactory['ERROR_MSGS'];
 	$scope.initialFlag = true;
 	$scope.dataLoaded = false;

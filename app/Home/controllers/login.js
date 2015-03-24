@@ -9,7 +9,6 @@ angular.module('Home')
 
 .controller('loginController',[ '$scope','DataService','UtilitiesService','RequestConstantsFactory','$location','$window',
                                 function($scope, DataService, UtilitiesService, RequestConstantsFactory, $location, $window) {
-
 	//Constants needed for requests
 	var requestConstants = RequestConstantsFactory['LOGIN'];
 	//Constants needed for response

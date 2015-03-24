@@ -39,7 +39,7 @@ angular.module('AnalyticsApp')
     this.getCache = function(cacheName) {
         return $angularCacheFactory.get(cacheName);
     };
-	
+     
 	this.put = function(key, data, ngCache) {
 		appCache.put(key, data);
         if(CONFIG.persistantCache)

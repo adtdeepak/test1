@@ -24,7 +24,9 @@ angular.module('Tracking')
 
 .controller("engagementScoreController",['$scope' ,'$rootScope','chartsService','DataService','Permission','CustomService','$location','ChartOptionsService','DataConversionService','RequestConstantsFactory','UtilitiesService',
                                          function ($scope, $rootScope, chartsService, DataService, Permission, CustomService, $location, ChartOptionsService, DataConversionService, RequestConstantsFactory, UtilitiesService) {
-    var errorConstants = RequestConstantsFactory['ERROR_MSGS'];
+	//This will check session is valid or not
+	UtilitiesService.checkValidSession(location, $scope);
+	var errorConstants = RequestConstantsFactory['ERROR_MSGS'];
     var requestConstants = RequestConstantsFactory['REQUEST'];
     $scope.initialFlag = true;
     $scope.dataLoaded = false;

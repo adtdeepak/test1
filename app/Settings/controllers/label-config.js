@@ -10,7 +10,9 @@ angular.module("Settings")
 }])
 .controller("dateConfigController",['$scope','UtilitiesService','DataService','$rootScope','RequestConstantsFactory','Permission',
                                       function($scope, UtilitiesService, DataService, $rootScope, RequestConstantsFactory, Permission){
-	 $scope.saveDate = function(){
+	//This will check session is valid or not
+	UtilitiesService.checkValidSession(location, $scope); 
+	$scope.saveDate = function(){
 		 if($scope.selectedDate){
 			var selectedDate =  moment($scope.selectedDate).format(window.appConstants.DATE_FORMAT);
 			var reqData = {

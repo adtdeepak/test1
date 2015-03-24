@@ -16,7 +16,8 @@ angular.module('Settings')
 */
 .controller("dataSyncStatusController",['$scope','DataService','UtilitiesService','RequestConstantsFactory','sharedProperties','$rootScope',
                                          function ($scope, DataService, UtilitiesService,RequestConstantsFactory, sharedProperties, $rootScope) {
-
+	//This will check session is valid or not
+	UtilitiesService.checkValidSession(location, $scope);
     //When the cache expires
     $rootScope.$on('onCacheExpiry', loadStatusData);
     //Setting the scope variable for showing 'spinner' until the data is loaded

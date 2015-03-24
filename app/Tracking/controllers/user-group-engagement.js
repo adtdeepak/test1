@@ -67,7 +67,8 @@ angular.module('Tracking')
 
 .controller("overallUserGroupSummaryController",['$scope','$rootScope','MenuService','RequestConstantsFactory','sharedProperties','Permission','NetworkService','DataConversionService','DataService','sharedProperties','$location','UtilitiesService',
                                                  function($scope, $rootScope, MenuService, RequestConstantsFactory,sharedProperties,Permission, NetworkService, DataConversionService, DataService, sharedProperties, $location, UtilitiesService){
-
+	//This will check session is valid or not
+	UtilitiesService.checkValidSession(location, $scope);
 	var errorConstants = RequestConstantsFactory['ERROR_MSGS'];
 	$scope.initialFlag = true;
 	$scope.dataLoaded = false;

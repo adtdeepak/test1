@@ -23,7 +23,8 @@ angular.module('Tracking')
 
 .controller("acquisitionFunnelController",['$scope','$rootScope','Permission','chartsService','$element','UtilitiesService','RequestConstantsFactory','DataService','DataConversionService','ChartOptionsService','UtilitiesService','StorageService',
                                            function($scope, $rootScope, Permission,chartsService, $element, UtilitiesService, RequestConstantsFactory ,DataService, DataConversionService, ChartOptionsService,UtilitiesService,StorageService){
-	
+	//This will check session is valid or not
+	UtilitiesService.checkValidSession(location, $scope);
 	var errorConstants = RequestConstantsFactory['ERROR_MSGS'];
 	$scope.initialFlag = true;
 	$scope.$on('periodChange',function(){

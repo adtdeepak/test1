@@ -520,6 +520,25 @@ angular.module('AnalyticsApp')
     	}
     }
     
+    //This function will check local storage and decide session is valid or not
+    this.checkValidSession = function(location, $scope){
+    	$scope.validSession = false;
+    	// code for 401 and unauthorised entry
+    	if(!localStorage.getItem('token') || !localStorage.getItem('permissionList')) {
+    		var urlString = location.href;
+        	//To check current page is not the login page - login page should not be redirected to login page
+        	if(urlString.indexOf('login') < 0){
+            	var originUrl = location.origin;
+        		var pathName = location.pathname.split('/');
+        		pathName[pathName.length-1] = 'login.htm#?unauthorised=true';
+        		pathName = pathName.join('/');
+        		location.replace(originUrl + pathName);
+        	}
+    	} else {
+    		$scope.validSession = true;
+    	}
+    }
+    
     
 }])
 

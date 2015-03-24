@@ -4,8 +4,8 @@
 //other modules.
 
 angular.module('AnalyticsApp',['ngRoute','jmdobry.angular-cache'])
-.controller('mainAppContent',['$scope','$rootScope','$angularCacheFactory','UtilitiesService','Permission','labelConfigService','CommonDataService','$window',
-                              function($scope, $rootScope, $angularCacheFactory, UtilitiesService, Permission,labelConfigService,CommonDataService, $window){
+.controller('mainAppContent',['$scope','$rootScope','$angularCacheFactory','UtilitiesService','Permission','labelConfigService','CommonDataService','$window','StorageService',
+                              function($scope, $rootScope, $angularCacheFactory, UtilitiesService, Permission,labelConfigService,CommonDataService, $window, StorageService){
 	$scope.validSession = false;
 	// code for 401 and unauthorised entry
 	if(!localStorage.getItem('token') || !localStorage.getItem('permissionList')) {

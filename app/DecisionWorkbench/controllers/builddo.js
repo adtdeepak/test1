@@ -233,7 +233,8 @@ angular.module('DecisionWorkbench')
 
 .controller( "achievementUpliftController",['$scope','DataService','chartsService','$rootScope','CustomService','ChartOptionsService','DataConversionService','UtilitiesService','RequestConstantsFactory',
                                   	function($scope, DataService, chartsService, $rootScope,CustomService,ChartOptionsService,DataConversionService,UtilitiesService,RequestConstantsFactory) {
-
+	//This will check session is valid or not
+	UtilitiesService.checkValidSession(location, $scope);
 	var errorConstants = RequestConstantsFactory['ERROR_MSGS'];
 	$scope.dataLoaded = false;
 	$rootScope.chartError = false;

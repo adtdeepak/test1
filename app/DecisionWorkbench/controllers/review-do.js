@@ -16,6 +16,8 @@ angular.module('DecisionWorkbench')
 }])
 .controller("reviewChartController",['$scope','DataService','UtilitiesService','CustomService','chartsService','ChartOptionsService','RequestConstantsFactory','$rootScope','DataConversionService',
                                      function($scope, DataService, UtilitiesService, CustomService, chartsService, ChartOptionsService, RequestConstantsFactory, $rootScope, DataConversionService) {
+	//This will check session is valid or not
+	UtilitiesService.checkValidSession(location, $scope);
 	var errorConstants = RequestConstantsFactory['ERROR_MSGS'];
 	var requestData = {
 			"groupBy" : "cmpgnView",

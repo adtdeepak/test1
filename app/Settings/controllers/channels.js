@@ -9,7 +9,8 @@ angular.module("Settings")
 }])
 .controller("channelsInfoController",['$scope','UtilitiesService','DataService','$rootScope','RequestConstantsFactory','sharedProperties',
                                       function($scope, UtilitiesService, DataService, $rootScope, RequestConstantsFactory, sharedProperties){
-	
+	//This will check session is valid or not
+	UtilitiesService.checkValidSession(location, $scope);
 	//When the cache expires
 	$rootScope.$on('onCacheExpiry', loadChannelInfoData);
 	//Loading constants for the request
