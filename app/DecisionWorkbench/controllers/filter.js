@@ -105,7 +105,7 @@
 	//To load the builddo table - after editDOSave action is success
 	$rootScope.$on('loadBuilddoTable',function(){
 		//Triggering the filter button
-		$scope.builddoButtonClicked('/builddo');
+		$scope.builddoButtonClicked('/builddo', false);
 	})
 	//Success function for all filters 
 	$scope.success = function (filterData) {
@@ -436,34 +436,20 @@
 		      requestSetDO['listOfConvActivity'] = listOfConvActivity;
 		      return requestSetDO;
 		}
-
-		$scope.showDOSuccessWithFilters = function(result){
-			console.log("result")
-			
-		}
 		
 		function loadDecisionOptionsTable() {
-			//var requestData = UtilitiesService.getRequestData();
-			//requestData = angular.extend({}, requestData, request);
 			var requestData = requestSetDO;
             sharedProperties.setRequestDO(requestData);
-            
-            //No need of sending request here - it is saved in shared properties and sending request in buiildo
-           // return false;
-           /* var func = $scope.showDOSuccessWithFilters();
-			//var func = redirect; 
-			var cacheKey = "DWDecisionTable" + JSON.stringify(requestData);
-			if (arguments[1]) { 
-				if (arguments[1].key == cacheKey) { 
-					func = null; 
-				} else { 
-					return false; 
-				} 
-			}
-			DataService.getBuilddoDecision(requestData, func, $scope.fail);*/
 		}
-		saveDecision();
-		loadDecisionOptionsTable();
+		//If it is best decision option then no filter should be send in nrequest and no filter is saved
+        if(isBestDecision){
+        	//This builddo table should be loaded without filters
+        	$rootScope.$broadcast("loadDOWithoutFilters")
+        }else{
+        	//Filters are saved
+    		saveDecision();
+    		loadDecisionOptionsTable();
+        }
 		redirect();
 	}
 

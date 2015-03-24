@@ -490,6 +490,8 @@ angular.module('DecisionWorkbench')
 		$rootScope.$on('builddoTableData', function (event, tableData) {
 			$scope.addData(tableData);
 		});
+		//If the user selects "show best decision options"
+		$rootScope.$on('loadDOWithoutFilters', loadData);
 
 		$scope.addData = function (data, tableReloadInternalCall) {
 			//To notify only after the table load from API response - if it is internal reload, it should not notify
