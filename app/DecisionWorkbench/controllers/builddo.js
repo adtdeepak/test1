@@ -176,12 +176,13 @@ angular.module('DecisionWorkbench')
 		}
 	};
 
-	$scope.buildDoTable = function(result) {
+	//Success function for edit DO save - after edited and saved
+	$scope.editDoSaveSuccess = function(result) {
 		UtilitiesService.getNotifyMessage("DO Saved Successfully",requestConstants.SUCCESS);
 		$scope.savingDO = false;
 		if(result.status == 'OK'){
 			$scope.showError= true;
-			$rootScope.$broadcast("builddoTableData", result);
+			$rootScope.$broadcast('loadBuilddoTable');
 			$('#mask, .window').hide();
 		}
 		else{
@@ -217,8 +218,7 @@ angular.module('DecisionWorkbench')
 	}
 
 	function loadReviewDecisionOptionsTable(requestData) {
-		var rEG = UtilitiesService.getRequestData();
-		var func = $scope.buildDoTable; 
+		var func = $scope.editDoSaveSuccess; 
 		if (arguments[1]) { 
 			if (arguments[1].key == cacheKey) { 
 				func = null; 
@@ -482,9 +482,6 @@ angular.module('DecisionWorkbench')
 			}
 		}
 	}
-	/*$rootScope.$on('chartError',function(){
-		$scope.fail(errorConstants.DATA_ERR);
-	})*/
 	$scope.$on('chartLoaded', function () {
 		$rootScope.chartLoading = false;
 		var selectedIndex = [];

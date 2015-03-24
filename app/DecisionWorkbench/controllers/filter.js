@@ -102,6 +102,11 @@
 		$scope.dateCleared = false;
 	}
 
+	//To load the builddo table - after editDOSave action is success
+	$rootScope.$on('loadBuilddoTable',function(){
+		//Triggering the filter button
+		$scope.builddoButtonClicked('/builddo');
+	})
 	//Success function for all filters 
 	$scope.success = function (filterData) {
 		try {
