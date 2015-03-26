@@ -184,53 +184,93 @@ angular.module('DecisionWorkbench')
 	this.toGetBuildDoDecision = function (data){
 
 		var _data = [];
-		var _decision = {};
-		var actList ;
-		var userGroupList ;
-		var channel;
 
 		$.each(data.doList, function(index, doList) {
-
-			actList = "";
-			userGroupList ="";
-			channel ="";
-			selected = false;
-
+			var _decision = {};
+			var actList =[];
+			var userGroupList =[];
+			var channel = [];
+			var doId = [];
+			var isChecked = [];
+			var expectedNewSub = [];
+			var usersTargeted = [];
+			var convUplift = [];
+			
+			doId.push(doList.doId);
+			expectedNewSub.push(doList.expectedNewSub);
+			usersTargeted.push(doList.usersTargeted);
+			convUplift.push(doList.convUplift);
+			
 			$.each(doList.userGroupList, function(key, activities) {
-				userGroupList = userGroupList.concat(doList.userGroupList[key].groupName.trim().substring(10) + ",");
+				userGroupList.push(doList.userGroupList[key].groupName.trim().substring(10));
 			});
 			$.each(doList.targetConvActivityList, function(key, activities) {
-				actList = actList.concat(doList.targetConvActivityList[key].convActivityName+"<br>");
+				actList.push(doList.targetConvActivityList[key].convActivityName);
 			});
 			//If there is no channel list
 			if(doList.channelList){
 				$.each(doList.channelList, function(key, activities) {
-					channel = channel.concat(doList.channelList[key].channelName+"<br>");
+					channel.push(doList.channelList[key].channelName);
 				});
 			}else{
-				channel = "No Channels Available"
+				channel.push("No Channels Available");
 			}
 			$.each(data.bestDOList, function(key, bestDO) {
+				selected = false;
 				if(bestDO.doId == doList.doId) {
 					selected = true;
 				}
+				isChecked.push(selected);
 			});
+			
+			
+			if(doList.editedDoList && doList.editedDoList.length > 0){
+				var editedDoList = doList.editedDoList[0];
+				
+				doId.push(editedDoList.doId);
+				expectedNewSub.push(editedDoList.expectedNewSub);
+				usersTargeted.push(editedDoList.usersTargeted);
+				convUplift.push(editedDoList.convUplift);
+				
+				$.each(editedDoList.userGroupList, function(key, activities) {
+					userGroupList.push(doList.userGroupList[key].groupName.trim().substring(10));
+				});
+				$.each(editedDoList.targetConvActivityList, function(key, activities) {
+					actList.push(editedDoList.targetConvActivityList[key].convActivityName);
+				});
+				//If there is no channel list
+				if(editedDoList.channelList){
+					$.each(editedDoList.channelList, function(key, activities) {
+						channel.push(doList.channelList[key].channelName);
+					});
+				}else{
+					channel.push("No Channels Available");
+				}
+				$.each(data.bestDOList, function(key, bestDO) {
+					selected = false;
+					if(bestDO.doId == editedDoList.doId) {
+						selected = true;
+					}
+					isChecked.push(selected);
+				});
+			}
 
 			_decision = {
 					targetconvList : actList,
-					userGroup : userGroupList.substring(0, userGroupList.length-1),
+					userGroup : userGroupList,
 					channelList : channel,
-					convUplift : doList.convUplift,
-					expectedNewSub : doList.expectedNewSub,
-					usersTargetted : doList.usersTargeted,
-					doId : doList.doId,
-					checked : selected,
-					convAct : doList.targetConvActivityList
+					convUplift : convUplift,
+					expectedNewSub : expectedNewSub,
+					usersTargetted : usersTargeted,
+					doId : doId,
+					checked : isChecked,
+					convAct : actList
 
 			};
 			_data.push(_decision);
 		});
 		_data['status'] = data.status;
+		console.log("_data:", _data)
 		return _data;
 	}
 	this.toGetCommaSeparated = function(data) {

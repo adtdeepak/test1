@@ -178,6 +178,7 @@ angular.module('DecisionWorkbench')
 
 	//Success function for edit DO save - after edited and saved
 	$scope.editDoSaveSuccess = function(result) {
+		alert("pop")
 		UtilitiesService.getNotifyMessage("DO Saved Successfully",requestConstants.SUCCESS);
 		$scope.savingDO = false;
 		if(result.status == 'OK'){
@@ -291,6 +292,7 @@ angular.module('DecisionWorkbench')
 
 	$scope.$on('doSelected',loadCombinedDO);
 	$scope.addChart = function(data){
+		$rootScope.selectedDODetails = data;
 		$scope.dataLoaded = true;
 		$scope.error = false;
 		$rootScope.chartLoading = false;
@@ -311,12 +313,13 @@ angular.module('DecisionWorkbench')
 	
 	var combinedDOLength = 0;
 	function loadCombinedDO(event, selectedIndex){
-		console.log("ppp getCombinedDO", selectedIndex)
 		if(selectedIndex.length != combinedDOLength){
+			console.log("ppp getCombinedDO", selectedIndex)
 			$scope.dataLoaded = false;
 			$scope.error = false;
 			combinedDOLength = selectedIndex.length;
 			selectedDOForUpift = selectedIndex;
+			$rootScope.selectedIndexIds = selectedIndex;
 			var requestData = {
 					"doIdList":selectedIndex
 			};
@@ -381,6 +384,7 @@ angular.module('DecisionWorkbench')
 		$scope.addData(reviewTableData);
 	};
 	$scope.fail = function (msg) {
+		$scope.isDataInReviewPanelTable = false;
 		$scope.error = true;
 		$scope.hasErrorMsg = true;
 		if(msg){
@@ -398,35 +402,30 @@ angular.module('DecisionWorkbench')
 			return false;
 		}
 		var expectedNewSub;
-		if($rootScope.selectDOs.length > 0) {
+		if($rootScope.selectedDODetails) {
 			var selectedDO = {
 					"number" : "",
 					"uplift" : 0,
 					"newSubs" : 0,
 					"selected" : true
 			};
-			angular.forEach($rootScope.selectDOs, function(DO) {
-
-				if(selectedDO.number == "") {
-					selectedDO.number = selectedDO.number + DO.doId;
-				} else {
-					selectedDO.number = selectedDO.number + ", " + DO.doId;
-				}
-				selectedDO.uplift = (parseInt(selectedDO.uplift) + parseInt(DO.convUplift.value)) + "%";
-				expectedNewSub = UtilitiesService.getIntFromString(DO.expectedNewSub);
-				selectedDO.newSubs = selectedDO.newSubs + expectedNewSub;
-			});
-			selectedDO.newSubs = UtilitiesService.getLocaleString(selectedDO.newSubs)
+			
+			selectedDO.number = $rootScope.selectedIndexIds;
+			selectedDO.uplift = $rootScope.selectedDODetails.convUplift.value;
+			selectedDO.newSubs = $rootScope.selectedDODetails.expectedNewSub;
 			//adds the selected DOs to the review panel
 			var hasDO = false;
+			//This to avoid the duplication entry in the table
 			angular.forEach($scope.reviewTableData, function(DO) {
-				var selectedNumber = selectedDO.number.split(", ");
-				var doNumber = DO.number.split(", ");
+				var selectedNumber = selectedDO.number;
+				var doNumber = DO.number;
 				if(UtilitiesService.containsAll(selectedNumber, doNumber)){
 					hasDO = true;
 				}
 			});
-			if(!hasDO) {
+			//If there is no duplicate entry
+			if(!hasDO && $rootScope.selectedIndexIds.length!=0) {
+				//Then update the table - review panel
 				$scope.reviewTableData.push(selectedDO);
 				$scope.addData($scope.reviewTableData);
 			}
@@ -494,33 +493,73 @@ angular.module('DecisionWorkbench')
 		$rootScope.$on('loadDOWithoutFilters', loadData);
 
 		$scope.addData = function (data, tableReloadInternalCall) {
-			//To notify only after the table load from API response - if it is internal reload, it should not notify
-			if(tableReloadInternalCall != true){
-				//Notify to the user - DO's are updated
-				UtilitiesService.getNotifyMessage(window.notifyConstants.NOTIFY_DW_DO_UPDATED,notifyRequestConstants.SUCCESS);
-			}
+			
 			$scope.dataLoaded = true;
 			if(!data)
 				throw "noDataError";
 			$rootScope.$broadcast('TableData', data);
 			actualData = data;
+			console.log('actualData:', actualData)
 			try {
 				$scope.error = false;
 				$scope.options.aaData = [];
 				selectedIndex = [];
 				$rootScope.selectDOs = [];
 				$.each(data, function(key, obj){
-					if(obj.checked) {
-						$rootScope.selectDOs.push(obj);
-						selectedIndex.push(obj.doId);
-					}
-					obj.convUplift.trend == '+ve' ? $scope.img = "<img  src='images/arrow-up-green.png'/>"
-						: $scope.img = "<img  src='images/arrow-red.png' />";
-					$scope.options.aaData.push([obj.doId,obj.targetconvList,obj.channelList,obj.userGroup,obj.expectedNewSub,obj.usersTargetted,$scope.img+obj.convUplift.value,"<a href='#' data-modal='#modifyDialog' name='modal' data-id='"+obj.doId+"' class='edit'"
-					                            +"title='Edit'></a><a title='Validate' href='#' data-modal='#dialog' data-id='"+obj.doId+"'"
-					                            +"name='modal' class='save'> </a> <input type='checkbox' ng-model='DORow_"+obj.doId+"' id='DORow_"+obj.doId+"' ng-checked='"+obj.checked+"' ng-disabled='otherData' data-id='"+obj.doId+"' ng-change=\"tableData('"+obj.doId+"')\"/>"]);
+					var convActListText = '';
+					var userGroupListText = '';
+					var channelListText = '';
+					var doIdListText = '';
+					var actionSection = '';
+					var actionSectionText = '';
+					var newSubsText = '';
+					var usersTargetedText = '';
+					var convUpliftText = '';
+					
+					//For splitting the rows if more then DO is found - generally Original and edited DO
+					$.each(obj.doId, function(key, eachconvAct){
+						var doId = obj.doId[key];
+						var editSection = "<a href='#' data-modal='#modifyDialog' name='modal' data-id='"+obj.doId[key]+"' class='edit' title='Edit'></a>";
+						convActListText += "<div class='rowSplit'>"+obj.targetconvList[key]+"</div>";
+						userGroupListText += "<div class='rowSplit'>"+obj.userGroup[key]+"</div>";
+						channelListText += "<div class='rowSplit'>"+obj.channelList[key]+"</div>";
+						//Key will be 1 - only if the DO is an edited DO
+						if(key == 1){
+							doId += '<br>(Edited)';
+							//Disabling the modify button
+							editSection = "<a href='#' data-id='"+obj.doId[key]+"' class='edit' title='Edit cannot be done'></a>";
+						}
+						doIdListText += "<div class='rowSplit'>"+doId+"</div>";
+						newSubsText += "<div class='rowSplit'>"+obj.expectedNewSub[key]+"</div>";
+						usersTargetedText += "<div class='rowSplit'>"+obj.usersTargetted[key]+"</div>";
+						
+						obj.convUplift[key].trend == '+ve' ? $scope.img = "<img  src='images/arrow-up-green.png'/>"
+							: $scope.img = "<img  src='images/arrow-red.png' />";
+						
+						
+						convUpliftText += "<div class='rowSplit'>"+($scope.img+parseFloat(obj.convUplift[key].value).toFixed(10))+"</div>";
+						
+						actionSection = editSection +"<a title='Validate' href='#' data-modal='#dialog' data-id='"+obj.doId[key]+"'"
+	                    +"name='modal' class='save'> </a> <input type='checkbox' ng-model='DORow_"+obj.doId[key]+"' id='DORow_"+obj.doId[key]+"' ng-checked='"+obj.checked[key]+"' ng-disabled='otherData' data-id='"+obj.doId[key]+"' ng-change=\"tableData('"+obj.doId[key]+"')\"/>";
+						actionSectionText += "<div class='rowSplit'>"+actionSection+"</div>";
+						
+						if(obj.checked[key]) {
+							//$rootScope.selectDOs.push(obj);
+							selectedIndex.push(obj.doId[key]);
+						}
+					})
+					
+					
+					$scope.options.aaData.push([doIdListText,convActListText,channelListText,userGroupListText,newSubsText,usersTargetedText,convUpliftText,actionSectionText]);
 				})
-				$rootScope.$broadcast('doInitialSelected', data, selectedIndex);
+				//To notify only after the table load from API response - if it is internal reload, it should not notify
+				if(tableReloadInternalCall != true){
+					//Initial broadcast should be done only if the response is from API
+					$rootScope.$broadcast('doInitialSelected', data, selectedIndex);
+					$rootScope.$broadcast('doSelected', selectedIndex);
+					//Notify to the user - DO's are updated
+					UtilitiesService.getNotifyMessage(window.notifyConstants.NOTIFY_DW_DO_UPDATED,notifyRequestConstants.SUCCESS);
+				}
 			} catch (e) {
 				$scope.fail(errorConstants.DATA_ERR);
 			}
@@ -528,34 +567,41 @@ angular.module('DecisionWorkbench')
 		
 		//when the checkbox in the row is checked or unchecked
 		$scope.getDONumber = function(doId) {
+			
 			$rootScope.dosUpdated = true;
 			actualData.forEach(function(data){
-				if(doId == data.doId) {
-					if($('#DORow_'+ doId).is(':checked')) {
-						/*
-						 * (data.checked = true) - To be remembered even after user goes to the next page in table
-						 * Generally the table content reloads when user goes to the next page
-						 * This should be done to prevent any loss of checked/unchecked row that is made after API response
-						 * */
-						data.checked = true;
-						$rootScope.selectDOs.push(data);
-						selectedIndex.push(doId);
-					} else {
-						data.checked = false;
-						$rootScope.selectDOs = $rootScope.selectDOs.filter(function( obj ) {
-							return obj.doId != doId;
-						});
-						selectedIndex = [];
-						$rootScope.selectDOs.forEach(function(DO){
-							selectedIndex.push(DO.doId);
-						});
+				$.each(data.doId, function(key, value){
+					if(doId == data.doId[key]) {
+						if($('#DORow_'+ doId).is(':checked')) {
+							/*
+							 * (data.checked[key] = true) - To be remembered even after user goes to the next page in table
+							 * Generally the table content reloads when user goes to the next page
+							 * This should be done to prevent any loss of checked/unchecked row that is made after API response
+							 * */
+							data.checked[key] = true;
+							//$rootScope.selectDOs.push(data.doId[key]);
+							selectedIndex.push(doId);
+						} else {
+							data.checked[key] = false;
+							selectedIndex = [];
+							//This is for adding the checked DO's in the 'selectedIndex' array - retrieving from the table DO data 
+							actualData.forEach(function(data){
+								$.each(data.doId, function(key, value){
+									if(data.checked[key]) {
+										//Pushing into selected Index
+										selectedIndex.push(data.doId[key]);
+									}
+								})
+							})
+						}
 					}
-				}
+				})
 			});
-			//To reload the contents of the table after change is made (checked/ unchecked row) and sending "tableReloadInternalCall" as "true".
-			$scope.addData(actualData, true);
+			
 			$rootScope.chartLoading = true;
 			$rootScope.$broadcast('doSelected', selectedIndex);
+			//To reload the contents of the table after change is made (checked/ unchecked row) and sending "tableReloadInternalCall" as "true".
+			$scope.addData(actualData, true);
 			return true;
 		}
 		
