@@ -7409,3 +7409,8 @@ table.GDtable.reviewDOtable td:nth-child(9) {
 .notificationMsg p{
 	color: #4FC9D9;
 }
+.img-disable {
+	opacity: 0.4;
+	filter: alpha(opacity = 40);
+	background-color: #000;
+}

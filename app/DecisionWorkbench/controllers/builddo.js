@@ -520,7 +520,7 @@ angular.module('DecisionWorkbench')
 						if(key == 1){
 							doId += '<br>(Edited)';
 							//Disabling the modify button
-							editSection = "<a href='#' data-id='"+obj.doId[key]+"' class='edit' title='Edit cannot be done'></a>";
+							editSection = "<a href='#' data-id='"+obj.doId[key]+"' class='edit img-disable' title='cannot be edited'></a>";
 						}
 						doIdListText += "<div class='rowSplit'>"+doId+"</div>";
 						newSubsText += "<div class='rowSplit'>"+obj.expectedNewSub[key]+"</div>";
@@ -550,8 +550,6 @@ angular.module('DecisionWorkbench')
 					//Initial broadcast should be done only if the response is from API
 					$rootScope.$broadcast('doInitialSelected', data, selectedIndex);
 					$rootScope.$broadcast('doSelected', selectedIndex);
-					//Notify to the user - DO's are updated
-					UtilitiesService.getNotifyMessage(window.notifyConstants.NOTIFY_DW_DO_UPDATED,notifyRequestConstants.SUCCESS);
 				}
 			} catch (e) {
 				$scope.fail(errorConstants.DATA_ERR);
