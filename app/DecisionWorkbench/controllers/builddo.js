@@ -31,19 +31,13 @@ angular.module('DecisionWorkbench')
 			$scope.dataLoaded = true;
 			$scope.error = false;
 			$scope.modifyTableData = data;
-			if( $scope.modifyTableData.doDetails.doId == $scope.currentIndex)
-			{	
-				$scope.isChannelAvailable = true;
-				if($scope.modifyTableData.doDetails.channelList.length == 0 || $scope.modifyTableData.doDetails.channelList[0].channelId == "na"){
-					$scope.isChannelAvailable = false;
-				}
-				$scope.modifyData = $scope.modifyTableData.doDetails;
-				dOptionId = data['doDetails'].doId;	
+
+			$scope.isChannelAvailable = true;
+			if($scope.modifyTableData.doDetails.channelList.length == 0 || $scope.modifyTableData.doDetails.channelList[0].channelId == "na"){
+				$scope.isChannelAvailable = false;
 			}
-			else{
-				$scope.modifyData = "";
-				dOptionId = "";
-			}
+			$scope.modifyData = $scope.modifyTableData.doDetails;
+			dOptionId = data['doDetails'].doId;	
 			$("select").trigger('change');
 		} catch (e) {
 			$scope.fail(errorConstants.DATA_ERR);
@@ -178,7 +172,6 @@ angular.module('DecisionWorkbench')
 
 	//Success function for edit DO save - after edited and saved
 	$scope.editDoSaveSuccess = function(result) {
-		alert("pop")
 		UtilitiesService.getNotifyMessage("DO Saved Successfully",requestConstants.SUCCESS);
 		$scope.savingDO = false;
 		if(result.status == 'OK'){
