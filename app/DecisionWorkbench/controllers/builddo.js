@@ -177,6 +177,7 @@ angular.module('DecisionWorkbench')
 		$scope.savingDO = false;
 		if(result.status == 'OK'){
 			$scope.showError= true;
+			//Broadcasting - so that it could be watched and updated in builddoTableController
 			$rootScope.$broadcast('loadBuilddoTable');
 			$('#mask, .window').hide();
 		}
@@ -457,7 +458,7 @@ angular.module('DecisionWorkbench')
 
 .controller("buildDoTableController",['$scope', '$element','$rootScope','$location','RequestConstantsFactory','DataService','sharedProperties','UtilitiesService','DataConversionService',
                                       function($scope, $element, $rootScope, $location, RequestConstantsFactory, DataService, sharedProperties, UtilitiesService, DataConversionService) {
-
+	sharedProperties.setRequestDO("");
 	var errorConstants = RequestConstantsFactory['ERROR_MSGS'];
 	var notifyRequestConstants = RequestConstantsFactory['NOTIFICATION'];
 	$scope.dataLoaded = false;
@@ -613,7 +614,6 @@ angular.module('DecisionWorkbench')
 			var urlIndex = $location.search();
 			if(!UtilitiesService.isObjectEmpty(sharedProperties.getRequestDO())){
 				var requestData = sharedProperties.getRequestDO();
-				sharedProperties.setRequestDO("");
 			}else{
 				var periodDataObj = {"periodName": $rootScope.selectedPeriod,"reportingInterval":"weekly"};
 				console.log('periodDataObj',periodDataObj)
@@ -639,6 +639,12 @@ angular.module('DecisionWorkbench')
 			}
 			DataService.getBuilddoDecision(requestData, func, $scope.fail);
 		}
+		
+		//After editDOSave is done - from the $scope.editDoSaveSuccess
+		$rootScope.$on('loadBuilddoTable',function(){
+			//Triggering builddo update
+			loadData();
+		})
 		loadData();
 	});
 }])
