@@ -75,6 +75,7 @@ angular.module('DecisionWorkbench')
 
 	}
 	$scope.fail = function (msg) {
+		$scope.savingDO = false;
 		$scope.error = true;
 		$scope.hasErrorMsg = true;
 		if(msg){
@@ -530,7 +531,7 @@ angular.module('DecisionWorkbench')
 							: $scope.img = "<img  src='images/arrow-red.png' />";
 						
 						
-						convUpliftText += "<div class='rowSplit'>"+($scope.img+parseFloat(obj.convUplift[key].value).toFixed(10))+"</div>";
+						convUpliftText += "<div class='rowSplit'>"+($scope.img+obj.convUplift[key].value)+"</div>";
 						
 						actionSection = editSection +"<a title='Validate' href='#' data-modal='#dialog' data-id='"+obj.doId[key]+"'"
 	                    +"name='modal' class='save'> </a> <input type='checkbox' ng-model='DORow_"+obj.doId[key]+"' id='DORow_"+obj.doId[key]+"' ng-checked='"+obj.checked[key]+"' ng-disabled='otherData' data-id='"+obj.doId[key]+"' ng-change=\"tableData('"+obj.doId[key]+"')\"/>";

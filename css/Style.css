@@ -7294,8 +7294,9 @@ input[type="text"]:disabled{
 	border-bottom:1px solid #cbd3d8;
 }
 .rowSplit{
-	height: 30px !important;
-	padding-top: 17px !important;
+	height: 45px !important;
+	padding-top: 6px !important;
+	padding: 16px;
 }
 table.GDtable.reviewDOtable td{
 	padding : 0px !important;
@@ -7413,4 +7414,8 @@ table.GDtable.reviewDOtable td:nth-child(9) {
 	opacity: 0.4;
 	filter: alpha(opacity = 40);
 	background-color: #000;
+}
+
+[ng-controller="buildDoTableController"] table.dataTable tbody th,[ng-controller="buildDoTableController"] table.dataTable tbody td {
+	padding : 0px !important;	
 }

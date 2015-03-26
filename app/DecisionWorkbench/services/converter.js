@@ -187,7 +187,9 @@ angular.module('DecisionWorkbench')
 
 		$.each(data.doList, function(index, doList) {
 			var _decision = {};
+			var actListString ='';
 			var actList =[];
+			var userGroupListString = '';
 			var userGroupList =[];
 			var channel = [];
 			var doId = [];
@@ -202,11 +204,14 @@ angular.module('DecisionWorkbench')
 			convUplift.push(doList.convUplift);
 			
 			$.each(doList.userGroupList, function(key, activities) {
-				userGroupList.push(doList.userGroupList[key].groupName.trim().substring(10));
+				userGroupListString += doList.userGroupList[key].groupName.trim().substring(10);
 			});
+			userGroupList.push(userGroupListString);
+			
 			$.each(doList.targetConvActivityList, function(key, activities) {
-				actList.push(doList.targetConvActivityList[key].convActivityName);
+				actListString += doList.targetConvActivityList[key].convActivityName+"<br>";
 			});
+			actList.push(actListString);
 			//If there is no channel list
 			if(doList.channelList){
 				$.each(doList.channelList, function(key, activities) {
@@ -225,6 +230,8 @@ angular.module('DecisionWorkbench')
 			
 			
 			if(doList.editedDoList && doList.editedDoList.length > 0){
+				actListString = '';
+				userGroupListString = '';
 				var editedDoList = doList.editedDoList[0];
 				
 				doId.push(editedDoList.doId);
@@ -233,11 +240,14 @@ angular.module('DecisionWorkbench')
 				convUplift.push(editedDoList.convUplift);
 				
 				$.each(editedDoList.userGroupList, function(key, activities) {
-					userGroupList.push(doList.userGroupList[key].groupName.trim().substring(10));
+					userGroupListString += editedDoList.userGroupList[key].groupName.trim().substring(10);
 				});
+				userGroupList.push(userGroupListString);
+				
 				$.each(editedDoList.targetConvActivityList, function(key, activities) {
-					actList.push(editedDoList.targetConvActivityList[key].convActivityName);
+					actListString += editedDoList.targetConvActivityList[key].convActivityName+"<br>";
 				});
+				actList.push(actListString);
 				//If there is no channel list
 				if(editedDoList.channelList){
 					$.each(editedDoList.channelList, function(key, activities) {

@@ -261,7 +261,6 @@ angular.module('DecisionWorkbench')
 				function(result) {
 					var cData = DataConversionService.toGetBuildDoDecision(result);
 					cData = DataConversionService.toGetCommaSeparatedForDO(cData);
-					//StorageService.put(cacheKey, cData, StorageService.getCache("decision-workbench-builddoCache"));
 					return cData;
 				}
 		);
