@@ -188,6 +188,8 @@ angular.module('DecisionWorkbench')
 		$.each(data.doList, function(index, doList) {
 			var _decision = {};
 			var actListString ='';
+			//convList - will be used for validate DO dialog
+			var convList = [];
 			var actList =[];
 			var userGroupListString = '';
 			var userGroupList =[];
@@ -204,14 +206,16 @@ angular.module('DecisionWorkbench')
 			convUplift.push(doList.convUplift);
 			
 			$.each(doList.userGroupList, function(key, activities) {
-				userGroupListString += doList.userGroupList[key].groupName.trim().substring(10);
+				userGroupListString += doList.userGroupList[key].groupName.trim().substring(10)+"<br>";
 			});
 			userGroupList.push(userGroupListString);
 			
 			$.each(doList.targetConvActivityList, function(key, activities) {
 				actListString += doList.targetConvActivityList[key].convActivityName+"<br>";
+				//convListString += doList.targetConvActivityList[key];
 			});
 			actList.push(actListString);
+			convList.push(doList.targetConvActivityList);
 			//If there is no channel list
 			if(doList.channelList){
 				$.each(doList.channelList, function(key, activities) {
@@ -240,7 +244,7 @@ angular.module('DecisionWorkbench')
 				convUplift.push(editedDoList.convUplift);
 				
 				$.each(editedDoList.userGroupList, function(key, activities) {
-					userGroupListString += editedDoList.userGroupList[key].groupName.trim().substring(10);
+					userGroupListString += editedDoList.userGroupList[key].groupName.trim().substring(10)+"<br>";
 				});
 				userGroupList.push(userGroupListString);
 				
@@ -248,6 +252,7 @@ angular.module('DecisionWorkbench')
 					actListString += editedDoList.targetConvActivityList[key].convActivityName+"<br>";
 				});
 				actList.push(actListString);
+				convList.push(editedDoList.targetConvActivityList);
 				//If there is no channel list
 				if(editedDoList.channelList){
 					$.each(editedDoList.channelList, function(key, activities) {
@@ -274,7 +279,7 @@ angular.module('DecisionWorkbench')
 					usersTargetted : usersTargeted,
 					doId : doId,
 					checked : isChecked,
-					convAct : actList
+					convAct : convList
 
 			};
 			_data.push(_decision);

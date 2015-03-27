@@ -55,22 +55,35 @@ angular.module('DecisionWorkbench')
 		loadDecisionOptionsTable();
 	});
 
+	//This will execute when validate DO modal dialog icon is clicked
 	$scope.$on('decisionValidate',function(object,index){
 		$scope.showError = false;
 		$scope.error = false;
 		$scope.$apply();
+		//Index is the selected Doid
 		$scope.validateIndex = index;
-		getCurrentData();
+		//getCurrentData();
 	});
 
+	//This function will be used in validate do model
 	function getCurrentData(){
 		$.each(currentData, function(key, obj){
-			if(obj.doId == $scope.validateIndex){
-				$scope.currentData  = obj;
-				var temp = obj.targetconvList;
-				$scope.currentData.targetconvList = temp.replace(/<br>/g, ",").replace(/\,$/g, "");
-				$scope.$apply();
-			}
+			$.each(obj.doId, function(doIdKey, eachDoId){
+				if(obj.doId[doIdKey] == $scope.validateIndex){
+					$scope.currentData  = obj;
+					//Setting the current data with doIdKey - so that only it will differentiate original and edited DO
+					var tempConvList = obj.targetconvList[doIdKey];
+					var tempUserGroup = obj.userGroup[doIdKey]; 
+					//Replacing <br> with ',' - will be displayed in current filter selection of validate DO dialog
+					$scope.currentData.targetconvList = tempConvList.replace(/<br>/g, ",").replace(/\,$/g, "");
+					$scope.currentData.doId =  obj.doId[doIdKey];
+					$scope.currentData.convAct =  obj.convAct[doIdKey];
+					$scope.currentData.convUplift = obj.convUplift[doIdKey];
+					$scope.currentData.expectedNewSub = obj.expectedNewSub[doIdKey];
+					$scope.currentData.userGroup = tempUserGroup.replace(/<br>/g, ",").replace(/\,$/g, "");
+					$scope.$apply();
+				}
+			})
 		})
 
 	}
@@ -112,7 +125,7 @@ angular.module('DecisionWorkbench')
 		$scope.show = false;
 	}
 	
-	//validateDO 
+	//validateDO - will execute when "filter" in validate DO modal dialog is clicked
 	$scope.validateFilter = function(fromDate, toDate){
 		var fromDate =  moment(fromDate).format(window.appConstants.DATE_FORMAT);
 		var toDate =  moment(toDate).format(window.appConstants.DATE_FORMAT);
@@ -136,7 +149,6 @@ angular.module('DecisionWorkbench')
 					"execDtLowerBound" : toDate
 				}
 		};
-		console.log("ppp $scope.validateRequestData:", $scope.validateRequestData)
 		loadDecisionOptionsTableValidate();
 	}
 
@@ -566,7 +578,7 @@ angular.module('DecisionWorkbench')
 		
 		//when the checkbox in the row is checked or unchecked
 		$scope.getDONumber = function(doId) {
-			
+			console.log("doId:", doId, actualData)
 			$rootScope.dosUpdated = true;
 			actualData.forEach(function(data){
 				$.each(data.doId, function(key, value){
