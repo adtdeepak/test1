@@ -432,6 +432,7 @@ angular.module('DecisionWorkbench')
 		$location.path("/review-do");
 	}
 
+	//Save and view review panel function
 	$scope.save = function() {
 		$scope.dataLoaded = false;
 		var request = {
@@ -439,17 +440,22 @@ angular.module('DecisionWorkbench')
 				             ],
 				             "filter": "executed"
 		}
+		//Looping the review panel table datas
 		$scope.reviewTableData.forEach(function(doObj){
 			var singleDOArray = [];
-			doObj.number.split(",").forEach(function(doNumber){
+			//Getting through each doId in each row
+			doObj.number.forEach(function(doNumber) {
 				var reviewedDOObj = {};
-				reviewedDOObj["doId"] = doNumber.trim();
+				//Putting doId as an object
+				reviewedDOObj["doId"] = doNumber;
 				singleDOArray.push(reviewedDOObj);
 			});
 			request.doIdList.push(singleDOArray);
 		});
+		//Setting the request in shared Properties - it will be used in reviewdo page
 		sharedProperties.setReviewDORequest(request);
 		console.log("ppp getReviewDORequest:", sharedProperties.getReviewDORequest())
+		//This will redirect to the reviewdo page
 		onSaveSuccess();
 		//DataService.saveSelectedDO(request, $scope, onSaveSuccess);
 	}
