@@ -2,6 +2,34 @@ angular.module('AnalyticsApp')
 
 .service("UtilitiesService",['StorageService','$rootScope','sharedProperties','RequestConstantsFactory','labelConfigService', function (StorageService, $rootScope, sharedProperties,RequestConstantsFactory,labelConfigService) {
 
+	this.createCookie = function (name, value, days) {
+	    var expires;
+
+	    if (days) {
+	        var date = new Date();
+	        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+	        expires = "; expires=" + date.toGMTString();
+	    } else {
+	        expires = "";
+	    }
+	    document.cookie = encodeURIComponent(name) + "=" + encodeURIComponent(value) + expires + "; path=/";
+	}
+
+	this.readCookie = function (name) {
+	    var nameEQ = encodeURIComponent(name) + "=";
+	    var ca = document.cookie.split(';');
+	    for (var i = 0; i < ca.length; i++) {
+	        var c = ca[i];
+	        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+	        if (c.indexOf(nameEQ) === 0) return decodeURIComponent(c.substring(nameEQ.length, c.length));
+	    }
+	    return null;
+	}
+
+	this.eraseCookie = function (name) {
+	    createCookie(name, "", -1);
+	}
+	
     this.initStorage = function () {
         var views = ["summary", "user-settings", "business-impact", "engagement-activity", "channel-tracker", "campaign-tracker", "user-group-engagement", "decision-workbench-index", "decision-workbench-builddo", "decision-workbench-reviewdo", "settingsData", "settingsChannels", "settingsGoals", "settingsModels", "settingsUsers", "settingsAuditTrail"];
 

@@ -27,6 +27,7 @@ angular.module('Home')
 		if(data.user){
 			//Set token in local storage
 			localStorage.setItem('token',data.token);
+			UtilitiesService.createCookie("NavikConverter",data.token);
 			//Set permission List in local storage
 			localStorage.setItem('permissionList',data.permissionList);
 			$window.location="home.htm";

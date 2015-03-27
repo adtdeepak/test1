@@ -8,7 +8,7 @@ angular.module('AnalyticsApp',['ngRoute','jmdobry.angular-cache'])
                               function($scope, $rootScope, $angularCacheFactory, UtilitiesService, Permission,labelConfigService,CommonDataService, $window, StorageService){
 	$scope.validSession = false;
 	// code for 401 and unauthorised entry
-	if(!localStorage.getItem('token') || !localStorage.getItem('permissionList')) {
+	if(!localStorage.getItem('token') || !localStorage.getItem('permissionList') || !UtilitiesService.readCookie("NavikConverter")) {
 		UtilitiesService.unauthorisedRedirect(location);
 	} else {
 		$scope.validSession = true;
