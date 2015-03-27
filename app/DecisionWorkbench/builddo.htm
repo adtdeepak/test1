@@ -213,10 +213,10 @@
 			<form ng-hide="error || !dataLoaded" name="userGroupForm" >
 			<div class="modifyList">
 				<ul>
-					<li ng-if="!modifyData.userGroupList.length == 0">Targeted Conversion Activities</li>
+					<li ng-if="!modifyData.userGroupList.length == 0"><h3>Targeted Conversion Activities</h3></li>
 					<li ng-if="!modifyData.userGroupList.length == 0"> <p ng-repeat="data in modifyData.targetConvActivityList">{{data.convActivityName}}
 						</p></li>
-					<li class="clearfix">Channels</li>
+					<li class="clearfix"><h3>Channels</h3></li>
 					<li ng-show="isChannelAvailable"><select id="Select1" tabindex="1" ng-model="selectChannel">
 							<option ng-repeat ="data in modifyData.channelList" value={{data.channelId}} ng-selected={{data.selected}}>{{data.channelName}}</option>
 					</select></li>
@@ -233,7 +233,7 @@
 						<li ng-repeat="data in modifyData.userGroupList">
 							<label>{{data.groupName}}</label>
 							<label>{{data.userCount}}</label>
-							<input name="targetedNumber"  type="number" id={{data.groupId}} min="0" required>
+							<input name="targetedNumber"  type="number" id={{data.groupId}} min="0" max={{data.userCount}} required>
 						</li>
 						</ng-form>
 					</ul>		
