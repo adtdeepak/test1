@@ -515,7 +515,7 @@ angular.module('AnalyticsApp')
     	if(messageType == 'success'){
     		imageUrl = "css/images/success-icon.png";
     	}
-    	else if(messageType = 'failure'){
+    	else if(messageType == 'failure'){
     		imageUrl = "css/images/failure-icon.png";
     	}
     		return $container.notify("create", {

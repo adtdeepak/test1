@@ -553,7 +553,7 @@ angular.module('DecisionWorkbench')
 						convUpliftText += "<div class='rowSplit'>"+($scope.img+obj.convUplift[key].value)+"</div>";
 						
 						actionSection = editSection +"<a title='Validate' href='#' data-modal='#dialog' data-id='"+obj.doId[key]+"'"
-	                    +"name='modal' class='save'> </a> <input type='checkbox' ng-model='DORow_"+obj.doId[key]+"' id='DORow_"+obj.doId[key]+"' ng-checked='"+obj.checked[key]+"' ng-disabled='otherData' data-id='"+obj.doId[key]+"' ng-change=\"tableData('"+obj.doId[key]+"')\"/>";
+	                    +"name='modal' class='save'> </a> <input type='checkbox' ng-model='DORow_"+obj.doId[key]+"' id='DORow_"+obj.doId[key]+"' ng-checked='"+obj.checked[key]+"' ng-disabled='otherData' data-id='"+obj.doId[key]+"' ng-click=\"tableData('"+obj.doId[key]+","+key+"')\"/>";						
 						actionSectionText += "<div class='rowSplit'>"+actionSection+"</div>";
 						
 						if(obj.checked[key]) {
@@ -575,11 +575,25 @@ angular.module('DecisionWorkbench')
 				$scope.fail(errorConstants.DATA_ERR);
 			}
 		};
-		
+
+		var isEditedDoAlreadySelected = false;
 		//when the checkbox in the row is checked or unchecked
-		$scope.getDONumber = function(doId) {
-			console.log("doId:", doId, actualData)
-			$rootScope.dosUpdated = true;
+		$scope.getDONumber = function(doIdWithInfo) {
+			var doId = doIdWithInfo.split(',')[0];
+			var isEdited = doIdWithInfo.split(',')[1] == 1?true:false;
+			
+			if(isEditedDoAlreadySelected && !($('#DORow_'+ doId).is(':checked'))){
+				//This if will leave only one selected editedDO - make it unchecked
+			}else if(($('#DORow_'+ doId).is(':checked') && isEdited && selectedIndex.length>0) || isEditedDoAlreadySelected) {
+				$('#DORow_'+ doId).prop('checked', false);
+				UtilitiesService.getNotifyMessage("Edited DO combinations are not allowed",notifyRequestConstants.FAILURE);
+				return false;
+			}
+			if($('#DORow_'+ doId).is(':checked') && isEdited){
+				isEditedDoAlreadySelected = true;
+			}else{
+				isEditedDoAlreadySelected = false;
+			}
 			actualData.forEach(function(data){
 				$.each(data.doId, function(key, value){
 					if(doId == data.doId[key]) {
