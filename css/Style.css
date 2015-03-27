@@ -7294,7 +7294,7 @@ input[type="text"]:disabled{
 	border-bottom:1px solid #cbd3d8;
 }
 .rowSplit{
-	height: 45px !important;
+	height: 80px !important;
 	padding-top: 6px !important;
 	padding: 16px;
 }

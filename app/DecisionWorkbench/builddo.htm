@@ -217,10 +217,10 @@
 					<li ng-if="!modifyData.userGroupList.length == 0"> <p ng-repeat="data in modifyData.targetConvActivityList">{{data.convActivityName}}
 						</p></li>
 					<li class="clearfix">Channels</li>
-					<li ng-if="isChannelAvailable"><select id="Select1" tabindex="1" ng-model="selectChannel">
+					<li ng-show="isChannelAvailable"><select id="Select1" tabindex="1" ng-model="selectChannel">
 							<option ng-repeat ="data in modifyData.channelList" value={{data.channelId}} ng-selected={{data.selected}}>{{data.channelName}}</option>
 					</select></li>
-					<li ng-if="!isChannelAvailable">No Channels Available</li>
+					<!-- <li ng-if="!isChannelAvailable">No Channels Available</li> -->
 				</ul>
 				<div id="userGroups">
 					<ul>
