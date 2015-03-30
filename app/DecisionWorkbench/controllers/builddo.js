@@ -175,7 +175,7 @@ angular.module('DecisionWorkbench')
 		loadDecisionOptionsTableValidate();
 	}
 
-	//To save the DO, after it is edited -- editDOSaveAction
+	//To save the DO, after it is edited -- editDOSaveAction -  Save
 	$scope.saveDecisionOptions = function(){
 		if(!userGroupForm.checkValidity()){
 			$scope.savingDO = false;
@@ -721,6 +721,7 @@ angular.module('DecisionWorkbench')
 		
 		//After editDOSave is done - from the $scope.editDoSaveSuccess
 		$rootScope.$on('loadBuilddoTable',function(){
+			$scope.dataLoaded = false;
 			//Triggering builddo update
 			loadData();
 		})
