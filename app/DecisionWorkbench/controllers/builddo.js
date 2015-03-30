@@ -277,8 +277,8 @@ angular.module('DecisionWorkbench')
 }])
 
 
-.controller( "achievementUpliftController",['$scope','DataService','chartsService','$rootScope','CustomService','ChartOptionsService','DataConversionService','UtilitiesService','RequestConstantsFactory',
-                                  	function($scope, DataService, chartsService, $rootScope,CustomService,ChartOptionsService,DataConversionService,UtilitiesService,RequestConstantsFactory) {
+.controller( "achievementUpliftController",['$scope','DataService','chartsService','$rootScope','CustomService','ChartOptionsService','DataConversionService','UtilitiesService','RequestConstantsFactory','sharedProperties',
+                                  	function($scope, DataService, chartsService, $rootScope,CustomService,ChartOptionsService,DataConversionService,UtilitiesService,RequestConstantsFactory, sharedProperties) {
 	//This will check session is valid or not
 	UtilitiesService.checkValidSession(location, $scope);
 	var errorConstants = RequestConstantsFactory['ERROR_MSGS'];
@@ -370,7 +370,7 @@ angular.module('DecisionWorkbench')
 			$scope.error = false;
 			combinedDOLength = selectedIndex.length;
 			selectedDOForUpift = selectedIndex;
-			$rootScope.selectedIndexIds = selectedIndex;
+			sharedProperties.setSelectedDOs(selectedIndex);
 			var requestData = {
 					"doIdList":selectedIndex
 			};
@@ -412,7 +412,6 @@ angular.module('DecisionWorkbench')
 	$.extend(true,$scope.options,$scope.reviewPaneloptions);
 	$scope.addData = function (data) {
 		try{
-			var obj = data;
 			$scope.options.aaData = [];
 			if(data.length == 0){
 				$scope.options.aaData.push(['','','']);
@@ -471,8 +470,7 @@ angular.module('DecisionWorkbench')
 					"newSubs" : 0,
 					"selected" : true
 			};
-			
-			selectedDO.number = $rootScope.selectedIndexIds;
+			selectedDO.number = sharedProperties.getSelectedDOs();
 			selectedDO.uplift = $rootScope.selectedDODetails.convUplift.value;
 			selectedDO.newSubs = $rootScope.selectedDODetails.expectedNewSub;
 			//adds the selected DOs to the review panel
@@ -486,7 +484,7 @@ angular.module('DecisionWorkbench')
 				}
 			});
 			//If there is no duplicate entry
-			if(!hasDO && $rootScope.selectedIndexIds.length!=0) {
+			if(!hasDO && sharedProperties.getSelectedDOs().length!=0) {
 				//Then update the table - review panel
 				$scope.reviewTableData.push(selectedDO);
 				$scope.addData($scope.reviewTableData);
@@ -647,6 +645,7 @@ angular.module('DecisionWorkbench')
 				UtilitiesService.getNotifyMessage("Edited DO combinations are not allowed",notifyRequestConstants.FAILURE);
 				return false;
 			}
+			//There is only one edited Do is allowed
 			if($('#DORow_'+ doId).is(':checked') && isEdited){
 				isEditedDoAlreadySelected = true;
 			}else{

@@ -590,6 +590,7 @@ throw exception;
     var labelId;
     var requestObjDO = {};
     var reviewDOReqObj = {};
+    var selectedDOsList = [];
     return {
         getSubGroupBy: function () {
             return subGroupBy;
@@ -657,6 +658,13 @@ throw exception;
         },
         getReviewDORequest:function(){
         	return reviewDOReqObj;
+        },
+        setSelectedDOs:function(selectedDOs){
+        	//Extend Important - Otherwise it is getting referenced
+        	selectedDOsList = $.extend([],selectedDOs);
+        },
+        getSelectedDOs:function(){
+        	return selectedDOsList;
         }
         
         
