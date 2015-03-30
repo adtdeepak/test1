@@ -357,6 +357,20 @@ angular.module('DecisionWorkbench')
 		return _data;
 	}
 	
+	//To get the channels array from the channel list response
+	this.toGetChannelsList = function(data){
+		var channelList = [];
+		$.each(data.channelList, function(key, eachChannel){
+			var tempObj = {
+					"channelId":eachChannel.channelId,
+					"channelName":eachChannel.channelType,
+					"selected":false
+			};
+			channelList.push(tempObj);
+		})
+		return channelList;
+	}
+	
 	this.toGetBuildDoChartData = function(data) {
 		var requestConstants = RequestConstantsFactory['BUILDDO'];
 		var resultData = {};

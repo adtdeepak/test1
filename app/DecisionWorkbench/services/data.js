@@ -103,6 +103,21 @@ angular.module('DecisionWorkbench')
 		);
 		sendRequest(cacheKey, "decision-workbench-builddoCache", success, requestWS);
 	};
+	
+	//Getting the channel info - for populating the editDO popup in builddo table
+	this.getChannelInfoData = function(reqData, success, fail){
+		var cacheKey = "channelsInfo";
+		var requestWS = getRequestWS(
+				RequestConstantsFactory['SETTINGS_URL'].CHANNELS_LIST, 
+				success, 
+				fail,
+				function(result) {
+					var cData = result; 
+					return cData;
+				}
+		);
+		sendRequest(cacheKey, "decision-workbench-builddoCache", success, requestWS);
+	};
 
 	this.getFilterData = function(reqData, success, fail) {
 

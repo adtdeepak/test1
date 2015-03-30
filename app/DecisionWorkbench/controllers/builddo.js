@@ -25,8 +25,15 @@ angular.module('DecisionWorkbench')
 	});
 	$scope.options = UtilitiesService.getDataTableOptions();
 	
+	//Success function for getting the available channels
+	$scope.channelSuccess = function(data){
+		//This will get the channels in an array
+		$scope.availableChannelsList = DataConversionService.toGetChannelsList(data);
+		loadEditDODetails();
+	}
+	
 	//edit DO Action success
-	$scope.success = function (data) {
+	$scope.editDODetailsSuccess = function (data) {
 		try {
 			$scope.dataLoaded = true;
 			$scope.error = false;
@@ -37,6 +44,19 @@ angular.module('DecisionWorkbench')
 				$scope.isChannelAvailable = false;
 			}
 			$scope.modifyData = $scope.modifyTableData.doDetails;
+			//This is for selecting channel in the channel list drop down
+			$scope.modifyData.channelList[0].selected = true;
+			var allChannels = [];
+			//Merging the channels list
+			$.each($scope.availableChannelsList, function(key, eachChannel){
+				if(eachChannel.channelId == $scope.modifyData.channelList[0].channelId){
+					allChannels.push($scope.modifyData.channelList[0]);
+				}else{
+					allChannels.push(eachChannel);
+				}
+			})
+			//This will contains the channel list
+			$scope.modifyData.channelList = allChannels;
 			dOptionId = data['doDetails'].doId;	
 			$("select").trigger('change');
 		} catch (e) {
@@ -44,15 +64,18 @@ angular.module('DecisionWorkbench')
 		}
 	}
 
+	//When editDO popoup is clicked
 	$scope.$on('decisionModify',function(object,index){
 		$scope.showError = false;
+		$scope.dataLoaded = false;
 		$scope.$apply();
 		$scope.currentIndex = index;
 		$scope.requestData = {
 				"doId": index,
 				"periodName":$rootScope.selectedPeriod
 		};
-		loadDecisionOptionsTable();
+		//Get the available channels list
+		getChannelList();
 	});
 
 	//This will execute when validate DO modal dialog icon is clicked
@@ -212,8 +235,8 @@ angular.module('DecisionWorkbench')
 	}
 	
 	//For populating the edit DO popup
-	function loadDecisionOptionsTable() {
-		var func = $scope.success; 
+	function loadEditDODetails() {
+		var func = $scope.editDODetailsSuccess; 
 		var cacheKey = "DWDecisionTableModify" + JSON.stringify($scope.requestData);
 		if (arguments[1]) { 
 			if (arguments[1].key == cacheKey) { 
@@ -225,6 +248,21 @@ angular.module('DecisionWorkbench')
 		DataService.getDecisionOptionsModifyData($scope.requestData, func, $scope.fail);
 	}
 
+	//To get the available channels for the editDo popup
+	function getChannelList(){
+		var requestData = {};
+	var cacheKey = "channelsInfo" + JSON.stringify(requestData);
+		var func = $scope.channelSuccess; 
+		if (arguments[1]) { 
+			if (arguments[1].key == cacheKey) { 
+				func = null; 
+			} else { 
+				return false; 
+			} 
+		}
+		DataService.getChannelInfoData(requestData, func, $scope.fail);
+	}
+	
 	function loadReviewDecisionOptionsTable(requestData) {
 		var func = $scope.editDoSaveSuccess; 
 		if (arguments[1]) { 
