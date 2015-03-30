@@ -375,7 +375,18 @@ angular.module('DecisionWorkbench')
 					"doIdList":selectedIndex
 			};
 			var func = $scope.addChart; 
-			DataService.getCombinedDO(requestData, func,$scope.fail);
+			//If no DO is selected
+			if(selectedIndex.length == 0){
+				var result = {};
+				var convUplift = {
+						"value":"0",
+						"trend":"+ve"
+				};
+				result['convUplift'] = convUplift;
+				$scope.addChart(result);
+			}else{
+				DataService.getCombinedDO(requestData, func,$scope.fail);
+			}
 		}
 	}
 }])
@@ -615,7 +626,7 @@ angular.module('DecisionWorkbench')
 				//To notify only after the table load from API response - if it is internal reload, it should not notify
 				if(tableReloadInternalCall != true){
 					//Initial broadcast should be done only if the response is from API
-					$rootScope.$broadcast('doInitialSelected', data, selectedIndex);
+//					$rootScope.$broadcast('doInitialSelected', data, selectedIndex);
 					$rootScope.$broadcast('doSelected', selectedIndex);
 				}
 			} catch (e) {
