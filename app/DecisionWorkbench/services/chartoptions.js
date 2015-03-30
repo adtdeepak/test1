@@ -36,9 +36,7 @@ this.getSetGoalsData = function(data) {
 	                    formatter: function(){
 	                    	console.log("this:", this.point.isApplicable)
 	                    	yVal = this.y;
-	    					if(yVal < 0){
-	    						yVal = -(yVal);
-	    					}else if(yVal == 0 && this.point.isApplicable==false){
+	                    	if(yVal == 0 && this.point.isApplicable==false){
 	    						yVal = 'Not Applicable ';
 	    					}else if(yVal == 0){
 	    						yVal = 'Zero '+this.x;
