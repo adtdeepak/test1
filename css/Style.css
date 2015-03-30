@@ -7297,6 +7297,7 @@ input[type="text"]:disabled{
 	height: 80px !important;
 	padding-top: 6px !important;
 	padding: 16px;
+	word-wrap: break-word;
 }
 table.GDtable.reviewDOtable td{
 	padding : 0px !important;
