@@ -660,8 +660,8 @@ throw exception;
         	return reviewDOReqObj;
         },
         setSelectedDOs:function(selectedDOs){
-        	//Extend Important - Otherwise it is getting referenced
-        	selectedDOsList = $.extend([],selectedDOs);
+        	//angular.copy Important - Otherwise it is getting referenced
+        	selectedDOsList = angular.copy(selectedDOs);
         },
         getSelectedDOs:function(){
         	return selectedDOsList;
