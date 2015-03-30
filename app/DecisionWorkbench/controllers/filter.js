@@ -321,7 +321,7 @@
         	if($scope.selectedUG.length == 0 || $scope.selectedCA.length == 0){
         		$rootScope.loadingDOSearchResult = false;
         		 $scope.loadingDOSearchResult = false;
-        		UtilitiesService.getNotifyMessage(window.notifyConstants.NOTIFY_DW_FILTER_SELECT_ATLEAST,notifyRequestConstants.SUCCESS);
+        		UtilitiesService.getNotifyMessage(window.notifyConstants.NOTIFY_DW_FILTER_SELECT_ATLEAST,notifyRequestConstants.FAILURE);
         		return false;
         	}
         }
