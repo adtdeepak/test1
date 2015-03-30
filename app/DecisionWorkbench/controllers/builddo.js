@@ -290,6 +290,11 @@ angular.module('DecisionWorkbench')
 	};
 	var utilData = UtilitiesService.getRequestData();
 	requestData = angular.extend({}, utilData, requestData);
+	
+	$rootScope.$on('builddoTableError', function(){
+		$scope.error = true;
+	})
+	
 	$scope.showChart = false;
 	var buildDoChartOptions = ChartOptionsService.getBuildDoData();
 	$scope.success = function (builddoChart) {
@@ -299,6 +304,7 @@ angular.module('DecisionWorkbench')
 			$scope.dataLoaded = true;
 			var buildDoChartOptions = ChartOptionsService.getBuildDoData();
 			$scope.$on('doInitialSelected',function(index, data ,selectedIndex){
+				$scope.error = false;
 				$scope.showChart = true;
 				var achievableUplift = DataConversionService.toGetAchievableUplift(data, selectedIndex, $scope.currentAchievableChart['paidUsers']);
 				buildDoChartOptions.xAxis.categories[4] = "Conv Uplift "+ selectedIndex;
@@ -544,18 +550,21 @@ angular.module('DecisionWorkbench')
 		$rootScope.$on('loadDOWithoutFilters', loadData);
 
 		$scope.addData = function (data, tableReloadInternalCall) {
-			
-			$scope.dataLoaded = true;
-			if(!data)
-				throw "noDataError";
-			$rootScope.$broadcast('TableData', data);
-			actualData = data;
-			console.log('actualData:', actualData)
 			try {
+				$scope.dataLoaded = true;
+				$rootScope.$broadcast('TableData', data);
+				actualData = data;
+				console.log('actualData:', actualData)
 				$scope.error = false;
 				$scope.options.aaData = [];
 				selectedIndex = [];
 				$rootScope.selectDOs = [];
+				//If there is no data in builddo table
+				if(data.length == 0){
+					$scope.error = true;
+					$rootScope.$emit('builddoTableError');
+					throw "noDataError";
+				}
 				$.each(data, function(key, obj){
 					var convActListText = '';
 					var userGroupListText = '';
