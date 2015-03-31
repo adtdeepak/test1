@@ -53,6 +53,8 @@ angular.module('Home')
 		$scope.loginError = false;
 		$scope.showNetworkError = false;
 		$scope.loadingLoginResult = true;
+		//Setting username in local storage
+		localStorage.setItem('userName', $scope.userName);
 		//request
 		requestData[requestConstants.USER_NAME] = $scope.userName;
 		requestData[requestConstants.PASSWORD] = $scope.password;
