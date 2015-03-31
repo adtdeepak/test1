@@ -256,7 +256,7 @@ angular.module('DecisionWorkbench')
 				//If there is no channel list
 				if(editedDoList.channelList){
 					$.each(editedDoList.channelList, function(key, activities) {
-						channel.push(doList.channelList[key].channelName);
+						channel.push(editedDoList.channelList[key].channelName);
 					});
 				}else{
 					channel.push("No Channels Available");
