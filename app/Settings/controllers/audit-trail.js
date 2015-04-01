@@ -43,7 +43,6 @@ angular.module("Settings")
 			}
 		})
 		//request
-		console.log("$scope.fromDate", $scope.fromDate, $scope.toDate)
 		if($scope.fromDate){
 			var fromDate =  moment($scope.fromDate).format(window.appConstants.DATE_FORMAT);
 		}else {

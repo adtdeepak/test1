@@ -440,12 +440,6 @@ angular.module("Settings")
         //Request
         addRolesRequest[requestConstants.ROLE_NAME] = $scope.addRoleName;
         addRolesRequest[requestConstants.ROLE_DESCRIPTION] = $scope.addDescription;
-//        entityObject[requestConstants.ROLE_ENTITY_ID] = "";
-//        entityObject[requestConstants.ROLE_ENTITY_NAME] = "";
-//        entityObject[requestConstants.ROLE_READ_PERMISSION] = true;
-//        entityObject[requestConstants.ROLE_WRITE_PERMISSION] = false;
-//        permissions.push(entityObject);
-//        addRolesRequest['permissions'] = permissions;
         console.log("REQUEST", addRolesRequest)
         //function call
         addRoles(addRolesRequest);

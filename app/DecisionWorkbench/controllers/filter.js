@@ -3,31 +3,7 @@
     //Triggered when the filter.htm is included by angular
 	$scope.$on('$includeContentLoaded', function () {
         console.log('Content included !!!!');
-        
-//        var dragDrop = $("#fieldChooser");
-//		var dragDrop1 = $("#fieldChooser1");
-//		var scroller = $("#scroller, .DragDropContainer, .DragDropContainer1");
-//		//Drag and drop setting
 
-//		if (dragDrop.length > 0) {
-//			var sourceFields = dragDrop.find("#sourceFields");
-//			var destinationFields = dragDrop.find("#destinationFields");
-//			userGroupChooser = dragDrop.fieldChooser(sourceFields, destinationFields);
-//		};
-
-//		if (dragDrop1.length > 0) {
-//			var sourceFields1 = dragDrop1.find("#sourceFields1");
-//			var destinationFields1 = dragDrop1.find("#destinationFields1");
-//			var convActivityChooser = dragDrop1.fieldChooser(sourceFields1, destinationFields1);
-//		};
-		//Scrollbar
-
-//		if (scroller.length) {
-//			if (scroller.hasClass("mCustomScrollbar")) exit;
-//			scroller.mCustomScrollbar({
-//				advanced: { updateOnContentResize: true }
-//			});
-//		}
 		//percent or num switch button
 		var switchbutton = $(' .switch:not(.actBtnSwitch) a');
 		if (switchbutton.length > 0) {
@@ -298,13 +274,10 @@
 	}
 	$scope.fail = function () {
         $scope.error = true;
-        //$scope.hasErrorMsg = true;
-        //$scope.errorMsg = "Network Error !!";
     }
 
 	$scope.setDOSuccess = function(){
 		$scope.loadingDOSearchResult = false;
-		//UtilitiesService.getNotifyMessage(window.notifyConstants.NOTIFY_DW_DO_UPDATED,notifyRequestConstants.SUCCESS);
 	}
 	$scope.builddoButtonClicked = function(url, isBestDecision){
         $rootScope.loadingDOSearchResult = true;
@@ -355,13 +328,6 @@
 			}
 		});
 		
-		//Temporarily removing active till date
-		/*  var fromDate = ($scope.fromDate!="na")? moment($scope.fromDate).format(window.appConstants.DATE_FORMAT):"";
-	      var toDate = ($scope.toDate!="na")? moment($scope.toDate).format(window.appConstants.DATE_FORMAT):"";
-		filter['activeTillDate'] = {
-				"greaterThanDate": fromDate,
-				"lessThanDate": toDate
-		};*/
 		filter['convUplift'] = {
 				"greaterThan": $scope.value.num,
 				"asPercentage": false
@@ -371,8 +337,6 @@
 		requestSetDO['filter'] = filter;
 		console.log("ppp requestSetDO:", JSON.stringify(requestSetDO))
 		function saveDecision() {
-			//var requestData = UtilitiesService.getRequestData();
-			//requestData = angular.extend({}, requestData, request);
 			var requestData = getDOSettingsSaveRequest();
 			var func = $scope.setDOSuccess; 
 			var cacheKey = "DWIndexSave" + JSON.stringify(requestData);
@@ -415,14 +379,6 @@
 		             };
 		             listOfConvActivity.push(tempObj);
 		      });
-			  
-			//Temporarily removing active till date
-		    /*  var fromDate = ($scope.fromDate!="na")? moment($scope.fromDate).format(window.appConstants.DATE_FORMAT):"";
-		      var toDate = ($scope.toDate!="na")? moment($scope.toDate).format(window.appConstants.DATE_FORMAT):"";
-		      requestSetDO['activeTillDate'] = {
-		                   "greaterThanDate": fromDate,
-		              "lessThanDate": toDate
-		      };*/
 		      requestSetDO['convUplift'] = {
 		                   "greaterThan": $scope.value.num,
 		              "asPercentage": false
