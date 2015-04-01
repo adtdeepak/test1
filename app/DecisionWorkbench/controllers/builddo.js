@@ -681,6 +681,8 @@ angular.module('DecisionWorkbench')
 			});
 			
 			$rootScope.chartLoading = true;
+			//To remove the duplicates in an array
+			selectedIndex = jQuery.unique( selectedIndex );
 			$rootScope.$broadcast('doSelected', selectedIndex);
 			//To reload the contents of the table after change is made (checked/ unchecked row) and sending "tableReloadInternalCall" as "true".
 			$scope.addData(actualData, true);

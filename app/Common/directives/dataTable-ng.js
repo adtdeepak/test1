@@ -9,7 +9,12 @@ angular.module('AnalyticsApp')
             var dataTable = element.dataTable(scope.options);
             scope.options = scope.options;
             scope.$watch('options.aaData', handleModelUpdates, true);
-
+            
+            //To compile after sorting in table
+            $(element).on('click', 'th' ,function () {        
+            	$timeout(function () { $compile(element.contents())(scope); }, 10);
+            });
+            //To compile table at pagination i.e., the user goes to the next page
             $(element).on('page.dt', function () {
                 $timeout(function () { $compile(element.contents())(scope); }, 10);
             });
