@@ -6,7 +6,7 @@
 angular.module('AnalyticsApp',['ngRoute','jmdobry.angular-cache'])
 .controller('mainAppContent',['$scope','$rootScope','$angularCacheFactory','UtilitiesService','Permission','labelConfigService','CommonDataService','$window','StorageService',
                               function($scope, $rootScope, $angularCacheFactory, UtilitiesService, Permission,labelConfigService,CommonDataService, $window, StorageService){
-
+	console.log("hello")
 	//If userName is in local Storage
 	if(localStorage.getItem('userName')){
 		//This will be the username
