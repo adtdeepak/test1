@@ -31,7 +31,7 @@
               </execution>
             </executions>
             <configuration>
-              <executable>/src/main/webapp/build.bat</executable>
+              <executable>/src/main/webapp/build.sh</executable>
             </configuration>
           </plugin>
         </plugins>
