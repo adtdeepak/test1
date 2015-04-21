@@ -10,12 +10,11 @@ npm install grunt-contrib-copy --save-dev
 npm install grunt-contrib-clean --save-dev
 npm install grunt-rev --save-dev
 npm install grunt-usemin --save-dev
-echo Current Directory
-pwd
 echo Starting grunt
 grunt
 cp src/main/webapp/js/system.js dist/js/
 cp src/main/webapp/js/config.js dist/js/
 cd dist
-jar -cvf dc.war *
-sleep
+echo Current Directory
+pwd
+jar -xvf dc.war *
