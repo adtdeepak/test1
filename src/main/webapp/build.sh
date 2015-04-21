@@ -14,8 +14,8 @@ echo Current Directory
 pwd
 echo Starting grunt
 grunt
-cp src\main\webapp\js\system.js dist\js\
-cp src\main\webapp\js\config.js dist\js\
+cp src/main/webapp/js/system.js dist/js/
+cp src/main/webapp/js/config.js dist/js/
 cd dist
 jar -cvf dc.war *
 sleep
