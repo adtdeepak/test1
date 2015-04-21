@@ -281,10 +281,6 @@ angular.module('AnalyticsApp')
 	CONSTANTS['AUDIT_TRAIL'] = AUDIT_TRAIL;
 	CONSTANTS['LABEL_CONFIG'] = LABEL_CONFIG;
 	
-	
-	/*----------------------base url------------------------------*/
-	//var BASE_URL = "http://199.223.234.202:8080/absolutdata";
-	
 	/*---------------------url version------------------------------*/
 	var BASE_URL_VERSION = appConstants.API_BASE_URL + "/v0.3"
 	
