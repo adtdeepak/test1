@@ -16,7 +16,7 @@ module.exports = function (grunt) {
                 expand: true,
                 cwd: 'src/main/webapp/js/polyfills/shims',
                 src: ['**'],
-                dest: 'src/main/webapp/dist/js/polyfills/shims'
+                dest: 'dist/js/polyfills/shims'
             }
         },
  
@@ -48,7 +48,7 @@ module.exports = function (grunt) {
         },
  
         usemin: {
-            html: ['dist/src/main/webapp/login.htm','dist/src/main/webapp/home.htm','dist/src/main/webapp/change-password.htm','dist/src/main/webapp/settings.htm','dist/src/main/webapp/forgot-password.htm','dist/src/main/webapp/decision-workbench.htm','dist/src/main/webapp/tracking.htm'],
+            html: ['dist/login.htm','dist/home.htm','dist/change-password.htm','dist/settings.htm','dist/forgot-password.htm','dist/decision-workbench.htm','dist/tracking.htm'],
             options: {
                 blockReplacements: {
                   asyncjs: function (block) {
