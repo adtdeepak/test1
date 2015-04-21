@@ -1,10 +1,4 @@
 echo hi
-export tempval=$0
-export tempval=$tempval:build.sh=$
-export drive=$tempval:~0,2$
-$drive$
-cd $tempval$
-rmdir dist
 source npm install -g grunt-cli
 source npm install grunt --save-dev
 source npm install grunt-contrib-concat --save-dev
