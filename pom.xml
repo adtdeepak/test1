@@ -31,7 +31,7 @@
               </execution>
             </executions>
             <configuration>
-              <executable>sudo /src/main/webapp/build.sh</executable>
+              <executable>sudo ./src/main/webapp/build.sh</executable>
             </configuration>
           </plugin>
         </plugins>
