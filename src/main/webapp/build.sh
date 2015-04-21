@@ -1,5 +1,4 @@
 echo hi
-cd ..
 source npm install -g grunt-cli
 source npm install grunt --save-dev
 source npm install grunt-contrib-concat --save-dev
