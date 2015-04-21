@@ -17,4 +17,3 @@ cp src/main/webapp/js/config.js dist/js/
 cd dist
 echo Current Directory
 pwd
-jar -xvf dc.war *
