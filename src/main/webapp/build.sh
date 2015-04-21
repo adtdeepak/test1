@@ -1,4 +1,7 @@
 echo Initializing Grunt...
+cd /root/.jenkins/workspace/Navik/src/main/webapp
+echo Current Directory
+pwd
 npm install -g grunt-cli
 npm install grunt --save-dev
 npm install grunt-contrib-concat --save-dev
