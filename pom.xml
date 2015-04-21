@@ -23,7 +23,7 @@
             <version>1.2</version>
             <executions>
               <execution>
-                <id>runshellscript</id>
+                <id>runshellscriptlinux</id>
                 <phase>package</phase>
                 <goals>
                   <goal>exec</goal>
