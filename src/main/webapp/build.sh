@@ -1,5 +1,6 @@
 echo Initializing Grunt...
 cd /root/.jenkins/workspace/Navik/src/main/webapp
+rm -rf dist
 echo Current Directory
 pwd
 npm install -g grunt-cli
