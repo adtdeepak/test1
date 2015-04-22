@@ -22,3 +22,4 @@ cd dist
 echo Current Directory
 pwd
 jar cf dc.war *
+echo War generated
