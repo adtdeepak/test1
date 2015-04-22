@@ -15,8 +15,8 @@ npm install grunt-rev --save-dev
 npm install grunt-usemin --save-dev
 echo Starting grunt
 grunt
-cp src/main/webapp/js/system.js dist/js/
-cp src/main/webapp/js/config.js dist/js/
+cp js/system.js dist/js/
+cp js/config.js dist/js/
 cd dist
 echo Current Directory
 pwd
