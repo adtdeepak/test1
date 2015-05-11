@@ -1,4 +1,3 @@
-'use strict';
 module.exports = function (grunt) {
  
     grunt.initConfig({
@@ -20,12 +19,7 @@ module.exports = function (grunt) {
                 dest: 'dist/js/polyfills/shims'
             }
         },
-		 karma: {
-		  unit: {
-			configFile: 'my.conf.js',
-			autoWatch: true
-		  }
-		},		
+ 
         rev: {
             files: {
                 src: ['dist/**/*.{js,css}', '!dist/js/shims/**']
@@ -81,7 +75,7 @@ module.exports = function (grunt) {
             }
         }
     });
-	grunt.loadNpmTasks('grunt-karma');
+ 
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-concat');
