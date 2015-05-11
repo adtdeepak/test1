@@ -2,18 +2,18 @@ describe('loginController', function(){
 	beforeEach(module('AnalyticsApp'));
 	beforeEach(module('Home'));
 
-  it('should create "phones" model with 3 phones', inject(function($controller) {
+  it('should create check string with 2 names', inject(function($controller) {
     var scope = {},
         ctrl = $controller('loginController', {$scope:scope});
 		
-    expect(scope.phones.length).toBe(3);
+    expect(scope.checkString.length).toBe(2);
   }));
   
-  it('phone name should be sangar', inject(function($controller) {
+  it('first name should be sangar', inject(function($controller) {
     var scope = {},
         ctrl = $controller('loginController', {$scope:scope});
 		
-    expect(scope.phones[0].name).toBe('sangar');
+    expect(scope.checkString[0].name).toBe('sangar');
   }));
 
 });

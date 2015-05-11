@@ -9,6 +9,13 @@ angular.module('Home')
 
 .controller('loginController',[ '$scope','DataService','UtilitiesService','RequestConstantsFactory','$location','$window',
                                 function($scope, DataService, UtilitiesService, RequestConstantsFactory, $location, $window) {
+								
+	//Temporary code for testing - karma unit test			
+	$scope.checkString = [
+    {'name': 'sangar'},
+    {'name': 'edison',}
+  ];
+								
 	//Constants needed for requests
 	var requestConstants = RequestConstantsFactory['LOGIN'];
 	//Constants needed for response
