@@ -13,7 +13,7 @@ angular.module('Home')
 	var requestConstants = RequestConstantsFactory['LOGIN'];
 	//Constants needed for response
 	var responseConstants = RequestConstantsFactory['RESPONSE'];
-	//Request Initialization
+	//Request Initialization Data
 	var requestData ={};
 	
 	//For unauthorised user
