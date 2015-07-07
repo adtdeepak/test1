@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Home">
+<head>
+<title>NAVIK CONVERTER</title>
+<link rel="shortcut icon" href="images/logo.ico"/>
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js">
+</script>
+-->
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js">
+</script>
+-->
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.js">
+</script>
+-->
+<!--
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet'
+type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet'
+type='text/css'>
+-->
+
+<!-- Plugin Styles -->
+<link href="css/plugins/reset.css" rel="Stylesheet" type="text/css" />
+<link href="css/plugins/font-awesome.css" rel="stylesheet"
+	type="text/css" />
+<link href="css/plugins/jquery-ui.css" rel="stylesheet">
+<link href="css/plugins/jquery.mCustomScrollbar.css" rel="stylesheet">
+<link href="css/plugins/jquery.dataTables.css" rel="Stylesheet" type="text/css" />
+<link href="css/plugins/jquery.treetable.css" rel="stylesheet" type="text/css" />
+<link href="css/plugins/jquery.treetable.theme.default.css" rel="stylesheet" type="text/css" />
+<link href="css/plugins/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+<!-- Custom Styles -->
+<link href="css/Style.css" rel="Stylesheet" type="text/css" />
+<link href="css/New.css" rel="Stylesheet" type="text/css" />
+<link href="css/device.css" rel="Stylesheet" type="text/css" />
+<link href="css/Charts.css" rel="Stylesheet" type="text/css" />
+
+<!-- Framework related JS -->
+<script src="js/lib/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="js/lib/jquery/jquery-ui.js"></script>
+<script src="js/lib/angular/angular.js" type="text/javascript"></script>
+<script src="js/lib/angular/angular-route.js" type="text/javascript"></script>
+<script src="js/lib/angular/angular-cache.js" type="text/javascript"></script>
+<script src="js/lib/angular/angular-treetable.js" type="text/javascript"></script>
+<script src="js/lib/angular/angular-animate.min.js" type="text/javascript"></script>
+<script src="js/lib/bootstrap.min.js" type="text/javascript"></script>
+
+</head>
+<body ng-controller="mainAppContent">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header col-sm-3 col-md-3 col-lg-3">
+				<figure>
+					<img src="images/logo.png" alt="D-ASSIST $ CONVERTER"
+						title="D-ASSIST $ CONVERTER" />
+				</figure>
+			</div>
+			<div class="col-sm-9 col-md-9 col-lg-9" ng-cloak>
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="home.htm">Home</a></li>
+					<li ng-controller="dwLinkController"
+						ng-if="isDecisionWorkbenchTabVisible"><a href="#"
+						ng-click="dwUrlClicked(decisionWorkbenchHtmlName)">{{decisionWorkbenchTab}}</a>
+					</li>
+					<li><a ng-controller="dwLinkController" href="#"
+						ng-click="trackUrlClicked(trackingHtmlName)">{{home_track_text}}</a>
+					</li>
+					<li ng-if="isSettingsTabVisible"><a href="analysis.htm">Analysis</a></li>
+				</ul>
+				
+				<ng-include src="'partials/header.htm'"></ng-include>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container head-container"  ng-controller="homePageController">
+		<div class="row nopadding">
+			<div class="row">
+				<div class="panel-body dotted">
+					<div class="display-inline">Performance Summary</div>
+					<div class="filter-line">
+						<li class="active">Week</li>
+						<li>Month</li>
+						<li>Year</li>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+			<div class="half-width">
+				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
+					<div class="customDiv bkgd-yellow">
+						<div class="">
+							<div class="panel-heading">New Registrations
+							</div>
+						</div>
+						<div class="widget-content">
+							<div class="row-fluid">
+								<div>Users this week: <span>25,700</span></div>
+							</div>
+							<highchart id="chart1" config="registrationGauge" class=""></highchart>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
+					<div class="customDiv bkgd-orange">
+						<div class="">
+							<div class="panel-heading">New Paid Users
+							</div>
+						</div>
+						<div class="widget-content">
+							<div class="row-fluid">
+								<div>Users this week: <span>1,674</span></div>
+							</div>
+							<highchart id="chart1" config="paidUsersGauge" class=""></highchart>
+						</div>
+					</div>
+				</div>
+				</div>
+			<div class="half-width">
+				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
+					<div class="customDiv bkgd-blue">
+						<div class="">
+							<div class="panel-heading">Conversion Rate
+							</div>
+						</div>
+						<div class="widget-content">
+							<div class="row-fluid">
+								<div>%age this week: <span>7%</span></div>
+							</div>
+							<highchart id="chart1" config="convRateGauge" class=""></highchart>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
+					<div class="customDiv bkgd-green">
+						<div class="">
+							<div class="panel-heading">Engagement Score
+							</div>
+						</div>
+						<div class="widget-content">
+							<div class="row-fluid">
+								<div>%age this week: <span>57</span></div>
+							</div>
+							<highchart id="chart1" config="engScoreGauge" class=""></highchart>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="half-width separate-col">
+				<div class="panel-body dotted">Segment Performance</div>
+				<div class="col-sm-6 col-md-6 col-lg-6 widget-height">
+					<div class="customDiv">
+						<div class="wdgt-heading">
+							<div class="color-orange">Finance Executives
+							</div>
+						</div>
+						<div class="wdgt-content">
+							<div class="row nopadding brdr-btm">
+								<div class="col-sm-6 col-md-6 col-lg-6 brdr-rgt">
+									<div class="textValue">New Paid User</div>
+								</div>
+								<div class="col-sm-6 col-md-6 col-lg-6">
+									<div class="textValue">239</div>
+								</div>
+							</div>
+							<div class="row nopadding brdr-btm">
+								<div class="col-sm-6 col-md-6 col-lg-6 brdr-rgt">
+									<div class="textValue">Target</div>
+								</div>
+								<div class="col-sm-6 col-md-6 col-lg-6">
+									<div class="textValue">205</div>
+								</div>
+							</div>
+							<div class="row nopadding">
+								<div class="col-sm-12 col-md-12 col-lg-12">
+									<div class="row-fluid lastVal">Outperforming<span class="value-green"> +14%</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-6 col-lg-6 widget-height">
+					<div class="customDiv">
+						<div class="wdgt-heading">
+							<div class="color-orange">Photographers
+							</div>
+						</div>
+						<div class="wdgt-content">
+							<div class="row nopadding brdr-btm">
+								<div class="col-sm-6 col-md-6 col-lg-6  brdr-rgt">
+									<div class="textValue">New Paid User</div>
+								</div>
+								<div class="col-sm-6 col-md-6 col-lg-6">
+									<div class="textValue">337</div>
+								</div>
+							</div>
+							<div class="row nopadding brdr-btm">
+								<div class="col-sm-6 col-md-6 col-lg-6 brdr-rgt">
+									<div class="textValue">Target</div>
+								</div>
+								<div class="col-sm-6 col-md-6 col-lg-6">
+									<div class="textValue">448</div>
+								</div>
+							</div>
+							<div class="row nopadding">
+								<div class="col-sm-12 col-md-12 col-lg-12">
+									<div class="row-fluid lastVal">Underperforming<span class="value-red"> -33%</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="half-width separate-col">
+				<div class="panel-body dotted">Campaign Effectiveness</div>
+				<div class="col-sm-6 col-md-6 col-lg-6 full-height widget-height">
+					<div class="customDiv">
+						<div class="wdgt-heading">
+							<div class="color-blue">Summer Bonanza
+							</div>
+						</div>
+						<div class="wdgt-content">
+							<div class="row nopadding brdr-btm">
+								<div class="col-sm-6 col-md-6 col-lg-6 brdr-rgt">
+									<div class="textValue">New Paid User</div>
+								</div>
+								<div class="col-sm-6 col-md-6 col-lg-6">
+									<div class="textValue">11,784</div>
+								</div>
+							</div>
+							<div class="row nopadding brdr-btm">
+								<div class="col-sm-6 col-md-6 col-lg-6 brdr-rgt">
+									<div class="textValue">Target</div>
+								</div>
+								<div class="col-sm-6 col-md-6 col-lg-6">
+									<div class="textValue">274</div>
+								</div>
+							</div>
+							<div class="row nopadding">
+								<div class="col-sm-12 col-md-12 col-lg-12">
+									<div class="row-fluid lastVal">Outperforming<span class="value-green"> +54%</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-6 col-lg-6 full-height widget-height">
+					<div class="customDiv">
+						<div class="wdgt-heading">
+							<div class="color-blue">Weekend Offer
+							</div>
+						</div>
+						<div class="wdgt-content">
+							<div class="row nopadding brdr-btm">
+								<div class="col-sm-6 col-md-6 col-lg-6 brdr-rgt">
+									<div class="textValue">New Paid User</div>
+								</div>
+								<div class="col-sm-6 col-md-6 col-lg-6">
+									<div class="textValue">11,784</div>
+								</div>
+							</div>
+							<div class="row nopadding brdr-btm">
+								<div class="col-sm-6 col-md-6 col-lg-6 brdr-rgt">
+									<div class="textValue">Target</div>
+								</div>
+								<div class="col-sm-6 col-md-6 col-lg-6">
+									<div class="textValue">13,400</div>
+								</div>
+							</div>
+							<div class="row nopadding">
+								<div class="col-sm-12 col-md-12 col-lg-12">
+									<div class="row-fluid lastVal">Underperforming<span  class="value-red"> -14%</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer id="footerContainer">
+		<section class="footerInsidePannel">&copy; 2014 Absolutdata.
+			All rights reserved.</section>
+	</footer>
+
+
+	<!-- Property files -->
+	<script src="js/system.js" type="text/javascript"></script>
+	<script src="js/config.js" type="text/javascript"></script>
+
+	<!-- jQuery Plugins -->
+	<script src="js/lib/jquery/plugins/jquery.dataTables.min.js"
+		type="text/javascript"></script>
+	<script src="js/lib/jquery/plugins/jquery.mCustomScrollbar.js"></script>
+	<script src="js/lib/jquery/plugins/jquery.circles.js"></script>
+	<script src="js/lib/jquery/plugins/Jscript-tooltip.js"
+		type="text/javascript"></script>
+	<script src="js/lib/jquery/plugins/moment.js" type="text/javascript"></script>
+	<script src="js/lib/jquery/plugins/jquery.treetable.js"
+		type="text/javascript"></script>
+	<!-- Charting Files -->
+	<script src="js/lib/chart/highcharts.js" type="text/javascript"></script>
+	<script src="js/lib/chart/highcharts-ng.js" type="text/javascript"></script>
+	<script src="js/lib/chart/highcharts-more.js" type="text/javascript"></script>
+	<script src="js/lib/chart/solid-gauge.js" type="text/javascript"></script>
+	<script src="js/lib/chart/highcharts-theme.js" type="text/javascript"></script>
+	<script src="js/lib/chart/d3.v3.min.js" type="text/javascript"></script>
+
+	<!-- Angular App -->
+	<script src="app/app.js"></script>
+
+	<!-- Angular Services -->
+	<script src="app/Common/services/custom.js"></script>
+	<script src="app/Common/services/utilities.js"></script>
+	<script src="app/Common/services/network.js"></script>
+	<script src="app/Common/services/storage.js"></script>
+	<script src="app/Common/services/menu.js"></script>
+	<script src="app/Common/services/constants.js"></script>
+	<script src="app/Common/services/permission.js"></script>
+
+	<!-- Angular Directives -->
+	<script src="app/Common/directives/datepicker-ng.js"></script>
+	<script src="app/Common/directives/slider-ng.js"></script>
+	<script src="app/Common/directives/dataTable-ng.js"></script>
+	<script src="app/Common/directives/elements.js"></script>
+
+	<!-- Angular Filters -->
+	<script src="app/Common/filters/numeric.js"></script>
+
+	<!-- Common Controllers -->
+	<script src="app/Common/controllers/common.js"></script>
+
+	<!-- Login Controllers -->
+	<script src="app/Home/controllers/homepage.js"></script>
+
+	<!-- Login Services -->
+	<script src="app/Home/services/data.js"></script>
+	<script src="app/Home/services/chartoptions.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="Analysis">
+<head>
+    <title>NAVIK CONVERTER</title>
+	<link rel="shortcut icon" href="images/logo.ico"/>
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>-->
+  
+    
+	<!-- Plugin Styles -->
+	<link href="css/plugins/reset.css" rel="Stylesheet" type="text/css" />
+    <link href="css/plugins/font-awesome.css" rel="stylesheet" type="text/css" />
+	<link href="css/plugins/jquery-ui.css" rel="stylesheet">
+    <link href="css/plugins/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <link href="css/plugins/jquery.dataTables.css" rel="Stylesheet" type="text/css" />
+    <link href="css/plugins/dataTables.tableTools.min.css" rel="Stylesheet" type="text/css" />
+    <link href="css/plugins/dataTables.tableTools.css" rel="Stylesheet" type="text/css" />
+	<link href="css/plugins/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<!-- Custom Styles -->
+	<link href="css/Style.css" rel="Stylesheet" type="text/css" />
+<!-- 	<link href="css/customStyle.css" rel="Stylesheet" type="text/css" /> -->
+    <link href="css/New.css" rel="Stylesheet" type="text/css" />
+    <link href="css/device.css" rel="Stylesheet" type="text/css" />
+	<link href="css/Charts.css" rel="Stylesheet" type="text/css" />
+    
+	<!-- Framework related JS -->
+	<script src="js/lib/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="js/lib/jquery/jquery-ui.js"></script>
+    <script src="js/lib/angular/angular.js" type="text/javascript"></script>
+    <script src="js/lib/angular/angular-route.js" type="text/javascript"></script>
+	<script src="js/lib/angular/angular-cache.js" type="text/javascript"></script>
+	<script src="js/lib/bootstrap.min.js" type="text/javascript"></script>
+</head>
+<body ng-controller="mainAppContent" ng-cloak>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+		    <div class="navbar-header">
+				<figure style="margin-top:4px;">
+					<img src="images/logo.png" alt="D-ASSIST $ CONVERTER"
+						title="D-ASSIST $ CONVERTER" />
+				</figure>
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#phoneNavbar">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>                        
+		      </button>
+		    </div>
+			<!-- <div class="navbar-header col-sm-3 col-md-3 col-lg-3">
+				<figure>
+					<img src="images/logo.png" alt="D-ASSIST $ CONVERTER"
+						title="D-ASSIST $ CONVERTER" />
+				</figure>
+			</div> -->
+			<div class="collapse navbar-collapse" id="phoneNavbar">
+				<ul class="nav navbar-nav">
+					<li><a href="home.htm">Home</a></li>
+					<li ng-controller="dwLinkController"
+						ng-if="isDecisionWorkbenchTabVisible"><a href="#"
+						ng-click="dwUrlClicked(decisionWorkbenchHtmlName)">{{decisionWorkbenchTab}}</a>
+					</li>
+						<li><a ng-controller="dwLinkController" href="#"
+							ng-click="trackUrlClicked(trackingHtmlName)">
+								{{track_tab_name}} </a></li>
+					<li class="dropdown active"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="#" ng-controller="dwLinkController">Analysis<span
+							class="caret"></span></a>
+						<ul class="dropdown-menu"
+							ng-click="trackUrlClicked(trackingHtmlName)">
+						<li class="dropdown-submenu">
+                          <a tabindex="-1" href="#">Subscribers</a>
+                          <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="#customer-landscape-subs">Customer Landscape</a></li>
+                            <li><a tabindex="-1" href="#segment-membership-subs">Segment Membership</a></li>
+                          </ul>
+                        </li>
+							
+                      	<li class="dropdown-submenu">
+                          <a tabindex="-1" href="#">Non-Subscribers</a>
+                          <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="#">Customer Landscape</a></li>
+                            <li><a tabindex="-1" href="#">Membership</a></li>
+                          </ul>
+                        </li>
+						</ul>
+					</li>
+				</ul>
+				<ng-include src="'partials/header.htm'"></ng-include>
+			</div>
+		</div>
+	</nav>
+    <div class="mainContainer" id="analysis-page">
+		
+        <div id="contentarea">
+        		<div class="breadcrumbTrackContainer" ng-controller = "commonController">
+			</div>
+			<div class="transparentMask"></div>
+         <div ng-view></div>
+        </div>
+    </div>
+    <footer id="footerContainer">
+        <section class="footerInsidePannel"> &copy; 2014 Absolutdata. All rights reserved. </section>
+    </footer>
+    <!-- Property files -->
+	<script src="js/system.js" type="text/javascript"></script>
+	<script src="js/config.js" type="text/javascript"></script>
+	
+	<!-- jQuery Plugins -->
+	<script src="js/lib/jquery/plugins/jquery.dataTables.min.js" type="text/javascript"></script>
+	<script src="js/lib/jquery/plugins/jquery.mousewheel.min.js"></script>
+	<script src="js/lib/jquery/plugins/jquery.mCustomScrollbar.js"></script>
+	<script src="js/lib/jquery/plugins/jquery.circles.js"></script>
+	<script src="js/lib/jquery/plugins/Jscript-tooltip.js" type="text/javascript"></script>
+    <script src="js/lib/jquery/plugins/moment.js" type="text/javascript"></script>
+    <script src="js/lib/jquery/plugins/dataTables.tableTools.js" type="text/javascript"></script>
+    <script src="js/lib/jquery/plugins/dataTables.tableTools.min.js" type="text/javascript"></script>
+    <script src="js/lib/jquery/plugins/tai-placeholder.js" type="text/javascript"></script>
+    <script src="js/lib/jquery/plugins/pdfExport/jspdf.js" type="text/javascript"></script> 
+    <script src="js/lib/jquery/plugins/pdfExport/FileSaver.js" type="text/javascript"></script>     
+    
+             
+	<script src="js/lib/jquery/plugins/pdfExport/internalPlugins/addhtml.js" type="text/javascript" ></script>  
+	<script src="js/lib/jquery/plugins/pdfExport/internalPlugins/addimage.js" type="text/javascript" ></script>  
+	<script src="js/lib/jquery/plugins/pdfExport/internalPlugins/annotations.js" type="text/javascript" ></script>  
+	<script src="js/lib/jquery/plugins/pdfExport/internalPlugins/autoprint.js" type="text/javascript" ></script>  
+	<script src="js/lib/jquery/plugins/pdfExport/internalPlugins/canvas.js" type="text/javascript" ></script>  
+	<script src="js/lib/jquery/plugins/pdfExport/internalPlugins/cell.js" type="text/javascript" ></script>  
+	<script src="js/lib/jquery/plugins/pdfExport/internalPlugins/context2d.js" type="text/javascript" ></script>  
+	<script src="js/lib/jquery/plugins/pdfExport/internalPlugins/from_html.js" type="text/javascript" ></script> 
+	<script src="js/lib/jquery/plugins/pdfExport/internalPlugins/javascript.js" type="text/javascript" ></script>  
+	<script src="js/lib/jquery/plugins/pdfExport/internalPlugins/outline.js" type="text/javascript" ></script>  
+	<script src="js/lib/jquery/plugins/pdfExport/internalPlugins/png_support.js" type="text/javascript" ></script>  
+	<script src="js/lib/jquery/plugins/pdfExport/internalPlugins/split_text_to_size.js" type="text/javascript" ></script>  
+	<script src="js/lib/jquery/plugins/pdfExport/internalPlugins/standard_fonts_metrics.js" type="text/javascript" ></script> 
+	<script src="js/lib/jquery/plugins/pdfExport/internalPlugins/svg.js" type="text/javascript" ></script>
+	<script src="js/lib/jquery/plugins/pdfExport/internalPlugins/total_pages.js" type="text/javascript" ></script>
+	<script src="js/lib/jquery/plugins/pdfExport/internalPlugins/html2canvas.js" type="text/javascript" ></script>
+     
+	<!-- Charting Files -->
+    <script src="js/lib/chart/highcharts.src.js" type="text/javascript"></script>
+    <script src="js/lib/chart/highcharts-more.src.js" type="text/javascript"></script>
+    <script src="js/lib/chart/highcharts-theme.js" type="text/javascript"></script>
+    <!-- to be included for export icon of charts --><!-- 
+    <script src="js/lib/chart/exporting.js" type="text/javascript"></script> -->
+	<script src="js/lib/chart/d3.v3.min.js" type="text/javascript"></script>
+	
+	<!-- Angular App -->
+	<script src="app/app.js"></script>
+	
+	<!-- Angular Services -->
+    <script src="app/Common/services/custom.js"></script>
+    <script src="app/Common/services/utilities.js"></script>
+	<script src="app/Common/services/network.js"></script>
+	<script src="app/Common/services/storage.js"></script>
+	<script src="app/Common/services/menu.js"></script>
+	<script src="app/Common/services/constants.js"></script>
+	<script src="app/Common/services/permission.js"></script>
+	<script src="app/Common/services/charts.js"></script>
+	
+	<!-- Angular Directives -->
+    <script src="app/Common/directives/datepicker-ng.js"></script>
+	<script src="app/Common/directives/slider-ng.js"></script>
+	<script src="app/Common/directives/dataTable-ng.js"></script>
+	<script src="app/Common/directives/elements.js"></script>
+	<script src="app/Common/directives/chart-label-tooltip-ng.js"></script>
+	
+	<!-- Angular Filters -->
+    <script src="app/Common/filters/numeric.js"></script>
+	
+	<!-- Common Controllers -->
+	<script src="app/Common/controllers/common.js"></script>
+	
+	<!-- Analysis Controllers -->
+	<script src="app/Analysis/controllers/customer-landscape-subs.js"></script>
+	<script src="app/Analysis/controllers/segment-membership-subs.js"></script>
+	
+   <!-- Tracking Services -->
+   <script src="app/Analysis/services/data.js"></script>
+   <script src="app/Analysis/services/chartoptions.js"></script>
+   <script src="app/Analysis/services/converter.js"></script>
+   
+   
+   
+</body>
+</html>
