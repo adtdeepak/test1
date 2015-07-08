@@ -8361,13 +8361,24 @@ div#progressBar {
 .borderless{
     border: none !important;
 }
-.borderless td, .borderless th {
+.smSubsTable .headingCell{
+	border:1px solid white !important;
+	background: #f5f5f5;
+	font-weight: 600;
+}
+.smSubsTable td, .smSubsTable th {
+    border: none !important;
+    text-align: left;
+}
+
+
+.clSubsTable td, .clSubsTable th {
     border: none !important;
     text-align: center;
     background: none !important;
 }
 
-.borderless .box{
+.clSubsTable .box{
   background: #49A4E4;
   width: 50%;
   margin-left: 25%;
@@ -8377,12 +8388,21 @@ div#progressBar {
   font-size: 20px;
 }
 
-.borderless .highlightValue{
+.clSubsTable .highlightValue{
   padding: 10px;
   font-size: 25px;
   color: #EE7E34;
 }
 
+.collapseDiv {
+	background: rgb(157, 160, 163);
+	color: #ffffff;
+	border: 1px solid #ffffff;
+}
+
+.noMarginBtm{
+	margin-bottom:0px !important;
+}
 .big-fontSize{
 	font-size:35px;	
 }

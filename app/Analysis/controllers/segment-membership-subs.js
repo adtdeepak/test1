@@ -22,16 +22,16 @@ angular.module('Analysis')
     	y: 36,
     	color:"#FFC000"
     }];
-    chartOptions = ChartOptionsService.getPieChartWithNoLegend(chartData, "", "Revenue ($mn)", 150);
+    chartOptions = ChartOptionsService.getPieChartWithNoLegend(chartData, "Revenue", "($mn)", 150);
 	chartOBJ = chartsService.pieChart.call($('#revenuePieChart'),chartOptions, $scope);
 	
-	chartOptions = ChartOptionsService.getPieChartWithNoLegend(chartData, "", "Subscribers (No. of users)", 150);
+	chartOptions = ChartOptionsService.getPieChartWithNoLegend(chartData, "Subscribers", "(No. of users)", 150);
 	chartOBJ = chartsService.pieChart.call($('#subsPieChart'),chartOptions, $scope);
 	
-	chartOptions = ChartOptionsService.getPieChartWithNoLegend(chartData, "", "New Subscribers(No. of users)", 150);
+	chartOptions = ChartOptionsService.getPieChartWithNoLegend(chartData, "New Subscribers", "(No. of users)", 150);
 	chartOBJ = chartsService.pieChart.call($('#newSubsPieChart'),chartOptions, $scope);
 	
-	chartOptions = ChartOptionsService.getPieChartWithNoLegend(chartData, "", "Cancels (No. of users)", 150);
+	chartOptions = ChartOptionsService.getPieChartWithNoLegend(chartData, "Cancels", "(No. of users)", 150);
 	chartOBJ = chartsService.pieChart.call($('#cancelPieChart'),chartOptions, $scope);
      
 	
@@ -77,4 +77,11 @@ angular.module('Analysis')
     
     chartOptions = ChartOptionsService.getTrendingBarChartSeries(chartDataObj, "Churn Risk", "Probability of users churning", 600, "#EE7E34");
 	chartOBJ = chartsService.basicBar.call($('#churnBarChart'),chartOptions, $scope);
+	
+	$(document).ready(function(){
+		$(".collapseDiv").click(function(){
+			$('.xclose').toggleClass("expandclose");
+			$(this).next().collapse('toggle');
+		});
+	});
 })
