@@ -1,0 +1,331 @@
+<head>
+<title>D-ASSIST $ CONVERTER</title>
+<link rel="shortcut icon" href="images/logo.ico" />
+</head>
+<div class="container" id="track-summary">
+	<div class="row acquisition-panel"
+		ng-controller="acquisitionFunnelController">
+		<article class="title-panel">
+			<p class="pull-left">
+				<span>Funnel</span>
+			</p>
+		</article>
+		<div class="row-fluid" style="margin-bottom: 30px">
+			<div class="half-width">
+				<div class="col-sm-5 col-md-5 wdgt-hgt-new">
+					<div class="customDiv bkgd-darkblue">
+						<div class="">
+							<div class="panel-heading">Visitors</div>
+						</div>
+						<div class="widget-content">
+							<div class="row-fluid">
+								<div>
+									<span class="funnel-font-size">{{visitors.actualTillDate|
+										number}}</span>
+								</div>
+							</div>
+							<div ng-hide="true" class="rateValue">Acquisition Rate: 13%</div>
+							<div id="sparkleLineVisitor"></div>
+							<div class="chart"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-5 col-md-5 wdgt-hgt-new">
+					<div class="customDiv bkgd-blue">
+						<div class="">
+							<div class="panel-heading">Registrations</div>
+						</div>
+						<div class="widget-content">
+							<div class="row-fluid">
+								<div>
+									<span class="funnel-font-size">{{registrations.actualTillDate|
+										number}}</span>
+								</div>
+							</div>
+							<div class="rateValue">Acquisition Rate:
+								{{registrations.acquisitionRate}}%</div>
+							<div id="sparkleLineVisitor"></div>
+							<div class="chart"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="half-width">
+				<div class="col-sm-5 col-md-5 wdgt-hgt-new">
+					<div class="customDiv bkgd-darkblue">
+						<div class="">
+							<div class="panel-heading">Subscriptions</div>
+						</div>
+						<div class="widget-content">
+							<div class="row-fluid">
+								<div>
+									<span class="funnel-font-size">{{subscriptions.actualTillDate|
+										number}}</span>
+								</div>
+							</div>
+							<div class="rateValue">Conversion Rate:
+								{{subscriptions.conversionRate}}%</div>
+							<div id="sparkleLineVisitor"></div>
+							<div class="chart"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-5 col-md-5 wdgt-hgt-new">
+					<div class="customDiv bkgd-blue">
+						<div class="">
+							<div class="panel-heading">Cancellations</div>
+						</div>
+						<div class="widget-content">
+							<div class="row-fluid">
+								<div>
+									<span class="funnel-font-size">{{cancellations.actualTillDate|
+										number}}</span>
+								</div>
+							</div>
+							<div class="rateValue">Churn Rate:
+								{{cancellations.churnRate}}%</div>
+							<div id="sparkleLineVisitor"></div>
+							<div class="chart"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row acquisition-panel"
+		ng-controller="acquisitionTrendController">
+		<article class="title-panel">
+			<p class="pull-left">
+				<span>Trend</span>
+			</p>
+		</article>
+		<div class="row-fluid" style="padding: 0px 11px;">
+			<div class="pull-right chart-textNote" style="">Current period
+				from {{trendPeriod}}, 2014</div>
+			<h2 class="block-chartTitle">Revenues vs.
+				Subcriptions/Cancellations</h2>
+		</div>
+		<div class="row" style="margin-top: 30px; margin-bottom: 10px">
+			<div ng-hide="error" class="DivAcquisitionChart"
+				id="acquisitionTrendChart"></div>
+		</div>
+	</div>
+
+
+	<div class="row acquisition-panel">
+		<article class="title-panel">
+			<p class="pull-left">
+				<span>Metrics</span>
+			</p>
+		</article>
+		<div class="row nopadding"
+			ng-controller="businessImpactMatricesController">
+			<div class="contentPanel nopadding">
+				<div ng-if="isBusinessImpactViewable">
+					<div class="row-fluid"
+						style="padding: 0px 11px; text-align: center;">
+						<div class="chart-textNote">{{title}}</div>
+						<div class="chart-textNote pull-right">As of Thursday,
+							November13, 2014</div>
+						<!-- <p class="widget-title pull-right">As of {{currentDate |
+							date:'EEEE'}}, {{currentDate | date:'dd MMM yyyy'}}</p> -->
+					</div>
+					<h2 class="block-title">Business Impact</h2>
+					<a href="javascript:;" class="pull-right filter-option-menu"> </a>
+					<div class="options-filter width clearfix" style="display: block;">
+						<img src="images/popmenu-arrow.png" class="popmenu-arrow">
+						<div>
+							<div class="popupTitle">
+								<label> Select widget</label>
+							</div>
+							<div class="popupcnt top" ng-repeat="data in userSettings.menus">
+								<div class="height">
+									<input type="checkbox" ng-model="data.checked"
+										ng-change="menu.onSelect(data)"
+										ng-checked="data.checked == true"> <label>{{data.menuItemName}}</label>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<ul class="row-fluid metric-widgets"
+					style="margin: 10px 10px 0px 10px" data-page="businessImpact">
+					<li class="col-md-5ths col-xs-6" ng-repeat="data in businessImpact"
+						ng-hide="data.display == false">
+						<div class="col-sm-11 col-md-11 metrics-content">
+							<a
+								href="#/business-impact?currentlySelected={{data.subGroupBy}}&&name={{data.subgroupName}}">
+								<div class="box-content-top">
+									<h3>{{data.subgroupName}}</h3>
+									<div class="value-orange trackingLink">{{data.actualToDate
+										| number}}</div>
+									<p
+										ng-if="data.subgroupName =='Revenue' || data.subgroupName =='Cost of Acqusition' || data.subgroupName=='ARPU'"
+										class='widget-text'>(in USD)</p>
+									<p
+										ng-if="data.subgroupName !='Revenue' && data.subgroupName !='Cost of Acqusition' && data.subgroupName!='ARPU'"
+										class='widget-text'>(Number of users)</p>
+									<!-- <p class="duration">Week To Date Actual</p> -->
+									<p class="value1">
+										<span>{{data.forecast.value | number}}</span>
+									</p>
+									<p class="duration1">{{forecastText}}</p>
+								</div>
+								<div class="box-content-bottom">
+									<ul>
+										<li class="{{data.versusLast.trend=='-ve'?'down':'up'}}">{{data.versusLast.value
+											| number}} {{vsLastText}}</li>
+										<li
+											class="{{data.versusSameLastYear.trend=='-ve'?'down':'up'}}">{{data.versusSameLastYear.value
+											| number}} {{vsLastYearText}}</li>
+									</ul>
+								</div>
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row nopadding"
+			ng-controller="engagementActivityMatricesController">
+			<div class="contentPanel nopadding">
+				<div ng-if="isEngagementMetricsViewable">
+					<h2 class="block-title">Engagement Metrics</h2>
+					<a href="javascript:;" class="pull-right filter-option-menu"> </a>
+					<div style="display: none"
+						class="options-filter options-filter1 clearfix">
+						<img src="images/popmenu-arrow.png" class="popmenu-arrow" />
+						<div class="options-filter-left">
+							<div class="popupTitle">
+								<input type="radio" name="Module"
+									ng-model="userSettings.selectedType" value="module"
+									ng-change="menu.menuSync()" /> <label> Module</label>
+							</div>
+							<div class="popupcnt">
+								<input type="checkbox" checked="true" disabled="true" /><label>EA
+									Score </label>
+							</div>
+							<div class="popupcnt" ng-repeat="data in userSettings.menus"
+								ng-if='data.menuType=="module"'>
+								<div>
+									<input type="checkbox" ng-model="data.checked"
+										ng-disabled="userSettings.selectedType != 'module'"
+										ng-change="menu.onSelect(data)" /><label>{{data.menuItemName}}
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="options-filter-right">
+							<div class="popupTitle">
+								<input type="radio" name="Activity" value="activity"
+									ng-model="userSettings.selectedType"
+									ng-change="menu.menuSync()" /> <label> Activity</label>
+							</div>
+							<div class="popupcnt">
+								<input type="checkbox" checked="true" disabled="true" /><label>EA
+									Score </label>
+							</div>
+							<div class="popupcnt" ng-repeat="data in userSettings.menus"
+								ng-if='data.menuType=="activity"'>
+								<div>
+									<input type="checkbox" ng-model="data.checked"
+										ng-disabled="userSettings.selectedType != 'activity'"
+										ng-change="menu.onSelect(data)" /><label>{{data.menuItemName}}
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="progress-loading" ng-if="!error && !dataLoaded"></div>
+				<ng-include ng-show="error" src="'partials/error.htm'"></ng-include>
+				<ul class="row-fluid metric-widgets"
+					style="margin: 10px 10px 0px 10px" data-page="engagementActivity">
+
+					<li class="col-md-5ths col-xs-6"
+						ng-repeat="data in engagementActivity"
+						ng-hide="data.display == false">
+						<div class="col-sm-11 col-md-11 metrics-content">
+							<a
+								href="#/engagement-activity?currentlySelected={{data.subGroupBy}}&&name={{data.subgroupName}}">
+								<div class="box-content-top">
+									<h3>{{data.subgroupName}}</h3>
+									<p ng-if="data.subgroupName=='EAScore'" class='widget-text'>(in
+										Percentage)</p>
+									<p ng-if="data.subgroupName!='EAScore'" class='widget-text'>(Count
+										of activities)</p>
+									<div class="value-orange">{{data.actualToDate | number}}</div>
+									<p class="duration">{{timePeriod}} Avg {{data.monthlyAvg |
+										number}}</p>
+								</div>
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row nopadding"
+			ng-controller="overallUserGroupSummaryController">
+			<div class="contentPanel nopadding">
+				<div ng-if="isUserGroupViewable">
+					<h2 class="block-title">User Group</h2>
+					<a href="javascript:;" class="pull-right filter-option-menu"> </a>
+					<div class="options-filter options-filter1  width clearfix">
+						<img src="images/popmenu-arrow.png" class="popmenu-arrow" />
+						<div>
+							<div class="popupTitle">
+								<label> Select User Group</label>
+							</div>
+							<div class="popupcnt top" ng-repeat="data in userSettings.menus">
+								<div class="height">
+									<input type="checkbox" ng-model="data.checked"
+										ng-change="menu.onSelect(data)" /> <label>{{data.menuItemName}}
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="progress-loading" ng-if="!error && !dataLoaded"></div>
+				<ng-include ng-show="error" src="'partials/error.htm'"></ng-include>
+				<ul class="row-fluid metric-widgets"
+					style="margin: 10px 10px 0px 10px" data-page="userGroup">
+
+					<li class="col-md-5ths col-xs-6" ng-repeat="data in userGroup"
+						ng-hide="data.display == false">
+						<div class="col-sm-11 col-md-11 metrics-content">
+							<div class="box-content-top">
+								<a
+									href="#/user-group-engagement?currentlySelected={{data.groupBy}}&&name={{data.groupName}}">
+									<h3>{{data.groupName}}</h3>
+									<p class='widget-text'>(Count of members)</p>
+									<div class="value-green trackingLink">
+										{{data.newSubsActual | number}}</div>
+									<p class="duration">{{timePeriod}} Avg {{data.monthlyAvg |
+										number}}</p>
+								</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!----------------------------------------------->
+<div id="boxes">
+	<div id="tableZoom" class="window">
+		<div class="modalheading">
+			<h2></h2>
+			<a href="#" class="close"></a>
+		</div>
+		<div class="modalcontent"></div>
+	</div>
+</div>
+<div id="mask"></div>
+<div ng-hide ng-controller="trackingInitController"></div>
+

@@ -1,0 +1,38 @@
+{
+	"clientName":"Hightail",
+	
+	"_comment":"cig - campaign idea generator, fn - find new, bp - build DO page, rp - review panel",
+	"home":{
+		"cig":"Campaign Options",
+		"track":"Dashboard",
+		"settings":"Settings"
+	},
+	"track":{
+		"tabName":"Dashboard",
+		"htmName":"dashboard"
+	},
+	"cig":{
+		"tabName":"Campaign Options",
+		"htmName":"campaign-options",
+		"fn":{
+			"tabName":"Campaign Development",
+			"label":"Campaign Options"
+		},
+		"bp":{
+			"heading":"Design Campaigns",
+			"reviewPanelHeading":"Shortlisted Campaigns",
+			"reviewPanelTableHeading":"Campaign option No.",
+			"removeSelectionBtn":"Clear",
+			"reviewPanelBtn":"Save & Next",
+			"label":"Campaign Options"
+		},
+		"rp":{
+			"tabName":"Campaign Prioritization",
+			"heading":"Prioritize Campaigns",
+			"tableHeading":"Shortlisted Campaigns",
+			"label":"Campaign Ideas",
+			"acronymLabel":"Campaign Option",
+			"acronym":"CO"
+		}
+	}
+}

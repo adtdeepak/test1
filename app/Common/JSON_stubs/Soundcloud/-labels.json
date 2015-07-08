@@ -1,0 +1,38 @@
+{
+	"clientName":"Soundcloud",
+	
+	"_comment":"cig - campaign idea generator, fn - find new, bp - build DO page, rp - review panel",
+	"home":{
+		"cig":"Decision Workbench",
+		"track":"Tracking",
+		"settings":"Settings"
+	},
+	"track":{
+		"tabName":"Tracking",
+		"htmName":"tracking"
+	},
+	"cig":{
+		"tabName":"Decision Workbench",
+		"htmName":"decision-workbench",
+		"fn":{
+			"tabName":"Find new Decision Options",
+			"label":"Decision Options"
+		},
+		"bp":{
+			"heading":"Build Decision Options",
+			"reviewPanelHeading":"Review Panel",
+			"reviewPanelTableHeading":"DO No.",
+			"removeSelectionBtn":"Remove Selectiom",
+			"reviewPanelBtn":"Save & View Review Panel",
+			"label":"Decision Options"
+		},
+		"rp":{
+			"tabName":"Review Panel",
+			"heading":"Review Decision Options",
+			"tableHeading":"Decision Options",
+			"label":"Decision Options",
+			"acronymLabel":"Decision Option",
+			"acronym":"DO"
+		}
+	}
+}

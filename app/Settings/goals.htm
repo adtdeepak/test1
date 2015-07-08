@@ -1,0 +1,138 @@
+<div class="" ng-if="isGoalsViewable">
+	<div class="ContainerBox decision-option">
+		<article class="title_panel clearfix">
+			<p class="pull-left">
+				<span> Goals Table </span>
+			</p>
+		</article>
+		<article class="clearfix" ng-controller="goalsFilterController">
+		
+			<article class="pull-right height-25">
+				<!-- <label>Goal Period</label> <select class="zmargin small">
+					<option>Year</option>
+					<option>Option 1</option>
+					<option>Option 2</option>
+					<option>Option 3</option>
+				</select> <select class="zmargin small">
+					<option>Month</option>
+					<option>Option 1</option>
+					<option>Option 2</option>
+					<option>Option 3</option>
+				</select> <select class="zmargin small">
+					<option>Date</option>
+					<option>Option 1</option>
+					<option>Option 2</option>
+					<option>Option 3</option>
+				</select> <a class="btn btn-org" href="#">Search</a>  -->
+				<!-- <span  class="btn btn-success fileinput-button btn-org" ng-class="{disabled: disabled, notvisible:fileUploadDone==true}">
+       			 <span>Download Template</span> -->
+          		
+      <!--   </span> -->
+	       		<span ng-if="isGoalsEditable" class="btn btn-success fileinput-button btn-org" ng-class="{disabled: disabled, notvisible:fileUploadDone==true}">
+		       		  <a class="upload" title="Download" href="resources/template.xlsx" download>Download Template</a>
+	        	</span>
+               <ng-include ng-if="isGoalsEditable" src="'app/Settings/fileUpload.htm'"></ng-include>
+            </article>
+            
+		</article>
+		<div class="review-panel" ng-controller="goalsTableController">
+		<div class="progress-loading" ng-if="!error && !dataLoaded"></div>
+			<ng-include ng-show="error" src="'partials/error.htm'"></ng-include>
+			<div class="dataTables_wrapper review-panel">
+				<script type="text/ng-template" id="tree_node">
+       			 <tr tt-node is-branch="node.children != null ">
+            		<td><span ng-bind="node.goalPeriod"></span></td>
+            		<td ng-bind="node.revenue"></td>
+            		<td ng-bind="node.npu"></td>
+					<td ng-bind="node.convRate"></td>
+					<td ng-bind="node.newSignUps"></td>
+					<td ng-bind="node.pageViews"></td>
+					<td><a ng-if="isGoalsEditable" href="#" data-id={{node.goalId}} name="modal" title="Edit" data-modal="#editGoalsDialog" class="editleft"></a></td>
+       			 </tr>
+    			</script>
+    			<div ng-if="goalsSubmitError" class="alert alert-danger" role="alert">Alert</div>
+    			<div ng-if="goalsSubmitSuccess" class="alert alert-success" role="alert">Alert</div>
+				<table ng-hide="error || !dataLoaded" id='goalsTable' tt-table tt-params="goalValues"
+					class="GDtable ng-isolate-scope dataTable display"
+					data-options="pagination: true">
+					<colgroup>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+					</colgroup>
+					<thead class="ng-scope">
+						<tr role="row">
+							<th class="">Time</th>
+							<th class="">Revenue</th>
+							<th class="">NPU</th>
+							<th class="">Conversion Rate</th>
+							<th class="">New Signups</th>
+							<th class="">Page Views</th>
+							<th class="">Actions</th>
+						</tr>
+					</thead>
+
+				</table>
+				<div class="dataTables_wrapper center">
+					<!-- <div class="dataTables_paginate paging_simple_numbers"
+						id="DataTables_Table_0_paginate">
+						<a class="paginate_button previous">Previous</a> <a
+							class="paginate_button current">1</a> <a
+							class="paginate_button next">Next</a>
+					</div> -->
+					<div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<div id="boxes" ng-controller="goalsModalController" ng-if="isGoalsViewable">
+	<form name="editGoalsForm">
+		<div id="editGoalsDialog" class="window small-window">
+			<div class="modalheading">
+				<h2>Edit Goal</h2>
+				<a href="#" class="close"></a>
+			</div>
+			<div class="modalcontent">
+			<ng-include ng-show="error" src="'partials/error.htm'"></ng-include>
+			<div>
+				<div class="formgroup">
+					<label class="rmargin">Time</label> <input type="text" ng-model = "time"/>
+				</div>
+				<div class="formgroup">
+					<label class="rmargin">Recurring Booking</label> <input type="number" ng-model = "revenue"/>
+				</div>
+				<div class="formgroup">
+					<label class="rmargin">New Subs</label> <input type="number" ng-model = "NPU"/>
+				</div>
+				<div class="formgroup">
+					<label class="rmargin">Conversion Rate </label> <input type="text" ng-model = "conversionRate"/>
+				</div>
+				<div class="formgroup">
+					<label class="rmargin">Registrations</label> <input type="number" ng-model = "newSignUp"/>
+				</div>
+				<div class="formgroup">
+					<label class="rmargin"> Page Views</label> <input type="number" ng-model = "pageView"/>
+				</div>
+				<ng-include src="'partials/alertMessage.htm'"></ng-include>
+				<div class="formgroup">
+					<label class="rmargin">&nbsp;</label>
+					 <input type="submit" value="Save" ng-disabled="savingGoals" ng-class="{spinnerButton: savingGoals==true}"
+					 ng-click ="editGoalsSave()"class="btn btn-org rmargin" href="#">
+					  <input type="button" value="Cancel" class="btn btn-org cancel" href="#">
+				</div>
+			</div>
+			</div>
+		</div>
+	</form>
+	<div id="mask"></div>
+	<div ng-hide ng-controller="goalsInit"></div>
+</div>

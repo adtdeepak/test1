@@ -1,0 +1,162 @@
+<h1 class="pull-left" ng-if="isReviewDOViewable" ng-cloak>{{dw_reviewdo_heading}}</h1>
+<div id="contentContainer" ng-if="isReviewDOViewable" ng-cloak>
+	<div id="Decision">
+		<div class="contentpannel reviewdo">
+			<div class="chartPanel clearfix" ng-controller = "reviewChartController">
+				<div class="chartPanelLeft">
+					<h2>Achievable Uplift</h2>
+					<ng-include ng-show="error" src="'partials/error.htm'"></ng-include>
+					<a href="#" class="help tooltip-new">
+						<figure>
+							<img src="images/icon-info.png" />
+						</figure> <span><img alt="Tooltip" src="images/tooltip-arrow.png"
+							class="callout">{{Tooltip.TOOLTIP_DECISIONWB_REVPANEL_ACIVEUPLIFT}}</span>
+					</a>
+					<div id="reviewChart" class="clearfix" ng-show ="showReviewChart && error != true"></div>
+				</div>
+				<div class="chartPanelRight">
+					<h2 class="move-left">Time & Cost Comparison</h2>
+					<!-- <a href="#" class="help tooltip-new">
+						<figure>
+							<img src="images/icon-info.png" />
+						</figure> <span><img alt="Tooltip" src="images/tooltip-arrow.png"
+							class="callout">{{Tooltip.TOOLTIP_DECISIONWB_REVPANEL_TIMECOSTCOMP}}</span>
+					</a> -->
+					
+					<div class="clearfix right forBubble"><ng-include ng-show="error" src="'partials/error.htm'"></ng-include>
+					<div id="reviewBubbleChart" ng-show ="showReviewChart && error != true"></div>
+					<div class="clearfix ChartLegendForBubble"><span>*</span>Bigger the Bubble Bigger the Incremental revenue</div>
+					</div>
+				</div>
+			</div>
+			
+			<div ng-controller="reviewDoTableController" class="ContainerBox decision-option">
+				<article class="title_panel clearfix">
+					<p class="pull-left">
+						<span>{{reviewDO_table_heading}}</span>
+					</p>
+				</article>
+				<div class="contentPanel-filter" ng-controller="filterOuterController">
+							<ng-include src="'app/DecisionWorkbench/filter.htm'"></ng-include>
+				</div>
+				<div
+					class="tab_container tab_container_table contentPanel review-panel">
+					<div class="progress-loading" ng-if="!error && !dataLoaded"></div>
+					<ng-include ng-show="error" src="'partials/error.htm'" class="forChart"></ng-include>
+					<div ng-hide="error || !dataLoaded" id="tab3" class="tab_content" style="display: block;">
+						<div class="contentScroll-disabled">
+                        	<table class="GDtable reviewTable" table-data="tableFunctions" my-table options="options" other-data="reviewData">
+								<colgroup>
+									<col style="width:100px">
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+									<col>
+									<col><!-- 
+									<col>
+									<col>
+									<col> -->
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th>{{reviewDOAcronym}} No.</th>
+										<th>Message</th>
+										<th>Channel</th>
+										<th>User Group</th>
+										<th>New Paid Users/ Conversion Uplift</th>
+										<th>Users Targeted</th>
+										<th>Campaign Duration (weeks)</th>
+										<th>Cost</th><!-- 
+										<th>Activate</th>
+										<th>Responsibility</th>
+										<th>Approval Status</th> -->
+										<th>Edit Campaign</th>
+									</tr>
+								</thead>
+							</table>
+							<a href="#" class="zoomThis"></a>
+						</div>
+					</div>
+					<div class="clearfix clearboth buttons">
+						<a class="btn btn-org pull-right" href="#">Execute</a>
+					</div>
+				</div>
+			</div> 
+
+		</div>
+	</div>
+</div>
+<!----------------------------Modal Window----------------->
+<div id="boxes" ng-controller="reviewdoModalController" ng-if="isReviewDOViewable">
+<form name="modifyReviewDoForm">
+	<div id="modifyReviewdoDialog" class="window">
+		<div class="modalheading">
+			<h2>Modify</h2>
+			<a href="#" class="close"></a>
+		</div>
+		<div class="modalcontent width">
+			<ng-include ng-show="error" src="'partials/error.htm'"></ng-include>
+			<div ng-if="!error">
+				<div class="modifyReviewdoList">
+				<ng-form>
+					<ul>
+						<li><label>{{reviewDOAcronym}} No.</label> <label class="labelValue">{{doId}}</label></li>
+						<li><label>Cost</label><input type="number" name="cost"></input></li>
+						<li><label>Message</label><input type="text" name="Message"></input></li>
+						<li><label>Channel</label><input type="text" name="Channel"></input></li>
+						<li><label>User group</label><input type="text" name="userGroup"></input></li>
+						<li><label>User covered</label><input type="text" name="usersCovered"></input></li>
+						<li><label>Campaign duration</label><input type="text" name="campaignDuration"></input></li>
+					</ul>
+				</ng-form>
+				</div>
+				<ng-include src="'partials/alertMessage.htm'"></ng-include>
+				<div class="modifyListBtn">
+					<input type="submit" value="Save" class="btn btn-org" rel="filters" 
+					ng-disabled="savingDO" ng-class="{spinnerButton: savingDO==true}"
+					ng-click="saveReviewCost()">
+					 <a class="btn left btn-org acc_link cancel" rel="filters">Accept
+						Original</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+	<div id="responsibiltyModal" class="window">
+		<div class="modalheading">
+			<h2>Activate</h2>
+			<a href="#" class="close"></a>
+		</div>
+		<div class="modalcontent">
+		<ng-include ng-show="error" src="'partials/error.htm'"></ng-include>
+            <div class="approverWrapper">
+			    <label>No. of Approvers </label> 
+			    <select ng-model='noOfApprovers' ng-options="period as period for period in MAX_APPROVERS">
+			    </select>
+			</div>
+            <ul class="approversList">
+				<li ng-repeat="index in MAX_APPROVERS" ng-if="index <= noOfApprovers"><label> Approver {{index}}</label> <input type="text" class="approver" id="approver{{index}}"></li>
+			</ul>
+			<ul class="approversList responsibilityList" >
+				<li><label> Responsibility &nbsp;&nbsp;&nbsp;</label> <input
+					type="text" id="responsibility"></li>
+			</ul>
+			<ng-include src="'partials/alertMessage.htm'"></ng-include>
+			<div class="modifyListBtn">
+				<a class="btn btn-org acc_link activate" rel="filters" ng-click="saveApprovers()">Activate</a>
+			</div>
+		</div>
+	</div>
+	<div id="tableZoom" class="window">
+		<div class="modalheading">
+			<h2>Decision Options</h2>
+			<a href="#" class="close"></a>
+		</div>
+		<div class="modalcontent"></div>
+	</div>
+	<div id="mask"></div>
+</div>
+<div ng-hide ng-controller="reviewDoInit"></div>
