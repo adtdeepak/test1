@@ -21,19 +21,19 @@
 				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
 					<div class="brdr-left bkgd-lightbrown">
 						<div class="">
-							<div class="panel-heading" style="font-weight:600;">Overall
+							<div class="panel-heading" style="font-weight:600;">{{overallData.totalSubs.groupName}}
 							</div>
 						</div>
 						<div class="widget-content metric-widgets">
 							<div class="row-fluid">
 								<div class="actual-value">
-									<span>326,078</span>
+									<span>{{overallData.totalSubs.value}}</span>
 								</div>
 							</div>
 							<div class="box-content-bottom">
 								<ul>
-									<li class="down">-8% Vs Last week</li>
-									<li class="up">+10% YoY</li>
+									<li class="down">{{overallData.totalSubs.vsLastWeek}} Vs Last week</li>
+									<li class="up">{{overallData.totalSubs.yoY}} YoY</li>
 								</ul>
 							</div>
 						</div>
@@ -42,17 +42,17 @@
 				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
 					<div class="brdr-left bkgd-lightbrown">
 						<div class="">
-							<div class="panel-heading" style="font-weight:600;">New Subscribers
+							<div class="panel-heading" style="font-weight:600;">{{overallData.newSubs.groupName}}
 							</div>
 						</div>
 						<div class="widget-content metric-widgets">
 							<div class="row-fluid">
-								<div class="actual-value"><span>26,086</span></div>
+								<div class="actual-value"><span>{{overallData.newSubs.value}}</span></div>
 							</div>
 							<div class="box-content-bottom">
 								<ul>
-									<li class="down">-3% Vs Last week</li>
-									<li class="up">+4% YoY</li>
+									<li class="down">{{overallData.newSubs.vsLastWeek}} Vs Last week</li>
+									<li class="up">{{overallData.newSubs.yoY}} YoY</li>
 								</ul>
 							</div>
 						</div>
@@ -63,17 +63,17 @@
 				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
 					<div class="brdr-left bkgd-lightbrown">
 						<div class="">
-							<div class="panel-heading" style="font-weight:600;">Recurring Subscribers
+							<div class="panel-heading" style="font-weight:600;">{{overallData.recurringSubs.groupName}}
 							</div>
 						</div>
 						<div class="widget-content metric-widgets">
 							<div class="row-fluid">
-								<div class="actual-value"><span>299,992</span></div>
+								<div class="actual-value"><span>{{overallData.recurringSubs.value}}</span></div>
 							</div>
 							<div class="box-content-bottom">
 								<ul>
-									<li class="down">-8% Vs Last week</li>
-									<li class="up">+13% YoY</li>
+									<li class="down">{{overallData.recurringSubs.vsLastWeek}} Vs Last week</li>
+									<li class="up">{{overallData.recurringSubs.yoY}} YoY</li>
 								</ul>
 							</div>
 						</div>
@@ -82,17 +82,17 @@
 				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
 					<div class="brdr-left bkgd-lightbrown">
 						<div class="">
-							<div class="panel-heading" style="font-weight:600;">Life time Value
+							<div class="panel-heading" style="font-weight:600;">{{overallData.lifeTimeValue.groupName}}
 							</div>
 						</div>
 						<div class="widget-content metric-widgets">
 							<div class="row-fluid">
-								<div class="actual-value"><span>$182</span></div>
+								<div class="actual-value"><span>{{overallData.lifeTimeValue.value}}</span></div>
 							</div>
 							<div class="box-content-bottom">
 								<ul>
-									<li class="down">-4% Vs Last week</li>
-									<li class="up">+21% YoY</li>
+									<li class="down">{{overallData.lifeTimeValue.vsLastWeek}} Vs Last week</li>
+									<li class="up">{{overallData.lifeTimeValue.yoY}} YoY</li>
 								</ul>
 							</div>
 						</div>

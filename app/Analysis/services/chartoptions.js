@@ -26,7 +26,7 @@ angular.module('Analysis')
 	            }
 	        },
 	        xAxis: {
-	            categories: ['Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug']
+	            categories: data.months
 	        },
 	        yAxis: {
 	            min: 0,
@@ -73,11 +73,11 @@ angular.module('Analysis')
 	        },
 	        series: [{
 	            name: 'New',
-	            data: [0.24, 0.21, 0.33, 0.22, 0.30, 0.28],
+	            data: data.newRevenue,
 	            color:"#ff9900"
 	        },{
 	            name: 'Recurring',
-	            data: [2.11, 1.84, 2.93, 2.83, 3.81, 3.60],
+	            data: data.recurringRevenue,
 	            color:"#308BCB"
 	        }]
 		};

@@ -7925,11 +7925,20 @@ div#progressBar {
 .bkgd-lightbrown{
 	background: #f5f5f5;
 }
+.bkgd-mediumbrown{
+	background: #9DA0A3;
+}
 .bkgd-darkblue{
 	background: #132d52;
 	border: 1px solid #585858;
 }
 
+.brdr-white{
+  border: 1px solid #ffffff;
+}
+.bkgd-white{
+  background: #ffffff;
+}
 .brdr-btm{
 	border-bottom:1px solid #D7D4D4;
 }
@@ -8405,6 +8414,16 @@ div#progressBar {
 }
 .big-fontSize{
 	font-size:35px;	
+}
+.btn-style{
+  color: #fff !important;
+  background-color: #EA8E04;
+  border-color: #9DA0A3;
+  margin-right: 17px;
+}
+#trends-div .btn-group{
+  margin-left: 15px;
+  margin-top: 10px;
 }
 /* media query */
 @media (min-width: 320px) {

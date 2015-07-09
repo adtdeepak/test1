@@ -415,29 +415,339 @@
 
 
 	<div class="row acquisition-panel nopadding" id="trends-div">
-		<div class="row-fluid" style="height: 500px;">
-			<div class="panel panel-default">
-				<div class="panel-heading">Trends Section</div>
+		<div ng-controller="deepDiveSummaryController">
+			<div class="row nopadding bkgd-mediumbrown">
+				<div class="panel panel-default">
+					<div class="panel-heading">Deep Dive</div>
+				</div>
+				<div class="row nopadding">
+					<div class="btn-group">
+						<button type="button" class="btn btn-style">Freshers</button>
+						<button type="button" class="btn btn-style">Finance Execs</button>
+						<button type="button" class="btn btn-style">Senior Mngt</button>
+						<button type="button" class="btn btn-style">Recruiters</button>
+					</div>
+				</div>
+				<div class="row nopadding" style="margin-bottom: 15px !important;">
+					<div class="half-width">
+						<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
+							<div class="">
+								<div class="">
+									<div class="panel-heading" style="font-weight: 600;">Freshers
+									</div>
+								</div>
+								<div class="widget-content metric-widgets" ng-hide="true">
+									<div class="row-fluid">
+										<div class="actual-value">
+											<span>{{overallData.totalSubs.value}}</span>
+										</div>
+									</div>
+									<div class="box-content-bottom">
+										<ul>
+											<li class="down">{{overallData.totalSubs.vsLastWeek}} Vs
+												Last week</li>
+											<li class="up">{{overallData.totalSubs.yoY}} YoY</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
+							<div class="brdr-white brdr-left bkgd-lightbrown">
+								<div class="">
+									<div class="panel-heading" style="font-weight: 600;">{{overallData.newSubs.groupName}}
+									</div>
+								</div>
+								<div class="widget-content metric-widgets">
+									<div class="row-fluid">
+										<div class="actual-value">
+											<span>{{overallData.newSubs.value}}</span>
+										</div>
+									</div>
+									<div class="box-content-bottom">
+										<ul>
+											<li class="down">{{overallData.newSubs.vsLastWeek}} Vs
+												Last week</li>
+											<li class="up">{{overallData.newSubs.yoY}} YoY</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="half-width">
+						<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
+							<div class="brdr-white brdr-left bkgd-lightbrown">
+								<div class="">
+									<div class="panel-heading" style="font-weight: 600;">{{overallData.recurringSubs.groupName}}
+									</div>
+								</div>
+								<div class="widget-content metric-widgets">
+									<div class="row-fluid">
+										<div class="actual-value">
+											<span>{{overallData.recurringSubs.value}}</span>
+										</div>
+									</div>
+									<div class="box-content-bottom">
+										<ul>
+											<li class="down">{{overallData.recurringSubs.vsLastWeek}}
+												Vs Last week</li>
+											<li class="up">{{overallData.recurringSubs.yoY}} YoY</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
+							<div class="brdr-white brdr-left bkgd-lightbrown">
+								<div class="">
+									<div class="panel-heading" style="font-weight: 600;">{{overallData.lifeTimeValue.groupName}}
+									</div>
+								</div>
+								<div class="widget-content metric-widgets">
+									<div class="row-fluid">
+										<div class="actual-value">
+											<span>{{overallData.lifeTimeValue.value}}</span>
+										</div>
+									</div>
+									<div class="box-content-bottom">
+										<ul>
+											<li class="down">{{overallData.lifeTimeValue.vsLastWeek}}
+												Vs Last week</li>
+											<li class="up">{{overallData.lifeTimeValue.yoY}} YoY</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row nopadding topMargin">
+				<div class="col-sm-3 col-md-3 col-lg-3 clearfix">
+					<div class="donut-score" style="height: 100px;">
+						<div id="overallSubscribers" class="donut-score-value"></div>
+						<p>Subscribers as a %age of all users</p>
+					</div>
+					<div class="donut-score" style="height: 100px;">
+						<div id="activeSubscribers" class="donut-score-value"></div>
+						<p>Active Subscribers</p>
+					</div>
+					<div class="donut-score" style="height: 100px;">
+						<div id="dormantSubscribers" class="donut-score-value"></div>
+						<p>Dormant Subscribers</p>
+					</div>
+				</div>
+				<div class="col-sm-9 col-md-9 col-lg-9">
+					<div class="brdr-left"
+						style="background: #f5f5f5; height: 300px; margin-bottom: 20px">
+						<div class="acqChart" id="revenueTrendChart"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div ng-controller="deepDiveProfileController">
+			<div class="row nopadding">
+				<div class="panel-heading">
+					<span>User Profile</span>
+				</div>
+				<div class="half-width">
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<div class="acqChart" id="genderPieChart"></div>
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<div class="acqChart" id="agePieChart"></div>
+					</div>
+				</div>
+
+				<div class="half-width">
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<div class="acqChart" id="locationPieChart"></div>
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<div class="acqChart" id="signupPieChart"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row nopadding">
+				<div class="panel-heading">
+					<span>Product Profile</span>
+				</div>
+				<div class="half-width">
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<div class="acqChart" id="accessDonutChart"></div>
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-6 square-full-box">
+						<h2 class="titleLikeChart">Product Plan</h2>
+						<h3 class="subtitle">% of all subscribers</h3>
+						<div>
+							<div class="row-fluid square-box">
+								<div class="col-sm-6 col-md-6 col-lg-6"
+									style="height: 100%; background: #FFF2CD;">
+									<h3>Basic</h3>
+									<span>35%</span>
+								</div>
+								<div class="col-sm-6 col-md-6 col-lg-6"
+									style="height: 100%; background: #FEE895;">
+									<h3>Professional</h3>
+									<span>25%</span>
+								</div>
+							</div>
+							<div class="square-box">
+								<div class="col-sm-6 col-md-6 col-lg-6"
+									style="height: 100%; background: #FFDA65;">
+									<h3>Professional Plus</h3>
+									<span>12%</span>
+								</div>
+								<div class="col-sm-6 col-md-6 col-lg-6"
+									style="height: 100%; background: #BE9100;">
+									<h3>Enterprise</h3>
+									<span>28%</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="half-width">
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<div class="acqChart" id="loginBarChart"></div>
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<div class="acqChart" id="platformDonutChart"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row acquisition-panel nopadding" id="engagement-div" ng-controller="deepDiveEngagmentController">
+		<div class="panel panel-default">
+			<div class="panel-heading">Engagement</div>
+		</div>
+		<div class="panel-heading brdr-btm-blue"><span>Active Vs Dormant</span></div>
+		<div class="row nopadding">
+			<div class="col-sm-3 col-md-3 col-lg-3">
+				<div class="acqChart" id="subsDonutChart"></div>
+			</div>
+			<div class="col-sm-9 col-md-9 col-lg-9">
+					<div class="acqChart" id="subsAreaChart"></div>
+			</div>
+		</div>
+		<div class="row nopadding bkgd-lightbrown">
+			<div class="titleLikeChart" style="margin-left:13px;">Product Usage</div>
+			<div class="row-fluid">
+				<div class="col-sm-6 col-md-6 col-lg-6">
+					<div class="acqChart" id="trendActBarChart"></div>
+				</div>
+				<div class="col-sm-6 col-md-6 col-lg-6">
+					<div class="acqChart" id="trendSecBarChart"></div>
+				</div>
+			</div>
+		</div>
+		<div class="row nopadding bkgd-lightbrown" style="margin-top:10px !important;">
+			<div class="titleLikeChart" style="margin-left:13px;">Login Trends</div>
+			<div class="row-fluid">
+				<div class="col-sm-3 col-md-3 col-lg-3">
+					<div class="acqChart" id="loginBarChart1"></div>
+				</div>
+				<div class="col-sm-9 col-md-9 col-lg-9">
+					<div class="acqChart" id="loginDurationColChart"></div>
+				</div>
+			</div>
+		</div>
+		<div class="row nopadding bkgd-lightbrown" style="margin-top:10px !important;">
+			<div class="titleLikeChart" style="margin-left:13px;">Adoption Trend</div>
+			<div style="margin-left:13px;">How many users have completed the set out activities</div>
+			<div class="row-fluid" style="margin-left:5%;margin-right:5%;">      
+			  <table class="table borderless clSubsTable">
+			    <thead>
+			      <tr>
+			        <th></th>
+			        <th>Onboarding</th>
+			        <th>Basic</th>
+			        <th>Advanced</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			      <tr>
+			        <td><h3>Stage completion rate</h3><p>%age of users of overall who have completed the stage</p></td>
+			        <td><div class="box">36%</div></td>
+			        <td><div class="box">41%</div></td>
+			        <td><div class="box">35%</div></td>
+			      </tr>
+			      <tr>
+			        <td><h3>No. of Subscribers in the Stage</h3><p>%age of users of overall who have completed the stage</p></td>
+			        <td><div class="highlightValue">3,126,982</div></td>
+			        <td><div class="highlightValue">521,999</div></td>
+			        <td><div class="highlightValue">256,982</div></td>
+			      </tr>
+			      <tr>
+			        <td><h3>Trends</h3><p>%age of users of overall who have completed the stage</p></td>
+			        <td class="metric-widgets">
+							<div class="box-content-bottom">
+								<ul>
+									<li class="up">+10% Vs Last week</li>
+									<li class="down">-5% YoY</li>
+								</ul>
+							</div>
+					</td>
+			        <td class="metric-widgets">
+							<div class="box-content-bottom">
+								<ul>
+									<li class="up">+10% Vs Last week</li>
+									<li class="down">-5% YoY</li>
+								</ul>
+					</td>
+			        <td class="metric-widgets">
+							<div class="box-content-bottom">
+								<ul>
+									<li class="up">+10% Vs Last week</li>
+									<li class="down">-5% YoY</li>
+								</ul>
+							</div>
+					</td>
+			      </tr>
+			    </tbody>
+			  </table>
 			</div>
 		</div>
 	</div>
 
+
+	</div>
+
 </div>
 <script>
-$(document).ready(function(){
-	  $('a[href*=#]').click(function() {
-	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-	    && location.hostname == this.hostname) {
-	      var $target = $(this.hash);
-	      $target = $target.length && $target
-	      || $('[name=' + this.hash.slice(1) +']');
-	      if ($target.length) {
-	        var targetOffset = $target.offset().top;
-	        $('html,body')
-	        .animate({scrollTop: targetOffset}, 1000);
-	       return false;
-	      }
-	    }
-	  });
-	});
+	$(document)
+			.ready(
+					function() {
+						$('a[href*=#]')
+								.click(
+										function() {
+											if (location.pathname.replace(
+													/^\//, '') == this.pathname
+													.replace(/^\//, '')
+													&& location.hostname == this.hostname) {
+												var $target = $(this.hash);
+												$target = $target.length
+														&& $target
+														|| $('[name='
+																+ this.hash
+																		.slice(1)
+																+ ']');
+												if ($target.length) {
+													var targetOffset = $target
+															.offset().top;
+													$('html,body')
+															.animate(
+																	{
+																		scrollTop : targetOffset
+																	}, 1000);
+													return false;
+												}
+											}
+										});
+					});
 </script>

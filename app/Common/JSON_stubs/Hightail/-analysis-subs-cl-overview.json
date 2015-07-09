@@ -1,0 +1,42 @@
+{
+    "status": "OK",
+    "message": "Request processed successfully",
+    "data": {
+        "totalSubs": {
+            "groupName": "Total Subscribers",
+            "value": "326,078",
+            "vsLastWeek": "-8%",
+            "yoY": "+10%"
+        },
+        "newSubs": {
+            "groupName": "New Subscribers",
+            "value": "26,086",
+            "vsLastWeek": "-3%",
+            "yoY": "+4%"
+        },
+        "recurringSubs": {
+            "groupName": "Recurring Subscribers",
+            "value": "299,992",
+            "vsLastWeek": "-8%",
+            "yoY": "+13%"
+        },
+        "lifeTimeValue": {
+            "groupName": "Life time Value",
+            "value": "$181",
+            "vsLastWeek": "-4%",
+            "yoY": "+21%"
+        },
+        "subscriberValues":{
+        	"allUsers":"23",
+        	"active":"47",
+        	"dormant":"53"
+        },
+        "revenue":{
+        	"months":["Mar", "Apr", "May", "Jun", "Jul", "Aug"],
+        	"newRevenue":[0.24, 0.21, 0.33, 0.22, 0.30, 0.28],
+        	"recurringRevenue":[2.11, 1.84, 2.93, 2.83, 3.81, 3.60]
+        }
+        
+        
+    }
+}
