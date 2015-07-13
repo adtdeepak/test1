@@ -78,5 +78,34 @@ angular.module('Analysis')
 		
 	};
 	
+	this.getEngagementData = function(reqData, success, fail) {
+		var requestWS = postRequestWS(
+				'http://jsonstub.com/analysis/subs/cl/engagement', 
+				reqData,
+				success, 
+				fail,
+				function(result) {
+					return result;
+				}
+		);
+		requestWS();
+		//sendRequest(cacheKey, "summaryCache", success, requestWS);
+		
+	};
+	
+	this.getRetentionData = function(reqData, success, fail) {
+		var requestWS = postRequestWS(
+				'http://jsonstub.com/analysis/subs/cl/retention', 
+				reqData,
+				success, 
+				fail,
+				function(result) {
+					return result;
+				}
+		);
+		requestWS();
+		//sendRequest(cacheKey, "summaryCache", success, requestWS);
+		
+	};
 
 });

@@ -1,0 +1,67 @@
+{
+    "status": "OK",
+    "message": "Request processed successfully",
+    "data": {
+        "pieData":{
+        	"subscribers":{
+        		"name":["Active Subscribers", "Dormant Subscribers"],
+        		"values":[59, 41],
+        		"color":["#A6A6A6", "#308BCB"]
+        	}
+        },
+        "trend":{
+        	"activeUsers":{
+        		"name":["Mar", "Apr", "May", "Jun", "Jul", "Aug"],
+        		"values":[41, 34, 49, 54, 44, 47]
+        	},
+        	"trendingActivities":{
+        		"name":["Adding Connections", "Reviewing Profiles", "Reading Blogs", "Updating Profile"],
+        		"values":[66, 45, 34, 22]
+        	},
+        	"trendingSections":{
+        		"name":["Whos viewed your profile", "Add Connections", "Messages", "Notifications"],
+        		"values":[82, 35, 24, 18]
+        	},
+        	"login":{
+        		"name":[">10", "5-10", "2-5", "Once a week"],
+        		"values":[11, 15, 10, 64]
+        	},
+        	"loginDuration":{
+        		"xAxisData" : ["<10 mins", "10-30 mins", "30-45 mins", ">45 mins"],
+        		"data" : [{
+			    	"name": "This week",
+			    	"data":[44, 21, 15, 20],
+			    	"color":"#308BCB"
+			    },{	
+			    	"name": "Last week",
+			    	"data":[33, 29, 18, 20],
+			    	"color":"#FF9900"
+			    }]
+        	}
+        	
+        },
+        "adoptionTrend":{
+        	"onBoarding":{
+        		"completionRate":"36%",
+        		"noOfSubscribers":"3,126,982",
+        		"vsLastWeek":"10%",
+        		"yoY":"-5%"
+        	},
+        	"basic":{
+        		"completionRate":"41%",
+        		"noOfSubscribers":"521,999",
+        		"vsLastWeek":"10%",
+        		"yoY":"-5%"
+        	},
+        	"advanced":{
+        		"completionRate":"35%",
+        		"noOfSubscribers":"256,982",
+        		"vsLastWeek":"10%",
+        		"yoY":"-5%"
+        	}
+        }
+        
+        
+    }
+}
+

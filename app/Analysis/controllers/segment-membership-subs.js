@@ -282,3 +282,192 @@ angular.module('Analysis')
     chartOptions = ChartOptionsService.getLoginDurationColumnChart(chartDataObj, "Login Duration", "Avg time spent per login", 300);
 	chartOBJ = chartsService.columnChart.call($('#loginDurationColChart'),chartOptions, $scope);
 })
+
+
+.controller('deepDiveRetentionController', function($scope, CustomService, chartsService, ChartOptionsService) {
+    //Profile chart options
+    var chartOptions;
+    var chartData;
+    //chart data and options for gender pie chart
+    chartData = [{
+    	name: "Male",
+    	y: 64,
+        color:"#308BCB"
+    }, {	
+    	name: "Female",
+    	y: 36,
+        color:"#ff9900"
+    }];
+    chartOptions = ChartOptionsService.getProfilePieChart(chartData, "Gender", "% of users Male/Female", 275);
+	chartOBJ = chartsService.pieChart.call($('#genderPieChartRet'),chartOptions, $scope);
+	//chart data and options for gender pie chart
+    chartData = [{
+    	name: "15-25",
+    	y: 5,
+    	color:"#70AD45"
+    }, {	
+    	name: "25-30",
+    	y: 15,
+    	color:"#F07726"
+    }, {	
+    	name: "30-40",
+    	y: 35,
+    	color:"#A6A6A6"
+    }, {	
+    	name: "40-50",
+    	y: 25,
+    	color:"#FFC000"
+    }, {	
+    	name: "50-65",
+    	y: 15,
+    	color:"#4877BF"
+    }, {	
+    	name: ">65",
+    	y: 5,
+    	color:"#5097D7"
+    }];
+    chartOptions = ChartOptionsService.getPieChart(chartData, "Age", "As a % of total subscribers", 300);
+	chartOBJ = chartsService.pieChart.call($('#agePieChartRet'),chartOptions, $scope);
+	//chart data and options for gender pie chart
+    chartData = [{
+    	name: "US",
+    	y: 55,
+    	color:"#5097D7"
+    }, {	
+    	name: "Europe",
+    	y: 21,
+    	color:"#EE7F30"
+    },{
+    	name: "China",
+    	y: 10,
+    	color:"#B6B3AC"
+    }, {	
+    	name: "International",
+    	y: 14,
+    	color:"#FFC000"
+    }];
+    chartOptions = ChartOptionsService.getProfilePieChart(chartData, "Location", "As a % of total subscribers", 300);
+	chartOBJ = chartsService.pieChart.call($('#locationPieChartRet'),chartOptions, $scope);
+	//chart data and options for gender pie chart
+    chartData = [{
+    	name: "Professional",
+    	y: 29,
+    	color:"#5A9BD5"
+    }, {	
+    	name: "Personal",
+    	y: 71,
+    	color:"#EE7E34"
+    }];
+    chartOptions = ChartOptionsService.getProfilePieChart(chartData, "Signup Email", "As a % of total subscribers", 300);
+	chartOBJ = chartsService.pieChart.call($('#signupPieChartRet'),chartOptions, $scope);
+	
+	//chart data and options for access donut chart
+    chartData = [{
+    	name: "Mobile",
+    	y: 15,
+    	color:"#308BCB"
+    },{	
+    	name: "Web",
+    	y: 36,
+    	color:"#FF9900"
+    },{	
+    	name: "mix",
+    	y: 49,
+    	color:"#A6A6A6"
+    }];
+    chartOptions = ChartOptionsService.getProfilePieChart(chartData, "Mode of Aceess", "% of subscribers", 300);
+	chartOBJ = chartsService.donutChart.call($('#accessDonutChartRet'),chartOptions, $scope);
+	
+	//chart data and options for access donut chart
+    var xAxisData = ['>10', '5-10', '2-5', 'Once a week'];
+    var data = [11, 15, 10, 64];
+    var chartDataObj = {};
+    chartDataObj['xAxisData'] = xAxisData;
+    chartDataObj['data'] = data;
+    
+    chartOptions = ChartOptionsService.getLoginBarChart(chartDataObj, "Logins", "Avg Logins per week", 300);
+	chartOBJ = chartsService.basicBar.call($('#loginBarChartRet'),chartOptions, $scope);
+	
+	//chart data and options for platform donut chart
+    chartData = [{
+    	name: "Android",
+    	y: 34,
+    	color:"#308BCB"
+    },{	
+    	name: "iOS",
+    	y: 44,
+    	color:"#FF9900"
+    },{	
+    	name: "Windows",
+    	y: 10,
+    	color:"#A6A6A6"
+    },{	
+    	name: "Others",
+    	y: 12,
+    	color:"#FFC000"
+    }];
+    chartOptions = ChartOptionsService.getProfilePieChart(chartData, "Platform", "% of subscribers", 300);
+	chartOBJ = chartsService.donutChart.call($('#platformDonutChartRet'),chartOptions, $scope);
+	
+	//chart data and options for trending activities bar chart
+    var xAxisData = ['Adding Connections', 'Reviewing Profiles', 'Reading Blogs', 'Updating Profile'];
+    var data = [66, 45, 34, 22];
+    var chartDataObj = {};
+    chartDataObj['xAxisData'] = xAxisData;
+    chartDataObj['data'] = data;
+    
+    chartOptions = ChartOptionsService.getTrendingBarChart(chartDataObj, "Activities before Churn", "Average, % times activity performed per login", 300, "#EE7E34");
+	chartOBJ = chartsService.basicBar.call($('#trendActBarChartRet'),chartOptions, $scope);
+	
+	//chart data and options for trending activities bar chart
+    var xAxisData = ["Who's viewed your profile", 'Add Connections', 'Messages', 'Notifications'];
+    var data = [82, 35, 24, 18];
+    var chartDataObj = {};
+    chartDataObj['xAxisData'] = xAxisData;
+    chartDataObj['data'] = data;
+    
+    chartOptions = ChartOptionsService.getTrendingBarChart(chartDataObj, "Modules visited before churn", "Average, % times section visited per login", 300, "#5F5F84");
+	chartOBJ = chartsService.basicBar.call($('#trendSecBarChartRet'),chartOptions, $scope);
+	
+	//chart data and options for access donut chart
+    var xAxisData = ['Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'];
+    var data = [{
+    	name: "Cancels",
+    	data:[187821, 154776, 260862, 246949, 315644, 297208],
+    	color:"#EE7E34"
+    }];
+    var chartDataObj = {};
+    chartDataObj['xAxisData'] = xAxisData;
+    chartDataObj['data'] = data;
+    
+    chartOptions = ChartOptionsService.getColumnChartWithoutPercentage(chartDataObj, "Cancels", "No. of Subscribers who cancelled, Past 6 months", 300);
+	chartOBJ = chartsService.columnChart.call($('#cancelColChartRet'),chartOptions, $scope);
+	
+	//chart data and options for access donut chart
+    var xAxisData = ['0-15 days', '15-30 days', '1-3 months', '3-6 months', '6-12 months', '>1 year'];
+    var data = [{
+    	name: "Tenure",
+    	data:[25, 22, 10, 5, 23, 15],
+    	color:"#EE7E34"
+    }];
+    var chartDataObj = {};
+    chartDataObj['xAxisData'] = xAxisData;
+    chartDataObj['data'] = data;
+    
+    chartOptions = ChartOptionsService.getLoginDurationColumnChart(chartDataObj, "Tenure before Churn", "Time spent as a subscriber before churn", 300);
+	chartOBJ = chartsService.columnChart.call($('#activeColChartRet'),chartOptions, $scope);
+	//chart data and options for access donut chart
+    var xAxisData = ['0-15 days', '15-30 days', '1-3 months', '3-6 months', '6-12 months', '>1 year'];
+    var data = [{
+    	name: "Inactive days",
+    	data:[25, 22, 10, 5, 23, 15],
+    	color:"#EE7E34"
+    }];
+    var chartDataObj = {};
+    chartDataObj['xAxisData'] = xAxisData;
+    chartDataObj['data'] = data;
+    
+    chartOptions = ChartOptionsService.getLoginDurationColumnChart(chartDataObj, "Inactive days before Churn", "Time spent as a subscriber before churn", 300);
+	chartOBJ = chartsService.columnChart.call($('#inactiveColChartRet'),chartOptions, $scope);
+	
+})

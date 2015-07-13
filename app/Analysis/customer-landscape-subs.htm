@@ -238,38 +238,38 @@
 			    <tbody>
 			      <tr>
 			        <td><h3>Stage completion rate</h3><p>%age of users of overall who have completed the stage</p></td>
-			        <td><div class="box">36%</div></td>
-			        <td><div class="box">41%</div></td>
-			        <td><div class="box">35%</div></td>
+			        <td><div class="box">{{adoptionTrendData.onBoarding.completionRate}}</div></td>
+			        <td><div class="box">{{adoptionTrendData.basic.completionRate}}</div></td>
+			        <td><div class="box">{{adoptionTrendData.advanced.completionRate}}</div></td>
 			      </tr>
 			      <tr>
 			        <td><h3>No. of Subscribers in the Stage</h3><p>%age of users of overall who have completed the stage</p></td>
-			        <td><div class="highlightValue">3,126,982</div></td>
-			        <td><div class="highlightValue">521,999</div></td>
-			        <td><div class="highlightValue">256,982</div></td>
+			        <td><div class="highlightValue">{{adoptionTrendData.onBoarding.noOfSubscribers}}</div></td>
+			        <td><div class="highlightValue">{{adoptionTrendData.basic.noOfSubscribers}}</div></td>
+			        <td><div class="highlightValue">{{adoptionTrendData.advanced.noOfSubscribers}}</div></td>
 			      </tr>
 			      <tr>
 			        <td><h3>Trends</h3><p>%age of users of overall who have completed the stage</p></td>
 			        <td class="metric-widgets">
 							<div class="box-content-bottom">
 								<ul>
-									<li class="up">+10% Vs Last week</li>
-									<li class="down">-5% YoY</li>
+									<li class="up">{{adoptionTrendData.onBoarding.vsLastWeek}} Vs Last week</li>
+									<li class="down">{{adoptionTrendData.onBoarding.yoY}} YoY</li>
 								</ul>
 							</div>
 					</td>
 			        <td class="metric-widgets">
 							<div class="box-content-bottom">
 								<ul>
-									<li class="up">+10% Vs Last week</li>
-									<li class="down">-5% YoY</li>
+									<li class="up">{{adoptionTrendData.basic.vsLastWeek}} Vs Last week</li>
+									<li class="down">{{adoptionTrendData.basic.yoY}} YoY</li>
 								</ul>
 					</td>
 			        <td class="metric-widgets">
 							<div class="box-content-bottom">
 								<ul>
-									<li class="up">+10% Vs Last week</li>
-									<li class="down">-5% YoY</li>
+									<li class="up">{{adoptionTrendData.advanced.vsLastWeek}} Vs Last week</li>
+									<li class="down">{{adoptionTrendData.advanced.yoY}} YoY</li>
 								</ul>
 							</div>
 					</td>
