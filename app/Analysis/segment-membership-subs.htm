@@ -79,29 +79,13 @@
 						<col width="15%">
 					</colgroup>
 					<tbody>
-						<tr>
-							<td class="headingCell">Subscribers</td>
-							<td class="headingCell">New</td>
-							<td>$11,413</td>
-							<td>$27,717</td>
-							<td>$44,021</td>
-							<td>$58,694</td>
-						</tr>
-						<tr>
-							<td class="headingCell"></td>
-							<td class="headingCell">Recurring</td>
-							<td>$216,842</td>
-							<td>$526,616</td>
-							<td>$836,390</td>
-							<td>$1,115,187</td>
-						</tr>
-						<tr>
-							<td class="headingCell"></td>
-							<td class="headingCell">Cancels</td>
-							<td>$7,893</td>
-							<td>$9,873</td>
-							<td>$3,489</td>
-							<td>$5,631</td>
+						<tr ng-repeat="data in overallTableData">
+							<td class="headingCell">{{data.heading}}</td>
+							<td class="headingCell">{{data.subHeading}}</td>
+							<td>{{data.value1}}</td>
+							<td>{{data.value2}}</td>
+							<td>{{data.value3}}</td>
+							<td>{{data.value4}}</td>
 						</tr>
 					</tbody>
 				</table>
@@ -124,45 +108,13 @@
 						<col width="15%">
 					</colgroup>
 					<tbody>
-						<tr>
-							<td class="headingCell">Subscribers</td>
-							<td class="headingCell">New</td>
-							<td>$11,413</td>
-							<td>$27,717</td>
-							<td>$44,021</td>
-							<td>$58,694</td>
-						</tr>
-						<tr>
-							<td class="headingCell"></td>
-							<td class="headingCell">Recurring</td>
-							<td>$216,842</td>
-							<td>$526,616</td>
-							<td>$836,390</td>
-							<td>$1,115,187</td>
-						</tr>
-						<tr>
-							<td class="headingCell">LTV</td>
-							<td class="headingCell">Lifetime Value</td>
-							<td>182</td>
-							<td>197</td>
-							<td>204</td>
-							<td>112</td>
-						</tr>
-						<tr>
-							<td class="headingCell"></td>
-							<td class="headingCell">Lifetime Months</td>
-							<td>21</td>
-							<td>23</td>
-							<td>25</td>
-							<td>12</td>
-						</tr>
-						<tr>
-							<td class="headingCell">ARPU</td>
-							<td class="headingCell">ARPU</td>
-							<td>13</td>
-							<td>14</td>
-							<td>12.5</td>
-							<td>15.4</td>
+						<tr ng-repeat="data in busniessImpactTableData">
+							<td class="headingCell">{{data.heading}}</td>
+							<td class="headingCell">{{data.subHeading}}</td>
+							<td>{{data.value1}}</td>
+							<td>{{data.value2}}</td>
+							<td>{{data.value3}}</td>
+							<td>{{data.value4}}</td>
 						</tr>
 					</tbody>
 				</table>
@@ -185,45 +137,13 @@
 						<col width="15%">
 					</colgroup>
 					<tbody>
-						<tr>
-							<td class="headingCell">User Specific</td>
-							<td class="headingCell">Avg. Work Experience (Yrs)</td>
-							<td>4</td>
-							<td>2</td>
-							<td>6.5</td>
-							<td>7</td>
-						</tr>
-						<tr>
-							<td class="headingCell"></td>
-							<td class="headingCell">Highest Educational Degree</td>
-							<td>High School</td>
-							<td>Masters</td>
-							<td>Masters</td>
-							<td>Graduate</td>
-						</tr>
-						<tr>
-							<td class="headingCell"></td>
-							<td class="headingCell">Location</td>
-							<td>North America</td>
-							<td>Asia-Pac</td>
-							<td>Asia-Pac</td>
-							<td>Europe</td>
-						</tr>
-						<tr>
-							<td class="headingCell"></td>
-							<td class="headingCell">Gender</td>
-							<td>Mix</td>
-							<td>Mix</td>
-							<td>Female</td>
-							<td>Male</td>
-						</tr>
-						<tr>
-							<td class="headingCell"></td>
-							<td class="headingCell">Industry</td>
-							<td>Mix</td>
-							<td>Manuf.</td>
-							<td>Tech</td>
-							<td>Telecom</td>
+						<tr ng-repeat="data in customerProfileTableData">
+							<td class="headingCell">{{data.heading}}</td>
+							<td class="headingCell">{{data.subHeading}}</td>
+							<td>{{data.value1}}</td>
+							<td>{{data.value2}}</td>
+							<td>{{data.value3}}</td>
+							<td>{{data.value4}}</td>
 						</tr>
 					</tbody>
 				</table>
@@ -246,45 +166,13 @@
 						<col width="15%">
 					</colgroup>
 					<tbody>
-						<tr>
-							<td class="headingCell">Activity Level</td>
-							<td class="headingCell">Active</td>
-							<td>23%</td>
-							<td>12%</td>
-							<td>34%</td>
-							<td>22%</td>
-						</tr>
-						<tr>
-							<td class="headingCell"></td>
-							<td class="headingCell">Dormant</td>
-							<td>77%</td>
-							<td>88%</td>
-							<td>66%</td>
-							<td>78%</td>
-						</tr>
-						<tr>
-							<td class="headingCell">Login Trends</td>
-							<td class="headingCell">Avg Duration</td>
-							<td>12 mins</td>
-							<td>16 mins</td>
-							<td>19 mins</td>
-							<td>22 mins</td>
-						</tr>
-						<tr>
-							<td class="headingCell"></td>
-							<td class="headingCell">Login Frequency (per week)</td>
-							<td>7</td>
-							<td>8</td>
-							<td>12</td>
-							<td>11</td>
-						</tr>
-						<tr>
-							<td class="headingCell">Adoption</td>
-							<td class="headingCell">Onboarding</td>
-							<td>19%</td>
-							<td>23%</td>
-							<td>37%</td>
-							<td>12%</td>
+						<tr ng-repeat="data in productUsageTableData">
+							<td class="headingCell">{{data.heading}}</td>
+							<td class="headingCell">{{data.subHeading}}</td>
+							<td>{{data.value1}}</td>
+							<td>{{data.value2}}</td>
+							<td>{{data.value3}}</td>
+							<td>{{data.value4}}</td>
 						</tr>
 					</tbody>
 				</table>
@@ -308,109 +196,13 @@
 						<col width="15%">
 					</colgroup>
 					<tbody>
-						<tr>
-							<td class="headingCell">Churn Rate</td>
-							<td class="headingCell">Cancels</td>
-							<td>$7,893</td>
-							<td>$9,873</td>
-							<td>$3,489</td>
-							<td>$5,631</td>
-						</tr>
-						<tr>
-							<td class="headingCell"></td>
-							<td class="headingCell">Overall Rate</td>
-							<td>23%</td>
-							<td>31%</td>
-							<td>36%</td>
-							<td>41%</td>
-						</tr>
-						<tr>
-							<td class="headingCell"></td>
-							<td class="headingCell">Avg Duration</td>
-							<td>33%</td>
-							<td>27%</td>
-							<td>12%</td>
-							<td>36%</td>
-						</tr>
-						<tr>
-							<td class="headingCell"></td>
-							<td class="headingCell">Dormant Churn</td>
-							<td>67%</td>
-							<td>77%</td>
-							<td>88%</td>
-							<td>64%</td>
-						</tr>
-						<tr>
-							<td class="headingCell">Risk profile</td>
-							<td class="headingCell">Low Risk</td>
-							<td>23%</td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td class="headingCell"></td>
-							<td class="headingCell">Medium Risk</td>
-							<td>44%</td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td class="headingCell"></td>
-							<td class="headingCell">High Risk</td>
-							<td>23%</td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td class="headingCell">Tenure before churn</td>
-							<td class="headingCell">0-15 days </td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td class="headingCell"></td>
-							<td class="headingCell">15-30 days </td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td class="headingCell"></td>
-							<td class="headingCell">1-3 months</td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td class="headingCell"></td>
-							<td class="headingCell">3-6 months</td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td class="headingCell"></td>
-							<td class="headingCell">6-12 months</td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td class="headingCell"></td>
-							<td class="headingCell">>1 year</td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
+						<tr ng-repeat="data in retentionTableData">
+							<td class="headingCell">{{data.heading}}</td>
+							<td class="headingCell">{{data.subHeading}}</td>
+							<td>{{data.value1}}</td>
+							<td>{{data.value2}}</td>
+							<td>{{data.value3}}</td>
+							<td>{{data.value4}}</td>
 						</tr>
 					</tbody>
 				</table>

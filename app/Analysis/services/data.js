@@ -74,7 +74,6 @@ angular.module('Analysis')
 				}
 		);
 		requestWS();
-		//sendRequest(cacheKey, "summaryCache", success, requestWS);
 		
 	};
 	
@@ -89,7 +88,6 @@ angular.module('Analysis')
 				}
 		);
 		requestWS();
-		//sendRequest(cacheKey, "summaryCache", success, requestWS);
 		
 	};
 	
@@ -104,7 +102,20 @@ angular.module('Analysis')
 				}
 		);
 		requestWS();
-		//sendRequest(cacheKey, "summaryCache", success, requestWS);
+		
+	};
+	
+	this.getComparisonData = function(reqData, success, fail) {
+		var requestWS = postRequestWS(
+				'http://jsonstub.com/analysis/subs/sm/comparison', 
+				reqData,
+				success, 
+				fail,
+				function(result) {
+					return result;
+				}
+		);
+		requestWS();
 		
 	};
 
