@@ -21,6 +21,7 @@ angular.module('Analysis')
 	    var values = data.values;
 	    resultData['xAxisData'] = xAxisData;
 	    resultData['data'] = values;
+	    resultData['color'] = data.color;
 	    
 		return resultData;
 	};

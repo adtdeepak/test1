@@ -74,11 +74,11 @@ angular.module('Analysis')
 	        series: [{
 	            name: 'New',
 	            data: data.newRevenue,
-	            color:"#ff9900"
+	            color: data.color[0]
 	        },{
 	            name: 'Recurring',
 	            data: data.recurringRevenue,
-	            color:"#308BCB"
+	            color: data.color[1]
 	        }]
 		};
 	};	
@@ -289,7 +289,7 @@ angular.module('Analysis')
 	        series: [{
 	            name: 'Percentage',
 	            data: data.data,
-	            color:"#308BCB"
+	            color:data.color
 	        }]
 		}
 	};
@@ -445,7 +445,7 @@ this.getTrendingBarChartSeries = function(data, title, subtitle, height, color){
 	        series: [{
 	            name: 'Active users',
 	            data: data.data,
-	            color:"#308BCB"
+	            color:data.color
 	        }]
 		}
 		

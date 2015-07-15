@@ -34,7 +34,8 @@
         "revenue":{
         	"months":["Mar", "Apr", "May", "Jun", "Jul", "Aug"],
         	"newRevenue":[0.24, 0.21, 0.33, 0.22, 0.30, 0.28],
-        	"recurringRevenue":[2.11, 1.84, 2.93, 2.83, 3.81, 3.60]
+        	"recurringRevenue":[2.11, 1.84, 2.93, 2.83, 3.81, 3.60],
+        	"color":["#598eb4","#0e4b77"]
         }
         
         

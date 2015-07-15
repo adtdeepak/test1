@@ -12,7 +12,7 @@ angular.module('Analysis')
             width: 10,
             number: 80,
             text: '',
-            colors: ['#F6F6F6', '#0070C0'],
+            colors: ['#F6F6F6', '#149ae3'],
             duration: 500
         };
    		

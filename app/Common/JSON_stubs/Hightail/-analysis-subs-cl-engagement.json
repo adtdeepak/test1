@@ -12,30 +12,34 @@
         "trend":{
         	"activeUsers":{
         		"name":["Mar", "Apr", "May", "Jun", "Jul", "Aug"],
-        		"values":[41, 34, 49, 54, 44, 47]
+        		"values":[41, 34, 49, 54, 44, 47],
+        		"color":"#05395d"
         	},
         	"trendingActivities":{
         		"name":["Adding Connections", "Reviewing Profiles", "Reading Blogs", "Updating Profile"],
-        		"values":[66, 45, 34, 22]
+        		"values":[66, 45, 34, 22],
+        		"color":"#fb7d7d"
         	},
         	"trendingSections":{
         		"name":["Whos viewed your profile", "Add Connections", "Messages", "Notifications"],
-        		"values":[82, 35, 24, 18]
+        		"values":[82, 35, 24, 18],
+        		"color":"#1b6395"
         	},
         	"login":{
         		"name":[">10", "5-10", "2-5", "Once a week"],
-        		"values":[11, 15, 10, 64]
+        		"values":[11, 15, 10, 64],
+        		"color":"#05395d"
         	},
         	"loginDuration":{
         		"xAxisData" : ["<10 mins", "10-30 mins", "30-45 mins", ">45 mins"],
         		"data" : [{
 			    	"name": "This week",
 			    	"data":[44, 21, 15, 20],
-			    	"color":"#308BCB"
+			    	"color":"#0e4b77"
 			    },{	
 			    	"name": "Last week",
 			    	"data":[33, 29, 18, 20],
-			    	"color":"#FF9900"
+			    	"color":"#ffa5a5"
 			    }]
         	}
         	
