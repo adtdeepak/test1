@@ -3,18 +3,23 @@
 <link rel="shortcut icon" href="images/logo.ico" />
 </head>
 
-<div class="list-group fixed-3rdSection">
-	<a href="#comparison-div" class="list-group-item">Compairson</a> <a
-		href="#trends-div" class="list-group-item">Trends</a>
-</div>
 
 <div class="container" id="analysis-cl">
-
-	<div class="row acquisition-panel nopadding" id="comparison-div"
-		style="margin-top: 20px !important;"
+    
+    <div style="width:100%; padding:0px; border:1px solid #ccc; border-radius:4px;" class="col-md-6">
+            <div class="panel">
+              <ul id="myTab1" class="nav nav-tabs nav-justified">
+                <li class="active"><a class="analysis-tab-button" href="#Compairson" data-toggle="tab">Compairson</a></li>
+                <li><a class="analysis-tab-button" href="#Trends" data-toggle="tab">Trends</a></li>
+              </ul>
+              <div id="myTabContent" class="tab-content">
+                  <!--overview section start-->
+                <div class="tab-pane fade active in" id="Compairson">
+                  <div class="row acquisition-panel nopadding" id="comparison-div"
+		style="margin-top: 20px !important; border:none;"
 		ng-controller="comparisonController">
 		<div class="panel panel-default">
-			<div class="panel-heading">Comparison</div>
+			
 		</div>
 		<div class="row nopadding">
 			<div class="col-sm-3 col-md-3 col-lg-3 clearfix"></div>
@@ -46,17 +51,17 @@
 			</div>
 		</div>
 		<div class="row nopadding" style="margin-top: 25px !important">
-			<div class="col-sm-3 col-md-3 col-lg-3 clearfix">
+			<div class=" white-bg col-sm-3 col-md-3 col-lg-3 clearfix">
 				<div class="acqChart" id="revenuePieChart"></div>
 				<div class="acqChart" id="subsPieChart"></div>
 				<div class="acqChart" id="newSubsPieChart"></div>
 				<div class="acqChart" id="cancelPieChart"></div>
 			</div>
 			<div class="col-sm-9 col-md-9 col-lg-9">
-				<div class="col-sm-6 col-md-6 col-lg-6">
+				<div class=" half-left-div-border col-sm-6 col-md-6 col-lg-6">
 					<div class="acqChart" id="stageBarChart"></div>
 				</div>
-				<div class="col-sm-6 col-md-6 col-lg-6">
+				<div class=" half-right-div-border col-sm-6 col-md-6 col-lg-6">
 					<div class="acqChart" id="churnBarChart"></div>
 				</div>
 			</div>
@@ -412,9 +417,15 @@
 			</div>
 		</div>
 	</div>
-
-
-	<div class="row acquisition-panel nopadding" id="trends-div">
+	
+                   
+                    
+                </div>
+                
+                  <!--overview section end-->
+                <!-- profile section start-->
+                <div class="tab-pane fade" id="Trends">
+                <div class="row acquisition-panel nopadding" id="trends-div">
 		<div ng-controller="deepDiveSummaryController">
 			<div class="row nopadding bkgd-mediumbrown">
 				<div class="panel panel-default">
@@ -919,37 +930,7 @@
 
 
 	</div>
-
+                   
+                </div> <!-- profile section end-->
+      
 </div>
-<script>
-	$(document)
-			.ready(
-					function() {
-						$('a[href*=#]')
-								.click(
-										function() {
-											if (location.pathname.replace(
-													/^\//, '') == this.pathname
-													.replace(/^\//, '')
-													&& location.hostname == this.hostname) {
-												var $target = $(this.hash);
-												$target = $target.length
-														&& $target
-														|| $('[name='
-																+ this.hash
-																		.slice(1)
-																+ ']');
-												if ($target.length) {
-													var targetOffset = $target
-															.offset().top;
-													$('html,body')
-															.animate(
-																	{
-																		scrollTop : targetOffset
-																	}, 1000);
-													return false;
-												}
-											}
-										});
-					});
-</script>
