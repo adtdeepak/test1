@@ -24,7 +24,8 @@ angular.module('AnalyticsApp',['ngRoute', 'jmdobry.angular-cache'])
 	    $scope.decisionOptionsText = labelConstants.cig.fn.label;
 	    $scope.buildDOHeading = labelConstants.cig.bp.heading;
 	    $scope.dw_builddo_reviewPanel_heading = labelConstants.cig.bp.reviewPanelHeading; 
-	    $scope.dw_builddo_reviewPanel_tableHeading = labelConstants.cig.bp.reviewPanelTableHeading;
+	    $scope.dw_builddo_reviewPanel_tableHeadingCol_1 = labelConstants.cig.bp.reviewPanelTableHeadingCol_1;
+	    $scope.dw_builddo_reviewPanel_tableHeadingCol_2 = labelConstants.cig.bp.reviewPanelTableHeadingCol_2;
 	    $scope.dw_builddo_reviewPanel_button = labelConstants.cig.bp.reviewPanelBtn; 
 	    $scope.dw_builddo_removeSelection_button = labelConstants.cig.bp.removeSelectionBtn;
 	    $scope.buildDOText = labelConstants.cig.bp.label;
