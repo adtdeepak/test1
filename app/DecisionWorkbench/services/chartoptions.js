@@ -7,7 +7,8 @@ this.getSetGoalsData = function(data) {
 			chart:{
 				spacingRight:30,
 				spacingLeft:30,
-				spacingTop:15
+				spacingTop:15,
+				height:275
 			},
 			title : {
 			floating : true,

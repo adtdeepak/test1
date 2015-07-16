@@ -2,33 +2,20 @@
      <title>D-ASSIST $ CONVERTER</title>
 	<link rel="shortcut icon" href="images/logo.ico"/>
 </head>
-<h1 class="pull-left" ng-if="isSetGoalsEditable">Set Goals</h1>
-	<div id="contentContainer" ng-cloak>
-	<div id="Decision">
-		<div class="contentpannel">
-			<div class="chartPanel clearfix"
-				ng-controller="setGoalsDataController" ng-if="isSetGoalsEditable">
-				<div class="chartPanelLeft">
-				 <div class="progress-loading" ng-if="!error && !dataLoaded"></div>
-				<ng-include ng-show="error" src="'partials/error.htm'"></ng-include>
+
+<div class="container" id="dw-index" ng-cloak>
+	<div class="row">
+		<div class="row-fluid" style="margin-bottom: 30px; margin-top:70px;" ng-controller="setGoalsDataController" >
+			<div class="col-sm-6 col-md-6 col-lg-6">
+				<div class="temp" style="padding-top: 20px;border: 1px solid #d0d0d0;min-height: 300px;background: #fff;position: relative;">
 					<h2>Paid user acquisition</h2>
-					<a href="#" class="help tooltip-new">
-						<figure>
-							<img src="images/icon-info.png" />
-						</figure> <span><img alt="Tooltip" src="images/tooltip-arrow.png"
-							class="callout">{{Tooltip.TOOLTIP_DECISIONWB_DECISIONOPT_ACQUISITION}}</span>
-					</a>
 					<div ng-hide="error" id="setGoalsChart" class="clearfix"></div>
 				</div>
-				<div class="chartPanelRight">
+			</div>
+			<div class="col-sm-6 col-md-6 col-lg-6">
+				<div class="rightSection" style="padding-top: 20px;border: 1px solid #d0d0d0;min-height: 300px;background: #fff;position: relative;">
 					<div class="clearfix right">
 						<h2>Title</h2>
-						<!-- <a href="#" class="help tooltip-new">
-							<figure>
-								<img src="images/icon-info.png" />
-							</figure> <span><img alt="Tooltip" src="images/tooltip-arrow.png"
-								class="callout">{{Tooltip.TOOLTIP_DECISIONWB_DECISIONOPT_DATA}}</span>
-						</a> -->
 						<div class="tab_container">
 							<section class="tab_content">
 								<h2>Showing Data for the {{periodText}} {{periodStart | date:'dd MMM '}} - {{periodTo | date:'dd MMM yyyy'}}</h2>
@@ -44,56 +31,14 @@
 					</div>
 				</div>
 			</div>
-			<!-- <div class="chartPanel clearfix"
-				ng-controller="engagedActivitiesController" ng-if="isSetGoalsEditable">
-				<div class="TopLeastleft">
-					<div class="clearfix TopLeast">
-						<h2>Top and Least Engaged Activities</h2>
-						<div class="progress-loading" ng-if="!error && !dataLoaded"></div>
-						<ng-include ng-show="error" src="'partials/error.htm'"></ng-include>
-						<section ng-hide="error" class="clearfix" id="engagedChart">
-							<a href="#" class="help tooltip-new">
-								<figure>
-									<img src="images/icon-info.png" />
-								</figure> <span><img alt="Tooltip" src="images/tooltip-arrow.png"
-									class="callout">{{Tooltip.TOOLTIP_DECISIONWB_DECISIONOPT_ENGACTIVITIES}}</span>
-							</a>
-							<div class="clearfix TEchartvalue"></div>
-							<div class="clearfix ChartLegend">
-								<span>*</span>Bigger the Bubble, Higher the Engagement
-							</div>
-						</section>
-					</div>
-				</div>
-				<div class="TopLeastright">
-					<div class="clearfix right TopLeast">
-					<h2>Top and Least Engaged User Group</h2>
-					<div class="progress-loading" ng-if="!error && !dataLoaded"></div>
-					<ng-include ng-show="error" src="'partials/error.htm'"></ng-include>
-						<section ng-hide="error" class="clearfix" id="engagedChart1">
-							<a href="#" class="help tooltip-new">
-								<figure>
-									<img src="images/icon-info.png" />
-								</figure> <span><img alt="Tooltip" src="images/tooltip-arrow.png"
-									class="callout">{{Tooltip.TOOLTIP_DECISIONWB_DECISIONOPT_USERGRP}}</span>
-							</a>
-							<div class="clearfix TEchartvalue"></div>
-							<div class="clearfix ChartLegend">
-								<span>*</span>Bigger the Bubble, Higher the Engagement
-							</div>
-						</section>
-					</div>
-				</div>
-			</div> -->
-
-			<div class="menu_list1"  ng-controller="filterOuterController" ng-if="isSetGoalsEditable">
-				<div class="menu_head" style="padding-top:5px">
-					<a class="btn btn-org acc_link" rel="filters">Set Filters</a>
+		</div>
+		<div class="menu_list1"  ng-controller="filterOuterController" ng-if="isSetGoalsEditable">
+				<div class="menu_head" style="padding-top:10px">
+					<button type="button" class="btn btn-default acc_link" rel="filters">Set Filters</button>
 				</div>
 				<div class="menu_head">
-					<a href="#" ng-click="showBestDecision('/builddo')" 
-					ng-disabled="loadingDOSearchResult" ng-class="{spinnerButton: loadingDOSearchResult==true}"
-					class="btn btn-cancel btn-org" style="padding:7px">Show Best {{decisionOptionsText}}</a>
+				<button type="button" class="btn btn-primary" rel="filters"
+				 ng-click="showBestDecision('/builddo')" >Show Best {{decisionOptionsText}}</button>
 				</div>
 				<div class="menu_body acc_container" id="filters">
 					<div class="clearfix">
@@ -105,6 +50,4 @@
 			</div>
 		</div>
 		<div ng-hide ng-controller="setDoInit"></div>
-	</div>
 </div>
-

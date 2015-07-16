@@ -21,7 +21,8 @@
 		"bp":{
 			"heading":"Design Campaigns",
 			"reviewPanelHeading":"Shortlisted Campaigns",
-			"reviewPanelTableHeading":"Campaign option No.",
+			"reviewPanelTableHeadingCol_1":"Campaign option No.",
+			"reviewPanelTableHeadingCol_2":"New Padi Users / Conversion Uplift",
 			"removeSelectionBtn":"Clear",
 			"reviewPanelBtn":"Save & Next",
 			"label":"Campaign Options"

@@ -94,7 +94,7 @@
 			</section>
 		</div>
 		<form name = "filterForm">
-		<div class="filtersplit clearfix">
+		<div class="filtersplit clearfix" style="color: #9D9999;">
 			<div class="onebyfourth">
 				<section class="innersplit">
 					<h3>Conversion Uplift</h3>
@@ -134,14 +134,12 @@
 			</div>
 			<div class="onebyfourth onebyfourth1 filter-buttons-single">
 				<div>
-					<a class="btn btn-cancel btn-org pull-right" href="#" ng-click="closeFilter()">
-						Close Filter</a>
-					<a ng-click="clearFilterClicked()" href="#" id="clear-filter"
-						class="btn btn-cancel btn-org pull-right">
-						Clear Filter</a>
+				<button type="button" class="btn btn-default pull-right" rel="filters" ng-click="closeFilter()">Close Filter</button>
+				<button type="button" class="btn btn-default pull-right" rel="filters" ng-click="clearFilterClicked()">Clear Filter</button>
+				
 					<button href="#" ng-click="builddoButtonClicked('/builddo')"
 						ng-if="thisPage != '/review-do'"
-						class="btn btn-org btn-cancel pull-right" 
+						class="btn btn-default pull-right" 
 						ng-disabled="loadingDOSearchResult" 
 						ng-class="{spinnerButton: loadingDOSearchResult==true}">Show {{decisionOptionsText}}</button>
 					<input type="submit" ng-if="thisPage == '/review-do'" value="Filter" href="#" ng-click="filterSearchResults()"
