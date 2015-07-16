@@ -14,7 +14,7 @@
         		"color":["#36729d", "#149ae3","#fb7d7d", "#56d8ca", "#c5c4c4", "#ffcaca"]
         	},
         	"location":{
-        		"name":["US", "Europe", "China", "International"],
+        		"name":["US", "Europe", "China", "Others"],
         		"values":[55, 21, 10, 14],
         		"color":["#0e4b77", "#05395d","#56d8ca", "#959595"]
         	},

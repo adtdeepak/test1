@@ -11,15 +11,15 @@
      <div style="width:100%; padding:0px; border:1px solid #ccc; border-radius:4px;" class="col-md-6">
             <div class="panel">
               <ul id="myTab1" class="nav nav-tabs nav-justified">
-                <li class="active"><a class="analysis-tab-button" href="#overview" data-toggle="tab">Database Overview</a></li>
-                <li><a class="analysis-tab-button" href="#profile" data-toggle="tab">Demographic profile</a></li>
-                  <li><a class="analysis-tab-button"  href="#engagement" data-toggle="tab">Engagement</a></li>
-                  <li><a class="analysis-tab-button" href="#retention" data-toggle="tab">Retention</a></li>
+                <li class="active"><a class="analysis-tab-button" href="#overview" data-toggle="tab" ng-click="resizeWindow()">Database Overview</a></li>
+                <li><a class="analysis-tab-button" href="#profile" data-toggle="tab" ng-click="resizeWindow()">Demographic profile</a></li>
+                  <li><a class="analysis-tab-button"  href="#engagement" data-toggle="tab" ng-click="resizeWindow()">Engagement</a></li>
+                  <li><a class="analysis-tab-button" href="#retention" data-toggle="tab" ng-click="resizeWindow()">Retention</a></li>
                 <li class="dropdown">
                   <a class="analysis-tab-button" href="#" id="myTabDrop1-1" class="dropdown-toggle" data-toggle="dropdown">Trends <b class="caret"></b></a>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
-                    <li><a href="#dropdown1-1" tabindex="-1" data-toggle="tab">@fat</a></li>
-                    <li><a href="#dropdown1-2" tabindex="-1" data-toggle="tab">@mdo</a></li>
+                    <li><a href="#dropdown1-1" tabindex="-1" data-toggle="tab" ng-click="resizeWindow()">@fat</a></li>
+                    <li><a href="#dropdown1-2" tabindex="-1" data-toggle="tab" ng-click="resizeWindow()">@mdo</a></li>
                   </ul>
                 </li>
               </ul>
@@ -177,16 +177,32 @@
 				<div class="col-sm-6 col-md-6 col-lg-6 square-full-box">
 				<h2 class="titleLikeChart">Product Plan</h2>
 				<h3 class="subtitle">% of all subscribers</h3>
-					<div>
-						<div class="row-fluid square-box">
-							<div class="col-sm-6 col-md-6 col-lg-6" style="height:100%;background:#FFF2CD;"><h3>Basic</h3><span>35%</span></div>
-							<div class="col-sm-6 col-md-6 col-lg-6" style="height:100%;background:#FEE895;"><h3>Professional</h3><span>25%</span></div>
+						<div>
+							<div class="row-fluid square-box">
+								<div class="col-sm-6 col-md-6 col-lg-6"
+									style="height: 100%; background: #598eb4;">
+									<h3>Basic</h3>
+									<span>35%</span>
+								</div>
+								<div class="col-sm-6 col-md-6 col-lg-6"
+									style="height: 100%; background: #ffae7f;">
+									<h3>Professional</h3>
+									<span>25%</span>
+								</div>
+							</div>
+							<div class="square-box">
+								<div class="col-sm-6 col-md-6 col-lg-6"
+									style="height: 100%; background: #fb7d7d;">
+									<h3>Professional Plus</h3>
+									<span>12%</span>
+								</div>
+								<div class="col-sm-6 col-md-6 col-lg-6"
+									style="height: 100%; background: #32cabb;">
+									<h3>Enterprise</h3>
+									<span>28%</span>
+								</div>
+							</div>
 						</div>
-						<div class="square-box">
-							<div class="col-sm-6 col-md-6 col-lg-6" style="height:100%;background:#FFDA65;"><h3>Professional Plus</h3><span>12%</span></div>
-							<div class="col-sm-6 col-md-6 col-lg-6" style="height:100%;background:#BE9100;"><h3>Enterprise</h3><span>28%</span></div>
-						</div>
-					</div>
 				</div>
 			</div>
 
@@ -400,12 +416,12 @@
 				<h3 class="subtitle">% of all subscribers</h3>
 					<div>
 						<div class="row-fluid square-box">
-							<div class="col-sm-6 col-md-6 col-lg-6" style="height:100%;background:#FFF2CD;"><h3>Basic</h3><span>35%</span></div>
-							<div class="col-sm-6 col-md-6 col-lg-6" style="height:100%;background:#FEE895;"><h3>Professional</h3><span>25%</span></div>
+							<div class="col-sm-6 col-md-6 col-lg-6" style="height:100%;background:#598eb4;"><h3>Basic</h3><span>35%</span></div>
+							<div class="col-sm-6 col-md-6 col-lg-6" style="height:100%;background:#ffae7f;"><h3>Professional</h3><span>25%</span></div>
 						</div>
 						<div class="square-box">
-							<div class="col-sm-6 col-md-6 col-lg-6" style="height:100%;background:#FFDA65;"><h3>Professional Plus</h3><span>12%</span></div>
-							<div class="col-sm-6 col-md-6 col-lg-6" style="height:100%;background:#BE9100;"><h3>Enterprise</h3><span>28%</span></div>
+							<div class="col-sm-6 col-md-6 col-lg-6" style="height:100%;background:#fb7d7d;"><h3>Professional Plus</h3><span>12%</span></div>
+							<div class="col-sm-6 col-md-6 col-lg-6" style="height:100%;background:#32cabb;"><h3>Enterprise</h3><span>28%</span></div>
 						</div>
 					</div>
 				</div>

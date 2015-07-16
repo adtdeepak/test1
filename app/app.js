@@ -90,6 +90,12 @@ angular.module('AnalyticsApp',['ngRoute', 'jmdobry.angular-cache'])
 	}).appendTo('head');
 	
 	UtilitiesService.initStorage();
+	
+	//Resizing the window
+	$scope.resizeWindow = function(){
+		setTimeout(function(){$(window).trigger('resize');}, 500);
+		
+	}
 
 	/*-------------------Permissions Starts Here-------------------*/
 	$scope.isHomePageVisible = true;
