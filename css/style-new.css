@@ -8373,7 +8373,7 @@ div#progressBar {
 }
 .smSubsTable .headingCell{
 	border:1px solid white !important;
-	background: #f5f5f5;
+	background: #ddd;
 	font-weight: 600;
 }
 .smSubsTable td, .smSubsTable th {
@@ -8610,3 +8610,5 @@ div#progressBar {
 .churn-box{background: #1b6395 none repeat scroll 0 0;  box-shadow: 2px 2px 2px #ccc;    padding: 30px 0;}
 .dark-blue-text{color:#1b6395;}
 .light-blue-text{color:#149ae3;}
+.gray-bg{ background:#ddd;}
+.analysis-tab-button-2{   background:#ddd none repeat scroll 0 0;    border-left: 1px solid #ffae7f;    color: #000;}
