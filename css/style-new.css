@@ -8606,9 +8606,9 @@ div#progressBar {
 .table-gray-heading{ background:#686868; color:#fff !important;}
 .table-bottom-border{ border-bottom: 1px solid #ccc;}
 .white-text{color:#fff;}
-.light-green-bg{background:#86e8de !important; border:1px solid #ccc;}
+.light-green-bg{background:#67bcea !important; border:1px solid #ccc;}
 .churn-box{background: #1b6395 none repeat scroll 0 0;  box-shadow: 2px 2px 2px #ccc;    padding: 30px 0;}
 .dark-blue-text{color:#1b6395;}
 .light-blue-text{color:#149ae3;}
-.gray-bg{ background:#ddd;}
+.gray-bg{ background:#ddd; color:#000 !important;}
 .analysis-tab-button-2{   background:#ddd none repeat scroll 0 0;    border-left: 1px solid #ffae7f;    color: #000;}
