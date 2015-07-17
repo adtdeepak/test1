@@ -71,7 +71,7 @@ angular.module('Analysis')
         width: 10,
         number: 80,
         text: '',
-        colors: ['#F6F6F6', '#0070C0'],
+        colors: ['#FFFFFF', '#0070C0'],
         duration: 500
     };
     
@@ -143,12 +143,12 @@ angular.module('Analysis')
 		
 		//chart data and options for Location pie chart
 		chartData = DataConversionService.getPieChartData(profileData.data.pieData.location);
-	    chartOptions = ChartOptionsService.getProfilePieChart(chartData, "Location", "As a % of total subscribers", 300);
+	    chartOptions = ChartOptionsService.getPieChart(chartData, "Location", "As a % of total subscribers", 300);
 		chartOBJ = chartsService.pieChart.call($('#locationPieChart'),chartOptions, $scope);
 
 		//chart data and options for signup pie chart
 		chartData = DataConversionService.getPieChartData(profileData.data.pieData.signup);
-	    chartOptions = ChartOptionsService.getProfilePieChart(chartData, "Signup Email", "As a % of total subscribers", 300);
+	    chartOptions = ChartOptionsService.getPieChart(chartData, "Signup Email", "As a % of total subscribers", 300);
 		chartOBJ = chartsService.pieChart.call($('#signupPieChart'),chartOptions, $scope);
 		
 		//chart data and options for access mode pie chart
@@ -257,12 +257,12 @@ angular.module('Analysis')
 			
 			//chart data and options for Location pie chart
 			chartData = DataConversionService.getPieChartData(retentionData.data.pieData.location);
-		    chartOptions = ChartOptionsService.getProfilePieChart(chartData, "Location", "As a % of total subscribers", 300);
+		    chartOptions = ChartOptionsService.getPieChart(chartData, "Location", "As a % of total subscribers", 300);
 			chartOBJ = chartsService.pieChart.call($('#locationPieChartRet'),chartOptions, $scope);
 
 			//chart data and options for signup pie chart
 			chartData = DataConversionService.getPieChartData(retentionData.data.pieData.signup);
-		    chartOptions = ChartOptionsService.getProfilePieChart(chartData, "Signup Email", "As a % of total subscribers", 300);
+		    chartOptions = ChartOptionsService.getPieChart(chartData, "Signup Email", "As a % of total subscribers", 300);
 			chartOBJ = chartsService.pieChart.call($('#signupPieChartRet'),chartOptions, $scope);
 			
 			//chart data and options for access mode pie chart

@@ -91,8 +91,12 @@ angular.module('AnalyticsApp',['ngRoute', 'jmdobry.angular-cache'])
 	
 	UtilitiesService.initStorage();
 	
+	//To show the selected section in segment landscape page
+	$scope.selectedDiv = "";
 	//Resizing the window
-	$scope.resizeWindow = function(){
+	$scope.resizeWindow = function(selectedDiv){
+		if(selectedDiv)
+			$scope.selectedDiv = selectedDiv;
 		setTimeout(function(){$(window).trigger('resize');}, 500);
 		
 	}
