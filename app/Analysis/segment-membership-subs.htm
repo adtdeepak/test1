@@ -11,12 +11,12 @@
               <ul id="myTab1" class="nav nav-tabs nav-justified">
                 <li class="active"><a class="analysis-tab-button" href="#Compairson" data-toggle="tab"  ng-click="resizeWindow()">Compairson</a></li>
                   <li class="dropdown">
-                  <a class="analysis-tab-button" href="#" id="myTabDrop1-1" class="dropdown-toggle" data-toggle="dropdown">Deep Dive (Fresher)<b class="caret"></b></a>
+                  <a class="analysis-tab-button" href="#" id="myTabDrop1-1" class="dropdown-toggle" data-toggle="dropdown">Deep Dive {{selectedDiv}}<b class="caret"></b></a>
                   <ul style="width:95%;" class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
-                    <li><a href="#Freshers" tabindex="-1" data-toggle="tab"  ng-click="resizeWindow()">Freshers</a></li>
-                    <li><a href="#Finance-Execs" tabindex="-1" data-toggle="tab"  ng-click="resizeWindow()">Finance Execs</a></li>
-                    <li><a href="#Senior-Mngt" tabindex="-1" data-toggle="tab"  ng-click="resizeWindow()">Senior Mngt</a></li>
-                    <li><a href="#Recruiters" tabindex="-1" data-toggle="tab" ng-click="resizeWindow()">Recruiters</a></li>
+                    <li><a href="#Freshers" tabindex="-1" data-toggle="tab"  ng-click="resizeWindow('(Freshers)')">Freshers</a></li>
+                    <li><a href="#Finance-Execs" tabindex="-1" data-toggle="tab"  ng-click="resizeWindow('(Finance Execs)')">Finance Execs</a></li>
+                    <li><a href="#Senior-Mngt" tabindex="-1" data-toggle="tab"  ng-click="resizeWindow('(Senior Mngt)')">Senior Mngt</a></li>
+                    <li><a href="#Recruiters" tabindex="-1" data-toggle="tab" ng-click="resizeWindow('(Recruiters)')">Recruiters</a></li>
                   </ul>
                 </li>
                
