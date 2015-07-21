@@ -395,7 +395,7 @@ path:not([stroke]){
 	font-size: 14px;
 	color: #ffffff;
 	font-size: 14px;
-	text-decoration: underline;
+	
 }
 
 .LogoutContainer {
@@ -407,7 +407,7 @@ path:not([stroke]){
 	float: left;
 	vertical-align: top;
 	cursor: pointer;
-	margin-top: 2px;
+	margin-top: 15px;
 	padding-left: 2px;
 }
 
@@ -470,7 +470,7 @@ path:not([stroke]){
 	padding: 3px 15px 0;
 	float: left;
 	height: 28px;
-	border-left: 1px solid #969696;
+	
 }
 
 .loginContainer ul li ul {
@@ -493,7 +493,7 @@ path:not([stroke]){
 	position: absolute;
 	right: 0px;
 	height: 11px;
-	top: -7px;
+	top: -6px;
 }
 
 li.username ul li a span {
@@ -2208,8 +2208,8 @@ li.Logout {
 li.Logout ul {
 	display: none;
 	position: absolute;
-	top: 20px;
-	right: -13px;
+	top: -5px;
+	right: 17px;
 	border: 1px solid #d0d0d0;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -8008,8 +8008,8 @@ div#progressBar {
 }
 .navbar-inverse{
   background: #686868;
-  font-size:15px;
-  font-weight:600;
+  font-size:14px;
+  font-weight:500;
 }
 .navbar-inverse .navbar-nav>.active>a{
   border-bottom: 0px solid #f6f6f6;
@@ -8581,14 +8581,14 @@ div#progressBar {
 
 /* New style for analysis page */
 
-.darkblue-analysis-tab{background: #1b6395 none repeat scroll 0 0; border-radius:0px !important;  color: #fff;font-weight: 600; margin-bottom: 10px;  padding: 5px;}
-.darkblue-border{  border: 1px solid #1b6395; background:#fff;}
+.darkblue-analysis-tab{background: #132d52 none repeat scroll 0 0; border-radius:0px !important;  color: #fff;font-weight: 600; margin-bottom: 10px;  padding: 5px;}
+.darkblue-border{  border: 1px solid #132d52 !important; background:#fff;}
 .analysis-tab-button{   background:#333 none repeat scroll 0 0;    border-left: 1px solid #ffae7f;    color: #ffffff;}
 
 .active-text{color:#fa965a; font-weight:bold; font-size:20px;}
 .gray-panel{ background-color: #333 !important; color:#fff !important;}
-.lightblue-analysis-tab{background: #149ae3 none repeat scroll 0 0; border-radius:0px !important;  color: #fff;font-weight: 600; margin-bottom: 10px;  padding: 5px;}
-.lightblue-border{  border: 1px solid #149ae3; background:#fff;}
+.lightblue-analysis-tab{background: #3ea8dc none repeat scroll 0 0; border-radius:0px !important;  color: #fff;font-weight: 600; margin-bottom: 10px;  padding: 5px;}
+.lightblue-border{  border: 1px solid #3ea8dc !important; background:#fff;}
 .row{ margin-bottom:20px !important;}
 .no-border{border:none;}
 .revenue-box{ background: #fff; height: 300px; margin-bottom: 20px; border:1px solid #ccc;}

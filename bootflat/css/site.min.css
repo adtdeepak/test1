@@ -3107,7 +3107,7 @@ select.input-group-sm[multiple] > .form-control, select.input-group-sm[multiple]
 .navbar {
     border: 1px solid transparent;
     margin-bottom: 20px;
-    min-height: 50px;
+    min-height: 38px;
     position: relative;
 }
 @media (min-width: 768px) {
@@ -3282,8 +3282,8 @@ select.input-group-sm[multiple] > .form-control, select.input-group-sm[multiple]
     float: left;
 }
 .navbar-nav > li > a {
-    padding-bottom: 15px;
-    padding-top: 15px;
+    padding-bottom: 12px;
+    padding-top: 12px;
 }
 }
 .navbar-form {
@@ -3395,7 +3395,7 @@ select.input-group-sm[multiple] > .form-control, select.input-group-sm[multiple]
 }
 .navbar-right {
     float: right !important;
-    margin-right: -15px;
+   
 }
 .navbar-right ~ .navbar-right {
     margin-right: 0;
@@ -6439,10 +6439,10 @@ blockquote {
     color: #fff;
 }
 .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-text {
-    color: #8c8c8c;
+    color: #fff; font-weight:bold;
 }
 .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover {
-    color: #fff;
+    color: #fff; background:#000;
 }
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
     background-color: #000;
@@ -7044,7 +7044,7 @@ a.list-group-item-danger.active, a.list-group-item-danger:focus, a.list-group-it
 }
 }
 .dropdown-menu {
-    background-color: #434a54;
+    background-color: #444;
     border: medium none;
 }
 .dropdown-menu .dropdown-header {
@@ -7058,7 +7058,7 @@ a.list-group-item-danger.active, a.list-group-item-danger:focus, a.list-group-it
     padding: 5px 20px;
 }
 .dropdown-menu .active a, .dropdown-menu .active a:focus, .dropdown-menu .active a:hover, .dropdown-menu li a:focus, .dropdown-menu li a:hover {
-    background-color: #686868;
+    background-color: #000;
     color: #fff;
     outline: 0 none;
 }

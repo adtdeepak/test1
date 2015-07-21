@@ -29,24 +29,16 @@
     <script src="js/lib/angular/angular.js" type="text/javascript"></script>
     <script src="js/lib/angular/angular-route.js" type="text/javascript"></script>
 	<script src="js/lib/angular/angular-cache.js" type="text/javascript"></script>
-	<!--<script src="js/lib/bootstrap.min.js" type="text/javascript"></script>-->
+	<script src="js/lib/bootstrap.min.js" type="text/javascript"></script>
     
     <!-- Bootflat css start include -->
     <link rel="stylesheet" href="bootflat/css/site.min.css">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700,400italic,600italic,700italic,800italic,300italic" rel="stylesheet" type="text/css">
-    <!-- <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> -->
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
-    <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-      <script src="js/respond.min.js"></script>
-    <![endif]-->
-    <script type="text/javascript" src="bootflat/js/site.min.js"></script>
-<!-- Bootflat css end include -->
+  
     
 </head>
 <body ng-controller="mainAppContent" ng-cloak>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container-fluid">
+		<div class="container ng-scope">
 		    <div class="navbar-header">
 				<figure style="margin-top:4px;">
 					<img src="images/logo.png" alt="D-ASSIST $ CONVERTER"
@@ -65,37 +57,67 @@
 				</figure>
 			</div> -->
 			<div class="collapse navbar-collapse" id="phoneNavbar">
-				<ul class="nav navbar-nav">
-					<li><a href="home.htm">Home</a></li>
-					<li ng-controller="dwLinkController"
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="home.htm">Home</a></li>					
+						<li><a ng-controller="dwLinkController" href="#"
+							ng-click="trackUrlClicked(trackingHtmlName)">
+								Track</a></li>
+                    <li ng-controller="dwLinkController"
 						ng-if="isDecisionWorkbenchTabVisible"><a href="#"
 						ng-click="dwUrlClicked(decisionWorkbenchHtmlName)">{{decisionWorkbenchTab}}</a>
 					</li>
-						<li><a ng-controller="dwLinkController" href="#"
-							ng-click="trackUrlClicked(trackingHtmlName)">
-								{{track_tab_name}} </a></li>
 					<li class="dropdown active"><a class="dropdown-toggle"
 						data-toggle="dropdown" href="#" ng-controller="dwLinkController">Analysis<span
 							class="caret"></span></a>
 						<ul class="dropdown-menu"
 							ng-click="trackUrlClicked(trackingHtmlName)">
-						<li class="dropdown-submenu">
-                          <a tabindex="-1" href="#">Subscribers</a>
-                          <ul class="dropdown-menu">
-                            <li><a tabindex="-1" href="#customer-landscape-subs">Customer Landscape</a></li>
-                            <li><a tabindex="-1" href="#segment-membership-subs">Segment Membership</a></li>
-                          </ul>
-                        </li>
-							
-                      	<li class="dropdown-submenu">
-                          <a tabindex="-1" href="#">Non-Subscribers</a>
-                          <ul class="dropdown-menu">
-                            <li><a tabindex="-1" href="#">Customer Landscape</a></li>
-                            <li><a tabindex="-1" href="#">Membership</a></li>
-                          </ul>
-                        </li>
-						</ul>
+						<li>
+                          <a tabindex="-1" href="#">Business Analysis</a>
+                         
+                            <li class="dropdown-submenu"><a tabindex="-1" href="#">Customer Analysis</a>
+                                <ul class="dropdown-menu"	ng-click="trackUrlClicked(trackingHtmlName)">
+                                    
+						          <li><a tabindex="-1" href="#customer-landscape-subs">Overview</a></li>                         
+                                  <li><a tabindex="-1" href="#segment-membership-subs">Deepdive</a></li>
+                                </ul>          
+                            </li>
+                          </ul>                       
 					</li>
+                    <li style="border-left:1px solid #ccc;" class="dropdown"><a style="padding: 4px 5px 4px 20px;" class="dropdown-toggle"
+						data-toggle="dropdown" href="#" ng-controller="dwLinkController"><img width="35" src="images/profile-pic.png" alt="D-ASSIST $ CONVERTER"	title="D-ASSIST $ CONVERTER" />
+				
+                        <span	class="caret"></span></a>
+						<ul class="dropdown-menu" ng-click="trackUrlClicked(trackingHtmlName)">
+						
+                        <li><a tabindex="-1" href="change-password.htm" class="Logout" title="Change Password">Change	Password</a></li>
+				        <li><a tabindex="-1" href="login.htm" class="Logout" title="Logout">Logout</a></li>
+                         
+                            
+                          </ul>                       
+					</li>
+                   <!-- <li class="dropdown-submenu">
+					<div style="padding: 0px 15px 0px 30px;" class="loginContainer loginContainer1">
+						<div class="loginLabel"><figure style="margin-top:4px;">
+					<img width="35" src="images/profile-pic.png" alt="D-ASSIST $ CONVERTER"
+						title="D-ASSIST $ CONVERTER" />
+				</figure></div>
+						<div style=" color:#fff" id="firstpane" class="LogoutContainer">
+                            <span
+							class="caret"></span>
+							<ul>
+								<li class="Logout">
+									<ul>
+										<li><a href="change-password.htm" class="Logout" title="Change Password">Change
+												Password</a></li>
+										<li><a href="login.htm" class="Logout" title="Logout">Logout</a></li>
+										<li class="arrow1"></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+                        
+				</li>-->
 				</ul>
 				<ng-include src="'partials/header.htm'"></ng-include>
 			</div>

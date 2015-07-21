@@ -71,7 +71,7 @@ angular.module('Analysis')
         width: 10,
         number: 80,
         text: '',
-        colors: ['#FFFFFF', '#0070C0'],
+        colors: ['#1b6395', '#0070C0'],
         duration: 500
     };
     
