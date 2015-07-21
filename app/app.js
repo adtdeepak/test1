@@ -19,6 +19,10 @@ angular.module('AnalyticsApp',['ngRoute', 'jmdobry.angular-cache'])
 	    $scope.track_tab_name = labelConstants.track.tabName; 
 	    $scope.trackingHtmlName = labelConstants.track.htmName;
 	    
+	    //Analysis
+	    $scope.analysis_tab_name = labelConstants.analysis.tabName;
+	    $scope.analysisHtmlname = labelConstants.analysis.htmName;  
+	    
 	    //This is used in index - button, filter - buttons
 	    $scope.dw_index_tabText = labelConstants.cig.fn.tabName;
 	    $scope.decisionOptionsText = labelConstants.cig.fn.label;
@@ -163,6 +167,13 @@ angular.module('AnalyticsApp',['ngRoute', 'jmdobry.angular-cache'])
 	$rootScope.$on('$routeChangeSuccess', function(evt, cur, prev) {
 		$scope.thisPage = $location.path();
 	});
+})
+
+.controller("navigationController",function($scope){
+	var locationUrl = location.href;
+	$scope.mainHtml = location.href.split("/")[4].split(".")[0];
+	console.log("locationUrl:", location.href.split("/")[4].split(".")[0]);
+	
 });
 
 angular.module('Home',['ngRoute', 'AnalyticsApp','highcharts-ng'])

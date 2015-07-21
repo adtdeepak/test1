@@ -1,0 +1,93 @@
+
+<nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="navigationController">
+	<div class="container ng-scope">
+	    <div class="navbar-header">
+			<figure style="margin-top:4px;">
+				<img src="images/logo.png" alt="D-ASSIST $ CONVERTER"
+					title="D-ASSIST $ CONVERTER" />
+			</figure>
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#phoneNavbar">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>                        
+	      </button>
+	    </div>
+		<div class="collapse navbar-collapse" id="phoneNavbar">
+			<ul class="nav navbar-nav navbar-right">
+				<li ng-class="{active: mainHtml=='home'}"><a href="home.htm">Home</a></li>					
+				
+				<li class="dropdown" ng-class="{active: mainHtml=='campaign-options'}">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#"
+					ng-controller="dwLinkController"
+						ng-click="navModuleClicked(decisionWorkbenchHtmlName)"> {{decisionWorkbenchTab}}
+					 <span class="caret" ng-if="mainHtml == 'campaign-options'"></span></a>
+					<ul class="dropdown-menu"
+						ng-if="mainHtml == 'campaign-options'">
+						<li class="first"><a ng-if="isSetGoalsEditable"
+							href="#/index"
+							ng-class="{active: thisPage=='/index'||thisPage=='/builddo'}">{{dw_index_tabText}}</a></li>
+						<li><a ng-if="isReviewDOViewable" href="#/review-do"
+							ng-class="{active: thisPage=='/review-do'}">{{dw_reviewdo_tabText}}</a></li>
+					</ul></li>
+                 	<li class="dropdown" ng-class="{active: mainHtml=='dashboard'}"
+						>
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#" ng-controller="dwLinkController"
+					ng-click="navModuleClicked(trackingHtmlName)">{{home_track_text}}
+					<span class="caret" ng-if="mainHtml == 'dashboard'"></span></a>
+					<ul class="dropdown-menu"
+						ng-if="mainHtml == 'dashboard'">
+						<li class="first"><a href="#/summary"
+							ng-class="{active: thisPage=='/summary'}">Summary</a></li>
+						<!-- <li><a ng-if="isBusinessImpactTabVisible"
+							href="#/business-impact"
+							ng-class="{active: thisPage=='/business-impact'}">Business
+								Impact</a></li> -->
+						<li><a ng-if="isEngagementTabVisible"
+							href="#/engagement-activity"
+							ng-class="{active: thisPage=='/engagement-activity'}">Engagement
+								Activity</a></li>
+						<li><a ng-if="false" href="#/channel-tracker"
+							ng-class="{active: thisPage=='/channel-tracker'}">Channel
+								Tracker</a></li>
+						<li><a ng-if="false" href="#/campaign-tracker"
+							ng-class="{active: thisPage=='/campaign-tracker'}">Campaign
+								Tracker</a></li>
+						<li><a ng-if="isUserGroupTabVisible"
+							href="#/user-group-engagement"
+							ng-class="{active: thisPage=='/user-group-engagement'}">User
+								Groups</a></li>
+					</ul></li>
+				<li class="dropdown"  ng-class="{active: mainHtml=='analysis'}"><a class="dropdown-toggle"
+					data-toggle="dropdown" href="#" ng-controller="dwLinkController"
+					ng-click="navModuleClicked(analysisHtmlname)" >{{analysis_tab_name}}<span
+						class="caret" ng-if="mainHtml == 'analysis'"></span></a>
+					<ul class="dropdown-menu" ng-if="mainHtml == 'analysis'">
+					<li>
+                         <a tabindex="-1" href="#business-analysis">Business Analysis</a>
+                        
+                           <li class="dropdown-submenu"><a tabindex="-1" href="#">Customer Analysis</a>
+                               <ul class="dropdown-menu"	ng-click="trackUrlClicked(trackingHtmlName)">
+                                   
+					          <li><a tabindex="-1" href="#customer-landscape-subs">Overview</a></li>                         
+                                 <li><a tabindex="-1" href="#segment-membership-subs">Deepdive</a></li>
+                               </ul>          
+                           </li>
+                         </ul>                       
+				</li>
+                   <li style="border-left:1px solid #ccc;" class="dropdown"><a style="padding: 4px 5px 4px 20px;" class="dropdown-toggle"
+					data-toggle="dropdown" href="#" ng-controller="dwLinkController"><img width="35" src="images/profile-pic.png" alt="D-ASSIST $ CONVERTER"	title="D-ASSIST $ CONVERTER" />
+			
+                       <span	class="caret"></span></a>
+					<ul class="dropdown-menu" ng-click="trackUrlClicked(trackingHtmlName)">
+					
+                       <li><a tabindex="-1" href="change-password.htm" class="Logout" title="Change Password">Change	Password</a></li>
+			        <li><a tabindex="-1" href="login.htm" class="Logout" title="Logout">Logout</a></li>
+                        
+                           
+                         </ul>                       
+				</li>
+			</ul>
+			<ng-include src="'partials/header.htm'"></ng-include>
+		</div>
+	</div>
+</nav>

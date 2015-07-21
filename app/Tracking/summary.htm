@@ -119,7 +119,7 @@
 				<span>Metrics</span>
 			</p>
 		</article>
-		<div class="row nopadding"
+		<!-- <div class="row nopadding"
 			ng-controller="businessImpactMatricesController">
 			<div class="contentPanel nopadding">
 				<div ng-if="isBusinessImpactViewable">
@@ -128,8 +128,8 @@
 						<div class="chart-textNote">{{title}}</div>
 						<div class="chart-textNote pull-right">As of Thursday,
 							November13, 2014</div>
-						<!-- <p class="widget-title pull-right">As of {{currentDate |
-							date:'EEEE'}}, {{currentDate | date:'dd MMM yyyy'}}</p> -->
+						<p class="widget-title pull-right">As of {{currentDate |
+							date:'EEEE'}}, {{currentDate | date:'dd MMM yyyy'}}</p>
 					</div>
 					<h2 class="block-title">Business Impact</h2>
 					<a href="javascript:;" class="pull-right filter-option-menu"> </a>
@@ -167,7 +167,7 @@
 									<p
 										ng-if="data.subgroupName !='Revenue' && data.subgroupName !='Cost of Acqusition' && data.subgroupName!='ARPU'"
 										class='widget-text'>(Number of users)</p>
-									<!-- <p class="duration">Week To Date Actual</p> -->
+									<p class="duration">Week To Date Actual</p>
 									<p class="value1">
 										<span>{{data.forecast.value | number}}</span>
 									</p>
@@ -187,7 +187,7 @@
 					</li>
 				</ul>
 			</div>
-		</div>
+		</div> -->
 
 		<div class="row nopadding"
 			ng-controller="engagementActivityMatricesController">

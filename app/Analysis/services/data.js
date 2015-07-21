@@ -1,6 +1,6 @@
 angular.module('Analysis')
 
-.service("DataService",function(NetworkService) {
+.service("DataService",function(RequestConstantsFactory, DataConversionService, NetworkService, StorageService, $rootScope, $q, $timeout, UtilitiesService ) {
 	/*------------------ Generic ----------------------*/
 	function sendRequest(cacheKey, cacheName, success, requestWS) {
 		try {
@@ -118,5 +118,103 @@ angular.module('Analysis')
 		requestWS();
 		
 	};
+	
+	
+	this.getTrackSummaryDataBI = function(reqData, success, fail) {
+
+		var cacheKey = "BIM" + JSON.stringify(reqData);
+		var requestWS = postRequestWS(
+				//RequestConstantsFactory['TRAC_URL'].GET_SUMMARY, 
+				RequestConstantsFactory['TRAC_URL'].GET_FAKE_BI_SUMMARY,
+				reqData,
+				success, 
+				fail,
+				function(result) {
+					console.log("BI Result:", result)
+					var cData = DataConversionService.toGetTrackSummaryDataBI(result);
+						StorageService.put(cacheKey, cData, StorageService.getCache("business-impactCache"));
+					return cData;
+				}
+		);
+		sendRequest(cacheKey, "business-impactCache", success, requestWS);
+	};
+
+	this.getBusinessImpactTrendData = function(reqData, success, fail) {
+		console.log("reqData:", reqData)
+		var cacheKey = "BITrend" + JSON.stringify(reqData);
+		
+		var requestWS = postRequestWS(
+				RequestConstantsFactory['TRAC_URL'].GET_BI_DATE_BY_TIME +"/"+reqData.groupBy, 
+				reqData,
+				success, 
+				fail,
+				function(result) {
+					var cData = DataConversionService.toBusinessImpactTrend(result);
+					StorageService.put(cacheKey, cData, StorageService.getCache("business-impactCache"));
+					return cData;
+				}
+		);
+		sendRequest(cacheKey, "business-impactCache", success, requestWS);
+	};
+
+	this.getBusinessImpactDeepDiveTableData = function(reqData, success, fail) {
+		var cacheKey = "BID" + JSON.stringify(reqData);
+		var defered = $q.defer();
+		var converted = false;
+		var cacheKey = "BIM" + JSON.stringify(reqData);
+		var requestWS = postRequestWS(
+				RequestConstantsFactory['TRAC_URL'].GET_BI_DATA_USER, 
+				reqData,
+				success, 
+				fail,
+				function(result) {
+					cData = DataConversionService.toGetBusinessImpactDeepDiveTableData(result);
+					StorageService.put(cacheKey, cData, StorageService.getCache("business-impactCache"));
+					return cData;
+				}
+		);
+		sendRequest(cacheKey, "business-impactCache", success, requestWS);
+	};
+		
+	
+	this.getUserSettings = function(groupBy, success, fail) {
+		var reqData = {
+				"mode":"free",
+		};
+		reqData["groupBy"] = groupBy;
+		//not using request as key on purpose
+		var cacheKey = groupBy + "userSettings";
+		console.log("rsrsrs:", reqData)
+		var requestWS = postRequestWS(
+				RequestConstantsFactory['TRAC_URL'].GET_USER_SETTINGS +"/"+groupBy, 
+				reqData,
+				success, 
+				fail,
+				function(result) {
+					console.log("rrrrrrrr:", result)
+					var cData = result;
+					StorageService.put(cacheKey, cData, StorageService.getCache("user-settingsCache"));
+					return cData;
+				}
+		);
+		sendRequest(cacheKey, "user-settingsCache", success, requestWS);
+	}
+
+	this.saveUserSettings = function(groupBy, data, success,fail) {
+		var cacheKey = groupBy + "userSettings";
+		//clear out the cache on save. so that data get updated on reload
+		StorageService.remove(cacheKey, StorageService.getCache("user-settingsCache"));
+		NetworkService.post(RequestConstantsFactory['TRAC_URL'].POST_USER_SETTINGS, data).then(function(result) {
+			success(result);
+		}, function(response) {
+			if(fail instanceof Function) {
+		    	fail(response);
+            }
+		});
+	}
+	
+	
+	
+	
 
 });

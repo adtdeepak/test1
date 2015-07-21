@@ -22,7 +22,7 @@
 			"heading":"Build Decision Options",
 			"reviewPanelHeading":"Review Panel",
 			"reviewPanelTableHeadingCol_1":"DO No.",
-			"reviewPanelTableHeadingCol_2":"Conversion Uplift / New Subs",=
+			"reviewPanelTableHeadingCol_2":"Conversion Uplift / New Subs",
 			"removeSelectionBtn":"Remove Selectiom",
 			"reviewPanelBtn":"Save & View Review Panel",
 			"label":"Decision Options"
@@ -35,5 +35,9 @@
 			"acronymLabel":"Decision Option",
 			"acronym":"DO"
 		}
+	},
+	"analysis":{
+		"tabName":"Analysis",
+		"htmName":"analysis"
 	}
 }

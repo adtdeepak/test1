@@ -64,11 +64,8 @@ angular.module('AnalyticsApp')
 })
 
 .controller('dwLinkController', function($scope, $window) {
-	
-	$scope.dwUrlClicked = function(decisionWorkbenchHtmlName){
-		$window.location=decisionWorkbenchHtmlName +".htm";
-	}
-	$scope.trackUrlClicked = function(trackingHtmlName){
-		$window.location=trackingHtmlName +".htm";
+	$scope.navModuleClicked = function(htmlName){
+		if(htmlName != $scope.mainHtml)
+			$window.location=htmlName +".htm";
 	}
 })

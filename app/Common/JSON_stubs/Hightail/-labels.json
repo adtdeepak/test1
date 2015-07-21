@@ -35,5 +35,9 @@
 			"acronymLabel":"Campaign Option",
 			"acronym":"CO"
 		}
+	},
+	"analysis":{
+		"tabName":"Analysis",
+		"htmName":"analysis"
 	}
 }
