@@ -26,6 +26,25 @@ angular.module('Analysis')
 		return resultData;
 	};
 	
+	this.toGetTrackSummaryDataBI = function(data){
+		var _data = {};
+		// method call to get individual widgets permission
+		var permission = Permission.getBusinessImpactWidgetsPermissions();
+		$.each(data.timeRanges, function(key, timeRange) {
+			var timeRangeData = [];
+			$.each(timeRange.data, function(index, eachData) {
+				//checking for individual widgets permission and pushing it into array 
+				/*if(permission[eachData.subGroupBy]){
+					console.log("1")
+					timeRangeData.push(eachData)
+				}*/
+				timeRangeData.push(eachData);
+			});
+			_data[timeRange.periodName] = timeRangeData;
+		});
+		return _data;
+	}
+
 	this.toBusinessImpactTrend = function(data) {
 		var resultData = {};
 		$.each(data.timeRanges, function(key, timeRange) {
@@ -75,8 +94,8 @@ angular.module('Analysis')
 		});
 		return resultData;
 
-	};
-	
+	}
+
 	this.toGetBusinessImpactDeepDiveTableData = function(data){
 		var resultData = {};
 		$.each(data.timeRanges, function(key, timeRange){
