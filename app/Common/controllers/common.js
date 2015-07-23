@@ -64,8 +64,9 @@ angular.module('AnalyticsApp')
 })
 
 .controller('dwLinkController', function($scope, $window) {
-	$scope.navModuleClicked = function(htmlName){
-		if(htmlName != $scope.mainHtml)
-			$window.location=htmlName +".htm";
+	$scope.navModuleClicked = function(htmlName, pageName){
+		if(htmlName != $scope.mainHtml){
+			$window.location=htmlName +".htm" + pageName;
+		}
 	}
 })

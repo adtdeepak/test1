@@ -8005,14 +8005,14 @@ div#progressBar {
 .color-blue{
 	color:#3EA8DC;
 }
-.navbar{
+/* .navbar{
   border: 0px solid transparent;
-}
-.navbar-inverse{
+} */
+/* .navbar-inverse{
   background: #686868;
   font-size:15px;
   font-weight:600;
-}
+} */
 .navbar-inverse .navbar-nav>.active>a{
   border-bottom: 0px solid #f6f6f6;
  /*  background: url(images/triangle.png) no-repeat; */
