@@ -526,6 +526,45 @@ this.getColumnChartWithoutPercentage = function(data, title, subtitle){
 		
 	};
 	
+	this.getBasicLineChart = function(data, title, subtitle){
+		
+		return {
+	        title: {
+	            text: title
+	        },
+	        subtitle: {
+	            text: subtitle,
+	            x: -20
+	        },
+	        xAxis: {
+	            categories: data.categories
+	        },
+	        yAxis: {
+	            title: {
+	                text: 'Mn'
+	            },
+	            min:100,
+	            max:115,
+	            plotLines: [{
+	                value: 0,
+	                width: 1,
+	                color: '#808080'
+	            }]
+	        },
+	        tooltip: {
+	            valueSuffix: '°C'
+	        },
+	        legend: {
+	            layout: 'vertical',
+	            align: 'right',
+	            verticalAlign: 'middle',
+	            borderWidth: 0
+	        },
+	        series: data.data
+		}
+		
+	};
+	
 	this.getBusinessImpactTrend = function() {	
 		return {	
 			chart:{

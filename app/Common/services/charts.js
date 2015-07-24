@@ -233,6 +233,27 @@ angular.module('AnalyticsApp')
 		
 	};
 	
+	this.basicLine = function(chartOptions, scope){
+		var container = this[0];
+		var $defaults ={
+	            chart: {
+					renderTo:container,
+					type: 'area'
+	            },
+				credits: {
+					enabled:false
+				},
+	            title: {
+	                text: ''
+	            }
+		};
+
+		$.extend(true, $defaults, chartOptions);
+		var _chart = new Highcharts.Chart($defaults);
+		return _chart;
+		
+	};
+	
 	this.combinedStackedBarLine = function(data, chartOptions, scope) {
 		if(data.plotBand){
 			var from = data.plotBand[0][0];

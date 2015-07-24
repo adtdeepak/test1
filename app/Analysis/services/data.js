@@ -213,8 +213,44 @@ angular.module('Analysis')
 		});
 	}
 	
+	this.getSegmentationOverviewData = function(reqData, success, fail) {
+		var requestWS = postRequestWS(
+				'http://jsonstub.com/analysis/subs/segmentation/overview', 
+				reqData,
+				success, 
+				fail,
+				function(result) {
+					return result;
+				}
+		);
+		requestWS();
+	};
 	
+	this.getSegmentationProfileData = function(reqData, success, fail) {
+		var requestWS = postRequestWS(
+				'http://jsonstub.com/analysis/subs/segmentation/profile', 
+				reqData,
+				success, 
+				fail,
+				function(result) {
+					return result;
+				}
+		);
+		requestWS();
+	};
 	
+	this.getSegmentationEngagementData = function(reqData, success, fail) {
+		var requestWS = postRequestWS(
+				'http://jsonstub.com/analysis/subs/segmentation/engagement', 
+				reqData,
+				success, 
+				fail,
+				function(result) {
+					return result;
+				}
+		);
+		requestWS();
+	};
 	
 
 });
