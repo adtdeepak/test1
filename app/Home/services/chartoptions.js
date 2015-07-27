@@ -66,5 +66,55 @@ angular.module('Home')
 	        },
 	        loading: false
 	    };
-	}
+	};
+	
+	this.getTrackSummaryAcqTrend = function(data) {
+
+		return {
+			chart:{
+				spacingRight : 100,
+				spacingLeft : 15,
+				spacingTop : 30
+			},
+			legend: {
+				align: "right",
+				symbolPadding:20,
+				layout: "vertical",
+				itemMarginTop:20,
+				itemMarginBottom:15,
+				//padding: 50,
+				verticalAlign: 'middle',
+				itemStyle: {
+					color: '#000000',
+					font: '10pt Carrois Gothic, sans-serif'
+				},
+				//fill:'none',
+				itemWidth: 100,
+				symbolWidth: 20,
+				symbolHeight:18,
+				height: 250	,
+				y:1,
+				x:-50
+			},
+
+	        navigation: {
+	            buttonOptions: {
+                    symbolFill:'#32CABB',
+                    x: 80,
+                    y:-32,
+	                theme: {
+	                    states: {
+	                        hover: {
+	                            fill: '#FFFFFF'
+	                        },
+	                        select: {
+	                            stroke: '#039',
+	                            fill: '#FFFFFF'
+	                        }
+	                    }
+	                }
+	            }
+	        }
+		};
+	};	
 })
