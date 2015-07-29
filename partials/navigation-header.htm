@@ -20,20 +20,26 @@
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#"> {{decisionWorkbenchTab}}
 					 <span class="caret"></span></a>
 					<ul class="dropdown-menu" ng-controller="dwLinkController">
-						<li class="first" ng-click="navModuleClicked(decisionWorkbenchHtmlName, '#/index')"><a ng-if="isSetGoalsEditable"
+						<!-- <li class="first" ng-click="navModuleClicked(decisionWorkbenchHtmlName, '#/index')"><a ng-if="isSetGoalsEditable"
 							href="#/index" ng-class="{active: thisPage=='/index'||thisPage=='/builddo'}">
 							{{dw_index_tabText}}</a></li>
 						<li ng-click="navModuleClicked(decisionWorkbenchHtmlName, '#/review-do')"> <a ng-if="isReviewDOViewable" href="#/review-do"
 							ng-class="{active: thisPage=='/review-do'}">
-							{{dw_reviewdo_tabText}}</a></li>
+							{{dw_reviewdo_tabText}}</a></li> -->
+							<li class="first" ng-click="navModuleClicked(decisionWorkbenchHtmlName, '#/overview')"><a href="#/overview">
+							Overview</a></li>
+							<li ng-click="navModuleClicked(decisionWorkbenchHtmlName, '#/wishlist')"><a href="#/wishlist">
+							Wishlist</a></li>
+							<li ng-click="navModuleClicked(decisionWorkbenchHtmlName, '#/selected')"><a href="#/selected">
+							Selected</a></li>
 					</ul></li>
                  	<li class="dropdown" ng-class="{active: mainHtml=='dashboard'|| mainHtml=='tracking'}">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
 					{{home_track_text}}
 					<span class="caret"></span></a>
 					<ul class="dropdown-menu" ng-controller="dwLinkController">
-						<li class="first" ng-click="navModuleClicked(trackingHtmlName, '#/summary')"><a href="#/summary"
-							ng-class="{active: thisPage=='/summary'}">Summary</a></li>
+						<!-- <li class="first" ng-click="navModuleClicked(trackingHtmlName, '#/summary')"><a href="#/summary"
+							ng-class="{active: thisPage=='/summary'}">Summary</a></li> -->
 						<!-- <li><a ng-if="isBusinessImpactTabVisible"
 							href="#/business-impact"
 							ng-class="{active: thisPage=='/business-impact'}">Business

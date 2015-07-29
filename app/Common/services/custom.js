@@ -14,7 +14,6 @@ angular.module('AnalyticsApp')
 
 		window.scrollTo(0,0);
 		$('[rel]').on('click', function() {
-			console.log("ss")
 			var tab = $(this);
 			var tabId = tab.attr('rel');
 			tab.addClass('active').siblings().removeClass('active');

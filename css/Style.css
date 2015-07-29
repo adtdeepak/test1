@@ -908,11 +908,64 @@ h1.pull-left {
 	border-bottom-right-radius: 5px;
 }
 
+
 .headingPanel {
 	margin-bottom: 10px;
 	display: block;
 	overflow: hidden;
 }
+
+#timePeriodTabs {
+  font-size: 13px;
+  float: left;
+  margin-right: 15px;
+}
+
+#timePeriodTabs ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+#timePeriodTabs ul li {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	background: #ffffff;
+	text-align: center !important;
+	list-style: none;
+	padding: 2px 10px 2px 10px;
+	margin-left: 13px;
+	font-size: 13px;
+    border: 1px solid grey;
+    border-radius: 5px;
+	color: #525252;
+	font-weight: 600;
+}
+
+#timePeriodTabs ul li a {
+	color: #525252;
+	text-decoration: none;
+	text-align: center !important;
+	font-size: 13px;
+	line-height: 21px;
+	display: inline-block;
+}
+
+#timePeriodTabs ul li.active {
+	text-decoration: none;
+	text-align: center !important;
+	font-size: 13px;
+	font-weight: 600;
+	border-right: none;
+	background: #555555;
+}
+
+#timePeriodTabs ul li.active a {
+	color: #fff !important;
+}
+
+
+
 
 .title {
 	float: left;
@@ -8419,6 +8472,13 @@ div#progressBar {
 	border: 1px solid #ffffff;
 }
 
+#campaign-overview .collapseDiv {
+	background: #666666;
+	color: #ffffff;
+	padding:7px;
+	border: 1px solid #ffffff;
+}
+
 .noMarginBtm{
 	margin-bottom:0px !important;
 }
@@ -8476,6 +8536,14 @@ div#progressBar {
   color: #fff;
   font-weight: 400;
   padding: 3px 10px;
+}
+
+#campaign-overview table thead tr th{
+	background: #3EA8DC;
+	color: #ffffff;
+}
+#campaign-overview table tbody tr td{
+	font-size:15px;
 }
 /* media query */
 @media (min-width: 320px) {

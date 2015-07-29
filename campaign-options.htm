@@ -50,7 +50,7 @@
 						<li class="active"><a class="freeMode" href="#" ng-click="enable?userModeSelected('freemium'):''">Freemium</a></li>
 					</ul>
 				</div> -->
-				<div id="exportIconsPanel" ng-if="thisPage!='/builddo'">
+				<div id="exportIconsPanel" ng-if="thisPage!='/builddo'" style="background: #ffffff !important;">
 					<ul>
 						<li title="Print" class="Printicon">&nbsp;</li>
 						<li class="iconExport export">
@@ -76,9 +76,9 @@
 						</li>
 					</ul>
 				</div>
-				<div id="timePeriodPanel" ng-if="thisPage!='/builddo'">
+				<div id="timePeriodTabs" ng-if="thisPage!='/builddo'">
 					<ul>
-						<li ng-class="{'active': selectedIndex[0].selected}"><a
+						<li><a
 							class="" href="#" ng-click="broadcastPeriodChange('weekly',0)">Weekly</a></li>
 						<li ng-class="{'active': selectedIndex[1].selected}"><a
 							class="" href="#" ng-click="broadcastPeriodChange('monthly',1)">Monthly</a></li>
@@ -221,6 +221,7 @@
 	<script src="app/DecisionWorkbench/controllers/index.js"></script>
 	<script src="app/DecisionWorkbench/controllers/builddo.js"></script>
 	<script src="app/DecisionWorkbench/controllers/review-do.js"></script>
+	<script src="app/DecisionWorkbench/controllers/overview.js"></script>
 
 	<!-- Decision workbench Services -->
 	<script src="app/DecisionWorkbench/services/data.js"></script>
