@@ -631,6 +631,7 @@ angular
 						}
 					};
 					$.extend(true, $scope.options, columOptions);
+					console.log("$scope.options:", $scope.options)
 					$scope.fail = function(msg) {
 						$scope.error = true;
 						$scope.hasErrorMsg = true;

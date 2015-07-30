@@ -288,4 +288,93 @@ this.getSetGoalsData = function(data) {
 		}
 	};
 	
+	this.getProfilePieChart = function(data, title, subtitle, height){
+		return {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie',
+                height:height
+            },
+            title: {
+                text: title,
+	            align:'center',
+	            style: {
+	                color: '#686868',
+	                fontWeight: 'bold'
+	            }
+            },
+            subtitle: {
+            	text:subtitle,
+	            align:'center',
+	            style: {
+	                color: '#686868',
+	                fontWeight: 'bold'
+	            }
+            },
+            legend: {
+                itemMarginTop: 10
+          },
+            tooltip: {
+                pointFormat: '<b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: false
+                    },
+                    showInLegend: true
+                }
+            },
+            series: [{
+                name: "",
+                colorByPoint: true,
+                data: data
+            }]
+		}
+	};
+	
+this.getOverviewColumnChart = function(data, title, subtitle){
+		
+		return {
+	        chart: {
+	            type: 'column',
+                height:300
+	        },
+	        title: {
+	            text: title,
+	            align:'left',
+	            style: {
+	                color: '#686868',
+	                fontWeight: 'bold'
+	            }
+	        },
+	        tooltip: {
+	            valueSuffix: '%'
+	        },
+	        subtitle: {
+	            text: subtitle,
+	            align:'center',
+	            style: {
+	                color: '#686868',
+	                fontWeight: 'bold'
+	            }
+	        },legend : {
+				enabled : false
+			},
+	        xAxis: {
+	        	//x-axis data
+	            categories: data.xAxisData,
+	            title: {
+	                text: null
+	            }
+	        },
+	        series: data.data
+		}
+		
+	};
+	
 });

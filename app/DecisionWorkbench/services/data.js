@@ -1621,5 +1621,20 @@ angular.module('DecisionWorkbench')
 		sendRequest(cacheKey, "decision-workbench-builddoCache", success, requestWS);
 
 	};
+	
+	this.getAllUserData = function(reqData, success, fail) {
+		var requestWS = postRequestWS(
+				'http://jsonstub.com/campaign-options/overview', 
+				reqData,
+				success, 
+				fail,
+				function(result) {
+					return result;
+				}
+		);
+		requestWS();
+		//sendRequest(cacheKey, "summaryCache", success, requestWS);
+		
+	};
 
 })

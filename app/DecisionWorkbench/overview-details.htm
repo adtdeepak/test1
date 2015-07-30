@@ -1,0 +1,81 @@
+<head>
+     <title>D-ASSIST $ CONVERTER</title>
+	<link rel="shortcut icon" href="images/logo.ico"/>
+</head>
+
+<div class="container campaign-overview" ng-cloak style="padding-top: 80px;">
+	<div class="row" ng-controller="overviewDetailsController">
+		<div class="row-fluid">
+			<div class="collapseDiv">
+				<div class="panel-heading"> Best Campaign Options for job seekers
+					<div class="pull-right xclose expandclose"></div>
+				</div>
+			</div>
+			<div class="collapse in">
+				<table class="table borderless smSubsTable noMarginBtm accordionTable1" my-table  options="options" table-data="updateExpandData">
+					<colgroup>
+						<col width="10%">
+						<col width="20%">
+						<col width="25%">
+						<col width="25%">
+						<col width="10%">
+						<col width="10%">
+					</colgroup>
+					<thead>
+				      <tr>
+				        <th>S.No</th>
+				        <th>User Group</th>
+				        <th>Campaign Description</th>
+				        <th>Impact</th>
+				        <th>Wishlist</th>
+				        <th>Execute</th>
+				      </tr>
+				    </thead>
+				</table>
+			</div>
+		</div>
+		<div class="row nopadding">
+			<div class="heading-overview">Incremental Impact</div>
+			<div class="row brdr-dashed">
+				<div class="col-sm-4 col-md-4 col-lg-4">
+					<div class="acqChart" id="conversionChart"></div>
+				</div>
+				<div class="col-sm-4 col-md-4 col-lg-4">
+					<div class="acqChart" id="convertedUserChart"></div>
+				</div>
+				<div class="col-sm-4 col-md-4 col-lg-4">
+					<div class="acqChart" id="revenueChart"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+		$(document).ready(function(){
+			$(".xclose").click(function(){
+				window.temp = $(this);
+				$(this).toggleClass("expandclose");
+				$(this).parents().closest('.collapseDiv').next().collapse('toggle');
+			});
+			
+			$(".dropdown-menu li a").click(function(){
+			      $(this).parents().closest('.btn-group').find(".btn:first-child").text($(this).text());
+			      $(this).parents().closest('.btn-group').find(".btn:first-child").val($(this).text());
+
+			});
+			
+			$(function () {
+			    $('#graph').highcharts({
+			        chart: {
+			            type: 'line'
+			        },
+			        series: [{
+			            name: 'Tokyo',
+			            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+			        }]
+			    });
+			});
+
+		});
+</script>

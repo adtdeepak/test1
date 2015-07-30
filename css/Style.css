@@ -7920,6 +7920,11 @@ div#progressBar {
 	padding-bottom:4px;
 }
 
+.brdr-dashed{
+	border: 1px solid grey;
+	border-style: dashed;
+	border-radius: 7px;
+}
 .half-width{
 	width: 50%;
 	float: left;
@@ -8472,7 +8477,7 @@ div#progressBar {
 	border: 1px solid #ffffff;
 }
 
-#campaign-overview .collapseDiv {
+.campaign-overview .collapseDiv {
 	background: #666666;
 	color: #ffffff;
 	padding:7px;
@@ -8538,12 +8543,19 @@ div#progressBar {
   padding: 3px 10px;
 }
 
-#campaign-overview table thead tr th{
-	background: #3EA8DC;
+.campaign-overview table thead tr th{
+	background: #3EA8DC !important;
 	color: #ffffff;
 }
-#campaign-overview table tbody tr td{
+.campaign-overview table tbody tr td{
 	font-size:15px;
+}
+
+.heading-overview {
+	font-style: italic;
+	font-weight: 600;
+	color: #999999;
+	margin-bottom: 10px;
 }
 /* media query */
 @media (min-width: 320px) {

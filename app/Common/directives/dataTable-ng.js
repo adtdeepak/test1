@@ -1,6 +1,6 @@
 angular.module('AnalyticsApp')
 
-.directive('myTable', function ($compile, $timeout) {
+.directive('myTable', function ($compile, $timeout, $location) {
     console.log("in directive")
     return {
         restrict: 'E, A, C',
@@ -14,7 +14,7 @@ angular.module('AnalyticsApp')
             $(element).on('page.dt', function () {
                 $timeout(function () { $compile(element.contents())(scope); }, 10);
             });
-            
+
             $('.dataTableContainer').on('click', 'td.details-control', function () {
             	
                 var tr = $(this).closest('tr');
@@ -31,6 +31,27 @@ angular.module('AnalyticsApp')
                     tr.addClass('shown');
                 }
             } );
+            
+            $('.dataTableContainer').on('click', 'td.each-row-details', function () {
+            	scope.tableData($(this).attr('attr'));
+            });
+            
+            $('.dataTableContainer').on('click', 'td.row-expand-details', function () {
+                var tr = $(this).closest('tr');
+                var row = tableObj.row( tr );
+                if ( row.child.isShown() ) {
+                    // This row is already open - close it
+                    row.child.hide();
+                    tr.removeClass('shown');
+                }
+                else {
+                    // Open this row
+	                var rowCount = $('.accordionTable1').find('tr[role="row"]').index($(this).closest('tr'))-1;
+	                row.child(formatHtml()).show();
+	                scope.tableData();
+	                tr.addClass('shown');
+                }
+            });
             
             function handleModelUpdates(newData) {
                 scope.userData = scope.otherData;
@@ -87,6 +108,13 @@ angular.module('AnalyticsApp')
         		'</div>';
 
         	}
+            
+            function formatHtml() {
+        		// `d` is the original data object for the row
+        		return '<div class="tableAccOuterContainer" ng-controller="highController">'+
+        		'<h3>'+ 'Campaign data Highlights'+ '</h3>'+ 
+        		'</div>'
+        	};
            /* $timeout(function () { $compile(element.contents())(scope); }, 100);*/
         },
         scope: {
@@ -95,4 +123,8 @@ angular.module('AnalyticsApp')
             otherData: '='
         }
     };
-});
+})
+
+.controller('highController', function($scope){
+	console.log("highController")
+})
