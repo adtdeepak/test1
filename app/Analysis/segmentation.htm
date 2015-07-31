@@ -1,335 +1,388 @@
 <head>
-<title>D-ASSIST $ CONVERTER</title>
-<link rel="shortcut icon" href="images/logo.ico" />
-    
-
+     <title>D-ASSIST $ CONVERTER</title>
+	<link rel="shortcut icon" href="images/logo.ico"/>
 </head>
 
- 	
+
 <div class="container" id="analysis-cl">
-    
-     <div style="width:100%; padding:0px; border:1px solid #ccc; border-radius:4px;" class="col-md-6">
-            <div class="panel">
-              <ul id="myTab1" class="nav nav-tabs nav-justified">
-                <li class="active"><a class="analysis-tab-button" href="#overview" data-toggle="tab" ng-click="resizeWindow()">Database Overview</a></li>
-                <li><a class="analysis-tab-button" href="#profile" data-toggle="tab" ng-click="resizeWindow()">Demographic profile</a></li>
-                  <li><a class="analysis-tab-button"  href="#engagement" data-toggle="tab" ng-click="resizeWindow()">Engagement</a></li>
-                  <li><a class="analysis-tab-button" href="#retention" data-toggle="tab" ng-click="resizeWindow()">Retention</a></li>
-                <li class="dropdown">
-                  <a class="analysis-tab-button" href="#" id="myTabDrop1-1" class="dropdown-toggle" data-toggle="dropdown">Trends <b class="caret"></b></a>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
-                    <li><a href="#dropdown1-1" tabindex="-1" data-toggle="tab" ng-click="resizeWindow()">@fat</a></li>
-                    <li><a href="#dropdown1-2" tabindex="-1" data-toggle="tab" ng-click="resizeWindow()">@mdo</a></li>
-                  </ul>
-                </li>
-              </ul>
-              <div id="myTabContent" class="tab-content">
-                  <!--overview section start-->
-                <div class="tab-pane fade active in" id="overview">
-					<div class="row acquisition-panel nopadding no-border"
-						id="overview-div" ng-controller="segmentationOverviewController">
+    <div class="col-md-12">
+<ol style="margin-left:-30px;" class="breadcrumb">
+<li>
+<a style="color:#666;" href="home.htm">Home</a>
+</li>
+<li>
+<a style="color:#666;" href="segmentation.htm">Segmentation</a>
+</li>
 
-						<div class=" engagement-tab row nopadding">
-							<div class="col-sm-9 col-md-9 col-lg-9">
-								<div class="acqChart" id="subsAreaChart1"></div>
-							</div>
-							<div class="col-sm-3 col-md-3 col-lg-3">
-								<div class="acqChart" id="subsDonutChart1"></div>
+</ol>
+</div>
+       
+    <div class="filter">
+      <ul>
+          <li><a class="active-gray" href="#">All user</a></li>  
+          <li><a href="#">Project Managers</a></li>
+            <li><a href="">Photographars</a></li>
+            <li><a href="">Musichione</a></li>
+            <li><a href="">Finance Executive</a></li>
+            <li><a href="">User Group X</a></li>                 
+        </ul>    
+    </div>
+	<div class="row acquisition-panel nopadding" id="overview-div" style="margin-top:20px !important; background:#fff;" ng-controller="overviewController">
+        
+		<div class="row nopadding">
+				
+			<div class="half-width">
+				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
+                    <div class="acqChart" id="signupPieChart"></div>                    		
+				</div>
+				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
+					<div style="border:1px solid  #3ea8dc; margin-top:70px;" class="brdr-left ">
+						<div class="">
+							<div class="panel-heading" style="font-weight:600; background:#3ea8dc none repeat scroll 0 0; color: #fff; padding:5px; margin-bottom:10px;">Total User
 							</div>
 						</div>
-
-					</div>
-					<!--overview section end-->
-                    <!-- profile section start-->
-                </div>
-                <div class="tab-pane fade" id="profile">
-                 <div class="row acquisition-panel nopadding no-border" id="profile-div" ng-controller="segmentationProfileController">
-						<div class="row nopadding">
-							<div class="col-sm-4 col-md-4 col-lg-4">
-								<div class="acqChart" id="genderChartSeg"></div>
+						<div class="widget-content metric-widgets">
+							<div class="row-fluid">
+								<div class="actual-value"><span  style="color: #3ea8dc;">9 Million</span></div>
 							</div>
-							<div class="col-sm-4 col-md-4 col-lg-4">
-								<div class="acqChart" id="ageChartSeg"></div>
-							</div>
-							<div class="col-sm-4 col-md-4 col-lg-4">
-								<div class="acqChart" id="locationChartSeg"></div>
+							<div class="box-content-bottom">
+								<ul>
+									
+									<li class="up">+10% YoY</li>
+								</ul>
 							</div>
 						</div>
 					</div>
-                </div> <!-- profile section end-->
-                  
-                   <!-- engagement section start -->
-                  
-                <div class="tab-pane fade" id="engagement">
-                    <div class="row acquisition-panel nopadding no-border" id="engagement-div" ng-controller="segmentationEngagmentController">
-		<div class="panel panel-default">
-			<!--<div class="panel-heading">Engagement</div>-->
-		</div>
-		<div class="panel-heading brdr-btm-blue"><span>Active Vs Dormant</span></div>
-		<div class=" engagement-tab row nopadding">
-			<div class="col-sm-12 col-md-12 col-lg-12">
-				<div class="acqChart" id="engTrendChart"></div>
-			</div>
-		</div>
-		<div class="row nopadding bkgd-lightbrown">
-			<div class="panel-heading brdr-btm-blue"><span>Product Usage</span></div>
-			<div class="row-fluid">
-				<div class="half-white-box margin-right col-sm-6 col-md-6 col-lg-6">
-					<div class="acqChart" id="trendActBarChart"></div>
 				</div>
-				<div class="half-white-box margin-left col-sm-6 col-md-6 col-lg-6">
-					<div class="acqChart" id="trendSecBarChart"></div>
 				</div>
-			</div>
-		</div>
-		<div class="row nopadding bkgd-lightbrown" style="margin-top:10px !important;">
-			<div class="panel-heading brdr-btm-blue"><span>Login Trends</span></div>
-			<div class="row-fluid white-box-border">
-				<div class="col-sm-3 col-md-3 col-lg-3">
-					<div class="acqChart" id="loginBarChart1"></div>
-				</div>
-				<div class="col-sm-9 col-md-9 col-lg-9">
-					<div class="acqChart" id="loginDurationColChart"></div>
-				</div>
-			</div>
-		</div>
-		<div class="row nopadding bkgd-lightbrown" style="margin-top:10px !important;">
-			<div class="panel-heading brdr-btm-blue"><span>Adoption Trend</span></div>
-			<div style="margin-left:13px;">How many users have completed the set out activities</div>
-			<div class="row-fluid analysis-table">      
-			  <table class="table borderless clSubsTable">
-			    <thead>
-			      <tr class="table-gray-heading">
-			        <th></th>
-			        <th class="white-text">Onboarding</th>
-			        <th class="white-text">Basic</th>
-			        <th class="white-text">Advanced</th>
-			      </tr>
-			    </thead>
-			    <tbody>
-			      <tr class="table-bottom-border">
-			        <td><h3>Stage completion rate</h3><p>%age of users of overall who have completed the stage</p></td>
-			        <td><div class="box">{{adoptionTrendData.onBoarding.completionRate}}</div></td>
-			        <td><div class="box">{{adoptionTrendData.basic.completionRate}}</div></td>
-			        <td><div class="box">{{adoptionTrendData.advanced.completionRate}}</div></td>
-			      </tr>
-			      <tr class="table-bottom-border">
-			        <td><h3>No. of Subscribers in the Stage</h3><p>%age of users of overall who have completed the stage</p></td>
-			        <td><div class="highlightValue">{{adoptionTrendData.onBoarding.noOfSubscribers}}</div></td>
-			        <td><div class="highlightValue">{{adoptionTrendData.basic.noOfSubscribers}}</div></td>
-			        <td><div class="highlightValue">{{adoptionTrendData.advanced.noOfSubscribers}}</div></td>
-			      </tr>
-			      <tr>
-			        <td><h3>Trends</h3><p>%age of users of overall who have completed the stage</p></td>
-			        <td class="metric-widgets">
+			<div class="half-width">
+				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
+					<div style="border:1px solid  #1b6395; margin-top:70px;" class="brdr-left ">
+						<div class="">
+							<div class="panel-heading" style="font-weight:600;background: #1b6395  none repeat scroll 0 0; color: #fff; padding:5px; margin-bottom:10px;">Free User
+							</div>
+						</div>
+						<div class="widget-content metric-widgets">
+							<div class="row-fluid">
+								<div class="actual-value"><span style="color: #1b6395;">7.1 Million</span></div>
+							</div>
 							<div class="box-content-bottom">
 								<ul>
-									<li class="up">{{adoptionTrendData.onBoarding.vsLastWeek}} Vs Last week</li>
-									<li class="down">{{adoptionTrendData.onBoarding.yoY}} YoY</li>
+									
+									<li class="up">+13% YoY</li>
 								</ul>
 							</div>
-					</td>
-			        <td class="metric-widgets">
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
+					<div style="border:1px solid  #3ea8dc; margin-top:70px;" class="brdr-left ">
+						<div class="">
+							<div class="panel-heading" style="font-weight:600; background:#3ea8dc none repeat scroll 0 0; color: #fff; padding:5px; margin-bottom:10px;">Paid user
+							</div>
+						</div>
+						<div class="widget-content metric-widgets">
+							<div class="row-fluid">
+								<div class="actual-value"><span style="color: #3ea8dc;">1.9 Million</span></div>
+							</div>
 							<div class="box-content-bottom">
 								<ul>
-									<li class="up">{{adoptionTrendData.basic.vsLastWeek}} Vs Last week</li>
-									<li class="down">{{adoptionTrendData.basic.yoY}} YoY</li>
-								</ul>
-                                </div>
-					</td>
-			        <td class="metric-widgets">
-							<div class="box-content-bottom">
-								<ul>
-									<li class="up">{{adoptionTrendData.advanced.vsLastWeek}} Vs Last week</li>
-									<li class="down">{{adoptionTrendData.advanced.yoY}} YoY</li>
+									
+									<li class="up">+4% YoY</li>
 								</ul>
 							</div>
-					</td>
-			      </tr>
-			    </tbody>
-			  </table>
+						</div>
+					</div>
+				</div>
+				</div>
+		</div>
+		
+	</div>
+
+
+	<div   ng-controller="profileController">
+		<div style="border:1px solid #ccc; padding-bottom:15px !important;" class="row nopadding">
+				<div style="margin-bottom:15px;" class="panel panel-default">
+					<div class="panel-heading">Product profile</div>
+				</div>
+
+			<div class="full-width">
+				
+                <div class="col-xs-6">
+					<div style="background: #fff none repeat scroll 0 0;
+    border: 1px solid #ccc;" class="acqChart" id="accessDonutChart"></div>
+				</div>
+             
+			
+				<div  class="col-xs-6">
+					<div style="background: #fff none repeat scroll 0 0;
+    border: 1px solid #ccc;" class="acqChart" id="platformDonutChart"></div>
+				</div>
+				
 			</div>
 		</div>
-	</div>                    
-                </div>
-                  
-                  <!-- engagement section end-->
-                  
-                   <!-- retention section start-->
-                <div class="tab-pane fade" id="retention">
-                    <div class="row acquisition-panel nopadding no-border" id="retention-div" ng-controller="segmentationRetentionController">
+        
+        <div style="background:#fff; border:1px solid #ccc;" class="row nopadding">
 				<div class="panel panel-default">
-					<!--<div class="panel-heading">Retention Summary</div>-->
+					<div class="panel-heading">Demographic profile</div>
 				</div>
-				<div class="row nopadding">
-			<div class="half-width">
-				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
-					<div class="churn-box">
-						<div><h2 class="white-text big-fontSize" style="padding-top:30px;">Churn Rate</h2></div>
-						<div><h2 class="white-text big-fontSize">36%</h2></div>
-						<div><span ng-hide="true">.</span></div>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
-					<div class=" lightblue-border" >
-                        <div class="panel-heading lightblue-analysis-tab ng-binding" style="font-weight:600;">Low Risk</div>
-						<div><h2 class="titleLikeChart big-fontSize">36%</h2></div>
-						<div><span>% of total subscribers</span></div>
-						<div><h2 class="titleLikeChart big-fontSize">1,291,234</h2></div>
-						<div><span>Subscribers</span></div>
-					</div>
-				</div>
-				</div>
-			<div class="half-width">
-				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
-					<div class=" darkblue-border" >
-                        <div class="panel-heading darkblue-analysis-tab ng-binding" style="font-weight:600;">Medium Risk</div>
-						<div><h2 class="titleLikeChart big-fontSize">36%</h2></div>
-						<div><span>% of total subscribers</span></div>
-						<div><h2 class="titleLikeChart big-fontSize">1,291,234</h2></div>
-						<div><span>Subscribers</span></div>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
-					<div class=" lightblue-border" >
-                        <div class="panel-heading lightblue-analysis-tab ng-binding" style="font-weight:600;">High Risk</div>
-						<div><h2 class="titleLikeChart big-fontSize">36%</h2></div>
-						<div><span>% of total subscribers</span></div>
-						<div><h2 class="titleLikeChart big-fontSize">1,291,234</h2></div>
-						<div><span>Subscribers</span></div>
-					</div>
-				</div>
-				</div>
-		</div>
-			<div class="row nopadding" style="margin-top:10px !important">
-				<div class="col-sm-3 col-md-3 col-lg-3">
-					<div class="retention-widgets light-green-bg">
-						<div><h2 class="titleLikeChart">Dormant</h2></div>
-						<div><h2 class="titleLikeChart">64%</h2></div>
-					</div>
-					<div class="retention-widgets topMargin  light-green-bg">
-						<div><h2 class="titleLikeChart">Active</h2></div>
-						<div><h2 class="titleLikeChart">36%</h2></div>
-					</div>
-					<div class="retention-widgets topMargin  light-green-bg">
-						<div><h2 class="titleLikeChart ">Avg Lifetime</h2></div>
-						<div><h2 class="titleLikeChart">13 months</h2></div>
-					</div>
-					
-				</div>
-				<div class="col-sm-9 col-md-9 col-lg-9">
-					<div class="acqChart white-bg" id="cancelColChartRet"></div>
-				</div>
-			</div>
-		<div class="row nopadding">
-			<div class="panel-heading"><span>User Profile</span></div>
-			<div class="half-width bkgd-lightbrown">
-				<div class=" profile-tab col-sm-6 col-md-6 col-lg-6">
-					<div class="acqChart" id="genderPieChartRet"></div>
-				</div>
-				<div class=" profile-tab col-sm-6 col-md-6 col-lg-6">
-					<div class="acqChart" id="agePieChartRet"></div>
-				</div>
-			</div>
 
-			<div class="half-width bkgd-lightbrown">
-				<div class=" profile-tab col-sm-6 col-md-6 col-lg-6">
-					<div class="acqChart" id="locationPieChartRet"></div>
+			<div class="full-width">
+				
+                <div class="col-md-4">
+					<div class="acqChart" id="genderPieChart"></div>
 				</div>
-				<div class=" profile-tab col-sm-6 col-md-6 col-lg-6">
-					<div class="acqChart" id="signupPieChartRet"></div>
+                
+				<div class="col-md-4">
+					<div class="acqChart" id="agePieChart"></div>
 				</div>
-			</div>
-		</div>
-		<div class="row nopadding">
-		<div class="panel-heading"><span>Product Profile</span></div>
-			<div class="half-width half-left-div-border">
-				<div class="col-sm-6 col-md-6 col-lg-6">
-					<div class="acqChart" id="accessDonutChartRet"></div>
+			
+				<div  class="col-md-4">
+					<div class="acqChart" id="locationPieChart"></div>
 				</div>
-				<div class="col-sm-6 col-md-6 col-lg-6 square-full-box">
-				<h2 class="titleLikeChart">Product Plan</h2>
-				<h3 class="subtitle">% of all subscribers</h3>
-					<div>
-						<div class="row-fluid square-box">
-							<div class="col-sm-6 col-md-6 col-lg-6"
-									style="height: 100%; background: #149ae3;">
-									<h3>Basic</h3>
-									<span>35%</span>
-								</div>
-								<div class="col-sm-6 col-md-6 col-lg-6"
-									style="height: 100%; background: #3cabe6;">
-									<h3>Professional</h3>
-									<span>25%</span>
-								</div>
-							</div>
-							<div class="square-box">
-								<div class="col-sm-6 col-md-6 col-lg-6"
-									style="height: 100%; background: #67bcea;">
-									<h3>Professional Plus</h3>
-									<span>12%</span>
-								</div>
-								<div class="col-sm-6 col-md-6 col-lg-6"
-									style="height: 100%; background: #97cae6;">
-									<h3>Enterprise</h3>
-									<span>28%</span>
-								</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="half-width half-right-div-border">
-				<div class="col-sm-6 col-md-6 col-lg-6">
-					<div class="acqChart" id="loginBarChartRet"></div>
-				</div>
-				<div class="col-sm-6 col-md-6 col-lg-6">
-					<div class="acqChart" id="platformDonutChartRet"></div>
-				</div>
-			</div>
-		</div>
-		<div class="row nopadding" style="margin-top:10px !important;">
-			<div class="panel-heading"><span>Activity</span></div>
-			<div class="row-fluid">
-				<div class="half-white-box margin-right col-sm-6 col-md-6 col-lg-6">
-					<div class="acqChart" id="trendActBarChartRet"></div>
-				</div>
-				<div class="half-white-box margin-left col-sm-6 col-md-6 col-lg-6">
-					<div class="acqChart" id="trendSecBarChartRet"></div>
-				</div>
+				
 			</div>
 		</div>
 		
-		<div class="row nopadding " style="margin-top:10px !important;">
-			<div class="row-fluid">
-				<div class="half-white-box margin-right col-sm-6 col-md-6 col-lg-6">
-					<div class="acqChart" id="activeColChartRet"></div>
+
+
+	<div style="background:#fff; border:1px solid #ccc;" class="row acquisition-panel nopadding" id="engagement-div" ng-controller="engagmentController">
+		<div class="panel panel-default">
+			<div class="panel-heading">Product Usage</div>
+		</div>
+        
+        <div class="full-width">
+            <div class="col-md-4">
+					<div class="acqChart" id="loginBarChart1"></div>
 				</div>
-				<div class="half-white-box margin-left col-sm-6 col-md-6 col-lg-6">
-					<div class="acqChart" id="inactiveColChartRet"></div>
+				
+                <div class="col-md-4">
+					<div class="acqChart" id="subsDonutChart"></div>
+				</div>
+                
+				
+			
+				<div  class="col-md-4">
+					<div class="acqChart" id="accessDonutChart"></div>
+				</div>
+				
+			</div>
+		
+		
+		<div class="row nopadding ">
+			
+			<div class="row-fluid">
+				<div style="margin:15px 0px;" class="col-sm-6 col-md-6 col-lg-6">
+					<div style="border:1px solid #ccc;" class="acqChart" id="trendActBarChart"></div>
+				</div>
+				<div style="margin:15px 0px;" class="col-sm-6 col-md-6 col-lg-6">
+					<div style="border:1px solid #ccc;" class="acqChart" id="trendSecBarChart"></div>
 				</div>
 			</div>
+		</div>        
+    </div>
+        
+    <div class="row nopadding" style="background:#fff; border:1px solid #ccc;">
+		<div class="panel panel-default">
+			<div class="panel-heading">Engagement Behaviour</div>
 		</div>
-	</div>
-                    
-                </div>
-                   <!-- retention section end-->
-                  
-                <div class="tab-pane fade" id="dropdown1-1">
-                 <div class="row acquisition-panel nopadding" id="trends-div">
-				<div class="panel panel-default">
-					<div class="panel-heading">Trends</div>
+        <div style="background:#fff !important;" class="half-width">
+				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
+					<div style="border:1px solid  #3ea8dc; " class="brdr-left ">
+						<div class="">
+							<div class="panel-heading" style="font-weight:600; background:#3ea8dc none repeat scroll 0 0; color: #fff; padding:5px; margin-bottom:10px;">Total Revenue
+							</div>
+						</div>
+						<div class="widget-content metric-widgets">
+							<div class="row-fluid">
+								<div class="actual-value"><span  style="color: #3ea8dc;">129 Million</span></div>
+							</div>
+							<div class="box-content-bottom">
+								<ul>
+									
+									<li class="up">+2% YoY</li>
+								</ul>
+							</div>
+						</div>
+					</div>
 				</div>
-		<div class="row-fluid" style="height: 200px;">
+				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
+					<div style="border:1px solid  #3ea8dc;" class="brdr-left ">
+						<div class="">
+							<div class="panel-heading" style="font-weight:600; background:#3ea8dc none repeat scroll 0 0; color: #fff; padding:5px; margin-bottom:10px;">Paid User
+							</div>
+						</div>
+						<div class="widget-content metric-widgets">
+							<div class="row-fluid">
+								<div class="actual-value"><span  style="color: #3ea8dc;">1.9 Million</span></div>
+							</div>
+							<div class="box-content-bottom">
+								<ul>
+									
+									<li class="up">+4.2% YoY</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+			<div  style="background:#fff !important;" class="half-width">
+				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
+					<div style="border:1px solid  #1b6395; " class="brdr-left ">
+						<div class="">
+							<div class="panel-heading" style="font-weight:600;background: #1b6395  none repeat scroll 0 0; color: #fff; padding:5px; margin-bottom:10px;">Free to paid converstion
+							</div>
+						</div>
+						<div class="widget-content metric-widgets">
+							<div class="row-fluid">
+								<div class="actual-value"><span style="color: #1b6395;">4.2 %</span></div>
+							</div>
+							<div class="box-content-bottom">
+								<ul>
+									
+									<li class="up">+1.2% YoY</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
+					<div style="border:1px solid  #3ea8dc; " class="brdr-left ">
+						<div class="">
+							<div class="panel-heading" style="font-weight:600; background:#3ea8dc none repeat scroll 0 0; color: #fff; padding:5px; margin-bottom:10px;">Engagement score
+							</div>
+						</div>
+						<div class="widget-content metric-widgets">
+							<div class="row-fluid">
+								<div class="actual-value"><span style="color: #3ea8dc;">65</span></div>
+							</div>
+							<div class="box-content-bottom">
+								<ul>
+									
+									<li class="up">+1% YoY</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+	
+            <div class="row nopadding">
+			<div><div style="width:50%; float:left; padding: 25px 15px 15px 15px;"><h4 style="padding:0px; margin:0px;">Trends</h4></div><div style="width:50%; float:right; padding: 25px 15px 15px 15px">
+                    <div class="btn-group pull-right">
+					    <button class="btn bkgd-white" style="min-width: 200px; background:#fff; border:1px solid #ccc; text-align: left;color: #555555;">Total Revenue</button>
+					    <button style="background:#666;" class="btn dropdown-toggle bkgd-white" data-toggle="dropdown">
+					    <span class="caret"></span>
+					   </button>
+					 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="min-width: 224px;">
+					   <li><a tabindex="-1" href="#">Total Revenue</a></li>
+					   <li><a tabindex="-1" href="#">Paid user</a></li>
+					   <li><a tabindex="-1" href="#">Free to paid converstion</a></li>
+                         <li><a tabindex="-1" href="#">Engagement score</a></li>
+					 </ul>
+					</div> 
+                </div>
+                </div>
+			<div  class="col-sm-9 col-md-9 col-lg-9">
+					<div class="acqChart" id="subsAreaChart"></div>
+			</div>
+		</div>
+		</div>
+        
+       
+        	</div>
+        
+    
+    <div class="row nopadding">
+	<div class="row acquisition-panel nopadding" id="trends-div">
+				<div class="panel panel-default">
+					<div class="panel-heading">Campaign Calender</div>
+				</div>
+		<div class="row-fluid" style="padding:15px;">
+            <table class="table border smSubsTable noMarginBtm">
+					<colgroup>
+						<col width="5%">
+						<col width="15%">
+						<col width="20%">
+						<col width="15%">
+						<col width="15%">
+						<col width="10%">
+                        <col width="10%">
+						<col width="10%">
+					</colgroup>
+					<thead class="thead-blue">
+				      <tr>
+				        <th>S.No</th>
+				        <th>User Group</th>
+				        <th>Campaign Description</th>
+                        <th>Target users</th>
+                        <th>Response</th>
+				        <th>Impact</th>
+				        <th>Start Date</th>
+                        <th>End Date</th>
+				        
+				      </tr>
+				    </thead>
+					<tbody>
+						<tr class="blue-tablerow">
+							<td>1</td>
+							<td>Job Hobbers<br>ES between 0-35%</td>
+							<td>Nurturing (connecting with)</td>
+							<td>Increase engagement by 3%<br>New user to basic user</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="light-blue-tablerow">
+							<td>2</td>
+							<td>Job Hobbers<br>ES between 0-35%</td>
+							<td>Nurturing (connecting with)</td>
+							<td>Increase engagement by 3%<br>New user to basic user</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="blue-tablerow">
+							<td>3</td>
+							<td>Job Hobbers<br>ES between 0-35%</td>
+							<td>Nurturing (connecting with)</td>
+							<td>Increase engagement by 3%<br>New user to basic user</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr class="light-blue-tablerow">
+							<td>4</td>
+							<td>Job Hobbers<br>ES between 0-35%</td>
+							<td>Nurturing (connecting with)</td>
+							<td>Increase engagement by 3%<br>New user to basic user</td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+		</div>
+        </div>
+    </div>
+        
+    	
+		<div class="row nopadding">
+	<div class="row acquisition-panel nopadding" id="trends-div">
+				<div class="panel panel-default">
+					<div class="panel-heading">Custom Insights</div>
+				</div>
+		<div class="row-fluid" style="height: 200px; padding:15px;">
+            <textarea style="border:1px solid #ccc; width:100%" name="" rows="7"></textarea>
 		</div>
 	</div>
-                </div>
-                <div class="tab-pane fade" id="dropdown1-2">
-                  <p>Demo</p>
-                </div>
-              </div>
-            </div>
-          </div>
-    
 </div>
-<div ng-hide ng-controller="segmentationInitController"></div>
+	</div>
+	
+
+				
+			
+			
+			
+		
+		
+<div ng-hide ng-controller="customerLandscapeInitController"></div>
+
+
+ 	

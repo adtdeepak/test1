@@ -148,7 +148,7 @@ angular.module('Analysis')
 
 		//chart data and options for signup pie chart
 		chartData = DataConversionService.getPieChartData(profileData.data.pieData.signup);
-	    chartOptions = ChartOptionsService.getPieChart(chartData, "Signup Email", "As a % of total subscribers", 300);
+	    chartOptions = ChartOptionsService.getPieChart(chartData, "Paid users vs Free users", "", 300);
 		chartOBJ = chartsService.pieChart.call($('#signupPieChart'),chartOptions, $scope);
 		
 		//chart data and options for access mode pie chart
@@ -262,7 +262,7 @@ angular.module('Analysis')
 
 			//chart data and options for signup pie chart
 			chartData = DataConversionService.getPieChartData(retentionData.data.pieData.signup);
-		    chartOptions = ChartOptionsService.getPieChart(chartData, "Signup Email", "As a % of total subscribers", 300);
+		    chartOptions = ChartOptionsService.getPieChart(chartData, "Paid vs Free", "", 300);
 			chartOBJ = chartsService.pieChart.call($('#signupPieChartRet'),chartOptions, $scope);
 			
 			//chart data and options for access mode pie chart

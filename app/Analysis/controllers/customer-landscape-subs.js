@@ -79,27 +79,27 @@ angular.module('Analysis')
 		
 	    //chart data and options for age pie chart
 		chartData = DataConversionService.getPieChartData(profileData.data.pieData.age);
-	    chartOptions = ChartOptionsService.getPieChart(chartData, "Age", "As a % of total subscribers", 300);
+	    chartOptions = ChartOptionsService.getPieChart(chartData, "Age distribution", "%age of total user", 300);
 		chartOBJ = chartsService.pieChart.call($('#agePieChart'),chartOptions, $scope);
 		
 		//chart data and options for Location pie chart
 		chartData = DataConversionService.getPieChartData(profileData.data.pieData.location);
-	    chartOptions = ChartOptionsService.getPieChart(chartData, "Location", "As a % of total subscribers", 300);
+	    chartOptions = ChartOptionsService.getPieChart(chartData, "Location", "%age of total user", 300);
 		chartOBJ = chartsService.pieChart.call($('#locationPieChart'),chartOptions, $scope);
 
 		//chart data and options for signup pie chart
 		chartData = DataConversionService.getPieChartData(profileData.data.pieData.signup);
-	    chartOptions = ChartOptionsService.getPieChart(chartData, "Signup Email", "As a % of total subscribers", 300);
+	    chartOptions = ChartOptionsService.getPieChart(chartData, "Paid VS Free", "", 300);
 		chartOBJ = chartsService.pieChart.call($('#signupPieChart'),chartOptions, $scope);
 		
 		//chart data and options for access mode pie chart
 		chartData = DataConversionService.getPieChartData(profileData.data.pieData.accessMode);
-		chartOptions = ChartOptionsService.getProfilePieChart(chartData, "Mode of Aceess", "% of subscribers", 300);
+		chartOptions = ChartOptionsService.getProfilePieChart(chartData, "Product Plan", "No of subscribers", 300);
 		chartOBJ = chartsService.donutChart.call($('#accessDonutChart'),chartOptions, $scope);
 
 		//chart data and options for platform pie chart
 		chartData = DataConversionService.getPieChartData(profileData.data.pieData.platform);
-		chartOptions = ChartOptionsService.getProfilePieChart(chartData, "Platform", "% of subscribers", 300);
+		chartOptions = ChartOptionsService.getProfilePieChart(chartData, "Product Plan", "%age of Revenue", 300);
 		chartOBJ = chartsService.donutChart.call($('#platformDonutChart'),chartOptions, $scope);
 
 		//chart data and options for login bar chart
@@ -134,7 +134,7 @@ angular.module('Analysis')
 	    var chartDataObj = {};
 	    
 		chartData = DataConversionService.getPieChartData(engagementData.data.pieData.subscribers);
-	    chartOptions = ChartOptionsService.getProfilePieChart(chartData, "", "As a %age of all subscribers", 300);
+	    chartOptions = ChartOptionsService.getProfilePieChart(chartData, "Time Spend Online", "Avg time spend per login", 300);
 		chartOBJ = chartsService.donutChart.call($('#subsDonutChart'),chartOptions, $scope);
 		
 		chartData = DataConversionService.getHorizontalBarChartData(engagementData.data.trend.activeUsers);
@@ -142,11 +142,11 @@ angular.module('Analysis')
 		chartOBJ = chartsService.areaChart.call($('#subsAreaChart'),chartOptions, $scope);
 		 
 		chartData = DataConversionService.getHorizontalBarChartData(engagementData.data.trend.trendingActivities);
-	    chartOptions = ChartOptionsService.getTrendingBarChart(chartData, "Trending Activities", "Average, % times activity performed per login", 300, "#EE7E34");
+	    chartOptions = ChartOptionsService.getTrendingBarChart(chartData, "Trending Features", "", 300, "#EE7E34");
 		chartOBJ = chartsService.basicBar.call($('#trendActBarChart'),chartOptions, $scope);
 		
 		chartData = DataConversionService.getHorizontalBarChartData(engagementData.data.trend.trendingSections);
-	    chartOptions = ChartOptionsService.getTrendingBarChart(chartData, "Trending Sections", "Average, % times section visited per login", 300, "#5F5F84");
+	    chartOptions = ChartOptionsService.getTrendingBarChart(chartData, "Trending Activities", "", 300, "#5F5F84");
 		chartOBJ = chartsService.basicBar.call($('#trendSecBarChart'),chartOptions, $scope);
 		
 		chartData = DataConversionService.getHorizontalBarChartData(engagementData.data.trend.login);

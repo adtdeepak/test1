@@ -134,7 +134,7 @@ angular.module('Analysis')
 
 			//chart data and options for signup pie chart
 			chartData = DataConversionService.getPieChartData(retentionData.data.pieData.signup);
-		    chartOptions = ChartOptionsService.getPieChart(chartData, "Signup Email", "As a % of total subscribers", 300);
+		    chartOptions = ChartOptionsService.getPieChart(chartData, "Paid", "As a % of total subscribers", 300);
 			chartOBJ = chartsService.pieChart.call($('#signupPieChartRet'),chartOptions, $scope);
 			
 			//chart data and options for access mode pie chart
