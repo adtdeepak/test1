@@ -4,7 +4,7 @@ angular.module('DecisionWorkbench')
 
 	$scope.rowClicked = function(attribute){
 		console.log("clicked controller:", attribute);
-		window.location = "#/overview-details?"+attribute;
+		window.location = "#/overview-details?selectedGroup="+attribute;
 	}
 	
 	$scope.overallDataSuccess = function(response){
@@ -26,22 +26,24 @@ angular.module('DecisionWorkbench')
 			            // For example, adding data-* attributes to the cell
 			            $(this).attr('attr', "allUsers");
 			        });
-		    }
+		    },
+		    "bPaginate":false
 		};
 		$.extend(true, $scope.options, columOptions);
+		console.log("$scope.options:", $scope.options)
 	
 	
 	$scope.addData = function(data) {
 	    $rootScope.builddoLoad = true;
 		$scope.dataLoaded = true;
-			console.log("$scope.options:", $scope.options)
 		if (!data)
 			throw "noDataError";
 		try {
 			$scope.error = false;
 			$scope.options.aaData = [];
 			$.each(data, function(key, obj) {
-					$scope.options.aaData.push([obj.SNo, obj.description, obj.impact, obj.userGroup, , ]);
+					$scope.options.aaData.push([obj.SNo, obj.description, obj.impact, obj.userGroup, 
+					                           "<div class='wishlist-unselected'></div>" ,"<div class='execute-unselected'></div>" ]);
 				})
 		} catch (e) {
 			$scope.fail(errorConstants.DATA_ERR);

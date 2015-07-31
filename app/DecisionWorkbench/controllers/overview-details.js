@@ -1,13 +1,55 @@
 angular.module('DecisionWorkbench')
 
-.controller( "overviewDetailsController", function($scope, DataService, CustomService, ChartOptionsService, $rootScope, UtilitiesService, chartsService) {	
+.controller( "overviewDetailsController", function($scope, DataService, CustomService, ChartOptionsService, $rootScope, UtilitiesService, chartsService, $location) {	
+	
+	$scope.selectedGroup = [{"key":"allUsers","selected":false},{"key":"jobHoppers","selected": false},{"key":"studentGrade","selected": false},
+	                        {"key":"activeRecruitment","selected": false},{"key":"professionals","selected": false},{"key":"photographers","selected": false},
+	                        {"key":"videographers","selected": false}];
+
+	function getSelectedGroupFromUrl(){
+		var urlIndex = $location.search();
+		$.each($scope.selectedGroup, function(key, value){
+			$scope.selectedGroup[key].selected= false;
+			if($scope.selectedGroup[key].key == urlIndex.selectedGroup){
+				$scope.selectedGroup[key].selected= true;
+			}
+		})
+		
+	}
+	$scope.broadcastselectedGroup = function (selectedGroup, index) {
+		$.each($scope.selectedGroup, function(key, value){
+			$scope.selectedGroup[key].selected= false;
+			if(key == index){
+				$scope.selectedGroup[index].selected= true;
+			}
+		})
+	};
+	
+	$scope.expand = function(item)
+	{
+		console.log("ppppp")
+	    item.showfull = !item.showfull;
+	    for (var i = 0; i < $scope.campaignData.length; i++)
+	    {
+	        var currentItem = $scope.campaignData[i];
+	        if (currentItem != item)
+	        {
+	            currentItem .showfull = false;
+	        } 
+	    }
+	}
+	
+	
 	$scope.overallDataSuccess = function(response){
 		console.log("response:", response);
+		$scope.campaignData = response.data.allUsers;
 		$scope.addData(response.data.allUsers);
 		
-		
-		
-	    var xAxisData = [' ', ' '];
+	}
+	
+	$scope.updateExpandData = function(){
+		var chartOptions;
+		var chartData; var xAxisData = [' ', ' '];
 	    var data = [{
 	    	name: "Conversion",
 	    	data:[3],
@@ -22,7 +64,7 @@ angular.module('DecisionWorkbench')
 	    chartDataObj['data'] = data;
 	    
 	    chartOptions = ChartOptionsService.getOverviewColumnChart(chartDataObj, " ", "Increase in % Conversion", 300);
-		chartOBJ = chartsService.columnChart.call($('#conversionChart'),chartOptions, $scope);
+		chartOBJ = chartsService.columnChart.call($('.conversionChart'),chartOptions, $scope);
 		
 	  var data = [{
 	    	name: "Conversion",
@@ -38,7 +80,7 @@ angular.module('DecisionWorkbench')
 	    chartDataObj['data'] = data;
 	    
 	    chartOptions = ChartOptionsService.getOverviewColumnChart(chartDataObj, " ", "Increase in # of user converted", 300);
-		chartOBJ = chartsService.columnChart.call($('#convertedUserChart'),chartOptions, $scope);
+		chartOBJ = chartsService.columnChart.call($('.convertedUserChart'),chartOptions, $scope);
 		
 		 var data = [{
 		    	name: "Conversion",
@@ -54,41 +96,15 @@ angular.module('DecisionWorkbench')
 		    chartDataObj['data'] = data;
 		    
 		    chartOptions = ChartOptionsService.getOverviewColumnChart(chartDataObj, " ", "Increase in Revenue (LTV = $39)", 300);
-			chartOBJ = chartsService.columnChart.call($('#revenueChart'),chartOptions, $scope);
-		
-		
-		
-		
-		
-	}
-	
-	$scope.updateExpandData = function(){
-		var chartOptions;
-		var chartData;
-		//chart data and options for gender pie chart
-		chartData = [{
-			name: "Male",
-			y: 64,
-			color:"#308BCB"
-		}, {	
-			name: "Female",
-			y: 36,
-			color:"#ff9900"
-		}];
-		chartOptions = ChartOptionsService.getProfilePieChart(chartData, "Gender", "% of users Male/Female", 275);
-		chartOBJ = chartsService.pieChart.call($('#graph123'),chartOptions, $scope);
+			chartOBJ = chartsService.columnChart.call($('.revenueChart'),chartOptions, $scope);
 	}
 	$scope.options = UtilitiesService.getDataTableOptions();
 	var columOptions = {
-			"aoColumns" : [ {
+			"aoColumns" : [ null, null ,null, null,null, null,
+			{
 				"sClass" : "row-expand-details"
-			}, {
-				"sClass" : "row-expand-details"
-			}, {
-				"sClass" : "row-expand-details"
-			}, {
-				"sClass" : "row-expand-details"
-			},null, null]
+			}],
+			"bPaginate":false
 		};
 		$.extend(true, $scope.options, columOptions);
 	
@@ -96,20 +112,19 @@ angular.module('DecisionWorkbench')
 	$scope.addData = function(data) {
 	    $rootScope.builddoLoad = true;
 		$scope.dataLoaded = true;
-			console.log("$scope.options:", $scope.options)
 		if (!data)
 			throw "noDataError";
 		try {
 			$scope.error = false;
 			$scope.options.aaData = [];
 			$.each(data, function(key, obj) {
-					$scope.options.aaData.push([obj.SNo, obj.description, obj.impact, obj.userGroup, , ]);
+					$scope.options.aaData.push([obj.SNo, obj.description, obj.impact, obj.userGroup, 
+					     "<div class='wishlist-unselected'></div>" ,"<div class='execute-unselected'></div>","<div class='xclose'></div>"]);
 				})
 		} catch (e) {
 			$scope.fail(errorConstants.DATA_ERR);
 		}
 	};
-	
 	
 	function getAllUserTableData() {
 		var requestData = {};
@@ -125,7 +140,6 @@ angular.module('DecisionWorkbench')
 	
 	} 
 	getAllUserTableData();
+	getSelectedGroupFromUrl();
 })
 
-
-	

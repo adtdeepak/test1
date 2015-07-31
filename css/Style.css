@@ -8551,11 +8551,109 @@ div#progressBar {
 	font-size:15px;
 }
 
+.campaign-overview table tbody tr td:hover{
+	cursor:pointer
+}
 .heading-overview {
 	font-style: italic;
 	font-weight: 600;
 	color: #999999;
 	margin-bottom: 10px;
+}
+
+.overview-detail-tabs li{   
+	border: 1px solid grey;
+    height: 145px;
+    width: 12.5%;
+    margin: 8px;
+    display: inline-table;
+    padding: 0px;
+    background:#132D52;
+}
+
+.overview-detail-tabs li:hover {
+  background: #ffffff;
+}
+
+.overview-detail-tabs li.active .icon-widget-text{
+  background: #ffffff;
+}
+
+.overview-detail-tabs li.active {
+  background: #ffffff;
+  border: 2px solid #132D52;
+  border-radius: 5px;
+  height:155px;
+  width:12.5%;
+}
+
+.heading-groups-row{
+        padding: 12px 5px 12px 6px;
+    background: #3EA8DC;
+    color: #FFFFFD;
+    font-weight: 600;
+    margin-left: 1px;
+}
+
+.icon-widget{
+    background-repeat: no-repeat;
+    /* width: 92%; */
+    height: 118px;
+    background-position: 80% 119%;
+    background-size: 86% 100%;
+    margin-right: 10px;
+}
+.all-user-image {
+	background-image: url('../images/alluser-icon.png');
+}
+
+.job-hoppers-image {
+	background-image: url('../images/job-hopper-icon.png');
+}
+
+.grade-image {
+	background-image: url('../images/students-icon.png');
+}
+
+.recruitment-image {
+	background-image: url('../images/recruiter-icon.png');
+}
+
+.professionals-image {
+	background-image: url('../images/marketing-icon.png');
+}
+
+.photographers-image {
+	background-image: url('../images/photo-icon.png');
+}
+
+.videographers-image {
+	background-image: url('../images/video-icon.png');
+}
+
+.icon-widget-text{
+	    height: 65px;
+    background: #F7F7F7;
+    text-align: center;
+    padding-top: 13px;
+    padding-bottom:10px;
+}
+.wishlist-unselected {
+	background: url('../images/execute-icon.png');
+    height: 44px;
+    background-repeat: no-repeat;
+    background-position: 0px -39px;
+    margin-right: 50px;
+    margin-left: 15px;
+}
+
+.execute-unselected{
+	background: url('../images/execute-icon.png');
+    height: 44px;
+    background-repeat: no-repeat;
+    background-position: -36px -39px;
+    margin-right: 50px;
+    margin-left: 15px;
 }
 /* media query */
 @media (min-width: 320px) {

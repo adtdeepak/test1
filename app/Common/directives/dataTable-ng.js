@@ -36,21 +36,39 @@ angular.module('AnalyticsApp')
             	scope.tableData($(this).attr('attr'));
             });
             
+            var previous = "";var previousRow = -1;var previousRowCollapse="";
             $('.dataTableContainer').on('click', 'td.row-expand-details', function () {
+            	$(this).find('.xclose').addClass("expandclose");
+            	if(previousRowCollapse){
+            		previousRowCollapse.find('.xclose').removeClass("expandclose");
+            	}
                 var tr = $(this).closest('tr');
                 var row = tableObj.row( tr );
-                if ( row.child.isShown() ) {
-                    // This row is already open - close it
-                    row.child.hide();
-                    tr.removeClass('shown');
+                var currentRow = row[0][0];;
+                previousRowCollapse = $(this);
+                if(previous){
+                	previous.child.hide();
                 }
-                else {
-                    // Open this row
-	                var rowCount = $('.accordionTable1').find('tr[role="row"]').index($(this).closest('tr'))-1;
-	                row.child(formatHtml()).show();
-	                scope.tableData();
-	                tr.addClass('shown');
+                if(previousRow != currentRow){
+              	  if ( row.child.isShown() ) {
+                      // This row is already open - close it
+                      row.child.hide();
+                      tr.removeClass('shown');
+                  }
+                  else {
+                      // Open this row
+                    var rowCount = $('.accordionTable1').find('tr[role="row"]').index($(this).closest('tr'))-1;
+                    row.child(formatHtml()).show();
+                    scope.tableData();
+                    tr.addClass('shown');
+                    previousRow = currentRow;
+                  }
+                }else{
+                	previousRow = -1;
+                	previousRowCollapse="";
                 }
+                previous = row
+              
             });
             
             function handleModelUpdates(newData) {
@@ -113,7 +131,20 @@ angular.module('AnalyticsApp')
         		// `d` is the original data object for the row
         		return '<div class="tableAccOuterContainer" ng-controller="highController">'+
         		'<h3>'+ 'Campaign data Highlights'+ '</h3>'+ 
-        		'</div>'
+        		'<div class="row nopadding">'+
+    			'<div class="heading-overview">'+'Incremental Impact'+'</div>'+
+    			'<div class="row brdr-dashed">'+
+    			'<div class="col-sm-4 col-md-4 col-lg-4">'+
+    			'<div class="acqChart conversionChart"></div>'+
+    			'</div>'+
+    				'<div class="col-sm-4 col-md-4 col-lg-4">'+
+    					'<div class="acqChart convertedUserChart"></div>'+
+    				'</div>'+
+    				'<div class="col-sm-4 col-md-4 col-lg-4">'+
+    					'<div class="acqChart revenueChart"></div>'+
+    				'</div>'+
+    			'</div>'+
+    		'</div>'+'</div>'
         	};
            /* $timeout(function () { $compile(element.contents())(scope); }, 100);*/
         },

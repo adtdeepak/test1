@@ -6,22 +6,76 @@
     		"SNo":"1",
     		"userGroup":"Job Hobbers ES between 0-35%",
     		"description":"Nurturing (connecting with)",
-    		"impact":"Increase engagement by 3% New user to basic user"
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
     	},{
     		"SNo":"2",
     		"userGroup":"Job Hobbers ES between 0-35%",
     		"description":"Nurturing (connecting with)",
-    		"impact":"Increase engagement by 3% New user to basic user"
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
     	},{
     		"SNo":"3",
     		"userGroup":"Job Hobbers ES between 0-35%",
     		"description":"Nurturing (connecting with)",
-    		"impact":"Increase engagement by 3% New user to basic user"
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
     	},{
     		"SNo":"4",
     		"userGroup":"Job Hobbers ES between 0-35%",
     		"description":"Nurturing (connecting with)",
-    		"impact":"Increase engagement by 3% New user to basic user"
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	}],
+    	"jobHoppers":[{
+    		"SNo":"1",
+    		"userGroup":"Job Hobbers ES between 0-35%",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"2",
+    		"userGroup":"Job Hobbers ES between 0-35%",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"3",
+    		"userGroup":"Job Hobbers ES between 0-35%",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"4",
+    		"userGroup":"Job Hobbers ES between 0-35%",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	}],
+    	"photoGraphers":[{
+    		"SNo":"1",
+    		"userGroup":"Job Hobbers ES between 0-35%",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"2",
+    		"userGroup":"Job Hobbers ES between 0-35%",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"3",
+    		"userGroup":"Job Hobbers ES between 0-35%",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"4",
+    		"userGroup":"Job Hobbers ES between 0-35%",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
     	}]
         
     }
