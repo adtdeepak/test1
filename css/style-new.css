@@ -8008,7 +8008,7 @@ div#progressBar {
 }
 .navbar-inverse{
   background: #686868;
-  font-size:15px;
+  font-size:14px;
   font-weight:600;
 }
 .navbar-inverse .navbar-nav>.active>a{
@@ -8616,7 +8616,7 @@ div#progressBar {
 .filter{padding: 5px 0px;}
 .filter ul{list-style: none; padding: 0px; margin: 0px;}
 .filter ul li{ padding: 0px; margin: 0px; display: inline;}
-.filter ul li a{ padding: 5px 10px; background: #fff; border:1px solid #ccc; border-radius: 4px; color: #666; margin-right: 8px; font-size: 13px;}
+.filter ul li a{ padding: 4px 10px; background: #fff; border:1px solid #ccc; border-radius: 4px; color: #666; margin-right: 8px; font-size: 13px;}
 .active-gray{background: #666 !important; color:#fff  !important; }
 .filter ul li a:hover{background: #666; color:#fff;}
 .thead-blue{background:#3ea8dc; color:#fff;}

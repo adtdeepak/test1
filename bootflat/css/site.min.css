@@ -2310,7 +2310,7 @@ select.form-group-lg[multiple] .form-control, select.input-lg[multiple], textare
     font-weight: 400;
     line-height: 1.42857;
     margin-bottom: 0;
-    padding: 6px 12px;
+    padding: 4px 12px;
     text-align: center;
     vertical-align: middle;
     white-space: nowrap;
@@ -5254,7 +5254,7 @@ blockquote {
     border-color: #ccd1d9;
 }
 .btn-primary, .btn-primary.active, .btn-primary.disabled, .btn-primary:active, .btn-primary[disabled] {
-    background-color: #3bafda;
+    background-color: #3EA8DC;
     border-color: #3bafda;
 }
 .btn-primary:focus, .btn-primary:hover, .open .dropdown-toggle.btn-primary {

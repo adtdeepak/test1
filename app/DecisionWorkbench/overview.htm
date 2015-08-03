@@ -3,15 +3,66 @@
 	<link rel="shortcut icon" href="images/logo.ico"/>
 </head>
 
-<div class="container campaign-overview" ng-cloak style="padding-top: 80px;">
-	<div class="row" ng-controller="overviewController">
-		<div class="row nopadding" style="border:1px solid grey;">
+<div class="container campaign-overview" ng-cloak style="padding-top: 30px;">
+     <div class="col-md-8">
+<ul style="margin-left:-30px; margin-bottom:10px;" class="breadcrumb">
+<li>
+<a style="color:#666;" href="home.htm">Home</a>
+</li>
+<li class="active">Campaign Options Overview</li>
+</ul>
+</div>
+    <div class="col-md-4-big">
+        <div style="float:left;" id="timePeriodTabs" class="filter" ng-if="thisPage!='/builddo'">
+					<ul>
+						<li><a
+							class="" href="#" ng-click="broadcastPeriodChange('weekly',0)">Weekly</a></li>
+						<li ng-class="{'active': selectedIndex[1].selected}"><a
+							class="" href="#" ng-click="broadcastPeriodChange('monthly',1)">Monthly</a></li>
+						<li ng-class="{'active': selectedIndex[2].selected}"><a
+							class="" href="#" ng-click="broadcastPeriodChange('quarterly',2)">Quarterly</a></li>
+						<li ng-class="{'active': selectedIndex[3].selected}"><a
+							class="" href="#" ng-click="broadcastPeriodChange('yearly',3)">Yearly</a></li>
+					</ul>
+				</div>
+        <div id="exportIconsPanel" ng-if="thisPage!='/builddo'" style="background: #ffffff !important;">
+    <ul>
+						<li title="Print" class="Printicon">&nbsp;</li>
+						<li class="iconExport export">
+							<ul>
+								<li class="top"><a href="#" alt="Export to Pdf"
+									title="Export to Pdf" ng-click="pdfExport()">
+										<figure>
+											<img src="images/icon-pdf.png" />
+										</figure>
+								</a></li>
+								<li><a href="#" alt="Export to Excel"
+									title="Export to Excel">
+										<figure>
+											<img src="images/icon-excel.png" />
+										</figure>
+								</a></li>
+								<li><a href="#" alt="Export to Word" title="Export to Word">
+										<figure>
+											<img src="images/icon-word.png" />
+										</figure>
+								</a></li>
+							</ul>
+						</li>
+					</ul>
+        
+    </div>
+    </div>
+    <div class="clear"></div>
+	<div style="padding: 0 15px;" class="row" ng-controller="overviewController">
+        
+		<div class="row nopadding" style="border:1px solid #ccc; background:#fff;">
 			<div class="collapseDiv">
 				<div class="panel-heading"> Top Campaign Options (All user)
 					<div class="pull-right xclose expandclose"></div>
 				</div>
 			</div>
-			<div class="collapse in" style="padding: 5px;">
+			<div class="collapse in" >
 				<table class="table borderless smSubsTable noMarginBtm" my-table  options="options" table-data="rowClicked">
 					<colgroup>
 						<col width="10%">
@@ -33,7 +84,8 @@
 				    </thead>
 				</table>
 				
-				<div class="pull-right" style="margin: 10px 10px 10px 0px;"> <a href="#/overview-details?selectedGroup=All Users" class="btn" role="button" style="width:100px;background:#666666;">See All</a></div>
+				<div class="pull-right" style="margin: 10px 10px 10px 0px;"> <a href="#/overview-details?selectedGroup=All Users" class="" role="button" ><button type="button" class="btn btn-primary">See All</button></a></div>
+                
 			</div>
 		</div>
 		
@@ -54,7 +106,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="collapse" style="padding: 5px;">
+			<div class="collapse">
 				<table class="table borderless smSubsTable noMarginBtm" my-table  options="userTableOptions" table-data="rowClicked">
 					<colgroup>
 						<col width="10%">
@@ -95,7 +147,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="collapse" style="padding: 5px;">
+			<div class="collapse" >
 				<table class="table borderless smSubsTable noMarginBtm" my-table  options="featuresOptions" table-data="rowClicked">
 					<colgroup>
 						<col width="10%">

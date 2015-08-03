@@ -195,19 +195,19 @@ table.DTTT_selectable tbody tr {
 }
 
 table.dataTable tr.DTTT_selected.odd {
-	background-color: #9FAFD1;
+	background-color: #eaf3f3;
 }
 
 table.dataTable tr.DTTT_selected.odd td.sorting_1 {
-	background-color: #9FAFD1;
+	background-color: #eaf3f3 ;
 }
 
 table.dataTable tr.DTTT_selected.odd td.sorting_2 {
-	background-color: #9FAFD1;
+	background-color: #eaf3f3 ;
 }
 
 table.dataTable tr.DTTT_selected.odd td.sorting_3 {
-	background-color: #9FAFD1;
+	background-color: #eaf3f3 ;
 }
 
 
