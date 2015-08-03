@@ -1636,5 +1636,20 @@ angular.module('DecisionWorkbench')
 		//sendRequest(cacheKey, "summaryCache", success, requestWS);
 		
 	};
+	
+	this.getOverviewDetailsData = function(reqData, success, fail) {
+		var requestWS = postRequestWS(
+				'http://jsonstub.com/campaign-options/overview/details', 
+				reqData,
+				success, 
+				fail,
+				function(result) {
+					return result;
+				}
+		);
+		requestWS();
+		//sendRequest(cacheKey, "summaryCache", success, requestWS);
+		
+	};
 
 })

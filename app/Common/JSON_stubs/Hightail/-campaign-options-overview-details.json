@@ -1,0 +1,181 @@
+{
+    "status": "OK",
+    "message": "Request processed successfully",
+    "data": {
+    "bestCampaignOptions":{
+    	"All Users":[{
+    		"SNo":"1",
+    		"userGroup":"Job Hobbers ES between 0-35%",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 4% New user to basic user",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"2",
+    		"userGroup":"Job Hobbers ES between 0-35%",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"3",
+    		"userGroup":"Job Hobbers ES between 0-35%",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"4",
+    		"userGroup":"Job Hobbers ES between 0-35%",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	}],
+    	"Project Managers":[{
+    		"SNo":"1",
+    		"userGroup":"Enterprise users",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"2",
+    		"userGroup":"Student Grade ES between 0-35%",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"3",
+    		"userGroup":"Student Grade ES between 0-35%",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	}],
+    	"Enterprise users":[{
+    		"SNo":"1",
+    		"userGroup":"Enterprise users",
+    		"classification":"Conversion",
+    		"engScoreRange":"70% and above",
+    		"description":"Multiple corporate users from these companies, contact IT department",
+    		"impact":"Campaign conversion by 60%",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"2",
+    		"userGroup":"Enterprise users",
+    		"classification":"Advanced",
+    		"engScoreRange":"50 to 70%",
+    		"description":"Audit, control and monitor file access rights",
+    		"impact":"Increase engagement by 7.5%",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"3",
+    		"userGroup":"Enterprise users",
+    		"classification":"Advanced",
+    		"engScoreRange":"50 to 70%",
+    		"description":"Version controll, Metadata access",
+    		"impact":"Increase engagement by 12%",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"4",
+    		"userGroup":"Enterprise users",
+    		"classification":"Conversion",
+    		"engScoreRange":"50 to 70%",
+    		"description":"Unlimited storage space",
+    		"impact":"Increase engagement by 10%",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"5",
+    		"userGroup":"Enterprise users",
+    		"classification":"Basic",
+    		"engScoreRange":"20-50%",
+    		"description":"Securely share your documents with your colleagues",
+    		"impact":"Increase engagement by 4%",
+    		"wishlist":"no"
+    	}],
+    	"Finance executives":[{
+    		"SNo":"1",
+    		"userGroup":"Active Recruitment ES between 0-35%",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"2",
+    		"userGroup":"Active Recruitment ES between 0-35%",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"3",
+    		"userGroup":"Active Recruitment ES between 0-35%",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"4",
+    		"userGroup":"Active Recruitment ES between 0-35%",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	}],
+    	"Musicians":[{
+    		"SNo":"1",
+    		"userGroup":"Marketing professionals ES between 0-35%",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"2",
+    		"userGroup":"Marketing professionals ES between 0-35%",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"3",
+    		"userGroup":"Marketing professionals ES between 0-35%",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"4",
+    		"userGroup":"Marketing professionals ES between 0-35%",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	}],
+    	"Photographers":[{
+    		"SNo":"1",
+    		"userGroup":"Phototgraphers ES between 0-35%",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"2",
+    		"userGroup":"Phototgraphers ES between 0-35%",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"3",
+    		"userGroup":"Phototgraphers ES between 0-35%",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	}],
+    	"videographers":[{
+    		"SNo":"1",
+    		"userGroup":"Videographers ES between 0-35%",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"2",
+    		"userGroup":"Videographers ES between 0-35%",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"3",
+    		"userGroup":"Videographers ES between 0-35%",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	}]
+     }   
+    }
+}

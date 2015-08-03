@@ -5,13 +5,13 @@
 
 <div class="container campaign-overview" ng-cloak style="padding-top: 80px;">
 	<div class="row" ng-controller="overviewController">
-		<div class="row-fluid">
+		<div class="row nopadding" style="border:1px solid grey;">
 			<div class="collapseDiv">
 				<div class="panel-heading"> Top Campaign Options (All user)
 					<div class="pull-right xclose expandclose"></div>
 				</div>
 			</div>
-			<div class="collapse in">
+			<div class="collapse in" style="padding: 5px;">
 				<table class="table borderless smSubsTable noMarginBtm" my-table  options="options" table-data="rowClicked">
 					<colgroup>
 						<col width="10%">
@@ -32,10 +32,12 @@
 				      </tr>
 				    </thead>
 				</table>
+				
+				<div class="pull-right" style="margin: 10px 10px 10px 0px;"> <a href="#/overview-details?selectedGroup=All Users" class="btn" role="button" style="width:100px;background:#666666;">See All</a></div>
 			</div>
 		</div>
 		
-		<div class="row-fluid" style="margin-top: 25px;">
+		<div class="row-fluid" style="margin-top: 25px;border:1px solid grey;">
 			<div class="collapseDiv">
 				<div class="panel-heading">Top Campaign Options by user groups
 					<div class="pull-right xclose"></div>
@@ -45,15 +47,15 @@
 					    <span class="caret"></span>
 					   </button>
 					 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="min-width: 224px;">
-					   <li><a tabindex="-1" href="#">Job Hoppers</a></li>
-					   <li><a tabindex="-1" href="#">Search Colleges</a></li>
-					   <li><a tabindex="-1" href="#">Photographers</a></li>
+					   <li><a tabindex="-1" href="#" ng-click="clickUserGroup('Project Managers')">Project Managers</a></li>
+					   <li><a tabindex="-1" href="#" ng-click="clickUserGroup('Enterprise users')">Enterprise users</a></li>
+					   <li><a tabindex="-1" href="#" ng-click="clickUserGroup('Finance executives')">Finance executives</a></li>
 					 </ul>
 					</div>
 				</div>
 			</div>
-			<div class="collapse">
-				<table class="table borderless smSubsTable noMarginBtm">
+			<div class="collapse" style="padding: 5px;">
+				<table class="table borderless smSubsTable noMarginBtm" my-table  options="userTableOptions" table-data="rowClicked">
 					<colgroup>
 						<col width="10%">
 						<col width="20%">
@@ -72,45 +74,11 @@
 				        <th>Execute</th>
 				      </tr>
 				    </thead>
-					<tbody>
-						<tr>
-							<td>1</td>
-							<td>Job Hobbers<br>ES between 0-35%</td>
-							<td>Nurturing (connecting with)</td>
-							<td>Increase engagement by 3%<br>New user to basic user</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>2</td>
-							<td>Job Hobbers<br>ES between 0-35%</td>
-							<td>Nurturing (connecting with)</td>
-							<td>Increase engagement by 3%<br>New user to basic user</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>3</td>
-							<td>Job Hobbers<br>ES between 0-35%</td>
-							<td>Nurturing (connecting with)</td>
-							<td>Increase engagement by 3%<br>New user to basic user</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>4</td>
-							<td>Job Hobbers<br>ES between 0-35%</td>
-							<td>Nurturing (connecting with)</td>
-							<td>Increase engagement by 3%<br>New user to basic user</td>
-							<td></td>
-							<td></td>
-						</tr>
-					</tbody>
 				</table>
 			</div>
 		</div>
 		
-		<div class="row-fluid" style="margin-top: 25px;">
+		<div class="row-fluid" style="margin-top: 25px;border:1px solid grey;">
 			<div class="collapseDiv">
 				<div class="panel-heading">Top Campaign Options by Features
 					<div class="pull-right xclose"></div>
@@ -120,15 +88,15 @@
 					    <span class="caret"></span>
 					   </button>
 					 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="min-width: 224px;">
-					   <li><a tabindex="-1" href="#">Job Hoppers</a></li>
-					   <li><a tabindex="-1" href="#">Search Colleges</a></li>
-					   <li><a tabindex="-1" href="#">Photographers</a></li>
+					   <li><a tabindex="-1" href="#" ng-click="clickFeature('Musicians')">Musicians</a></li>
+					   <li><a tabindex="-1" href="#" ng-click="clickFeature('Photographers')">Photographers</a></li>
+					   <li><a tabindex="-1" href="#" ng-click="clickFeature('Finance executives')">Finance executives</a></li>
 					 </ul>
 					</div>
 				</div>
 			</div>
-			<div class="collapse">
-				<table class="table borderless smSubsTable noMarginBtm">
+			<div class="collapse" style="padding: 5px;">
+				<table class="table borderless smSubsTable noMarginBtm" my-table  options="featuresOptions" table-data="rowClicked">
 					<colgroup>
 						<col width="10%">
 						<col width="20%">
@@ -147,40 +115,6 @@
 				        <th>Execute</th>
 				      </tr>
 				    </thead>
-					<tbody>
-						<tr>
-							<td>1</td>
-							<td>Job Hobbers<br>ES between 0-35%</td>
-							<td>Nurturing (connecting with)</td>
-							<td>Increase engagement by 3%<br>New user to basic user</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>2</td>
-							<td>Job Hobbers<br>ES between 0-35%</td>
-							<td>Nurturing (connecting with)</td>
-							<td>Increase engagement by 3%<br>New user to basic user</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>3</td>
-							<td>Job Hobbers<br>ES between 0-35%</td>
-							<td>Nurturing (connecting with)</td>
-							<td>Increase engagement by 3%<br>New user to basic user</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>4</td>
-							<td>Job Hobbers<br>ES between 0-35%</td>
-							<td>Nurturing (connecting with)</td>
-							<td>Increase engagement by 3%<br>New user to basic user</td>
-							<td></td>
-							<td></td>
-						</tr>
-					</tbody>
 				</table>
 			</div>
 		</div>

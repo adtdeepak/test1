@@ -1,0 +1,138 @@
+<head>
+     <title>D-ASSIST $ CONVERTER</title>
+	<link rel="shortcut icon" href="images/logo.ico"/>
+</head>
+
+<div class="container campaign-overview" ng-cloak style="padding-top: 80px;" ng-controller="customFilterController">
+	<div class="row">
+	<div class="pull-right" id="timePeriodTabs" style="margin-right: 30px;margin-top: -25px;">
+					<ul>
+						<li><a
+							class="" href="#" ng-click="broadcastPeriodChange('weekly',0)">Features</a></li>
+						<li ng-class="{'active': selectedIndex[1].selected}"><a
+							class="" href="#" ng-click="broadcastPeriodChange('monthly',1)">User Group</a></li>
+					</ul>
+				</div>
+	
+		
+		<div class="row nopadding" style="margin-right: 23px !important;margin-top:25px !important;border:1px solid grey;">
+			<div class="collapseDiv">
+				<div class="panel-heading"> Filters
+				</div>
+			</div>
+			<div class="filterContainer">
+	<div style="width: 100%; margin: 0 auto">
+		<div class="halfwidth">
+			<section class="innerwrap">
+				<h3>User Group</h3>
+				<div class="DragDrop clearfix">
+					<div id="fieldChooser" tabindex="1">
+						<div class="clearfix">
+							<h4>Available User Group</h4>
+							<h4>Selected User Group</h4>
+						</div>
+						<div class="clearfix">
+							<div class="DragDropContainer" data-drop="true" ng-model="availUG" jqyoui-droppable="{multiple:true}" data-jqyoui-options="{accept:'.fc-field:not([ng-model=availCA]):not([ng-model=selectedCA])'}">
+                                <div id="sourceFields1">
+								    <div class="fc-field" data-id="{{userGroup.groupId}}" data-jqyoui-options="{revert: 'invalid', containment: '#fieldChooser'}" data-default="{{userGroup.default}}" ng-init="userGroup.default = false"
+									    ng-repeat="userGroup in availUG" data-drag="true" jqyoui-draggable="{index: {{$index}},animate:false}" ng-model="availUG">
+									    {{userGroup.groupName}}</div>
+                                </div>
+						    </div>
+							<div class="DragDropContainer" data-drop="true" ng-model="selectedUG" jqyoui-droppable="{multiple:true}"  data-jqyoui-options="{accept:'.fc-field:not([ng-model=availCA]):not([ng-model=selectedCA])'}">
+								<div id="destinationFields1">
+                                    <div class="fc-field" ng-repeat="userGroup in selectedUG" data-jqyoui-options="{revert: 'invalid', containment: '#fieldChooser'}" data-default="{{userGroup.default}}" ng-init="userGroup.default = true"
+									    data-id="{{userGroup.groupId}}"  data-drag="true" jqyoui-draggable="{index: {{$index}},animate:false}" ng-model="selectedUG">{{userGroup.groupName}}</div>
+                                </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<div class="halfwidth">
+			<section class="innerwrap">
+				<h3>Conversion Activity</h3>
+				<div class="DragDrop clearfix">
+					<div id="fieldChooser1" tabindex="1">
+						<div class="clearfix">
+							<h4>Available Conversion Activity</h4>
+							<h4>Selected Conversion Activity</h4>
+						</div>
+						<div class="clearfix">
+							<div class="DragDropContainer1" data-drop="true" ng-model="availCA" jqyoui-droppable="{multiple:true}" data-jqyoui-options="{accept:'.fc-field:not([ng-model=availUG]):not([ng-model=selectedUG])'}">
+								<div id="sourceFields1">
+									<div class="fc-field" tabindex="1"
+										data-id="{{activity.convActivityId}}" data-jqyoui-options="{revert: 'invalid', containment: '#fieldChooser1'}" ng-init="activity.default = false"  data-default="{{activity.default}}"
+										ng-repeat="activity in availCA"  data-drag="true" jqyoui-draggable="{index: {{$index}},animate:false}" ng-model="availCA">
+										{{activity.convActivityName}}</div>
+								</div>
+							</div>
+							<div class="DragDropContainer1" data-drop="true" ng-model="selectedCA" jqyoui-droppable="{multiple:true}" data-jqyoui-options="{accept:'.fc-field:not([ng-model=availUG]):not([ng-model=selectedUG])'}">
+								<div id="destinationFields1">
+									<div class="fc-field " ng-repeat="activity in selectedCA" data-jqyoui-options="{revert: 'invalid', containment: '#fieldChooser1'}" data-default="{{activity.default}}"  ng-init="activity.default = true"
+										data-id="{{activity.convActivityId}}"  data-drag="true" jqyoui-draggable="{index: {{$index}},animate:false}" ng-model="selectedCA">
+										{{activity.convActivityName}}</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="pull-right" style="margin: 10px 10px 10px 0px;"> <button class="btn" role="button" style="width:100px;background:#666666;">Apply Filter</button></div>
+</div>
+		</div><div class="row nopadding" style="margin-right: 23px !important;margin-top:10px !important;border:1px solid grey;">
+			<div class="collapseDiv">
+				<div class="panel-heading"> Best Campaign Options for job seekers
+				</div>
+			</div>
+			<div class="collapse in" style="padding: 5px;">
+				<table class="table borderless smSubsTable noMarginBtm accordionTable1" my-table  options="options">
+					<colgroup>
+						<col width="10%">
+						<col width="20%">
+						<col width="25%">
+						<col width="25%">
+						<col width="10%">
+						<col width="10%">
+					</colgroup>
+					<thead>
+				      <tr>
+				        <th>S.No</th>
+				        <th>User Group</th>
+				        <th>Campaign Description</th>
+				        <th>Impact</th>
+				        <th>Wishlist</th>
+				        <th>Execute</th>
+				      </tr>
+				    </thead>
+				</table>
+					<div class="pull-right" style="margin: 10px 10px 10px 0px;text-decoration: underline;">
+						<a href="#/overview-details?selectedGroup=jobHoppers">Go back</a>
+					</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+</div>
+
+<script>
+		$(document).ready(function(){
+			$(".xclose").click(function(){
+				window.temp = $(this);
+				$(this).toggleClass("expandclose");
+				$(this).parents().closest('.collapsibleDiv').next().collapse('toggle');
+			});
+			
+			$(".dropdown-menu li a").click(function(){
+			      $(this).parents().closest('.btn-group').find(".btn:first-child").text($(this).text());
+			      $(this).parents().closest('.btn-group').find(".btn:first-child").val($(this).text());
+
+			});
+
+		});
+</script>

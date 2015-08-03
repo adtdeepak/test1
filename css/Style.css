@@ -8481,7 +8481,7 @@ div#progressBar {
 	background: #666666;
 	color: #ffffff;
 	padding:7px;
-	border: 1px solid #ffffff;
+	border: none;
 }
 
 .noMarginBtm{
@@ -8564,7 +8564,7 @@ div#progressBar {
 .overview-detail-tabs li{   
 	border: 1px solid grey;
     height: 145px;
-    width: 12.5%;
+    width: 15%;
     margin: 8px;
     display: inline-table;
     padding: 0px;
@@ -8584,7 +8584,7 @@ div#progressBar {
   border: 2px solid #132D52;
   border-radius: 5px;
   height:155px;
-  width:12.5%;
+  width: 15%;
 }
 
 .heading-groups-row{

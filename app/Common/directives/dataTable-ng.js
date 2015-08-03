@@ -129,8 +129,7 @@ angular.module('AnalyticsApp')
             
             function formatHtml() {
         		// `d` is the original data object for the row
-        		return '<div class="tableAccOuterContainer" ng-controller="highController">'+
-        		'<h3>'+ 'Campaign data Highlights'+ '</h3>'+ 
+        		return '<div class="tableAccOuterContainer">'+
         		'<div class="row nopadding">'+
     			'<div class="heading-overview">'+'Incremental Impact'+'</div>'+
     			'<div class="row brdr-dashed">'+
