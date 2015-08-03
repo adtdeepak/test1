@@ -7963,6 +7963,9 @@ div#progressBar {
 	background:#fff;
 	border:1px solid #E5E5E5;
 }
+.bkgd-none{
+	background: none !important; 
+}
 .bkgd-yellow{
 	background: #FAC458;
 	border: 1px solid #FAC458;
@@ -8670,6 +8673,9 @@ div#progressBar {
     background-position: -36px 3px;
     margin-right: 50px;
     margin-left: 15px;
+}
+.text-bold{
+	font-weight:600;
 }
 /* media query */
 @media (min-width: 320px) {
