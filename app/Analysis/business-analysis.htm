@@ -1,14 +1,62 @@
 <div id="contentContainer">
-	<div id="Decision">
+    
+	<div class="container" id="Decision">
+        <div style="margin-top:15px; margin-bottom:5px;" class="col-md-8">
+<ul style="margin-left:-30px; margin-bottom:5px;" class="breadcrumb">
+<li>
+<a style="color:#666;" href="home.htm">Home</a>
+</li>
+<li class="active">Segmentation</li>
+</ul>
+</div>
+    <div style="margin-top:15px; margin-bottom:5px;"  class="col-md-4-big">
+        <div style="float:left;" id="timePeriodTabs" class="filter" ng-if="thisPage!='/builddo'">
+					<ul>
+						<li><a
+							class="" href="#" ng-click="broadcastPeriodChange('weekly',0)">Weekly</a></li>
+						<li ng-class="{'active': selectedIndex[1].selected}"><a
+							class="" href="#" ng-click="broadcastPeriodChange('monthly',1)">Monthly</a></li>
+						<li ng-class="{'active': selectedIndex[2].selected}"><a
+							class="" href="#" ng-click="broadcastPeriodChange('quarterly',2)">Quarterly</a></li>
+						<li ng-class="{'active': selectedIndex[3].selected}"><a
+							class="" href="#" ng-click="broadcastPeriodChange('yearly',3)">Yearly</a></li>
+					</ul>
+				</div>
+        <div id="exportIconsPanel" ng-if="thisPage!='/builddo'" style="background: #ffffff !important;">
+    <ul>
+						<li title="Print" class="Printicon">&nbsp;</li>
+						<li class="iconExport export">
+							<ul>
+								<li class="top"><a href="#" alt="Export to Pdf"
+									title="Export to Pdf" ng-click="pdfExport()">
+										<figure>
+											<img src="images/icon-pdf.png" />
+										</figure>
+								</a></li>
+								<li><a href="#" alt="Export to Excel"
+									title="Export to Excel">
+										<figure>
+											<img src="images/icon-excel.png" />
+										</figure>
+								</a></li>
+								<li><a href="#" alt="Export to Word" title="Export to Word">
+										<figure>
+											<img src="images/icon-word.png" />
+										</figure>
+								</a></li>
+							</ul>
+						</li>
+					</ul>
+        
+    </div>
+    </div>
+   
 	<div ng-controller="businessImpactMatricesController" ng-if ="isBusinessImpactViewable">
-			<div class="AcquisitionPanel contentPanel1">
-				<article class="title_panel clearfix">
-					<p class="pull-left">
-						<span>Key Business Metrics</span>
-					</p>
-					
-					<span class="valid30 pull-right"></span>
-				</article>
+			<div class=" AcquisitionPanel contentPanel1">
+                <div style="margin-bottom:15px;" class="panel panel-default">
+					<div class="panel-heading">Key Business Metrics</div>
+				</div>
+				
 				<a href="javascript:;" class="pull-right filter-option-menu filter-option-menu1"> </a>
 					<div class="options-filter options-filter1  width clearfix">
 						<img src="images/popmenu-arrow.png" class="popmenu-arrow" />
@@ -71,12 +119,10 @@
 			</div>
 			<div ng-controller="businessImpactSummaryController" ng-if ="isBusinessImpactViewable">
 			<div class="AcquisitionPanel">
-				<article class="title_panel clearfix">
-					<p class="pull-left">
-						<span> {{heading}} Summary</span>
-					</p>
-					<span class="valid30 pull-right"> </span>
-				</article>
+                <div style="margin-bottom:15px;" class="panel panel-default">
+					<div class="panel-heading"> {{heading}} Summary</div>
+				</div>
+				
 				<div class="Acquisition">
 					<div class="contentPanel">
 					 <div class="progress-loading" ng-if="!error && !dataLoaded"></div>
@@ -139,12 +185,10 @@
 			</div>
 			<div ng-controller = "businessImpactTrendController" ng-if ="isBusinessImpactViewable">
 			<div class="AcquisitionPanel">
-				<article class="title_panel clearfix">
-					<p class="pull-left">
-						<span>{{heading}} Trend</span>
-					</p>
-					<span class="valid30 pull-right"> </span>
-				</article>
+                 <div style="margin-bottom:15px;" class="panel panel-default">
+					<div class="panel-heading">{{heading}} Trend</div>
+				</div>
+				
 				<div class="Acquisition">
 					<div class="contentPanel tableHeading">
 						<!-- <div class="chartTitle">
@@ -204,12 +248,10 @@
 			</div>
 			<div ng-controller="businessImpactDeepDiveController" ng-if ="isBusinessImpactViewable">
 			<div class="AcquisitionPanel">
-				<article class="title_panel clearfix">
-					<p class="pull-left heading">
-						<span>{{heading}} Deep Dive</span>
-					</p>
-					<span class="valid30 pull-right"> </span>
-				</article>
+                 <div style="margin-bottom:15px;" class="panel panel-default">
+					<div class="panel-heading">{{heading}} Deep Dive</div>
+				</div>
+				
 				<div class="tab_container Acquisition tableHeading">
 					<div class="contentPanel">
 					<div class="progress-loading" ng-if="!error && !dataLoaded"></div>

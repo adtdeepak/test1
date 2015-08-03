@@ -534,7 +534,7 @@ h1.pull-left {
 	clear: both;
 	height: 100%;
 	background: #f7f7f7;
-	padding: 60px 65px 0;
+	padding: 25px 65px 0;
 }
 
 #contentarea>*:not(h1) {
@@ -1343,8 +1343,8 @@ h4 {
 }
 
 #exportIconsPanel {
-	margin-right: 10px;
-	margin-bottom: 10px;
+/*	margin-right: 10px;
+	margin-bottom: 10px; */
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
@@ -7924,7 +7924,7 @@ div#progressBar {
 	border: 1px solid #585858;
 }
 .bkgd-lightbrown{
-	background: #f5f5f5;
+	background: #f7f7f7;
 }
 .bkgd-mediumbrown{
 	background: #9DA0A3;
@@ -8114,7 +8114,7 @@ div#progressBar {
 	margin-bottom: 10px;
 	border: 1px solid #d0d0d0;
 	position: relative;
-	background: #f5f5f5;
+	background: #f7f7f7;
 }
 .title-panel{
   font-family: arial, Sans-Serif;
@@ -8334,7 +8334,7 @@ div#progressBar {
 }
 
 #profile-div .half-width{
-	background:#f5f5f5;
+	background:#f7f7f7;
 }
 
 #analysis-cl .panel{
@@ -8363,7 +8363,7 @@ div#progressBar {
   font-size: 20px;
 }
 #analysis-page #contentarea{
-	background:#f5f5f5;
+	background:#f7f7f7;
 }
 .panel-heading span{
   font-weight: 600;
