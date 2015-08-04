@@ -5683,8 +5683,8 @@ h3.subTitle {
 	color: #666;
 	font-size: 12px;
 	font-style: italic;
-	font-weight: bold;
-	margin-top: -25px;
+	font-weight: 500;
+	margin-top: -28px;
 	padding-bottom: 10px;
 	text-align: center;
 }
@@ -8215,7 +8215,7 @@ div#progressBar {
   color: #666;
   font-size: 12px;
   font-style: italic;
-  font-weight: bold;
+
   margin-top:0px;
 }
 
@@ -8565,18 +8565,20 @@ div#progressBar {
 }
 
 .overview-detail-tabs li{   
-	border: 1px solid #ccc;
+	/*border: 1px solid #ccc;*/
     height: 145px;
     width: 15%;
     margin: 8px;
     display: inline-table;
     padding: 0px;
-    background:#132D52;
+  /*  background:#132D52;*/
+}
+.overview-detail-tabs li:hover {
+  background: #ffffff !important;  border: 2px solid #132D52;
+  border-radius: 5px;
 }
 
-.overview-detail-tabs li:hover {
-  background: #ffffff;
-}
+
 
 .overview-detail-tabs li.active .icon-widget-text{
   background: #ffffff;
@@ -8602,28 +8604,28 @@ div#progressBar {
     background-repeat: no-repeat;
     /* width: 92%; */
     height: 118px;
-    background-position: 80% 119%;
-    background-size: 86% 100%;
+    background-position: 60% 100%;
+   /* background-size: 86% 100%;*/
     margin-right: 10px;
 }
 .all-user-image {
 	background-image: url('../images/alluser-icon.png');
 }
 
-.job-hoppers-image {
-	background-image: url('../images/job-hopper-icon.png');
+.project-manager-image {
+	background-image: url('../images/project-manager.png');
 }
 
-.grade-image {
-	background-image: url('../images/students-icon.png');
+.enterprise-image {
+	background-image: url('../images/enterprise.png');
 }
 
-.recruitment-image {
-	background-image: url('../images/recruiter-icon.png');
+.finance-image {
+	background-image: url('../images/finance.png');
 }
 
-.professionals-image {
-	background-image: url('../images/marketing-icon.png');
+.musicians-image {
+	background-image: url('../images/music.png');
 }
 
 .photographers-image {
@@ -8636,7 +8638,7 @@ div#progressBar {
 
 .icon-widget-text{
 	    height: 65px;
-    background: #F7F7F7;
+   
     text-align: center;
     padding-top: 13px;
     padding-bottom:10px;
@@ -8645,7 +8647,7 @@ div#progressBar {
 	background: url('../images/execute-icon.png');
     height: 44px;
     background-repeat: no-repeat;
-    background-position: 0px -39px;
+    background-position: 0px -90px;
     margin-right: 50px;
     margin-left: 15px;
 }
@@ -8653,7 +8655,7 @@ div#progressBar {
 	background: url('../images/execute-icon.png');
     height: 44px;
     background-repeat: no-repeat;
-    background-position: 0px 0px;
+    background-position: 0px -5px;
     margin-right: 50px;
     margin-left: 15px;
 }
@@ -8662,7 +8664,7 @@ div#progressBar {
 	background: url('../images/execute-icon.png');
     height: 44px;
     background-repeat: no-repeat;
-    background-position: -36px -39px;
+    background-position: -65px -90px;
     margin-right: 50px;
     margin-left: 15px;
 }
@@ -8670,7 +8672,7 @@ div#progressBar {
 	background: url('../images/execute-icon.png');
     height: 44px;
     background-repeat: no-repeat;
-    background-position: -36px 3px;
+    background-position: -65px -5px;
     margin-right: 50px;
     margin-left: 15px;
 }

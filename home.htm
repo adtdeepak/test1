@@ -57,7 +57,8 @@ type='text/css'>
 <div class="transparentMask"></div>
 
         <div id="contentarea">
-        		<div class="breadcrumbTrackContainer" ng-controller = "commonController">
+            
+        		<div style="display:none;" class="breadcrumbTrackContainer" ng-controller = "commonController">
 				<!-- <div id="trialPanel">
 					<ul>
 						<li><a class="freeMode" href="#" ng-click="userModeSelected('free')">Free Trial</a></li>
@@ -104,6 +105,56 @@ type='text/css'>
         </div>
 	<ng-include src="'partials/navigation-header.htm'"></ng-include>
 <div class="container" id="track-summary" ng-cloak>
+    
+     <div class="col-md-8">
+<ul style="margin-left:-30px; margin-bottom:10px;" class="breadcrumb">
+<li>
+<a style="color:#666;" href="home.htm"></a>
+</li>
+</ul>
+</div>
+    <div class="col-md-4-big">
+        <div style="float:left;" id="timePeriodTabs" class="filter" ng-if="thisPage!='/builddo'">
+					<ul>
+						<li><a
+							class="" href="#" ng-click="broadcastPeriodChange('weekly',0)">Weekly</a></li>
+						<li ng-class="{'active': selectedIndex[1].selected}"><a
+							class="" href="#" ng-click="broadcastPeriodChange('monthly',1)">Monthly</a></li>
+						<li ng-class="{'active': selectedIndex[2].selected}"><a
+							class="" href="#" ng-click="broadcastPeriodChange('quarterly',2)">Quarterly</a></li>
+						<li ng-class="{'active': selectedIndex[3].selected}"><a
+							class="" href="#" ng-click="broadcastPeriodChange('yearly',3)">Yearly</a></li>
+					</ul>
+				</div>
+        <div id="exportIconsPanel" ng-if="thisPage!='/builddo'" style="background: #ffffff !important;">
+    <ul>
+						<li title="Print" class="Printicon">&nbsp;</li>
+						<li class="iconExport export">
+							<ul>
+								<li class="top"><a href="#" alt="Export to Pdf"
+									title="Export to Pdf" ng-click="pdfExport()">
+										<figure>
+											<img src="images/icon-pdf.png" />
+										</figure>
+								</a></li>
+								<li><a href="#" alt="Export to Excel"
+									title="Export to Excel">
+										<figure>
+											<img src="images/icon-excel.png" />
+										</figure>
+								</a></li>
+								<li><a href="#" alt="Export to Word" title="Export to Word">
+										<figure>
+											<img src="images/icon-word.png" />
+										</figure>
+								</a></li>
+							</ul>
+						</li>
+					</ul>
+        
+    </div>
+    </div>
+ 
 	<div class="row acquisition-panel"
 		ng-controller="acquisitionFunnelController">
         <div style="margin-bottom:0px;" class="panel panel-default">

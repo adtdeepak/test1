@@ -3,29 +3,83 @@
 	<link rel="shortcut icon" href="images/logo.ico"/>
 </head>
 
-<div class="container campaign-overview" ng-cloak style="padding-top: 80px;">
-	<div class="row" ng-controller="overviewDetailsController">
-	<div class="pull-right" id="timePeriodTabs" style="margin-right: 30px;margin-top: -25px;">
+<div class="container campaign-overview" ng-cloak style="padding-top: 30px;">
+    
+     <div class="col-md-8">
+<ul style="margin-left:-30px; margin-bottom:5px;" class="breadcrumb">
+<li>
+<a style="color:#666;" href="home.htm">Home</a>
+</li>
+<li><a style="color:#666;" href="#/overview">Campaign Options</a></li>
+    <li class="active">Campaign Options Deepdive</li>
+</ul>
+</div>
+    <div class="col-md-4-big">
+        <div style="float:left;" id="timePeriodTabs" class="filter" ng-if="thisPage!='/builddo'">
 					<ul>
+						<li><a
+							class="" href="#" ng-click="broadcastPeriodChange('weekly',0)">Weekly</a></li>
+						<li ng-class="{'active': selectedIndex[1].selected}"><a
+							class="" href="#" ng-click="broadcastPeriodChange('monthly',1)">Monthly</a></li>
+						<li ng-class="{'active': selectedIndex[2].selected}"><a
+							class="" href="#" ng-click="broadcastPeriodChange('quarterly',2)">Quarterly</a></li>
+						<li ng-class="{'active': selectedIndex[3].selected}"><a
+							class="" href="#" ng-click="broadcastPeriodChange('yearly',3)">Yearly</a></li>
+					</ul>
+				</div>
+        <div id="exportIconsPanel" ng-if="thisPage!='/builddo'" style="background: #ffffff !important;">
+    <ul>
+						<li title="Print" class="Printicon">&nbsp;</li>
+						<li class="iconExport export">
+							<ul>
+								<li class="top"><a href="#" alt="Export to Pdf"
+									title="Export to Pdf" ng-click="pdfExport()">
+										<figure>
+											<img src="images/icon-pdf.png" />
+										</figure>
+								</a></li>
+								<li><a href="#" alt="Export to Excel"
+									title="Export to Excel">
+										<figure>
+											<img src="images/icon-excel.png" />
+										</figure>
+								</a></li>
+								<li><a href="#" alt="Export to Word" title="Export to Word">
+										<figure>
+											<img src="images/icon-word.png" />
+										</figure>
+								</a></li>
+							</ul>
+						</li>
+					</ul>
+        
+    </div>
+    </div>
+    <div class="clear"></div>
+    <div class="pull-right" id="timePeriodTabs" style="margin:0px; width:100%; padding-top:10px; border-top:1px solid #ccc;">
+					<ul style="float:right; margin-right:-8px;">
 						<li><a
 							class="" href="#" ng-click="broadcastPeriodChange('weekly',0)">Features</a></li>
 						<li ng-class="{'active': selectedIndex[1].selected}"><a
 							class="" href="#" ng-click="broadcastPeriodChange('monthly',1)">User Group</a></li>
 					</ul>
 				</div>
+      
+	<div class="row" ng-controller="overviewDetailsController">
+	
 	
 		<div class="row-fluid" style="margin-top:30px;">
 			<ul class="list-inline overview-detail-tabs">
 			<li ng-class="{'active': selectedGroup[0].selected}" ng-click="broadcastselectedGroup('All Users',0)">
-				<div class="icon-widget all-user-image"></div><div class="icon-widget-text">All Users</div></li>
+			<div class="white-hover"><div class="icon-widget all-user-image"></div><div class="icon-widget-text">All Users</div></div></li>
 			<li ng-class="{'active': selectedGroup[1].selected}" ng-click="broadcastselectedGroup('Project Managers',1)">
-				<div class="icon-widget job-hoppers-image"></div><div class="icon-widget-text">Project Managers</div></li>
+				<div class="icon-widget project-manager-image"></div><div class="icon-widget-text">Project Managers</div></li>
 			<li ng-class="{'active': selectedGroup[2].selected}" ng-click="broadcastselectedGroup('Enterprise users',2)">
-				<div class="icon-widget grade-image"></div><div class="icon-widget-text">Enterprise users</div></li>
+				<div class="icon-widget enterprise-image"></div><div class="icon-widget-text">Enterprise users</div></li>
 			<li ng-class="{'active': selectedGroup[3].selected}" ng-click="broadcastselectedGroup('Finance executives',3)">
-				<div class="icon-widget recruitment-image"></div><div class="icon-widget-text">Finance executives</div></li>
+				<div class="icon-widget finance-image"></div><div class="icon-widget-text">Finance executives</div></li>
 			<li ng-class="{'active': selectedGroup[4].selected}" ng-click="broadcastselectedGroup('Musicians',4)">
-				<div class="icon-widget professionals-image"></div><div class="icon-widget-text">Musicians</div></li>
+				<div class="icon-widget musicians-image"></div><div class="icon-widget-text">Musicians</div></li>
 			<li ng-class="{'active': selectedGroup[5].selected}" ng-click="broadcastselectedGroup('Photographers',5)">
 				<div class="icon-widget photographers-image"></div><div class="icon-widget-text">Photographers</div></li>
 			<!-- <li ng-class="{'active': selectedGroup[6].selected}" ng-click="broadcastselectedGroup('videographers',6)">
@@ -37,7 +91,7 @@
 				<div class="panel-heading"> Best Campaign Options for {{groupHeading}}
 				</div>
 			</div>
-			<div class="collapse in" style="padding: 5px;">
+			<div class="collapse in">
 				<table class="table borderless smSubsTable noMarginBtm accordionTable1" my-table  options="options" table-data="updateExpandData">
 					<colgroup>
 						<col width="10%">
