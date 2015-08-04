@@ -5218,9 +5218,9 @@ blockquote {
     border-color: #aab2bd;
 }
 .btn.active, .btn:active, .btn:focus, .btn:hover {
-    background-color: #ccd1d9;
+    background-color: #fff;
     border-color: #ccd1d9;
-    color: #fff;
+    color: #666;
     outline: 0 none !important;
 }
 .btn.active, .btn:active {

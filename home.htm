@@ -106,12 +106,11 @@ type='text/css'>
 <div class="container" id="track-summary" ng-cloak>
 	<div class="row acquisition-panel"
 		ng-controller="acquisitionFunnelController">
-		<article class="title-panel">
-			<p class="pull-left">
-				<span>Funnel</span>
-			</p>
-		</article>
-		<div class="row-fluid" style="margin-bottom: 30px">
+        <div style="margin-bottom:0px;" class="panel panel-default">
+					<div class="panel-heading">Funnel</div>
+				</div>
+		
+		<div class="row-fluid">
 			<div class="half-width">
 				<div class="col-sm-5 col-md-5 wdgt-hgt-new">
 					<div class="customDiv bkgd-darkblue">
@@ -196,11 +195,10 @@ type='text/css'>
 
 	<div class="row acquisition-panel"
 		ng-controller="acquisitionTrendController">
-		<article class="title-panel">
-			<p class="pull-left">
-				<span>Trend</span>
-			</p>
-		</article>
+         <div style="margin-bottom:15px;" class="panel panel-default">
+					<div class="panel-heading">Trend</div>
+				</div>
+		
 		<div class="row-fluid" style="padding: 0px 11px;">
 			<div class="pull-right chart-textNote" style="">Current period
 				from {{trendPeriod}}, 2014</div>
@@ -215,11 +213,10 @@ type='text/css'>
 
 
 	<div class="row acquisition-panel">
-		<article class="title-panel">
-			<p class="pull-left">
-				<span>Metrics</span>
-			</p>
-		</article>
+           <div style="margin-bottom:15px;" class="panel panel-default">
+					<div class="panel-heading">Metrics</div>
+				</div>
+		
 		 <div class="row nopadding"
 			ng-controller="businessImpactMatricesController">
 			<div class="contentPanel nopadding">
@@ -227,13 +224,14 @@ type='text/css'>
 					<div class="row-fluid"
 						style="padding: 0px 11px; text-align: center;">
 						<div class="chart-textNote">{{title}}</div>
-						<div class="chart-textNote pull-right">As of Thursday,
-							November13, 2014</div>
-						<p class="widget-title pull-right">As of {{currentDate |
-							date:'EEEE'}}, {{currentDate | date:'dd MMM yyyy'}}</p>
+						<div style=" margin-right: 40px;
+    margin-top: -15px;" class="chart-textNote pull-right">As of Thursday,
+							November13, 2014 </div>
+					<!--	<p class="widget-title pull-right">As of {{currentDate |
+							date:'EEEE'}}, {{currentDate | date:'dd MMM yyyy'}}</p>-->
 					</div>
-					<h2 class="block-title">Business Impact</h2>
-					<a href="javascript:;" class="pull-right filter-option-menu"> </a>
+					<h2 style="margin: -15px 20px 25px;" class="block-title">Business Impact</h2>
+					<a style="margin-top:-48px !important;" href="javascript:;" class="pull-right filter-option-menu"> </a>
 					<div class="options-filter width clearfix" style="display: block;">
 						<img src="images/popmenu-arrow.png" class="popmenu-arrow">
 						<div>
@@ -252,7 +250,7 @@ type='text/css'>
 					</div>
 				</div>
 				<ul class="row-fluid metric-widgets"
-					style="margin: 10px 10px 0px 10px" data-page="businessImpact">
+					style="margin:  10px 20px 10px 10px;" data-page="businessImpact">
 					<li class="col-md-5ths col-xs-6" ng-repeat="data in businessImpact"
 						ng-hide="data.display == false">
 						<div class="col-sm-11 col-md-11 metrics-content">
@@ -293,8 +291,8 @@ type='text/css'>
 			ng-controller="engagementActivityMatricesController">
 			<div class="contentPanel nopadding">
 				<div ng-if="isEngagementMetricsViewable">
-					<h2 class="block-title">Engagement Metrics</h2>
-					<a href="javascript:;" class="pull-right filter-option-menu"> </a>
+					<h2 style="margin: -15px 20px 25px;"  class="block-title">Engagement Metrics</h2>
+					<a style="margin-top:-48px !important;"  href="javascript:;" class="pull-right filter-option-menu"> </a>
 					<div style="display: none"
 						class="options-filter options-filter1 clearfix">
 						<img src="images/popmenu-arrow.png" class="popmenu-arrow" />
@@ -372,8 +370,8 @@ type='text/css'>
 			ng-controller="overallUserGroupSummaryController">
 			<div class="contentPanel nopadding">
 				<div ng-if="isUserGroupViewable">
-					<h2 class="block-title">User Group</h2>
-					<a href="javascript:;" class="pull-right filter-option-menu"> </a>
+					<h2 style="margin: -15px 20px 25px;" class="block-title">User Group</h2>
+					<a style="margin-top:-48px !important;" href="javascript:;" class="pull-right filter-option-menu"> </a>
 					<div class="options-filter options-filter1  width clearfix">
 						<img src="images/popmenu-arrow.png" class="popmenu-arrow" />
 						<div>
