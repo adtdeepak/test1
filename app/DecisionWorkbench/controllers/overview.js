@@ -35,7 +35,15 @@ angular.module('DecisionWorkbench')
 			           /* $(this).attr('attr', "Enterprise users");*/
 			        });
 		    },
-		    "bPaginate":false
+		    "bPaginate":false,
+			"fnRowCallback" : function(nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+				if(iDisplayIndex%2 != 0){
+					className = "oddRowColor";
+				}else{
+					className = "evenRowColor";
+				}
+				$(nRow).addClass(className);
+			}
 		};
 		$.extend(true, $scope.options, columOptions);
 		$.extend(true, $scope.userTableOptions, columOptions);

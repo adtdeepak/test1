@@ -89,7 +89,8 @@ angular.module('DecisionWorkbench')
 		            { "title": "Last Month", "class": "center" },
 		            { "title": "Last Quarter", "class": "center" },
 		            { "title": "Last Year", "class": "center" }
-		        ]
+		        ],
+            dom: '<"dataTableContainer"t><"dataTablePaginateContainer"p>'
 		    } );   
 		} );
 		
@@ -174,7 +175,15 @@ angular.module('DecisionWorkbench')
 			{
 				"sClass" : "row-expand-details"
 			}],
-			"bPaginate":false
+			"bPaginate":false,
+			"fnRowCallback" : function(nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+				if(iDisplayIndex%2 != 0){
+					className = "oddRowColor";
+				}else{
+					className = "evenRowColor";
+				}
+				$(nRow).addClass(className);
+			}
 		};
 		$.extend(true, $scope.options, columOptions);
 	
