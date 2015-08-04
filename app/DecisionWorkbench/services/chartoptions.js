@@ -377,4 +377,102 @@ this.getOverviewColumnChart = function(data, title, subtitle){
 		
 	};
 	
+this.activeUsersAreaChart = function(data, title, subtitle){
+		
+		return {
+	        chart: {
+	            type: 'area',
+                height:300
+	        },
+	        title: {
+	            text: title,
+	            align:'left'
+	        },
+	        subtitle: {
+	            text: subtitle,
+	            align:'left',
+	            style: {
+	                color: '#686868',
+	                fontWeight: 'bold'
+	            }
+	        },
+	        tooltip: {
+	            valueSuffix: '%'
+	        },
+	        xAxis: {
+	        	//x-axis data
+	            categories: data.xAxisData,
+	            title: {
+	                text: null
+	            }
+	        },
+	        series: [{
+	            name: 'Engagement',
+	            data: data.data,
+	            color:data.color
+	        }]
+		}
+		
+	};
+	
+this.getColumnBarChart = function(data, title, subtitle, height, color){
+		
+		return {
+	        chart: {
+	            type: 'column',
+                height:height
+	        },
+	        title: {
+	            text: title,
+	            align:'left',
+	            style: {
+	                color: '#686868',
+	                fontWeight: 'bold'
+	            }
+	        },
+	        subtitle: {
+	            text: subtitle,
+	            align:'left',
+	            style: {
+	                color: '#686868',
+	                fontWeight: 'bold'
+	            }
+	        },
+	        xAxis: {
+	        	//x-axis data
+	            categories: data.xAxisData,
+	            title: {
+	                text: null
+	            }
+	        },
+	        yAxis: {
+	            min: 0,
+	            max:100,
+	            title: {
+	            },
+	            labels: {
+	                overflow: 'justify'
+	            }
+	        },
+	        tooltip: {
+	            valueSuffix: '%'
+	        },
+	        plotOptions: {
+	            bar: {
+	                dataLabels: {
+	                    enabled: true
+	                }
+	            }
+	        },
+	        legend: {
+	            enabled:false
+	        },
+	        series: [{
+	            name: 'Percentage',
+	            data: data.data,
+	            color:color
+	        }]
+		}
+	};
+	
 });

@@ -29,22 +29,28 @@
     		"wishlist":"no"
     	}],
     	"Project Managers":[{
-    		"SNo":"1",
-    		"userGroup":"Enterprise users",
-    		"description":"Nurturing (connecting with)",
-    		"impact":"Increase engagement by 3% New user to basic user",
-    		"wishlist":"no"
-    	},{
     		"SNo":"2",
-    		"userGroup":"Student Grade ES between 0-35%",
-    		"description":"Nurturing (connecting with)",
-    		"impact":"Increase engagement by 3% New user to basic user",
+    		"userGroup":"Project Managers",
+    		"classification":"Onboarding",
+    		"engScoreRange":"0-20%",
+    		"description":"Mobile app download",
+    		"impact":"Increase engagement 15%",
     		"wishlist":"no"
     	},{
     		"SNo":"3",
-    		"userGroup":"Student Grade ES between 0-35%",
-    		"description":"Nurturing (connecting with)",
-    		"impact":"Increase engagement by 3% New user to basic user",
+    		"userGroup":"Project Managers",
+    		"classification":"Advanced",
+    		"engScoreRange":"50 to 70%",
+    		"description":"Password protect files",
+    		"impact":"Increase engagement 5%",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"4",
+    		"userGroup":"Project Managers",
+    		"classification":"Advanced",
+    		"engScoreRange":"50 to 70%",
+    		"description":"Join today and get 10% storage extra",
+    		"impact":"Camapaign conversion rate 23%",
     		"wishlist":"no"
     	}],
     	"Enterprise users":[{
@@ -176,6 +182,695 @@
     		"impact":"Increase engagement by 3% New user to basic user",
     		"wishlist":"no"
     	}]
-     }   
+     },
+     "activityEngagementData":{
+     	
+    	"All Users":[
+        {
+            "moduleName": "Premium Delivery",
+            "engagementLevel": "15.5%",
+            "engagementScore": {
+                "score": 11.2,
+                "scoreLastMo": -0.0931,
+                "scoreLastYr": 0.07,
+                "scoreLastQtr": 0.04
+            },
+            "noOfUsers": {
+                "number": 3328829,
+                "noLastMo": 12620,
+                "noLastQtr": 23300,
+                "noLastYr": 30625
+            }
+        },
+        {
+            "moduleName": "Send",
+            "engagementLevel": "45%",
+            "engagementScore": {
+                "score": 18,
+                "scoreLastMo": 0.119,
+                "scoreLastYr": 0.137,
+                "scoreLastQtr": 0.082
+            },
+            "noOfUsers": {
+                "number": 9664342,
+                "noLastMo": -12070,
+                "noLastQtr": 8610,
+                "noLastYr": 48121
+            }
+        },
+        {
+            "moduleName": "e-Sign",
+            "engagementLevel": "6%",
+            "engagementScore": {
+                "score": 1.5,
+                "scoreLastMo": 0.029,
+                "scoreLastYr": 0.208,
+                "scoreLastQtr": 0.125
+            },
+            "noOfUsers": {
+                "number": 1288579,
+                "noLastMo": 12260,
+                "noLastQtr": 15560,
+                "noLastYr": 109259
+            }
+        },
+        {
+            "moduleName": "Folders",
+            "engagementLevel": "7%",
+            "engagementScore": {
+                "score": 7,
+                "scoreLastMo": -0.020,
+                "scoreLastYr": 0.197,
+                "scoreLastQtr": 0.118
+            },
+            "noOfUsers": {
+                "number": 1503342,
+                "noLastMo": 12890,
+                "noLastQtr": 12810,
+                "noLastYr": 97157
+            }
+        },
+        {
+            "moduleName": "Archivals",
+            "engagementLevel": "7%",
+            "engagementScore": {
+                "score": 7.5,
+                "scoreLastMo": -0.098,
+                "scoreLastYr": 0.048,
+                "scoreLastQtr": 0.028
+            },
+            "noOfUsers": {
+                "number": 1503342,
+                "noLastMo": -10770,
+                "noLastQtr": 22040,
+                "noLastYr": 43851
+            }
+        }
+    ],
+    	"Project Managers":[
+        {
+            "moduleName": "Premium Delivery",
+            "engagementLevel": "15.5%",
+            "engagementScore": {
+                "score": 11.2,
+                "scoreLastMo": -0.0931,
+                "scoreLastYr": 0.07,
+                "scoreLastQtr": 0.04
+            },
+            "noOfUsers": {
+                "number": 3328829,
+                "noLastMo": 12620,
+                "noLastQtr": 23300,
+                "noLastYr": 30625
+            }
+        },
+        {
+            "moduleName": "Send",
+            "engagementLevel": "45%",
+            "engagementScore": {
+                "score": 33,
+                "scoreLastMo": 0.119,
+                "scoreLastYr": 0.137,
+                "scoreLastQtr": 0.082
+            },
+            "noOfUsers": {
+                "number": 9664342,
+                "noLastMo": -12070,
+                "noLastQtr": 8610,
+                "noLastYr": 48121
+            }
+        },
+        {
+            "moduleName": "e-Sign",
+            "engagementLevel": "6%",
+            "engagementScore": {
+                "score": 1.5,
+                "scoreLastMo": 0.029,
+                "scoreLastYr": 0.208,
+                "scoreLastQtr": 0.125
+            },
+            "noOfUsers": {
+                "number": 1288579,
+                "noLastMo": 12260,
+                "noLastQtr": 15560,
+                "noLastYr": 109259
+            }
+        },
+        {
+            "moduleName": "Folders",
+            "engagementLevel": "7%",
+            "engagementScore": {
+                "score": 7,
+                "scoreLastMo": -0.020,
+                "scoreLastYr": 0.197,
+                "scoreLastQtr": 0.118
+            },
+            "noOfUsers": {
+                "number": 1503342,
+                "noLastMo": 12890,
+                "noLastQtr": 12810,
+                "noLastYr": 97157
+            }
+        },
+        {
+            "moduleName": "Archivals",
+            "engagementLevel": "7%",
+            "engagementScore": {
+                "score": 7.5,
+                "scoreLastMo": -0.098,
+                "scoreLastYr": 0.048,
+                "scoreLastQtr": 0.028
+            },
+            "noOfUsers": {
+                "number": 1503342,
+                "noLastMo": -10770,
+                "noLastQtr": 22040,
+                "noLastYr": 43851
+            }
+        }
+    ],
+    	"Enterprise users":[
+        {
+            "moduleName": "Premium Delivery",
+            "engagementLevel": "15.5%",
+            "engagementScore": {
+                "score": 11.2,
+                "scoreLastMo": -0.0931,
+                "scoreLastYr": 0.07,
+                "scoreLastQtr": 0.04
+            },
+            "noOfUsers": {
+                "number": 3328829,
+                "noLastMo": 12620,
+                "noLastQtr": 23300,
+                "noLastYr": 30625
+            }
+        },
+        {
+            "moduleName": "Folders",
+            "engagementLevel": "7%",
+            "engagementScore": {
+                "score": 7,
+                "scoreLastMo": -0.020,
+                "scoreLastYr": 0.197,
+                "scoreLastQtr": 0.118
+            },
+            "noOfUsers": {
+                "number": 1503342,
+                "noLastMo": 12890,
+                "noLastQtr": 12810,
+                "noLastYr": 97157
+            }
+        },
+        {
+            "moduleName": "Archivals",
+            "engagementLevel": "7%",
+            "engagementScore": {
+                "score": 7.5,
+                "scoreLastMo": -0.098,
+                "scoreLastYr": 0.048,
+                "scoreLastQtr": 0.028
+            },
+            "noOfUsers": {
+                "number": 1503342,
+                "noLastMo": -10770,
+                "noLastQtr": 22040,
+                "noLastYr": 43851
+            }
+        },
+        {
+            "moduleName": "Videos",
+            "engagementLevel": "6.5%",
+            "engagementScore": {
+                "score": 4.6,
+                "scoreLastMo": 0.115,
+                "scoreLastYr": 0.115,
+                "scoreLastQtr": 0.006
+            },
+            "noOfUsers": {
+                "number": 1395960,
+                "noLastMo": 2380,
+                "noLastQtr": 13490,
+                "noLastYr": 30421
+            }
+        },
+        {
+            "moduleName": "Work Space Share",
+            "engagementLevel": "5%",
+            "engagementScore": {
+                "score": 7.1,
+                "scoreLastMo": 0.017,
+                "scoreLastYr": 0.133,
+                "scoreLastQtr": 0.080
+            },
+            "noOfUsers": {
+                "number": 1073815,
+                "noLastMo": 9080,
+                "noLastQtr": 8120,
+                "noLastYr": 87194
+            }
+        }
+    ],
+    	"Finance executives":[
+        {
+            "moduleName": "Premium Delivery",
+            "engagementLevel": "15.5%",
+            "engagementScore": {
+                "score": 11.2,
+                "scoreLastMo": -0.0931,
+                "scoreLastYr": 0.07,
+                "scoreLastQtr": 0.04
+            },
+            "noOfUsers": {
+                "number": 3328829,
+                "noLastMo": 12620,
+                "noLastQtr": 23300,
+                "noLastYr": 30625
+            }
+        },
+        {
+            "moduleName": "e-Sign",
+            "engagementLevel": "6%",
+            "engagementScore": {
+                "score": 1.5,
+                "scoreLastMo": 0.029,
+                "scoreLastYr": 0.208,
+                "scoreLastQtr": 0.125
+            },
+            "noOfUsers": {
+                "number": 1288579,
+                "noLastMo": 12260,
+                "noLastQtr": 15560,
+                "noLastYr": 109259
+            }
+        },
+        {
+            "moduleName": "Folders",
+            "engagementLevel": "7%",
+            "engagementScore": {
+                "score": 7,
+                "scoreLastMo": -0.020,
+                "scoreLastYr": 0.197,
+                "scoreLastQtr": 0.118
+            },
+            "noOfUsers": {
+                "number": 1503342,
+                "noLastMo": 12890,
+                "noLastQtr": 12810,
+                "noLastYr": 97157
+            }
+        },
+        {
+            "moduleName": "Archivals",
+            "engagementLevel": "7%",
+            "engagementScore": {
+                "score": 7.5,
+                "scoreLastMo": -0.098,
+                "scoreLastYr": 0.048,
+                "scoreLastQtr": 0.028
+            },
+            "noOfUsers": {
+                "number": 1503342,
+                "noLastMo": -10770,
+                "noLastQtr": 22040,
+                "noLastYr": 43851
+            }
+        },
+        {
+            "moduleName": "Videos",
+            "engagementLevel": "6.5%",
+            "engagementScore": {
+                "score": 4.6,
+                "scoreLastMo": 0.115,
+                "scoreLastYr": 0.115,
+                "scoreLastQtr": 0.006
+            },
+            "noOfUsers": {
+                "number": 1395960,
+                "noLastMo": 2380,
+                "noLastQtr": 13490,
+                "noLastYr": 30421
+            }
+        },
+        {
+            "moduleName": "Work Space Share",
+            "engagementLevel": "5%",
+            "engagementScore": {
+                "score": 7.1,
+                "scoreLastMo": 0.017,
+                "scoreLastYr": 0.133,
+                "scoreLastQtr": 0.080
+            },
+            "noOfUsers": {
+                "number": 1073815,
+                "noLastMo": 9080,
+                "noLastQtr": 8120,
+                "noLastYr": 87194
+            }
+        }
+    ],
+    	"Musicians":[
+        {
+            "moduleName": "Premium Delivery",
+            "engagementLevel": "15.5%",
+            "engagementScore": {
+                "score": 11.2,
+                "scoreLastMo": -0.0931,
+                "scoreLastYr": 0.07,
+                "scoreLastQtr": 0.04
+            },
+            "noOfUsers": {
+                "number": 3328829,
+                "noLastMo": 12620,
+                "noLastQtr": 23300,
+                "noLastYr": 30625
+            }
+        },
+        {
+            "moduleName": "Send",
+            "engagementLevel": "45%",
+            "engagementScore": {
+                "score": 18,
+                "scoreLastMo": 0.119,
+                "scoreLastYr": 0.137,
+                "scoreLastQtr": 0.082
+            },
+            "noOfUsers": {
+                "number": 9664342,
+                "noLastMo": -12070,
+                "noLastQtr": 8610,
+                "noLastYr": 48121
+            }
+        },
+        {
+            "moduleName": "e-Sign",
+            "engagementLevel": "6%",
+            "engagementScore": {
+                "score": 1.5,
+                "scoreLastMo": 0.029,
+                "scoreLastYr": 0.208,
+                "scoreLastQtr": 0.125
+            },
+            "noOfUsers": {
+                "number": 1288579,
+                "noLastMo": 12260,
+                "noLastQtr": 15560,
+                "noLastYr": 109259
+            }
+        },
+        {
+            "moduleName": "Folders",
+            "engagementLevel": "7%",
+            "engagementScore": {
+                "score": 7,
+                "scoreLastMo": -0.020,
+                "scoreLastYr": 0.197,
+                "scoreLastQtr": 0.118
+            },
+            "noOfUsers": {
+                "number": 1503342,
+                "noLastMo": 12890,
+                "noLastQtr": 12810,
+                "noLastYr": 97157
+            }
+        },
+        {
+            "moduleName": "Archivals",
+            "engagementLevel": "7%",
+            "engagementScore": {
+                "score": 7.5,
+                "scoreLastMo": -0.098,
+                "scoreLastYr": 0.048,
+                "scoreLastQtr": 0.028
+            },
+            "noOfUsers": {
+                "number": 1503342,
+                "noLastMo": -10770,
+                "noLastQtr": 22040,
+                "noLastYr": 43851
+            }
+        },
+        {
+            "moduleName": "Videos",
+            "engagementLevel": "6.5%",
+            "engagementScore": {
+                "score": 4.6,
+                "scoreLastMo": 0.115,
+                "scoreLastYr": 0.115,
+                "scoreLastQtr": 0.006
+            },
+            "noOfUsers": {
+                "number": 1395960,
+                "noLastMo": 2380,
+                "noLastQtr": 13490,
+                "noLastYr": 30421
+            }
+        },
+        {
+            "moduleName": "Work Space Share",
+            "engagementLevel": "5%",
+            "engagementScore": {
+                "score": 7.1,
+                "scoreLastMo": 0.017,
+                "scoreLastYr": 0.133,
+                "scoreLastQtr": 0.080
+            },
+            "noOfUsers": {
+                "number": 1073815,
+                "noLastMo": 9080,
+                "noLastQtr": 8120,
+                "noLastYr": 87194
+            }
+        }
+    ],
+    	"Photographers":[
+        {
+            "moduleName": "Premium Delivery",
+            "engagementLevel": "15.5%",
+            "engagementScore": {
+                "score": 11.2,
+                "scoreLastMo": -0.0931,
+                "scoreLastYr": 0.07,
+                "scoreLastQtr": 0.04
+            },
+            "noOfUsers": {
+                "number": 3328829,
+                "noLastMo": 12620,
+                "noLastQtr": 23300,
+                "noLastYr": 30625
+            }
+        },
+        {
+            "moduleName": "Send",
+            "engagementLevel": "45%",
+            "engagementScore": {
+                "score": 18,
+                "scoreLastMo": 0.119,
+                "scoreLastYr": 0.137,
+                "scoreLastQtr": 0.082
+            },
+            "noOfUsers": {
+                "number": 9664342,
+                "noLastMo": -12070,
+                "noLastQtr": 8610,
+                "noLastYr": 48121
+            }
+        },
+        {
+            "moduleName": "e-Sign",
+            "engagementLevel": "6%",
+            "engagementScore": {
+                "score": 1.5,
+                "scoreLastMo": 0.029,
+                "scoreLastYr": 0.208,
+                "scoreLastQtr": 0.125
+            },
+            "noOfUsers": {
+                "number": 1288579,
+                "noLastMo": 12260,
+                "noLastQtr": 15560,
+                "noLastYr": 109259
+            }
+        },
+        {
+            "moduleName": "Folders",
+            "engagementLevel": "7%",
+            "engagementScore": {
+                "score": 7,
+                "scoreLastMo": -0.020,
+                "scoreLastYr": 0.197,
+                "scoreLastQtr": 0.118
+            },
+            "noOfUsers": {
+                "number": 1503342,
+                "noLastMo": 12890,
+                "noLastQtr": 12810,
+                "noLastYr": 97157
+            }
+        },
+        {
+            "moduleName": "Archivals",
+            "engagementLevel": "7%",
+            "engagementScore": {
+                "score": 7.5,
+                "scoreLastMo": -0.098,
+                "scoreLastYr": 0.048,
+                "scoreLastQtr": 0.028
+            },
+            "noOfUsers": {
+                "number": 1503342,
+                "noLastMo": -10770,
+                "noLastQtr": 22040,
+                "noLastYr": 43851
+            }
+        },
+        {
+            "moduleName": "Videos",
+            "engagementLevel": "6.5%",
+            "engagementScore": {
+                "score": 4.6,
+                "scoreLastMo": 0.115,
+                "scoreLastYr": 0.115,
+                "scoreLastQtr": 0.006
+            },
+            "noOfUsers": {
+                "number": 1395960,
+                "noLastMo": 2380,
+                "noLastQtr": 13490,
+                "noLastYr": 30421
+            }
+        },
+        {
+            "moduleName": "Work Space Share",
+            "engagementLevel": "5%",
+            "engagementScore": {
+                "score": 7.1,
+                "scoreLastMo": 0.017,
+                "scoreLastYr": 0.133,
+                "scoreLastQtr": 0.080
+            },
+            "noOfUsers": {
+                "number": 1073815,
+                "noLastMo": 9080,
+                "noLastQtr": 8120,
+                "noLastYr": 87194
+            }
+        }
+    ],
+    	"videographers":[
+        {
+            "moduleName": "Premium Delivery",
+            "engagementLevel": "15.5%",
+            "engagementScore": {
+                "score": 11.2,
+                "scoreLastMo": -0.0931,
+                "scoreLastYr": 0.07,
+                "scoreLastQtr": 0.04
+            },
+            "noOfUsers": {
+                "number": 3328829,
+                "noLastMo": 12620,
+                "noLastQtr": 23300,
+                "noLastYr": 30625
+            }
+        },
+        {
+            "moduleName": "Send",
+            "engagementLevel": "45%",
+            "engagementScore": {
+                "score": 18,
+                "scoreLastMo": 0.119,
+                "scoreLastYr": 0.137,
+                "scoreLastQtr": 0.082
+            },
+            "noOfUsers": {
+                "number": 9664342,
+                "noLastMo": -12070,
+                "noLastQtr": 8610,
+                "noLastYr": 48121
+            }
+        },
+        {
+            "moduleName": "e-Sign",
+            "engagementLevel": "6%",
+            "engagementScore": {
+                "score": 1.5,
+                "scoreLastMo": 0.029,
+                "scoreLastYr": 0.208,
+                "scoreLastQtr": 0.125
+            },
+            "noOfUsers": {
+                "number": 1288579,
+                "noLastMo": 12260,
+                "noLastQtr": 15560,
+                "noLastYr": 109259
+            }
+        },
+        {
+            "moduleName": "Folders",
+            "engagementLevel": "7%",
+            "engagementScore": {
+                "score": 7,
+                "scoreLastMo": -0.020,
+                "scoreLastYr": 0.197,
+                "scoreLastQtr": 0.118
+            },
+            "noOfUsers": {
+                "number": 1503342,
+                "noLastMo": 12890,
+                "noLastQtr": 12810,
+                "noLastYr": 97157
+            }
+        },
+        {
+            "moduleName": "Archivals",
+            "engagementLevel": "7%",
+            "engagementScore": {
+                "score": 7.5,
+                "scoreLastMo": -0.098,
+                "scoreLastYr": 0.048,
+                "scoreLastQtr": 0.028
+            },
+            "noOfUsers": {
+                "number": 1503342,
+                "noLastMo": -10770,
+                "noLastQtr": 22040,
+                "noLastYr": 43851
+            }
+        },
+        {
+            "moduleName": "Videos",
+            "engagementLevel": "6.5%",
+            "engagementScore": {
+                "score": 4.6,
+                "scoreLastMo": 0.115,
+                "scoreLastYr": 0.115,
+                "scoreLastQtr": 0.006
+            },
+            "noOfUsers": {
+                "number": 1395960,
+                "noLastMo": 2380,
+                "noLastQtr": 13490,
+                "noLastYr": 30421
+            }
+        },
+        {
+            "moduleName": "Work Space Share",
+            "engagementLevel": "5%",
+            "engagementScore": {
+                "score": 7.1,
+                "scoreLastMo": 0.017,
+                "scoreLastYr": 0.133,
+                "scoreLastQtr": 0.080
+            },
+            "noOfUsers": {
+                "number": 1073815,
+                "noLastMo": 9080,
+                "noLastQtr": 8120,
+                "noLastYr": 87194
+            }
+        }
+    ]
+     }
     }
 }

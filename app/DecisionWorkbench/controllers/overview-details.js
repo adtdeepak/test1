@@ -1,6 +1,6 @@
 angular.module('DecisionWorkbench')
 
-.controller( "overviewDetailsController", function($scope, DataService, CustomService, ChartOptionsService, $rootScope, UtilitiesService, chartsService, $location) {	
+.controller( "overviewDetailsController", function($scope, DataService, CustomService, ChartOptionsService, $rootScope, UtilitiesService, chartsService, $location, DataConversionService ) {	
 	
 	$scope.selectedGroup = [{"key":"All Users","selected":false},{"key":"Project Managers","selected": false},{"key":"Enterprise users","selected": false},
 	                        {"key":"Finance executives","selected": false},{"key":"Musicians","selected": false},{"key":"Photographers","selected": false},
@@ -47,14 +47,79 @@ angular.module('DecisionWorkbench')
 	$scope.overallDataSuccess = function(response){
 		$scope.overallResponse = response.data.bestCampaignOptions;
 		$scope.campaignData = response.data.bestCampaignOptions.allUsers;
+		$scope.activityEngagementOverallData = response.data.activityEngagementData;
 		getSelectedGroupFromUrl();
 		//$scope.addData(response.data.allUsers);
 		
 	}
 	
 	$scope.updateExpandData = function(){
+		
+		var dataSetObject = $scope.activityEngagementOverallData[$scope.groupHeading];
+		var dataSet = [];
+		
+		$.each(dataSetObject, function (key, obj) {
+			dataSet.push([obj.moduleName,
+			              obj.engagementLevel,
+			              obj.engagementScore.score,
+			              obj.engagementScore.scoreLastMo,
+			              obj.engagementScore.scoreLastQtr,
+			              obj.engagementScore.scoreLastYr,
+			              obj.noOfUsers.number,
+			              obj.noOfUsers.noLastMo,
+			              obj.noOfUsers.noLastQtr,
+			              obj.noOfUsers.noLastYr]);
+		});
+		$(document).ready(function() {
+		    $('#demo').html( '<table cellpadding="0" cellspacing="0" border="0" class="display" id="example"></table>' );
+		 
+		    $('#example').dataTable( {
+		    	"bPaginate":false,
+		        "data": dataSet,
+		        "bFilter": false,
+		        "bInfo": false,
+		        "columns": [
+		            { "title": "Module" },
+		            { "title": "Engagement Level" },
+		            { "title": "Engagement Score" },
+		            { "title": "Last Month", "class": "center" },
+		            { "title": "Last Quarter", "class": "center" },
+		            { "title": "Last Year", "class": "center" },
+		            { "title": "No. of users", "class": "center" },
+		            { "title": "Last Month", "class": "center" },
+		            { "title": "Last Quarter", "class": "center" },
+		            { "title": "Last Year", "class": "center" }
+		        ]
+		    } );   
+		} );
+		
 		var chartOptions;
-		var chartData; var xAxisData = [' ', ' '];
+		var chartData;
+
+		var data = {
+	        	"activeUsers":{
+	        		"name":["", "", ""],
+	        		"values":[14, 49, 14],
+	        		"color":"#05395d"
+	        	}};
+		
+		var dataHere = {
+			"name":["Jan-15", "Feb-15", "Mar-15", "Apr-15","May-15", "Jun-15", "Jul-15", "Aug-15", "Sep-15", "Oct-15", "Nov-15", "Dec-15"],
+			"values":[50, 75, 50, 75, 50, 75, 50, 75, 50, 75],
+			"color":"#1b6395"
+		};
+		
+		chartData = DataConversionService.getHorizontalBarChartData(data.activeUsers);
+		chartOptions = ChartOptionsService.activeUsersAreaChart(chartData, "Engagement", "", 300);
+		chartOBJ = chartsService.areaChart.call($('.engagementChart'),chartOptions, $scope);
+		
+		chartData = DataConversionService.getHorizontalBarChartData(dataHere);
+	    chartOptions = ChartOptionsService.getColumnBarChart(chartData, "Month of joining", "", 300, "#BCBCBC");
+		chartOBJ = chartsService.basicBar.call($('.monthBarChart'),chartOptions, $scope);
+		
+		
+		
+		var xAxisData = [' ', ' '];
 	    var data = [{
 	    	name: "Conversion",
 	    	data:[3],
@@ -145,5 +210,10 @@ angular.module('DecisionWorkbench')
 	
 	} 
 	getAllUserTableData();
+	
+	
+	
+	
+
 })
 

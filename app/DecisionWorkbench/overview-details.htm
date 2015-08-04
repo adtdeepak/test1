@@ -65,22 +65,40 @@
 					</div>
 			</div>
 		</div>
+		<!-- <div id="demo">
+			<div id="example">
+			</div>
+		</div> -->
+		
 	</div>
 </div>
 
+
+
+
+
+
+
+
 <script>
-		$(document).ready(function(){
-			$(".xclose").click(function(){
-				window.temp = $(this);
-				$(this).toggleClass("expandclose");
-				$(this).parents().closest('.collapsibleDiv').next().collapse('toggle');
-			});
-			
-			$(".dropdown-menu li a").click(function(){
-			      $(this).parents().closest('.btn-group').find(".btn:first-child").text($(this).text());
-			      $(this).parents().closest('.btn-group').find(".btn:first-child").val($(this).text());
+	$(document).ready(
+			function() {
+				$(".xclose").click(
+						function() {
+							window.temp = $(this);
+							$(this).toggleClass("expandclose");
+							$(this).parents().closest('.collapsibleDiv').next()
+									.collapse('toggle');
+						});
+
+				$(".dropdown-menu li a").click(
+						function() {
+							$(this).parents().closest('.btn-group').find(
+									".btn:first-child").text($(this).text());
+							$(this).parents().closest('.btn-group').find(
+									".btn:first-child").val($(this).text());
+
+						});
 
 			});
-
-		});
 </script>

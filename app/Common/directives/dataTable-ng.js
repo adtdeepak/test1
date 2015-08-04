@@ -133,17 +133,57 @@ angular.module('AnalyticsApp')
         		'<div class="row nopadding">'+
     			'<div class="heading-overview">'+'Incremental Impact'+'</div>'+
     			'<div class="row brdr-dashed">'+
-    			'<div class="col-sm-4 col-md-4 col-lg-4">'+
-    			'<div class="acqChart conversionChart"></div>'+
-    			'</div>'+
     				'<div class="col-sm-4 col-md-4 col-lg-4">'+
-    					'<div class="acqChart convertedUserChart"></div>'+
+    					'<div class="acqChart conversionChart">'+'</div>'+
     				'</div>'+
     				'<div class="col-sm-4 col-md-4 col-lg-4">'+
-    					'<div class="acqChart revenueChart"></div>'+
+    					'<div class="acqChart convertedUserChart">'+'</div>'+
+    				'</div>'+
+    				'<div class="col-sm-4 col-md-4 col-lg-4">'+
+    					'<div class="acqChart revenueChart">'+'</div>'+
     				'</div>'+
     			'</div>'+
-    		'</div>'+'</div>'
+    			'<div class="heading-overview">'+'Description of user group'+'</div>'+
+    			'<div class="row brdr-dashed">'+
+    				'<div class="row nopadding">'+'</div>'+
+    					'<div class="half-width">'+
+    						'<div class="col-sm-4 col-md-4 col-lg-4">'+
+    							'<div class="icon-widget all-user-image">'+'</div>'+
+    							'<div class="text-bold" style="text-align:center;">'+'678,457'+'</div>'+
+    							'<div class="icon-widget-text text-bold bkgd-none">'+'Young Job Hoppers'+'</div>'+
+    						'</div>'+
+    						'<div class="col-sm-4 col-md-4 col-lg-4">'+
+    							'<div class="icon-widget" style="padding-top:30px;">'+
+    								'<div class="text-bold" style="text-align:center;padding-top:5px;">'+'65% Male'+'</div>'+
+    								'<div class="text-bold" style="text-align:center;padding-top:5px;">'+'35% Female'+'</div>'+
+    							'</div>'+
+    							'<div class="text-bold" style="text-align:center;">'+'Active users 40%'+'</div>'+
+    							'<div class="icon-widget-text text-bold bkgd-none">'+'</div>'+
+    						'</div>'+
+    						'<div class="col-sm-4 col-md-4 col-lg-4">'+
+    							'<div class="icon-widget">'+'</div>'+
+    							'<div class="text-bold" style="text-align:center;">'+'257,645'+'</div>'+
+    							'<div class="text-bold" style="text-align:center;">'+'App users 40%'+'</div>'+
+    							'<div class="icon-widget-text text-bold bkgd-none">'+'</div>'+
+    						'</div>'+
+    					'</div>'+
+    					'<div class="half-width">'+
+    						'<div class="col-sm-12 col-md-12 col-lg-12">'+
+    							'<div class="acqChart monthBarChart">'+'</div>'+
+    						'</div>'+
+    					'</div>'+
+    				'<div class="row nopadding">'+
+    					'<div class="col-sm-12 col-md-12 col-lg-12">'+
+    						'<div class="acqChart engagementChart">'+'</div>'+
+    					'</div>'+
+    				'</div>'+
+    			'</div>'+
+    			'<div class="heading-overview">'+'Activity Engagement'+'</div>'+
+    			'<div id="demo">'+
+    				'<div id="example">'+'</div>'+
+    			'</div>'+
+    		'</div>'+
+    	'</div>'
         	};
            /* $timeout(function () { $compile(element.contents())(scope); }, 100);*/
         },

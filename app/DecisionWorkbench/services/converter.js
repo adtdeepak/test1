@@ -365,6 +365,17 @@ angular.module('DecisionWorkbench')
 		resultData['engagedUserGroups'] = engagedUserGroupsData;
 		resultData['engagedActivities'] = engagedActivitiesData;
 		return resultData;
-	}
+	};
+	
+	this.getHorizontalBarChartData = function(data){
+	    var resultData = {};
+	    var xAxisData = data.name;
+	    var values = data.values;
+	    resultData['xAxisData'] = xAxisData;
+	    resultData['data'] = values;
+	    resultData['color'] = data.color;
+	    
+		return resultData;
+	};
 
 });
