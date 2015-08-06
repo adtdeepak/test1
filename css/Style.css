@@ -665,7 +665,7 @@ h1.pull-left {
 .contentpannel {
 	width: 100%;
 	position: relative;
-	padding: 10px;
+	padding: 0px;
 	display: inline-block;
 	box-sizing: border-box;
 }
@@ -4176,7 +4176,7 @@ ul.acquisitiontabs li:last-child {
 
 .box-list>li .box-listShadow:hover  .value-green,.box-list>li .box-listShadow:hover  .value-orange,.box-list>li .box-listShadow:hover  .value-red
 	{
-	color: #fff;
+	color: #f5874f;
 }
 
 .box-list>li  .duration,.box-list>li  .duration1 {
