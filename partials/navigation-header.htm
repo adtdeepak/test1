@@ -14,8 +14,55 @@
 	    </div>
 		<div class="collapse navbar-collapse" id="phoneNavbar">
 			<ul class="nav navbar-nav navbar-right">
-				<li ng-class="{active: mainHtml=='home'}"><a href="home.htm">Home</a></li>					
+				<li ng-class="{active: mainHtml=='home'}"><a href="home.htm">Home</a></li>	
+                <li class="dropdown" ng-class="{active: mainHtml=='dashboard'|| mainHtml=='tracking'}">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+					Track
+					<span class="caret"></span></a>
+					<ul class="dropdown-menu" ng-controller="dwLinkController">
+						<!-- <li class="first" ng-click="navModuleClicked(trackingHtmlName, '#/summary')"><a href="#/summary"
+							ng-class="{active: thisPage=='/summary'}">Summary</a></li> -->
+						<li ng-click="navModuleClicked(analysisHtmlname, '#/business-analysis')">
+                         <a tabindex="-1" href="#/business-analysis">Business Analysis</a></li>
+						<li ng-click="navModuleClicked(trackingHtmlName, '#/engagement-activity')"><a ng-if="isEngagementTabVisible"
+							href="#/engagement-activity"
+							ng-class="{active: thisPage=='/engagement-activity'}">Engagement
+								Activity</a></li>
+						<li><a ng-if="false" href="#/channel-tracker"
+							ng-class="{active: thisPage=='/channel-tracker'}">Channel
+								Tracker</a></li>
+						<li><a ng-if="false" href="#/campaign-tracker"
+							ng-class="{active: thisPage=='/campaign-tracker'}">Campaign
+								Tracker</a></li>
+						<li ng-click="navModuleClicked(trackingHtmlName, '#/user-group-engagement')"><a ng-if="isUserGroupTabVisible"
+							href="#/user-group-engagement"
+							ng-class="{active: thisPage=='/user-group-engagement'}">User
+								Groups</a></li>
+					</ul></li>
 				
+                 	
+				<li class="dropdown"  ng-class="{active: mainHtml=='analysis'}"><a class="dropdown-toggle"
+					data-toggle="dropdown" href="#">
+					{{analysis_tab_name}}<span
+						class="caret"></span></a>
+					<ul class="dropdown-menu" ng-controller="dwLinkController">
+					
+                        
+                           <li><a tabindex="-1" href="#/segmentation">Customer Analysis</a>
+                                       
+                           </li>
+                           <li  class="dropdown-submenu" ng-click="navModuleClicked(analysisHtmlname, '#/segmentation')">
+                         <a tabindex="-1" >Segmentation</a>
+                         <ul class="dropdown-menu"	ng-click="trackUrlClicked(trackingHtmlName)">
+                                   
+					          <li ng-click="navModuleClicked(analysisHtmlname, '#/customer-landscape-subs')"><a tabindex="-1" href="#customer-landscape-subs">Overview</a></li>                         
+                                 <li ng-click="navModuleClicked(analysisHtmlname, '#/segment-membership-subs')"><a tabindex="-1" href="#segment-membership-subs">Deepdive</a></li>
+                               </ul> 
+                        </li>
+                        
+                         </ul>                       
+				</li>
+                
 				<li class="dropdown" ng-class="{active: mainHtml=='campaign-options' || mainHtml=='decision-workbench'}">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#"> {{decisionWorkbenchTab}}
 					 <span class="caret"></span></a>
@@ -33,53 +80,6 @@
 							<li ng-click="navModuleClicked(decisionWorkbenchHtmlName, '#/selected')"><a href="#/selected">
 							Selected</a></li>
 					</ul></li>
-                 	<li class="dropdown" ng-class="{active: mainHtml=='dashboard'|| mainHtml=='tracking'}">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-					{{home_track_text}}
-					<span class="caret"></span></a>
-					<ul class="dropdown-menu" ng-controller="dwLinkController">
-						<!-- <li class="first" ng-click="navModuleClicked(trackingHtmlName, '#/summary')"><a href="#/summary"
-							ng-class="{active: thisPage=='/summary'}">Summary</a></li> -->
-						<!-- <li><a ng-if="isBusinessImpactTabVisible"
-							href="#/business-impact"
-							ng-class="{active: thisPage=='/business-impact'}">Business
-								Impact</a></li> -->
-						<li ng-click="navModuleClicked(trackingHtmlName, '#/engagement-activity')"><a ng-if="isEngagementTabVisible"
-							href="#/engagement-activity"
-							ng-class="{active: thisPage=='/engagement-activity'}">Engagement
-								Activity</a></li>
-						<li><a ng-if="false" href="#/channel-tracker"
-							ng-class="{active: thisPage=='/channel-tracker'}">Channel
-								Tracker</a></li>
-						<li><a ng-if="false" href="#/campaign-tracker"
-							ng-class="{active: thisPage=='/campaign-tracker'}">Campaign
-								Tracker</a></li>
-						<li ng-click="navModuleClicked(trackingHtmlName, '#/user-group-engagement')"><a ng-if="isUserGroupTabVisible"
-							href="#/user-group-engagement"
-							ng-class="{active: thisPage=='/user-group-engagement'}">User
-								Groups</a></li>
-					</ul></li>
-				<li class="dropdown"  ng-class="{active: mainHtml=='analysis'}"><a class="dropdown-toggle"
-					data-toggle="dropdown" href="#">
-					{{analysis_tab_name}}<span
-						class="caret"></span></a>
-					<ul class="dropdown-menu" ng-controller="dwLinkController">
-					<li ng-click="navModuleClicked(analysisHtmlname, '#/business-analysis')">
-                         <a tabindex="-1" href="#/business-analysis">Business Analysis</a></li>
-                        
-                           <li><a tabindex="-1" href="#/segmentation">Customer Analysis</a>
-                                       
-                           </li>
-                           <li  class="dropdown-submenu" ng-click="navModuleClicked(analysisHtmlname, '#/segmentation')">
-                         <a tabindex="-1" >Segmentation</a>
-                         <ul class="dropdown-menu"	ng-click="trackUrlClicked(trackingHtmlName)">
-                                   
-					          <li ng-click="navModuleClicked(analysisHtmlname, '#/customer-landscape-subs')"><a tabindex="-1" href="#customer-landscape-subs">Overview</a></li>                         
-                                 <li ng-click="navModuleClicked(analysisHtmlname, '#/segment-membership-subs')"><a tabindex="-1" href="#segment-membership-subs">Deepdive</a></li>
-                               </ul> 
-                        </li>
-                         </ul>                       
-				</li>
                    <li style="border-left:1px solid #ccc;" class="dropdown"><a style="padding: 4px 5px 4px 20px;" class="dropdown-toggle"
 					data-toggle="dropdown" href="#" ng-controller="dwLinkController"><img width="35" src="images/profile-pic.png" alt="D-ASSIST $ CONVERTER"	title="D-ASSIST $ CONVERTER" />
 			

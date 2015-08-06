@@ -6725,6 +6725,8 @@ a.list-group-item-danger.active, a.list-group-item-danger:focus, a.list-group-it
 }
 .panel-heading {
     border-radius: 4px 4px 0 0;
+    font-weight:600;
+    adding-left:2px;
 }
 .panel-title {
     color: #434a54;

@@ -933,7 +933,7 @@ h1.pull-left {
 	background: #ffffff;
 	text-align: center !important;
 	list-style: none;
-	padding: 3px 10px 3px 10px;
+	
 	margin-right: 8px;
 	font-size: 13px;
     border: 1px solid #ccc;
@@ -941,14 +941,25 @@ h1.pull-left {
 	color: #525252;
 	font-weight: normal;
 }
+#timePeriodTabs ul li:hover{
+	
+	background: #666;	
+    color:#fff !important;
+	
+	
+}
 
 #timePeriodTabs ul li a {
 	color: #525252;
 	text-decoration: none;
 	text-align: center !important;
 	font-size: 13px;
+    padding: 3px 10px 3px 10px;
 	line-height: 21px;
 	display: inline-block;
+}
+#timePeriodTabs ul li a:hover{
+	color: #fff;
 }
 
 #timePeriodTabs ul li.active {
@@ -1458,6 +1469,7 @@ li.iconExport ul li a img:hover {
 	width: 17px !important;
 	height: 25px !important;
 }
+.Printicon:hover {background: #666;}
 
 .iconExport {
 	background: url("../images/download.png")!important;
@@ -8298,7 +8310,7 @@ div#progressBar {
 }
 .metric-widgets>li :hover  .value-green,.metric-widgets>li :hover  .value-orange,.metric-widgets>li :hover  .value-red
 	{
-	color: #fff;
+	color: #f5874f;
 }
 .metric-widgets>li .value1 {
   margin-top: 10px;
