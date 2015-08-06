@@ -29,7 +29,7 @@ angular.module('DecisionWorkbench')
 			'fnCreatedRow': function (nRow, aData, iDataIndex) {
 				  $.each($('td', nRow), function (colIndex) {
 					  if(aData){
-						  $(this).attr('attr', aData[1]);
+						  $(this).attr('attr', 'All Users&selectedId='+aData[0]);
 					  }
 			            // For example, adding data-* attributes to the cell
 			           /* $(this).attr('attr', "Enterprise users");*/
@@ -46,8 +46,37 @@ angular.module('DecisionWorkbench')
 			}
 		};
 		$.extend(true, $scope.options, columOptions);
-		$.extend(true, $scope.userTableOptions, columOptions);
-		$.extend(true, $scope.featuresOptions, columOptions);
+		var columOptionsAttr = {
+				"aoColumns" : [ {
+					"sClass" : "each-row-details"
+				}, {
+					"sClass" : "each-row-details"
+				}, {
+					"sClass" : "each-row-details"
+				}, {
+					"sClass" : "each-row-details"
+				},null, null],
+				'fnCreatedRow': function (nRow, aData, iDataIndex) {
+					  $.each($('td', nRow), function (colIndex) {
+						  if(aData){
+							  $(this).attr('attr', aData[1]+'&selectedId='+aData[0]);
+						  }
+				            // For example, adding data-* attributes to the cell
+				           /* $(this).attr('attr', "Enterprise users");*/
+				        });
+			    },
+			    "bPaginate":false,
+				"fnRowCallback" : function(nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+					if(iDisplayIndex%2 != 0){
+						className = "oddRowColor";
+					}else{
+						className = "evenRowColor";
+					}
+					$(nRow).addClass(className);
+				}
+			};
+		$.extend(true, $scope.userTableOptions, columOptionsAttr);
+		$.extend(true, $scope.featuresOptions, columOptionsAttr);
 
 	
 	$scope.addData = function(data) {

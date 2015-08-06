@@ -92,7 +92,7 @@
 				</div>
 			</div>
 			<div class="collapse in">
-				<table class="table borderless smSubsTable noMarginBtm campaign-overview-details" my-table  options="options" table-data="updateExpandData">
+				<table class="table borderless smSubsTable noMarginBtm campaign-overview-details" my-table  options="options" table-data="updateExpandData" function-call="selectRow">
 					<colgroup>
 						<col width="10%">
 						<col width="20%">
@@ -139,7 +139,7 @@
 			function() {
 				$(".xclose").click(
 						function() {
-							window.temp = $(this);
+							console.log("ppppppppp")
 							$(this).toggleClass("expandclose");
 							$(this).parents().closest('.collapsibleDiv').next()
 									.collapse('toggle');
