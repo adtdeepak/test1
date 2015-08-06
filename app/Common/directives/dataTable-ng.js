@@ -38,6 +38,7 @@ angular.module('AnalyticsApp')
             
             var previous = "";var previousRow = -1;var previousRowCollapse="";
             $('.dataTableContainer').on('click', 'td.row-expand-details', function () {
+            	console.log("td.row-expand-details", $(this).find('.xclose'));
             	$(this).find('.xclose').addClass("expandclose");
             	if(previousRowCollapse){
             		previousRowCollapse.find('.xclose').removeClass("expandclose");
@@ -57,8 +58,12 @@ angular.module('AnalyticsApp')
                   }
                   else {
                       // Open this row
-                    var rowCount = $('.accordionTable1').find('tr[role="row"]').index($(this).closest('tr'))-1;
+                    //var rowCount = $('.accordionTable1').find('tr[role="row"]').index($(this).closest('tr'))-1;
                     row.child(formatHtml()).show();
+                    $compile(element.contents())(scope);
+                    if($(this).attr('attr')){
+                        scope.functionCall($(this).attr('attr'));
+                    }
                     scope.tableData();
                     tr.addClass('shown');
                     previousRow = currentRow;
@@ -67,8 +72,8 @@ angular.module('AnalyticsApp')
                 	previousRow = -1;
                 	previousRowCollapse="";
                 }
-                previous = row
-              
+                previous = row;
+                
             });
             
             function handleModelUpdates(newData) {
@@ -190,7 +195,8 @@ angular.module('AnalyticsApp')
         scope: {
             options: "=",
             tableData: '=',
-            otherData: '='
+            otherData: '=',
+            functionCall:'='
         }
     };
 })

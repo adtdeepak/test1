@@ -78,6 +78,7 @@ angular.module('AnalyticsApp')
 
 		/* Generalised click event for xclose btns */
 		$(document).off('click',".xclose").on('click',".xclose",function () {
+			console.log("ppppppppooooooo")
 			$(this).toggleClass("expandclose");
 			$(this).closest('div').find('.filterContainer, .Acquisition').slideToggle("slow");
 			$('html, body').animate({

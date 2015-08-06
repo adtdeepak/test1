@@ -2651,14 +2651,23 @@ span.Fheading {
 	text-align: center;
 }
 
-table td {
-	background: #ffffff;
-	border-right: 1px solid #ced5da !important;
-	border-bottom: 1px solid #cbd3d8 !important;
+.campaign-overview table.dataTable tr.oddRowColor{
+	background: #e9e9e9 !important;
+}
+.campaign-overview table.dataTable tr.evenRowColor{
+	background: #f6f6f6 !important;
 }
 
+table:not(.campaign-overview-details) tr:hover td {
+	 background: #d8fbf8; 
+}
+table td {
+	border-right: 1px solid #ced5da !important;
+	border-bottom: 1px solid #cbd3d8 !important;
+} 
+
 table:not(.accordionTable) tr:hover td {
-	background: #d8fbf8;
+	/* background: #d8fbf8; */
 }
 
 table {
@@ -8585,12 +8594,11 @@ div#progressBar {
     padding: 0px;
   /*  background:#132D52;*/
 }
+
 .overview-detail-tabs li:hover {
   background: #ffffff !important;  border: 2px solid #132D52;
   border-radius: 5px;
 }
-
-
 
 .overview-detail-tabs li.active .icon-widget-text{
   background: #ffffff;

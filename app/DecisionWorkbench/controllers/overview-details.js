@@ -1,11 +1,13 @@
 angular.module('DecisionWorkbench')
 
-.controller( "overviewDetailsController", function($scope, DataService, CustomService, ChartOptionsService, $rootScope, UtilitiesService, chartsService, $location, DataConversionService ) {	
+.controller( "overviewDetailsController", function($scope, DataService,$timeout, CustomService, ChartOptionsService, $rootScope, UtilitiesService, chartsService, $location, DataConversionService ) {	
 	
 	$scope.selectedGroup = [{"key":"All Users","selected":false},{"key":"Project Managers","selected": false},{"key":"Enterprise users","selected": false},
 	                        {"key":"Finance executives","selected": false},{"key":"Musicians","selected": false},{"key":"Photographers","selected": false},
 	                        {"key":"videographers","selected": false}];
 
+	var initialExpand  = true;
+	var urlSelectedRowId = '';
 	function getSelectedGroupFromUrl(){
 		var urlIndex = $location.search();
 		$.each($scope.selectedGroup, function(key, value){
@@ -15,11 +17,12 @@ angular.module('DecisionWorkbench')
 			}
 		})
 		$scope.groupHeading = urlIndex.selectedGroup;
+		$scope.selectedRowId = urlIndex.selectedId;
+		urlSelectedRowId = urlIndex.selectedId;
 		$scope.addData($scope.overallResponse[urlIndex.selectedGroup]);
 		
 	}
 	$scope.broadcastselectedGroup = function (selectedGroup, index) {
-		console.log("selectedGroup",selectedGroup)
 		$.each($scope.selectedGroup, function(key, value){
 			$scope.selectedGroup[key].selected= false;
 			if(key == index){
@@ -47,16 +50,21 @@ angular.module('DecisionWorkbench')
 	$scope.overallDataSuccess = function(response){
 		$scope.overallResponse = response.data.bestCampaignOptions;
 		$scope.campaignData = response.data.bestCampaignOptions.allUsers;
+		$scope.otherAccordianData = response.data.otherData;
 		$scope.activityEngagementOverallData = response.data.activityEngagementData;
 		getSelectedGroupFromUrl();
 		//$scope.addData(response.data.allUsers);
 		
 	}
 	
+	$scope.selectRow = function(attribute){
+		$scope.selectedRowId = attribute;
+	}
 	$scope.updateExpandData = function(){
-		
-		var dataSetObject = $scope.activityEngagementOverallData[$scope.groupHeading];
+		var dataSetObject = $scope.activityEngagementOverallData[$scope.groupHeading][$scope.selectedRowId];
 		var dataSet = [];
+		var accordianTrendData = $scope.otherAccordianData[$scope.groupHeading][$scope.selectedRowId];
+		$scope.userGroupData =  $scope.otherAccordianData[$scope.groupHeading][$scope.selectedRowId].userGroup.otherData;
 		
 		$.each(dataSetObject, function (key, obj) {
 			dataSet.push([obj.moduleName,
@@ -89,81 +97,41 @@ angular.module('DecisionWorkbench')
 		            { "title": "Last Month", "class": "center" },
 		            { "title": "Last Quarter", "class": "center" },
 		            { "title": "Last Year", "class": "center" }
-		        ]
+		        ],
+            dom: '<"dataTableContainer"t><"dataTablePaginateContainer"p>'
 		    } );   
 		} );
 		
 		var chartOptions;
 		var chartData;
-
-		var data = {
-	        	"activeUsers":{
-	        		"name":["", "", ""],
-	        		"values":[14, 49, 14],
-	        		"color":"#05395d"
-	        	}};
 		
-		var dataHere = {
-			"name":["Jan-15", "Feb-15", "Mar-15", "Apr-15","May-15", "Jun-15", "Jul-15", "Aug-15", "Sep-15", "Oct-15", "Nov-15", "Dec-15"],
-			"values":[50, 75, 50, 75, 50, 75, 50, 75, 50, 75],
-			"color":"#1b6395"
-		};
-		
-		chartData = DataConversionService.getHorizontalBarChartData(data.activeUsers);
+		chartData = DataConversionService.getHorizontalBarChartData(accordianTrendData.engagement.trend);
 		chartOptions = ChartOptionsService.activeUsersAreaChart(chartData, "Engagement", "", 300);
 		chartOBJ = chartsService.areaChart.call($('.engagementChart'),chartOptions, $scope);
 		
-		chartData = DataConversionService.getHorizontalBarChartData(dataHere);
+		chartData = DataConversionService.getHorizontalBarChartData(accordianTrendData.userGroup.trend);
 	    chartOptions = ChartOptionsService.getColumnBarChart(chartData, "Month of joining", "", 300, "#BCBCBC");
 		chartOBJ = chartsService.basicBar.call($('.monthBarChart'),chartOptions, $scope);
 		
-		
-		
 		var xAxisData = [' ', ' '];
-	    var data = [{
-	    	name: "Conversion",
-	    	data:[3],
-	    	color:"#999999"
-	    },{
-	    	name: "Conversion",
-	    	data:[5],
-	    	color:"#009E0F"
-	    }];
 	    var chartDataObj = {};
 	    chartDataObj['xAxisData'] = xAxisData;
-	    chartDataObj['data'] = data;
+	    chartDataObj['data'] = accordianTrendData.impact.conversion.data;
+
 	    
 	    chartOptions = ChartOptionsService.getOverviewColumnChart(chartDataObj, " ", "Increase in % Conversion", 300);
 		chartOBJ = chartsService.columnChart.call($('.conversionChart'),chartOptions, $scope);
 		
-	  var data = [{
-	    	name: "Conversion",
-	    	data:[20353],
-	    	color:"#999999"
-	    },{
-	    	name: "Conversion",
-	    	data:[33922],
-	    	color:"#009E0F"
-	    }];
 	    var chartDataObj = {};
 	    chartDataObj['xAxisData'] = xAxisData;
-	    chartDataObj['data'] = data;
+	    chartDataObj['data'] = accordianTrendData.impact.userConverted.data;
 	    
 	    chartOptions = ChartOptionsService.getOverviewColumnChart(chartDataObj, " ", "Increase in # of user converted", 300);
 		chartOBJ = chartsService.columnChart.call($('.convertedUserChart'),chartOptions, $scope);
 		
-		 var data = [{
-		    	name: "Conversion",
-		    	data:[793],
-		    	color:"#999999"
-		    },{
-		    	name: "Conversion",
-		    	data:[1322],
-		    	color:"#009E0F"
-		    }];
 		    var chartDataObj = {};
 		    chartDataObj['xAxisData'] = xAxisData;
-		    chartDataObj['data'] = data;
+		    chartDataObj['data'] = accordianTrendData.impact.revenue.data;
 		    
 		    chartOptions = ChartOptionsService.getOverviewColumnChart(chartDataObj, " ", "Increase in Revenue (LTV = $39)", 300);
 			chartOBJ = chartsService.columnChart.call($('.revenueChart'),chartOptions, $scope);
@@ -174,7 +142,29 @@ angular.module('DecisionWorkbench')
 			{
 				"sClass" : "row-expand-details"
 			}],
-			"bPaginate":false
+			"bPaginate":false,
+			'fnCreatedRow': function (nRow, aData, iDataIndex) {
+				  $.each($('td', nRow), function (colIndex) {
+					  if(aData){
+						  $(this).attr('attr', aData[0]);
+					  }
+			            // For example, adding data-* attributes to the cell
+			           /* $(this).attr('attr', "Enterprise users");*/
+			        });
+		    },
+			"fnRowCallback" : function(nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+				var className = "";
+				
+				if(aData[0] == urlSelectedRowId){
+					className = "expandRow";
+				}
+				if(iDisplayIndex%2 != 0){
+					className += " oddRowColor";
+				}else{
+					className += " evenRowColor";
+				}
+				$(nRow).addClass(className);
+			}
 		};
 		$.extend(true, $scope.options, columOptions);
 	
@@ -194,6 +184,13 @@ angular.module('DecisionWorkbench')
 		} catch (e) {
 			$scope.fail(errorConstants.DATA_ERR);
 		}
+		$timeout(function () {$(".dataTableContainer .expandRow td.row-expand-details .xclose").trigger('click');}, 200);
+		/*if(initialExpand){
+			$timeout(function () {$(".dataTableContainer .expandRow td.row-expand-details .xclose").trigger('click');}, 200);
+			initialExpand = false;
+		}*/
+	
+		
 	};
 	
 	function getAllUserTableData() {
