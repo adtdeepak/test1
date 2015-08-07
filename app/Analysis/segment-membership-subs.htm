@@ -70,13 +70,13 @@
         </ul>    
     </div>
    
-	<div class="row acquisition-panel nopadding" id="overview-div" style="margin-top:20px !important; background:#fff;" ng-controller="overviewController">
+	<div class="row acquisition-panel nopadding" id="overview-div" style="margin-top:20px !important; background:#fff;" ng-controller="overviewUsergroupController">
         
 		<div class="row nopadding">
 				
 			<div class="half-width">
 				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
-                    <div class="acqChart" id="signupPieChart"></div>                    		
+                    <div class="acqChart" id="userPieChart"></div>                    		
 				</div>
 				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
 					<div style="border:1px solid  #3ea8dc; margin-top:70px;" class="brdr-left ">
@@ -86,12 +86,12 @@
 						</div>
 						<div class="widget-content metric-widgets">
 							<div class="row-fluid">
-								<div class="actual-value"><span  style="color: #3ea8dc;">9 Million</span></div>
+								<div class="actual-value"><span  style="color: #3ea8dc;">{{overviewData.totalUser.value}} Million</span></div>
 							</div>
 							<div class="box-content-bottom">
 								<ul>
 									
-									<li class="up">+10% YoY</li>
+									<li class="up">{{overviewData.totalUser.yoy}}% YoY</li>
 								</ul>
 							</div>
 						</div>
@@ -107,12 +107,12 @@
 						</div>
 						<div class="widget-content metric-widgets">
 							<div class="row-fluid">
-								<div class="actual-value"><span style="color: #1b6395;">7.1 Million</span></div>
+								<div class="actual-value"><span style="color: #1b6395;">{{overviewData.freeUser.value}} Million</span></div>
 							</div>
 							<div class="box-content-bottom">
 								<ul>
 									
-									<li class="up">+13% YoY</li>
+									<li class="up">{{overviewData.freeUser.yoy}}% YoY</li>
 								</ul>
 							</div>
 						</div>
@@ -126,12 +126,12 @@
 						</div>
 						<div class="widget-content metric-widgets">
 							<div class="row-fluid">
-								<div class="actual-value"><span style="color: #3ea8dc;">1.9 Million</span></div>
+								<div class="actual-value"><span style="color: #3ea8dc;">{{overviewData.paidUser.value}} Million</span></div>
 							</div>
 							<div class="box-content-bottom">
 								<ul>
 									
-									<li class="up">+4% YoY</li>
+									<li class="up">{{overviewData.paidUser.yoy}}% YoY</li>
 								</ul>
 							</div>
 						</div>
@@ -143,7 +143,7 @@
 	</div>
 
 
-	<div   ng-controller="profileController">
+	<div   ng-controller="profileUsergroupController">
 		<div style="border:1px solid #ccc; padding-bottom:15px !important;" class="row nopadding">
 				<div style="margin-bottom:15px;" class="panel panel-default">
 					<div class="panel-heading">Product profile</div>
@@ -153,13 +153,13 @@
 				
                 <div class="col-xs-6">
 					<div style="background: #fff none repeat scroll 0 0;
-    border: 1px solid #ccc;" class="acqChart" id="accessDonutChart"></div>
+    border: 1px solid #ccc;" class="acqChart" id="userProfileTrend"></div>
 				</div>
              
 			
 				<div  class="col-xs-6">
 					<div style="background: #fff none repeat scroll 0 0;
-    border: 1px solid #ccc;" class="acqChart" id="platformDonutChart"></div>
+    border: 1px solid #ccc;" class="acqChart" id="revenueProfileTrend"></div>
 				</div>
 				
 			</div>
@@ -173,15 +173,15 @@
 			<div class="full-width">
 				
                 <div class="col-md-4">
-					<div class="acqChart" id="genderPieChart"></div>
+					<div class="acqChart" id="genderProfileChart"></div>
 				</div>
                 
 				<div class="col-md-4">
-					<div class="acqChart" id="agePieChart"></div>
+					<div class="acqChart" id="ageProfileChart"></div>
 				</div>
 			
 				<div  class="col-md-4">
-					<div class="acqChart" id="locationPieChart"></div>
+					<div class="acqChart" id="locationProfileChart"></div>
 				</div>
 				
 			</div>
@@ -189,24 +189,24 @@
 		
 
 
-	<div style="background:#fff; border:1px solid #ccc;" class="row acquisition-panel nopadding" id="engagement-div" ng-controller="engagmentController">
+	<div style="background:#fff; border:1px solid #ccc;" class="row acquisition-panel nopadding" id="engagement-div" ng-controller="engagmentUsergroupController">
 		<div class="panel panel-default">
 			<div class="panel-heading">Product Usage</div>
 		</div>
         
         <div class="full-width">
             <div class="col-md-4">
-					<div class="acqChart" id="loginBarChart1"></div>
+					<div class="acqChart" id="loginUsageChart"></div>
 				</div>
 				
                 <div class="col-md-4">
-					<div class="acqChart" id="subsDonutChart"></div>
+					<div class="acqChart" id="statusChart"></div>
 				</div>
                 
 				
 			
 				<div  class="col-md-4">
-					<div class="acqChart" id="accessDonutChart"></div>
+					<div class="acqChart" id="loginDurationColEng"></div>
 				</div>
 				
 			</div>
@@ -216,16 +216,16 @@
 			
 			<div class="row-fluid">
 				<div style="margin:15px 0px;" class="col-sm-6 col-md-6 col-lg-6">
-					<div style="border:1px solid #ccc;" class="acqChart" id="trendActBarChart"></div>
+					<div style="border:1px solid #ccc;" class="acqChart" id="trendActProChart"></div>
 				</div>
 				<div style="margin:15px 0px;" class="col-sm-6 col-md-6 col-lg-6">
-					<div style="border:1px solid #ccc;" class="acqChart" id="trendSecBarChart"></div>
+					<div style="border:1px solid #ccc;" class="acqChart" id="trendSecProChart"></div>
 				</div>
 			</div>
 		</div>        
     </div>
         
-    <div class="row nopadding" style="background:#fff; border:1px solid #ccc;">
+    <div class="row nopadding" style="background:#fff; border:1px solid #ccc;" ng-controller="engagmentBehaviourController">
 		<div class="panel panel-default">
 			<div class="panel-heading">Engagement Behaviour</div>
 		</div>
@@ -238,12 +238,12 @@
 						</div>
 						<div class="widget-content metric-widgets">
 							<div class="row-fluid">
-								<div class="actual-value"><span  style="color: #3ea8dc;">129 Million</span></div>
+								<div class="actual-value"><span  style="color: #3ea8dc;">{{behaviourData.TotalRevenue.value}}</span></div>
 							</div>
 							<div class="box-content-bottom">
 								<ul>
 									
-									<li class="up">+2% YoY</li>
+									<li class="up">{{behaviourData.TotalRevenue.yoy}}% YoY</li>
 								</ul>
 							</div>
 						</div>
@@ -257,12 +257,12 @@
 						</div>
 						<div class="widget-content metric-widgets">
 							<div class="row-fluid">
-								<div class="actual-value"><span  style="color: #3ea8dc;">1.9 Million</span></div>
+								<div class="actual-value"><span  style="color: #3ea8dc;">{{behaviourData.PaidUser.value}}</span></div>
 							</div>
 							<div class="box-content-bottom">
 								<ul>
 									
-									<li class="up">+4.2% YoY</li>
+									<li class="up">{{behaviourData.PaidUser.yoy}}% YoY</li>
 								</ul>
 							</div>
 						</div>
@@ -278,12 +278,12 @@
 						</div>
 						<div class="widget-content metric-widgets">
 							<div class="row-fluid">
-								<div class="actual-value"><span style="color: #1b6395;">4.2 %</span></div>
+								<div class="actual-value"><span style="color: #1b6395;">{{behaviourData.Freetopaidconversion.value}} %</span></div>
 							</div>
 							<div class="box-content-bottom">
 								<ul>
 									
-									<li class="up">+1.2% YoY</li>
+									<li class="up">{{behaviourData.Freetopaidconversion.yoy}}% YoY</li>
 								</ul>
 							</div>
 						</div>
@@ -297,12 +297,12 @@
 						</div>
 						<div class="widget-content metric-widgets">
 							<div class="row-fluid">
-								<div class="actual-value"><span style="color: #3ea8dc;">65</span></div>
+								<div class="actual-value"><span style="color: #3ea8dc;">{{behaviourData.Engagementscore.value}}</span></div>
 							</div>
 							<div class="box-content-bottom">
 								<ul>
 									
-									<li class="up">+1% YoY</li>
+									<li class="up">{{behaviourData.Engagementscore.yoy}}% YoY</li>
 								</ul>
 							</div>
 						</div>
@@ -313,15 +313,15 @@
             <div class="row nopadding">
 			<div><div style="width:50%; float:left; padding: 25px 15px 15px 15px;"><h4 style="padding:0px; margin:0px;">Trends</h4></div><div style="width:50%; float:right; padding: 25px 15px 15px 15px">
                     <div class="btn-group pull-right">
-					    <button class="btn bkgd-white" style="min-width: 200px; background:#fff; border:1px solid #ccc; text-align: left;color: #555555;">Total Revenue</button>
+					    <button class="btn bkgd-white" style="min-width: 200px; background:#fff; border:1px solid #ccc; text-align: left;color: #555555;">Select a behaviour</button>
 					    <button style="background:#666;" class="btn dropdown-toggle bkgd-white" data-toggle="dropdown">
 					    <span class="caret"></span>
 					   </button>
 					 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="min-width: 224px;">
-					   <li><a tabindex="-1" href="#">Total Revenue</a></li>
-					   <li><a tabindex="-1" href="#">Paid user</a></li>
-					   <li><a tabindex="-1" href="#">Free to paid converstion</a></li>
-                         <li><a tabindex="-1" href="#">Engagement score</a></li>
+					   <li><a tabindex="-1" href="#" ng-click="selectedBehaviour('activeUsersTrendRevenue')">Total Revenue</a></li>
+					   <li><a tabindex="-1" href="#" ng-click="selectedBehaviour('activeUsersTrendPaidusers')">Paid user</a></li>
+					   <li><a tabindex="-1" href="#" ng-click="selectedBehaviour('activeUsersTrendF2P')">Free to paid converstion</a></li>
+                       <li><a tabindex="-1" href="#" ng-click="selectedBehaviour('activeUsersTrendEngagementScore')">Engagement score</a></li>
 					 </ul>
 					</div> 
                 </div>
@@ -336,13 +336,13 @@
         	</div>
         
     
-    <div class="row nopadding">
+    <div class="row nopadding campaign-overview" ng-controller="campaignCalenderController">
 	<div class="row acquisition-panel nopadding" id="trends-div">
 				<div class="panel panel-default">
 					<div class="panel-heading">Campaign Calender</div>
 				</div>
 		<div class="row-fluid">
-            <table class="table border smSubsTable noMarginBtm">
+            <table class="table border smSubsTable noMarginBtm" my-table options="options">
 					<colgroup>
 						<col width="5%">
 						<col width="15%">
@@ -363,50 +363,15 @@
 				        <th>Impact</th>
 				        <th>Start Date</th>
                         <th>End Date</th>
-				        
 				      </tr>
 				    </thead>
-					<tbody>
-						<tr class="blue-tablerow">
-							<td>1</td>
-							<td>Job Hobbers<br>ES between 0-35%</td>
-							<td>Nurturing (connecting with)</td>
-							<td>Increase engagement by 3%<br>New user to basic user</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr class="light-blue-tablerow">
-							<td>2</td>
-							<td>Job Hobbers<br>ES between 0-35%</td>
-							<td>Nurturing (connecting with)</td>
-							<td>Increase engagement by 3%<br>New user to basic user</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr class="blue-tablerow">
-							<td>3</td>
-							<td>Job Hobbers<br>ES between 0-35%</td>
-							<td>Nurturing (connecting with)</td>
-							<td>Increase engagement by 3%<br>New user to basic user</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr class="light-blue-tablerow">
-							<td>4</td>
-							<td>Job Hobbers<br>ES between 0-35%</td>
-							<td>Nurturing (connecting with)</td>
-							<td>Increase engagement by 3%<br>New user to basic user</td>
-							<td></td>
-							<td></td>
-						</tr>
-					</tbody>
 				</table>
 		</div>
         </div>
     </div>
         
     	
-		<div class="row nopadding">
+		<div class="row nopadding" ng-controller="customInsightsController">
 	<div class="row acquisition-panel nopadding" id="trends-div">
 				<div class="panel panel-default">
 					<div class="panel-heading">Custom Insights</div>
@@ -425,7 +390,7 @@
 			
 		
 		
-<div ng-hide ng-controller="customerLandscapeInitController"></div>
+<div ng-hide ng-controller="customerLandscapeInitUsergroupController"></div>
 
 
  	

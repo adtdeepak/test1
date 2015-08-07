@@ -1,6 +1,6 @@
 angular.module('DecisionWorkbench')
 
-.controller( "overviewDetailsController", function($scope, DataService,$timeout, CustomService, ChartOptionsService, $rootScope, UtilitiesService, chartsService, $location, DataConversionService ) {	
+.controller( "wishlistController", function($scope, DataService,$timeout, CustomService, ChartOptionsService, $rootScope, UtilitiesService, chartsService, $location, DataConversionService ) {	
 	
 	$scope.selectedGroup = [{"key":"All Users","selected":false},{"key":"Project Managers","selected": false},{"key":"Enterprise users","selected": false},
 	                        {"key":"Finance executives","selected": false},{"key":"Musicians","selected": false},{"key":"Photographers","selected": false},
@@ -8,47 +8,20 @@ angular.module('DecisionWorkbench')
 
 	var initialExpand  = true;
 	var urlSelectedRowId = '';
-	function getSelectedGroupFromUrl(){
+	function setSelectedAsAllUsers(){
 		var urlIndex = $location.search();
 		$.each($scope.selectedGroup, function(key, value){
 			$scope.selectedGroup[key].selected= false;
-			if($scope.selectedGroup[key].key == urlIndex.selectedGroup){
+			if($scope.selectedGroup[key].key == "All Users"){
 				$scope.selectedGroup[key].selected= true;
 			}
 		})
-		$scope.groupHeading = urlIndex.selectedGroup;
+		$scope.groupHeading = "All Users";
 		$scope.selectedRowId = urlIndex.selectedId;
 		urlSelectedRowId = urlIndex.selectedId;
-		$scope.addData($scope.overallResponse[urlIndex.selectedGroup]);
+		$scope.addData($scope.overallResponse["All Users"]);
 		
 	}
-	
-	$scope.wishlistSelected = function(attribute, isSelected){
-		var selectedGroup;
-		$.each($scope.overallResponse, function(key, value){
-			if(key == "All Users"){
-				$.each(value, function(index, eachRow){
-					if(eachRow.SNo == attribute){
-						eachRow.wishlist = isSelected;
-						selectedGroup = eachRow.userGroup;
-					}
-				})
-			}
-		})
-		$.each($scope.overallResponse, function(key, value){
-			if(key == selectedGroup){
-				$.each(value, function(index, eachRow){
-					if(eachRow.SNo == attribute){
-						eachRow.wishlist = isSelected;
-						selectedGroup = eachRow.userGroup;
-					}
-				})
-			}
-		})
-		console.log("overallResponse after updated:", $scope.overallResponse);
-		localStorage.setItem('OverviewDetails', JSON.stringify($scope.fullResponse));
-	}
-	
 	$scope.broadcastselectedGroup = function (selectedGroup, index) {
 		$.each($scope.selectedGroup, function(key, value){
 			$scope.selectedGroup[key].selected= false;
@@ -75,12 +48,11 @@ angular.module('DecisionWorkbench')
 	
 	
 	$scope.overallDataSuccess = function(response){
-		$scope.fullResponse = response;
 		$scope.overallResponse = response.data.bestCampaignOptions;
 		$scope.campaignData = response.data.bestCampaignOptions.allUsers;
 		$scope.otherAccordianData = response.data.otherData;
 		$scope.activityEngagementOverallData = response.data.activityEngagementData;
-		getSelectedGroupFromUrl();
+		setSelectedAsAllUsers();
 		//$scope.addData(response.data.allUsers);
 		
 	}
@@ -206,17 +178,13 @@ angular.module('DecisionWorkbench')
 			$scope.error = false;
 			$scope.options.aaData = [];
 			$.each(data, function(key, obj) {
-				var wishlistSection = "<div class='wishlist-unselected'></div>"
-				if(obj.wishlist == "yes"){
-					wishlistSection = "<div class='wishlist-unselected wishlist-selected'></div>"
-				}
 					$scope.options.aaData.push([obj.SNo, obj.userGroup,  obj.description, obj.impact,
-					   wishlistSection ,"<div class='execute-unselected'></div>","<div class='xclose'></div>"]);
+					     "<div class='wishlist-unselected'></div>" ,"<div class='execute-unselected'></div>","<div class='xclose'></div>"]);
 				})
 		} catch (e) {
 			$scope.fail(errorConstants.DATA_ERR);
 		}
-		$timeout(function () {$(".dataTableContainer .expandRow td.row-expand-details .xclose").trigger('click');}, 200);
+		//$timeout(function () {$(".dataTableContainer .expandRow td.row-expand-details .xclose").trigger('click');}, 200);
 		/*if(initialExpand){
 			$timeout(function () {$(".dataTableContainer .expandRow td.row-expand-details .xclose").trigger('click');}, 200);
 			initialExpand = false;
