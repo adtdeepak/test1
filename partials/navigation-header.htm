@@ -22,8 +22,8 @@
 					<ul class="dropdown-menu" ng-controller="dwLinkController">
 						<!-- <li class="first" ng-click="navModuleClicked(trackingHtmlName, '#/summary')"><a href="#/summary"
 							ng-class="{active: thisPage=='/summary'}">Summary</a></li> -->
-						<li ng-click="navModuleClicked(analysisHtmlname, '#/business-analysis')">
-                         <a tabindex="-1" href="#/business-analysis">Business Analysis</a></li>
+						<li ng-click="navModuleClicked(trackingHtmlName, '#/business-impact')">
+                         <a tabindex="-1" href="#/business-impact">Business Analysis</a></li>
 						<li ng-click="navModuleClicked(trackingHtmlName, '#/engagement-activity')"><a ng-if="isEngagementTabVisible"
 							href="#/engagement-activity"
 							ng-class="{active: thisPage=='/engagement-activity'}">Engagement
@@ -48,15 +48,15 @@
 					<ul class="dropdown-menu" ng-controller="dwLinkController">
 					
                         
-                           <li><a tabindex="-1" href="#/segmentation">Customer Analysis</a>
+                           <li  ng-click="navModuleClicked(analysisHtmlname, '#/segmentation')"><a tabindex="-1" href="#/segmentation">Customer Analysis</a>
                                        
                            </li>
-                           <li  class="dropdown-submenu" ng-click="navModuleClicked(analysisHtmlname, '#/segmentation')">
+                           <li  class="dropdown-submenu">
                          <a tabindex="-1" >Segmentation</a>
                          <ul class="dropdown-menu"	ng-click="trackUrlClicked(trackingHtmlName)">
                                    
-					          <li ng-click="navModuleClicked(analysisHtmlname, '#/customer-landscape-subs')"><a tabindex="-1" href="#customer-landscape-subs">Overview</a></li>                         
-                                 <li ng-click="navModuleClicked(analysisHtmlname, '#/segment-membership-subs')"><a tabindex="-1" href="#segment-membership-subs">Deepdive</a></li>
+					          <li ng-click="navModuleClicked(analysisHtmlname, '#/customer-landscape-subs')"><a tabindex="-1" href="#/customer-landscape-subs">Overview</a></li>                         
+                                 <li ng-click="navModuleClicked(analysisHtmlname, '#/segment-membership-subs')"><a tabindex="-1" href="#/segment-membership-subs">Deepdive</a></li>
                                </ul> 
                         </li>
                         

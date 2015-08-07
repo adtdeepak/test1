@@ -305,7 +305,7 @@ type='text/css'>
 					<li class="col-md-5ths col-xs-6" ng-repeat="data in businessImpact"
 						ng-hide="data.display == false">
 						<div class="col-sm-11 col-md-11 metrics-content">
-							<a href="analysis.htm#/business-analysis?currentlySelected={{data.subGroupBy}}&&name={{data.subgroupName}}">
+							<a href="{{trackingHtmlName}}.htm#/business-impact?currentlySelected={{data.subGroupBy}}&&name={{data.subgroupName}}">
 								<div class="box-content-top">
 									<h3>{{data.subgroupName}}</h3>
 									<div class="value-orange trackingLink">{{data.actualToDate
