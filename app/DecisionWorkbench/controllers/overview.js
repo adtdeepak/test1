@@ -7,6 +7,24 @@ angular.module('DecisionWorkbench')
 		window.location = "#/overview-details?selectedGroup="+attribute;
 	}
 	
+	$scope.wishlistSelected = function(attribute, isSelected){
+		var wishlistRow = attribute.split('=')[1];
+		var rowTopic = attribute.split('&')[0];
+		console.log("attribute:", attribute);
+		console.log("wishlistSelected:", isSelected, wishlistRow, rowTopic);
+		$.each($scope.overallResponse, function(key, value){
+			if(key == rowTopic){
+				$.each(value, function(index, eachRow){
+					if(eachRow.SNo == wishlistRow){
+						eachRow.wishlist = isSelected;
+					}
+				})
+			}
+		})
+		console.log("overallResponse after updated:", $scope.overallResponse);
+		localStorage.setItem('campaignOptions', JSON.stringify($scope.overallResponse));
+	}
+	
 	$scope.overallDataSuccess = function(response){
 		$scope.overallResponse = response.data;
 		$scope.addData(response.data['All Users']);

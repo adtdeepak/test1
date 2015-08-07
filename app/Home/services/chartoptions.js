@@ -68,6 +68,16 @@ angular.module('Home')
 	    };
 	};
 	
+	this.getSparkleLineData = function(data){
+		return{
+			chart:{
+				//height:100,
+				//width:240
+			}
+		};
+	};	
+
+	
 	this.getTrackSummaryAcqTrend = function(data) {
 
 		return {

@@ -48,6 +48,23 @@ angular.module('Analysis')
 		}
 		return requestWS;
 	}
+	
+	this.getUsergroupDeepdiveData = function(reqData, success, fail) {
+		var requestWS = postRequestWS(
+				'http://jsonstub.com/analysis/usergroup/deepdive', 
+				reqData,
+				success, 
+				fail,
+				function(result) {
+					return result;
+				}
+		);
+		requestWS();
+		//sendRequest(cacheKey, "summaryCache", success, requestWS);
+		
+	};
+	
+	
 	this.getOverviewData = function(reqData, success, fail) {
 		var requestWS = postRequestWS(
 				'http://jsonstub.com/analysis/subs/cl/overview', 

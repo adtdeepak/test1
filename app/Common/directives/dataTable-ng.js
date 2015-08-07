@@ -31,6 +31,15 @@ angular.module('AnalyticsApp')
                     tr.addClass('shown');
                 }
             } );
+            $('.dataTableContainer').off('click').on('click', 'td .wishlist-unselected', function () {
+            	var selected = "yes";
+            	if($(this).hasClass('wishlist-selected')){
+            		selected = "no";
+            	}
+            	scope.wishlistData($(this).parent().attr('attr'), selected);
+            	console.log("wishlist-unselected:", $(this).toggleClass('wishlist-selected'));
+            	//scope.tableData($(this).attr('attr'));
+            	});
             
             $('.dataTableContainer').on('click', 'td.each-row-details', function () {
             	scope.tableData($(this).attr('attr'));
@@ -38,7 +47,6 @@ angular.module('AnalyticsApp')
             
             var previous = "";var previousRow = -1;var previousRowCollapse="";
             $('.dataTableContainer').on('click', 'td.row-expand-details', function () {
-            	console.log("td.row-expand-details", $(this).find('.xclose'));
             	$(this).find('.xclose').addClass("expandclose");
             	if(previousRowCollapse){
             		previousRowCollapse.find('.xclose').removeClass("expandclose");
@@ -196,7 +204,8 @@ angular.module('AnalyticsApp')
             options: "=",
             tableData: '=',
             otherData: '=',
-            functionCall:'='
+            functionCall:'=',
+            wishlistData:'='
         }
     };
 })

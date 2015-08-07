@@ -11,7 +11,7 @@
     		"engScoreRange":"0-20%",
     		"description":"Mobile app download",
     		"impact":"Increase engagement 15%",
-    		"wishlist":"no"
+    		"wishlist":"yes"
     	},{
     		"SNo":"2",
     		"id":"2",
@@ -147,7 +147,7 @@
     		"engScoreRange":"0-20%",
     		"description":"Mobile app download",
     		"impact":"Increase engagement 15%",
-    		"wishlist":"no"
+    		"wishlist":"yes"
     	},{
     		"SNo":"2",
     		"id":"2",
