@@ -144,28 +144,71 @@ angular.module('AnalyticsApp')
         		// `d` is the original data object for the row
         		return '<div class="tableAccOuterContainer">'+
         		'<div class="row nopadding">'+
-    			'<div class="heading-overview">'+'Incremental Impact'+'</div>'+
-    			'<div class="row brdr-dashed">'+
-    				'<div class="col-sm-4 col-md-4 col-lg-4">'+
-    					'<div class="acqChart conversionChart">'+'</div>'+
-    				'</div>'+
-    				'<div class="col-sm-4 col-md-4 col-lg-4">'+
-    					'<div class="acqChart convertedUserChart">'+'</div>'+
-    				'</div>'+
-    				'<div class="col-sm-4 col-md-4 col-lg-4">'+
-    					'<div class="acqChart revenueChart">'+'</div>'+
-    				'</div>'+
-    			'</div>'+
-    			'<div class="heading-overview">'+'Description of user group'+'</div>'+
+    			'<div style="margin-left:15px;" class="heading-overview">'+'Incremental Impact'+'</div>'+
+                   '<div style="border-bottom:1px dotted #666; padding-bottom: 25px;" class="half-width">'+
+				'<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">'+
+					'<div style="border:1px solid  #555; " class="brdr-left ">'+
+						'<div class="">'+
+							'<div class="panel-heading " style="font-weight:600; text-align:center; background:#555 none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'Total User'+'</div>'+
+						'</div>'+
+						'<div  style="padding:20px !important;" class="widget-content metric-widgets">'+
+							'<div class="row-fluid">'+
+								'<div class="actual-value">'+'<span  style="color: #555; ">'+'9 Million'+'</span>'+'</div>'+
+							'</div>'+							
+						'</div>'+
+					'</div>'+
+				'</div>'+
+				'<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">'+
+					'<div style="border:1px solid  #adadad;" class="brdr-left ">'+
+						'<div class="">'+
+							'<div class="panel-heading" style="font-weight:600; text-align:center; background:#adadad none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'Total User'+'</div>'+
+						'</div>'+
+						'<div  style="padding:20px !important;" class="widget-content metric-widgets">'+
+							'<div class="row-fluid">'+
+								'<div class="actual-value">'+'<span  style="color: #adadad;">'+'9 Million'+'</span>'+'</div>'+
+							'</div>'+							
+						'</div>'+
+					'</div>'+
+				'</div>'+
+				'</div>'+
+                     '<div  style="border-bottom:1px dotted #666; padding-bottom: 25px;" class="half-width">'+
+				'<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">'+
+					'<div style="border:1px solid  #555;" class="brdr-left ">'+
+						'<div class="">'+
+							'<div class="panel-heading" style="font-weight:600; text-align:center; background:#555 none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'Total User'+'</div>'+
+						'</div>'+
+						'<div  style="padding:20px !important;" class="widget-content metric-widgets">'+
+							'<div class="row-fluid">'+
+								'<div class="actual-value">'+'<span  style="color: #555;">'+'9 Million'+'</span>'+'</div>'+
+							'</div>'+							
+						'</div>'+
+					'</div>'+
+				'</div>'+
+				'<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">'+
+					'<div style="border:1px solid  #adadad; " class="brdr-left ">'+
+						'<div class="">'+
+							'<div class="panel-heading" style="font-weight:600; text-align:center; background:#adadad none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'Total User'+'</div>'+
+						'</div>'+
+						'<div  style="padding:20px !important;" class="widget-content metric-widgets">'+
+							'<div class="row-fluid">'+
+								'<div class="actual-value">'+'<span  style="color: #adadad;">'+'9 Million'+'</span>'+'</div>'+
+							'</div>'+							
+						'</div>'+
+					'</div>'+
+				'</div>'+
+				'</div>'+
+    			
+    			'<div style="margin-left:15px; float:left; margin-top:20px;" class="heading-overview">'+'Description of user group'+'</div>'+
     			'<div class="row brdr-dashed">'+
     				'<div class="row nopadding">'+'</div>'+
     					'<div class="half-width">'+
-    						'<div class="col-sm-4 col-md-4 col-lg-4">'+
+    						'<div style="border: 1px solid #555;   margin: 22px 15px 0; padding: 0; "  class="col-sm-4 col-md-4 col-lg-4-1">'+
+                    '<div class="panel-heading" style="font-weight:600; text-align:center; background:#555 none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'Total User'+'</div>'+
     							'<div class="icon-widget all-user-image">'+'</div>'+
     							'<div class="text-bold" style="text-align:center;">'+'678,457'+'</div>'+
     							'<div class="icon-widget-text text-bold bkgd-none">'+'Young Job Hoppers'+'</div>'+
     						'</div>'+
-    						'<div class="col-sm-4 col-md-4 col-lg-4">'+
+    						'<div style="border: 1px solid #a5a5a5;   margin: 22px 8px 0; padding: 0; "  class="col-sm-4 col-md-4 col-lg-4-1">'+'<div class="panel-heading" style="font-weight:600; text-align:center; background:#a5a5a5 none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'Total User'+'</div>'+
     							'<div class="icon-widget" style="padding-top:30px;">'+
     								'<div class="text-bold" style="text-align:center;padding-top:5px;">'+'65% Male'+'</div>'+
     								'<div class="text-bold" style="text-align:center;padding-top:5px;">'+'35% Female'+'</div>'+
@@ -173,7 +216,8 @@ angular.module('AnalyticsApp')
     							'<div class="text-bold" style="text-align:center;">'+'Active users 40%'+'</div>'+
     							'<div class="icon-widget-text text-bold bkgd-none">'+'</div>'+
     						'</div>'+
-    						'<div class="col-sm-4 col-md-4 col-lg-4">'+
+    						'<div style="border: 1px solid #555;   margin: 22px 8px 0; padding: 0; "  class="col-sm-4 col-md-4 col-lg-4-1">'+
+                    '<div class="panel-heading" style="font-weight:600; text-align:center; background:#555 none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'Total User'+'</div>'+
     							'<div class="icon-widget">'+'</div>'+
     							'<div class="text-bold" style="text-align:center;">'+'257,645'+'</div>'+
     							'<div class="text-bold" style="text-align:center;">'+'App users 40%'+'</div>'+
@@ -187,18 +231,147 @@ angular.module('AnalyticsApp')
     					'</div>'+
     				'<div class="row nopadding">'+
     					'<div class="col-sm-12 col-md-12 col-lg-12">'+
-    						'<div class="acqChart engagementChart">'+'</div>'+
+    						'<div style="display:none;" class="acqChart engagementChart">'+'</div>'+
     					'</div>'+
     				'</div>'+
     			'</div>'+
-    			'<div class="heading-overview">'+'Activity Engagement'+'</div>'+
+                    
+    			'<div style="margin-left:15px; float:left; margin-top:20px;" class="heading-overview">'+'Description of Product usage'+'</div>'+
     			'<div id="demo">'+
-    				'<div id="example">'+'</div>'+
+                    '<div style="float:left; padding:0px 15px;">'+
+                    '<table class="table border smSubsTable noMarginBtm">'+
+					'<colgroup>'+
+						'<col width="25%">'+
+						'<col width="25%">'+
+						'<col width="25%">'+
+						'<col width="25%">'+						
+					'</colgroup>'+
+					'<thead class="dark-gray-table">'+
+				      '<tr>'+
+				        '<th class="dark-gray">S.No</th>'+
+				        '<th class="dark-gray">User Group</th>'+
+				        '<th class="dark-gray">Campaign Description</th>'+
+                        '<th class="dark-gray">Target users</th>'+
+                        '</tr>'+
+				    '</thead>'+
+					'<tbody>'+
+						'<tr class="gray-table-row">'+
+							'<td>1</td>'+
+							'<td>Job Hobbers<br>ES between 0-35%</td>'+
+							'<td>Nurturing (connecting with)</td>'+
+							'<td>Increase engagement by 3%<br>New user to basic user</td>'+
+							'</tr>'+
+						'<tr class="gray-dark-table-row">'+
+							'<td>2</td>'+
+							'<td>Job Hobbers<br>ES between 0-35%</td>'+
+							'<td>Nurturing (connecting with)</td>'+
+							'<td>Increase engagement by 3%<br>New user to basic user</td>'+
+							'</tr>'+
+                    '<tr class="gray-table-row">'+
+							'<td>1</td>'+
+							'<td>Job Hobbers<br>ES between 0-35%</td>'+
+							'<td>Nurturing (connecting with)</td>'+
+							'<td>Increase engagement by 3%<br>New user to basic user</td>'+
+							'</tr>'+
+						'<tr class="gray-dark-table-row">'+
+							'<td>2</td>'+
+							'<td>Job Hobbers<br>ES between 0-35%</td>'+
+							'<td>Nurturing (connecting with)</td>'+
+							'<td>Increase engagement by 3%<br>New user to basic user</td>'+
+							'</tr>'+
+                  		
+						
+					'</tbody>'+
+				'</table>'+
+                        '</div>'+
+    				
     			'</div>'+
+                   
+                    '<div class="half-width">'+
+                     '<div style="margin-left:15px; float:left; margin-top:20px; width:100%;" class="heading-overview">'+'On-Going Campaign'+'</div>'+
+    						'<div class="col-sm-12 col-md-12 col-lg-12">'+
+                     '<div style="float:left;">'+
+                    '<table class="table border smSubsTable noMarginBtm">'+
+					'<colgroup>'+
+						'<col width="25%">'+
+						'<col width="25%">'+
+						'<col width="25%">'+
+						'<col width="25%">'+						
+					'</colgroup>'+
+					'<thead class="dark-gray-table">'+
+				      '<tr>'+
+				        '<th>S.No</th>'+
+				        '<th>User Group</th>'+
+				        '<th>Campaign Description</th>'+
+                        '<th>Target users</th>'+
+                        '</tr>'+
+				    '</thead>'+
+					'<tbody>'+
+						'<tr class="gray-table-row">'+
+							'<td>1</td>'+
+							'<td>Job Hobbers<br>ES between 0-35%</td>'+
+							'<td>Nurturing (connecting with)</td>'+
+							'<td>Increase engagement by 3%<br>New user to basic user</td>'+
+							'</tr>'+
+						'<tr class="gray-dark-table-row">'+
+							'<td>2</td>'+
+							'<td>Job Hobbers<br>ES between 0-35%</td>'+
+							'<td>Nurturing (connecting with)</td>'+
+							'<td>Increase engagement by 3%<br>New user to basic user</td>'+
+							'</tr>'+
+                   
+						
+					'</tbody>'+
+				'</table>'+
+                        '</div>'+
+                    '</div>'+
+                    '</div>'+
+                    '<div class="half-width">'+
+                       '<div style="margin-left:15px; float:left; margin-top:20px; width:100%;" class="heading-overview">'+'Past Campaign'+'</div>'+
+    			
+    						'<div class="col-sm-12 col-md-12 col-lg-12">'+
+                     '<div style="float:left;">'+
+                    '<table class="table border smSubsTable noMarginBtm">'+
+					'<colgroup>'+
+						'<col width="25%">'+
+						'<col width="25%">'+
+						'<col width="25%">'+
+						'<col width="25%">'+						
+					'</colgroup>'+
+					'<thead class="dark-gray-table">'+
+				      '<tr>'+
+				        '<th>S.No</th>'+
+				        '<th>User Group</th>'+
+				        '<th>Campaign Description</th>'+
+                        '<th>Target users</th>'+
+                        '</tr>'+
+				    '</thead>'+
+					'<tbody>'+
+						'<tr class="gray-table-row">'+
+							'<td>1</td>'+
+							'<td>Job Hobbers<br>ES between 0-35%</td>'+
+							'<td>Nurturing (connecting with)</td>'+
+							'<td>Increase engagement by 3%<br>New user to basic user</td>'+
+							'</tr>'+
+						'<tr class="gray-dark-table-row">'+
+							'<td>2</td>'+
+							'<td>Job Hobbers<br>ES between 0-35%</td>'+
+							'<td>Nurturing (connecting with)</td>'+
+							'<td>Increase engagement by 3%<br>New user to basic user</td>'+
+							'</tr>'+
+                  
+                  		
+						
+					'</tbody>'+
+				'</table>'+
+                        '</div>'+
+                    '</div>'+
+                    '</div>'+
     		'</div>'+
     	'</div>'
+                
         	};
-           /* $timeout(function () { $compile(element.contents())(scope); }, 100);*/
+          /* $timeout(function () { $compile(element.contents())(scope); }, 100);*/
         },
         scope: {
             options: "=",

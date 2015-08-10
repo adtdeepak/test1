@@ -2652,10 +2652,12 @@ span.Fheading {
 }
 
 .campaign-overview table.dataTable tr.oddRowColor{
-	background: #e9e9e9 !important;
+	background: #dcefef !important;
+    border-bottom:2px solid #fff !important;
 }
 .campaign-overview table.dataTable tr.evenRowColor{
 	background: #f6f6f6 !important;
+    border-bottom:2px solid #fff!important;
 }
 
 table:not(.campaign-overview-details) tr:hover td {
@@ -7416,6 +7418,7 @@ input[type="text"]:disabled{
 .tableAccOuterContainer{
 	display: block;
 	width: 100%;
+    padding-bottom:20px;
 }
 .tableAccInnerContainer:nth-child(2){
 	width: 180px;
@@ -7942,9 +7945,9 @@ div#progressBar {
 }
 
 .brdr-dashed{
-	border: 1px solid grey;
-	border-style: dashed;
-	border-radius: 7px;
+	border-bottom:1px dotted #666;
+    margin: 0px 0px;
+    padding-bottom: 20px;
 }
 .half-width{
 	width: 50%;
@@ -8014,8 +8017,8 @@ div#progressBar {
 	background: #9DA0A3;
 }
 .bkgd-darkblue{
-	background: #132d52;
-	border: 1px solid #585858;
+	background: #1b6395;
+	border: 1px solid #1b6395;
 }
 
 .brdr-white{
@@ -8571,6 +8574,10 @@ div#progressBar {
 	background: #3EA8DC !important;
 	color: #ffffff;
 }
+.campaign-overview table thead tr th .dark-gray{
+	background: #666 !important;
+	color: #ffffff;
+}
 .campaign-overview table tbody tr td{
 	font-size:13px;
 }
@@ -8579,10 +8586,11 @@ div#progressBar {
 	cursor:pointer
 }
 .heading-overview {
-	font-style: italic;
+	
 	font-weight: 600;
-	color: #999999;
+	color: #666;
 	margin-bottom: 10px;
+    font-size:14px;
 }
 
 .overview-detail-tabs li{   

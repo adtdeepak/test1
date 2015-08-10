@@ -8635,12 +8635,12 @@ div#progressBar {
 .blue-tablerow{ background:#EAF3F3; border-bottom:2px solid #fff;}
 .light-blue-tablerow{ background:#dcefef; border-bottom:2px solid #fff;}
 .light-table-head{background: #f6f6f6; color:#F5874F !important;}
-.dark-fray-table{background:#888; color:#fff !important;}
+.acord table tr .dark-fray-table{background:#888; color:#fff !important;}
 .gray-table-row{ background: #f6f6f6;}
 .gray-dark-table-row{ background: #e9e9e9;}
 .white-hover{}
 .white-hover:hover{background: #fff !important;}
-
+.dark-gray-info-box{background: #555 none repeat scroll 0 0;    color: #fff;    font-weight: 600;    margin-bottom: 10px;    padding: 5px;    text-align: center;}
 /*Accordion CSS*/
 
 /* SET COLORS AND FONTS AND PLACEMENTS */
@@ -8811,3 +8811,4 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ccfffff
 }
 
 }
+
