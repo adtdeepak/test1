@@ -91,7 +91,10 @@
 				<div class="panel-heading"> Best Campaign Options for {{groupHeading}}
 				</div>
 			</div>
-			<div class="collapse in">
+			<div class="panel-heading" ng-if="!isWishlistThere" style="text-align: center;">
+				There is no wishlist for the selected campaign.
+			</div>
+			<div class="collapse in" ng-if="isWishlistThere">
 				<table class="table borderless smSubsTable noMarginBtm campaign-overview-details" my-table  options="options" table-data="updateExpandData" function-call="selectRow" wishlist-data="wishlistSelected">
 					<colgroup>
 						<col width="10%">

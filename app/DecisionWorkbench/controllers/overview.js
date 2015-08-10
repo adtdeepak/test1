@@ -6,23 +6,32 @@ angular.module('DecisionWorkbench')
 		console.log("clicked controller:", attribute);
 		window.location = "#/overview-details?selectedGroup="+attribute;
 	}
-	
+
 	$scope.wishlistSelected = function(attribute, isSelected){
-		var wishlistRow = attribute.split('=')[1];
-		var rowTopic = attribute.split('&')[0];
-		console.log("attribute:", attribute);
-		console.log("wishlistSelected:", isSelected, wishlistRow, rowTopic);
-		$.each($scope.overallResponse, function(key, value){
-			if(key == rowTopic){
+		console.log("attribute",attribute);
+		var selectedId = attribute.split('=')[1];
+		$.each($scope.fullResponse.data.bestCampaignOptions, function(key, value){
+			if(key == "All Users"){
 				$.each(value, function(index, eachRow){
-					if(eachRow.SNo == wishlistRow){
+					if(eachRow.SNo == selectedId){
 						eachRow.wishlist = isSelected;
+						selectedGroup = eachRow.userGroup;
 					}
 				})
 			}
 		})
-		console.log("overallResponse after updated:", $scope.overallResponse);
-		localStorage.setItem('campaignOptions', JSON.stringify($scope.overallResponse));
+		console.log("selectedGroup:", selectedGroup);
+		$.each($scope.fullResponse.data.bestCampaignOptions, function(key, value){
+			if(key == selectedGroup){
+				$.each(value, function(index, eachRow){
+					if(eachRow.SNo == selectedId){
+						eachRow.wishlist = isSelected;
+						selectedGroup = eachRow.userGroup;
+					}
+				})
+			}
+		})
+		localStorage.setItem('OverviewDetails', JSON.stringify($scope.fullResponse));
 	}
 	
 	$scope.overallDataSuccess = function(response){
@@ -30,7 +39,12 @@ angular.module('DecisionWorkbench')
 		$scope.addData(response.data['All Users']);
 		$scope.addUserGroupsTableData(response.data.jobHoppers);
 		$scope.addFeaturesTableData(response.data.photographers);
-	}
+	};
+	
+	$scope.innerPageDataSuccess = function(response){
+		$scope.fullResponse = response;
+	};
+	
 	$scope.options = UtilitiesService.getDataTableOptions();
 	$scope.userTableOptions = UtilitiesService.getDataTableOptions();
 	$scope.featuresOptions = UtilitiesService.getDataTableOptions();
@@ -168,7 +182,23 @@ angular.module('DecisionWorkbench')
     	DataService.getAllUserData(requestData, func, $scope.fail); 
 	
 	} 
+	
+	function getInnerPageData() {
+		var requestData = {};
+		var func = $scope.innerPageDataSuccess; 
+    	if (arguments[1]) { 
+    		if (arguments[1].key == cacheKey) { 
+    			func = null; 
+    		} else { 
+    			return false; 
+    		} 
+    	} 
+    	DataService.getOverviewDetailsData(requestData, func, $scope.fail); 
+	
+	} 
+	getInnerPageData();
 	getAllUserTableData();
+	
 })
 
 
