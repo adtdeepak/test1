@@ -39,35 +39,150 @@
     		"impact":"Increase engagement 5%",
     		"wishlist":"no"
     	}],
-    	"Project Managers":[{"SNo":1,"userGroup":"Project Managers","classification":"Onboarding","Engagement Score Range":"0-20%","description":"Welcome to","impact":"Increase engagement by  3.9%"},
-							{"SNo":2,"userGroup":"Project Managers","classification":"Onboarding","Engagement Score Range":"0-20%","description":"Inform mobile app","impact":"Increase engagement by  8.7%"},
-							{"SNo":3,"userGroup":"Project Managers","classification":"Onboarding","Engagement Score Range":"0-20%","description":"How to send file","impact":"Increase engagement by  3.8%"},
-							{"SNo":4,"userGroup":"Project Managers","classification":"Onboarding","Engagement Score Range":"0-20%","description":"How to share file","impact":"Increase engagement by  3.9%"},
-							{"SNo":5,"userGroup":"Project Managers","classification":"Onboarding","Engagement Score Range":"0-20%","description":"Introduce how to use box","impact":"Increase engagement by  3.2%"}],
+    	"Project Managers":[{
+    		"SNo":"1",
+    		"id":"1",
+    		"userGroup":"Project Managers",
+    		"classification":"Onboarding",
+    		"engScoreRange":"0-20%",
+    		"description":"Mobile app download",
+    		"impact":"Increase engagement 15%",
+    		"wishlist":"yes"
+    	},{
+    		"SNo":"2",
+    		"id":"2",
+    		"userGroup":"Project Managers",
+    		"classification":"Advanced",
+    		"engScoreRange":"50 to 70%",
+    		"description":"Password protect files",
+    		"impact":"Increase engagement 5%",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"3",
+    		"id":"3",
+    		"userGroup":"Project Managers",
+    		"classification":"Advanced",
+    		"engScoreRange":"50 to 70%",
+    		"description":"Join today and get 10% storage extra",
+    		"impact":"Camapaign conversion rate 23%",
+    		"wishlist":"no"
+    	}],
     	
-    	"Musicians":[{"SNo":25,"userGroup":"Musicians","classification":"Onboarding","Engagement Score Range":"0-20%","description":"Welcome to","impact":"Increase engagement by  3.0%"},
-							{"SNo":26,"userGroup":"Musicians","classification":"Onboarding","Engagement Score Range":"0-20%","description":"Inform mobile app","impact":"Increase engagement by  0.1%"},
-							{"SNo":27,"userGroup":"Musicians","classification":"Onboarding","Engagement Score Range":"0-20%","description":"How to send file","impact":"Increase engagement by  7.7%"},
-							{"SNo":28,"userGroup":"Musicians","classification":"Onboarding","Engagement Score Range":"0-20%","description":"How to share file","impact":"Increase engagement by  4.1%"},
-							{"SNo":29,"userGroup":"Musicians","classification":"Onboarding","Engagement Score Range":"0-20%","description":"Introduce how to use box","impact":"Increase engagement by  2.6%"}],
+    	"Musicians":[{
+    		"SNo":"12",
+    		"id":"12",
+    		"userGroup":"Musicians",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"13",
+    		"id":"13",
+    		"userGroup":"Musicians",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"14",
+    		"id":"14",
+    		"userGroup":"Musicians",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	}],
     	
-    	"Finance executives":[{"SNo":49,"userGroup":"Finance executives","classification":"Onboarding","Engagement Score Range":"0-20%","description":"Welcome to","impact":"Increase engagement by  5.0%"},
-							{"SNo":50,"userGroup":"Finance executives","classification":"Onboarding","Engagement Score Range":"0-20%","description":"Inform mobile app","impact":"Increase engagement by  8.1%"},
-							{"SNo":51,"userGroup":"Finance executives","classification":"Onboarding","Engagement Score Range":"0-20%","description":"How to send file","impact":"Increase engagement by  0.8%"},
-							{"SNo":52,"userGroup":"Finance executives","classification":"Onboarding","Engagement Score Range":"0-20%","description":"How to share file","impact":"Increase engagement by  4.7%"},
-							{"SNo":53,"userGroup":"Finance executives","classification":"Onboarding","Engagement Score Range":"0-20%","description":"Introduce how to use box","impact":"Increase engagement by  3.7%"}],
+    	"Finance executives":[{
+    		"SNo":"9",
+    		"id":"9",
+    		"userGroup":"Finance executives",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"10",
+    		"id":"10",
+    		"userGroup":"Finance executives",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"11",
+    		"id":"11",
+    		"userGroup":"Finance executives",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	}],
 							
-    	"Photographers":[{"SNo":73,"userGroup":"Photographers","classification":"Onboarding","Engagement Score Range":"0-20%","description":"Welcome to","impact":"Increase engagement by  0.1%"},
-							{"SNo":74,"userGroup":"Photographers","classification":"Onboarding","Engagement Score Range":"0-20%","description":"Inform mobile app","impact":"Increase engagement by  5.3%"},
-							{"SNo":75,"userGroup":"Photographers","classification":"Onboarding","Engagement Score Range":"0-20%","description":"How to send file","impact":"Increase engagement by  2.2%"},
-							{"SNo":76,"userGroup":"Photographers","classification":"Onboarding","Engagement Score Range":"0-20%","description":"How to share file","impact":"Increase engagement by  4.8%"},
-							{"SNo":77,"userGroup":"Photographers","classification":"Onboarding","Engagement Score Range":"0-20%","description":"Introduce how to use box","impact":"Increase engagement by  6.1%"}],
+    	"Photographers":[{
+    		"SNo":"15",
+    		"id":"15",
+    		"userGroup":"Photographers",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"16",
+    		"id":"16",
+    		"userGroup":"Photographers",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"17",
+    		"id":"17",
+    		"userGroup":"Photographers",
+    		"description":"Nurturing (connecting with)",
+    		"impact":"Increase engagement by 3% New user to basic user",
+    		"wishlist":"no"
+    	}],
 							
-    	"Enterprise users":[{"SNo":97,"userGroup":"Enterprise users","classification":"Conversion","Engagement Score Range":"70% and above","description":"Multiple corporate users from these companies, educate IT department","impact":"Campaign conversion rate 50%"},
-						{"SNo":98,"userGroup":"Enterprise users","classification":"Advanced","Engagement Score Range":"50 to 70%","description":"Join today and get 10% storage extra","impact":"Campaign conversion rate 23%"},
-						{"SNo":99,"userGroup":"Enterprise users","classification":"Advanced","Engagement Score Range":"50 to 70%","description":"Version control, Metadata access","impact":"Increase engagement by 12%"},
-						{"SNo":100,"userGroup":"Enterprise users","classification":"Advanced","Engagement Score Range":"50 to 70%","description":"Audit, control and monitor file access rights","impact":"Increase engagement by 7.5%"},
-						{"SNo":101,"userGroup":"Enterprise users","classification":"Advanced","Engagement Score Range":"50 to 70%","description":"Introduce how to use box","impact":"Increase engagement by 0.5%"}]
+    	"Enterprise users":[{
+    		"SNo":"4",
+    		"id":"4",
+    		"userGroup":"Enterprise users",
+    		"classification":"Conversion",
+    		"engScoreRange":"70% and above",
+    		"description":"Multiple corporate users from these companies, contact IT department",
+    		"impact":"Campaign conversion by 60%",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"5",
+    		"id":"5",
+    		"userGroup":"Enterprise users",
+    		"classification":"Advanced",
+    		"engScoreRange":"50 to 70%",
+    		"description":"Audit, control and monitor file access rights",
+    		"impact":"Increase engagement by 7.5%",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"6",
+    		"id":"6",
+    		"userGroup":"Enterprise users",
+    		"classification":"Advanced",
+    		"engScoreRange":"50 to 70%",
+    		"description":"Version controll, Metadata access",
+    		"impact":"Increase engagement by 12%",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"7",
+    		"id":"7",
+    		"userGroup":"Enterprise users",
+    		"classification":"Conversion",
+    		"engScoreRange":"50 to 70%",
+    		"description":"Unlimited storage space",
+    		"impact":"Increase engagement by 10%",
+    		"wishlist":"no"
+    	},{
+    		"SNo":"8",
+    		"id":"8",
+    		"userGroup":"Enterprise users",
+    		"classification":"Basic",
+    		"engScoreRange":"20-50%",
+    		"description":"Securely share your documents with your colleagues",
+    		"impact":"Increase engagement by 4%",
+    		"wishlist":"no"
+    	}]
         
     }
 }
