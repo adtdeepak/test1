@@ -3912,7 +3912,7 @@ ul.acquisitiontabs li:last-child {
 	width: 100%;
 	border: 1px solid #d0d0d0;
 	background: #fff;
-	padding-left: 10px;
+	padding-left: 0px;
 }
 
 .engagementScorePanelRight .AcquisitionPanel {
@@ -3922,7 +3922,7 @@ ul.acquisitiontabs li:last-child {
 .engagementScorePanelLeft {
 	border-right: 1px solid #cccccc;
 	float: left;
-	margin-top: 15px;
+	margin-top: 0px;
 	min-height: 240px;
 	width: 20%;
 }
@@ -8874,7 +8874,7 @@ div#progressBar {
     height: 40px;
     letter-spacing: 1px;
     line-height: 50px;
-    padding: 10px 20px 10px 70px;
+    padding: 8px 20px 8px 70px;
     position: relative;
     text-align: center;
     text-decoration: none;
@@ -8890,11 +8890,11 @@ div#progressBar {
 .button-blue:hover{ opacity: .8;}
 
 .button-blue span {
-background-color: #132d52;
+background-color: #666;
     border-bottom-left-radius: 5px;
-    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    border-right: 1px solid #666;
     border-top-left-radius: 5px;
-    height: 42px;
+    height: 38px;
     left: 0;
     position: absolute;
     top: 0;
@@ -8902,7 +8902,7 @@ background-color: #132d52;
 }
 
 .button-blue:hover span, .button-blue.active span {
-  background-color:#132d52;
+  background-color:#666;
  
 }
 

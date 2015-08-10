@@ -51,8 +51,12 @@
     </div>
     </div>
 		<div class="contentpannel">
+            
 			<div class="engagementScorePanel clearfix"
 				ng-controller="engagementScoreController" ng-if="isEngagementMetricsViewable">
+                <div style="margin-bottom:0px;" class="panel panel-default">
+					<div class="panel-heading">Engagement Score</div>
+				</div>
 				<div class="progress-loading" ng-if="!error && !dataLoaded"></div>
                 <ng-include ng-show="error" src="'partials/error.htm'" class=" forChart"></ng-include>
 				<div ng-hide="error || !dataLoaded" class="engagementScorePanelLeft">
@@ -241,7 +245,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="AcquisitionPanel" ng-controller="engagementActivityDeepDiveController" ng-if="isEngagementMetricsViewable">
+	<!--		<div class="AcquisitionPanel" ng-controller="engagementActivityDeepDiveController" ng-if="isEngagementMetricsViewable">
                 <div style="margin-bottom:15px;" class="panel panel-default">
 					<div class="panel-heading">Engagement Deep Dive</div>
 				</div>
@@ -253,7 +257,7 @@
 						<div class="clearfix">
 							<!-- <div class="pull-left subtitle">
 								<h3 class="subTitle">Engagement Tree Map</h3>
-							</div> -->
+							</div> 
 							<div class="pull-right" ng-if="false">
 								<div id="Div4">
 									<ul class="acquisitiontabs heatMap">
@@ -367,7 +371,7 @@
 
 		</div>
 	</div>
-</div>
+</div>-->
 <!----------------------------------------------->
 <div id="boxes">
 	<div id="tableZoom" class="window">
