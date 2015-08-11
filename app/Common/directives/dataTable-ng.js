@@ -68,8 +68,8 @@ angular.module('AnalyticsApp')
                 if(previous){
                 	previous.child.hide();
                 }
-                if(previousRow != currentRow){
-              	  if ( row.child.isShown() ) {
+                previous = row;
+              	  if (row.child.isShown() ) {
                       // This row is already open - close it
                       row.child.hide();
                       tr.removeClass('shown');
@@ -86,11 +86,6 @@ angular.module('AnalyticsApp')
                     tr.addClass('shown');
                     previousRow = currentRow;
                   }
-                }else{
-                	previousRow = -1;
-                	previousRowCollapse="";
-                }
-                previous = row;
                 
             });
             
@@ -390,7 +385,7 @@ angular.module('AnalyticsApp')
         },
         scope: {
             options: "=",
-            
+            tableData:"=",
             otherData: '=',
             functionCall:'=',
             wishlistData:'=',
