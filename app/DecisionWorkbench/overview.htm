@@ -52,7 +52,7 @@
 				</div>
 			</div>
 			<div class="collapse in" >
-				<table class="table borderless smSubsTable noMarginBtm" my-table  options="options" table-data="rowClicked" wishlist-data="wishlistSelected">
+				<table class="table borderless smSubsTable noMarginBtm" my-table  options="options" table-data="rowClicked" wishlist-data="wishlistSelected" execute-data="executeSelected">
 					<colgroup>
 						<col width="10%">
 						<col width="20%">
@@ -63,7 +63,7 @@
 					</colgroup>
 					<thead>
 				      <tr>
-				        <th>S.No</th>
+				        <th>Campaign Id</th>
 				        <th>User Group</th>
 				        <th>Campaign Description</th>
 				        <th>Impact</th>
@@ -83,7 +83,7 @@
 				<div class="panel-heading">Top Campaign Options by user groups
 					<div class="pull-right xclose"></div>
 					<div class="btn-group pull-right" style="margin-top: -6px;margin-right: 30px;">
-					    <button class="btn bkgd-white" style="min-width: 200px;text-align: left;color: #555555;">Please Select From List</button>
+					    <button class="btn bkgd-white" style="min-width: 200px;text-align: left;color: #555555;">{{userGroupDropdownText}}</button>
 					    <button class="btn dropdown-toggle bkgd-white" data-toggle="dropdown">
 					    <span class="caret"></span>
 					   </button>
@@ -96,7 +96,7 @@
 				</div>
 			</div>
 			<div class="collapse">
-				<table class="table borderless smSubsTable noMarginBtm" my-table  options="userTableOptions" table-data="rowClicked" wishlist-data="wishlistSelected">
+				<table class="table borderless smSubsTable noMarginBtm" my-table  options="userTableOptions" table-data="rowClicked" wishlist-data="wishlistSelected" execute-data="executeSelected">
 					<colgroup>
 						<col width="10%">
 						<col width="20%">
@@ -107,7 +107,7 @@
 					</colgroup>
 					<thead>
 				      <tr>
-				        <th>S.No</th>
+				        <th>Campaign Id</th>
 				        <th>User Group</th>
 				        <th>Campaign Description</th>
 				        <th>Impact</th>
@@ -124,7 +124,7 @@
 				<div class="panel-heading">Top Campaign Options by Features
 					<div class="pull-right xclose"></div>
 					<div class="btn-group pull-right" style="margin-top: -6px;margin-right: 30px;">
-					    <button class="btn bkgd-white" style="min-width: 200px;text-align: left;color: #555555;">Please Select From List</button>
+					    <button class="btn bkgd-white" style="min-width: 200px;text-align: left;color: #555555;">{{featureDropdownText}}</button>
 					    <button class="btn dropdown-toggle bkgd-white" data-toggle="dropdown">
 					    <span class="caret"></span>
 					   </button>
@@ -137,7 +137,7 @@
 				</div>
 			</div>
 			<div class="collapse" >
-				<table class="table borderless smSubsTable noMarginBtm" my-table  options="featuresOptions" table-data="rowClicked" wishlist-data="wishlistSelected">
+				<table class="table borderless smSubsTable noMarginBtm" my-table  options="featuresOptions" table-data="rowClicked" wishlist-data="wishlistSelected" execute-data="executeSelected">
 					<colgroup>
 						<col width="10%">
 						<col width="20%">
@@ -148,7 +148,7 @@
 					</colgroup>
 					<thead>
 				      <tr>
-				        <th>S.No</th>
+				        <th>Campaign Id</th>
 				        <th>User Group</th>
 				        <th>Campaign Description</th>
 				        <th>Impact</th>
