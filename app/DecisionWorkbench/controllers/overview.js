@@ -2,6 +2,8 @@ angular.module('DecisionWorkbench')
 
 .controller( "overviewController", function($scope, DataService, CustomService, ChartOptionsService, $rootScope, UtilitiesService, $location) {
 
+	$scope.userGroupDropdownText = 'Project Managers';
+	$scope.featureDropdownText = 'Musicians';
 	$scope.rowClicked = function(attribute){
 		console.log("clicked controller:", attribute);
 		window.location = "#/overview-details?selectedGroup="+attribute;
@@ -65,6 +67,8 @@ angular.module('DecisionWorkbench')
 	$scope.overallDataSuccess = function(response){
 		$scope.overallResponse = response.data;
 		$scope.addData(response.data['All Users']);
+		$scope.clickUserGroup($scope.userGroupDropdownText);
+		$scope.clickFeature($scope.featureDropdownText);
 		$scope.addUserGroupsTableData(response.data.jobHoppers);
 		$scope.addFeaturesTableData(response.data.photographers);
 	};
