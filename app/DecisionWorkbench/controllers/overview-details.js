@@ -20,7 +20,6 @@ angular.module('DecisionWorkbench')
 		$scope.selectedRowId = urlIndex.selectedId;
 		urlSelectedRowId = urlIndex.selectedId;
 		$scope.addData($scope.overallResponse[urlIndex.selectedGroup]);
-		
 	}
 	
 	$scope.wishlistSelected = function(attribute, isSelected){
@@ -190,8 +189,17 @@ angular.module('DecisionWorkbench')
 	}
 	$scope.options = UtilitiesService.getDataTableOptions();
 	var columOptions = {
-			"aoColumns" : [ null, null ,null, null,null, null,
-			{
+			"aoColumns" : [{
+				"sClass" : "row-expand-details"
+			},{
+				"sClass" : "row-expand-details"
+			},{
+				"sClass" : "row-expand-details"
+			},{
+				"sClass" : "row-expand-details"
+			},{
+				"sClass" : "row-expand-details"
+			},{
 				"sClass" : "row-expand-details"
 			}],
 			"bPaginate":false,
@@ -239,12 +247,12 @@ angular.module('DecisionWorkbench')
 					executeSection = "<div class='execute-unselected execute-selected'></div>"
 				}
 					$scope.options.aaData.push([obj.id, obj.userGroup,  obj.description, obj.impact,
-					   wishlistSection , executeSection,"<div class='xclose'></div>"]);
+					   wishlistSection , executeSection]);
 				})
 		} catch (e) {
 			$scope.fail(errorConstants.DATA_ERR);
 		}
-		$timeout(function () {$(".dataTableContainer .expandRow td.row-expand-details .xclose").trigger('click');}, 200);
+		$timeout(function () {$(".dataTableContainer .expandRow td.row-expand-details").trigger('click');}, 200);
 		/*if(initialExpand){
 			$timeout(function () {$(".dataTableContainer .expandRow td.row-expand-details .xclose").trigger('click');}, 200);
 			initialExpand = false;
