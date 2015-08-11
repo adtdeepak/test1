@@ -7418,6 +7418,7 @@ input[type="text"]:disabled{
 .tableAccOuterContainer{
 	display: block;
 	width: 100%;
+    float:left;
     padding-bottom:20px;
 }
 .tableAccInnerContainer:nth-child(2){
@@ -8616,7 +8617,7 @@ div#progressBar {
   background: #ffffff;
   border: 2px solid #132D52;
   border-radius: 5px;
-  height:155px;
+  height:145px;
   width: 15%;
 }
 
@@ -8631,13 +8632,17 @@ div#progressBar {
 .icon-widget{
     background-repeat: no-repeat;
     /* width: 92%; */
-    height: 118px;
+    height: 110px;
     background-position: 60% 100%;
    /* background-size: 86% 100%;*/
     margin-right: 10px;
 }
 .all-user-image {
 	background-image: url('../images/alluser-icon.png');
+}
+
+.Mobile-image {
+	background-image: url('../images/Mobile-icon.png');
 }
 
 .project-manager-image {
@@ -8665,11 +8670,11 @@ div#progressBar {
 }
 
 .icon-widget-text{
-	    height: 65px;
+	    height: 40px;
    
     text-align: center;
-    padding-top: 13px;
-    padding-bottom:10px;
+    padding-top: 5px;
+    padding-bottom:5px;
 }
 .wishlist-unselected {
 	background: url('../images/execute-icon.png');

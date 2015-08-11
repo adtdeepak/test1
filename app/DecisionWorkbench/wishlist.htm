@@ -11,22 +11,11 @@
 <a style="color:#666;" href="home.htm">Home</a>
 </li>
 <li><a style="color:#666;" href="#/overview">Campaign Options</a></li>
-    <li class="active">Campaign Options Deepdive</li>
+    <li class="active">Wishlist</li>
 </ul>
 </div>
     <div class="col-md-4-big">
-        <div style="float:left;" id="timePeriodTabs" class="filter" ng-if="thisPage!='/builddo'">
-					<ul>
-						<li><a
-							class="" href="#" ng-click="broadcastPeriodChange('weekly',0)">Weekly</a></li>
-						<li ng-class="{'active': selectedIndex[1].selected}"><a
-							class="" href="#" ng-click="broadcastPeriodChange('monthly',1)">Monthly</a></li>
-						<li ng-class="{'active': selectedIndex[2].selected}"><a
-							class="" href="#" ng-click="broadcastPeriodChange('quarterly',2)">Quarterly</a></li>
-						<li ng-class="{'active': selectedIndex[3].selected}"><a
-							class="" href="#" ng-click="broadcastPeriodChange('yearly',3)">Yearly</a></li>
-					</ul>
-				</div>
+       
         <div id="exportIconsPanel" ng-if="thisPage!='/builddo'" style="background: #ffffff !important;">
     <ul>
 						<li title="Print" class="Printicon">&nbsp;</li>
@@ -57,7 +46,7 @@
     </div>
     <div class="clear"></div>
     <div class="pull-right" id="timePeriodTabs" style="margin:0px; width:100%; padding-top:10px; border-top:1px solid #ccc;">
-					<ul style="float:right; margin-right:-8px;">
+					<ul style="float:left; margin-right:-8px;">
 						<li><a
 							class="" href="#" ng-click="broadcastPeriodChange('weekly',0)">Features</a></li>
 						<li ng-class="{'active': selectedIndex[1].selected}"><a

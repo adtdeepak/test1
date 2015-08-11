@@ -155,11 +155,12 @@ angular.module('AnalyticsApp')
         		return '<div class="tableAccOuterContainer">'+
         		'<div class="row nopadding">'+
     			'<div style="margin-left:15px;" class="heading-overview">'+'Incremental Impact'+'</div>'+
-                   '<div style="border-bottom:1px dotted #666; padding-bottom: 25px;" class="half-width">'+
+                    '<div style="float:left; width100%;>'+
+                   '<div style=" padding-bottom: 25px;" class="half-width">'+
 				'<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">'+
 					'<div style="border:1px solid  #555; " class="brdr-left ">'+
 						'<div class="">'+
-							'<div class="panel-heading " style="font-weight:600; text-align:center; background:#555 none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'Total User'+'</div>'+
+							'<div class="panel-heading " style="font-weight:600; text-align:center; background:#555 none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'Conversion %'+'</div>'+
 						'</div>'+
 						'<div  style="padding:20px !important;" class="widget-content metric-widgets">'+
 							'<div class="row-fluid">'+
@@ -171,7 +172,7 @@ angular.module('AnalyticsApp')
 				'<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">'+
 					'<div style="border:1px solid  #adadad;" class="brdr-left ">'+
 						'<div class="">'+
-							'<div class="panel-heading" style="font-weight:600; text-align:center; background:#adadad none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'Total User'+'</div>'+
+							'<div class="panel-heading" style="font-weight:600; text-align:center; background:#adadad none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'Engagement Score'+'</div>'+
 						'</div>'+
 						'<div  style="padding:20px !important;" class="widget-content metric-widgets">'+
 							'<div class="row-fluid">'+
@@ -179,13 +180,14 @@ angular.module('AnalyticsApp')
 							'</div>'+							
 						'</div>'+
 					'</div>'+
+				'</div>'+                    
 				'</div>'+
-				'</div>'+
-                     '<div  style="border-bottom:1px dotted #666; padding-bottom: 25px;" class="half-width">'+
+                    
+                     '<div  style=" padding-bottom: 25px;" class="half-width">'+
 				'<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">'+
 					'<div style="border:1px solid  #555;" class="brdr-left ">'+
 						'<div class="">'+
-							'<div class="panel-heading" style="font-weight:600; text-align:center; background:#555 none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'Total User'+'</div>'+
+							'<div class="panel-heading" style="font-weight:600; text-align:center; background:#555 none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'New Users Converted'+'</div>'+
 						'</div>'+
 						'<div  style="padding:20px !important;" class="widget-content metric-widgets">'+
 							'<div class="row-fluid">'+
@@ -197,7 +199,7 @@ angular.module('AnalyticsApp')
 				'<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">'+
 					'<div style="border:1px solid  #adadad; " class="brdr-left ">'+
 						'<div class="">'+
-							'<div class="panel-heading" style="font-weight:600; text-align:center; background:#adadad none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'Total User'+'</div>'+
+							'<div class="panel-heading" style="font-weight:600; text-align:center; background:#adadad none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'Revenue'+'</div>'+
 						'</div>'+
 						'<div  style="padding:20px !important;" class="widget-content metric-widgets">'+
 							'<div class="row-fluid">'+
@@ -207,18 +209,27 @@ angular.module('AnalyticsApp')
 					'</div>'+
 				'</div>'+
 				'</div>'+
+                    '<div  style="padding:15px;">'+
+                    '<div style="width:100%; float:left; border-bottom:1px dotted #666;">'+
+                    '<p style="border: 1px solid #ccc; font-size: 14px;   padding: 10px;    width: 50%;">'+'<b>Reasons</b><br/>Mobile app adoption increases by 20%<br/>Average EG of non mobile app users is 50% lower than mobile app users'+'</p>'+
+                    '</div>'+                   
+                    '</div>'+
+                    '</div>'+
+                    
     			
     			'<div style="margin-left:15px; float:left; margin-top:20px;" class="heading-overview">'+'Description of user group'+'</div>'+
-    			'<div class="row brdr-dashed">'+
+    			'<div style="margin: 0 15px; " class="row brdr-dashed">'+
     				'<div class="row nopadding">'+'</div>'+
     					'<div class="half-width">'+
-    						'<div style="border: 1px solid #555;   margin: 0px 15px 0; padding: 0; "  class="col-sm-4 col-md-4 col-lg-4-1">'+
-                    '<div class="panel-heading" style="font-weight:600; text-align:center; background:#555 none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'Total User'+'</div>'+
+                    '<div style="border: 1px solid #666;  float: left;     width: 100%;">'+
+    						'<div style=" margin: 0px 15px 0; padding: 0; "  class="col-sm-4 col-md-4 col-lg-4-1">'+
+                    
     							'<div class="icon-widget all-user-image">'+'</div>'+
     							'<div class="text-bold" style="text-align:center;">'+'678,457'+'</div>'+
     							'<div class="icon-widget-text text-bold bkgd-none">'+'Young Job Hoppers'+'</div>'+
     						'</div>'+
-    						'<div style="border: 1px solid #a5a5a5;   margin: 0px 8px 0; padding: 0; "  class="col-sm-4 col-md-4 col-lg-4-1">'+'<div class="panel-heading" style="font-weight:600; text-align:center; background:#a5a5a5 none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'Total User'+'</div>'+
+    						'<div style="margin: 0px 8px 0; padding: 0; "  class="col-sm-4 col-md-4 col-lg-4-1">'+
+                    '<div class="icon-widget Mobile-image">'+'</div>'+
                     '<div class="text-bold" style="text-align:center;">'+'257,645'+'</div>'+
     							'<div class="text-bold" style="text-align:center;">'+'App users 40%'+'</div>'+
     							
@@ -226,8 +237,8 @@ angular.module('AnalyticsApp')
     							'<div class="text-bold" style="text-align:center;">'+'Active users 40%'+'</div>'+
     							
     						'</div>'+
-    						'<div style="border: 1px solid #555;   margin: 0px 8px 0; padding: 0; "  class="col-sm-4 col-md-4 col-lg-4-1">'+
-                    '<div class="panel-heading" style="font-weight:600; text-align:center; background:#555 none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'Total User'+'</div>'+
+    						'<div style="margin: 0px 8px 0; padding: 0; "  class="col-sm-4 col-md-4 col-lg-4-1">'+
+                    
     							
                     	'<div class="icon-widget" style="padding-top:30px;">'+
     								'<div class="text-bold" style="text-align:center;padding-top:5px;">'+'65% Male'+'</div>'+
@@ -235,6 +246,7 @@ angular.module('AnalyticsApp')
     							'</div>'+
     							
     						'</div>'+
+                    '</div>'+
     					'</div>'+
     					'<div class="half-width">'+
     						'<div class="col-sm-12 col-md-12 col-lg-12">'+
@@ -260,10 +272,10 @@ angular.module('AnalyticsApp')
 					'</colgroup>'+
 					'<thead class="dark-gray-table">'+
 				      '<tr>'+
-				        '<th style="background:#666 !important;">S.No</th>'+
-				        '<th style="background:#666 !important;">User Group</th>'+
-				        '<th style="background:#666 !important;">Campaign </th>'+
-                        '<th style="background:#666 !important;">Target</th>'+
+				        '<th style="background:#666 !important;">Feature</th>'+
+				        '<th style="background:#666 !important;">Current Usage level</th>'+
+				        '<th style="background:#666 !important;">Idea Usage level</th>'+
+                        '<th style="background:#666 !important;">Impact on EG score</th>'+
                         '</tr>'+
 				    '</thead>'+
 					'<tbody>'+
@@ -307,17 +319,19 @@ angular.module('AnalyticsApp')
                      '<div style="float:left;">'+
                      '<table style="border:1px solid #666;" class="table smSubsTable noMarginBtm">'+
 					'<colgroup>'+
-						'<col width="25%">'+
-						'<col width="25%">'+
-						'<col width="25%">'+
-						'<col width="25%">'+						
+						'<col width="20%">'+
+                        '<col width="20%">'+
+						'<col width="20%">'+
+						'<col width="20%">'+
+						'<col width="20%">'+						
 					'</colgroup>'+
 					'<thead class="dark-gray-table">'+
-				      '<tr>'+
-				        '<th style="background:#666 !important;">S.No</th>'+
-				        '<th style="background:#666 !important;">User Group</th>'+
-				        '<th style="background:#666 !important;">Campaign </th>'+
-                        '<th style="background:#666 !important;">Target</th>'+
+				       '<tr>'+
+                        '<th style="background:#666 !important;">Campaign ID</th>'+
+				        '<th style="background:#666 !important;">Campaign Description</th>'+
+				        '<th style="background:#666 !important;">Channel</th>'+
+				        '<th style="background:#666 !important;">Impact</th>'+
+                        '<th style="background:#666 !important;">End Date</th>'+
                         '</tr>'+
 				    '</thead>'+
 					'<tbody>'+
@@ -348,17 +362,19 @@ angular.module('AnalyticsApp')
                      '<div class="acord" style="float:left;">'+
                     '<table style="border:1px solid #666;" class="table smSubsTable noMarginBtm">'+
 					'<colgroup>'+
-						'<col width="25%">'+
-						'<col width="25%">'+
-						'<col width="25%">'+
-						'<col width="25%">'+						
+						'<col width="20%">'+
+                        '<col width="20%">'+
+						'<col width="20%">'+
+						'<col width="20%">'+
+						'<col width="20%">'+						
 					'</colgroup>'+
 					'<thead class="dark-gray-table">'+
 				      '<tr>'+
-				        '<th style="background:#666 !important;">S.No</th>'+
-				        '<th style="background:#666 !important;">User Group</th>'+
-				        '<th style="background:#666 !important;">Campaign </th>'+
-                        '<th style="background:#666 !important;">Target</th>'+
+                        '<th style="background:#666 !important;">Campaign ID</th>'+
+				        '<th style="background:#666 !important;">Campaign Description</th>'+
+				        '<th style="background:#666 !important;">Channel</th>'+
+				        '<th style="background:#666 !important;">Impact</th>'+
+                        '<th style="background:#666 !important;">End Date</th>'+
                         '</tr>'+
 				    '</thead>'+
 					'<tbody>'+
