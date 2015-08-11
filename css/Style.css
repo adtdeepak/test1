@@ -2673,7 +2673,7 @@ table:not(.accordionTable) tr:hover td {
 }
 
 table {
-	border: 1px solid #ced5da !important;
+	border: 1px solid #666 !important;
 	border-radius: 4px;
 }
 
@@ -8583,7 +8583,7 @@ div#progressBar {
 }
 
 .campaign-overview table tbody tr td:hover{
-	cursor:pointer
+	cursor:pointer;
 }
 .heading-overview {
 	
@@ -8712,7 +8712,9 @@ div#progressBar {
     margin-left: 15px;
 }
 .text-bold{
-	font-weight:600;
+	 font-size: 16px;
+    font-weight: 600;
+    line-height: 30px;
 }
 /* media query */
 @media (min-width: 320px) {

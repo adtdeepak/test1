@@ -202,26 +202,28 @@ angular.module('AnalyticsApp')
     			'<div class="row brdr-dashed">'+
     				'<div class="row nopadding">'+'</div>'+
     					'<div class="half-width">'+
-    						'<div style="border: 1px solid #555;   margin: 22px 15px 0; padding: 0; "  class="col-sm-4 col-md-4 col-lg-4-1">'+
+    						'<div style="border: 1px solid #555;   margin: 0px 15px 0; padding: 0; "  class="col-sm-4 col-md-4 col-lg-4-1">'+
                     '<div class="panel-heading" style="font-weight:600; text-align:center; background:#555 none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'Total User'+'</div>'+
     							'<div class="icon-widget all-user-image">'+'</div>'+
     							'<div class="text-bold" style="text-align:center;">'+'678,457'+'</div>'+
     							'<div class="icon-widget-text text-bold bkgd-none">'+'Young Job Hoppers'+'</div>'+
     						'</div>'+
-    						'<div style="border: 1px solid #a5a5a5;   margin: 22px 8px 0; padding: 0; "  class="col-sm-4 col-md-4 col-lg-4-1">'+'<div class="panel-heading" style="font-weight:600; text-align:center; background:#a5a5a5 none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'Total User'+'</div>'+
-    							'<div class="icon-widget" style="padding-top:30px;">'+
+    						'<div style="border: 1px solid #a5a5a5;   margin: 0px 8px 0; padding: 0; "  class="col-sm-4 col-md-4 col-lg-4-1">'+'<div class="panel-heading" style="font-weight:600; text-align:center; background:#a5a5a5 none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'Total User'+'</div>'+
+                    '<div class="text-bold" style="text-align:center;">'+'257,645'+'</div>'+
+    							'<div class="text-bold" style="text-align:center;">'+'App users 40%'+'</div>'+
+    							
+    						
+    							'<div class="text-bold" style="text-align:center;">'+'Active users 40%'+'</div>'+
+    							
+    						'</div>'+
+    						'<div style="border: 1px solid #555;   margin: 0px 8px 0; padding: 0; "  class="col-sm-4 col-md-4 col-lg-4-1">'+
+                    '<div class="panel-heading" style="font-weight:600; text-align:center; background:#555 none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'Total User'+'</div>'+
+    							
+                    	'<div class="icon-widget" style="padding-top:30px;">'+
     								'<div class="text-bold" style="text-align:center;padding-top:5px;">'+'65% Male'+'</div>'+
     								'<div class="text-bold" style="text-align:center;padding-top:5px;">'+'35% Female'+'</div>'+
     							'</div>'+
-    							'<div class="text-bold" style="text-align:center;">'+'Active users 40%'+'</div>'+
-    							'<div class="icon-widget-text text-bold bkgd-none">'+'</div>'+
-    						'</div>'+
-    						'<div style="border: 1px solid #555;   margin: 22px 8px 0; padding: 0; "  class="col-sm-4 col-md-4 col-lg-4-1">'+
-                    '<div class="panel-heading" style="font-weight:600; text-align:center; background:#555 none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'Total User'+'</div>'+
-    							'<div class="icon-widget">'+'</div>'+
-    							'<div class="text-bold" style="text-align:center;">'+'257,645'+'</div>'+
-    							'<div class="text-bold" style="text-align:center;">'+'App users 40%'+'</div>'+
-    							'<div class="icon-widget-text text-bold bkgd-none">'+'</div>'+
+    							
     						'</div>'+
     					'</div>'+
     					'<div class="half-width">'+
@@ -239,7 +241,7 @@ angular.module('AnalyticsApp')
     			'<div style="margin-left:15px; float:left; margin-top:20px;" class="heading-overview">'+'Description of Product usage'+'</div>'+
     			'<div id="demo">'+
                     '<div style="float:left; padding:0px 15px;">'+
-                    '<table class="table border smSubsTable noMarginBtm">'+
+                     '<table style="border:1px solid #666;" class="table smSubsTable noMarginBtm">'+
 					'<colgroup>'+
 						'<col width="25%">'+
 						'<col width="25%">'+
@@ -248,37 +250,39 @@ angular.module('AnalyticsApp')
 					'</colgroup>'+
 					'<thead class="dark-gray-table">'+
 				      '<tr>'+
-				        '<th class="dark-gray">S.No</th>'+
-				        '<th class="dark-gray">User Group</th>'+
-				        '<th class="dark-gray">Campaign Description</th>'+
-                        '<th class="dark-gray">Target users</th>'+
+				        '<th style="background:#666 !important;">S.No</th>'+
+				        '<th style="background:#666 !important;">User Group</th>'+
+				        '<th style="background:#666 !important;">Campaign </th>'+
+                        '<th style="background:#666 !important;">Target</th>'+
                         '</tr>'+
 				    '</thead>'+
 					'<tbody>'+
 						'<tr class="gray-table-row">'+
-							'<td>1</td>'+
-							'<td>Job Hobbers<br>ES between 0-35%</td>'+
-							'<td>Nurturing (connecting with)</td>'+
-							'<td>Increase engagement by 3%<br>New user to basic user</td>'+
+							'<td style="background:#f6f6f6 !important;">1</td>'+
+							'<td style="background:#f6f6f6 !important;">Job Hobbers<br>ES between 0-35%</td>'+
+							'<td style="background:#f6f6f6 !important;">Nurturing (connecting with)</td>'+
+							'<td style="background:#f6f6f6 !important;">Increase engagement by 3%<br>New user to basic user</td>'+
 							'</tr>'+
 						'<tr class="gray-dark-table-row">'+
-							'<td>2</td>'+
-							'<td>Job Hobbers<br>ES between 0-35%</td>'+
-							'<td>Nurturing (connecting with)</td>'+
-							'<td>Increase engagement by 3%<br>New user to basic user</td>'+
+							'<td style="background:#e9e9e9 !important;">2</td>'+
+							'<td style="background:#e9e9e9 !important;">Job Hobbers<br>ES between 0-35%</td>'+
+							'<td style="background:#e9e9e9 !important;">Nurturing (connecting with)</td>'+
+							'<td style="background:#e9e9e9 !important;">Increase engagement by 3%<br>New user to basic user</td>'+
 							'</tr>'+
                     '<tr class="gray-table-row">'+
-							'<td>1</td>'+
-							'<td>Job Hobbers<br>ES between 0-35%</td>'+
-							'<td>Nurturing (connecting with)</td>'+
-							'<td>Increase engagement by 3%<br>New user to basic user</td>'+
+							'<td style="background:#f6f6f6 !important;">1</td>'+
+							'<td style="background:#f6f6f6 !important;">Job Hobbers<br>ES between 0-35%</td>'+
+							'<td style="background:#f6f6f6 !important;">Nurturing (connecting with)</td>'+
+							'<td style="background:#f6f6f6 !important;">Increase engagement by 3%<br>New user to basic user</td>'+
 							'</tr>'+
 						'<tr class="gray-dark-table-row">'+
-							'<td>2</td>'+
-							'<td>Job Hobbers<br>ES between 0-35%</td>'+
-							'<td>Nurturing (connecting with)</td>'+
-							'<td>Increase engagement by 3%<br>New user to basic user</td>'+
+							'<td style="background:#e9e9e9 !important;">2</td>'+
+							'<td style="background:#e9e9e9 !important;">Job Hobbers<br>ES between 0-35%</td>'+
+							'<td style="background:#e9e9e9 !important;">Nurturing (connecting with)</td>'+
+							'<td style="background:#e9e9e9 !important;">Increase engagement by 3%<br>New user to basic user</td>'+
 							'</tr>'+
+                  
+                  
                   		
 						
 					'</tbody>'+
@@ -291,7 +295,7 @@ angular.module('AnalyticsApp')
                      '<div style="margin-left:15px; float:left; margin-top:20px; width:100%;" class="heading-overview">'+'On-Going Campaign'+'</div>'+
     						'<div class="col-sm-12 col-md-12 col-lg-12">'+
                      '<div style="float:left;">'+
-                    '<table class="table border smSubsTable noMarginBtm">'+
+                     '<table style="border:1px solid #666;" class="table smSubsTable noMarginBtm">'+
 					'<colgroup>'+
 						'<col width="25%">'+
 						'<col width="25%">'+
@@ -300,26 +304,27 @@ angular.module('AnalyticsApp')
 					'</colgroup>'+
 					'<thead class="dark-gray-table">'+
 				      '<tr>'+
-				        '<th>S.No</th>'+
-				        '<th>User Group</th>'+
-				        '<th>Campaign Description</th>'+
-                        '<th>Target users</th>'+
+				        '<th style="background:#666 !important;">S.No</th>'+
+				        '<th style="background:#666 !important;">User Group</th>'+
+				        '<th style="background:#666 !important;">Campaign </th>'+
+                        '<th style="background:#666 !important;">Target</th>'+
                         '</tr>'+
 				    '</thead>'+
 					'<tbody>'+
 						'<tr class="gray-table-row">'+
-							'<td>1</td>'+
-							'<td>Job Hobbers<br>ES between 0-35%</td>'+
-							'<td>Nurturing (connecting with)</td>'+
-							'<td>Increase engagement by 3%<br>New user to basic user</td>'+
+							'<td style="background:#f6f6f6 !important;">1</td>'+
+							'<td style="background:#f6f6f6 !important;">Job Hobbers<br>ES between 0-35%</td>'+
+							'<td style="background:#f6f6f6 !important;">Nurturing (connecting with)</td>'+
+							'<td style="background:#f6f6f6 !important;">Increase engagement by 3%<br>New user to basic user</td>'+
 							'</tr>'+
 						'<tr class="gray-dark-table-row">'+
-							'<td>2</td>'+
-							'<td>Job Hobbers<br>ES between 0-35%</td>'+
-							'<td>Nurturing (connecting with)</td>'+
-							'<td>Increase engagement by 3%<br>New user to basic user</td>'+
+							'<td style="background:#e9e9e9 !important;">2</td>'+
+							'<td style="background:#e9e9e9 !important;">Job Hobbers<br>ES between 0-35%</td>'+
+							'<td style="background:#e9e9e9 !important;">Nurturing (connecting with)</td>'+
+							'<td style="background:#e9e9e9 !important;">Increase engagement by 3%<br>New user to basic user</td>'+
 							'</tr>'+
-                   
+                  
+                  		
 						
 					'</tbody>'+
 				'</table>'+
@@ -330,8 +335,8 @@ angular.module('AnalyticsApp')
                        '<div style="margin-left:15px; float:left; margin-top:20px; width:100%;" class="heading-overview">'+'Past Campaign'+'</div>'+
     			
     						'<div class="col-sm-12 col-md-12 col-lg-12">'+
-                     '<div style="float:left;">'+
-                    '<table class="table border smSubsTable noMarginBtm">'+
+                     '<div class="acord" style="float:left;">'+
+                    '<table style="border:1px solid #666;" class="table smSubsTable noMarginBtm">'+
 					'<colgroup>'+
 						'<col width="25%">'+
 						'<col width="25%">'+
@@ -340,24 +345,24 @@ angular.module('AnalyticsApp')
 					'</colgroup>'+
 					'<thead class="dark-gray-table">'+
 				      '<tr>'+
-				        '<th>S.No</th>'+
-				        '<th>User Group</th>'+
-				        '<th>Campaign Description</th>'+
-                        '<th>Target users</th>'+
+				        '<th style="background:#666 !important;">S.No</th>'+
+				        '<th style="background:#666 !important;">User Group</th>'+
+				        '<th style="background:#666 !important;">Campaign </th>'+
+                        '<th style="background:#666 !important;">Target</th>'+
                         '</tr>'+
 				    '</thead>'+
 					'<tbody>'+
 						'<tr class="gray-table-row">'+
-							'<td>1</td>'+
-							'<td>Job Hobbers<br>ES between 0-35%</td>'+
-							'<td>Nurturing (connecting with)</td>'+
-							'<td>Increase engagement by 3%<br>New user to basic user</td>'+
+							'<td style="background:#f6f6f6 !important;">1</td>'+
+							'<td style="background:#f6f6f6 !important;">Job Hobbers<br>ES between 0-35%</td>'+
+							'<td style="background:#f6f6f6 !important;">Nurturing (connecting with)</td>'+
+							'<td style="background:#f6f6f6 !important;">Increase engagement by 3%<br>New user to basic user</td>'+
 							'</tr>'+
 						'<tr class="gray-dark-table-row">'+
-							'<td>2</td>'+
-							'<td>Job Hobbers<br>ES between 0-35%</td>'+
-							'<td>Nurturing (connecting with)</td>'+
-							'<td>Increase engagement by 3%<br>New user to basic user</td>'+
+							'<td style="background:#e9e9e9 !important;">2</td>'+
+							'<td style="background:#e9e9e9 !important;">Job Hobbers<br>ES between 0-35%</td>'+
+							'<td style="background:#e9e9e9 !important;">Nurturing (connecting with)</td>'+
+							'<td style="background:#e9e9e9 !important;">Increase engagement by 3%<br>New user to basic user</td>'+
 							'</tr>'+
                   
                   		
@@ -375,7 +380,7 @@ angular.module('AnalyticsApp')
         },
         scope: {
             options: "=",
-            tableData: '=',
+            
             otherData: '=',
             functionCall:'=',
             wishlistData:'='
