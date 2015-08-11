@@ -65,7 +65,7 @@
 					</ul>
 				</div>
       
-	<div class="row" ng-controller="wishlistController">
+	<div class="row" ng-controller="selectedCampaignController">
 	
 	
 		<div class="row-fluid" style="margin-top:30px;">
@@ -92,7 +92,7 @@
 				</div>
 			</div>
 			<div class="panel-heading" ng-if="!isWishlistThere" style="text-align: center;">
-				There is no wishlist for the selected campaign.
+				There is no selected list for the selected campaign.
 			</div>
 			<div class="collapse in" ng-if="isWishlistThere">
 				<table class="table borderless smSubsTable noMarginBtm campaign-overview-details" my-table  options="options" table-data="updateExpandData" function-call="selectRow" wishlist-data="wishlistSelected" execute-data="executeSelected">

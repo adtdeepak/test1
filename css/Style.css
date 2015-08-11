@@ -8711,6 +8711,15 @@ div#progressBar {
     margin-right: 50px;
     margin-left: 15px;
 }
+.execute-selected {
+	background: url('../images/execute-icon.png');
+	height: 44px;
+	background-repeat: no-repeat;
+	background-position: -65px -5px;
+	margin-right: 50px;
+	margin-left: 15px;
+}
+
 .text-bold{
 	font-weight:600;
 }

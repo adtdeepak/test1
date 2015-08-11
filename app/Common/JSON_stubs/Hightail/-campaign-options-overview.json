@@ -10,7 +10,7 @@
     		"engScoreRange":"0-20%",
     		"description":"Mobile app download",
     		"impact":"Increase engagement 15%",
-    		"wishlist":"no"
+    		"wishlist":"no","selected":"no"
     	},{
     		"SNo":"4",
     		"id":"4",
@@ -19,7 +19,7 @@
     		"engScoreRange":"70% and above",
     		"description":"Multiple corporate users from these companies, contact IT department",
     		"impact":"Campaign conversion by 60%",
-    		"wishlist":"no"
+    		"wishlist":"no","selected":"no"
     	},{
     		"SNo":"7",
     		"id":"7",
@@ -28,7 +28,7 @@
     		"engScoreRange":"50 to 70%",
     		"description":"Unlimited storage space",
     		"impact":"Increase engagement by 10%",
-    		"wishlist":"no"
+    		"wishlist":"no","selected":"no"
     	},{
     		"SNo":"2",
     		"id":"2",
@@ -37,7 +37,7 @@
     		"engScoreRange":"50 to 70%",
     		"description":"Password protect files",
     		"impact":"Increase engagement 5%",
-    		"wishlist":"no"
+    		"wishlist":"no","selected":"no"
     	}],
     	"Project Managers":[{
     		"SNo":"1",
@@ -56,7 +56,7 @@
     		"engScoreRange":"50 to 70%",
     		"description":"Password protect files",
     		"impact":"Increase engagement 5%",
-    		"wishlist":"no"
+    		"wishlist":"no","selected":"no"
     	},{
     		"SNo":"3",
     		"id":"3",
@@ -65,7 +65,7 @@
     		"engScoreRange":"50 to 70%",
     		"description":"Join today and get 10% storage extra",
     		"impact":"Camapaign conversion rate 23%",
-    		"wishlist":"no"
+    		"wishlist":"no","selected":"no"
     	}],
     	
     	"Musicians":[{
@@ -74,21 +74,21 @@
     		"userGroup":"Musicians",
     		"description":"Nurturing (connecting with)",
     		"impact":"Increase engagement by 3% New user to basic user",
-    		"wishlist":"no"
+    		"wishlist":"no","selected":"no"
     	},{
     		"SNo":"13",
     		"id":"13",
     		"userGroup":"Musicians",
     		"description":"Nurturing (connecting with)",
     		"impact":"Increase engagement by 3% New user to basic user",
-    		"wishlist":"no"
+    		"wishlist":"no","selected":"no"
     	},{
     		"SNo":"14",
     		"id":"14",
     		"userGroup":"Musicians",
     		"description":"Nurturing (connecting with)",
     		"impact":"Increase engagement by 3% New user to basic user",
-    		"wishlist":"no"
+    		"wishlist":"no","selected":"no"
     	}],
     	
     	"Finance executives":[{
@@ -97,21 +97,21 @@
     		"userGroup":"Finance executives",
     		"description":"Nurturing (connecting with)",
     		"impact":"Increase engagement by 3% New user to basic user",
-    		"wishlist":"no"
+    		"wishlist":"no","selected":"no"
     	},{
     		"SNo":"10",
     		"id":"10",
     		"userGroup":"Finance executives",
     		"description":"Nurturing (connecting with)",
     		"impact":"Increase engagement by 3% New user to basic user",
-    		"wishlist":"no"
+    		"wishlist":"no","selected":"no"
     	},{
     		"SNo":"11",
     		"id":"11",
     		"userGroup":"Finance executives",
     		"description":"Nurturing (connecting with)",
     		"impact":"Increase engagement by 3% New user to basic user",
-    		"wishlist":"no"
+    		"wishlist":"no","selected":"no"
     	}],
 							
     	"Photographers":[{
@@ -120,21 +120,21 @@
     		"userGroup":"Photographers",
     		"description":"Nurturing (connecting with)",
     		"impact":"Increase engagement by 3% New user to basic user",
-    		"wishlist":"no"
+    		"wishlist":"no","selected":"no"
     	},{
     		"SNo":"16",
     		"id":"16",
     		"userGroup":"Photographers",
     		"description":"Nurturing (connecting with)",
     		"impact":"Increase engagement by 3% New user to basic user",
-    		"wishlist":"no"
+    		"wishlist":"no","selected":"no"
     	},{
     		"SNo":"17",
     		"id":"17",
     		"userGroup":"Photographers",
     		"description":"Nurturing (connecting with)",
     		"impact":"Increase engagement by 3% New user to basic user",
-    		"wishlist":"no"
+    		"wishlist":"no","selected":"no"
     	}],
 							
     	"Enterprise users":[{
@@ -145,7 +145,7 @@
     		"engScoreRange":"70% and above",
     		"description":"Multiple corporate users from these companies, contact IT department",
     		"impact":"Campaign conversion by 60%",
-    		"wishlist":"no"
+    		"wishlist":"no","selected":"no"
     	},{
     		"SNo":"5",
     		"id":"5",
@@ -154,7 +154,7 @@
     		"engScoreRange":"50 to 70%",
     		"description":"Audit, control and monitor file access rights",
     		"impact":"Increase engagement by 7.5%",
-    		"wishlist":"no"
+    		"wishlist":"no","selected":"no"
     	},{
     		"SNo":"6",
     		"id":"6",
@@ -163,7 +163,7 @@
     		"engScoreRange":"50 to 70%",
     		"description":"Version controll, Metadata access",
     		"impact":"Increase engagement by 12%",
-    		"wishlist":"no"
+    		"wishlist":"no","selected":"no"
     	},{
     		"SNo":"7",
     		"id":"7",
@@ -172,7 +172,7 @@
     		"engScoreRange":"50 to 70%",
     		"description":"Unlimited storage space",
     		"impact":"Increase engagement by 10%",
-    		"wishlist":"no"
+    		"wishlist":"no","selected":"no"
     	},{
     		"SNo":"8",
     		"id":"8",
@@ -181,7 +181,7 @@
     		"engScoreRange":"20-50%",
     		"description":"Securely share your documents with your colleagues",
     		"impact":"Increase engagement by 4%",
-    		"wishlist":"no"
+    		"wishlist":"no","selected":"no"
     	}]
         
     }

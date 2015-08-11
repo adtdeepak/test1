@@ -31,14 +31,24 @@ angular.module('AnalyticsApp')
                     tr.addClass('shown');
                 }
             } );
-            $('.dataTableContainer').off('click').on('click', 'td .wishlist-unselected', function () {
+            $('.dataTableContainer').off('click').on('click', 'td .wishlist-unselected', function (e) {
+            	e.stopPropagation();
             	var selected = "yes";
             	if($(this).hasClass('wishlist-selected')){
             		selected = "no";
             	}
             	scope.wishlistData($(this).parent().attr('attr'), selected);
-            	console.log("wishlist-unselected:", $(this).toggleClass('wishlist-selected'));
-            	//scope.tableData($(this).attr('attr'));
+            	$(this).toggleClass('wishlist-selected');
+            	});
+            
+            $('.dataTableContainer').on('click', 'td .execute-unselected', function (e) {
+            	e.stopPropagation();
+            	var selected = "yes";
+            	if($(this).hasClass('execute-selected')){
+            		selected = "no";
+            	}
+            	scope.executeData($(this).parent().attr('attr'), selected);
+            	$(this).toggleClass('execute-selected');
             	});
             
             $('.dataTableContainer').on('click', 'td.each-row-details', function () {
@@ -378,7 +388,8 @@ angular.module('AnalyticsApp')
             tableData: '=',
             otherData: '=',
             functionCall:'=',
-            wishlistData:'='
+            wishlistData:'=',
+            executeData:'='
         }
     };
 })

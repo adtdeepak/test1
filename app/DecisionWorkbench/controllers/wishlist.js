@@ -28,7 +28,7 @@ angular.module('DecisionWorkbench')
 		$.each($scope.overallResponse, function(key, value){
 			if(key == "All Users"){
 				$.each(value, function(index, eachRow){
-					if(eachRow.SNo == attribute){
+					if(eachRow.id == attribute){
 						eachRow.wishlist = isSelected;
 						selectedGroup = eachRow.userGroup;
 					}
@@ -38,14 +38,38 @@ angular.module('DecisionWorkbench')
 		$.each($scope.overallResponse, function(key, value){
 			if(key == selectedGroup){
 				$.each(value, function(index, eachRow){
-					if(eachRow.SNo == attribute){
+					if(eachRow.id == attribute){
 						eachRow.wishlist = isSelected;
 						selectedGroup = eachRow.userGroup;
 					}
 				})
 			}
 		})
-		console.log("overallResponse after updated:", $scope.overallResponse);
+		localStorage.setItem('OverviewDetails', JSON.stringify($scope.fullResponse));
+	}
+	
+	$scope.executeSelected = function(attribute, isSelected){
+		var selectedGroup;
+		$.each($scope.overallResponse, function(key, value){
+			if(key == "All Users"){
+				$.each(value, function(index, eachRow){
+					if(eachRow.id == attribute){
+						eachRow.selected = isSelected;
+						selectedGroup = eachRow.userGroup;
+					}
+				})
+			}
+		})
+		$.each($scope.overallResponse, function(key, value){
+			if(key == selectedGroup){
+				$.each(value, function(index, eachRow){
+					if(eachRow.id == attribute){
+						eachRow.selected = isSelected;
+						selectedGroup = eachRow.userGroup;
+					}
+				})
+			}
+		})
 		localStorage.setItem('OverviewDetails', JSON.stringify($scope.fullResponse));
 	}
 	
@@ -208,8 +232,12 @@ angular.module('DecisionWorkbench')
 			$scope.options.aaData = [];
 			$.each(data, function(key, obj) {
 				if(obj.wishlist == "yes"){
-					$scope.options.aaData.push([obj.SNo, obj.userGroup,  obj.description, obj.impact,
-					   "<div class='wishlist-unselected wishlist-selected'></div>", "<div class='execute-unselected'></div>","<div class='xclose'></div>"]);
+					var executeSection = "<div class='execute-unselected'></div>";
+					if(obj.selected == "yes"){
+						var executeSection = "<div class='execute-unselected execute-selected'></div>";
+					}
+					$scope.options.aaData.push([obj.id, obj.userGroup,  obj.description, obj.impact,
+					   "<div class='wishlist-unselected wishlist-selected'></div>", executeSection,"<div class='xclose'></div>"]);
 				}
 					
 				})
@@ -219,29 +247,7 @@ angular.module('DecisionWorkbench')
 		} catch (e) {
 			$scope.fail(errorConstants.DATA_ERR);
 		}
-		//$timeout(function () {$(".dataTableContainer .expandRow td.row-expand-details .xclose").trigger('click');}, 200);
-		/*if(initialExpand){
-			$timeout(function () {$(".dataTableContainer .expandRow td.row-expand-details .xclose").trigger('click');}, 200);
-			initialExpand = false;
-		}*/
-	
-		
 	};
-	
-	/*function getAllUserTableData() {
-		var requestData = {};
-		var func = $scope.overallDataSuccess; 
-    	if (arguments[1]) { 
-    		if (arguments[1].key == cacheKey) { 
-    			func = null; 
-    		} else { 
-    			return false; 
-    		} 
-    	} 
-    	DataService.getOverviewDetailsData(requestData, func, $scope.fail); 
-	
-	} 
-	getAllUserTableData();*/
 	
 	function getAllUserTableData() {
 		if(localStorage.getItem('OverviewDetails')){
