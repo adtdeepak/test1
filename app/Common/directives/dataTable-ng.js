@@ -251,8 +251,8 @@ angular.module('AnalyticsApp')
                     '</div>'+
     					'</div>'+
     					'<div class="half-width">'+
-    						'<div class="col-sm-12 col-md-12 col-lg-12">'+
-    							'<div class="acqChart monthBarChart">'+'</div>'+
+    						'<div style="padding-right:0px;" class="col-sm-12 col-md-12 col-lg-12">'+
+    							'<div style="border:1px solid #666;" class="acqChart monthBarChart">'+'</div>'+
     						'</div>'+
     					'</div>'+
     				'<div class="row nopadding">'+
