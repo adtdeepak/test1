@@ -36,7 +36,18 @@ angular.module('DecisionWorkbench')
 		});
 		return data;
 	}
-
+	this.getPieChartData = function(data){
+		var resultData = [];
+		$.each(data.name, function(key, value){
+			var tempObj = {
+					name: data.name[key],
+					y: data.values[key],
+					color: data.color[key]
+			};
+			resultData.push(tempObj);
+		})
+		return resultData;
+	};
 	this.toGetTopLeastEngagedData = function ( data ){
 		var _data = [];
 		$.each(data, function(key, obj){
