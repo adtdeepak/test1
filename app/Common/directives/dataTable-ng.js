@@ -211,14 +211,14 @@ angular.module('AnalyticsApp')
 				
 				'</div>'+
                     '<div  style="padding:15px;">'+
-                    '<div style="width:100%; float:left; border-bottom:1px dotted #666;">'+
+                    '<div style="width:100%; float:left;">'+
                     '<p style="border: 1px solid #ccc; font-size: 14px;   padding: 10px;    width: 50%;">'+'<b>Reasons</b><br/>'+data.userGroup.reasons[0]+'<br/>'+data.userGroup.reasons[1]+'</p>'+
                     '</div>'+                   
                     '</div>'+
                     '</div>'+
                     
     			
-    			'<div style="margin: 0 15px; " class="row brdr-dashed">'+
+    			'<div style="margin: 0 15px; " class="row ">'+
     				'<div class="row nopadding">'+'</div>'+
                     '<div style=" border-bottom: 3px double #666;  font-size: 16px; margin: 15px 0px;" class="heading-overview">'+'Description of user group'+'</div>'+
     					'<div class="half-width">'+
