@@ -8892,17 +8892,17 @@ div#progressBar {
    background-color: #3ea8dc;
     border-radius: 5px;
     color: #fff;
-  
-    font-size: 15px;
+  border:1px solid #ccc;
+    font-size: 16px;
     font-weight: 600;
     height: 40px;
     letter-spacing: 1px;
     line-height: 50px;
-    padding: 8px 20px 8px 70px;
+    padding: 8px 22px;
     position: relative;
     text-align: center;
     text-decoration: none;
-    text-transform: uppercase;
+  
     top: 0;
   
   
@@ -8911,7 +8911,7 @@ div#progressBar {
   -webkit-border-radius: 5px;
  
 }
-.button-blue:hover{ opacity: .8;}
+.button-blue:hover{ opacity: .8; color: #fff !important;}
 
 .button-blue span {
 background-color: #666;

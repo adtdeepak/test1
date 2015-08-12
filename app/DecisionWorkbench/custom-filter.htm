@@ -3,19 +3,60 @@
 	<link rel="shortcut icon" href="images/logo.ico"/>
 </head>
 
-<div class="container campaign-overview" ng-cloak style="padding-top: 80px;" ng-controller="customFilterController">
-	<div class="row">
-	<div class="pull-right" id="timePeriodTabs" style="margin-right: 30px;margin-top: -25px;">
-					<ul>
+<div class="container campaign-overview" ng-cloak style="padding-top: 30px;" ng-controller="customFilterController">
+    <div class="col-md-8">
+<ul style="margin-left:-30px; margin-bottom:5px;" class="breadcrumb">
+<li>
+<a style="color:#666;" href="home.htm">Home</a>
+</li>
+<li><a style="color:#666;" href="#/overview">Campaign Options</a></li>
+    <li class="active">Custom Options</li>
+</ul>
+</div>
+    <div class="col-md-4-big">
+       
+        <div id="exportIconsPanel" ng-if="thisPage!='/builddo'" style="background: #ffffff !important;">
+    <ul>
+						<li title="Print" class="Printicon">&nbsp;</li>
+						<li class="iconExport export">
+							<ul>
+								<li class="top"><a href="#" alt="Export to Pdf"
+									title="Export to Pdf" ng-click="pdfExport()">
+										<figure>
+											<img src="images/icon-pdf.png" />
+										</figure>
+								</a></li>
+								<li><a href="#" alt="Export to Excel"
+									title="Export to Excel">
+										<figure>
+											<img src="images/icon-excel.png" />
+										</figure>
+								</a></li>
+								<li><a href="#" alt="Export to Word" title="Export to Word">
+										<figure>
+											<img src="images/icon-word.png" />
+										</figure>
+								</a></li>
+							</ul>
+						</li>
+					</ul>
+        
+    </div>
+    </div>
+    <div class="clear"></div>
+    <div class="pull-right" id="timePeriodTabs" style="margin:0px; width:100%; padding-top:13px; border-top:1px solid #ccc;">
+					<ul style="margin-right:-8px;">
 						<li><a
 							class="" href="#" ng-click="broadcastPeriodChange('weekly',0)">Features</a></li>
 						<li ng-class="{'active': selectedIndex[1].selected}"><a
 							class="" href="#" ng-click="broadcastPeriodChange('monthly',1)">User Group</a></li>
 					</ul>
 				</div>
+	<div class="row">
+	
 	
 		
-		<div class="row nopadding" style="margin-right: 23px !important;margin-top:25px !important;border:1px solid grey;">
+		<div class="row nopadding" style="margin-top:53px !important;border:1px solid grey;">
 			<div class="collapseDiv">
 				<div class="panel-heading"> Filters
 				</div>
@@ -81,9 +122,10 @@
 			</section>
 		</div>
 	</div>
-	<div class="pull-right" style="margin: 10px 10px 10px 0px;"> <button class="btn" role="button" style="width:100px;background:#666666;">Apply Filter</button></div>
+                  <div class="pull-right" style="margin: 10px 10px 10px 0px;"> <div class="container-button"><a href="#" class="button-blue">Apply Filter</a></div></div>
+	
 </div>
-		</div><div class="row nopadding" style="margin-right: 23px !important;margin-top:10px !important;border:1px solid grey;">
+		</div><div class="row nopadding" style="margin-top:10px !important;border:1px solid grey;">
 			<div class="collapseDiv">
 				<div class="panel-heading"> Best Campaign Options for job seekers
 				</div>

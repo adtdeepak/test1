@@ -4154,7 +4154,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:focus, a.list-g
 .panel-heading {
     border-bottom: 1px solid transparent;
   
-    padding: 5px 10px;
+    padding: 5px 5px;
 }
 .panel-heading > .dropdown .dropdown-toggle {
     color: inherit;
