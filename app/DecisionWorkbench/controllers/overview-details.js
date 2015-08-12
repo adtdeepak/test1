@@ -192,41 +192,14 @@ angular.module('DecisionWorkbench')
 		
 		var chartOptions;
 		var chartData;
-		
-	/*	chartData = DataConversionService.getHorizontalBarChartData(accordianTrendData.engagement.trend);
-		chartOptions = ChartOptionsService.activeUsersAreaChart(chartData, "Engagement", "", 300);
-		chartOBJ = chartsService.areaChart.call($('.engagementChart'),chartOptions, $scope);*/
-		
 		chartData = DataConversionService.getHorizontalBarChartData(accordianTrendData.userGroup.trend);
-	    chartOptions = ChartOptionsService.getColumnBarChart(chartData, "Month of joining", "", 300, "#BCBCBC");
+	    chartOptions = ChartOptionsService.getColumnBarChart(chartData, "Month of joining", "", 220, "#BCBCBC");
 		chartOBJ = chartsService.basicBar.call($('.monthBarChart'),chartOptions, $scope);
 		
 		
 		chartData = DataConversionService.getPieChartData($scope.userGroupData.gender);
 	    chartOptions = ChartOptionsService.getPieChart(chartData, "", "", 150);
 		chartOBJ = chartsService.donutChart.call($('.genderInnerDonutChart'),chartOptions, $scope);
-		/*var xAxisData = [' ', ' '];
-	    var chartDataObj = {};
-	    chartDataObj['xAxisData'] = xAxisData;
-	    chartDataObj['data'] = accordianTrendData.impact.conversion.data;
-
-	    
-	    chartOptions = ChartOptionsService.getOverviewColumnChart(chartDataObj, " ", "Increase in % Conversion", 300);
-		chartOBJ = chartsService.columnChart.call($('.conversionChart'),chartOptions, $scope);*/
-		
-	   /* var chartDataObj = {};
-	    chartDataObj['xAxisData'] = xAxisData;
-	    chartDataObj['data'] = accordianTrendData.impact.userConverted.data;
-	    
-	    chartOptions = ChartOptionsService.getOverviewColumnChart(chartDataObj, " ", "Increase in # of user converted", 300);
-		chartOBJ = chartsService.columnChart.call($('.convertedUserChart'),chartOptions, $scope);
-		
-		    var chartDataObj = {};
-		    chartDataObj['xAxisData'] = xAxisData;
-		    chartDataObj['data'] = accordianTrendData.impact.revenue.data;
-		    
-		    chartOptions = ChartOptionsService.getOverviewColumnChart(chartDataObj, " ", "Increase in Revenue (LTV = $39)", 300);
-			chartOBJ = chartsService.columnChart.call($('.revenueChart'),chartOptions, $scope);*/
 	}
 	$scope.options = UtilitiesService.getDataTableOptions();
 	var columOptions = {
