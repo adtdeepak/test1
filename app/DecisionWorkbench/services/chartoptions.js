@@ -117,6 +117,9 @@ this.getSetGoalsData = function(data) {
             legend: {
             	enabled:false
           },
+          exporting:{
+        	  enabled: false 
+        	},
             tooltip: {
                 pointFormat: '<b>{point.percentage:.1f}%</b>'
             },
@@ -512,6 +515,9 @@ this.getColumnBarChart = function(data, title, subtitle, height, color){
 	        legend: {
 	            enabled:false
 	        },
+	          exporting:{
+	        	  enabled: false 
+	        	  },
 	        series: [{
 	            name: 'Value',
 	            data: data.data,
