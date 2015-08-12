@@ -150,49 +150,10 @@ angular.module('AnalyticsApp')
         		// `d` is the original data object for the row
         		return '<div class="tableAccOuterContainer">'+
         		'<div class="row nopadding">'+
-    			'<div style="margin-left:15px;" class="heading-overview">'+'Incremental Impact'+'</div>'+
+    			'<div style=" border-bottom: 3px double #666;  font-size: 16px; margin: 0 15px;" class="heading-overview">'+'Incremental Impact'+'</div>'+
                     '<div style="float:left; width100%;>'+
                    '<div style=" padding-bottom: 25px;" class="half-width">'+
-				'<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">'+
-					'<div style="border:1px solid  #555; " class="brdr-left ">'+
-						'<div class="">'+
-							'<div class="panel-heading " style="font-weight:600; text-align:center; background:#555 none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'Conversion %'+'</div>'+
-						'</div>'+
-						'<div  style="padding:20px !important;" class="widget-content metric-widgets">'+
-							'<div class="row-fluid">'+
-								'<div class="actual-value">'+'<span  style="color: #555; ">'+data.userGroup.incrementalImpact[0].F2PconversionRate+'</span>'+'</div>'+
-							'</div>'+							
-						'</div>'+
-					'</div>'+
-				'</div>'+
-				'<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">'+
-					'<div style="border:1px solid  #adadad;" class="brdr-left ">'+
-						'<div class="">'+
-							'<div class="panel-heading" style="font-weight:600; text-align:center; background:#adadad none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'Engagement Score'+'</div>'+
-						'</div>'+
-						'<div  style="padding:20px !important;" class="widget-content metric-widgets">'+
-							'<div class="row-fluid">'+
-								'<div class="actual-value">'+'<span  style="color: #adadad;">'+data.userGroup.incrementalImpact[0].EGScore+'</span>'+'</div>'+
-							'</div>'+							
-						'</div>'+
-					'</div>'+
-				'</div>'+                    
-				'</div>'+
-                    
-                     '<div  style=" padding-bottom: 25px;" class="half-width">'+
-				'<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">'+
-					'<div style="border:1px solid  #555;" class="brdr-left ">'+
-						'<div class="">'+
-							'<div class="panel-heading" style="font-weight:600; text-align:center; background:#555 none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'New Users Converted'+'</div>'+
-						'</div>'+
-						'<div  style="padding:20px !important;" class="widget-content metric-widgets">'+
-							'<div class="row-fluid">'+
-								'<div class="actual-value">'+'<span  style="color: #555;">'+data.userGroup.incrementalImpact[0].paidUsers+'</span>'+'</div>'+
-							'</div>'+							
-						'</div>'+
-					'</div>'+
-				'</div>'+
-				'<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">'+
+                    '<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">'+
 					'<div style="border:1px solid  #adadad; " class="brdr-left ">'+
 						'<div class="">'+
 							'<div class="panel-heading" style="font-weight:600; text-align:center; background:#adadad none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'Revenue'+'</div>'+
@@ -204,6 +165,50 @@ angular.module('AnalyticsApp')
 						'</div>'+
 					'</div>'+
 				'</div>'+
+                    
+                    '<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">'+
+					'<div style="border:1px solid  #555;" class="brdr-left ">'+
+						'<div class="">'+
+							'<div class="panel-heading" style="font-weight:600; text-align:center; background:#555 none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'New Users Converted'+'</div>'+
+						'</div>'+
+						'<div  style="padding:20px !important;" class="widget-content metric-widgets">'+
+							'<div class="row-fluid">'+
+								'<div class="actual-value">'+'<span  style="color: #555;">'+data.userGroup.incrementalImpact[0].paidUsers+'</span>'+'</div>'+
+							'</div>'+							
+						'</div>'+
+					'</div>'+
+				'</div>'+
+				                   
+				'</div>'+
+                    
+                     '<div  style=" padding-bottom: 25px;" class="half-width">'+
+                    '<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">'+
+					'<div style="border:1px solid  #adadad; " class="brdr-left ">'+
+						'<div class="">'+
+							'<div class="panel-heading " style="font-weight:600; text-align:center; background:#adadad none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'Conversion %'+'</div>'+
+						'</div>'+
+						'<div  style="padding:20px !important;" class="widget-content metric-widgets">'+
+							'<div class="row-fluid">'+
+								'<div class="actual-value">'+'<span  style="color: #adadad; ">'+data.userGroup.incrementalImpact[0].F2PconversionRate+'</span>'+'</div>'+
+							'</div>'+							
+						'</div>'+
+					'</div>'+
+				'</div>'+
+                    
+				'<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">'+
+					'<div style="border:1px solid  #555;" class="brdr-left ">'+
+						'<div class="">'+
+							'<div class="panel-heading" style="font-weight:600; text-align:center; background:#555 none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'Engagement Score'+'</div>'+
+						'</div>'+
+						'<div  style="padding:20px !important;" class="widget-content metric-widgets">'+
+							'<div class="row-fluid">'+
+								'<div class="actual-value">'+'<span  style="color: #555;">'+data.userGroup.incrementalImpact[0].EGScore+'</span>'+'</div>'+
+							'</div>'+							
+						'</div>'+
+					'</div>'+
+				'</div>'+ 
+				
+				
 				'</div>'+
                     '<div  style="padding:15px;">'+
                     '<div style="width:100%; float:left; border-bottom:1px dotted #666;">'+
@@ -213,9 +218,9 @@ angular.module('AnalyticsApp')
                     '</div>'+
                     
     			
-    			'<div style="margin-left:15px; float:left; margin-top:20px;" class="heading-overview">'+'Description of user group'+'</div>'+
     			'<div style="margin: 0 15px; " class="row brdr-dashed">'+
     				'<div class="row nopadding">'+'</div>'+
+                    '<div style=" border-bottom: 3px double #666;  font-size: 16px; margin: 15px 0px;" class="heading-overview">'+'Description of user group'+'</div>'+
     					'<div class="half-width">'+
                     '<div style="border: 1px solid #666;  float: left;     width: 100%;">'+
     						'<div style=" margin: 0px 15px 0; padding: 0; "  class="col-sm-4 col-md-4 col-lg-4-1">'+
@@ -257,12 +262,12 @@ angular.module('AnalyticsApp')
     				'</div>'+
     			'</div>'+
                     
-    			'<div style="margin-left:15px; float:left; margin-top:20px;" class="heading-overview">'+'Description of Product usage'+'</div>'+
-    			'<div id="demo">'+
-					'<div id="productUsageTable">'+'</div>'+
+    			'<div style=" border-bottom: 3px double #666;  font-size: 16px; margin: 15px 15px;" class="heading-overview">'+'Description of Product usage'+'</div>'+
+    			'<div style="margin: 15px 15px;" id="demo">'+
+					'<div  id="productUsageTable">'+'</div>'+
 				'</div>'+
                     '<div class="half-width">'+
-                     '<div style="margin-left:15px; float:left; margin-top:20px; width:100%;" class="heading-overview">'+'On-Going Campaign'+'</div>'+
+                     '<div style="border-bottom: 3px double #666;    float: left;    font-size: 16px;    margin: 15px 4px 15px 15px;    width: 95%;" class="heading-overview">'+'On-Going Campaign'+'</div>'+
     						'<div class="col-sm-12 col-md-12 col-lg-12">'+
                      '<div style="float:left;">'+
                      '<div id="table2">'+
@@ -272,7 +277,7 @@ angular.module('AnalyticsApp')
                     '</div>'+
                     '</div>'+
                     '<div class="half-width">'+
-                       '<div style="margin-left:15px; float:left; margin-top:20px; width:100%;" class="heading-overview">'+'Past Campaign'+'</div>'+
+                       '<div style="border-bottom: 3px double #666;    float: left;    font-size: 16px;    margin: 15px 4px 15px 15px;    width: 95%;" class="heading-overview">'+'Past Campaign'+'</div>'+
     			
     						'<div class="col-sm-12 col-md-12 col-lg-12">'+
                      '<div class="acord" style="float:left;">'+
