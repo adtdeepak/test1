@@ -1853,7 +1853,7 @@ th {
     border-top: 1px solid #ddd;
     line-height: 1.42857;
     padding: 8px;
-    vertical-align: top;
+    vertical-align: middle;
 }
 .table > thead > tr > th {
     border-bottom: 2px solid #ddd;
@@ -5157,7 +5157,8 @@ a {
     text-decoration: none;
 }
 a:focus, a:hover {
-    color: #666;
+    color: #3EA8DC;
+    text-decoration: underline !important;
     text-decoration: none;
 }
 a:focus {

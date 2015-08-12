@@ -3627,7 +3627,7 @@ select.small {
 
 .dataTable.no-footer tr td:nth-child(1),.dataTable.no-footer tr:nth-child(1) th:nth-child(1)
 	{
-	text-align: left;
+	align:center;
 }
 
 .ADtable tr {
@@ -8481,6 +8481,8 @@ div#progressBar {
     border: none !important;
     text-align: center;
     background: none !important;
+    align-items: center;
+    align:center !important;
 }
 
 .clSubsTable .box{
