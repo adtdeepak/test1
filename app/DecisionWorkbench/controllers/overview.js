@@ -122,8 +122,8 @@ angular.module('DecisionWorkbench')
 				},null, null],
 				'fnCreatedRow': function (nRow, aData, iDataIndex) {
 					  $.each($('td', nRow), function (colIndex) {
-						  if(aData){
-							  $(this).attr('attr', aData[1]+'&selectedId='+aData[0]);
+						  if(aData[1]){
+							  $(this).attr('attr', aData[1].split('<br>ES')[0]+'&selectedId='+aData[0]);
 						  }
 				            // For example, adding data-* attributes to the cell
 				           /* $(this).attr('attr', "Enterprise users");*/

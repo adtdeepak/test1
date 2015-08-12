@@ -89,7 +89,54 @@ this.getSetGoalsData = function(data) {
         }
 	}
 	};
-	
+	this.getPieChart = function(data, title, subtitle, height){
+		return {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie',
+                height:height
+            },
+            title: {
+                text: title,
+	            align:'center',
+	            style: {
+	                color: '#686868',
+	                fontWeight: 'bold'
+	            }
+            },
+            subtitle: {
+            	text:subtitle,
+	            align:'center',
+	            style: {
+	                color: '#686868',
+	                fontWeight: 'bold'
+	            }
+            },
+            legend: {
+            	enabled:false
+          },
+            tooltip: {
+                pointFormat: '<b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: false
+                    },
+                    showInLegend: true
+                }
+            },
+            series: [{
+                name: "",
+                colorByPoint: true,
+                data: data
+            }]
+		}
+	};
 	this.getTopLeastEngagedData = function(data) {	
 		return {	
 
@@ -446,8 +493,6 @@ this.getColumnBarChart = function(data, title, subtitle, height, color){
 	            }
 	        },
 	        yAxis: {
-	            min: 0,
-	            max:100,
 	            title: {
 	            },
 	            labels: {
@@ -455,7 +500,7 @@ this.getColumnBarChart = function(data, title, subtitle, height, color){
 	            }
 	        },
 	        tooltip: {
-	            valueSuffix: '%'
+	            valueSuffix: ''
 	        },
 	        plotOptions: {
 	            bar: {
@@ -468,7 +513,7 @@ this.getColumnBarChart = function(data, title, subtitle, height, color){
 	            enabled:false
 	        },
 	        series: [{
-	            name: 'Percentage',
+	            name: 'Value',
 	            data: data.data,
 	            color:color
 	        }]
