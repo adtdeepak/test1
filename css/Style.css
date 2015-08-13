@@ -8732,6 +8732,10 @@ div#progressBar {
     font-weight: 600;
     line-height: 30px;
 }
+.upArrow {
+	background: url('../images/arrow-green.png') no-repeat left center;
+	background-position: 53px;
+}
 /* media query */
 @media (min-width: 320px) {
     .col-lg-5ths {

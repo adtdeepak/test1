@@ -146,8 +146,10 @@ angular.module('DecisionWorkbench')
 		    } );   
 		    dataSet = [];
 		    $.each(dataSetObjOnGoingCampaign, function (key, obj) {
-				dataSet.push([obj.campaignId,
+				dataSet.push([obj.campaignID,
 				              obj.campaignDescription,
+				              obj.Impact,
+				              obj.Channel,
 				              obj.startDate]);
 			});
 		    
@@ -161,6 +163,8 @@ angular.module('DecisionWorkbench')
 		        "columns": [
 		            { "title": "Campaign ID" },
 		            { "title": "Campaign Description" },
+		            { "title": "Impact" },
+		            { "title": "Channel" },
 		            { "title": "Start Date" }
 		        ],
             dom: '<"dataTableContainer"t><"dataTablePaginateContainer"p>'
@@ -168,8 +172,10 @@ angular.module('DecisionWorkbench')
 		    
 		    dataSet = [];
 		    $.each(dataSetObjPastCampaign, function (key, obj) {
-				dataSet.push([obj.campaignId,
+				dataSet.push([obj.campaignID,
 				              obj.campaignDescription,
+				              obj.Impact,
+				              obj.Channel,
 				              obj.endDate]);
 			});
 		    
@@ -183,6 +189,8 @@ angular.module('DecisionWorkbench')
 		        "columns": [
 		            { "title": "Campaign ID" },
 		            { "title": "Campaign Description" },
+		            { "title": "Impact" },
+		            { "title": "Channel" },
 		            { "title": "End Date" }
 		        ],
             dom: '<"dataTableContainer"t><"dataTablePaginateContainer"p>'

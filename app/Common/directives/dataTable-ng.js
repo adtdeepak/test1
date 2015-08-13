@@ -189,7 +189,7 @@ angular.module('AnalyticsApp')
 						'</div>'+
 						'<div  style="padding:20px !important;" class="widget-content metric-widgets">'+
 							'<div class="row-fluid">'+
-								'<div class="actual-value">'+'<span  style="color: #adadad; ">'+data.userGroup.incrementalImpact[0].F2PconversionRate+'</span>'+'</div>'+
+								'<div class="actual-value upArrow">'+'<span  style="color: #adadad; ">'+data.userGroup.incrementalImpact[0].F2PconversionRate+'</span>'+'</div>'+
 							'</div>'+							
 						'</div>'+
 					'</div>'+
@@ -202,7 +202,7 @@ angular.module('AnalyticsApp')
 						'</div>'+
 						'<div  style="padding:20px !important;" class="widget-content metric-widgets">'+
 							'<div class="row-fluid">'+
-								'<div class="actual-value">'+'<span  style="color: #555;">'+data.userGroup.incrementalImpact[0].EGScore+'</span>'+'</div>'+
+								'<div class="actual-value upArrow">'+'<span  style="color: #555;">'+data.userGroup.incrementalImpact[0].EGScore+'</span>'+'</div>'+
 							'</div>'+							
 						'</div>'+
 					'</div>'+

@@ -245,29 +245,15 @@
 								"color":"#1b6395"
 							},
 							"targetedUsers":[
-							{"size": "135,751" ,"male":"62%","female":"38%","activeUsers":"82%","appUsersPercentage":"15%","appUsers": "20,363" ,
+							{"size": "505" ,"male":"42%","female":"58%","activeUsers":"65%","appUsersPercentage":"22%","appUsers": "139,371" ,
 							"gender":{
 						        		"name":["male","female"],
-						        		"values":[62, 38],
+						        		"values":[42, 58],
 						        		"color":["#F5874F", "#ADADAD"]
 						        	}
         					}],
-							"otherData":{
-								"name":"Job Hoppers",
-								"value":"678457",
-								"activeUsers":{
-									"":"40%",
-									"male":"65%",
-									"female":"35%"
-								},
-								"appUsers":{
-									"percentage":"40%",
-									"value":"257645"
-								}
-								
-							},
-							"incrementalImpact":[{"revenue":"2,932,200","paidUsers":"24,435","F2PconversionRate":"Increase by 0.9%","EGScore":"Increase by 20%"}],
-							"reasons":["Usage of Version control increase by 15%", "Engagement of paid users using version control is 20% higher"]
+							"incrementalImpact":[{"revenue":39840,"paidUsers":332,"F2PconversionRate":"0.25%","EGScore":"7%"}],
+							"reasons":["Mobile app adoption increases by 20%", "Average EG of non mobile app users is 50% lower than mobile app users"]
 						},
 						"tableData":{
 							"productUsage":[{"feature":"Send","currentUsageLevel":37,"ideaUsagelevel":50,"impactOnEGScore":"1%"},
@@ -275,12 +261,99 @@
 											{"feature":"Collaborate","currentUsageLevel":15,"ideaUsagelevel":35,"impactOnEGScore":"1.50%"},
 											{"feature":"Archive","currentUsageLevel":20,"ideaUsagelevel":25,"impactOnEGScore":"2%"},
 											{"feature":"E-Sign","currentUsageLevel":1,"ideaUsagelevel":3,"impactOnEGScore":"4%"}],
-							"onGoingCampaign":[{"campaignId":87,"campaignDescription":"Securely share your documents with your colleagues\nWork space share","startDate":"12/1/2012"},
-												{"campaignId":51,"campaignDescription":"Now read all your documents in Microsoft 365 integration","startDate":"12/1/2012"}],
-							"pastCampaign":[{"campaignId":83,"campaignDescription":"Add personal and official signature to your content","endDate":"11/1/2012"},
-											{"campaignId":101,"campaignDescription":"Welcome Campaign","endDate":"11/1/2012"}]
+							"onGoingCampaign":[{"campaignID":33,"campaignDescription":"Use the collaborate feature to minize multiple sharing","Impact":"Increase Engagement by 4%","Channel":" Home page Advertisement","startDate":"12/1/2012"},
+{"campaignID":72,"campaignDescription":"Welcome Campaign","Impact":"Increase Engagement by 3%","Channel":"Inbox Message","startDate":"12/1/2012"}],
+							"pastCampaign":[{"campaignID":42,"campaignDescription":"Share your files directly with your contacts","Impact":"Increase Engagement by 5%","Channel":" Home page Advertisement","endDate":"11/1/2012"},
+{"campaignID":57,"campaignDescription":"Never worry about deleting files with increased storage space","Impact":"Campaign conversion rate 9%","Channel":"Email","endDate":"11/1/2012"}]
 						}
 				},
+				"73":{
+						"userGroup":{
+							"trend":{
+								"name":["Jan", "Feb", "Mar", "Apr","May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+								"values":[11313,15647,13093,10001,8907,9732,10123,11963,10438,8003,12900,13631],
+								"color":"#1b6395"
+							},
+							"targetedUsers":[
+							{"size": "135,751" ,"male":"62%","female":"38%","activeUsers":"82%","appUsersPercentage":"15%","appUsers": "20,363" ,
+							"gender":{
+						        		"name":["male","female"],
+						        		"values":[62, 38],
+						        		"color":["#F5874F", "#ADADAD"]
+						        	}
+        					}],
+							"incrementalImpact":[{"revenue":"2,932,200","paidUsers":"24,435","F2PconversionRate":" 0.9%","EGScore":" 20%"}],
+							"reasons":["Usage of Version control increase by 15%", "Engagement of paidUsers using version control is 20% higher"]
+						},
+						"tableData":{
+							"productUsage":[{"feature":"Send","currentUsageLevel":37,"ideaUsagelevel":50,"impactOnEGScore":"1%"},
+											{"feature":"Share","currentUsageLevel":42,"ideaUsagelevel":50,"impactOnEGScore":"0.50%"},
+											{"feature":"Collaborate","currentUsageLevel":15,"ideaUsagelevel":35,"impactOnEGScore":"1.50%"},
+											{"feature":"Archive","currentUsageLevel":20,"ideaUsagelevel":25,"impactOnEGScore":"2%"},
+											{"feature":"E-Sign","currentUsageLevel":1,"ideaUsagelevel":3,"impactOnEGScore":"4%"}],
+							"onGoingCampaign":[{"campaignID":87,"campaignDescription":"Securely share your documents with your colleagues","Impact":"Increase in engagement by 15%","Channel":" Home page Advertisement","startDate":"12/1/2012"},
+{"campaignID":51,"campaignDescription":"Now read all your documents in Microsoft 365 integration","Impact":"Campaign conversion rate 4.5%","Channel":"Email","startDate":"12/1/2012"}],
+							"pastCampaign":[{"campaignID":83,"campaignDescription":"Add personal and official signature to your content","Impact":"Increase in engagement by 7%","Channel":" Home page Advertisement","endDate":"11/1/2012"},
+{"campaignID":101,"campaignDescription":"Welcome Campaign","Impact":"Increase in engagement by 3%","Channel":"Inbox Message","endDate":"11/1/2012"}]
+						}
+				},
+				"19":{
+						"userGroup":{
+							"trend":{
+								"name":["Jan", "Feb", "Mar", "Apr","May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+								"values":[24589,25098,29167,32841,38510,45365,53177,48447,46336,50020,45027,36552],
+								"color":"#1b6395"
+							},
+							"targetedUsers":
+							[{"size": 475.129 ,"male":"60%","female":"40%","activeUsers":"55%","appUsersPercentage":"48%","appUsers": 228.062,
+							"gender":{
+						        		"name":["male","female"],
+						        		"values":[60, 40],
+						        		"color":["#F5874F", "#ADADAD"]
+						        	}
+        					}],
+							"incrementalImpact":[{"revenue":4500000,"paidUsers":37500,"F2PconversionRate":"0.5%","EGScore":"15%"}],
+							"reasons":["Usage of collaborate feature increase by 25%", "Users who collaborate are 35% more engaged than users who do not use collaborate"]
+						},
+						"tableData":{
+							"productUsage":[{"feature":"Send","currentUsageLevel":37,"ideaUsagelevel":50,"impactOnEGScore":"1%"},
+											{"feature":"Share","currentUsageLevel":42,"ideaUsagelevel":50,"impactOnEGScore":"0.50%"},
+											{"feature":"Collaborate","currentUsageLevel":15,"ideaUsagelevel":35,"impactOnEGScore":"1.50%"},
+											{"feature":"Archive","currentUsageLevel":20,"ideaUsagelevel":25,"impactOnEGScore":"2%"},
+											{"feature":"Premium content security","currentUsageLevel":1,"ideaUsagelevel":3,"impactOnEGScore":"4%"}],
+							"onGoingCampaign":[{"campaignID":61,"campaignDescription":"Record, listen and share your music on the go. Download mobile app","Impact":"Increase in engagement by 12%","Channel":"Email","startDate":"12/1/2012"}],
+							"pastCampaign":[{"campaignID":34,"campaignDescription":"Now, share your music with your friends, family and colleagues","Impact":"Increase in engagement by 7%","Channel":" Home page Advertisement","endDate":"11/1/2012"}]
+						}
+				},
+				"87":{
+						"userGroup":{
+							"trend":{
+								"name":["Jan", "Feb", "Mar", "Apr","May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+								"values":[7542,7892,8012,7935,7702,7628,7411,7348,7180,7112,7490,7249],
+								"color":"#1b6395"
+							},
+							"targetedUsers":
+							[{"size": 90.501 ,"male":"71%","female":"29%","activeUsers":"78%","appUsersPercentage":"20%","appUsers": 18.100,
+							"gender":{
+						        		"name":["male","female"],
+						        		"values":[71, 29],
+						        		"color":["#F5874F", "#ADADAD"]
+						        	}
+        					}],
+							"incrementalImpact":[{"revenue":39840,"paidUsers":332,"F2PconversionRate":"2%","EGScore":"25%"}],
+							"reasons":["Integration of Microsoft 365 increase by 40%", "Users who integrate with Microsoft 365 login 7X more than others"]
+						},
+						"tableData":{
+							"productUsage":[{"feature":"Send","currentUsageLevel":37,"ideaUsagelevel":50,"impactOnEGScore":"1%"},
+											{"feature":"Microsfot 365 integration","currentUsageLevel":42,"ideaUsagelevel":50,"impactOnEGScore":"0.50%"},
+											{"feature":"Collaborate","currentUsageLevel":15,"ideaUsagelevel":35,"impactOnEGScore":"1.50%"},
+											{"feature":"Workflow automation","currentUsageLevel":20,"ideaUsagelevel":25,"impactOnEGScore":"2%"},
+											{"feature":"Version History","currentUsageLevel":1,"ideaUsagelevel":3,"impactOnEGScore":"4%"}],
+							"onGoingCampaign":[{"campaignID":40,"campaignDescription":"Manage your work on the go, download mobile app now","Impact":"Increase Engagement by 5.5%","Channel":"Email","startDate":"12/1/2012"}],
+							"pastCampaign":[{"campaignID":5,"campaignDescription":"Securely share your documents with your colleagues\nWork space share","Impact":"Increase Engagement by 4%","Channel":"Inbox Message","endDate":"11/1/2012"}]
+						}
+				},
+				
 				"1":{
 					"impact":{
 						"conversion":{
