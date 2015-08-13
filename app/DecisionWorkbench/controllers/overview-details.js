@@ -201,7 +201,7 @@ angular.module('DecisionWorkbench')
 		var chartOptions;
 		var chartData;
 		chartData = DataConversionService.getHorizontalBarChartData(accordianTrendData.userGroup.trend);
-	    chartOptions = ChartOptionsService.getColumnBarChart(chartData, "Month of joining", "", 220, "#BCBCBC");
+	    chartOptions = ChartOptionsService.getColumnBarChart(chartData, "", "Month of joining", 220, "#F5874F");
 		chartOBJ = chartsService.basicBar.call($('.monthBarChart'),chartOptions, $scope);
 		
 		
@@ -275,13 +275,8 @@ angular.module('DecisionWorkbench')
 		} catch (e) {
 			$scope.fail(errorConstants.DATA_ERR);
 		}
-		$timeout(function () {$(".dataTableContainer .expandRow td.row-expand-details").trigger('click');}, 200);
-		/*if(initialExpand){
-			$timeout(function () {$(".dataTableContainer .expandRow td.row-expand-details .xclose").trigger('click');}, 200);
-			initialExpand = false;
-		}*/
+		$timeout(function () {$(".dataTableContainer .expandRow td.row-expand-details").trigger('openSelectedAccordian');}, 200);
 	
-		
 	};
 	
 	function getAllUserTableData() {

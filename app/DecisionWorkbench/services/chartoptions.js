@@ -470,11 +470,13 @@ this.getColumnBarChart = function(data, title, subtitle, height, color){
 		return {
 	        chart: {
 	            type: 'column',
-                height:height
+                height:height,
+				spacingBottom:30
 	        },
 	        title: {
 	            text: title,
-	            align:'left',
+	            align:'center',
+	            y:200,
 	            style: {
 	                color: '#686868',
 	                fontWeight: 'bold'
@@ -482,7 +484,8 @@ this.getColumnBarChart = function(data, title, subtitle, height, color){
 	        },
 	        subtitle: {
 	            text: subtitle,
-	            align:'left',
+	            align:'center',
+	            y:200,
 	            style: {
 	                color: '#686868',
 	                fontWeight: 'bold'
@@ -519,7 +522,7 @@ this.getColumnBarChart = function(data, title, subtitle, height, color){
 	        	  enabled: false 
 	        	  },
 	        series: [{
-	            name: 'Value',
+	            name: 'Count',
 	            data: data.data,
 	            color:color
 	        }]

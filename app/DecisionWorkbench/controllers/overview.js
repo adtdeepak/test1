@@ -37,7 +37,7 @@ angular.module('DecisionWorkbench')
 	}
 	
 	$scope.executeSelected = function(attribute, isSelected){
-		
+		console.log("attribute executeSelected",attribute, isSelected);
 		var selectedId = attribute.split('=')[1];
 		$.each($scope.fullResponse.data.bestCampaignOptions, function(key, value){
 			if(key == "All Users"){
@@ -152,8 +152,12 @@ angular.module('DecisionWorkbench')
 			$scope.error = false;
 			$scope.options.aaData = [];
 			$.each(data, function(key, obj) {
+				var executeSection = "<div class='execute-unselected'></div>";
+				if(obj.id == "21"){
+					var executeSection = "<a href='resources/SampleCampaignFile.xlsx' download><div class='execute-unselected'></div></a>";
+				}
 					$scope.options.aaData.push([obj.id, obj.userGroup,  obj.description, obj.impact,
-					                           "<div class='wishlist-unselected'></div>" ,"<div class='execute-unselected'></div>" ]);
+					                           "<div class='wishlist-unselected'></div>" , executeSection]);
 				})
 		} catch (e) {
 			$scope.fail(errorConstants.DATA_ERR);

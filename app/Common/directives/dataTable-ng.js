@@ -42,12 +42,13 @@ angular.module('AnalyticsApp')
             	});
             
             $('.dataTableContainer').on('click', 'td .execute-unselected', function (e) {
+            	console.log("$(this)", $(this))
             	e.stopPropagation();
             	var selected = "yes";
             	if($(this).hasClass('execute-selected')){
             		selected = "no";
             	}
-            	scope.executeData($(this).parent().attr('attr'), selected);
+            	scope.executeData($(this).closest('td').attr('attr'), selected);
             	$(this).toggleClass('execute-selected');
             	});
             
@@ -56,38 +57,59 @@ angular.module('AnalyticsApp')
             });
             
             var previous = "";var previousRow = -1;var previousRowCollapse="";
-            $('.dataTableContainer').on('click', 'td.row-expand-details', function () {
-            	$(this).find('.xclose').addClass("expandclose");
-            	if(previousRowCollapse){
-            		previousRowCollapse.find('.xclose').removeClass("expandclose");
-            	}
+            $('.dataTableContainer').on('click', 'td.row-expand-details', function (event) {
+            	console.log("check open occured")
+            	  event.stopImmediatePropagation();
                 var tr = $(this).closest('tr');
                 var row = tableObj.row( tr );
                 var currentRow = row[0][0];;
-                previousRowCollapse = $(this);
-                if(previous){
+               /* if(previous){
+                	console.log("closeprevious")
                 	previous.child.hide();
                 }
-                previous = row;
+                console.log("check row", row)
+                previous = row;*/
               	  if (row.child.isShown() ) {
+              		console.log("check close")
                       // This row is already open - close it
                       row.child.hide();
                       tr.removeClass('shown');
                   }
                   else {
-                      // Open this row
-                    var rowCount = $('.campaign-overview-details').find('tr[role="row"]').index($(this).closest('tr'))-1;
-                	console.log("scope:", scope.otherData['All Users'][$(this).attr('attr')])
-                    row.child(formatHtml(scope.otherData['All Users'][$(this).attr('attr')])).show();
-                    $compile(element.contents())(scope);
-                    if($(this).attr('attr')){
-                        scope.functionCall($(this).attr('attr'));
-                    }
-                    scope.tableData();
-                    tr.addClass('shown');
-                    previousRow = currentRow;
+                	  if(previous){
+                      	console.log("closeprevious")
+                      	previous.child.hide();
+                      }
+                      previous = row;
+                    	  console.log("check open")
+                          // Open this row
+                        var rowCount = $('.campaign-overview-details').find('tr[role="row"]').index($(this).closest('tr'))-1;
+                    	console.log("scope:", scope.otherData['All Users'][$(this).attr('attr')])
+                        row.child(formatHtml(scope.otherData['All Users'][$(this).attr('attr')])).show();
+                        $compile(element.contents())(scope);
+                        if($(this).attr('attr')){
+                            scope.functionCall($(this).attr('attr'));
+                        }
+                        scope.tableData();
+                        tr.addClass('shown');
+                        previousRow = currentRow;
                   }
-                
+            });
+            
+            //This will be executed only once - to open the selected accordian only.
+            $('.dataTableContainer').one('openSelectedAccordian', '.expandRow td.row-expand-details', function (event) {
+            	event.stopImmediatePropagation();
+            	var tr = $(this).closest('tr');
+            	var row = tableObj.row( tr );
+            	previous = row;
+            	// Open this row
+            	row.child(formatHtml(scope.otherData['All Users'][$(this).attr('attr')])).show();
+            	$compile(element.contents())(scope);
+            	if($(this).attr('attr')){
+            		scope.functionCall($(this).attr('attr'));
+            	}
+            	scope.tableData();
+            	tr.addClass('shown');
             });
             
             function handleModelUpdates(newData) {
@@ -160,7 +182,7 @@ angular.module('AnalyticsApp')
 						'</div>'+
 						'<div  style="padding:20px !important;" class="widget-content metric-widgets">'+
 							'<div class="row-fluid">'+
-								'<div class="actual-value">'+'<span  style="color: #adadad;">'+data.userGroup.incrementalImpact[0].revenue+'</span>'+'</div>'+
+								'<div class="actual-value">'+'<span  style="color: #adadad;">$'+data.userGroup.incrementalImpact[0].revenue+'</span>'+'</div>'+
 							'</div>'+							
 						'</div>'+
 					'</div>'+

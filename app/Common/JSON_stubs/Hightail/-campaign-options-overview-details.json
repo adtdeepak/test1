@@ -252,7 +252,7 @@
 						        		"color":["#F5874F", "#ADADAD"]
 						        	}
         					}],
-							"incrementalImpact":[{"revenue":39840,"paidUsers":332,"F2PconversionRate":"0.25%","EGScore":"7%"}],
+							"incrementalImpact":[{"revenue":"39,840","paidUsers":332,"F2PconversionRate":"0.25%","EGScore":"7%"}],
 							"reasons":["Mobile app adoption increases by 20%", "Average EG of non mobile app users is 50% lower than mobile app users"]
 						},
 						"tableData":{
@@ -305,14 +305,14 @@
 								"color":"#1b6395"
 							},
 							"targetedUsers":
-							[{"size": 475.129 ,"male":"60%","female":"40%","activeUsers":"55%","appUsersPercentage":"48%","appUsers": 228.062,
+							[{"size": "475,129" ,"male":"60%","female":"40%","activeUsers":"55%","appUsersPercentage":"48%","appUsers": "228,062",
 							"gender":{
 						        		"name":["male","female"],
 						        		"values":[60, 40],
 						        		"color":["#F5874F", "#ADADAD"]
 						        	}
         					}],
-							"incrementalImpact":[{"revenue":4500000,"paidUsers":37500,"F2PconversionRate":"0.5%","EGScore":"15%"}],
+							"incrementalImpact":[{"revenue":"4,500,000","paidUsers":"37,500","F2PconversionRate":"0.5%","EGScore":"15%"}],
 							"reasons":["Usage of collaborate feature increase by 25%", "Users who collaborate are 35% more engaged than users who do not use collaborate"]
 						},
 						"tableData":{
@@ -333,14 +333,14 @@
 								"color":"#1b6395"
 							},
 							"targetedUsers":
-							[{"size": 90.501 ,"male":"71%","female":"29%","activeUsers":"78%","appUsersPercentage":"20%","appUsers": 18.100,
+							[{"size": "90,501" ,"male":"71%","female":"29%","activeUsers":"78%","appUsersPercentage":"20%","appUsers": "18,100",
 							"gender":{
 						        		"name":["male","female"],
 						        		"values":[71, 29],
 						        		"color":["#F5874F", "#ADADAD"]
 						        	}
         					}],
-							"incrementalImpact":[{"revenue":39840,"paidUsers":332,"F2PconversionRate":"2%","EGScore":"25%"}],
+							"incrementalImpact":[{"revenue":"39,840","paidUsers":332,"F2PconversionRate":"2%","EGScore":"25%"}],
 							"reasons":["Integration of Microsoft 365 increase by 40%", "Users who integrate with Microsoft 365 login 7X more than others"]
 						},
 						"tableData":{

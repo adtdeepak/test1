@@ -8736,6 +8736,15 @@ div#progressBar {
 	background: url('../images/arrow-green.png') no-repeat left center;
 	background-position: 53px;
 }
+
+.campaign-overview #productUsageTable thead tr th, .campaign-overview #onGoingCampaignTable thead tr th, .campaign-overview #pastCampaignTable thead tr th {
+    background: #666 !important;
+    color: #ffffff;
+    font-size:15px;
+}
+.campaign-overview #productUsageTable tr:hover td, .campaign-overview #onGoingCampaignTable tr:hover td, .campaign-overview #pastCampaignTable tr:hover td{
+    background: none !important;
+}
 /* media query */
 @media (min-width: 320px) {
     .col-lg-5ths {
