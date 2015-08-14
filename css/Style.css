@@ -8597,13 +8597,11 @@ div#progressBar {
 }
 
 .overview-detail-tabs li{   
-	/*border: 1px solid #ccc;*/
     height: 145px;
     width: 15%;
     margin: 8px;
     display: inline-table;
     padding: 0px;
-  /*  background:#132D52;*/
 }
 
 .overview-detail-tabs li:hover {
@@ -8623,6 +8621,31 @@ div#progressBar {
   width: 15%;
 }
 
+.feature-tabs li {
+	height: 145px;
+	width: 10.75%;
+    margin-right: 0px;
+	display: inline-table;
+	padding: 0px;
+}
+
+.feature-tabs li:hover {
+  background: #ffffff !important;  border: 2px solid #132D52;
+  border-radius: 5px;
+}
+
+.feature-tabs li.active .icon-widget-text{
+  background: #ffffff;
+}
+
+.feature-tabs li.active {
+  background: #ffffff;
+  border: 2px solid #132D52;
+  border-radius: 5px;
+  height:145px;
+  width: 10.75%;
+}
+
 .heading-groups-row{
         padding: 12px 5px 12px 6px;
     background: #3EA8DC;
@@ -8639,36 +8662,79 @@ div#progressBar {
    /* background-size: 86% 100%;*/
     margin-right: 10px;
 }
+
+.feature-tabs .icon-widget {
+    background-repeat: no-repeat;
+    height: 105px;
+    background-position: 71% 70%;
+    background-size: 80% 82%;
+    margin-right: 10px;
+}
+
+.feature-tabs .icon-widget-text {
+    height: 40px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 50px;
+}
 .all-user-image {
-	background-image: url('../images/alluser-icon.png');
+	background-image: url('../images/campaign-icons/alluser-icon.png');
 }
 
 .Mobile-image {
-	background-image: url('../images/Mobile-icon.png');
+	background-image: url('../images/campaign-icons/Mobile-icon.png');
 }
 
 .project-manager-image {
-	background-image: url('../images/project-manager.png');
+	background-image: url('../images/campaign-icons/project-manager.png');
 }
 
 .enterprise-image {
-	background-image: url('../images/enterprise.png');
+	background-image: url('../images/campaign-icons/enterprise.png');
 }
 
 .finance-image {
-	background-image: url('../images/finance.png');
+	background-image: url('../images/campaign-icons/finance.png');
 }
 
 .musicians-image {
-	background-image: url('../images/music.png');
+	background-image: url('../images/campaign-icons/music.png');
 }
 
 .photographers-image {
-	background-image: url('../images/photo-icon.png');
+	background-image: url('../images/campaign-icons/photo-icon.png');
 }
 
 .videographers-image {
-	background-image: url('../images/video-icon.png');
+	background-image: url('../images/campaign-icons/video-icon.png');
+}
+
+.integration-image{
+	background-image: url('../images/campaign-icons/integration API-1.png');
+}
+.collaborate-image{
+	background-image: url('../images/campaign-icons/Collaborate.png');
+}
+.eSign-image{
+	background-image: url('../images/campaign-icons/E-Sign.png');
+}
+.text-search-image{
+	background-image: url('../images/campaign-icons/Full-Text-Search.png');
+}
+.microsoft-365-image{
+	background-image: url('../images/campaign-icons/Microsoft 365 integration.png');
+}
+.mobile-app-image{
+	background-image: url('../images/campaign-icons/mobile-app.png');
+}
+.storage-space-image{
+	background-image: url('../images/campaign-icons/Storage-Space.png');
+}
+.version-history-image{
+	background-image: url('../images/campaign-icons/Version History.png');
+}
+.workspace-share-image{
+	background-image: url('../images/campaign-icons/Workspace-share.png');
 }
 
 .icon-widget-text{

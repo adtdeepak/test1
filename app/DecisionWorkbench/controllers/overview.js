@@ -93,7 +93,7 @@ angular.module('DecisionWorkbench')
 			'fnCreatedRow': function (nRow, aData, iDataIndex) {
 				  $.each($('td', nRow), function (colIndex) {
 					  if(aData){
-						  $(this).attr('attr', 'All Users&selectedId='+aData[0]);
+						  $(this).attr('attr', 'All Users&selectedId='+aData[0]+'&type='+aData[6]);
 					  }
 			            // For example, adding data-* attributes to the cell
 			           /* $(this).attr('attr', "Enterprise users");*/
@@ -123,7 +123,7 @@ angular.module('DecisionWorkbench')
 				'fnCreatedRow': function (nRow, aData, iDataIndex) {
 					  $.each($('td', nRow), function (colIndex) {
 						  if(aData[1]){
-							  $(this).attr('attr', aData[1].split('<br>ES')[0]+'&selectedId='+aData[0]);
+							  $(this).attr('attr', aData[1].split('<br>ES')[0]+'&selectedId='+aData[0]+'&type='+aData[6]);
 						  }
 				            // For example, adding data-* attributes to the cell
 				           /* $(this).attr('attr', "Enterprise users");*/
@@ -140,7 +140,36 @@ angular.module('DecisionWorkbench')
 				}
 			};
 		$.extend(true, $scope.userTableOptions, columOptionsAttr);
-		$.extend(true, $scope.featuresOptions, columOptionsAttr);
+		var columOptionsFeatures = {
+				"aoColumns" : [ {
+					"sClass" : "each-row-details"
+				}, {
+					"sClass" : "each-row-details"
+				}, {
+					"sClass" : "each-row-details"
+				}, {
+					"sClass" : "each-row-details"
+				},null, null],
+				'fnCreatedRow': function (nRow, aData, iDataIndex) {
+					  $.each($('td', nRow), function (colIndex) {
+						  if(aData[6]){
+							  $(this).attr('attr', aData[7]+'&selectedId='+aData[0]+'&type='+aData[6]);
+						  }
+				            // For example, adding data-* attributes to the cell
+				           /* $(this).attr('attr', "Enterprise users");*/
+				        });
+			    },
+			    "bPaginate":false,
+				"fnRowCallback" : function(nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+					if(iDisplayIndex%2 != 0){
+						className = "oddRowColor";
+					}else{
+						className = "evenRowColor";
+					}
+					$(nRow).addClass(className);
+				}
+			};
+		$.extend(true, $scope.featuresOptions, columOptionsFeatures);
 
 	
 	$scope.addData = function(data) {
@@ -157,7 +186,7 @@ angular.module('DecisionWorkbench')
 					var executeSection = "<a href='resources/SampleCampaignFile.xlsx' download><div class='execute-unselected'></div></a>";
 				}
 					$scope.options.aaData.push([obj.id, obj.userGroup,  obj.description, obj.impact,
-					                           "<div class='wishlist-unselected'></div>" , executeSection]);
+					                           "<div class='wishlist-unselected'></div>" , executeSection, obj.campaignType]);
 				})
 		} catch (e) {
 			$scope.fail(errorConstants.DATA_ERR);
@@ -178,7 +207,7 @@ angular.module('DecisionWorkbench')
 			$scope.userTableOptions.aaData = [];
 			$.each(data, function(key, obj) {
 					$scope.userTableOptions.aaData.push([obj.id, obj.userGroup,  obj.description, obj.impact,
-					                           "<div class='wishlist-unselected'></div>" ,"<div class='execute-unselected'></div>" ]);
+					                           "<div class='wishlist-unselected'></div>" ,"<div class='execute-unselected'></div>", obj.campaignType ]);
 				})
 		} catch (e) {
 			$scope.fail(errorConstants.DATA_ERR);
@@ -187,9 +216,9 @@ angular.module('DecisionWorkbench')
 	
 
 	$scope.clickFeature = function(selectedFeature){
-		$scope.addFeaturesTableData($scope.overallResponse[selectedFeature]);
+		$scope.addFeaturesTableData($scope.overallResponse[selectedFeature], selectedFeature);
 	}
-	$scope.addFeaturesTableData = function(data) {
+	$scope.addFeaturesTableData = function(data, selectedFeature) {
 	    $rootScope.builddoLoad = true;
 		$scope.dataLoaded = true;
 		if (!data)
@@ -199,7 +228,7 @@ angular.module('DecisionWorkbench')
 			$scope.featuresOptions.aaData = [];
 			$.each(data, function(key, obj) {
 					$scope.featuresOptions.aaData.push([obj.id, obj.userGroup,  obj.description, obj.impact,
-					                           "<div class='wishlist-unselected'></div>" ,"<div class='execute-unselected'></div>" ]);
+					                           "<div class='wishlist-unselected'></div>" ,"<div class='execute-unselected'></div>", obj.campaignType, selectedFeature]);
 				})
 		} catch (e) {
 			$scope.fail(errorConstants.DATA_ERR);

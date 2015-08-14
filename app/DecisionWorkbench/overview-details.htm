@@ -44,35 +44,54 @@
         
     </div>
     </div>
-    <div class="clear"></div>
-    <div class="pull-right" id="timePeriodTabs" style="margin:0px; width:100%; padding-top:13px; border-top:1px solid #ccc;">
-					<ul style="margin-right:-8px;">
-						<li><a
-							class="" href="#" ng-click="broadcastPeriodChange('weekly',0)">Features</a></li>
-						<li ng-class="{'active': selectedIndex[1].selected}"><a
-							class="" href="#" ng-click="broadcastPeriodChange('monthly',1)">User Group</a></li>
-					</ul>
-				</div>
       
 	<div class="row" ng-controller="overviewDetailsController">
-	
-	
-		<div class="row-fluid" style="margin-top:7px;">
-			<ul class="list-inline overview-detail-tabs">
+		<div class="clear"></div>
+		<div class="pull-right" id="timePeriodTabs"
+			style="margin: 0px; width: 100%; padding-top: 13px; border-top: 1px solid #ccc;">
+			<ul style="margin-right: -8px;">
+				<li ng-class="{'active': campaignType[0].selected}"><a class=""
+					href="#" ng-click="campaignTypeSelected('Features')">Features</a></li>
+				<li ng-class="{'active': campaignType[1].selected}"><a class=""
+					href="#" ng-click="campaignTypeSelected('User Groups')">User
+						Group</a></li>
+			</ul>
+		</div>
+
+		<div class="row-fluid" style="margin-top:60px;">
+			<ul class="list-inline overview-detail-tabs" ng-if="campaignType[1].selected">
 			<li ng-class="{'active': selectedGroup[0].selected}" ng-click="broadcastselectedGroup('All Users',0)">
 			<div class="white-hover"><div class="icon-widget all-user-image"></div><div class="icon-widget-text">All Users</div></div></li>
 			<li ng-class="{'active': selectedGroup[1].selected}" ng-click="broadcastselectedGroup('Project Managers',1)">
 				<div class="icon-widget project-manager-image"></div><div class="icon-widget-text">Project Managers</div></li>
-			<li ng-class="{'active': selectedGroup[2].selected}" ng-click="broadcastselectedGroup('Enterprise users',2)">
-				<div class="icon-widget enterprise-image"></div><div class="icon-widget-text">Enterprise users</div></li>
-			<li ng-class="{'active': selectedGroup[3].selected}" ng-click="broadcastselectedGroup('Finance executives',3)">
-				<div class="icon-widget finance-image"></div><div class="icon-widget-text">Finance executives</div></li>
+			<li ng-class="{'active': selectedGroup[2].selected}" ng-click="broadcastselectedGroup('Creative Agencies',2)">
+				<div class="icon-widget enterprise-image"></div><div class="icon-widget-text">Creative Agencies</div></li>
+			<li ng-class="{'active': selectedGroup[3].selected}" ng-click="broadcastselectedGroup('Finance Executives',3)">
+				<div class="icon-widget finance-image"></div><div class="icon-widget-text">Finance Executives</div></li>
 			<li ng-class="{'active': selectedGroup[4].selected}" ng-click="broadcastselectedGroup('Musicians',4)">
 				<div class="icon-widget musicians-image"></div><div class="icon-widget-text">Musicians</div></li>
 			<li ng-class="{'active': selectedGroup[5].selected}" ng-click="broadcastselectedGroup('Photographers',5)">
 				<div class="icon-widget photographers-image"></div><div class="icon-widget-text">Photographers</div></li>
-			<!-- <li ng-class="{'active': selectedGroup[6].selected}" ng-click="broadcastselectedGroup('videographers',6)">
-				<div class="icon-widget videographers-image"></div><div class="icon-widget-text">Videographers</div></li> -->
+		    </ul>
+		    <ul class="list-inline feature-tabs" ng-if="campaignType[0].selected">
+			<li ng-class="{'active': selectedFeature[0].selected}" ng-click="broadcastselectedFeature('3rd Party integration API',0)">
+			<div class="white-hover"><div class="icon-widget integration-image"></div><div class="icon-widget-text">3rd Party integration API</div></div></li>
+			<li ng-class="{'active': selectedFeature[1].selected}" ng-click="broadcastselectedFeature('Collaborate',1)">
+				<div class="icon-widget collaborate-image"></div><div class="icon-widget-text">Collaborate</div></li>
+			<li ng-class="{'active': selectedFeature[2].selected}" ng-click="broadcastselectedFeature('E-Sign',2)">
+				<div class="icon-widget eSign-image"></div><div class="icon-widget-text">E-Sign</div></li>
+			<li ng-class="{'active': selectedFeature[3].selected}" ng-click="broadcastselectedFeature('Full Text Search',3)">
+				<div class="icon-widget text-search-image"></div><div class="icon-widget-text">Full Text Search</div></li>
+			<li ng-class="{'active': selectedFeature[4].selected}" ng-click="broadcastselectedFeature('Microsoft 365 integration',4)">
+				<div class="icon-widget microsoft-365-image"></div><div class="icon-widget-text">Microsoft 365 integration</div></li>
+			<li ng-class="{'active': selectedFeature[5].selected}" ng-click="broadcastselectedFeature('Mobile App',5)">
+				<div class="icon-widget mobile-app-image"></div><div class="icon-widget-text">Mobile App</div></li>
+			<li ng-class="{'active': selectedFeature[6].selected}" ng-click="broadcastselectedFeature('Storage Space',6)">
+				<div class="icon-widget storage-space-image"></div><div class="icon-widget-text">Storage Space</div></li>
+			<li ng-class="{'active': selectedFeature[7].selected}" ng-click="broadcastselectedFeature('Version History',7)">
+				<div class="icon-widget version-history-image"></div><div class="icon-widget-text">Version History</div></li>
+			<li ng-class="{'active': selectedFeature[8].selected}" ng-click="broadcastselectedFeature('Workspace share',8)">
+				<div class="icon-widget workspace-share-image"></div><div class="icon-widget-text">Workspace share</div></li>
 		    </ul>
 		</div>
 		<div class="row nopadding" style="margin-right: 23px;border:1px solid grey; background:#fff;">
