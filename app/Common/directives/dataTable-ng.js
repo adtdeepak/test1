@@ -86,6 +86,7 @@ angular.module('AnalyticsApp')
                         var rowCount = $('.campaign-overview-details').find('tr[role="row"]').index($(this).closest('tr'))-1;
                     	console.log("scope:", scope.otherData['All Users'][$(this).attr('attr')])
                         row.child(formatHtml(scope.otherData['All Users'][$(this).attr('attr')])).show();
+                    	console.log("scope.otherData['All Users'][$(this).attr('attr')]):", scope.otherData['All Users'][$(this).attr('attr')]);
                         $compile(element.contents())(scope);
                         if($(this).attr('attr')){
                             scope.functionCall($(this).attr('attr'));
@@ -247,9 +248,9 @@ angular.module('AnalyticsApp')
                     '<div style="border: 1px solid #666;  float: left;     width: 100%;">'+
     						'<div style=" margin: 0px 15px 0; padding: 0; "  class="col-sm-4 col-md-4 col-lg-4-1">'+
                     
-    							'<div class="icon-widget all-user-image">'+'</div>'+
+    							'<div class="icon-widget '+data.userGroup.targetedUsers[0].imageClass+'">'+'</div>'+
     							'<div class="text-bold" style="text-align:center;">'+data.userGroup.targetedUsers[0].size+'</div>'+
-    							'<div class="icon-widget-text text-bold bkgd-none">'+'Young Job Hoppers'+'</div>'+
+    							'<div class="icon-widget-text text-bold bkgd-none">'+data.userGroup.targetedUsers[0].name+'</div>'+
     						'</div>'+
     						'<div style="margin: 0px 8px 0; padding: 0; "  class="col-sm-4 col-md-4 col-lg-4-1">'+
                     '<div class="icon-widget Mobile-image">'+'</div>'+

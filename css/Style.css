@@ -2677,6 +2677,19 @@ table {
 	border-radius: 4px;
 }
 
+#campaign-inner-table tbody tr.shown{
+	background: #929292 !important
+}
+#campaign-inner-table tbody tr.shown td{
+	color: #ffffff !important;
+}
+#campaign-inner-table tbody:hover tr td .tableAccOuterContainer:hover{
+	background: #ffffff !important
+}
+#campaign-inner-table tbody tr:hover{
+	background: #929292 !important
+}
+
 table.reviewpanel1+.buttons>.btn-org {
 	margin-right: 0;
 }

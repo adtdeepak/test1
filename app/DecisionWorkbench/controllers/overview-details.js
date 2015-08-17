@@ -301,12 +301,14 @@ angular.module('DecisionWorkbench')
 			$scope.options.aaData = [];
 			$.each(data, function(key, obj) {
 				var wishlistSection = "<div class='wishlist-unselected'></div>"
-				var executeSection = "<div class='execute-unselected'></div>";
+				//var executeSection = "<div class='execute-unselected'></div>";
+				var executeSection = "<a href='resources/selected_campaign_info.xlsx' download><div class='execute-unselected'></div></a>";
 				if(obj.wishlist == "yes"){
 					wishlistSection = "<div class='wishlist-unselected wishlist-selected'></div>"
 				}
 				if(obj.selected == "yes"){
-					executeSection = "<div class='execute-unselected execute-selected'></div>"
+					executeSection = "<a href='resources/selected_campaign_info.xlsx' download><div class='execute-unselected execute-selected'></div></a>";
+					//executeSection = "<div class='execute-unselected execute-selected'></div>"
 				}
 					$scope.options.aaData.push([obj.id, obj.userGroup,  obj.description, obj.impact,
 					   wishlistSection , executeSection]);

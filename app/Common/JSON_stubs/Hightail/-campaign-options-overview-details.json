@@ -291,6 +291,7 @@
 							},
 							"targetedUsers":[
 							{"size": "505" ,"male":"42%","female":"58%","activeUsers":"65%","appUsersPercentage":"22%","appUsers": "139,371" ,
+							"name":"Photographers","imageClass":"photographers-image",
 							"gender":{
 						        		"name":["male","female"],
 						        		"values":[42, 58],
@@ -321,6 +322,7 @@
 							},
 							"targetedUsers":[
 							{"size": "135,751" ,"male":"62%","female":"38%","activeUsers":"82%","appUsersPercentage":"15%","appUsers": "20,363" ,
+							"name":"Creative Agencies","imageClass":"enterprise-image",
 							"gender":{
 						        		"name":["male","female"],
 						        		"values":[62, 38],
@@ -351,6 +353,7 @@
 							},
 							"targetedUsers":
 							[{"size": "475,129" ,"male":"60%","female":"40%","activeUsers":"55%","appUsersPercentage":"48%","appUsers": "228,062",
+							"name":"Musicians","imageClass":"musicians-image",
 							"gender":{
 						        		"name":["male","female"],
 						        		"values":[60, 40],
@@ -379,6 +382,7 @@
 							},
 							"targetedUsers":
 							[{"size": "90,501" ,"male":"71%","female":"29%","activeUsers":"78%","appUsersPercentage":"20%","appUsers": "18,100",
+							"name":"Creative Agencies","imageClass":"enterprise-image",
 							"gender":{
 						        		"name":["male","female"],
 						        		"values":[71, 29],
