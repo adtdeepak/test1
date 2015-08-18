@@ -56,7 +56,7 @@ angular.module('AnalyticsApp')
             	scope.tableData($(this).attr('attr'));
             });
             
-            var previous = "";var previousRow = -1;var previousRowCollapse="";
+            var previous = "";var previousRow = -1;var previousRowCollapse="";var previousThis = "";
             $('.dataTableContainer').on('click', 'td.row-expand-details', function (event) {
             	console.log("check open occured")
             	  event.stopImmediatePropagation();
@@ -77,10 +77,12 @@ angular.module('AnalyticsApp')
                   }
                   else {
                 	  if(previous){
-                      	console.log("closeprevious")
+                      	console.log("closeprevious");
                       	previous.child.hide();
+                      	previousThis.closest('tr').removeClass('shown');
                       }
                       previous = row;
+                      previousThis = $(this);
                     	  console.log("check open")
                           // Open this row
                         var rowCount = $('.campaign-overview-details').find('tr[role="row"]').index($(this).closest('tr'))-1;
@@ -103,6 +105,7 @@ angular.module('AnalyticsApp')
             	var tr = $(this).closest('tr');
             	var row = tableObj.row( tr );
             	previous = row;
+                previousThis = $(this);
             	// Open this row
             	row.child(formatHtml(scope.otherData['All Users'][$(this).attr('attr')])).show();
             	$compile(element.contents())(scope);
