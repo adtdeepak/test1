@@ -91,11 +91,13 @@ angular.module('DecisionWorkbench')
 				"sClass" : "each-row-details"
 			}, {
 				"sClass" : "each-row-details"
+			}, {
+				"sClass" : "each-row-details"
 			},null, null],
 			'fnCreatedRow': function (nRow, aData, iDataIndex) {
 				  $.each($('td', nRow), function (colIndex) {
 					  if(aData){
-						  $(this).attr('attr', 'All Users&selectedId='+aData[0]+'&type='+aData[6]);
+						  $(this).attr('attr', 'All Users&selectedId='+aData[0]+'&type='+aData[7]);
 					  }
 			            // For example, adding data-* attributes to the cell
 			           /* $(this).attr('attr', "Enterprise users");*/
@@ -121,11 +123,13 @@ angular.module('DecisionWorkbench')
 					"sClass" : "each-row-details"
 				}, {
 					"sClass" : "each-row-details"
+				}, {
+					"sClass" : "each-row-details"
 				},null, null],
 				'fnCreatedRow': function (nRow, aData, iDataIndex) {
 					  $.each($('td', nRow), function (colIndex) {
 						  if(aData[1]){
-							  $(this).attr('attr', aData[1].split('<br>ES')[0]+'&selectedId='+aData[0]+'&type='+aData[6]);
+							  $(this).attr('attr', aData[1].split('<br>ES')[0]+'&selectedId='+aData[0]+'&type='+aData[7]);
 						  }
 				            // For example, adding data-* attributes to the cell
 				           /* $(this).attr('attr', "Enterprise users");*/
@@ -151,11 +155,13 @@ angular.module('DecisionWorkbench')
 					"sClass" : "each-row-details"
 				}, {
 					"sClass" : "each-row-details"
+				}, {
+					"sClass" : "each-row-details"
 				},null, null],
 				'fnCreatedRow': function (nRow, aData, iDataIndex) {
 					  $.each($('td', nRow), function (colIndex) {
-						  if(aData[6]){
-							  $(this).attr('attr', aData[7]+'&selectedId='+aData[0]+'&type='+aData[6]);
+						  if(aData[7]){
+							  $(this).attr('attr', aData[7]+'&selectedId='+aData[0]+'&type='+aData[7]);
 						  }
 				            // For example, adding data-* attributes to the cell
 				           /* $(this).attr('attr', "Enterprise users");*/
@@ -184,7 +190,7 @@ angular.module('DecisionWorkbench')
 			$scope.options.aaData = [];
 			$.each(data, function(key, obj) {
 				var executeSection = "<a href='resources/selected_campaign_info.xlsx' download><div class='execute-unselected'></div></a>";
-					$scope.options.aaData.push([obj.id, obj.userGroup,  obj.description, obj.impact,
+					$scope.options.aaData.push([obj.id, obj.userGroup, obj.featurePromoted,  obj.description, obj.impact,
 					                           "<div class='wishlist-unselected'></div>" , executeSection, obj.campaignType]);
 				})
 		} catch (e) {
@@ -205,7 +211,7 @@ angular.module('DecisionWorkbench')
 			$scope.error = false;
 			$scope.userTableOptions.aaData = [];
 			$.each(data, function(key, obj) {
-					$scope.userTableOptions.aaData.push([obj.id, obj.userGroup,  obj.description, obj.impact,
+					$scope.userTableOptions.aaData.push([obj.id, obj.userGroup, obj.featurePromoted,  obj.description, obj.impact,
 					                           "<div class='wishlist-unselected'></div>" ,"<div class='execute-unselected'></div>", obj.campaignType ]);
 				})
 		} catch (e) {
@@ -226,7 +232,7 @@ angular.module('DecisionWorkbench')
 			$scope.error = false;
 			$scope.featuresOptions.aaData = [];
 			$.each(data, function(key, obj) {
-					$scope.featuresOptions.aaData.push([obj.id, obj.userGroup,  obj.description, obj.impact,
+					$scope.featuresOptions.aaData.push([obj.id, obj.userGroup, obj.featurePromoted,  obj.description, obj.impact,
 					                           "<div class='wishlist-unselected'></div>" ,"<div class='execute-unselected'></div>", obj.campaignType, selectedFeature]);
 				})
 		} catch (e) {
