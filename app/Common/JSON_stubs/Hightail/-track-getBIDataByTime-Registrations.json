@@ -44,28 +44,28 @@
             "data": [
                 {
                     "startDate": "9-1-2014",
-                    "actual": 19368,
-                    "target": 23238
+                    "actual": 385420,
+                    "target": 400000
                 },
                 {
                     "startDate": "10-1-2014",
-                    "actual": 19503,
-                    "target": 23400
+                    "actual": 373140,
+                    "target": 390000
                 },
                 {
                     "startDate": "11-1-2014",
-                    "actual": 17322,
-                    "target": 20786
+                    "actual": 194140,
+                    "target": 375000
                 },
                 {
                     "startDate": "12-1-2014",
-                    "actual": 19465,
-                    "target": 23357
+                    "actual": 391710,
+                    "target": 390000
                 },
                 {
                     "startDate": "1-1-2015",
-                    "actual": 19232,
-                    "target": 23076
+                    "actual": 413140,
+                    "target": 400000
                 }
             ]
         },
@@ -77,28 +77,28 @@
             "data": [
                 {
                     "startDate": "4-1-2014",
-                    "actual": 63046,
-                    "target": 75655
+                    "actual": 1156260,
+                    "target": 2000000
                 },
                 {
                     "startDate": "7-1-2014",
-                    "actual": 63468,
-                    "target": 76161
+                    "actual": 1119420,
+                    "target": 2100000
                 },
                 {
                     "startDate": "10-1-2014",
-                    "actual": 64096,
-                    "target": 76915
+                    "actual": 582420,
+                    "target": 2200000
                 },
                 {
                     "startDate": "1-1-2015",
-                    "actual": 64654,
-                    "target": 77584
+                    "actual": 1175130,
+                    "target": 1600000
                 },
                 {
                     "startDate": "4-1-2015",
-                    "actual": 63360,
-                    "target": 76032
+                    "actual": 1239420,
+                    "target": 1500000
                 }
             ]
         },
@@ -110,23 +110,23 @@
             "data": [
                 {
                     "startDate": "1-1-2012",
-                    "actual": 564207,
-                    "target": 590000
+                    "actual": 4900070,
+                    "target": 6000000
                 },
                 {
                     "startDate": "1-1-2013",
-                    "actual": 638064,
-                    "target": 660000
+                    "actual": 5541500,
+                    "target": 8000000
                 },
                 {
                     "startDate": "1-1-2014",
-                    "actual": 729600,
-                    "target": 780000
+                    "actual": 2944500,
+                    "target": 9000000
                 },
                 {
                     "startDate": "1-1-2015",
-                    "actual": 857143,
-                    "target": 875000
+                    "actual": 7444210,
+                    "target": 10000000
                 }
             ]
         }

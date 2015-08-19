@@ -175,6 +175,7 @@ angular.module('DecisionWorkbench')
 		        "data": dataSet,
 		        "bFilter": false,
 		        "bInfo": false,
+		        "bSort": false,
 		        "columns": [
 		            { "title": "Feature" },
 		            { "title": "Current Usage level" },
@@ -199,6 +200,7 @@ angular.module('DecisionWorkbench')
 		        "data": dataSet,
 		        "bFilter": false,
 		        "bInfo": false,
+		        "bSort": false,
 		        "columns": [
 		            { "title": "Campaign ID" },
 		            { "title": "Campaign Description" },
@@ -225,6 +227,7 @@ angular.module('DecisionWorkbench')
 		        "data": dataSet,
 		        "bFilter": false,
 		        "bInfo": false,
+		        "bSort": false,
 		        "columns": [
 		            { "title": "Campaign ID" },
 		            { "title": "Campaign Description" },
@@ -318,7 +321,12 @@ angular.module('DecisionWorkbench')
 		} catch (e) {
 			$scope.fail(errorConstants.DATA_ERR);
 		}
-		$timeout(function () {$(".dataTableContainer .expandRow td.row-expand-details").trigger('openSelectedAccordian');}, 200);
+		$timeout(function () {
+			$(".dataTableContainer .expandRow td.row-expand-details").trigger('openSelectedAccordian');
+			  $("body, html").animate({ 
+			        scrollTop: $('#campaign-inner-table tbody tr.shown').offset().top 
+			    }, 1000);	
+		}, 200);
 	
 	};
 	

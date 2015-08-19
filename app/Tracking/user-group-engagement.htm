@@ -9,47 +9,6 @@
 <li class="active">User Group Engagement</li>
 </ul>
 </div>
-    <div style=" margin-bottom:5px;"  class="col-md-4-big">
-        <div style="float:left;" id="timePeriodTabs" class="filter" ng-if="thisPage!='/builddo'">
-					<ul>
-						<li><a
-							class="" href="#" ng-click="broadcastPeriodChange('weekly',0)">Weekly</a></li>
-						<li ng-class="{'active': selectedIndex[1].selected}"><a
-							class="" href="#" ng-click="broadcastPeriodChange('monthly',1)">Monthly</a></li>
-						<li ng-class="{'active': selectedIndex[2].selected}"><a
-							class="" href="#" ng-click="broadcastPeriodChange('quarterly',2)">Quarterly</a></li>
-						<li ng-class="{'active': selectedIndex[3].selected}"><a
-							class="" href="#" ng-click="broadcastPeriodChange('yearly',3)">Yearly</a></li>
-					</ul>
-				</div>
-        <div id="exportIconsPanel" ng-if="thisPage!='/builddo'" style="background: #ffffff !important;">
-    <ul>
-						<li title="Print" class="Printicon">&nbsp;</li>
-						<li class="iconExport export">
-							<ul>
-								<li class="top"><a href="#" alt="Export to Pdf"
-									title="Export to Pdf" ng-click="pdfExport()">
-										<figure>
-											<img src="images/icon-pdf.png" />
-										</figure>
-								</a></li>
-								<li><a href="#" alt="Export to Excel"
-									title="Export to Excel">
-										<figure>
-											<img src="images/icon-excel.png" />
-										</figure>
-								</a></li>
-								<li><a href="#" alt="Export to Word" title="Export to Word">
-										<figure>
-											<img src="images/icon-word.png" />
-										</figure>
-								</a></li>
-							</ul>
-						</li>
-					</ul>
-        
-    </div>
-    </div>
 		<div class="contentpannel contentpannel1">
 			<div class="AcquisitionPanel" ng-controller="overallUserGroupSummaryController" ng-if="isUserGroupViewable">
                   <div style="margin-bottom:15px;" class="panel panel-default">
