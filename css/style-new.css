@@ -8651,7 +8651,7 @@ div#progressBar {
 /**
 * IGNORE: just centering and font pretty-ing
 */
-body { font-family: 'Open Sans', Helvetica, Arial, Verdana, sans-serif; font-weight: 200; } ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, input, section { font-weight: 200; } 
+
 #content { width: 75%; position: relative; left: 125px; height: 100%; }
 
 /**

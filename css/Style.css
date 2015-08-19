@@ -2661,7 +2661,7 @@ span.Fheading {
 }
 
 table:not(.campaign-overview-details) tr:hover td {
-	 background: #d8fbf8; 
+	 background: #d8fbf8 !important; 
 }
 table td {
 	border-right: 1px solid #ced5da !important;
@@ -2678,17 +2678,36 @@ table {
 }
 
 #campaign-inner-table tbody tr.shown{
-	background: #929292 !important
+	background: #e2e2e2  !important
 }
 #campaign-inner-table tbody tr.shown td{
-	color: #ffffff !important;
+	
 }
-#campaign-inner-table tbody:hover tr td .tableAccOuterContainer:hover{
-	background: #ffffff !important
+#campaign-inner-table tbody tr.odd:hover, #campaign-inner-table tbody tr.even:hover{
+ background: #D8FBF8 !important;
+    color:#666 !important;
 }
-#campaign-inner-table tbody tr:hover{
-	background: #929292 !important
+#onGoingCampaignTable tbody tr.odd:hover {
+ background:#f9f9f9 !important; cursor: not-allowed !important;
 }
+ #onGoingCampaignTable tbody tr.even:hover{
+ background:#fff !important; cursor: not-allowed !important;
+}
+#pastCampaignTable tbody tr.odd:hover {
+ background:#f9f9f9!important; cursor: not-allowed !important;
+}
+ #pastCampaignTable tbody tr.even:hover{
+ background:#fff !important; cursor: not-allowed !important;
+}
+#productUsageTable tbody tr.odd:hover {
+ background:#f9f9f9!important; cursor: not-allowed !important;
+}
+ #productUsageTable tbody tr.even:hover{
+ background:#fff !important; cursor: not-allowed !important;
+}
+
+
+
 
 table.reviewpanel1+.buttons>.btn-org {
 	margin-right: 0;

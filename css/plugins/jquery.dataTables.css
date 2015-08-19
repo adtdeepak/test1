@@ -107,7 +107,7 @@ table.dataTable.display tbody tr.selected > .sorting_3 {
   background-color: #acbad4;
 }
 table.dataTable.display tbody tr.odd > .sorting_1, table.dataTable.order-column.stripe tbody tr.odd > .sorting_1 {
-  background-color: #f1f1f1;
+  
 }
 table.dataTable.display tbody tr.odd > .sorting_2, table.dataTable.order-column.stripe tbody tr.odd > .sorting_2 {
   background-color: #f3f3f3;
