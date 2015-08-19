@@ -262,6 +262,8 @@ angular.module('DecisionWorkbench')
 				"sClass" : "row-expand-details"
 			},{
 				"sClass" : "row-expand-details"
+			},{
+				"sClass" : "row-expand-details"
 			}],
 			"bPaginate":false,
 			'fnCreatedRow': function (nRow, aData, iDataIndex) {
@@ -310,7 +312,7 @@ angular.module('DecisionWorkbench')
 					executeSection = "<a href='resources/selected_campaign_info.xlsx' download><div class='execute-unselected execute-selected'></div></a>";
 					//executeSection = "<div class='execute-unselected execute-selected'></div>"
 				}
-					$scope.options.aaData.push([obj.id, obj.userGroup,  obj.description, obj.impact,
+					$scope.options.aaData.push([obj.id, obj.userGroup, obj.featurePromoted,  obj.description, obj.impact,
 					   wishlistSection , executeSection]);
 				})
 		} catch (e) {

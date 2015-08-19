@@ -158,8 +158,7 @@
 							<a href="analysis.htm#/business-analysis?currentlySelected={{data.subGroupBy}}&&name={{data.subgroupName}}">
 								<div class="box-content-top">
 									<h3>{{data.subgroupName}}</h3>
-									<div class="value-orange trackingLink">{{data.actualToDate
-										| number}}</div>
+									<div class="value-orange trackingLink">{{data.actualToDate}}</div>
 									<p
 										ng-if="data.subgroupName =='Revenue' || data.subgroupName =='Cost of Acqusition' || data.subgroupName=='ARPU'"
 										class='widget-text'>(in USD)</p>
@@ -168,17 +167,17 @@
 										class='widget-text'>(Number of users)</p>
 									<p class="duration">Week To Date Actual</p>
 									<p class="value1">
-										<span>{{data.forecast.value | number}}</span>
+										<span>{{data.forecast.value}}</span>
 									</p>
 									<p class="duration1">{{forecastText}}</p>
 								</div>
 								<div class="box-content-bottom">
 									<ul>
 										<li class="{{data.versusLast.trend=='-ve'?'down':'up'}}">{{data.versusLast.value
-											| number}} {{vsLastText}}</li>
+											}} {{vsLastText}}</li>
 										<li
 											class="{{data.versusSameLastYear.trend=='-ve'?'down':'up'}}">{{data.versusSameLastYear.value
-											| number}} {{vsLastYearText}}</li>
+											}} {{vsLastYearText}}</li>
 									</ul>
 								</div>
 							</a>
@@ -257,8 +256,7 @@
 									<p ng-if="data.subgroupName!='EAScore'" class='widget-text'>(Count
 										of activities)</p>
 									<div class="value-orange">{{data.actualToDate | number}}</div>
-									<p class="duration">{{timePeriod}} Avg {{data.monthlyAvg |
-										number}}</p>
+									<p class="duration">{{timePeriod}} Avg {{data.monthlyAvg}}</p>
 								</div>
 							</a>
 						</div>
@@ -303,7 +301,7 @@
 									<h3>{{data.groupName}}</h3>
 									<p class='widget-text'>(Count of members)</p>
 									<div class="value-green trackingLink">
-										{{data.newSubsActual | number}}</div>
+										{{data.newSubsActual}}</div>
 									<p class="duration">{{timePeriod}} Avg {{data.monthlyAvg |
 										number}}</p>
 								</a>

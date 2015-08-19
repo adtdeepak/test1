@@ -1,1 +1,134 @@
-{"status":"OK","message":"Request Processed Successfully","groupBy":"Registrations","timeRanges":[{"periodFrom":"11012014","periodTo":"11302014","periodName":"weekly","reportingInterval":"daily","data":[{"startDate":"10-26-2014","actual":7620,"target":9144},{"startDate":"11-02-2014","actual":7482,"target":8978},{"startDate":"11-09-2014","actual":7200,"target":8640},{"startDate":"11-16-2014","actual":8100,"target":9720},{"startDate":"11-23-2014","actual":8232,"target":9878}]},{"periodFrom":"11012014","periodTo":"11302014","periodName":"monthly","reportingInterval":"weekly","data":[{"startDate":"9-1-2014","actual":19368,"target":23238},{"startDate":"10-1-2014","actual":19503,"target":23400},{"startDate":"11-1-2014","actual":17322,"target":20786},{"startDate":"12-1-2014","actual":19465,"target":23357},{"startDate":"1-1-2015","actual":19232,"target":23076}]},{"periodFrom":"11012014","periodTo":"11302014","periodName":"quarterly","reportingInterval":"monthly","data":[{"startDate":"4-1-2014","actual":63046,"target":75655},{"startDate":"7-1-2014","actual":63468,"target":76161},{"startDate":"10-1-2014","actual":64096,"target":76915},{"startDate":"1-1-2015","actual":64654,"target":77584},{"startDate":"4-1-2015","actual":63360,"target":76032}]},{"periodFrom":"11012014","periodTo":"11302014","periodName":"yearly","reportingInterval":"monthly","data":[{"startDate":"1-1-2012","actual":564207,"target":590000},{"startDate":"1-1-2013","actual":638064,"target":660000},{"startDate":"1-1-2014","actual":729600,"target":780000},{"startDate":"1-1-2015","actual":857143,"target":875000}]}]}
+{
+    "status": "OK",
+    "message": "Request Processed Successfully",
+    "groupBy": "Registrations",
+    "timeRanges": [
+        {
+            "periodFrom": "11012014",
+            "periodTo": "11302014",
+            "periodName": "weekly",
+            "reportingInterval": "daily",
+            "data": [
+                {
+                    "startDate": "10-26-2014",
+                    "actual": 96357,
+                    "target": 98000
+                },
+                {
+                    "startDate": "11-02-2014",
+                    "actual": 93285,
+                    "target": 95000
+                },
+                {
+                    "startDate": "11-09-2014",
+                    "actual": 97071,
+                    "target": 96000
+                },
+                {
+                    "startDate": "11-16-2014",
+                    "actual": 97928,
+                    "target": 99000
+                },
+                {
+                    "startDate": "11-23-2014",
+                    "actual": 103285,
+                    "target": 100000
+                }
+            ]
+        },
+        {
+            "periodFrom": "11012014",
+            "periodTo": "11302014",
+            "periodName": "monthly",
+            "reportingInterval": "weekly",
+            "data": [
+                {
+                    "startDate": "9-1-2014",
+                    "actual": 19368,
+                    "target": 23238
+                },
+                {
+                    "startDate": "10-1-2014",
+                    "actual": 19503,
+                    "target": 23400
+                },
+                {
+                    "startDate": "11-1-2014",
+                    "actual": 17322,
+                    "target": 20786
+                },
+                {
+                    "startDate": "12-1-2014",
+                    "actual": 19465,
+                    "target": 23357
+                },
+                {
+                    "startDate": "1-1-2015",
+                    "actual": 19232,
+                    "target": 23076
+                }
+            ]
+        },
+        {
+            "periodFrom": "11012014",
+            "periodTo": "11302014",
+            "periodName": "quarterly",
+            "reportingInterval": "monthly",
+            "data": [
+                {
+                    "startDate": "4-1-2014",
+                    "actual": 63046,
+                    "target": 75655
+                },
+                {
+                    "startDate": "7-1-2014",
+                    "actual": 63468,
+                    "target": 76161
+                },
+                {
+                    "startDate": "10-1-2014",
+                    "actual": 64096,
+                    "target": 76915
+                },
+                {
+                    "startDate": "1-1-2015",
+                    "actual": 64654,
+                    "target": 77584
+                },
+                {
+                    "startDate": "4-1-2015",
+                    "actual": 63360,
+                    "target": 76032
+                }
+            ]
+        },
+        {
+            "periodFrom": "11012014",
+            "periodTo": "11302014",
+            "periodName": "yearly",
+            "reportingInterval": "monthly",
+            "data": [
+                {
+                    "startDate": "1-1-2012",
+                    "actual": 564207,
+                    "target": 590000
+                },
+                {
+                    "startDate": "1-1-2013",
+                    "actual": 638064,
+                    "target": 660000
+                },
+                {
+                    "startDate": "1-1-2014",
+                    "actual": 729600,
+                    "target": 780000
+                },
+                {
+                    "startDate": "1-1-2015",
+                    "actual": 857143,
+                    "target": 875000
+                }
+            ]
+        }
+    ]
+}

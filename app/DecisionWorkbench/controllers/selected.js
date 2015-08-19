@@ -192,10 +192,7 @@ angular.module('DecisionWorkbench')
 	}
 	$scope.options = UtilitiesService.getDataTableOptions();
 	var columOptions = {
-			"aoColumns" : [ null, null ,null, null,null, null,
-			{
-				"sClass" : "row-expand-details"
-			}],
+			"aoColumns" : [ null, null ,null, null,null, null, null],
 			"bPaginate":false,
 			'fnCreatedRow': function (nRow, aData, iDataIndex) {
 				  $.each($('td', nRow), function (colIndex) {
@@ -236,7 +233,7 @@ angular.module('DecisionWorkbench')
 					if(obj.wishlist == "yes"){
 						var wishlistSection = "<div class='wishlist-unselected wishlist-selected'></div>";
 					}
-					$scope.options.aaData.push([obj.id, obj.userGroup,  obj.description, obj.impact,
+					$scope.options.aaData.push([obj.id, obj.userGroup, obj.featurePromoted,  obj.description, obj.impact,
 					     wishlistSection, "<div class='execute-unselected execute-selected'></div>","<div class='xclose'></div>"]);
 				}
 					
