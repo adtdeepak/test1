@@ -127,6 +127,54 @@
                         "value": "$0",
                         "trend": "+ve"
                     }
+                },
+                {
+                    "groupBy": "BI",
+                    "subGroupBy": "NewRevenue",
+                    "actualToDate": "$388,240",
+                    "actualToDateTrend": "+ve",
+                    "subgroupName": "New Revenue",
+                    "groupName": "businessImpact",
+                    "versusLast": {
+                        "value": "$15,120 ",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "$19,412",
+                        "trend": "+ve"
+                    },
+                    "forecast": {
+                        "value": "$388,240",
+                        "trend": "-ve"
+                    },
+                    "diffFromTarget": {
+                        "value": "$11,760",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "BI",
+                    "subGroupBy": "RecurringRevenue",
+                    "actualToDate": "$1,260,253",
+                    "actualToDateTrend": "+ve",
+                    "subgroupName": "Recurring Revenue",
+                    "groupName": "businessImpact",
+                    "versusLast": {
+                        "value": "$373,120",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "$63,013",
+                        "trend": "+ve"
+                    },
+                    "forecast": {
+                        "value": "$1,648,493",
+                        "trend": "-ve"
+                    },
+                    "diffFromTarget": {
+                        "value": "$0",
+                        "trend": "+ve"
+                    }
                 }
             ]
         },
@@ -250,6 +298,54 @@
                     "forecast": {
                         "value": "$80",
                         "trend": "+ve"
+                    },
+                    "diffFromTarget": {
+                        "value": "$0",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "BI",
+                    "subGroupBy": "NewRevenue",
+                    "actualToDate": "$388,240",
+                    "actualToDateTrend": "+ve",
+                    "subgroupName": "New Revenue",
+                    "groupName": "businessImpact",
+                    "versusLast": {
+                        "value": "$15,120 ",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "$19,412",
+                        "trend": "+ve"
+                    },
+                    "forecast": {
+                        "value": "$388,240",
+                        "trend": "-ve"
+                    },
+                    "diffFromTarget": {
+                        "value": "$11,760",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "BI",
+                    "subGroupBy": "RecurringRevenue",
+                    "actualToDate": "$1,260,253",
+                    "actualToDateTrend": "+ve",
+                    "subgroupName": "Recurring Revenue",
+                    "groupName": "businessImpact",
+                    "versusLast": {
+                        "value": "$373,120",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "$63,013",
+                        "trend": "+ve"
+                    },
+                    "forecast": {
+                        "value": "$1,648,493",
+                        "trend": "-ve"
                     },
                     "diffFromTarget": {
                         "value": "$0",
@@ -383,6 +479,54 @@
                         "value": "2.00",
                         "trend": "+ve"
                     }
+                },
+                {
+                    "groupBy": "BI",
+                    "subGroupBy": "NewRevenue",
+                    "actualToDate": "$388,240",
+                    "actualToDateTrend": "+ve",
+                    "subgroupName": "New Revenue",
+                    "groupName": "businessImpact",
+                    "versusLast": {
+                        "value": "$15,120 ",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "$19,412",
+                        "trend": "+ve"
+                    },
+                    "forecast": {
+                        "value": "$388,240",
+                        "trend": "-ve"
+                    },
+                    "diffFromTarget": {
+                        "value": "$11,760",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "BI",
+                    "subGroupBy": "RecurringRevenue",
+                    "actualToDate": "$1,260,253",
+                    "actualToDateTrend": "+ve",
+                    "subgroupName": "Recurring Revenue",
+                    "groupName": "businessImpact",
+                    "versusLast": {
+                        "value": "$373,120",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "$63,013",
+                        "trend": "+ve"
+                    },
+                    "forecast": {
+                        "value": "$1,648,493",
+                        "trend": "-ve"
+                    },
+                    "diffFromTarget": {
+                        "value": "$0",
+                        "trend": "+ve"
+                    }
                 }
             ]
         },
@@ -509,6 +653,54 @@
                     },
                     "diffFromTarget": {
                         "value": "2.00",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "BI",
+                    "subGroupBy": "NewRevenue",
+                    "actualToDate": "$388,240",
+                    "actualToDateTrend": "+ve",
+                    "subgroupName": "New Revenue",
+                    "groupName": "businessImpact",
+                    "versusLast": {
+                        "value": "$15,120 ",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "$19,412",
+                        "trend": "+ve"
+                    },
+                    "forecast": {
+                        "value": "$388,240",
+                        "trend": "-ve"
+                    },
+                    "diffFromTarget": {
+                        "value": "$11,760",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "BI",
+                    "subGroupBy": "RecurringRevenue",
+                    "actualToDate": "$1,260,253",
+                    "actualToDateTrend": "+ve",
+                    "subgroupName": "Recurring Revenue",
+                    "groupName": "businessImpact",
+                    "versusLast": {
+                        "value": "$373,120",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "$63,013",
+                        "trend": "+ve"
+                    },
+                    "forecast": {
+                        "value": "$1,648,493",
+                        "trend": "-ve"
+                    },
+                    "diffFromTarget": {
+                        "value": "$0",
                         "trend": "+ve"
                     }
                 }
