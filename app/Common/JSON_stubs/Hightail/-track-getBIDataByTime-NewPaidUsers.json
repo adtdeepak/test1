@@ -43,29 +43,29 @@
             "reportingInterval": "monthly",
             "data": [
                 {
-                    "startDate": "9-1-2014",
-                    "actual": 3578,
-                    "target": 4293
+					"startDate": "9-1-2014",
+                    "actual": 19271,
+                    "target": 20000
                 },
                 {
                     "startDate": "10-1-2014",
-                    "actual": 3603,
-                    "target": 4323
+                    "actual": 18657,
+                    "target": 22000
                 },
                 {
                     "startDate": "11-1-2014",
-                    "actual": 3200,
-                    "target": 3840
+                    "actual": 9707,
+                    "target": 25000
                 },
                 {
                     "startDate": "12-1-2014",
-                    "actual": 3596,
-                    "target": 4315
+                    "actual": 19585,
+                    "target": 30000
                 },
                 {
                     "startDate": "1-1-2015",
-                    "actual": 3553,
-                    "target": 4263
+                    "actual": 20657,
+                    "target": 25000
                 }
             ]
         },
@@ -77,28 +77,28 @@
             "data": [
                 {
                     "startDate": "4-1-2014",
-                    "actual": 11647,
-                    "target": 13976
+                    "actual": 57813,
+                    "target": 70000
                 },
                 {
                     "startDate": "7-1-2014",
-                    "actual": 11725,
-                    "target": 14070
+                    "actual": 55971,
+                    "target": 75000
                 },
                 {
                     "startDate": "10-1-2014",
-                    "actual": 11841,
-                    "target": 14209
+                    "actual": 29121,
+                    "target": 77000
                 },
                 {
                     "startDate": "1-1-2015",
-                    "actual": 11944,
-                    "target": 14332
+                    "actual": 58756,
+                    "target": 85000
                 },
                 {
                     "startDate": "4-1-2015",
-                    "actual": 11705,
-                    "target": 14046
+                    "actual": 61971,
+                    "target": 90000
                 }
             ]
         },
@@ -110,23 +110,23 @@
             "data": [
                 {
                     "startDate": "1-1-2012",
-                    "actual": 78989,
-                    "target": 80000
+                    "actual": 245003,
+                    "target": 250000
                 },
                 {
                     "startDate": "1-1-2013",
-                    "actual": 89329,
-                    "target": 93000
+                    "actual": 277075,
+                    "target": 280000
                 },
                 {
                     "startDate": "1-1-2014",
-                    "actual": 102144,
-                    "target": 110000
+                    "actual": 147225,
+                    "target": 307000
                 },
                 {
                     "startDate": "1-1-2015",
-                    "actual": 120000,
-                    "target": 122500
+                    "actual": 372210,
+                    "target": 400000
                 }
             ]
         }

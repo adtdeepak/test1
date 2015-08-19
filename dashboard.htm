@@ -40,14 +40,20 @@
     <div class="mainContainer">
 		
         <div id="contentarea">
-        		<div style="display:none;" class="breadcrumbTrackContainer" ng-controller = "commonController">
-				<!-- <div id="trialPanel">
+        		<div style="position: absolute; top: 52px; right: 45px;" class="breadcrumbTrackContainer" ng-controller = "commonController">
+				<div id="timePeriodTabs">
 					<ul>
-						<li><a class="freeMode" href="#" ng-click="userModeSelected('free')">Free Trial</a></li>
-						<li class="active"><a class="freeMode" href="#" ng-click="userModeSelected('freemium')">Freemium</a></li>
+						<li ng-class="{'active': selectedIndex[0].selected}"><a class="" href="#"
+							ng-click="broadcastPeriodChange('weekly',0)">Weekly</a></li>
+						<li ng-class="{'active': selectedIndex[1].selected}"><a class="" href="#"
+							ng-click="broadcastPeriodChange('monthly',1)">Monthly</a></li>
+						<li ng-class="{'active': selectedIndex[2].selected}"><a class="" href="#"
+							ng-click="broadcastPeriodChange('quarterly',2)">Quarterly</a></li>
+						<li ng-class="{'active': selectedIndex[3].selected}"><a class="" href="#"
+							ng-click="broadcastPeriodChange('yearly',3)">Yearly</a></li>
 					</ul>
-				</div> -->
-				<div id="exportIconsPanel">
+				</div>
+				<div id="exportIconsPanel" style="background: #ffffff !important;">
 					<ul>
 						<li title="Print" class="Printicon">&nbsp;</li>
 						<li class="iconExport export">
@@ -70,17 +76,6 @@
 								</a></li>
 							</ul>
 						</li>
-					</ul>
-				</div><div id="timePeriodPanel">
-					<ul>
-						<li ng-class="{'active': selectedIndex[0].selected}"><a class="" href="#"
-							ng-click="broadcastPeriodChange('weekly',0)">Weekly</a></li>
-						<li ng-class="{'active': selectedIndex[1].selected}"><a class="" href="#"
-							ng-click="broadcastPeriodChange('monthly',1)">Monthly</a></li>
-						<li ng-class="{'active': selectedIndex[2].selected}"><a class="" href="#"
-							ng-click="broadcastPeriodChange('quarterly',2)">Quarterly</a></li>
-						<li ng-class="{'active': selectedIndex[3].selected}"><a class="" href="#"
-							ng-click="broadcastPeriodChange('yearly',3)">Yearly</a></li>
 					</ul>
 				</div>
 			</div>

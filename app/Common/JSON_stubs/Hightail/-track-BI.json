@@ -127,54 +127,6 @@
                         "value": "$0",
                         "trend": "+ve"
                     }
-                },
-                {
-                    "groupBy": "BI",
-                    "subGroupBy": "NewRevenue",
-                    "actualToDate": "$388,240",
-                    "actualToDateTrend": "+ve",
-                    "subgroupName": "New Revenue",
-                    "groupName": "businessImpact",
-                    "versusLast": {
-                        "value": "$15,120 ",
-                        "trend": "+ve"
-                    },
-                    "versusSameLastYear": {
-                        "value": "$19,412",
-                        "trend": "+ve"
-                    },
-                    "forecast": {
-                        "value": "$388,240",
-                        "trend": "-ve"
-                    },
-                    "diffFromTarget": {
-                        "value": "$11,760",
-                        "trend": "+ve"
-                    }
-                },
-                {
-                    "groupBy": "BI",
-                    "subGroupBy": "RecurringRevenue",
-                    "actualToDate": "$1,260,253",
-                    "actualToDateTrend": "+ve",
-                    "subgroupName": "Recurring Revenue",
-                    "groupName": "businessImpact",
-                    "versusLast": {
-                        "value": "$373,120",
-                        "trend": "+ve"
-                    },
-                    "versusSameLastYear": {
-                        "value": "$63,013",
-                        "trend": "+ve"
-                    },
-                    "forecast": {
-                        "value": "$1,648,493",
-                        "trend": "-ve"
-                    },
-                    "diffFromTarget": {
-                        "value": "$0",
-                        "trend": "+ve"
-                    }
                 }
             ]
         },
@@ -303,54 +255,6 @@
                         "value": "$0",
                         "trend": "+ve"
                     }
-                },
-                {
-                    "groupBy": "BI",
-                    "subGroupBy": "NewRevenue",
-                    "actualToDate": "$388,240",
-                    "actualToDateTrend": "+ve",
-                    "subgroupName": "New Revenue",
-                    "groupName": "businessImpact",
-                    "versusLast": {
-                        "value": "$15,120 ",
-                        "trend": "+ve"
-                    },
-                    "versusSameLastYear": {
-                        "value": "$19,412",
-                        "trend": "+ve"
-                    },
-                    "forecast": {
-                        "value": "$388,240",
-                        "trend": "-ve"
-                    },
-                    "diffFromTarget": {
-                        "value": "$11,760",
-                        "trend": "+ve"
-                    }
-                },
-                {
-                    "groupBy": "BI",
-                    "subGroupBy": "RecurringRevenue",
-                    "actualToDate": "$1,260,253",
-                    "actualToDateTrend": "+ve",
-                    "subgroupName": "Recurring Revenue",
-                    "groupName": "businessImpact",
-                    "versusLast": {
-                        "value": "$373,120",
-                        "trend": "+ve"
-                    },
-                    "versusSameLastYear": {
-                        "value": "$63,013",
-                        "trend": "+ve"
-                    },
-                    "forecast": {
-                        "value": "$1,648,493",
-                        "trend": "-ve"
-                    },
-                    "diffFromTarget": {
-                        "value": "$0",
-                        "trend": "+ve"
-                    }
                 }
             ]
         },
@@ -363,170 +267,122 @@
                 {
                     "groupBy": "BI",
                     "subGroupBy": "Revenue",
-                    "actualToDate": "615732",
+                    "actualToDate": "$17,338,053",
                     "actualToDateTrend": "+ve",
                     "subgroupName": "Revenue",
                     "groupName": "businessImpact",
                     "versusLast": {
-                        "value": "6032",
+                        "value": "$2,329,680",
                         "trend": "-ve"
                     },
                     "versusSameLastYear": {
-                        "value": "121380",
+                        "value": "$866,903 ",
                         "trend": "+ve"
                     },
                     "forecast": {
-                        "value": "1500000",
+                        "value": "$20,157,705",
                         "trend": "+ve"
                     },
                     "diffFromTarget": {
-                        "value": "24900",
+                        "value": "$2,661,947",
                         "trend": "+ve"
                     }
                 },
                 {
                     "groupBy": "BI",
                     "subGroupBy": "NewPaidUsers",
-                    "actualToDate": "11232",
+                    "actualToDate": "29,121",
                     "actualToDateTrend": "+ve",
                     "subgroupName": "New Paid Users",
                     "groupName": "businessImpact",
                     "versusLast": {
-                        "value": "776",
+                        "value": "26,850",
                         "trend": "-ve"
                     },
                     "versusSameLastYear": {
-                        "value": "1764",
+                        "value": "1,456",
                         "trend": "+ve"
                     },
                     "forecast": {
-                        "value": "24560",
+                        "value": "64,367",
                         "trend": "+ve"
                     },
                     "diffFromTarget": {
-                        "value": "300",
+                        "value": "47,879",
                         "trend": "+ve"
                     }
                 },
                 {
                     "groupBy": "BI",
                     "subGroupBy": "Registrations",
-                    "actualToDate": "48384",
+                    "actualToDate": "582,420",
                     "actualToDateTrend": "+ve",
                     "subgroupName": "Registrations",
                     "groupName": "businessImpact",
                     "versusLast": {
-                        "value": "2300",
+                        "value": "537,000",
                         "trend": "+ve"
                     },
                     "versusSameLastYear": {
-                        "value": "9673",
+                        "value": "29,121",
                         "trend": "+ve"
                     },
                     "forecast": {
-                        "value": "80000",
+                        "value": "1,343,304",
                         "trend": "+ve"
                     },
                     "diffFromTarget": {
-                        "value": "487",
+                        "value": "1,617,580",
                         "trend": "+ve"
-                    }
+                    }    
                 },
                 {
                     "groupBy": "BI",
                     "subGroupBy": "CostofAcqusition",
-                    "actualToDate": "14.08",
+                    "actualToDate": "$14.08",
                     "actualToDateTrend": "+ve",
                     "subgroupName": "Cost of Acqusition",
                     "groupName": "businessImpact",
                     "versusLast": {
-                        "value": "0.45",
+                        "value": "$0.00",
                         "trend": "+ve"
                     },
                     "versusSameLastYear": {
-                        "value": "0.45",
+                        "value": "$0.45",
                         "trend": "+ve"
                     },
                     "forecast": {
-                        "value": "14.08",
+                        "value": "$14.08",
                         "trend": "-ve"
                     },
                     "diffFromTarget": {
-                        "value": "0.32",
+                        "value": "$0.32",
                         "trend": "+ve"
-                    }
+                    }    
                 },
                 {
                     "groupBy": "BI",
                     "subGroupBy": "ARPU",
-                    "actualToDate": "183.00",
+                    "actualToDate": "$80 ",
                     "actualToDateTrend": "+ve",
                     "subgroupName": "ARPU",
                     "groupName": "businessImpact",
                     "versusLast": {
-                        "value": "4",
+                        "value": "$0",
                         "trend": "+ve"
                     },
                     "versusSameLastYear": {
-                        "value": "4.00",
+                        "value": "$4",
                         "trend": "+ve"
                     },
                     "forecast": {
-                        "value": "183.00",
-                        "trend": "-ve"
-                    },
-                    "diffFromTarget": {
-                        "value": "2.00",
-                        "trend": "+ve"
-                    }
-                },
-                {
-                    "groupBy": "BI",
-                    "subGroupBy": "NewRevenue",
-                    "actualToDate": "$388,240",
-                    "actualToDateTrend": "+ve",
-                    "subgroupName": "New Revenue",
-                    "groupName": "businessImpact",
-                    "versusLast": {
-                        "value": "$15,120 ",
-                        "trend": "+ve"
-                    },
-                    "versusSameLastYear": {
-                        "value": "$19,412",
-                        "trend": "+ve"
-                    },
-                    "forecast": {
-                        "value": "$388,240",
-                        "trend": "-ve"
-                    },
-                    "diffFromTarget": {
-                        "value": "$11,760",
-                        "trend": "+ve"
-                    }
-                },
-                {
-                    "groupBy": "BI",
-                    "subGroupBy": "RecurringRevenue",
-                    "actualToDate": "$1,260,253",
-                    "actualToDateTrend": "+ve",
-                    "subgroupName": "Recurring Revenue",
-                    "groupName": "businessImpact",
-                    "versusLast": {
-                        "value": "$373,120",
-                        "trend": "+ve"
-                    },
-                    "versusSameLastYear": {
-                        "value": "$63,013",
-                        "trend": "+ve"
-                    },
-                    "forecast": {
-                        "value": "$1,648,493",
+                        "value": "$80",
                         "trend": "-ve"
                     },
                     "diffFromTarget": {
                         "value": "$0",
                         "trend": "+ve"
-                    }
+                    }    
                 }
             ]
         },
@@ -539,168 +395,120 @@
                 {
                     "groupBy": "BI",
                     "subGroupBy": "Revenue",
-                    "actualToDate": "4287192",
+                    "actualToDate": "$42,111,000",
                     "actualToDateTrend": "+ve",
                     "subgroupName": "Revenue",
                     "groupName": "businessImpact",
                     "versusLast": {
-                        "value": "252980",
+                        "value": "$3,031,816",
                         "trend": "+ve"
                     },
                     "versusSameLastYear": {
-                        "value": "252980",
+                        "value": "$3,031,816",
                         "trend": "+ve"
                     },
                     "forecast": {
-                        "value": "4800000",
+                        "value": "$51,914,238",
                         "trend": "+ve"
                     },
                     "diffFromTarget": {
-                        "value": "600000",
+                        "value": "$15,889,000",
                         "trend": "+ve"
-                    }
+                    }   
                 },
                 {
                     "groupBy": "BI",
                     "subGroupBy": "NewPaidUsers",
-                    "actualToDate": "84123",
+                    "actualToDate": "147,225",
                     "actualToDateTrend": "+ve",
                     "subgroupName": "New Paid Users",
                     "groupName": "businessImpact",
                     "versusLast": {
-                        "value": "12321",
+                        "value": "129,850",
                         "trend": "+ve"
                     },
                     "versusSameLastYear": {
-                        "value": "12321",
+                        "value": "129,850",
                         "trend": "+ve"
                     },
                     "forecast": {
-                        "value": "98738",
+                        "value": "318,636",
                         "trend": "+ve"
                     },
                     "diffFromTarget": {
-                        "value": "8877",
+                        "value": "159,775",
                         "trend": "+ve"
-                    }
+                    }  
                 },
                 {
                     "groupBy": "BI",
                     "subGroupBy": "Registrations",
-                    "actualToDate": "600878",
+                    "actualToDate": "2,944,500",
                     "actualToDateTrend": "+ve",
                     "subgroupName": "Registrations",
                     "groupName": "businessImpact",
                     "versusLast": {
-                        "value": "88007",
+                        "value": "2,597,000",
                         "trend": "+ve"
                     },
                     "versusSameLastYear": {
-                        "value": "88007",
+                        "value": "2,597,000",
                         "trend": "+ve"
                     },
                     "forecast": {
-                        "value": "650000",
+                        "value": "6,649,800",
                         "trend": "+ve"
                     },
                     "diffFromTarget": {
-                        "value": "44385",
+                        "value": "6,055,500",
                         "trend": "-ve"
-                    }
+                    }  
                 },
                 {
                     "groupBy": "BI",
                     "subGroupBy": "CostofAcqusition",
-                    "actualToDate": "14.08",
+                    "actualToDate": "$14.08",
                     "actualToDateTrend": "+ve",
                     "subgroupName": "Cost of Acqusition",
                     "groupName": "businessImpact",
                     "versusLast": {
-                        "value": "0.45",
+                        "value": "$0.00",
                         "trend": "+ve"
                     },
                     "versusSameLastYear": {
-                        "value": "0.45",
+                        "value": "$0.45",
                         "trend": "+ve"
                     },
                     "forecast": {
-                        "value": "14.08",
+                        "value": "$14.08",
                         "trend": "-ve"
                     },
                     "diffFromTarget": {
-                        "value": "0.32",
+                        "value": "$0.32",
                         "trend": "+ve"
                     }
                 },
                 {
                     "groupBy": "BI",
                     "subGroupBy": "ARPU",
-                    "actualToDate": "183.00",
+                    "actualToDate": "$80",
                     "actualToDateTrend": "+ve",
                     "subgroupName": "ARPU",
                     "groupName": "businessImpact",
                     "versusLast": {
-                        "value": "4",
+                        "value": "$4",
                         "trend": "+ve"
                     },
                     "versusSameLastYear": {
-                        "value": "4.00",
+                        "value": "$4.00",
                         "trend": "+ve"
                     },
                     "forecast": {
-                        "value": "183.00",
+                        "value": "$80",
                         "trend": "-ve"
                     },
                     "diffFromTarget": {
-                        "value": "2.00",
-                        "trend": "+ve"
-                    }
-                },
-                {
-                    "groupBy": "BI",
-                    "subGroupBy": "NewRevenue",
-                    "actualToDate": "$388,240",
-                    "actualToDateTrend": "+ve",
-                    "subgroupName": "New Revenue",
-                    "groupName": "businessImpact",
-                    "versusLast": {
-                        "value": "$15,120 ",
-                        "trend": "+ve"
-                    },
-                    "versusSameLastYear": {
-                        "value": "$19,412",
-                        "trend": "+ve"
-                    },
-                    "forecast": {
-                        "value": "$388,240",
-                        "trend": "-ve"
-                    },
-                    "diffFromTarget": {
-                        "value": "$11,760",
-                        "trend": "+ve"
-                    }
-                },
-                {
-                    "groupBy": "BI",
-                    "subGroupBy": "RecurringRevenue",
-                    "actualToDate": "$1,260,253",
-                    "actualToDateTrend": "+ve",
-                    "subgroupName": "Recurring Revenue",
-                    "groupName": "businessImpact",
-                    "versusLast": {
-                        "value": "$373,120",
-                        "trend": "+ve"
-                    },
-                    "versusSameLastYear": {
-                        "value": "$63,013",
-                        "trend": "+ve"
-                    },
-                    "forecast": {
-                        "value": "$1,648,493",
-                        "trend": "-ve"
-                    },
-                    "diffFromTarget": {
-                        "value": "$0",
+                        "value": "$2.00",
                         "trend": "+ve"
                     }
                 }

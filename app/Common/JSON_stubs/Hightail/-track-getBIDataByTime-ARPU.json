@@ -44,28 +44,28 @@
             "data": [
                 {
                     "startDate": "9-1-2014",
-                    "actual": 183,
-                    "target": 187
+                    "actual": 79,
+                    "target": 79
                 },
                 {
                     "startDate": "10-1-2014",
-                    "actual": 183,
-                    "target": 187
+                    "actual": 80,
+                    "target": 80
                 },
                 {
                     "startDate": "11-1-2014",
-                    "actual": 183,
-                    "target": 187
+                    "actual": 80,
+                    "target": 80
                 },
                 {
                     "startDate": "12-1-2014",
-                    "actual": 183,
-                    "target": 187
+                    "actual": 80,
+                    "target": 80
                 },
                 {
                     "startDate": "1-1-2015",
-                    "actual": 183,
-                    "target": 187
+                    "actual": 81,
+                    "target": 81
                 }
             ]
         },
@@ -77,28 +77,28 @@
             "data": [
                 {
                     "startDate": "4-1-2014",
-                    "actual": 183,
-                    "target": 187
+                    "actual": 78,
+                    "target": 78
                 },
                 {
                     "startDate": "7-1-2014",
-                    "actual": 183,
-                    "target": 187
+                    "actual": 80,
+                    "target": 80
                 },
                 {
                     "startDate": "10-1-2014",
-                    "actual": 183,
-                    "target": 187
+                    "actual": 80,
+                    "target": 80
                 },
                 {
                     "startDate": "1-1-2015",
-                    "actual": 183,
-                    "target": 187
+                    "actual": 82,
+                    "target": 82
                 },
                 {
                     "startDate": "4-1-2015",
-                    "actual": 183,
-                    "target": 187
+                    "actual": 82,
+                    "target": 82
                 }
             ]
         },
@@ -110,23 +110,23 @@
             "data": [
                 {
                     "startDate": "1-1-2012",
-                    "actual": 165,
-                    "target": 168
+                    "actual": 70,
+                    "target": 70
                 },
                 {
                     "startDate": "1-1-2013",
-                    "actual": 170,
-                    "target": 173
+                    "actual": 76,
+                    "target": 76
                 },
                 {
                     "startDate": "1-1-2014",
-                    "actual": 183,
-                    "target": 187
+                    "actual": 80,
+                    "target": 80
                 },
                 {
                     "startDate": "1-1-2015",
-                    "actual": 187,
-                    "target": 187
+                    "actual": 90,
+                    "target": 90
                 }
             ]
         }

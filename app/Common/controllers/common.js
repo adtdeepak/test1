@@ -36,6 +36,7 @@ angular.module('AnalyticsApp')
     
   //This function will be called when time period is selected
     $scope.broadcastPeriodChange = function (selectedPeriod, index) {
+    	console.log("selectedPeriod:", selectedPeriod, index)
     	$.each($scope.selectedIndex, function(key, value){
     		$scope.selectedIndex[key].selected= false;
     		if(key == index){

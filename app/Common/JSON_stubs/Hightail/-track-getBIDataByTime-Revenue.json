@@ -42,30 +42,29 @@
             "periodName": "monthly",
             "reportingInterval": "weekly",
             "data": [
-                {
-                    "startDate": "9-1-2014",
-                    "actual": 186056,
-                    "target": 223267
+                { "startDate": "9-1-2014",
+                    "actual": 3529502,
+                    "target": 5000000
                 },
                 {
                     "startDate": "10-1-2014",
-                    "actual": 187356,
-                    "target": 224827
+                    "actual": 5022062,
+                    "target": 6000000
                 },
                 {
                     "startDate": "11-1-2014",
-                    "actual": 166400,
-                    "target": 199680
+                    "actual": 5798622,
+                    "target": 7000000
                 },
                 {
                     "startDate": "12-1-2014",
-                    "actual": 186992,
-                    "target": 224390
+                    "actual": 7365422,
+                    "target": 8000000
                 },
                 {
                     "startDate": "1-1-2015",
-                    "actual": 184756,
-                    "target": 221707
+                    "actual": 9038639,
+                    "target": 9000000
                 }
             ]
         },
@@ -76,29 +75,29 @@
             "reportingInterval": "monthly",
             "data": [
                 {
-                    "startDate": "4-1-2014",
-                    "actual": 605644,
-                    "target": 726772
+                  "startDate": "4-1-2014",
+                    "actual": 10530693,
+                    "target": 10000000
                 },
                 {
                     "startDate": "7-1-2014",
-                    "actual": 609700,
-                    "target": 731640
+                    "actual": 15008373,
+                    "target": 15000000
                 },
                 {
                     "startDate": "10-1-2014",
-                    "actual": 615732,
-                    "target": 738878
+                    "actual": 17338053,
+                    "target": 20000000
                 },
                 {
                     "startDate": "1-1-2015",
-                    "actual": 621088,
-                    "target": 745305
+                    "actual": 22156045,
+                    "target": 25000000
                 },
                 {
                     "startDate": "4-1-2015",
-                    "actual": 608660,
-                    "target": 730392
+                    "actual": 27237667,
+                    "target": 30000000
                 }
             ]
         },
@@ -108,25 +107,25 @@
             "periodName": "yearly",
             "reportingInterval": "monthly",
             "data": [
-                {
-                    "startDate": "1-1-2012",
-                    "actual": 6556087,
-                    "target": 6640000
+                { 
+					"startDate": "1-1-2012",
+                    "actual": 36150210,
+                    "target": 37000000
                 },
                 {
                     "startDate": "1-1-2013",
-                    "actual": 7414307,
-                    "target": 7719000
+                    "actual": 45142816,
+                    "target": 45000000
                 },
                 {
                     "startDate": "1-1-2014",
-                    "actual": 8195254,
-                    "target": 9130000
+                    "actual": 42111000,
+                    "target": 58000000
                 },
                 {
                     "startDate": "1-1-2015",
-                    "actual": 9960000,
-                    "target": 10167500
+                    "actual": 70181850,
+                    "target": 80000000
                 }
             ]
         }
