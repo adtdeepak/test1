@@ -2705,6 +2705,14 @@ table {
  #productUsageTable tbody tr.even:hover{
  background:#fff !important; cursor: not-allowed !important;
 }
+#onGoingCampaignTable tbody tr{
+ height: 150px;
+}
+#pastCampaignTable tbody tr{
+ height: 150px;
+}
+ 
+
 
 
 
