@@ -166,12 +166,13 @@ angular.module('Tracking')
 
 	this.toBusinessImpactTrend = function(data) {
 		var resultData = {};
+		var yAxisTitle = data.yAxisTitle;
 		$.each(data.timeRanges, function(key, timeRange) {
 			var _data = {};
 			var startOfWeek;
 			var endOfWeek;
 			// Getting Chart options from ChartOptionsService
-			_data['chartOptions'] = ChartOptionsService.getBusinessImpactTrend();
+			_data['chartOptions'] = ChartOptionsService.getBusinessImpactTrend(yAxisTitle);
 			var chartData = [];
 			var target = [];
 			var actual = [];
@@ -188,6 +189,7 @@ angular.module('Tracking')
 				actual.push(parseInt(column.actual));
 				target.push(parseInt(column.target));
 				xAxis.push(axisLabel);
+				//xAxis.push(timeRange.xAxis[index]);
 				startDateArray.push(startDate);
 				endDateArray.push(endDate);
 			});

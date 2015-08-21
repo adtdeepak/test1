@@ -1,8 +1,8 @@
 {
     "status": "OK",
     "message": "Request Processed Successfully",
-    "groupBy": "CostofAcqusition",
-    "yAxisTitle":"$",
+    "groupBy": "freeToPaidConversion",
+    "yAxisTitle":"%",
     "timeRanges": [
         {
             "periodFrom": "11012014",
@@ -10,30 +10,30 @@
             "periodName": "weekly",
             "reportingInterval": "daily",
             "data": [
-                {            
+                {          
                     "startDate": "08-23-2015",
-                    "actual": 14.08,
-                    "target": 13.5
+                    "actual": 5,
+                    "target": 5
                 },
                 {
                     "startDate": "08-30-2015",
-                    "actual": 14.08,
-                    "target": 13.5
+                    "actual": 5,
+                    "target": 5
                 },
                 {
                     "startDate": "09-06-2015",
-                    "actual": 14.08,
-                    "target": 13.5
+                    "actual": 5,
+                    "target": 5
                 },
                 {
                     "startDate": "09-13-2015",
-                    "actual": 14.08,
-                    "target": 13.5
+                    "actual": 5,
+                    "target": 5
                 },
                 {
                     "startDate": "09-20-2015",
-                    "actual": 14.08,
-                    "target": 13.5
+                    "actual": 5,
+                    "target": 5
                 }
             ]
         },
@@ -41,32 +41,32 @@
             "periodFrom": "11012014",
             "periodTo": "11302014",
             "periodName": "monthly",
-            "reportingInterval": "weekly",
+            "reportingInterval": "monthly",
             "data": [
-                {            
-                    "startDate": "7-1-2015",
-                    "actual": 14.08,
-                    "target": 13.5
+                {          
+					"startDate": "7-1-2015",
+                    "actual": 4.6,
+                    "target": 5
                 },
                 {
                     "startDate": "8-1-2015",
-                    "actual": 14.08,
-                    "target": 13.5
+                    "actual": 4.9,
+                    "target": 5
                 },
                 {
                     "startDate": "9-1-2015",
-                    "actual": 14.08,
-                    "target": 13.5
+                    "actual": 5.0,
+                    "target": 5
                 },
                 {
                     "startDate": "10-1-2015",
-                    "actual": 14.08,
-                    "target": 13.5
+                    "actual": 5.1,
+                    "target": 5
                 },
                 {
                     "startDate": "11-1-2015",
-                    "actual": 14.08,
-                    "target": 13.5
+                    "actual": 5.2,
+                    "target": 5
                 }
             ]
         },
@@ -74,32 +74,32 @@
             "periodFrom": "11012014",
             "periodTo": "11302014",
             "periodName": "quarterly",
-            "reportingInterval": "monthly",
+            "reportingInterval": "quarterly",
             "data": [
                 {          
                     "startDate": "1-1-2015",
-                    "actual": 14.08,
-                    "target": 13.5
+                    "actual": 4.2,
+                    "target": 4.2
                 },
                 {
                     "startDate": "4-1-2015",
-                    "actual": 14.08,
-                    "target": 13.5
+                    "actual": 4.7,
+                    "target": 5.0
                 },
                 {
                     "startDate": "7-1-2015",
-                    "actual": 14.08,
-                    "target": 13.5
+                    "actual": 5.0,
+                    "target": 5.0
                 },
                 {
                     "startDate": "10-1-2015",
-                    "actual": 14.08,
-                    "target": 13.5
+                    "actual": 5.2,
+                    "target":  5.2
                 },
                 {
                     "startDate": "1-1-2016",
-                    "actual": 14.08,
-                    "target": 13.5
+                    "actual": 5.3,
+                    "target": 5.5
                 }
             ]
         },
@@ -109,25 +109,25 @@
             "periodName": "yearly",
             "reportingInterval": "monthly",
             "data": [
-                {
+                {   
                     "startDate": "1-1-2013",
-                    "actual": 9,
-                    "target": 8
+                    "actual": 2.8,
+                    "target": 3.2
                 },
                 {
                     "startDate": "1-1-2014",
-                    "actual": 12.5,
-                    "target": 11
+                    "actual": 3.6,
+                    "target": 4.0
                 },
                 {
                     "startDate": "1-1-2015",
-                    "actual": 14.08,
-                    "target": 13.5
+                    "actual": 5.0,
+                    "target": 5.0
                 },
                 {
                     "startDate": "1-1-2016",
-                    "actual": 14.08,
-                    "target": 14.08
+                    "actual": 5.5,
+                    "target": 6.0
                 }
             ]
         }

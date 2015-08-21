@@ -96,7 +96,6 @@ angular.module('Tracking')
 				success, 
 				fail,
 				function(result) {
-					console.log("BI Result:", result)
 					var cData = DataConversionService.toGetTrackSummaryDataBI(result);
 						StorageService.put(cacheKey, cData, StorageService.getCache("business-impactCache"));
 					return cData;
@@ -106,7 +105,6 @@ angular.module('Tracking')
 	};
 
 	this.getBusinessImpactTrendData = function(reqData, success, fail) {
-		console.log("reqData:", reqData)
 		var cacheKey = "BITrend" + JSON.stringify(reqData);
 		
 		var requestWS = postRequestWS(

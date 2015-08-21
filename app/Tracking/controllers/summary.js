@@ -106,7 +106,7 @@ angular.module('Tracking')
 })
 
 .controller("acquisitionTrendController",function($scope, $rootScope, chartsService, Permission,$element,DataService, DataConversionService, RequestConstantsFactory ,UtilitiesService, StorageService){
-	
+	alert("acquisitionTrendController")
 	var errorConstants = RequestConstantsFactory['ERROR_MSGS'];
 	 $scope.dataLoaded = false;
     //Watch for SummaryExpired

@@ -22,6 +22,10 @@ window.MENU_WIDGET_LINK = {
 	m_convRate : "CostofAcqusition",
 	m_reg : "Registrations",
 	m_arpu : "ARPU",
+	m_newRevenue : "NewRevenue",
+	m_recurringRevenue : "RecurringRevenue",
+	m_freeToPaidConversion : "freeToPaidConversion",
+	
 	
 	m_vidUpload : "vidUpldr",
 	m_commBlog : "commBlog",

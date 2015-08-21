@@ -87,7 +87,7 @@ angular.module('Analysis')
 	    var chartOptions;
 	    var chartData;
 	    var chartDataObj = {};
-	    
+	    console.log("acqTrendData['weekly']", engagementData.data.trend.totalRevenue)
 	    chartOptions = ChartOptionsService.getBasicLineChart(engagementData.data.trend.totalRevenue, "Trend", "", 300);
 		chartOBJ = chartsService.basicLine.call($('#engTrendChart'),chartOptions, $scope);
 		

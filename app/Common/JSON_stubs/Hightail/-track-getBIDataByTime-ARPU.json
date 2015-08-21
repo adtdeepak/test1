@@ -2,6 +2,7 @@
     "status": "OK",
     "message": "Request Processed Successfully",
     "groupBy": "ARPU",
+    "yAxisTitle":"$",
     "timeRanges": [
         {
             "periodFrom": "11012014",
@@ -9,28 +10,28 @@
             "periodName": "weekly",
             "reportingInterval": "daily",
             "data": [
-                {
-                    "startDate": "10-26-2014",
+                {           
+                    "startDate": "08-23-2015",
                     "actual": 80,
                     "target": 80
                 },
                 {
-                    "startDate": "11-02-2014",
+                    "startDate": "08-30-2015",
                     "actual": 80,
                     "target": 80
                 },
                 {
-                    "startDate": "11-09-2014",
+                    "startDate": "09-06-2015",
                     "actual": 80,
                     "target": 80
                 },
                 {
-                    "startDate": "11-16-2014",
+                    "startDate": "09-13-2015",
                     "actual": 80,
                     "target": 80
                 },
                 {
-                    "startDate": "11-23-2014",
+                    "startDate": "09-20-2015",
                     "actual": 80,
                     "target": 80
                 }
@@ -42,28 +43,28 @@
             "periodName": "monthly",
             "reportingInterval": "weekly",
             "data": [
-                {
-                    "startDate": "9-1-2014",
+                {         
+                    "startDate": "7-1-2015",
                     "actual": 79,
                     "target": 79
                 },
                 {
-                    "startDate": "10-1-2014",
+                    "startDate": "8-1-2015",
                     "actual": 80,
                     "target": 80
                 },
                 {
-                    "startDate": "11-1-2014",
+                    "startDate": "9-1-2015",
                     "actual": 80,
                     "target": 80
                 },
                 {
-                    "startDate": "12-1-2014",
+                    "startDate": "10-1-2015",
                     "actual": 80,
                     "target": 80
                 },
                 {
-                    "startDate": "1-1-2015",
+                    "startDate": "11-1-2015",
                     "actual": 81,
                     "target": 81
                 }
@@ -76,27 +77,27 @@
             "reportingInterval": "monthly",
             "data": [
                 {
-                    "startDate": "4-1-2014",
+                    "startDate": "1-1-2015",
                     "actual": 78,
                     "target": 78
                 },
                 {
-                    "startDate": "7-1-2014",
+                    "startDate": "4-1-2015",
                     "actual": 80,
                     "target": 80
                 },
                 {
-                    "startDate": "10-1-2014",
+                    "startDate": "7-1-2015",
                     "actual": 80,
                     "target": 80
                 },
                 {
-                    "startDate": "1-1-2015",
+                    "startDate": "10-1-2015",
                     "actual": 82,
                     "target": 82
                 },
                 {
-                    "startDate": "4-1-2015",
+                    "startDate": "1-1-2016",
                     "actual": 82,
                     "target": 82
                 }
@@ -109,22 +110,22 @@
             "reportingInterval": "monthly",
             "data": [
                 {
-                    "startDate": "1-1-2012",
+                    "startDate": "1-1-2013",
                     "actual": 70,
                     "target": 70
                 },
                 {
-                    "startDate": "1-1-2013",
+                    "startDate": "1-1-2014",
                     "actual": 76,
                     "target": 76
                 },
                 {
-                    "startDate": "1-1-2014",
+                    "startDate": "1-1-2015",
                     "actual": 80,
                     "target": 80
                 },
                 {
-                    "startDate": "1-1-2015",
+                    "startDate": "1-1-2016",
                     "actual": 90,
                     "target": 90
                 }

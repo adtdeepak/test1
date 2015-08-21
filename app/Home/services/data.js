@@ -106,7 +106,8 @@ angular.module('Home')
 	this.getTrackSummaryAcqTrend = function(reqData, success, fail) {
 		var cacheKey = "summaryTrend" + JSON.stringify(reqData);
 		var requestWS = postRequestWS(
-				RequestConstantsFactory['TRAC_URL'].GET_ACQ_TREND_DATA, 
+				//RequestConstantsFactory['TRAC_URL'].GET_ACQ_TREND_DATA, 
+				'http://jsonstub.com/home/trend/Visitors',
 				reqData,
 				success, 
 				fail,

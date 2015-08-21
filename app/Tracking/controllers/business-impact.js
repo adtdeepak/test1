@@ -195,7 +195,6 @@ angular.module('Tracking')
             	$scope.trendPeriod = "Jan 01 to Nov 13";
         	$scope.dataLoaded = true;
             $scope.error = false;
-            console.log("sss:",$rootScope.selectedPeriod,  businessImpactTrendData[$rootScope.selectedPeriod], businessImpactTrendData[$rootScope.selectedPeriod].chartOptions)
             chartOBJ = chartsService.splineArea.call($('#subsTrendChart'), businessImpactTrendData[$rootScope.selectedPeriod], businessImpactTrendData[$rootScope.selectedPeriod].chartOptions, $scope);
         } catch (e) {
         	$scope.fail(errorConstants.DATA_ERR);

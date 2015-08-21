@@ -99,7 +99,7 @@ angular.module('Tracking')
 		};
 	};	
 	
-	this.getBusinessImpactTrend = function() {	
+	this.getBusinessImpactTrend = function(yAxisTitle) {	
 		return {	
 			chart:{
 				//width:1024,
@@ -131,7 +131,7 @@ angular.module('Tracking')
 				gridLineWidth: 0,
 				min: 0,
 				title: {
-					text: 'Revenue ($)',
+					text: yAxisTitle,
 					style:{
 						color: '#000000',
 						font: '12pt arial, sans-serif',
@@ -141,7 +141,7 @@ angular.module('Tracking')
 				labels:{
 					formatter: function(){
 						var val = this.value;
-						return (parseInt(val) / 1000).toLocaleString()+' K';
+						return val.toLocaleString();
 					},
 					style:{
 						color: '#000000',
@@ -149,7 +149,9 @@ angular.module('Tracking')
 					}
 				}
 			},
-
+			tooltip: {
+	            valueSuffix: '%'
+	        },
 	        navigation: {
 	            buttonOptions: {
                     symbolFill:'#32CABB',
