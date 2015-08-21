@@ -103,17 +103,16 @@ angular.module('Home')
 		
 	};
 	
-	this.getTrackSummaryAcqTrend = function(reqData, success, fail) {
+	this.getTrackSummaryAcqTrend = function(reqData, widgetName, success, fail) {
 		var cacheKey = "summaryTrend" + JSON.stringify(reqData);
 		var requestWS = postRequestWS(
 				//RequestConstantsFactory['TRAC_URL'].GET_ACQ_TREND_DATA, 
-				'http://jsonstub.com/home/trend/Visitors',
+				'http://jsonstub.com/home/trend/'+widgetName,
 				reqData,
 				success, 
 				fail,
 				function(result) {
 					var cData = DataConversionService.toTrackSummaryAcqTrend(result);
-					StorageService.put(cacheKey, cData, StorageService.getCache("summaryCache"));
 					return cData;
 				}
 		);

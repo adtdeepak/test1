@@ -27,6 +27,20 @@ angular.module('Home')
 	$scope.cancellations = {};
 	$scope.subscriptions = {};
 	$scope.registrations = {};
+	$scope.acqFunnelWidgets =[{"name":"Visitors","selected":true}, 
+	                          {"name":"Registrations","selected":false},
+							  {"name":"Subscriptions","selected":false},
+							  {"name":"Cancellations","selected":false}];
+	
+	$scope.acqFunnelWidget = function(widgetName){
+		$.each($scope.acqFunnelWidgets, function(key, value){
+			value.selected = false;
+			if(value.name == widgetName){
+				value.selected = true;
+			}
+		})
+		$rootScope.$broadcast("acqFunnelWidget", widgetName);
+	}
 	
 	$scope.success = function(funnelData) {
         $scope.dataLoaded = true;
@@ -113,7 +127,13 @@ angular.module('Home')
     //Watch for SummaryExpired
     $rootScope.$on('onCacheExpiry', loadData);
     $scope.$on('periodChange', loadData);
-
+    $scope.widgetName = 'Visitors';
+    $scope.acqTrendTitle = 'Visitors';
+    $rootScope.$on("acqFunnelWidget", function(event, widgetName){
+    	$scope.acqTrendTitle = widgetName;
+    	$scope.widgetName = widgetName;
+    	loadData();
+    });
     $scope.success = function (acqTrendData) {
     	 if($rootScope.selectedPeriod == "weekly")
          	$scope.trendPeriod = "Nov 09 to Nov 13";
@@ -126,7 +146,7 @@ angular.module('Home')
     	  $scope.dataLoaded = true;
     	try{
     		$scope.error = false;
-    		chartOptions = ChartOptionsService.getBasicLineChart(acqTrendData['weekly'], "", "", 300);
+    		chartOptions = ChartOptionsService.getBasicLineChart(acqTrendData[$rootScope.selectedPeriod], "", "", 800);
     		chartOBJ = chartsService.basicLine.call($('#acquisitionTrendChart'),chartOptions, $scope);
     	} catch (e) {
     		console.log(e);
@@ -152,7 +172,7 @@ angular.module('Home')
     requestData = angular.extend({}, utilData, requestData);
     var cacheKey = "summaryTrend" + JSON.stringify(requestData);
     
-    function loadData() { 
+    function loadData() {
     	var func = $scope.success; 
     	if (arguments[1]) { 
     		if (arguments[1].key == cacheKey) { 
@@ -161,9 +181,8 @@ angular.module('Home')
     			return false; 
     		} 
     	} 
-    	DataService.getTrackSummaryAcqTrend(requestData, func, $scope.fail); 
+    	DataService.getTrackSummaryAcqTrend(requestData, $scope.widgetName, func, $scope.fail); 
     } 
-    loadData();
     
 })
 

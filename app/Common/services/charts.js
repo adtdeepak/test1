@@ -238,7 +238,7 @@ angular.module('AnalyticsApp')
 		var $defaults ={
 	            chart: {
 					renderTo:container,
-					type: 'area'
+					type: 'line'
 	            },
 				credits: {
 					enabled:false
