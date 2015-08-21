@@ -106,7 +106,7 @@ angular.module('Home')
     loadData();
 })
 
-.controller("acquisitionTrendController",function($scope, $rootScope, chartsService, Permission,$element,DataService, DataConversionService, RequestConstantsFactory ,UtilitiesService, StorageService){
+.controller("acquisitionTrendController",function($scope, $rootScope, chartsService, Permission,$element,DataService, DataConversionService, RequestConstantsFactory ,UtilitiesService, StorageService, ChartOptionsService){
 	
 	var errorConstants = RequestConstantsFactory['ERROR_MSGS'];
 	 $scope.dataLoaded = false;
@@ -126,7 +126,8 @@ angular.module('Home')
     	  $scope.dataLoaded = true;
     	try{
     		$scope.error = false;
-    		chartOBJ = chartsService.combinedStackedBarLine.call($('#acquisitionTrendChart'), acqTrendData[$rootScope.selectedPeriod], acqTrendData[$rootScope.selectedPeriod].chartOptions, $scope);
+    		chartOptions = ChartOptionsService.getBasicLineChart(acqTrendData['weekly'], "", "", 300);
+    		chartOBJ = chartsService.basicLine.call($('#acquisitionTrendChart'),chartOptions, $scope);
     	} catch (e) {
     		console.log(e);
     		$scope.fail(errorConstants.DATA_ERR);

@@ -43,8 +43,38 @@ angular.module('Home')
 		
 		return _data;
 	}
+	
+	this.toTrackSummaryAcqTrend = function(data) {
+		var resultData = {};
+		$.each(data.timeRanges, function(key, timeRange) {
+			var _data = {};
+			var startOfWeek;
+			var endOfWeek;
+			
+			var value = [];
+			var xAxis = [];
+			var plotBandRange = [];
+			$.each(timeRange.data, function(index, column) {
+				var date= new Date(UtilitiesService.dateFormatConvertor(column.startDate)); 
+				var axisLabel = UtilitiesService.getChartLabels(timeRange.periodName,date);
+				xAxis.push(axisLabel);
+				value.push(column.value);
+			});
+			plotBandRange.push(UtilitiesService.getPlotBandRange(xAxis));
+			var tempObj = [{
+                "name": data.groupBy,
+                "data": value
+            }]
+			_data['xAxis'] =xAxis;
+			_data['value'] =tempObj;
+			resultData[timeRange.periodName] = _data;
+		});
+		console.log("resultData", resultData)
+		return resultData;
 
-	this.toTrackSummaryAcqTrend= function(data) {
+	}
+
+	/*this.toTrackSummaryAcqTrend= function(data) {
 		
 		var categoryConstants = RequestConstantsFactory['CHART_CONSTANTS'];
 		//method call for checking permissions
@@ -140,8 +170,9 @@ angular.module('Home')
 			console.log("PLOTS",obj.periodName,_data)
 			resultData[obj.periodName] = _data;
 		});
+	
 		return resultData;
-	}
+	}*/
 
 	/*---------------------Business Impact page-------------------------*/
 

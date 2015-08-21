@@ -180,24 +180,25 @@ angular.module('AnalyticsApp')
         	var thisWeekStart= moment(now).startOf('week').format('MM-DD-YYYY');
         	var dateHere = moment(date).weekday(date.getDay()).format('MM-DD-YYYY');
             //if ((moment(date).diff(moment(thisWeekStart), 'day'))>=0 && (moment(date).diff(moment(thisWeekStart), 'day')) <7) {
-            if(dateHere == '11-09-2014'){  
+            if(dateHere == '09-06-2015'){  
             	return "This Week";
             }
             else {
             	/*var monthNumber = this.getMonthNumber(date);
                 var weekNumber = this.getWeekOfMonth(date);
                 return monthNumber + weekNumber;*/
-            	var fromMonthName = this.getMonthName(date);
+            	/*var fromMonthName = this.getMonthName(date);
             	var fromDate = moment(date).weekday(date.getDay()).format('MM-DD-YYYY').split('-');
             	var toMonthName = this.getMonthName(moment(date).weekday(date.getDay()+4));
             	var toDate = moment(date).weekday(date.getDay()+4).format('MM-DD-YYYY').split('-');
-            	return fromMonthName+" "+fromDate[1] +"- " + toMonthName +" "+toDate[1];
+            	return fromMonthName+" "+fromDate[1] +"- " + toMonthName +" "+toDate[1];*/
+            	return "Week "+moment(date).week();
             }
         }
         if (periodName == 'monthly') {
         	var thisMonthStart= moment(now).startOf('month').format('MM-DD-YYYY');
             //if (moment(thisMonthStart).diff(moment(date), 'month') == 0) {
-        	if(dateHere == '11-01-2014'){   
+        	if(dateHere == '09-01-2015'){   
         		return "This Month";
             }
             else {
@@ -214,23 +215,24 @@ angular.module('AnalyticsApp')
             periodTo = new Date(this.dateFormatConvertor(periodTo));
             var thisQuarterStart= moment(periodFrom).startOf('month').format('MM-DD-YYYY');
 	        //if((moment(periodFrom)<= moment(now)) && (moment(now)<= moment(periodTo))) {
-            if(dateHere == '10-01-2014'){ 	
+            if(dateHere == "07-01-2015"){ 	
             	return "This Quarter";
 	        }
 	        else{
 	          //  var startMonth= this.getMonthName(periodFrom);
-	        	 var startMonth= this.getMonthName(periodFrom);
+	        	 /*var startMonth= this.getMonthName(periodFrom);
 	            var endMonth = this.getMonthName(date);
 	            var startYear = this.getYear(periodFrom);
 	            var endYear = this.getYear(periodTo);
-	            return startMonth+" "+startYear +"- " + endMonth +" "+endYear;
+	            return startMonth+" "+startYear +"- " + endMonth +" "+endYear;*/
+	        	return "Q"+moment(date).quarter()+" ("+moment(date).year()+")";
 	        }
            
         }
         if (periodName == 'yearly') {
         	var thisYearStart= moment(now).startOf('year').format('MM-DD-YYYY');
          //   if (moment(thisYearStart).diff(moment(date), 'year') == 0) {
-        	 if(dateHere == '01-01-2014'){ 	
+        	 if(dateHere == '01-01-2015'){ 	
         		 return "This Year";
             }
             else {

@@ -77,6 +77,43 @@ angular.module('Home')
 		};
 	};	
 
+	this.getBasicLineChart = function(data, title, subtitle){
+		
+		return {
+	        title: {
+	            text: title
+	        },
+	        subtitle: {
+	            text: subtitle,
+	            x: -20
+	        },
+	        xAxis: {
+	            categories: data.xAxis
+	        },
+	        yAxis: {
+	            title: {
+	                text: ''
+	            },
+	            plotLines: [{
+	                value: 0,
+	                width: 1,
+	                color: '#808080'
+	            }]
+	        },
+	        tooltip: {
+	            valueSuffix: ''
+	        },
+	        legend: {
+	            layout: 'vertical',
+	            align: 'right',
+	            verticalAlign: 'middle',
+	            borderWidth: 0
+	        },
+	        series: data.value
+		}
+		
+	};
+	
 	
 	this.getTrackSummaryAcqTrend = function(data) {
 

@@ -51,8 +51,11 @@
 											<div
 												class="value-orange trackingLink">
 												{{data.actualToDate}}</div>
-												<p ng-if="data.subgroupName =='Revenue' || data.subgroupName =='Cost of Acqusition' || data.subgroupName=='ARPU'" class='widget-text'>(in USD)</p>
-											<p ng-if="data.subgroupName !='Revenue' && data.subgroupName !='Cost of Acqusition' && data.subgroupName!='ARPU'" class='widget-text'>(Number of users)</p>
+												<p ng-if="data.subgroupName =='Revenue' || data.subgroupName =='Cost of Acqusition'
+												 || data.subgroupName=='ARPU' || data.subgroupName=='Recurring Revenue' || data.subgroupName=='New Revenue'" class='widget-text'>(in USD)</p>
+											<p ng-if="data.subgroupName !='Revenue' && data.subgroupName !='Cost of Acqusition' && data.subgroupName!='ARPU'
+											  && data.subgroupName!='Free To Paid Conversion' && data.subgroupName!='Recurring Revenue' && data.subgroupName!='New Revenue'" class='widget-text'>(Number of users)</p>
+											<p ng-if="data.subgroupName =='Free To Paid Conversion'" class='widget-text'>(in Percentage)</p>
 											<!-- <p class="duration">Week To Date Actual</p> -->
 											<p class="value1">
 												<span>{{data.forecast.value}}</span>
