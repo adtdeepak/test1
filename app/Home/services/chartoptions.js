@@ -93,7 +93,12 @@ angular.module('Home')
 	            x: -20
 	        },
 	        xAxis: {
-	            categories: data.xAxis
+	            categories: data.xAxis,
+	            plotBands: [{ // mark the weekend
+	                color: '#EFFCFB',
+	                from: data.plotBand[0][0],
+	                to: data.plotBand[0][1]
+	            }]
 	        },
 	        yAxis: {
 	            title: {
