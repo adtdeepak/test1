@@ -58,7 +58,7 @@ type='text/css'>
 
         <div id="contentarea">
             
-        		<div style="position: fixed; top: 52px; right: 60px;z-index: 100;" class="breadcrumbTrackContainer" ng-controller = "commonController">
+        		<div class="breadcrumbTrackContainer" ng-controller = "commonController">
 				<div id="timePeriodTabs">
 					<ul>
 						<li ng-class="{'active': selectedIndex[0].selected}"><a class="" href="#"
@@ -130,7 +130,8 @@ type='text/css'>
 										number}}</span>
 								</div>
 							</div>
-							<div ng-hide="true" class="rateValue">Acquisition Rate: 13%</div>
+                            <div class="rateValue">Unique Visitor: 70%</div>
+							
 							<div id="sparkleLineVisitor"></div>
 							<div class="chart"></div>
 						</div>
@@ -210,7 +211,7 @@ type='text/css'>
 		
 		<div class="row-fluid" style="padding: 0px 11px;">
 			<div class="pull-right chart-textNote" style="">Current period
-				from {{trendPeriod}}, 2014</div>
+				from {{trendPeriod}}, 2015</div>
 			<h2 class="block-chartTitle">{{acqTrendTitle}}</h2>
 		</div>
 		<div class="row" style="margin-top: 30px; margin-bottom: 10px">
@@ -233,14 +234,14 @@ type='text/css'>
 						style="padding: 0px 11px; text-align: center;">
 						<div class="chart-textNote">{{title}}</div>
 						<div style=" margin-right: 40px;
-    margin-top: -15px;" class="chart-textNote pull-right">As of Thursday,
-							November13, 2014 </div>
+    margin-top: -15px;" class="chart-textNote pull-right">As of Saturday,
+							Sept 12, 2015 </div>
 					<!--	<p class="widget-title pull-right">As of {{currentDate |
 							date:'EEEE'}}, {{currentDate | date:'dd MMM yyyy'}}</p>-->
 					</div>
 					<h2 style="margin: -15px 20px 25px;" class="block-title">Business Impact</h2>
 					<a style="margin-top:-48px !important;" href="javascript:;" class="pull-right filter-option-menu"> </a>
-					<div class="options-filter width clearfix" style="display: block;">
+					<div class="options-filter width clearfix" style="display: block; margin-top:-35px;">
 						<img src="images/popmenu-arrow.png" class="popmenu-arrow">
 						<div>
 							<div class="popupTitle">
@@ -261,7 +262,7 @@ type='text/css'>
 					style="margin:  10px 20px 10px 10px;" data-page="businessImpact">
 					<li class="col-md-5ths col-xs-6" ng-repeat="data in businessImpact"
 						ng-hide="data.display == false">
-						<div class="col-sm-11 col-md-11 metrics-content">
+						<div class="col-sm-11 col-md-11 metrics-content metrics-content-height">
 							<a href="{{trackingHtmlName}}.htm#/business-impact?currentlySelected={{data.subGroupBy}}&&name={{data.subgroupName}}">
 								<div class="box-content-top">
 									<h3>{{data.subgroupName}}</h3>
@@ -296,7 +297,7 @@ type='text/css'>
 			ng-controller="engagementActivityMatricesController">
 			<div class="contentPanel nopadding">
 				<div ng-if="isEngagementMetricsViewable">
-					<h2 style="margin: -15px 20px 25px;"  class="block-title">Engagement Metrics</h2>
+					<h2 style="margin: 0px 20px 25px;"  class="block-title">Engagement Metrics</h2>
 					<a style="margin-top:-48px !important;"  href="javascript:;" class="pull-right filter-option-menu"> </a>
 					<div style="display: none"
 						class="options-filter options-filter1 clearfix">
@@ -378,7 +379,7 @@ type='text/css'>
 			ng-controller="overallUserGroupSummaryController">
 			<div class="contentPanel nopadding">
 				<div ng-if="isUserGroupViewable">
-					<h2 style="margin: -15px 20px 25px;" class="block-title">User Group</h2>
+					<h2 style="margin: 0px 20px 25px;" class="block-title">User Group</h2>
 					<a style="margin-top:-48px !important;" href="javascript:;" class="pull-right filter-option-menu"> </a>
 					<div class="options-filter options-filter1  width clearfix">
 						<img src="images/popmenu-arrow.png" class="popmenu-arrow" />

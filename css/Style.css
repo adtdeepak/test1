@@ -3662,8 +3662,13 @@ select.small {
 	cursor : pointer;
 }
 [ng-controller="acquisitionFunnelController"] .customDiv.active{
-	background: #EF2D2D;
-	border: 2px solid red;
+	background: #F8A16B;
+	border: 2px solid #F8A16B;
+}
+[ng-controller="acquisitionFunnelController"] .customDiv:hover{
+    background: #F8A16B;
+    border: 2px solid #F8A16B;
+ 
 }
 #editPermissionsDialog.window {
 	width: 50%;
@@ -4401,8 +4406,8 @@ ul.acquisitiontabs li:last-child {
 }
 
 .options-filter1 {
-	right: 4px;
-	top: 30px;
+	right: 15px;
+    top: 20px;
 }
 
 .options-filter.width {
@@ -8245,6 +8250,7 @@ div#progressBar {
   padding-top: 10px;
   margin-left: 30px;
 }
+
 .widget-content .chart{
   margin-top: 10px;
   height: 30px;
@@ -8336,6 +8342,7 @@ div#progressBar {
   position: relative;
   line-height: 10px;
 }
+.metrics-content-height{ height: 210px;}
 .metrics-content a{
 	text-decoration:none;
 }
