@@ -11,23 +11,23 @@
             "data": [
                 {
                     "startDate": "08-23-2015",
-                    "value": 1204460
+                    "value": 96357
                 },
                 {
                     "startDate": "08-30-2015",
-                    "value": 1166070
+                    "value": 93285
                 },
                 {
                     "startDate": "09-06-2015",
-                    "value": 1161610
+                    "value": 97071
                 },
                 {
                     "startDate": "09-13-2015",
-                    "value": 1224100
+                    "value": 97928
                 },
                 {
                     "startDate": "09-20-2015",
-                    "value": 1291070
+                    "value": 103285
                 }
             ]
         },
@@ -39,23 +39,23 @@
             "data": [
                 {
                     "startDate": "7-1-2015",
-                    "value": 4817840
+                    "value": 385420
                 },
                 {
                     "startDate": "8-1-2015",
-                    "value": 4664280
+                    "value": 373140
                 },
                 {
                     "startDate": "9-1-2015",
-                    "value": 2323220
+                    "value": 194140
                 },
                 {
                     "startDate": "11-1-2015",
-                    "value": 4896400
+                    "value": 391710
                 },
                 {
                     "startDate": "11-1-2015",
-                    "value": 5164280
+                    "value": 413140
                 }
             ]
         },
@@ -67,23 +67,23 @@
             "data": [
                 {
                     "startDate": "1-1-2015",
-                    "value": 14453520
+                    "value": 1156260
                 },
                 {
                     "startDate": "4-1-2015",
-                    "value": 13992840
+                    "value": 1119420
                 },
                 {
                     "startDate": "7-1-2015",
-                    "value": 6969660
+                    "value": 582420
                 },
                 {
                     "startDate": "10-1-2015",
-                    "value": 14689200
+                    "value": 1175130
                 },
                 {
                     "startDate": "1-1-2016",
-                    "value": 15492840
+                    "value": 1239420
                 }
             ]
         },
@@ -93,21 +93,21 @@
             "periodName": "yearly",
             "reportingInterval": "monthly",
             "data": [
-                {        
+                { 
                     "startDate": "1-1-2013",
-                    "value": 61250890
+                    "value": 4900070
                 },
                 {
                     "startDate": "1-1-2014",
-                    "value": 69268750
+                    "value": 5541500
                 },
                 {
                     "startDate": "1-1-2015",
-                    "value": 36806250
+                    "value": 2944500
                 },
                 {
                     "startDate": "1-1-2016",
-                    "value": 93052670
+                    "value": 7444210
                 }
             ]
         }

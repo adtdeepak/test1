@@ -67,9 +67,9 @@ angular.module('Home')
             }]
 			_data['xAxis'] =xAxis;
 			_data['value'] =tempObj;
+			_data['plotBand'] = plotBandRange;
 			resultData[timeRange.periodName] = _data;
 		});
-		console.log("resultData", resultData)
 		return resultData;
 
 	}
