@@ -83,7 +83,7 @@ angular.module('Home')
 			chart:{
 				height:200,
 				width:width,
-				spacingLeft :200
+				spacingLeft :50
 			},
 	        title: {
 	            text: title

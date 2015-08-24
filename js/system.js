@@ -40,6 +40,16 @@ window.MENU_WIDGET_LINK = {
 	m_Esign : "Esign",
 	m_Workspaceshare : "Workspaceshare",
 	
+	m_ThirdPartyIntegration : "3rdPartyIntegrationAPI",
+	m_Collaboate : "Collaborate",
+	m_eSign : "E-Sign",
+	m_FullTextSearch : "FullTextSearch",
+	m_Microsoft365Integration : "Microsoft365Integration",
+	m_MobileApp : "MobileApp",
+	m_StorageSpace : "StorageSpace",
+	m_VersionHistory : "VersionHistory",
+	m_WorkplaceShare : "WorkplaceShare",
+	
 	m_userGroup1 : "usrGrp1",
 	m_userGroup2 : "usrGrp2",
 	m_userGroup3 : "usrGrp3",

@@ -146,7 +146,7 @@ angular.module('Home')
     	  $scope.dataLoaded = true;
     	try{
     		$scope.error = false;
-    		chartOptions = ChartOptionsService.getBasicLineChart(acqTrendData[$rootScope.selectedPeriod], "", "", 800);
+    		chartOptions = ChartOptionsService.getBasicLineChart(acqTrendData[$rootScope.selectedPeriod], "", "", 1000);
     		chartOBJ = chartsService.basicLine.call($('#acquisitionTrendChart'),chartOptions, $scope);
     	} catch (e) {
     		console.log(e);
