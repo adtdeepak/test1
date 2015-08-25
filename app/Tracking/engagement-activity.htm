@@ -49,7 +49,7 @@
 				</div>
 				
 				<a href="javascript:;" class="pull-right filter-option-menu filter-option-menu1"> </a>
-					<div style="display: none" class="options-filter options-filter1 clearfix">
+					<div style="display: none; margin-top:55px;" class="options-filter options-filter1 clearfix">
 						<img src="images/popmenu-arrow.png" class="popmenu-arrow" />
 						<div class="options-filter-left">
 							<div class="popupTitle">
@@ -96,11 +96,15 @@
 										</a> -->
 										<div class="box-content-top" >
 											<h3>{{data.subgroupName}}</h3>
-											<p ng-if="data.subgroupName=='EAScore'" class='widget-text'>(in Percentage)</p>
-											<p ng-if="data.subgroupName!='EAScore'" class='widget-text'>(Count of activities)</p>
+											
+											
 											<div ng-class="{'value-red trackingLink':data.versusLast.trend=='-ve' , 'value-orange trackingLink':data.versusLast.trend=='+ve' , 'value-green trackingLink':data.actualValue.level=='high'}">
 											{{data.actualToDate| number}}</div>
-											<p class="duration">{{timePeriod}} Avg {{data.monthlyAvg| number}}</p>
+                                            <p ng-if="data.subgroupName=='EAScore'" class='widget-text'>(in Percentage)</p>
+                                            <p ng-if="data.subgroupName!='EAScore'" class='widget-text'>(Count of users)</p>
+                                            <p class="value1"><span class="ng-binding">{{data.monthlyAvg| number}}</span</p>
+											<p class="duration">4 {{timePeriod}} Average</p>
+                                            
 										</div>
 									</div>
 								</div>
@@ -121,56 +125,61 @@
 					<ul ng-hide="error" class="summary-list clearfix">
                                         <li ng-show="engagementActivitySummary.versusLast.value">
                                             <div class="summarylistInnerwrap">
+                                                <p>
+                                                    {{toLastText}}
+                                                </p>
                                                 <div class="{{engagementActivitySummary.versusLast.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
                                                 	<!-- -212 -->
                                                     {{engagementActivitySummary.versusLast.value| number}}
                                                 </div>
-                                                <p>
-                                                    {{toLastText}}
-                                                </p>
+                                               
                                             </div>
                                         </li>
                                         <li ng-show="engagementActivitySummary.versusSameLastYear.value">
                                             <div class="summarylistInnerwrap">
+                                                 <p>
+                                                    {{toLastLYText}}
+                                                </p>
                                                 <div class="{{engagementActivitySummary.versusSameLastYear.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
                                                     {{engagementActivitySummary.versusSameLastYear.value| number}}
                                                 </div>
-                                                <p>
-                                                    {{toLastLYText}}
-                                                </p>
+                                               
                                             </div>
                                         </li>
                                         <li ng-show="engagementActivitySummary.visits.value">
                                             <div class="summarylistInnerwrap">
+                                                 <p >
+                                                    {{heading}}
+                                                </p>
                                                 <div class="summary-value">
                                                    <!--  23,765 -->
                                                    {{engagementActivitySummary.visits.value| number}}
                                                 </div>
-                                                <p >
-                                                    {{heading}}
-                                                </p>
+                                               
                                             </div>
                                         </li>
                                         <li ng-show="engagementActivitySummary.diffFromTarget.value">
                                             <div class="summarylistInnerwrap">
+                                                 <p>
+                                                    Difference from Target
+                                                </p>
                                                 <div class="{{businessImpactSummary.diffFromTarget.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
                                                    <!--  3,235 -->
                                                    {{engagementActivitySummary.diffFromTarget.value| number}}
                                                 </div>
-                                                <p>
-                                                    Difference from Target
-                                                </p>
+                                               
                                             </div>
                                         </li>
                                         <li ng-show="engagementActivitySummary.forecast.value">
                                             <div class="summarylistInnerwrap last">
+                                                 <p>
+                                                    {{forecastText}}
+                                                </p>
                                                 <div class="{{businessImpactSummary.forecast.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
                                                     <!-- 27,000 -->
                                                      {{engagementActivitySummary.forecast.value| number}}
                                                 </div>
-                                                <p>
-                                                    {{forecastText}}
-                                                </p>
+                                               
                                             </div>
                                         </li>
                                     </ul>

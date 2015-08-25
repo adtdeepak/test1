@@ -16,7 +16,7 @@
 				</div>
 				
 				<a href="javascript:;" class="pull-right filter-option-menu filter-option-menu1"> </a>
-				<div class="options-filter options-filter1  width clearfix">
+				<div style="margin-top: 55px;" class="options-filter options-filter1  width clearfix">
 					<img src="images/popmenu-arrow.png" class="popmenu-arrow" />
 					<div>
 						<div class="popupTitle">
@@ -37,7 +37,7 @@
 					<div class="progress-loading" ng-if="!error && !dataLoaded"></div>
 					<ng-include ng-show="error" src="'partials/error.htm'"></ng-include>
 						<ul ng-hide="error" data-page="userGroup" class="box-list  clearfix">
-							<li ng-repeat="data in userGroup" ng-hide="data.display==false" ng-if="menuSynced" ng-click="menu.selected(data)">
+							<li ng-repeat="data in userGroup" ng-hide="data.display==false" ng-if="menuSynced" ng-click="menu.selected(data">
 								<div class="box-list-innerwrap">
 									<div ng-class="{'box-listShadow': true, selected: data.groupBy==select}">
 										<!-- <a href="#" class="help tooltip-new">
@@ -48,10 +48,13 @@
 										</a> -->
 										<div class="box-content-top">
 											<h3>{{data.groupName}}</h3>
-											<p class='widget-text'>(Count of members)</p>
+											
 											<div class="value-green trackingLink">
 											{{data.newSubsActual | number}}</div>
-											<p class="duration">{{timePeriod}} Avg {{data.monthlyAvg| number}}</p>
+                                            <p class='widget-text'>(Count of members)</p>
+                                            <p  class="value1"><span class="ng-binding">{{data.monthlyAvg| number}}</span></p>
+											<p class="duration">{{timePeriod}} Average</p>
+                                          
 										</div>
 									</div>
 								</div>
@@ -73,72 +76,79 @@
 						<ul ng-hide="error" class="summary-list clearfix">
 										<li ng-show="UserGroupSummary.activeUsersPerPeriod!=null" class="widthFirst">
                                             <div class="summarylistInnerwrap">
+                                                 <p>
+                                                    Active Users Per Week
+                                                </p>
                                                 <div class="summary-value">
                                                     {{UserGroupSummary.activeUsersPerPeriod | number}}
                                                 </div>
-                                                <p>
-                                                    Active Users Per Week
-                                                </p>
+                                               
                                             </div>
                                         </li>
                                         <li ng-show="UserGroupSummary.avgLoginPerPeriod!=null" class="width">
                                             <div class="summarylistInnerwrap">
+                                                 <p>
+                                                    Average Login Per Week
+                                                </p>
                                                 <div class="summary-value">
                                                     {{UserGroupSummary.avgLoginPerPeriod | number}}
                                                 </div>
-                                                <p>
-                                                    Average Login Per Week
-                                                </p>
+                                               
                                             </div>
                                         </li>
                                         <li ng-show="UserGroupSummary.recurringBooking!=null" class="width">
                                             <div class="summarylistInnerwrap">
+                                                 <p>
+                                                    Recurring Booking
+                                                </p>
                                                 <div class="summary-value">
                                                       $ {{UserGroupSummary.recurringBooking | number}}
                                                 </div>
-                                                <p>
-                                                    Recurring Booking
-                                                </p>
+                                               
                                             </div>
                                         </li>
                                         <li ng-show="UserGroupSummary.highEngagement!=null" class="width">
                                             <div class="summarylistInnerwrap">
+                                                  <p>
+                                                    Highly Engaged
+                                                </p>
                                                 <div class="summary-value">
                                                       {{UserGroupSummary.highEngagement | number}}
                                                 </div>
-                                                <p>
-                                                    Highly Engaged
-                                                </p>
+                                              
                                             </div>
                                         </li>
                                         <li ng-show="UserGroupSummary.moderateEngagement!=null" class="width">
                                             <div class="summarylistInnerwrap">
+                                                   <p>
+                                                    Moderately Engaged
+                                                </p>
                                                 <div class="summary-value">
                                                       {{UserGroupSummary.moderateEngagement | number}}
                                                 </div>
-                                                <p>
-                                                    Moderately Engaged
-                                                </p>
+                                             
                                             </div>
                                         </li>
                                         <li ng-show="UserGroupSummary.leastEngagement!=null" class="width">
                                             <div class="summarylistInnerwrap">
+                                                  <p>
+                                                    Least Engaged
+                                                </p>
                                                 <div class="summary-value">
                                                      {{UserGroupSummary.leastEngagement | number}}
                                                 </div>
-                                                <p>
-                                                    Least Engaged
-                                                </p>
+                                              
                                             </div>
                                         </li>
                                         <li ng-show="UserGroupSummary.arpu!=null" class="width">
                                             <div class="summarylistInnerwrap last">
+                                                  <p>
+                                                    ARPU
+                                                </p>
                                                 <div class="summary-value">
                                                      $ {{UserGroupSummary.arpu | number}}
                                                 </div>
-                                                <p>
-                                                    ARPU
-                                                </p>
+                                              
                                             </div>
                                         </li>
 						</ul>

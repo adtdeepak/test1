@@ -91,52 +91,57 @@
 						 <ul ng-hide="error" class="summary-list clearfix">
                                         <li ng-show="businessImpactSummary.versusLast.value">
                                             <div class="summarylistInnerwrap">
+                                                 <p>
+                                                    {{toLastText}}
+                                                </p>
                                                 <div class="{{businessImpactSummary.versusLast.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
                                                     {{businessImpactSummary.versusLast.value}}
                                                 </div>
-                                                <p>
-                                                    {{toLastText}}
-                                                </p>
+                                               
                                             </div>
                                         </li>
                                         <li ng-show="businessImpactSummary.versusSameLastYear.value">
                                             <div class="summarylistInnerwrap">
-                                                <div class="{{businessImpactSummary.versusSameLastYear.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
-                                                    {{businessImpactSummary.versusSameLastYear.value}}
-                                                </div>
                                                 <p>
                                                     {{toLastLYText}}
                                                 </p>
+                                                <div class="{{businessImpactSummary.versusSameLastYear.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
+                                                    {{businessImpactSummary.versusSameLastYear.value}}
+                                                </div>
+                                                
                                             </div>
                                         </li>
                                         <li ng-show="businessImpactSummary.actualToDate">
                                             <div class="summarylistInnerwrap ">
+                                                  <p>
+                                                     {{businessImpactSummary.subgroupName}}
+                                                </p>
                                                 <div class="summary-value">
                                                    {{businessImpactSummary.actualToDate}}
                                                 </div>
-                                                <p>
-                                                     {{businessImpactSummary.subgroupName}}
-                                                </p>
+                                              
                                             </div>
                                         </li>
                                         <li ng-show="businessImpactSummary.diffFromTarget.value">
                                             <div class="summarylistInnerwrap">
-                                                <div class="{{businessImpactSummary.diffFromTarget.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
-                                                   {{businessImpactSummary.diffFromTarget.value}}
-                                                </div>
                                                 <p>
                                                     Difference from Target
                                                 </p>
+                                                <div class="{{businessImpactSummary.diffFromTarget.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
+                                                   {{businessImpactSummary.diffFromTarget.value}}
+                                                </div>
+                                                
                                             </div>
                                         </li>
                                         <li ng-show="businessImpactSummary.forecast.value">
                                             <div class="summarylistInnerwrap">
+                                                 <p>
+                                                    {{forecastText}}
+                                                </p>
                                                 <div class="{{businessImpactSummary.forecast.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
                                                      {{businessImpactSummary.forecast.value}}
                                                 </div>
-                                                <p>
-                                                    {{forecastText}}
-                                                </p>
+                                               
                                             </div>
                                         </li>
                                     </ul>

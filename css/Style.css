@@ -1562,7 +1562,7 @@ h2 {
 	display: block;
 	height: 35px;
 	margin-top: 15px;
-	padding: 0 65px;
+	padding: 0 95px;
 	position: absolute;
 	width: 100%;
 	background :#000;
@@ -3662,15 +3662,16 @@ select.small {
 	cursor : pointer;
 }
 [ng-controller="acquisitionFunnelController"] .customDiv.active{
-	background: #F8A16B;
-	border: 2px solid #F8A16B;
+	background: #333;
+	border: 2px solid #333;
 }
 [ng-controller="acquisitionFunnelController"] .customDiv:hover{
-    background: #F8A16B;
-    border: 2px solid #F8A16B;
+    background: #333;
+    border: 2px solid #333;
   
- 
-}
+ }
+
+[ng-controller="acquisitionFunnelController"] .customDiv.active .widget-content .row-fluid span{ color:#F8A16B;}
 #editPermissionsDialog.window {
 	width: 50%;
 }
@@ -4516,7 +4517,7 @@ ul.acquisitiontabs li:last-child {
 }
 
 .summarylistInnerwrap {
-	padding-bottom: 10px;
+	
 	border: 1px solid #d0d0d0;
 	border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -4678,6 +4679,8 @@ ul.acquisitiontabs li:last-child {
 .summary-list li  p {
 	color: #2b2b2b;
 	font-size: 12px;
+    margin:10px 0px 0px;
+    font-weight:600;
 }
 
 .summary-list li .summarylistInnerwrap:hover p,.summary-list li .selected p
@@ -8029,6 +8032,7 @@ div#progressBar {
   font-size: 12px;
   padding-top: 20px;
 }
+.widget-content:hover{ color:#f8a16b !important;}
 #analysis-cl .widget-content{
   background: none;
   padding-top: 0px;
@@ -8878,9 +8882,7 @@ div#progressBar {
     .funnel-font-size{
     	font-size: 15px;
     }
-      .funnel-font-size:hover{
-    	color:#f8a16b;
-    }
+      
     .metric-widgets>li  .value-green,.metric-widgets>li  .value-orange,.metric-widgets>li  .value-red
 	{
 		font-size: 15px;
