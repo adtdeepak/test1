@@ -3668,6 +3668,7 @@ select.small {
 [ng-controller="acquisitionFunnelController"] .customDiv:hover{
     background: #F8A16B;
     border: 2px solid #F8A16B;
+  
  
 }
 #editPermissionsDialog.window {
@@ -8876,6 +8877,9 @@ div#progressBar {
     }
     .funnel-font-size{
     	font-size: 15px;
+    }
+      .funnel-font-size:hover{
+    	color:#f8a16b;
     }
     .metric-widgets>li  .value-green,.metric-widgets>li  .value-orange,.metric-widgets>li  .value-red
 	{
