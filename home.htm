@@ -299,47 +299,23 @@ type='text/css'>
 				<div ng-if="isEngagementMetricsViewable">
 					<h2 style="margin: 0px 20px 25px;"  class="block-title">Engagement Metrics</h2>
 					<a style="margin-top:-48px !important;"  href="javascript:;" class="pull-right filter-option-menu"> </a>
-					<div style="display: none"
-						class="options-filter options-filter1 clearfix">
-						<img src="images/popmenu-arrow.png" class="popmenu-arrow" />
-						<div class="options-filter-left">
+					<div class="options-filter width clearfix" style="display: block; margin-top:-35px;">
+						<img src="images/popmenu-arrow.png" class="popmenu-arrow">
+						<div>
 							<div class="popupTitle">
-								<input type="radio" name="Module"
-									ng-model="userSettings.selectedType" value="module"
-									ng-change="menu.menuSync()" /> <label> Module</label>
+								<label> Select widget</label>
 							</div>
 							<div class="popupcnt">
 								<input type="checkbox" checked="true" disabled="true" /><label>EA
 									Score </label>
 							</div>
-							<div class="popupcnt" ng-repeat="data in userSettings.menus"
-								ng-if='data.menuType=="module"'>
-								<div>
+							<div class="popupcnt top" ng-repeat="data in userSettings.menus">
+								<div class="height">
 									<input type="checkbox" ng-model="data.checked"
-										ng-disabled="userSettings.selectedType != 'module'"
-										ng-change="menu.onSelect(data)" /><label>{{data.menuItemName}}
-									</label>
+										ng-change="menu.onSelect(data)"
+										ng-checked="data.checked == true"> <label>{{data.menuItemName}}</label>
 								</div>
-							</div>
-						</div>
-						<div class="options-filter-right">
-							<div class="popupTitle">
-								<input type="radio" name="Activity" value="activity"
-									ng-model="userSettings.selectedType"
-									ng-change="menu.menuSync()" /> <label> Activity</label>
-							</div>
-							<div class="popupcnt">
-								<input type="checkbox" checked="true" disabled="true" /><label>EA
-									Score </label>
-							</div>
-							<div class="popupcnt" ng-repeat="data in userSettings.menus"
-								ng-if='data.menuType=="activity"'>
-								<div>
-									<input type="checkbox" ng-model="data.checked"
-										ng-disabled="userSettings.selectedType != 'activity'"
-										ng-change="menu.onSelect(data)" /><label>{{data.menuItemName}}
-									</label>
-								</div>
+
 							</div>
 						</div>
 					</div>

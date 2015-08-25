@@ -49,34 +49,23 @@
 				</div>
 				
 				<a href="javascript:;" class="pull-right filter-option-menu filter-option-menu1"> </a>
-					<div style="display: none; margin-top:55px;" class="options-filter options-filter1 clearfix">
-						<img src="images/popmenu-arrow.png" class="popmenu-arrow" />
-						<div class="options-filter-left">
+				<div class="options-filter width clearfix" style="display: block; margin-top:-35px;">
+						<img src="images/popmenu-arrow.png" class="popmenu-arrow">
+						<div>
 							<div class="popupTitle">
-									<input type="radio" name="Module" ng-model="userSettings.selectedType" value="module" ng-change="menu.menuSync()"/> <label>
-									Module</label>
+								<label> Select widget</label>
 							</div>
-								<div class="popupcnt">
-									<input type="checkbox"  checked="true" disabled="true"/><label>EA Score </label>
-								</div>
-							<div class="popupcnt" ng-repeat="data in userSettings.menus" ng-if='data.menuType=="module"'>
-								<div>
-										<input type="checkbox" ng-model="data.checked" ng-disabled="userSettings.selectedType != 'module'" ng-change="menu.onSelect(data)"/><label>{{data.menuItemName}} </label>
-								</div>
+							<div class="popupcnt">
+								<input type="checkbox" checked="true" disabled="true" /><label>EA
+									Score </label>
 							</div>
-						</div>
-						<div class="options-filter-right">
-							<div class="popupTitle">
-									<input type="radio" name="Activity"  value="activity" ng-model="userSettings.selectedType" ng-change="menu.menuSync()"/> <label>
-									Activity</label>
-							</div>
-								<div class="popupcnt">
-									<input type="checkbox"  checked="true" disabled="true"/><label>EA Score </label>
+							<div class="popupcnt top" ng-repeat="data in userSettings.menus">
+								<div class="height">
+									<input type="checkbox" ng-model="data.checked"
+										ng-change="menu.onSelect(data)"
+										ng-checked="data.checked == true"> <label>{{data.menuItemName}}</label>
 								</div>
-							<div class="popupcnt" ng-repeat="data in userSettings.menus" ng-if='data.menuType=="activity"'>
-								<div>
-										<input type="checkbox"  ng-model="data.checked"  ng-disabled="userSettings.selectedType != 'activity'" ng-change="menu.onSelect(data)"/><label>{{data.menuItemName}} </label>
-								</div>
+
 							</div>
 						</div>
 					</div>
@@ -129,7 +118,6 @@
                                                     {{toLastText}}
                                                 </p>
                                                 <div class="{{engagementActivitySummary.versusLast.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
-                                                	<!-- -212 -->
                                                     {{engagementActivitySummary.versusLast.value| number}}
                                                 </div>
                                                
@@ -146,40 +134,34 @@
                                                
                                             </div>
                                         </li>
-                                        <li ng-show="engagementActivitySummary.visits.value">
+                                        <li ng-show="engagementActivitySummary.Numberofactivities.value">
                                             <div class="summarylistInnerwrap">
-                                                 <p >
-                                                    {{heading}}
+                                                <p >
+                                                Count of {{heading}}
                                                 </p>
                                                 <div class="summary-value">
-                                                   <!--  23,765 -->
-                                                   {{engagementActivitySummary.visits.value| number}}
+                                                   {{engagementActivitySummary.Numberofactivities.value}}
                                                 </div>
-                                               
                                             </div>
                                         </li>
-                                        <li ng-show="engagementActivitySummary.diffFromTarget.value">
+                                        <li ng-show="engagementActivitySummary.Percentageactiveusers.value">
                                             <div class="summarylistInnerwrap">
-                                                 <p>
-                                                    Difference from Target
+                                                <p>
+                                                    % Penetration in active users
                                                 </p>
-                                                <div class="{{businessImpactSummary.diffFromTarget.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
-                                                   <!--  3,235 -->
-                                                   {{engagementActivitySummary.diffFromTarget.value| number}}
+                                                <div class="{{businessImpactSummary.Percentageactiveusers.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
+                                                   {{engagementActivitySummary.Percentageactiveusers.value}}
                                                 </div>
-                                               
                                             </div>
                                         </li>
-                                        <li ng-show="engagementActivitySummary.forecast.value">
+                                        <li ng-show="engagementActivitySummary.AvgCountperuser.value">
                                             <div class="summarylistInnerwrap last">
-                                                 <p>
-                                                    {{forecastText}}
+                                                <p>
+                                                    Avg. count of activity per user
                                                 </p>
-                                                <div class="{{businessImpactSummary.forecast.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
-                                                    <!-- 27,000 -->
-                                                     {{engagementActivitySummary.forecast.value| number}}
+                                                <div class="{{businessImpactSummary.AvgCountperuser.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
+                                                     {{engagementActivitySummary.AvgCountperuser.value}}
                                                 </div>
-                                               
                                             </div>
                                         </li>
                                     </ul>

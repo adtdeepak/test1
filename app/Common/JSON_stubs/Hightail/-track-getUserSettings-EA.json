@@ -1,1 +1,77 @@
-{"status":"OK","message":"Request Processed Successfully","data":[{"groupBy":"EA","menus":[{"menuItemID":"m_PDFSent","menuItemName":"PDFSent","menuType":"activity","checked":true},{"menuItemID":"m_Archives","menuItemName":"Archives","menuType":"activity","checked":true},{"menuItemID":"m_Images","menuItemName":"Images Shared","menuType":"module","checked":true},{"menuItemID":"m_VideoSent","menuItemName":"VideoSent","menuType":"activity","checked":true},{"menuItemID":"m_SecureFilesSent","menuItemName":"SecureFilesSent","menuType":"activity","checked":true},{"menuItemID":"m_PremiumDelivery","menuItemName":"PremiumDelivery","menuType":"module","checked":true},{"menuItemID":"m_Esign","menuItemName":"Esign","menuType":"module","checked":true},{"menuItemID":"m_Workspaceshare","menuItemName":"Workspaceshare","menuType":"module","checked":true}]}]}
+{
+    "status": "OK",
+    "message": "Request Processed Successfully",
+    "data": [
+        {
+            "groupBy": "EA",
+            "menus": [
+                {
+                    "menuItemID": "m_VersionControl",
+                    "menuItemName": "VersionControl",
+                    "menuType": "module",
+                    "checked": true
+                },
+                {
+                    "menuItemID": "m_MobileAppuser",
+                    "menuItemName": "MobileAppuser",
+                    "menuType": "module",
+                    "checked": true
+                },
+                {
+                    "menuItemID": "m_Imagesenders",
+                    "menuItemName": "Imagesenders",
+                    "menuType": "module",
+                    "checked": true
+                },
+                {
+                    "menuItemID": "m_Videosenders",
+                    "menuItemName": "Videosenders",
+                    "menuType": "module",
+                    "checked": true
+                },
+                {
+                    "menuItemID": "m_Microsoft365integrations",
+                    "menuItemName": "Microsoft365integrations",
+                    "menuType": "module",
+                    "checked": false
+                },
+                {
+                    "menuItemID": "m_PremiumDeliveryUsers",
+                    "menuItemName": "PremiumDeliveryUsers",
+                    "menuType": "module",
+                    "checked": false
+                },
+                {
+                    "menuItemID": "m_EsignUsers",
+                    "menuItemName": "EsignUsers",
+                    "menuType": "module",
+                    "checked": false
+                },
+                {
+                    "menuItemID": "m_WorkspaceshareUsers",
+                    "menuItemName": "WorkspaceshareUsers",
+                    "menuType": "module",
+                    "checked": false
+                },
+                {
+                    "menuItemID": "m_StorageSpace",
+                    "menuItemName": "StorageSpace",
+                    "menuType": "module",
+                    "checked": false
+                },
+                {
+                    "menuItemID": "m_Collaborate",
+                    "menuItemName": "Collaborate",
+                    "menuType": "module",
+                    "checked": false
+                },
+                {
+                    "menuItemID": "m_Fulltextsearch",
+                    "menuItemName": "Fulltextsearch",
+                    "menuType": "module",
+                    "checked": false
+                }
+            ]
+        }
+    ]
+}

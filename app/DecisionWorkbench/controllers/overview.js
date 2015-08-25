@@ -9,6 +9,7 @@ angular.module('DecisionWorkbench')
 		window.location = "#/overview-details?selectedGroup="+attribute;
 	}
 
+	//function to be executed when wishlist is selected
 	$scope.wishlistSelected = function(attribute, isSelected){
 		console.log("attribute",attribute);
 		var selectedId = attribute.split('=')[1];
@@ -37,6 +38,7 @@ angular.module('DecisionWorkbench')
 		localStorage.setItem('OverviewDetails', JSON.stringify($scope.fullResponse));
 	}
 	
+	//function to be executed when execute is selected
 	$scope.executeSelected = function(attribute, isSelected){
 		console.log("attribute executeSelected",attribute, isSelected);
 		var selectedId = attribute.split('=')[1];
@@ -65,7 +67,7 @@ angular.module('DecisionWorkbench')
 		localStorage.setItem('OverviewDetails', JSON.stringify($scope.fullResponse));
 	}
 	
-	
+	//Overall campaign data
 	$scope.overallDataSuccess = function(response){
 		$scope.overallResponse = response.data;
 		$scope.addData(response.data['All Users']);
@@ -75,12 +77,14 @@ angular.module('DecisionWorkbench')
 		$scope.addFeaturesTableData(response.data.photographers);
 	};
 	
+	//Gettiing inner page data
 	$scope.innerPageDataSuccess = function(response){
 		$scope.fullResponse = response;
 	};
 	
 	$scope.options = UtilitiesService.getDataTableOptions();
 	$scope.userTableOptions = UtilitiesService.getDataTableOptions();
+	//Table options for overall Table
 	$scope.featuresOptions = UtilitiesService.getDataTableOptions();
 	var columOptions = {
 			"aoColumns" : [ {
@@ -114,6 +118,7 @@ angular.module('DecisionWorkbench')
 			}
 		};
 		$.extend(true, $scope.options, columOptions);
+		//Table options for user group Table
 		var columOptionsAttr = {
 				"aoColumns" : [ {
 					"sClass" : "each-row-details"
@@ -146,6 +151,7 @@ angular.module('DecisionWorkbench')
 				}
 			};
 		$.extend(true, $scope.userTableOptions, columOptionsAttr);
+		//Table options for features Table
 		var columOptionsFeatures = {
 				"aoColumns" : [ {
 					"sClass" : "each-row-details"
@@ -180,6 +186,7 @@ angular.module('DecisionWorkbench')
 		$.extend(true, $scope.featuresOptions, columOptionsFeatures);
 
 	
+	//Populating data for overall table
 	$scope.addData = function(data) {
 	    $rootScope.builddoLoad = true;
 		$scope.dataLoaded = true;
@@ -202,6 +209,7 @@ angular.module('DecisionWorkbench')
 		$scope.addUserGroupsTableData($scope.overallResponse[selectedUserGroup]);
 	}
 	
+	//Populating data for user group table
 	$scope.addUserGroupsTableData = function(data) {
 	    $rootScope.builddoLoad = true;
 		$scope.dataLoaded = true;
@@ -223,6 +231,7 @@ angular.module('DecisionWorkbench')
 	$scope.clickFeature = function(selectedFeature){
 		$scope.addFeaturesTableData($scope.overallResponse[selectedFeature], selectedFeature);
 	}
+	//Populating data for feature table
 	$scope.addFeaturesTableData = function(data, selectedFeature) {
 	    $rootScope.builddoLoad = true;
 		$scope.dataLoaded = true;
@@ -240,6 +249,7 @@ angular.module('DecisionWorkbench')
 		}
 	};
 	
+	//Get all user data
 	function getAllUserTableData() {
 		var requestData = {};
 		var func = $scope.overallDataSuccess; 
@@ -254,6 +264,7 @@ angular.module('DecisionWorkbench')
 	
 	} 
 	
+	//Get inner page data
 	function getInnerPageData() {
 		var requestData = {};
 		var func = $scope.innerPageDataSuccess; 

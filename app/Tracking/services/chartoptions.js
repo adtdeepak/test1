@@ -50,7 +50,6 @@ angular.module('Tracking')
 	};	
 
 this.getBasicLineChart = function(data, title, subtitle, width){
-		console.log("getBasicLineChart", data)
 		return {
 			chart:{
 				height:300
@@ -69,6 +68,9 @@ this.getBasicLineChart = function(data, title, subtitle, width){
 	                from: data.plotBand[0][0],
 	                to: data.plotBand[0][1]
 	            }]*/
+	        },
+	        exporting:{
+	        	enabled: false
 	        },
 	        yAxis: {
 	            title: {

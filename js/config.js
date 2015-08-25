@@ -119,6 +119,11 @@ window.appConstants = {
 	track_EA_comparedLast_yearly : "Compared to last year",
 	track_EA_comparedLastYear_yearly : "Compared to last year",
 	
+	track_EA_averagePeriod_weekly : "4 weeks Average",
+	track_EA_averagePeriod_monthly : "4 months Average",
+	track_EA_averagePeriod_quarterly : "4 quarters Average",
+	track_EA_averagePeriod_yearly : "4 years Average",
+	
 	//User Group
 	//summary
 	track_UG_activeUsers_weekly : "Active Users Per Week",

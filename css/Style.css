@@ -4413,7 +4413,8 @@ ul.acquisitiontabs li:last-child {
 }
 
 .options-filter.width {
-	width: 172px;
+	/* width: 172px; */
+	width: auto;
 	padding: 2px 10px 10px;
 	line-height: 20px;
 }

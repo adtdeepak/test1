@@ -315,6 +315,7 @@ angular.module('Home')
                 throw { message: "Selected period data not available!", type: "internal" };
             $scope.engagementActivity = engagementActivity[$rootScope.selectedPeriod];
             $scope.menu.setData($scope.engagementActivity);
+            $scope.averageTimePeriodText = $scope.Constants[$scope.Constants.EA_Prefix + 'averagePeriod_' + $scope.selectedPeriod];
         } catch (e) {
             $scope.error = true;
             UtilitiesService.throwError(e);

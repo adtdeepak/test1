@@ -183,18 +183,15 @@ angular.module('Tracking')
 	this.getEngagementActivityTrendData = function(reqData, success, fail) {
 	
 		var cacheKey = "EATrend" + JSON.stringify(reqData);
-		if(reqData.groupBy == "EAScore")
-			var urlConstant = RequestConstantsFactory['TRAC_URL'].GET_EA_SCORE;
-		else
-			var urlConstant = RequestConstantsFactory['TRAC_URL'].GET_EA_TREND;
 		var requestWS = postRequestWS(
-				urlConstant, 
+				'http://jsonstub.com/track/getEATrend/EAScore', 
 				reqData,
 				success, 
 				fail,
 				function(result) {
-					var cData = DataConversionService.toGetEngagementActivityTrendData(result);
-					StorageService.put(cacheKey, cData, StorageService.getCache("engagement-activityCache"));
+					//var cData = DataConversionService.toGetEngagementActivityTrendData(result);
+					//StorageService.put(cacheKey, cData, StorageService.getCache("engagement-activityCache"));
+					var cData = DataConversionService.toGetEAScoreTrend(result);
 					return cData;
 				}
 		);

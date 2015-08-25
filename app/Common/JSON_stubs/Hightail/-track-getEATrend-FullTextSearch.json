@@ -1,6 +1,7 @@
 {
     "status": "OK",
     "message": "Request Processed Successfully",
+    "groupBy": "Microsoft365Integration",
     "timeRanges": [
         {
             "periodFrom": "12-17-2014",
@@ -38,14 +39,5 @@
             "data": [57.0,57.8,59.2,61.4],
             "xAxis": ["2012","2013","2014","2015"]
         }
-    ],
-    "currentScore": {
-        "score": 62,
-        "versusLastWeek": "6",
-        "versusLastWeekTrend": "-ve",
-        "versusLastMonth": "4",
-        "versusLastMonthTrend": "+ve",
-        "versusTarget": "8",
-        "versusTargetTrend": "+ve"
-    }
+    ]
 }
