@@ -27,20 +27,17 @@ angular.module('Tracking')
    // $scope.$on('dataReady', loadData);
 
     $scope.success = function (engagementScore) {
-        try {
             $scope.dataLoaded = true;
             if (!engagementScore[$rootScope.selectedPeriod]) {
                 $scope.error = true;
             }
             else {
                 $scope.error = false;
-                var scoreChartOptions = ChartOptionsService.getEngagementActivityScoreData();
-                chartOBJ = chartsService.line.call($('#scoreChart'), engagementScore[$rootScope.selectedPeriod], scoreChartOptions, $scope);
+            //    var scoreChartOptions = ChartOptionsService.getEngagementActivityScoreData();
+                chartOptions = ChartOptionsService.getBasicLineChart(engagementScore[$rootScope.selectedPeriod], "Engagement Score Trend", "", 1000);
+                chartOBJ = chartsService.basicLine.call($('#scoreChart'),chartOptions, $scope);
                 loadDonutChart(engagementScore['engagementScore']);
             }
-        } catch (e) {
-            $scope.fail(errorConstants.DATA_ERR);
-        }
     }
     $scope.fail = function (msg) {
         $scope.error = true;

@@ -49,6 +49,51 @@ angular.module('Tracking')
 		};
 	};	
 
+this.getBasicLineChart = function(data, title, subtitle, width){
+		console.log("getBasicLineChart", data)
+		return {
+			chart:{
+				height:300
+			},
+	        title: {
+	            text: title
+	        },
+	        subtitle: {
+	            text: subtitle,
+	            x: -20
+	        },
+	        xAxis: {
+	            categories: data.xAxis/*,
+	            plotBands: [{ // mark the weekend
+	                color: '#EFFCFB',
+	                from: data.plotBand[0][0],
+	                to: data.plotBand[0][1]
+	            }]*/
+	        },
+	        yAxis: {
+	            title: {
+	                text: ''
+	            },
+	            plotLines: [{
+	                value: 0,
+	                width: 1,
+	                color: '#808080'
+	            }]
+	        },
+	        tooltip: {
+	            valueSuffix: ''
+	        },
+	        legend: {
+	            layout: 'vertical',
+	            align: 'right',
+	            verticalAlign: 'middle',
+	            borderWidth: 0
+	        },
+	        series: data.value
+		}
+		
+	};
+	
 	this.getTrackSummaryAcqTrend = function(data) {
 
 		return {

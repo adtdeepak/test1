@@ -153,8 +153,9 @@ angular.module('Tracking')
 				success, 
 				fail,
 				function(result) {
-					var cData = DataConversionService.toGetEngagementActivityScoreData(result);
-					StorageService.put(cacheKey, cData, StorageService.getCache("engagement-activityCache"));
+					//var cData = DataConversionService.toGetEngagementActivityScoreData(result);
+					var cData = DataConversionService.toGetEAScoreTrend(result);
+					//StorageService.put(cacheKey, cData, StorageService.getCache("engagement-activityCache"));
 					return cData;
 				}
 		);

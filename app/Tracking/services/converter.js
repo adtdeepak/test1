@@ -297,6 +297,32 @@ angular.module('Tracking')
 		return _data;
 	}
 
+	this.toGetEAScoreTrend = function(data){
+		var _data = {};
+		var currentScore = data.currentScore;
+		$.each(data.timeRanges, function(key, timeRange) {
+			var startDateArray = [];
+			var endDateArray = [];
+				var actualData = [];
+				var targetData = [];
+				var xAxis = [];
+				var plotBandRange = [];
+				//plotBandRange.push(UtilitiesService.getPlotBandRange(xAxis));
+				_data[timeRange.periodName] ={
+						value: [{
+							name: 'Actual',
+							data: timeRange.data/*,
+							color:'#26A48E'*/
+						}],
+						xAxis : timeRange.xAxis
+						//plotBand :plotBandRange
+				}
+		});
+		_data['engagementScore'] =  currentScore;
+		console.log("converter data:", _data)
+		return _data;
+	}
+	
 	this.toGetEngagementActivityTrendData = function(data){
 		var _data = {};
 		var currentScore = data.currentScore;
