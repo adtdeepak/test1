@@ -264,7 +264,6 @@ angular.module('Tracking')
                 	//trendChartOptions['yAxis']= yAxis;
                 	$.extend(true, trendChartOptions['yAxis'], yAxis);
                 }
-                console.log("trendChartOptions:", trendChartOptions)
                // chartOBJ = chartsService.line.call($('#trendChart'), engagementActivityTrend[$rootScope.selectedPeriod], trendChartOptions, $scope);
                 
                 chartOptions = ChartOptionsService.getBasicLineChart(engagementActivityTrend[$rootScope.selectedPeriod], "", "", 1000);

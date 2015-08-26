@@ -319,7 +319,6 @@ angular.module('Tracking')
 				}
 		});
 		_data['engagementScore'] =  currentScore;
-		console.log("converter data:", _data)
 		return _data;
 	}
 	

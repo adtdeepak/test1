@@ -181,10 +181,9 @@ angular.module('Tracking')
 	};
 
 	this.getEngagementActivityTrendData = function(reqData, success, fail) {
-	
 		var cacheKey = "EATrend" + JSON.stringify(reqData);
 		var requestWS = postRequestWS(
-				'http://jsonstub.com/track/getEATrend/EAScore', 
+				'http://jsonstub.com/track/getEATrend/'+reqData.groupBy, 
 				reqData,
 				success, 
 				fail,
