@@ -43,7 +43,7 @@
                     "actualToDate": "270000",
                     "actualToDateTrend": "-ve",
                     "monthlyAvg": "270727",
-                    "subgroupName": "Version Control",
+                    "subgroupName": "Version control",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "1500",
@@ -72,7 +72,7 @@
                     "actualToDate": "90000",
                     "actualToDateTrend": "-ve",
                     "monthlyAvg": "90699",
-                    "subgroupName": "Mobile App user",
+                    "subgroupName": "Mobile App",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "971",
@@ -101,7 +101,7 @@
                     "actualToDate": "135000",
                     "actualToDateTrend": "-ve",
                     "monthlyAvg": "136089",
-                    "subgroupName": "Image senders",
+                    "subgroupName": "Image files",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "689",
@@ -130,7 +130,7 @@
                     "actualToDate": "54000",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "53157",
-                    "subgroupName": "Video senders",
+                    "subgroupName": "Video files",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "172",
@@ -159,7 +159,7 @@
                     "actualToDate": "9000",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "9058",
-                    "subgroupName": "Microsoft 365 integrations",
+                    "subgroupName": "Microsoft 365 integration",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "391",
@@ -188,7 +188,7 @@
                     "actualToDate": "9000",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "9035",
-                    "subgroupName": "Premium Delivery Users",
+                    "subgroupName": "Premium delivery",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "161",
@@ -217,7 +217,7 @@
                     "actualToDate": "8100",
                     "actualToDateTrend": "-ve",
                     "monthlyAvg": "8108",
-                    "subgroupName": "Esign Users",
+                    "subgroupName": "Esign",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "226",
@@ -246,7 +246,7 @@
                     "actualToDate": "9000",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "9047",
-                    "subgroupName": "Workspace share Users",
+                    "subgroupName": "Workspace share",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "87",
@@ -312,7 +312,7 @@
                     "actualToDate": "621000",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "1164126",
-                    "subgroupName": "Version Control",
+                    "subgroupName": "Version control",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "2250",
@@ -341,7 +341,7 @@
                     "actualToDate": "207000",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "390005",
-                    "subgroupName": "Mobile App user",
+                    "subgroupName": "Mobile App",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "1456",
@@ -370,7 +370,7 @@
                     "actualToDate": "310500",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "585182",
-                    "subgroupName": "Image senders",
+                    "subgroupName": "Image files",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "1033",
@@ -399,7 +399,7 @@
                     "actualToDate": "124200",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "232875",
-                    "subgroupName": "Video senders",
+                    "subgroupName": "Video files",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "258",
@@ -428,7 +428,7 @@
                     "actualToDate": "20700",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "38949",
-                    "subgroupName": "Microsoft 365 integrations",
+                    "subgroupName": "Microsoft 365 integration",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "586",
@@ -457,7 +457,7 @@
                     "actualToDate": "20700",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "38850",
-                    "subgroupName": "Premium Delivery Users",
+                    "subgroupName": "Premium delivery",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "2422",
@@ -486,7 +486,7 @@
                     "actualToDate": "18630",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "34864",
-                    "subgroupName": "Esign Users",
+                    "subgroupName": "Esign",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "339",
@@ -515,7 +515,7 @@
                     "actualToDate": "20700",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "38902",
-                    "subgroupName": "Workspace share Users",
+                    "subgroupName": "Workspace share",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "130",
@@ -581,7 +581,7 @@
                     "actualToDate": "2049300",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "3841616",
-                    "subgroupName": "VersionControl",
+                    "subgroupName": "Version control",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "5850",
@@ -610,7 +610,7 @@
                     "actualToDate": "683100",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "1287018",
-                    "subgroupName": "Mobile App user",
+                    "subgroupName": "Mobile App",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "3786",
@@ -639,7 +639,7 @@
                     "actualToDate": "1024650",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "1931102",
-                    "subgroupName": "Image senders",
+                    "subgroupName": "Image files",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "2687",
@@ -668,7 +668,7 @@
                     "actualToDate": "409860",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "768487",
-                    "subgroupName": "Video senders",
+                    "subgroupName": "Video files",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "670",
@@ -697,7 +697,7 @@
                     "actualToDate": "68310",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "128533",
-                    "subgroupName": "Microsoft 365 integrations",
+                    "subgroupName": "Microsoft 365 integration",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "1524",
@@ -726,7 +726,7 @@
                     "actualToDate": "68310",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "128206",
-                    "subgroupName": "Premium Delivery Users",
+                    "subgroupName": "Premium delivery",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "6298",
@@ -755,7 +755,7 @@
                     "actualToDate": "61479",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "115052",
-                    "subgroupName": "Esign Users",
+                    "subgroupName": "Esign",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "881",
@@ -784,7 +784,7 @@
                     "actualToDate": "68310",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "128376",
-                    "subgroupName": "Workspace share Users",
+                    "subgroupName": "Workspace share",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "339",
@@ -850,7 +850,7 @@
                     "actualToDate": "807300",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "1536646",
-                    "subgroupName": "VersionControl",
+                    "subgroupName": "Version control",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "39000",
@@ -879,7 +879,7 @@
                     "actualToDate": "329100",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "514807",
-                    "subgroupName": "Mobile App user",
+                    "subgroupName": "Mobile App",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "31556",
@@ -908,7 +908,7 @@
                     "actualToDate": "403650",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "772441",
-                    "subgroupName": "Image senders",
+                    "subgroupName": "Image files",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "22384",
@@ -937,7 +937,7 @@
                     "actualToDate": "161460",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "307395",
-                    "subgroupName": "Video senders",
+                    "subgroupName": "Video files",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "26800",
@@ -966,7 +966,7 @@
                     "actualToDate": "269100",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "514132",
-                    "subgroupName": "Microsoft 365 integrations",
+                    "subgroupName": "Microsoft 365 integration",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "12728",
@@ -992,10 +992,10 @@
                 {
                     "groupBy": "EA",
                     "subGroupBy": "PremiumDeliveryUsers",
-                    "actualToDate": "269100",
+                    "actualToDate": "269,100",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "512826",
-                    "subgroupName": "Premium Delivery Users",
+                    "subgroupName": "Premium delivery",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "25192",
@@ -1024,7 +1024,7 @@
                     "actualToDate": "242190",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "460210",
-                    "subgroupName": "Esign Users",
+                    "subgroupName": "Esign",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "3524",
@@ -1053,7 +1053,7 @@
                     "actualToDate": "269100",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "513507",
-                    "subgroupName": "Workspace share Users",
+                    "subgroupName": "Workspace share",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "2820",
