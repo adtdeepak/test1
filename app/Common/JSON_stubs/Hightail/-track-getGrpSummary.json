@@ -13,10 +13,10 @@
                     "groupName": "Project Managers",
                     "actual": "428715",
                     "periodAvg": "14638",
-                    "engScore":"60",
-                    "conversionRate":"4.4%",
-                    "newRegistrations":"14561",
-                    "newSubscriptions":"641",
+                    "engScore": "60",
+                    "conversionRate": "4.4%",
+                    "newRegistrations": "14561",
+                    "newSubscriptions": "641",
                     "activeUsersPerPeriod": "16454",
                     "avgLoginPerPeriod": "3",
                     "arpu": "$70"
@@ -24,22 +24,54 @@
                 {
                     "groupBy": "FinanceExecutives",
                     "groupName": "Finance Executives",
-                    "actual":"714525","periodAvg":"24396","engScore":"62","conversionRate":"5.0%","newRegistrations":"24268","newSubscriptions":"1213","activeUsersPerPeriod":"28393","avgLoginPerPeriod":"4","arpu":"$66.00"
+                    "actual": "714525",
+                    "periodAvg": "24396",
+                    "engScore": "62",
+                    "conversionRate": "5.0%",
+                    "newRegistrations": "24268",
+                    "newSubscriptions": "1213",
+                    "activeUsersPerPeriod": "28393",
+                    "avgLoginPerPeriod": "4",
+                    "arpu": "$66.00"
                 },
                 {
                     "groupBy": "Photographers",
                     "groupName": "Photographers",
-                    "actual":"571620","periodAvg":"19517","engScore":"52","conversionRate":"4.1%","newRegistrations":"19414","newSubscriptions":"796","activeUsersPerPeriod":"21550","avgLoginPerPeriod":"2","arpu":"$80.00"
+                    "actual": "571620",
+                    "periodAvg": "19517",
+                    "engScore": "52",
+                    "conversionRate": "4.1%",
+                    "newRegistrations": "19414",
+                    "newSubscriptions": "796",
+                    "activeUsersPerPeriod": "21550",
+                    "avgLoginPerPeriod": "2",
+                    "arpu": "$80.00"
                 },
                 {
                     "groupBy": "Musicians",
                     "groupName": "Musicians",
-                    "actual":"857430","periodAvg":"29276","engScore":"64","conversionRate":"5.4%","newRegistrations":"29121","newSubscriptions":"1573","activeUsersPerPeriod":"32616","avgLoginPerPeriod":"1","arpu":"$88.00"
+                    "actual": "857430",
+                    "periodAvg": "29276",
+                    "engScore": "64",
+                    "conversionRate": "5.4%",
+                    "newRegistrations": "29121",
+                    "newSubscriptions": "1573",
+                    "activeUsersPerPeriod": "32616",
+                    "avgLoginPerPeriod": "1",
+                    "arpu": "$88.00"
                 },
                 {
                     "groupBy": "CreativeAgencies",
                     "groupName": "Creative Agencies",
-                    "actual":"285810","periodAvg":"9759","engScore":"68","conversionRate":"6.5%","newRegistrations":"9707","newSubscriptions":"631","activeUsersPerPeriod":"10678","avgLoginPerPeriod":"9","arpu":"$90.00"
+                    "actual": "285810",
+                    "periodAvg": "9759",
+                    "engScore": "68",
+                    "conversionRate": "6.5%",
+                    "newRegistrations": "9707",
+                    "newSubscriptions": "631",
+                    "activeUsersPerPeriod": "10678",
+                    "avgLoginPerPeriod": "9",
+                    "arpu": "$90.00"
                 }
             ]
         },
@@ -53,34 +85,66 @@
                     "groupBy": "ProjectManagers",
                     "groupName": "Project Managers",
                     "actual": "428715",
-                    "periodAvg": "14638",
-                    "engScore":"60",
-                    "conversionRate":"4.4%",
-                    "newRegistrations":"14561",
-                    "newSubscriptions":"641",
-                    "activeUsersPerPeriod": "16454",
-                    "avgLoginPerPeriod": "3",
-                    "arpu": "$70"
+                    "periodAvg": "52727",
+                    "engScore": "60",
+                    "conversionRate": "4.4%",
+                    "newRegistrations": "29121",
+                    "newSubscriptions": "1281",
+                    "activeUsersPerPeriod": "34945",
+                    "avgLoginPerPeriod": "13",
+                    "arpu": "$70.00"
                 },
                 {
                     "groupBy": "FinanceExecutives",
                     "groupName": "Finance Executives",
-                    "actual":"714525","periodAvg":"24396","engScore":"62","conversionRate":"5.0%","newRegistrations":"24268","newSubscriptions":"1213","activeUsersPerPeriod":"28393","avgLoginPerPeriod":"4","arpu":"$66.00"
+                    "actual": "714525",
+                    "periodAvg": "87878",
+                    "engScore": "62",
+                    "conversionRate": "5.0%",
+                    "newRegistrations": "48535",
+                    "newSubscriptions": "2427",
+                    "activeUsersPerPeriod": "56301",
+                    "avgLoginPerPeriod": "17",
+                    "arpu": "$66.00"
                 },
                 {
                     "groupBy": "Photographers",
                     "groupName": "Photographers",
-                    "actual":"571620","periodAvg":"19517","engScore":"52","conversionRate":"4.1%","newRegistrations":"19414","newSubscriptions":"796","activeUsersPerPeriod":"21550","avgLoginPerPeriod":"2","arpu":"$80.00"
+                    "actual": "571620",
+                    "periodAvg": "70302",
+                    "engScore": "50",
+                    "conversionRate": "4.1%",
+                    "newRegistrations": "38828",
+                    "newSubscriptions": "1592",
+                    "activeUsersPerPeriod": "48535",
+                    "avgLoginPerPeriod": "9",
+                    "arpu": "$80.00"
                 },
                 {
                     "groupBy": "Musicians",
                     "groupName": "Musicians",
-                    "actual":"857430","periodAvg":"29276","engScore":"64","conversionRate":"5.4%","newRegistrations":"29121","newSubscriptions":"1573","activeUsersPerPeriod":"32616","avgLoginPerPeriod":"1","arpu":"$88.00"
+                    "actual": "857430",
+                    "periodAvg": "105453",
+                    "engScore": "64",
+                    "conversionRate": "5.4%",
+                    "newRegistrations": "58242",
+                    "newSubscriptions": "3145",
+                    "activeUsersPerPeriod": "64066",
+                    "avgLoginPerPeriod": "4",
+                    "arpu": "$88.00"
                 },
                 {
                     "groupBy": "CreativeAgencies",
                     "groupName": "Creative Agencies",
-                    "actual":"285810","periodAvg":"9759","engScore":"68","conversionRate":"6.5%","newRegistrations":"9707","newSubscriptions":"631","activeUsersPerPeriod":"10678","avgLoginPerPeriod":"9","arpu":"$90.00"
+                    "actual": "285810",
+                    "periodAvg": "35151",
+                    "engScore": "68",
+                    "conversionRate": "6.5%",
+                    "newRegistrations": "19414",
+                    "newSubscriptions": "1262",
+                    "activeUsersPerPeriod": "23685",
+                    "avgLoginPerPeriod": "35",
+                    "arpu": "$90.00"
                 }
             ]
         },
@@ -94,34 +158,66 @@
                     "groupBy": "ProjectManagers",
                     "groupName": "Project Managers",
                     "actual": "428715",
-                    "periodAvg": "14638",
-                    "engScore":"60",
-                    "conversionRate":"4.4%",
-                    "newRegistrations":"14561",
-                    "newSubscriptions":"641",
-                    "activeUsersPerPeriod": "16454",
-                    "avgLoginPerPeriod": "3",
-                    "arpu": "$70"
+                    "periodAvg": "158180",
+                    "engScore": "61",
+                    "conversionRate": "4.6%",
+                    "newRegistrations": "87363",
+                    "newSubscriptions": "4019",
+                    "activeUsersPerPeriod": "192922",
+                    "avgLoginPerPeriod": "39",
+                    "arpu": "$70.00"
                 },
                 {
                     "groupBy": "FinanceExecutives",
                     "groupName": "Finance Executives",
-                    "actual":"714525","periodAvg":"24396","engScore":"62","conversionRate":"5.0%","newRegistrations":"24268","newSubscriptions":"1213","activeUsersPerPeriod":"28393","avgLoginPerPeriod":"4","arpu":"$66.00"
+                    "actual": "714525",
+                    "periodAvg": "263633",
+                    "engScore": "59",
+                    "conversionRate": "5.2%",
+                    "newRegistrations": "145605",
+                    "newSubscriptions": "7571",
+                    "activeUsersPerPeriod": "371553",
+                    "avgLoginPerPeriod": "52",
+                    "arpu": "$66.00"
                 },
                 {
                     "groupBy": "Photographers",
                     "groupName": "Photographers",
-                    "actual":"571620","periodAvg":"19517","engScore":"52","conversionRate":"4.1%","newRegistrations":"19414","newSubscriptions":"796","activeUsersPerPeriod":"21550","avgLoginPerPeriod":"2","arpu":"$80.00"
+                    "actual": "571620",
+                    "periodAvg": "210906",
+                    "engScore": "54",
+                    "conversionRate": "3.6%",
+                    "newRegistrations": "116484",
+                    "newSubscriptions": "4193",
+                    "activeUsersPerPeriod": "145605",
+                    "avgLoginPerPeriod": "26",
+                    "arpu": "$80.00"
                 },
                 {
                     "groupBy": "Musicians",
                     "groupName": "Musicians",
-                    "actual":"857430","periodAvg":"29276","engScore":"64","conversionRate":"5.4%","newRegistrations":"29121","newSubscriptions":"1573","activeUsersPerPeriod":"32616","avgLoginPerPeriod":"1","arpu":"$88.00"
+                    "actual": "857430",
+                    "periodAvg": "316359",
+                    "engScore": "60",
+                    "conversionRate": "5.4%",
+                    "newRegistrations": "174726",
+                    "newSubscriptions": "9435",
+                    "activeUsersPerPeriod": "192199",
+                    "avgLoginPerPeriod": "13",
+                    "arpu": "$88.00"
                 },
                 {
                     "groupBy": "CreativeAgencies",
                     "groupName": "Creative Agencies",
-                    "actual":"285810","periodAvg":"9759","engScore":"68","conversionRate":"6.5%","newRegistrations":"9707","newSubscriptions":"631","activeUsersPerPeriod":"10678","avgLoginPerPeriod":"9","arpu":"$90.00"
+                    "actual": "285810",
+                    "periodAvg": "105453",
+                    "engScore": "70",
+                    "conversionRate": "6.7%",
+                    "newRegistrations": "58242",
+                    "newSubscriptions": "3902",
+                    "activeUsersPerPeriod": "71055",
+                    "avgLoginPerPeriod": "104",
+                    "arpu": "$90.00"
                 }
             ]
         },
@@ -134,35 +230,67 @@
                 {
                     "groupBy": "ProjectManagers",
                     "groupName": "Project Managers",
-                    "actual": "428715",
-                    "periodAvg": "14638",
-                    "engScore":"60",
-                    "conversionRate":"4.4%",
-                    "newRegistrations":"14561",
-                    "newSubscriptions":"641",
-                    "activeUsersPerPeriod": "16454",
-                    "avgLoginPerPeriod": "3",
-                    "arpu": "$70"
+                    "actual": "2007911",
+                    "periodAvg": "781136",
+                    "engScore": "65",
+                    "conversionRate": "3.8%",
+                    "newRegistrations": "441675",
+                    "newSubscriptions": "16784",
+                    "activeUsersPerPeriod": "1104351",
+                    "avgLoginPerPeriod": "156",
+                    "arpu": "$68.00"
                 },
                 {
                     "groupBy": "FinanceExecutives",
                     "groupName": "Finance Executives",
-                    "actual":"714525","periodAvg":"24396","engScore":"62","conversionRate":"5.0%","newRegistrations":"24268","newSubscriptions":"1213","activeUsersPerPeriod":"28393","avgLoginPerPeriod":"4","arpu":"$66.00"
+                    "actual": "3346518",
+                    "periodAvg": "1301893",
+                    "engScore": "63",
+                    "conversionRate": "4.2%",
+                    "newRegistrations": "736125",
+                    "newSubscriptions": "30917",
+                    "activeUsersPerPeriod": "2007911",
+                    "avgLoginPerPeriod": "208",
+                    "arpu": "$66.00"
                 },
                 {
                     "groupBy": "Photographers",
                     "groupName": "Photographers",
-                    "actual":"571620","periodAvg":"19517","engScore":"52","conversionRate":"4.1%","newRegistrations":"19414","newSubscriptions":"796","activeUsersPerPeriod":"21550","avgLoginPerPeriod":"2","arpu":"$80.00"
+                    "actual": "2677214",
+                    "periodAvg": "1041514",
+                    "engScore": "52",
+                    "conversionRate": "3%",
+                    "newRegistrations": "588900",
+                    "newSubscriptions": "17667",
+                    "activeUsersPerPeriod": "1124430",
+                    "avgLoginPerPeriod": "104",
+                    "arpu": "$80.00"
                 },
                 {
                     "groupBy": "Musicians",
                     "groupName": "Musicians",
-                    "actual":"857430","periodAvg":"29276","engScore":"64","conversionRate":"5.4%","newRegistrations":"29121","newSubscriptions":"1573","activeUsersPerPeriod":"32616","avgLoginPerPeriod":"1","arpu":"$88.00"
+                    "actual": "4015821",
+                    "periodAvg": "1562271",
+                    "engScore": "60",
+                    "conversionRate": "6.8%",
+                    "newRegistrations": "883350",
+                    "newSubscriptions": "60068",
+                    "activeUsersPerPeriod": "1084272",
+                    "avgLoginPerPeriod": "52",
+                    "arpu": "$88.00"
                 },
                 {
                     "groupBy": "CreativeAgencies",
                     "groupName": "Creative Agencies",
-                    "actual":"285810","periodAvg":"9759","engScore":"68","conversionRate":"6.5%","newRegistrations":"9707","newSubscriptions":"631","activeUsersPerPeriod":"10678","avgLoginPerPeriod":"9","arpu":"$90.00"
+                    "actual": "285810",
+                    "periodAvg": "9759",
+                    "engScore": "68",
+                    "conversionRate": "6.5%",
+                    "newRegistrations": "9707",
+                    "newSubscriptions": "631",
+                    "activeUsersPerPeriod": "10678",
+                    "avgLoginPerPeriod": "9",
+                    "arpu": "$90.00"
                 }
             ]
         }

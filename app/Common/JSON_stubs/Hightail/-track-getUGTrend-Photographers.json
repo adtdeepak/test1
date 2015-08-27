@@ -1,7 +1,7 @@
 {
     "status": "OK",
     "message": "Request Processed Successfully",
-    "groupBy": "Photographers",
+    "groupBy": "ProjectManagers",
     "yAxisTitle":"",
     "timeRanges": [
         {
@@ -12,28 +12,23 @@
             "data": [
                 {
                     "startDate": "08-23-2015",
-                    "actual": 887133.25,
-                    "target": 600000
+                    "actual": 19271
                 },
                 {
                     "startDate": "08-30-2015",
-                    "actual": 1260253.25,
-                    "target": 800000 
+                    "actual": 18657
                 },
                 {
                     "startDate": "09-06-2015",
-                    "actual": 1648493.25,
-                    "target": 1500000
+                    "actual": 19414
                 },
                 {
                     "startDate": "09-13-2015",
-                    "actual": 2040173.25 ,
-                    "target": 2100000
+                    "actual": 19586
                 },
                 {
                     "startDate": "09-20-2015",
-                    "actual": 2453293.25,
-                    "target": 2500000
+                    "actual": 20657
                 }
             ]
         },
@@ -43,29 +38,25 @@
             "periodName": "monthly",
             "reportingInterval": "weekly",
             "data": [
-                { "startDate": "7-1-2015",
-                    "actual": 3529502,
-                    "target": 5000000
+                {
+                   "startDate": "7-1-2015",
+                    "actual": 77084
                 },
                 {
                     "startDate": "8-1-2015",
-                    "actual": 5022062,
-                    "target": 6000000
+                    "actual": 74628
                 },
                 {
                     "startDate": "9-1-2015",
-                    "actual": 5798622,
-                    "target": 7000000
+                    "actual": 38828
                 },
                 {
                     "startDate": "10-1-2015",
-                    "actual": 7365422,
-                    "target": 8000000
+                    "actual": 78342
                 },
                 {
                     "startDate": "11-1-2015",
-                    "actual": 9038639,
-                    "target": 9000000
+                    "actual": 82628
                 }
             ]
         },
@@ -77,28 +68,23 @@
             "data": [
                 {
                   "startDate": "1-1-2015",
-                    "actual": 10530693,
-                    "target": 10000000
+                    "actual": 231252
                 },
                 {
                     "startDate": "4-1-2015",
-                    "actual": 15008373,
-                    "target": 15000000
+                    "actual": 223884
                 },
                 {
                     "startDate": "7-1-2015",
-                    "actual": 17338053,
-                    "target": 20000000
+                    "actual": 116484
                 },
                 {
                     "startDate": "10-1-2015",
-                    "actual": 22156045,
-                    "target": 25000000
+                    "actual": 235026
                 },
                 {
                     "startDate": "1-1-2016",
-                    "actual": 27237667,
-                    "target": 30000000
+                    "actual": 247884
                 }
             ]
         },
@@ -108,25 +94,21 @@
             "periodName": "yearly",
             "reportingInterval": "monthly",
             "data": [
-                { 
+                {
 					"startDate": "1-1-2013",
-                    "actual": 36150210,
-                    "target": 37000000
+                    "actual": 980014
                 },
                 {
                     "startDate": "1-1-2014",
-                    "actual": 45142816,
-                    "target": 45000000
+                    "actual": 1108300
                 },
                 {
                     "startDate": "1-1-2015",
-                    "actual": 42111000,
-                    "target": 58000000
+                    "actual": 588900
                 },
                 {
                     "startDate": "1-1-2016",
-                    "actual": 70181850,
-                    "target": 80000000
+                    "actual": 1488842
                 }
             ]
         }
