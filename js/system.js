@@ -52,6 +52,13 @@ window.MENU_WIDGET_LINK = {
 	m_Collaborate : "Collaborate",
 	m_Fulltextsearch : "Fulltextsearch",
 	
+	m_ProjectManagers:"ProjectManagers",
+	m_FinanceExecutives :"FinanceExecutives",
+	m_Photographers:"Photographers",
+	m_Musicians:"Musicians",
+	m_CreativeAgencies:"CreativeAgencies",
+	
+	
 	m_userGroup1 : "usrGrp1",
 	m_userGroup2 : "usrGrp2",
 	m_userGroup3 : "usrGrp3",

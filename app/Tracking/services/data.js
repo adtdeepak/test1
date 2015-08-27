@@ -291,12 +291,14 @@ angular.module('Tracking')
 		var cacheKey = "UGTrend" + JSON.stringify(reqData);
 		
 		var requestWS = postRequestWS(
-				RequestConstantsFactory['TRAC_URL'].GET_GRP_ACQUISITION_TREND, 
+				//RequestConstantsFactory['TRAC_URL'].GET_GRP_ACQUISITION_TREND,
+				'http://jsonstub.com/track/getUGTrend/'+reqData.groupBy,
 				reqData,
 				success, 
 				fail,
 				function(result) {
-					var cData = DataConversionService.toGetUserGroupTrendData(result);
+					//var cData = DataConversionService.toGetUserGroupTrendData(result);
+					var cData = DataConversionService.toUGTrend(result);
 					StorageService.put(cacheKey, cData, StorageService.getCache("user-group-engagementCache"));
 					return cData;
 				}

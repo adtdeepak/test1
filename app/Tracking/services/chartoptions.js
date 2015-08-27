@@ -96,6 +96,54 @@ this.getBasicLineChart = function(data, title, subtitle, width){
 		
 	};
 	
+	this.getBasicLineChartEAScore = function(data, title, subtitle, width){
+		return {
+			chart:{
+				height:300
+			},
+	        title: {
+	            text: title
+	        },
+	        subtitle: {
+	            text: subtitle,
+	            x: -20
+	        },
+	        xAxis: {
+	            categories: data.xAxis/*,
+	            plotBands: [{ // mark the weekend
+	                color: '#EFFCFB',
+	                from: data.plotBand[0][0],
+	                to: data.plotBand[0][1]
+	            }]*/
+	        },
+	        exporting:{
+	        	enabled: false
+	        },
+	        yAxis: {
+	            title: {
+	                text: ''
+	            },
+	            tickInterval: 2,
+	            plotLines: [{
+	                value: 0,
+	                width: 1,
+	                color: '#808080'
+	            }]
+	        },
+	        tooltip: {
+	            valueSuffix: ''
+	        },
+	        legend: {
+	            layout: 'vertical',
+	            align: 'right',
+	            verticalAlign: 'middle',
+	            borderWidth: 0
+	        },
+	        series: data.value
+		}
+		
+	};
+	
 	this.getTrackSummaryAcqTrend = function(data) {
 
 		return {

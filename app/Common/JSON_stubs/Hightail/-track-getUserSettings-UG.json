@@ -1,1 +1,41 @@
-{"status":"OK","message":"Request Processed Successfully","data":[{"groupBy":"UG","menus":[{"menuItemID":"m_userGroup1","menuItemName":"User Group1","menuType":"userGroup","checked":true},{"menuItemID":"m_userGroup2","menuItemName":"User Group2","menuType":"userGroup","checked":true},{"menuItemID":"m_userGroup3","menuItemName":"User Group3","menuType":"userGroup","checked":true},{"menuItemID":"m_userGroup4","menuItemName":"User Group4","menuType":"userGroup","checked":true},{"menuItemID":"m_userGroup5","menuItemName":"User Group5","menuType":"userGroup","checked":true}]}]}
+{
+    "status": "OK",
+    "message": "Request Processed Successfully",
+    "data": [
+        {
+            "groupBy": "UG",
+            "menus": [
+                {
+                    "menuItemID": "m_ProjectManagers",
+                    "menuItemName": "Project Managers",
+                    "menuType": "userGroup",
+                    "checked": true
+                },
+                {
+                    "menuItemID": "m_FinanceExecutives",
+                    "menuItemName": "Finance Executives",
+                    "menuType": "userGroup",
+                    "checked": true
+                },
+                {
+                    "menuItemID": "m_Photographers",
+                    "menuItemName": "Photographers",
+                    "menuType": "userGroup",
+                    "checked": true
+                },
+                {
+                    "menuItemID": "m_Musicians",
+                    "menuItemName": "Musicians",
+                    "menuType": "userGroup",
+                    "checked": true
+                },
+                {
+                    "menuItemID": "m_CreativeAgencies",
+                    "menuItemName": "Creative Agencies",
+                    "menuType": "userGroup",
+                    "checked": true
+                }
+            ]
+        }
+    ]
+}

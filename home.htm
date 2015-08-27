@@ -341,7 +341,7 @@ type='text/css'>
 										of users)</p>
                                      <p class="value1"><span class="ng-binding">{{data.monthlyAvg}}</span>
 </p>
-									<p class="duration">4 {{timePeriod}} Average</p>
+									<p class="duration">{{averageTimePeriodText}}</p>
                                    
 								</div>
 							</a>
@@ -386,10 +386,10 @@ type='text/css'>
 									href="{{trackingHtmlName}}.htm#/user-group-engagement?currentlySelected={{data.groupBy}}&&name={{data.groupName}}">
 									<h3>{{data.groupName}}</h3>									
 									<div class="value-green trackingLink">
-										{{data.newSubsActual}}</div>
+										{{data.actual}}</div>
                                     <p class='widget-text'>(Count of members)</p>
-                                    <p class="value1"><span class="ng-binding">{{data.monthlyAvg}}</span></p>
-									<p class="duration">{{timePeriod}} Average </p>
+                                    <p class="value1"><span class="ng-binding">{{data.periodAvg}}</span></p>
+									<p class="duration">{{averageTimePeriodText}}</p>
 								</a>
 							</div>
 						</div>

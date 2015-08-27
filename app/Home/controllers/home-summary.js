@@ -397,6 +397,7 @@ angular.module('Home')
 		                throw { message: "Selected period data not available!", type: "internal" };
 				$scope.userGroup = userGroup[$rootScope.selectedPeriod];
 				$scope.menu.setData($scope.userGroup);
+				$scope.averageTimePeriodText = $scope.Constants[$scope.Constants.EA_Prefix + 'averagePeriod_' + $scope.selectedPeriod];
 			} catch (e) {
 				$scope.fail(errorConstants.DATA_ERR);
 			}

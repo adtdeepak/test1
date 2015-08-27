@@ -217,6 +217,52 @@ angular.module('Tracking')
 
 	}
 
+	this.toUGTrend = function(data) {
+		var resultData = {};
+		var yAxisTitle = data.yAxisTitle;
+		$.each(data.timeRanges, function(key, timeRange) {
+			var _data = {};
+			var startOfWeek;
+			var endOfWeek;
+			// Getting Chart options from ChartOptionsService
+			_data['chartOptions'] = ChartOptionsService.getBusinessImpactTrend(yAxisTitle);
+			var chartData = [];
+			var actual = [];
+			var xAxis = [];
+			var startDateArray = [];
+			var endDateArray = [];
+			var plotBandRange = [];
+			$.each(timeRange.data, function(index, column) {
+				var date= new Date(UtilitiesService.dateFormatConvertor(column.startDate)); 
+				var startDate = UtilitiesService.dateFormatConvertor(column.startDate);
+				var axisLabel = UtilitiesService.getChartLabels(timeRange.periodName,date);
+				var endDate =  UtilitiesService.getChartLabelEndDate(timeRange.periodName,date);
+				
+				actual.push(parseInt(column.actual));
+				xAxis.push(axisLabel);
+				//xAxis.push(timeRange.xAxis[index]);
+				startDateArray.push(startDate);
+				endDateArray.push(endDate);
+			});
+			plotBandRange.push(UtilitiesService.getPlotBandRange(xAxis));
+			chartData.push({
+				name : 'Actual',
+				data : actual,
+				color : '#26A48E',
+
+			});
+
+			_data['data'] = chartData;
+			_data['xAxis'] =xAxis;
+			_data['plotBand'] = plotBandRange;
+			_data['startDate'] = startDateArray;
+			_data['endDate'] = endDateArray;
+			resultData[timeRange.periodName] = _data;
+		});
+		return resultData;
+
+	}
+	
 	this.toGetBusinessImpactDeepDiveTableData = function(data){
 		var resultData = {};
 		$.each(data.timeRanges, function(key, timeRange){

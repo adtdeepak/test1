@@ -34,7 +34,7 @@ angular.module('Tracking')
             else {
                 $scope.error = false;
             //    var scoreChartOptions = ChartOptionsService.getEngagementActivityScoreData();
-                chartOptions = ChartOptionsService.getBasicLineChart(engagementScore[$rootScope.selectedPeriod], "Engagement Score Trend", "", 1000);
+                chartOptions = ChartOptionsService.getBasicLineChartEAScore(engagementScore[$rootScope.selectedPeriod], "Engagement Score Trend", "", 1000);
                 chartOBJ = chartsService.basicLine.call($('#scoreChart'),chartOptions, $scope);
                 loadDonutChart(engagementScore['engagementScore']);
             }

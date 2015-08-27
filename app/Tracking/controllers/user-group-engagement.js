@@ -98,6 +98,7 @@ angular.module('Tracking')
 	                throw { message: "Selected period data not available!", type: "internal" };
 			$scope.userGroup = userGroup[$rootScope.selectedPeriod];
 			$scope.menu.setData($scope.userGroup);
+			$scope.averageTimePeriodText = $scope.Constants[$scope.Constants.EA_Prefix + 'averagePeriod_' + $scope.selectedPeriod];
 		} catch (e) {
 			$scope.fail(errorConstants.DATA_ERR);
 		}
@@ -228,33 +229,33 @@ angular.module('Tracking')
 	} 
 })
 
-.controller("userGroupTrendController",function($scope, $rootScope, chartsService, Permission,DataService, ChartOptionsService,RequestConstantsFactory, DataConversionService, UtilitiesService){
+.controller("userGroupTrendController",function($scope, $rootScope, chartsService, Permission,DataService, ChartOptionsService,RequestConstantsFactory, DataConversionService, UtilitiesService, sharedProperties){
 	var errorConstants = RequestConstantsFactory['ERROR_MSGS'];
 	$scope.dataLoaded = false;
 	$scope.$on('periodChange', loadData);
 	$rootScope.$on('onCacheExpiry', loadData);
-	//$scope.$on('dataReady', loadData);
+	$scope.$on('dataReady', loadData);
 
 	 $rootScope.$on('UserGroupError',function(){
 			$scope.fail(errorConstants.DATA_ERR);
 		})
 	$scope.success = function(uGTrendData) {
-		try{
-			if($rootScope.selectedPeriod == "weekly")
-            	$scope.trendPeriod = "Nov 09 to Nov 13";
-            if($rootScope.selectedPeriod == "monthly")
-            	$scope.trendPeriod = "Nov 01 to Nov 13";
-            if($rootScope.selectedPeriod == "quarterly")
-            	$scope.trendPeriod = "Oct 01 to Nov 13";
-            if($rootScope.selectedPeriod == "yearly")
-            	$scope.trendPeriod = "Jan 01 to Nov 13";
-			$scope.dataLoaded = true;
-			$scope.error = false;
-			var trendChartOptions = ChartOptionsService.getUserGroupTrendData($scope);
-			chartOBJ = chartsService.splineArea.call($('#trendChart'), uGTrendData[$rootScope.selectedPeriod], trendChartOptions, $scope);
-		} catch (e) {
-			$scope.fail(errorConstants.DATA_ERR);
-		}
+		 try {
+	            if($rootScope.selectedPeriod == "weekly")
+	            	$scope.trendPeriod = "Nov 09 to Nov 13";
+	            if($rootScope.selectedPeriod == "monthly")
+	            	$scope.trendPeriod = "Nov 01 to Nov 13";
+	            if($rootScope.selectedPeriod == "quarterly")
+	            	$scope.trendPeriod = "Oct 01 to Nov 13";
+	            if($rootScope.selectedPeriod == "yearly")
+	            	$scope.trendPeriod = "Jan 01 to Nov 13";
+	        	$scope.dataLoaded = true;
+	            $scope.error = false;
+	            chartOBJ = chartsService.splineArea.call($('#trendChart'), uGTrendData[$rootScope.selectedPeriod], uGTrendData[$rootScope.selectedPeriod].chartOptions, $scope);
+	        } catch (e) {
+	        	$scope.fail(errorConstants.DATA_ERR);
+	        }
+		
 	}
 	$scope.fail = function (msg) {
         $scope.error = true;
@@ -277,6 +278,8 @@ angular.module('Tracking')
 	var cacheKey = "UGTrend" + JSON.stringify(requestData);
 
 	function loadData() { 
+		var requestData = UtilitiesService.getRequestData();
+    	requestData['groupBy'] = sharedProperties.getSubGroupBy();
 		var func = $scope.success; 
 		if (arguments[1]) { 
 			if (arguments[1].key == cacheKey) { 
@@ -288,7 +291,6 @@ angular.module('Tracking')
 		DataService.getUserGroupTrendData(requestData, func, $scope.fail); 
 
 	} 
-	loadData();
 })
 
 .controller("userGroupDeepDiveController",function($scope, $rootScope, DataService, Permission,DataConversionService, RequestConstantsFactory,UtilitiesService){

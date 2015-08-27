@@ -37,8 +37,8 @@
                     "actual":"857430","periodAvg":"29276","engScore":"64","conversionRate":"5.4%","newRegistrations":"29121","newSubscriptions":"1573","activeUsersPerPeriod":"32616","avgLoginPerPeriod":"1","arpu":"$88.00"
                 },
                 {
-                    "groupBy": "Creative Agencies",
-                    "groupName": "CreativeAgencies",
+                    "groupBy": "CreativeAgencies",
+                    "groupName": "Creative Agencies",
                     "actual":"285810","periodAvg":"9759","engScore":"68","conversionRate":"6.5%","newRegistrations":"9707","newSubscriptions":"631","activeUsersPerPeriod":"10678","avgLoginPerPeriod":"9","arpu":"$90.00"
                 }
             ]
@@ -78,8 +78,8 @@
                     "actual":"857430","periodAvg":"29276","engScore":"64","conversionRate":"5.4%","newRegistrations":"29121","newSubscriptions":"1573","activeUsersPerPeriod":"32616","avgLoginPerPeriod":"1","arpu":"$88.00"
                 },
                 {
-                    "groupBy": "Creative Agencies",
-                    "groupName": "CreativeAgencies",
+                    "groupBy": "CreativeAgencies",
+                    "groupName": "Creative Agencies",
                     "actual":"285810","periodAvg":"9759","engScore":"68","conversionRate":"6.5%","newRegistrations":"9707","newSubscriptions":"631","activeUsersPerPeriod":"10678","avgLoginPerPeriod":"9","arpu":"$90.00"
                 }
             ]
@@ -119,8 +119,8 @@
                     "actual":"857430","periodAvg":"29276","engScore":"64","conversionRate":"5.4%","newRegistrations":"29121","newSubscriptions":"1573","activeUsersPerPeriod":"32616","avgLoginPerPeriod":"1","arpu":"$88.00"
                 },
                 {
-                    "groupBy": "Creative Agencies",
-                    "groupName": "CreativeAgencies",
+                    "groupBy": "CreativeAgencies",
+                    "groupName": "Creative Agencies",
                     "actual":"285810","periodAvg":"9759","engScore":"68","conversionRate":"6.5%","newRegistrations":"9707","newSubscriptions":"631","activeUsersPerPeriod":"10678","avgLoginPerPeriod":"9","arpu":"$90.00"
                 }
             ]
@@ -160,8 +160,8 @@
                     "actual":"857430","periodAvg":"29276","engScore":"64","conversionRate":"5.4%","newRegistrations":"29121","newSubscriptions":"1573","activeUsersPerPeriod":"32616","avgLoginPerPeriod":"1","arpu":"$88.00"
                 },
                 {
-                    "groupBy": "Creative Agencies",
-                    "groupName": "CreativeAgencies",
+                    "groupBy": "CreativeAgencies",
+                    "groupName": "Creative Agencies",
                     "actual":"285810","periodAvg":"9759","engScore":"68","conversionRate":"6.5%","newRegistrations":"9707","newSubscriptions":"631","activeUsersPerPeriod":"10678","avgLoginPerPeriod":"9","arpu":"$90.00"
                 }
             ]
