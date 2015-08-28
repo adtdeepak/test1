@@ -334,12 +334,12 @@ type='text/css'>
 								<div class="box-content-top">
 									<h3>{{data.subgroupName}}</h3>
 									
-									<div class="value-orange">{{data.actualToDate}}</div>
+									<div class="value-orange">{{data.actualToDate| number}}</div>
                                     <p ng-if="data.subgroupName=='EAScore'" class='widget-text'>(in
 										Percentage)</p>
 									<p ng-if="data.subgroupName!='EAScore'" class='widget-text'>(Count
 										of users)</p>
-                                     <p class="value1"><span class="ng-binding">{{data.monthlyAvg}}</span>
+                                     <p class="value1"><span class="ng-binding">{{data.monthlyAvg| number}}</span>
 </p>
 									<p class="duration">{{averageTimePeriodText}}</p>
                                    
@@ -386,9 +386,9 @@ type='text/css'>
 									href="{{trackingHtmlName}}.htm#/user-group-engagement?currentlySelected={{data.groupBy}}&&name={{data.groupName}}">
 									<h3>{{data.groupName}}</h3>									
 									<div class="value-green trackingLink">
-										{{data.actual}}</div>
+										{{data.actual| number}}</div>
                                     <p class='widget-text'>(Count of members)</p>
-                                    <p class="value1"><span class="ng-binding">{{data.periodAvg}}</span></p>
+                                    <p class="value1"><span class="ng-binding">{{data.periodAvg| number}}</span></p>
 									<p class="duration">{{averageTimePeriodText}}</p>
 								</a>
 							</div>

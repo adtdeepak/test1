@@ -33,7 +33,7 @@
 				<div class="filterContainer">
 					<div class="contentPanel">
 					<!-- <p class="widget-title pull-right" style="padding-right:28px">Current period from {{trendPeriod}}, 2014</p> -->
-					<p class="widget-title pull-right" style="padding-right:28px">As of Thursday, November 13, 2014</p>
+					<p class="widget-title pull-right" style="padding-right:28px">As of Saturday, September 12, 2015</p>
 					<div class="progress-loading" ng-if="!error && !dataLoaded"></div>
 					<ng-include ng-show="error" src="'partials/error.htm'"></ng-include>
 						<ul ng-hide="error" data-page="userGroup" class="box-list  clearfix">
@@ -50,9 +50,9 @@
 											<h3>{{data.groupName}}</h3>
 											
 											<div class="value-green trackingLink">
-											{{data.actual}}</div>
+											{{data.actual| number}}</div>
                                             <p class='widget-text'>(Count of members)</p>
-                                            <p  class="value1"><span class="ng-binding">{{data.periodAvg}}</span></p>
+                                            <p  class="value1"><span class="ng-binding">{{data.periodAvg| number}}</span></p>
 											<p class="duration">{{averageTimePeriodText}}</p>
                                           
 										</div>

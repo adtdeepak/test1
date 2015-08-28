@@ -185,14 +185,14 @@ angular.module('Tracking')
 	})
     $scope.success = function (businessImpactTrendData) {
         try {
-            if($rootScope.selectedPeriod == "weekly")
-            	$scope.trendPeriod = "Nov 09 to Nov 13";
-            if($rootScope.selectedPeriod == "monthly")
-            	$scope.trendPeriod = "Nov 01 to Nov 13";
-            if($rootScope.selectedPeriod == "quarterly")
-            	$scope.trendPeriod = "Oct 01 to Nov 13";
-            if($rootScope.selectedPeriod == "yearly")
-            	$scope.trendPeriod = "Jan 01 to Nov 13";
+        	if($rootScope.selectedPeriod == "weekly")
+             	$scope.trendPeriod = "Sept 06 to Sept 13";
+             if($rootScope.selectedPeriod == "monthly")
+             	$scope.trendPeriod = "Sept 01 to Sept 30";
+             if($rootScope.selectedPeriod == "quarterly")
+             	$scope.trendPeriod = "Jul 01 to Sept 30";
+             if($rootScope.selectedPeriod == "yearly")
+             	$scope.trendPeriod = "Jan 01 to Sept 30";
         	$scope.dataLoaded = true;
             $scope.error = false;
             chartOBJ = chartsService.splineArea.call($('#subsTrendChart'), businessImpactTrendData[$rootScope.selectedPeriod], businessImpactTrendData[$rootScope.selectedPeriod].chartOptions, $scope);

@@ -507,6 +507,9 @@ angular.module('AnalyticsApp')
 				legend: {
 					itemStyle: {fontFamily:'20px arial' }                
 				},
+				exporting: {
+					enabled: false
+				},
 				plotOptions: {
 					series: {
 						events: {

@@ -19,7 +19,7 @@
                 },
                 {
                     "menuItemID": "m_freeToPaidConversion",
-                    "menuItemName": "Free To Paid Conv",
+                    "menuItemName": "Free To Paid Conversion",
                     "menuType": "widget",
                     "checked": true
                 },
