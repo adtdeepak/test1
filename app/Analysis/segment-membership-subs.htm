@@ -50,14 +50,14 @@
     </div>
     <div class="clear"></div>
        
-    <div style="padding:25px 0px 15px 0px; border-top:1px solid #ccc;" class="filter">
+    <div style="padding:25px 0px 15px 0px; border-top:1px solid #ccc;" class="filter" ng-controller="segmentDeepDiveController">
       <ul>
-       <li><a class="active-gray" href="#">All user</a></li>  
-          <li><a href="#">Project Managers</a></li>
-            <li><a href="">Photographars</a></li>
-            <li><a href="">Musichione</a></li>
-            <li><a href="">Finance Executive</a></li>
-            <li><a href="">User Group X</a></li>                
+       <li><a ng-class="{'active-gray': selectedGroup[0].selected}" href="#">All user</a></li>  
+          <li><a ng-class="{'active-gray': selectedGroup[1].selected}" href="#">Project Managers</a></li>
+            <li><a ng-class="{'active-gray': selectedGroup[2].selected}"  href="">Creative Agencies</a></li>
+            <li><a ng-class="{'active-gray': selectedGroup[3].selected}"  href="">Finance Executives</a></li>
+            <li><a ng-class="{'active-gray': selectedGroup[4].selected}"  href="">Musicians</a></li>  
+            <li><a ng-class="{'active-gray': selectedGroup[5].selected}"  href="">Photographers</a></li>       
         </ul>    
     </div>
    

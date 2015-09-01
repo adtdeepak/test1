@@ -90,14 +90,14 @@ angular.module('Analysis')
 	
 	$scope.segmentOverviewSuccess = function(segmentOverviewData) {
 		console.log("segmentOverviewData:", segmentOverviewData)
-		
-		chartData = DataConversionService.getPieChartData(segmentOverviewData.data.revenue.dollars);
-	    chartOptions = ChartOptionsService.getPieChart(chartData, "Revenue", "%age of total user", 300);
-		chartOBJ = chartsService.pieChart.call($('#revenuePieChart'),chartOptions, $scope);
 
 		chartData = DataConversionService.getPieChartData(segmentOverviewData.data.size.allUsers);
-	    chartOptions = ChartOptionsService.getPieChart(chartData, "Size", "% of users Male/Female", 300);
+	    chartOptions = ChartOptionsService.getPieChart(chartData, "Size", " ", 300);
 		chartOBJ = chartsService.pieChart.call($('#sizePieChart'),chartOptions, $scope);
+		
+		chartData = DataConversionService.getPieChartData(segmentOverviewData.data.revenue.dollars);
+	    chartOptions = ChartOptionsService.getPieChart(chartData, "Revenue", " ", 300);
+		chartOBJ = chartsService.pieChart.call($('#revenuePieChart'),chartOptions, $scope);
 		
 		chartData = DataConversionService.getHorizontalBarChartData(segmentOverviewData.data.freeToPaidConversion);
 	    chartOptions = ChartOptionsService.getFreeToPaidBarChart(chartData, "Free to Paid Conversion", "", 300, "#EE7E34");

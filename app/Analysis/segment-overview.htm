@@ -64,10 +64,10 @@
 			
 			<div class="half-width">
 				<div style="background: #fff none repeat scroll 0 0;height: 300px; border: 1px solid #ccc;box-shadow: 1px 2px 3px #ccc; margin-left: 15px; margin-right: 15px; padding: 0; width: 44.6%;" class="col-sm-6 col-md-6 col-lg-6">
-					<div class="acqChart" id="revenuePieChart"></div>
+					<div class="acqChart" id="sizePieChart"></div>
 				</div>
 				<div style="background: #fff none repeat scroll 0 0;height: 300px; border: 1px solid #ccc;box-shadow: 1px 2px 3px #ccc; margin-left: 15px; margin-right: 15px; padding: 0; width: 44.6%;" class="col-sm-6 col-md-6 col-lg-6">
-					<div class="acqChart" id="sizePieChart"></div>
+					<div class="acqChart" id="revenuePieChart"></div>
 				</div>
 			</div>
 
@@ -89,7 +89,7 @@
 </div>
             
             
-               <table cellspacing="1" class="table border smSubsTable noMarginBtm" my-table  options="options">
+               <table cellspacing="1" class="table smSubsTable noMarginBtm">
 					<colgroup>
 						<col width="15%">
 						<col width="17%">
@@ -101,18 +101,17 @@
 					</colgroup>
 					<thead>
 				      <tr>
-				        <th></th>
-				        <th valign="top" style="text-align:center; color:#F5874F;"><img src="images/campaign-icons/project-manager.png"></br/>Project Managers<br/></th>
-				        <th style="text-align:center; color:#F5874F;"><img src="images/campaign-icons/enterprise.png"></br/>Enterprise Users</th>
-                        <th style="text-align:center; color:#F5874F;"><img src="images/campaign-icons/finance.png"></br/>Finance Executives</th>
-                        <th style="text-align:center; color:#F5874F;"><img src="images/campaign-icons/music.png"></br/>Musicians</th>
-				        <th style="text-align:center; color:#F5874F;"><img src="images/campaign-icons/photo-icon.png"></br/>Photographers<br/></th>
-                        
-				        
+				      	<th></th>
+				        <th valign="top" style="text-align:center; color:#F5874F;"><a href="analysis.htm#/segment-membership-subs?currentlySelected=Project Managers"><img src="images/campaign-icons/project-manager.png"></br/>Project Managers<br/></a></th>
+				        <th style="text-align:center; color:#F5874F;"><a href="analysis.htm#/segment-membership-subs?currentlySelected=Finance Executives"><img src="images/campaign-icons/enterprise.png"></br/>Finance Executives</a></th>
+                        <th style="text-align:center; color:#F5874F;"><a href="analysis.htm#/segment-membership-subs?currentlySelected=Creative Agencies"><img src="images/campaign-icons/finance.png"></br/>Creative Agencies</a></th>
+                        <th style="text-align:center; color:#F5874F;"><a href="analysis.htm#/segment-membership-subs?currentlySelected=Musicians"><img src="images/campaign-icons/music.png"></br/>Musicians</a></th>
+				        <th style="text-align:center; color:#F5874F;"><a href="analysis.htm#/segment-membership-subs?currentlySelected=Photographers"><img src="images/campaign-icons/photo-icon.png"></br/>Photographers<br/></a></th>
 				      </tr>
 				    </thead>
 				</table>
-				<table cellspacing="1" class="table border smSubsTable noMarginBtm" my-table  options="productProfileOptions">
+				
+				<table cellspacing="1" class="table smSubsTable noMarginBtm" my-table  options="options" style="border: none !important;">
 					<colgroup>
 						<col width="15%">
 						<col width="17%">
@@ -122,7 +121,7 @@
                         <col width="17%">
 					</colgroup>
 					<thead>
-				      <tr>
+				      <tr><div style="color:#fff; background:#3ea8dc !important; padding:10px; margin-bottom: -17px;">Demographic Profile</div>
 				        <th></th>
                         <th></th>
                         <th></th>
@@ -132,7 +131,7 @@
 				      </tr>
 				    </thead>
 				 </table>
-				 <table cellspacing="1" class="table border smSubsTable noMarginBtm" my-table  options="productUsageOptions">
+				<table cellspacing="1" class="table border smSubsTable noMarginBtm" my-table  options="productProfileOptions" style="border: none !important;">
 					<colgroup>
 						<col width="15%">
 						<col width="17%">
@@ -142,7 +141,7 @@
                         <col width="17%">
 					</colgroup>
 					<thead>
-				      <tr>
+				      <tr><div style="color:#fff; background:#3ea8dc !important; padding:10px; margin-bottom: -17px;">Product Profile</div>
 				        <th></th>
                         <th></th>
                         <th></th>
@@ -152,7 +151,7 @@
 				      </tr>
 				    </thead>
 				 </table>
-				 <table cellspacing="1" class="table border smSubsTable noMarginBtm" my-table  options="engagementOptions">
+				 <table cellspacing="1" class="table border smSubsTable noMarginBtm" my-table  options="productUsageOptions" style="border: none !important;">
 					<colgroup>
 						<col width="15%">
 						<col width="17%">
@@ -162,7 +161,7 @@
                         <col width="17%">
 					</colgroup>
 					<thead>
-				      <tr>
+				      <tr><div style="color:#fff; background:#3ea8dc !important; padding:10px; margin-bottom: -17px;">Product Usage</div>
 				        <th></th>
                         <th></th>
                         <th></th>
@@ -172,7 +171,7 @@
 				      </tr>
 				    </thead>
 				 </table>
-				 <table cellspacing="1" class="table border smSubsTable noMarginBtm" my-table  options="currentCampaignOptions">
+				 <table cellspacing="1" class="table border smSubsTable noMarginBtm" my-table  options="engagementOptions" style="border: none !important;">
 					<colgroup>
 						<col width="15%">
 						<col width="17%">
@@ -182,7 +181,27 @@
                         <col width="17%">
 					</colgroup>
 					<thead>
-				      <tr>
+				      <tr><div style="color:#fff; background:#3ea8dc !important; padding:10px; margin-bottom: -17px;">Engagement</div>
+				        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+				      </tr>
+				    </thead>
+				 </table>
+				 <table cellspacing="1" class="table border smSubsTable noMarginBtm" my-table  options="currentCampaignOptions" style="border: none !important;">
+					<colgroup>
+						<col width="15%">
+						<col width="17%">
+						<col width="17%">
+						<col width="17%">
+						<col width="17%">						
+                        <col width="17%">
+					</colgroup>
+					<thead>
+				      <tr><div style="color:#fff; background:#3ea8dc !important; padding:10px; margin-bottom: -17px;">Current Campaigns</div>
 				        <th></th>
                         <th></th>
                         <th></th>

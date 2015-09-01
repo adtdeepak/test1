@@ -39,10 +39,10 @@
 		"DemographicProfile":[{
 			"name":"% Male",
 			"ProjectManagers":"60%",
-			"FinanceExecutives":"60%",
-			"Photographers":"60%",
-			"Musicians":"60%",
-			"CreativeAgencies":"60%"
+			"FinanceExecutives":"42%",
+			"Photographers":"61%",
+			"Musicians":"46%",
+			"CreativeAgencies":"65%"
 		},
 		{
 			"name":"Median Age",
@@ -70,19 +70,19 @@
 		}],
 		"ProductProfile":[{
 			"name":"Basic ($40)",
-			"ProjectManagers":"60%",
-			"FinanceExecutives":"60%",
-			"Photographers":"60%",
-			"Musicians":"60%",
-			"CreativeAgencies":"60%"
+			"ProjectManagers":"7,553",
+			"FinanceExecutives":"23,188",
+			"Photographers":"15,900",
+			"Musicians":"48,054",
+			"CreativeAgencies":"18,771"
 		},
 		{
 			"name":"Enterprise ($120)",
-			"ProjectManagers":"60%",
-			"FinanceExecutives":"60%",
-			"Photographers":"60%",
-			"Musicians":"60%",
-			"CreativeAgencies":"60%"
+			"ProjectManagers":"9,231",
+			"FinanceExecutives":"7,729",
+			"Photographers":"1,767",
+			"Musicians":"12,014",
+			"CreativeAgencies":"3,313"
 		}],
 		"ProductUsage":[{
 			"name":"Avg. Login per week",
