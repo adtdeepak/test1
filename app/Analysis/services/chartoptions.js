@@ -294,6 +294,65 @@ angular.module('Analysis')
 		}
 	};
 	
+this.getFreeToPaidBarChart = function(data, title, subtitle, height, color){
+		
+		return {
+	        chart: {
+	            type: 'column',
+                height:height
+	        },
+	        title: {
+	            text: title,
+	            align:'left',
+	            style: {
+	                color: '#686868',
+	                fontWeight: 'bold'
+	            }
+	        },
+	        subtitle: {
+	            text: subtitle,
+	            align:'left',
+	            style: {
+	                color: '#686868',
+	                fontWeight: 'bold'
+	            }
+	        },
+	        xAxis: {
+	        	//x-axis data
+	            categories: data.xAxisData,
+	            title: {
+	                text: null
+	            }
+	        },
+	        yAxis: {
+	            title: {
+	            },
+	            labels: {
+	                overflow: 'justify'
+	            }
+	        },
+	        tooltip: {
+	            valueSuffix: '%'
+	        },
+	        plotOptions: {
+	            bar: {
+	                dataLabels: {
+	                    enabled: true
+	                }
+	            }
+	        },
+	        legend: {
+	            enabled:false
+	        },
+	        series: [{
+	            name: 'Percentage',
+	            data: data.data,
+	            color:color
+	        }]
+		}
+	};
+	
+	
 this.getTrendingBarChart = function(data, title, subtitle, height, color){
 		
 		return {

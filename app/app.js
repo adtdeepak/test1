@@ -208,7 +208,7 @@ angular.module('Analysis',['ngRoute', 'AnalyticsApp'])
 	$routeProvider.when('/:page', {
 		templateUrl: function(params){ return 'app/Analysis/' + params.page + '.htm';}
 	}).otherwise({
-        redirectTo: '/customer-landscape-subs'
+        redirectTo: '/segment-overview'
     });
 }]);
 

@@ -1,0 +1,161 @@
+{
+    "status": "OK",
+    "message": "Request processed successfully",
+    "data": {
+        "size":{
+        	"allUsers":{
+        		"name":["Project Managers","Finance Executives","Photographers","Musicians","Creative Agencies"],
+        		"values":[458459,767042,606567,943418,316534 ],
+        		"color":["#36729d", "#149ae3","#fb7d7d", "#56d8ca", "#c5c4c4"]
+        	},
+			"freeUsers":{
+        		"name":["Project Managers","Finance Executives","Photographers","Musicians","Creative Agencies"],
+        		"values":[441675,736125,588900,883350,294450],
+        		"color":["#36729d", "#149ae3","#fb7d7d", "#56d8ca", "#c5c4c4"]
+        	},
+			"paidUsers":{
+        		"name":["Project Managers","Finance Executives","Photographers","Musicians","Creative Agencies"],
+        		"values":[16784, 30917, 17667, 60068, 22084],
+        		"color":["#36729d", "#149ae3","#fb7d7d", "#56d8ca", "#c5c4c4"]
+        	}
+        },
+        "freeToPaidConversion":{
+        		"name":["Project Managers", "Finance Executives", "Photographers", "Musicians", "Creative Agencies"],
+        		"values":[4.5, 5.1, 2.1, 3.2, 1.5],
+        		"color":"#fb7d7d"
+        },
+		"revenue":{
+        	"dollars":{
+        		"name":["Project Managers","Finance Executives","Photographers","Musicians","Creative Agencies"],
+        		"values":[4632210, 8843310, 5053320, 17265510, 6316650],
+        		"color":["#36729d", "#149ae3","#fb7d7d", "#56d8ca", "#c5c4c4"]
+        	},
+			"percentage":{
+        		"name":["Project Managers","Finance Executives","Photographers","Musicians","Creative Agencies"],
+        		"values":[11, 21, 12, 41, 15],
+        		"color":["#36729d", "#149ae3","#fb7d7d", "#56d8ca", "#c5c4c4"]
+        	}
+        },
+		"DemographicProfile":[{
+			"name":"% Male",
+			"ProjectManagers":"60%",
+			"FinanceExecutives":"60%",
+			"Photographers":"60%",
+			"Musicians":"60%",
+			"CreativeAgencies":"60%"
+		},
+		{
+			"name":"Median Age",
+			"ProjectManagers":"35 years",
+			"FinanceExecutives":"45 years",
+			"Photographers":"28 years",
+			"Musicians":"32 years",
+			"CreativeAgencies":"38 years"
+		},
+		{
+			"name":"Region",
+			"ProjectManagers":"North America",
+			"FinanceExecutives":"Asia",
+			"Photographers":"Europe",
+			"Musicians":"Latin America",
+			"CreativeAgencies":"Global"
+		},
+		{
+			"name":"% Employed Fulltime",
+			"ProjectManagers":"90%",
+			"FinanceExecutives":"75%",
+			"Photographers":"60%",
+			"Musicians":"44%",
+			"CreativeAgencies":"50%"
+		}],
+		"ProductProfile":[{
+			"name":"Basic ($40)",
+			"ProjectManagers":"60%",
+			"FinanceExecutives":"60%",
+			"Photographers":"60%",
+			"Musicians":"60%",
+			"CreativeAgencies":"60%"
+		},
+		{
+			"name":"Enterprise ($120)",
+			"ProjectManagers":"60%",
+			"FinanceExecutives":"60%",
+			"Photographers":"60%",
+			"Musicians":"60%",
+			"CreativeAgencies":"60%"
+		}],
+		"ProductUsage":[{
+			"name":"Avg. Login per week",
+			"ProjectManagers":"5",
+			"FinanceExecutives":"8",
+			"Photographers":"4",
+			"Musicians":"2",
+			"CreativeAgencies":"22"
+		},
+		{
+			"name":"Avg. Time spent online per login",
+			"ProjectManagers":"30 mins",
+			"FinanceExecutives":"45 mins",
+			"Photographers":"15 mins",
+			"Musicians":"5 mins",
+			"CreativeAgencies":"10 mins"
+		},{
+			"name":"Percentage Active users",
+			"ProjectManagers":"40%",
+			"FinanceExecutives":"50%",
+			"Photographers":"25%",
+			"Musicians":"20%",
+			"CreativeAgencies":"30%"
+		},
+		{
+			"name":"Profile Status (Completed)",
+			"ProjectManagers":"40%",
+			"FinanceExecutives":"35%",
+			"Photographers":"65%",
+			"Musicians":"55%",
+			"CreativeAgencies":"55%"
+		},{
+			"name":"Mobile App Users",
+			"ProjectManagers":"35%",
+			"FinanceExecutives":"69%",
+			"Photographers":"80%",
+			"Musicians":"20%",
+			"CreativeAgencies":"40%"
+		},
+		{
+			"name":"Favourite Features",
+			"ProjectManagers":"Microsoft 365 integration",
+			"FinanceExecutives":"Esign",
+			"Photographers":"Mobile App",
+			"Musicians":"Share",
+			"CreativeAgencies":"Collaborate"
+		}],
+		"Engagement":[{
+			"name":"Engagement Score",
+			"ProjectManagers":"65",
+			"FinanceExecutives":"53",
+			"Photographers":"62",
+			"Musicians":"60",
+			"CreativeAgencies":"70"
+		}],
+		"CurrentCampaigns":[{
+			"name":"Campaign ID",
+			"ProjectManagers":"40",
+			"FinanceExecutives":"33",
+			"Photographers":"72",
+			"Musicians":"61",
+			"CreativeAgencies":"87"
+		},
+		{
+			"name":"Number Campaigns this year",
+			"ProjectManagers":"4",
+			"FinanceExecutives":"1",
+			"Photographers":"2",
+			"Musicians":"3",
+			"CreativeAgencies":"5"
+		}]
+        
+        
+    }
+}
+

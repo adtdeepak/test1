@@ -93,6 +93,19 @@ angular.module('Analysis')
 		requestWS();
 		
 	};
+	this.segmentOverviewData = function(reqData, success, fail) {
+		var requestWS = postRequestWS(
+				'http://jsonstub.com/segment/overview', 
+				reqData,
+				success, 
+				fail,
+				function(result) {
+					return result;
+				}
+		);
+		requestWS();
+		
+	};
 	
 	this.getEngagementData = function(reqData, success, fail) {
 		var requestWS = postRequestWS(
