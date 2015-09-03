@@ -87,18 +87,22 @@
         },
 		"engagementBehaviour":{
         	"activeUsersTrendRevenue":{
+        		"legend":"Revenue",
         		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
         		"values":[5, 10, 7, 8, 10, 12, 15, 10, 12, 12, 15, 17, 25, 22, 20, 28],
         		"color":"#05395d"},
 			"activeUsersTrendPaidusers":{
+        		"legend":"Paid Users",
         		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
         		"values":[41667,83333,58333,66667,83333,100000,125000,83333,100000,100000,125000,141667,208333,183333,166667,233333],
         		"color":"#05395d"},
         	"activeUsersTrendEngagementScore":{
+        		"legend":"Engagement Score",
         		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
         		"values":[55,56,52,54,61,60,61,65,66,68,68,70,75,80,80,85],
         		"color":"#05395d"},
         	"activeUsersTrendF2P":{
+        		"legend":"Conversion Rate",
         		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
         		"values":[1.2,1.5,1.8,1.5,2.5,2.4,2.5,2.8,3,3.1,3,3.1,3.5,4,4.1,4.5],
         		"color":"#05395d"},

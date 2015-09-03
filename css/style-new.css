@@ -8823,6 +8823,6 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ccfffff
 .cTable{
 align:center !important;
 }
-.text-center{text-align: center;}
+.text-center{text-align: center !important;}
 .bold{font-weight: 600; background:  rgba(0, 0, 0, 0.06) none repeat scroll 0 0;}
 

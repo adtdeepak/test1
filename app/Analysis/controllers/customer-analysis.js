@@ -122,12 +122,12 @@ angular.module('Analysis')
 		chartOBJ = chartsService.basicBar.call($('#loginUsageChart'),chartOptions, $scope);
 		
 		chartData = DataConversionService.getPieChartData(deepdiveData.productUsage.status);
-	    chartOptions = ChartOptionsService.getProfilePieChart(chartData, "Status", "Avg time spend per login", 300);
+	    chartOptions = ChartOptionsService.getProfilePieChart(chartData, "Profile Status", "Percentage of users", 300);
 		chartOBJ = chartsService.donutChart.call($('#statusChart'),chartOptions, $scope);
 		
 		
 		chartData = DataConversionService.getHorizontalBarChartData(deepdiveData.productUsage.loginDuration);
-		chartOptions = ChartOptionsService.getLoginBarChart(chartData, "Login Duration", "Avg Logins per week", 300);
+		chartOptions = ChartOptionsService.getLoginBarChart(chartData, "Login Duration", "Avg time spend per login", 300);
 		chartOBJ = chartsService.basicBar.call($('#loginDurationColEng'),chartOptions, $scope);
 		
 		chartData = DataConversionService.getHorizontalBarChartData(deepdiveData.productUsage.trendingFeatures);
@@ -165,10 +165,10 @@ angular.module('Analysis')
    var chartData;
    var chartDataObj = {};
    var deepdiveData;
-   $scope.behaviourWidgets =[{"name":"activeUsersTrendRevenue","selected":true}, 
-	                          {"name":"activeUsersTrendPaidusers","selected":false},
-							  {"name":"activeUsersTrendF2P","selected":false},
-							  {"name":"activeUsersTrendEngagementScore","selected":false}];
+   $scope.behaviourWidgets =[{"name":"activeUsersTrendRevenue","displayName":"Total Revenue","selected":true}, 
+	                          {"name":"activeUsersTrendPaidusers","displayName":"Paid User","selected":false},
+							  {"name":"activeUsersTrendF2P","displayName":"Free to paid conversion","selected":false},
+							  {"name":"activeUsersTrendEngagementScore","displayName":"Engagement score","selected":false}];
    
 	$scope.deepdiveDataSuccess = function(result) {
 		deepdiveData = result.data;
@@ -177,14 +177,17 @@ angular.module('Analysis')
  		
 	}
 	$scope.selectedBehaviour = function(trendName){
+		var displayName = "";
 		$.each($scope.behaviourWidgets, function(key, value){
 			value.selected = false;
 			if(value.name == trendName){
 				value.selected = true;
+				displayName = value.displayName;
 			}
 		})
 		chartData = DataConversionService.getHorizontalBarChartData(deepdiveData.engagementBehaviour[trendName]);
-	    chartOptions = ChartOptionsService.activeUsersAreaChart(chartData, trendName, "%age Active users, Past 6 months", 300);
+		var legendName = deepdiveData.engagementBehaviour[trendName].legend;
+	    chartOptions = ChartOptionsService.activeUsersAreaChart(chartData, legendName, displayName, "", 300);
 		chartOBJ = chartsService.areaChart.call($('#subsAreaChart'),chartOptions, $scope);
 		
 	}
@@ -239,7 +242,7 @@ angular.module('Analysis')
 			$scope.error = false;
 			$scope.options.aaData = [];
 			$.each(data, function(key, obj) {
-					$scope.options.aaData.push([obj.SNo, obj.userGroup,  obj.description, obj.targetUsers,
+					$scope.options.aaData.push([obj.CampaignID, obj.userGroup,  obj.description, obj.targetUsers,
 					                            obj.response, obj.Impact,  obj.startDate, obj.endDate]);
 				})
 		} catch (e) {

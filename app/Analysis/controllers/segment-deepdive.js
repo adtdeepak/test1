@@ -171,7 +171,8 @@ angular.module('Analysis')
 	}
 	$scope.selectedBehaviour = function(trendName){
 		chartData = DataConversionService.getHorizontalBarChartData(deepdiveData.engagementBehaviour[trendName]);
-	    chartOptions = ChartOptionsService.activeUsersAreaChart(chartData, trendName, "%age Active users, Past 6 months", 300);
+		var legendName = deepdiveData.engagementBehaviour[trendName].legend;
+	    chartOptions = ChartOptionsService.activeUsersAreaChart(chartData, legendName, trendName, "%age Active users, Past 6 months", 300);
 		chartOBJ = chartsService.areaChart.call($('#subsAreaChart'),chartOptions, $scope);
 		
 	}

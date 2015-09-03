@@ -298,7 +298,7 @@ this.getFreeToPaidBarChart = function(data, title, subtitle, height, color){
 		
 		return {
 	        chart: {
-	            type: 'column',
+	            type: 'bar',
                 height:height
 	        },
 	        title: {
@@ -472,8 +472,8 @@ this.getTrendingBarChartSeries = function(data, title, subtitle, height, color){
 		}
 	};
 	
-	this.activeUsersAreaChart = function(data, title, subtitle){
-		
+	this.activeUsersAreaChart = function(data,legendName, title, subtitle){
+		console.log("data:", data);
 		return {
 	        chart: {
 	            type: 'area',
@@ -502,7 +502,7 @@ this.getTrendingBarChartSeries = function(data, title, subtitle, height, color){
 	            }
 	        },
 	        series: [{
-	            name: 'Active users',
+	            name: legendName,
 	            data: data.data,
 	            color:data.color
 	        }]
