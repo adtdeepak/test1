@@ -78,7 +78,15 @@ angular.module('Analysis')
     
     $scope.tableOptions = {
     	"bPaginate": false,
-    	"bSort":false
+    	"bSort":false,
+    	"fnRowCallback" : function(nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+			if(iDisplayIndex%2 != 0){
+				className = "oddRowColor";
+			}else{
+				className = "evenRowColor";
+			}
+			$(nRow).addClass(className);
+		}
     };
     $.extend(true, $scope.options, $scope.tableOptions);
     $.extend(true, $scope.productProfileOptions, $scope.tableOptions);

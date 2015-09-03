@@ -1,0 +1,387 @@
+<head>
+     <title>D-ASSIST $ CONVERTER</title>
+	<link rel="shortcut icon" href="images/logo.ico"/>
+</head>
+
+
+<div class="container" id="analysis-cl">
+    <div class="col-md-8">
+<ul style="margin-left:-30px; margin-bottom:5px;" class="breadcrumb">
+<li>
+<a style="color:#666;" href="home.htm">Home</a>
+</li>
+<li>
+<a style="color:#666;" href="#/customer-analysis">Customer Analysis</a>
+</li>
+<li class="active">DeepDive</li>
+</ul>
+</div>
+    <div class="col-md-4-big">
+        <div style="float:left;" id="timePeriodTabs" class="filter" ng-if="thisPage!='/builddo'">
+					
+				</div>
+        <div id="exportIconsPanel" ng-if="thisPage!='/builddo'" style="background: #ffffff !important;">
+    <ul>
+						<li title="Print" class="Printicon">&nbsp;</li>
+						<li class="iconExport export">
+							<ul>
+								<li class="top"><a href="#" alt="Export to Pdf"
+									title="Export to Pdf" ng-click="pdfExport()">
+										<figure>
+											<img src="images/icon-pdf.png" />
+										</figure>
+								</a></li>
+								<li><a href="#" alt="Export to Excel"
+									title="Export to Excel">
+										<figure>
+											<img src="images/icon-excel.png" />
+										</figure>
+								</a></li>
+								<li><a href="#" alt="Export to Word" title="Export to Word">
+										<figure>
+											<img src="images/icon-word.png" />
+										</figure>
+								</a></li>
+							</ul>
+						</li>
+					</ul>
+        
+    </div>
+    </div>
+    <div class="clear"></div>
+       
+    <div style="padding:25px 0px 15px 0px; border-top:1px solid #ccc;" class="filter" ng-controller="segmentDeepDiveController">
+      <ul>
+       <li><a ng-class="{'active-gray': selectedGroup[0].selected}" href="analysis.htm#/customer-analysis?currentlySelected=All Users">All user</a></li>  
+          <li><a ng-class="{'active-gray': selectedGroup[1].selected}" href="analysis.htm#/customer-analysis?currentlySelected=Project Managers">Project Managers</a></li>
+            <li><a ng-class="{'active-gray': selectedGroup[2].selected}"  href="analysis.htm#/customer-analysis?currentlySelected=Creative Agencies">Creative Agencies</a></li>
+            <li><a ng-class="{'active-gray': selectedGroup[3].selected}"  href="analysis.htm#/customer-analysis?currentlySelected=Finance Executives">Finance Executives</a></li>
+            <li><a ng-class="{'active-gray': selectedGroup[4].selected}"  href="analysis.htm#/customer-analysis?currentlySelected=Musicians">Musicians</a></li>  
+            <li><a ng-class="{'active-gray': selectedGroup[5].selected}"  href="analysis.htm#/customer-analysis?currentlySelected=Photographers">Photographers</a></li>       
+        </ul>     
+    </div>
+   
+	<div class="row acquisition-panel nopadding" id="overview-div" style="margin-top:20px !important; background:#fff;" ng-controller="overviewUsergroupController">
+        
+		<div class="row nopadding">
+				
+			<div class="half-width">
+				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
+                    <div class="acqChart" id="userPieChart"></div>                    		
+				</div>
+				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
+					<div style="border:1px solid  #3ea8dc; margin-top:70px;" class="brdr-left ">
+						<div class="">
+							<div class="panel-heading" style="font-weight:600; background:#3ea8dc none repeat scroll 0 0; color: #fff; padding:5px; margin-bottom:10px;">Total User
+							</div>
+						</div>
+						<div class="widget-content metric-widgets">
+							<div class="row-fluid">
+								<div class="actual-value"><span  style="color: #3ea8dc;">{{overviewData.totalUser.value}} Million</span></div>
+							</div>
+							<div class="box-content-bottom">
+								<ul>
+									
+									<li class="up">{{overviewData.totalUser.yoy}}% YoY</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+			<div class="half-width">
+				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
+					<div style="border:1px solid  #1b6395; margin-top:70px;" class="brdr-left ">
+						<div class="">
+							<div class="panel-heading" style="font-weight:600;background: #1b6395  none repeat scroll 0 0; color: #fff; padding:5px; margin-bottom:10px;">Free User
+							</div>
+						</div>
+						<div class="widget-content metric-widgets">
+							<div class="row-fluid">
+								<div class="actual-value"><span style="color: #1b6395;">{{overviewData.freeUser.value}} Million</span></div>
+							</div>
+							<div class="box-content-bottom">
+								<ul>
+									
+									<li class="up">{{overviewData.freeUser.yoy}}% YoY</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
+					<div style="border:1px solid  #3ea8dc; margin-top:70px;" class="brdr-left ">
+						<div class="">
+							<div class="panel-heading" style="font-weight:600; background:#3ea8dc none repeat scroll 0 0; color: #fff; padding:5px; margin-bottom:10px;">Paid user
+							</div>
+						</div>
+						<div class="widget-content metric-widgets">
+							<div class="row-fluid">
+								<div class="actual-value"><span style="color: #3ea8dc;">{{overviewData.paidUser.value}} Million</span></div>
+							</div>
+							<div class="box-content-bottom">
+								<ul>
+									
+									<li class="up">{{overviewData.paidUser.yoy}}% YoY</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+		</div>
+		
+	</div>
+
+
+	<div   ng-controller="profileUsergroupController">
+		<div style="border:1px solid #ccc; padding-bottom:15px !important;" class="row nopadding">
+				<div style="margin-bottom:15px;" class="panel panel-default">
+					<div class="panel-heading">Product profile</div>
+				</div>
+
+			<div class="full-width">
+				
+                <div class="col-xs-6">
+					<div style="background: #fff none repeat scroll 0 0;
+    border: 1px solid #ccc;" class="acqChart" id="userProfileTrend"></div>
+				</div>
+             
+			
+				<div  class="col-xs-6">
+					<div style="background: #fff none repeat scroll 0 0;
+    border: 1px solid #ccc;" class="acqChart" id="revenueProfileTrend"></div>
+				</div>
+				
+			</div>
+		</div>
+        
+        <div style="background:#fff; border:1px solid #ccc;" class="row nopadding">
+				<div class="panel panel-default">
+					<div class="panel-heading">Demographic profile</div>
+				</div>
+
+			<div class="full-width">
+				
+                <div class="col-md-4">
+					<div class="acqChart" id="genderProfileChart"></div>
+				</div>
+                
+				<div class="col-md-4">
+					<div class="acqChart" id="ageProfileChart"></div>
+				</div>
+			
+				<div  class="col-md-4">
+					<div class="acqChart" id="locationProfileChart"></div>
+				</div>
+				
+			</div>
+		</div>
+		
+
+
+	<div style="background:#fff; border:1px solid #ccc;" class="row acquisition-panel nopadding" id="engagement-div" ng-controller="engagmentUsergroupController">
+		<div class="panel panel-default">
+			<div class="panel-heading">Product Usage</div>
+		</div>
+        
+        <div class="full-width">
+            <div class="col-md-4">
+					<div class="acqChart" id="loginUsageChart"></div>
+				</div>
+				
+                <div class="col-md-4">
+					<div class="acqChart" id="statusChart"></div>
+				</div>
+                
+				
+			
+				<div  class="col-md-4">
+					<div class="acqChart" id="loginDurationColEng"></div>
+				</div>
+				
+			</div>
+		
+		
+		<div class="row nopadding ">
+			
+			<div class="row-fluid">
+				<div style="margin:15px 0px;" class="col-sm-6 col-md-6 col-lg-6">
+					<div style="border:1px solid #ccc;" class="acqChart" id="trendActProChart"></div>
+				</div>
+				<div style="margin:15px 0px;" class="col-sm-6 col-md-6 col-lg-6">
+					<div style="border:1px solid #ccc;" class="acqChart" id="trendSecProChart"></div>
+				</div>
+			</div>
+		</div>        
+    </div>
+        
+    <div class="row nopadding" style="background:#fff; border:1px solid #ccc;" ng-controller="engagmentBehaviourController">
+		<div class="panel panel-default">
+			<div class="panel-heading">Engagement Behaviour</div>
+		</div>
+        <div style="background:#fff !important;" class="half-width">
+				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
+					<div style="border:1px solid   #1b6395; " class="brdr-left ">
+						<div class="">
+							<div class="panel-heading" style="font-weight:600; background: #1b6395 none repeat scroll 0 0; color: #fff; padding:5px; margin-bottom:10px;">Total Revenue
+							</div>
+						</div>
+						<div class="widget-content metric-widgets">
+							<div class="row-fluid">
+								<div class="actual-value"><span  style="color: #3ea8dc;">{{behaviourData.TotalRevenue.value}}</span></div>
+							</div>
+							<div class="box-content-bottom">
+								<ul>
+									
+									<li class="up">{{behaviourData.TotalRevenue.yoy}}% YoY</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
+					<div style="border:1px solid  #3ea8dc;" class="brdr-left ">
+						<div class="">
+							<div class="panel-heading" style="font-weight:600; background:#3ea8dc none repeat scroll 0 0; color: #fff; padding:5px; margin-bottom:10px;">Paid User
+							</div>
+						</div>
+						<div class="widget-content metric-widgets">
+							<div class="row-fluid">
+								<div class="actual-value"><span  style="color: #3ea8dc;">{{behaviourData.PaidUser.value}}</span></div>
+							</div>
+							<div class="box-content-bottom">
+								<ul>
+									
+									<li class="up">{{behaviourData.PaidUser.yoy}}% YoY</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+			<div  style="background:#fff !important;" class="half-width">
+				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
+					<div style="border:1px solid  #1b6395; " class="brdr-left ">
+						<div class="">
+							<div class="panel-heading" style="font-weight:600;background: #1b6395  none repeat scroll 0 0; color: #fff; padding:5px; margin-bottom:10px;">Free to paid converstion
+							</div>
+						</div>
+						<div class="widget-content metric-widgets">
+							<div class="row-fluid">
+								<div class="actual-value"><span style="color: #1b6395;">{{behaviourData.Freetopaidconversion.value}} %</span></div>
+							</div>
+							<div class="box-content-bottom">
+								<ul>
+									
+									<li class="up">{{behaviourData.Freetopaidconversion.yoy}}% YoY</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
+					<div style="border:1px solid  #3ea8dc; " class="brdr-left ">
+						<div class="">
+							<div class="panel-heading" style="font-weight:600; background:#3ea8dc none repeat scroll 0 0; color: #fff; padding:5px; margin-bottom:10px;">Engagement score
+							</div>
+						</div>
+						<div class="widget-content metric-widgets">
+							<div class="row-fluid">
+								<div class="actual-value"><span style="color: #3ea8dc;">{{behaviourData.Engagementscore.value}}</span></div>
+							</div>
+							<div class="box-content-bottom">
+								<ul>
+									
+									<li class="up">{{behaviourData.Engagementscore.yoy}}% YoY</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+	
+            <div class="row nopadding">
+			<div><div style="width:50%; float:left; padding: 25px 15px 15px 15px;"><h4 style="padding:0px; margin:0px;">Trends</h4></div><div style="width:50%; float:right; padding: 25px 15px 15px 15px">
+                    <div class="btn-group pull-right">
+					    <button class="btn bkgd-white" style="min-width: 200px; background:#fff; border:1px solid #ccc; text-align: left;color: #555555;">Select a behaviour</button>
+					    <button style="background:#666;" class="btn dropdown-toggle bkgd-white" data-toggle="dropdown">
+					    <span class="caret"></span>
+					   </button>
+					 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="min-width: 224px;">
+					   <li><a tabindex="-1" href="#" ng-click="selectedBehaviour('activeUsersTrendRevenue')">Total Revenue</a></li>
+					   <li><a tabindex="-1" href="#" ng-click="selectedBehaviour('activeUsersTrendPaidusers')">Paid user</a></li>
+					   <li><a tabindex="-1" href="#" ng-click="selectedBehaviour('activeUsersTrendF2P')">Free to paid converstion</a></li>
+                       <li><a tabindex="-1" href="#" ng-click="selectedBehaviour('activeUsersTrendEngagementScore')">Engagement score</a></li>
+					 </ul>
+					</div> 
+                </div>
+                </div>
+			<div  class="col-sm-9 col-md-9 col-lg-9">
+					<div class="acqChart" id="subsAreaChart"></div>
+			</div>
+		</div>
+		</div>
+        
+       
+        	</div>
+        
+    
+    <div class="row nopadding campaign-overview" ng-controller="campaignCalenderController">
+	<div class="row acquisition-panel nopadding" id="trends-div">
+				<div class="panel panel-default">
+					<div class="panel-heading">Campaign Calender</div>
+				</div>
+		<div class="row-fluid">
+            <table class="table border smSubsTable noMarginBtm" my-table options="options">
+					<colgroup>
+						<col width="5%">
+						<col width="15%">
+						<col width="20%">
+						<col width="15%">
+						<col width="15%">
+						<col width="10%">
+                        <col width="10%">
+						<col width="10%">
+					</colgroup>
+					<thead class="thead-blue">
+				      <tr>
+				        <th>S.No</th>
+				        <th>User Group</th>
+				        <th>Campaign Description</th>
+                        <th>Target users</th>
+                        <th>Response</th>
+				        <th>Impact</th>
+				        <th>Start Date</th>
+                        <th>End Date</th>
+				      </tr>
+				    </thead>
+				</table>
+		</div>
+        </div>
+    </div>
+        
+    	
+		<div class="row nopadding" ng-controller="customInsightsController">
+	<div class="row acquisition-panel nopadding" id="trends-div">
+				<div class="panel panel-default">
+					<div class="panel-heading">Custom Insights</div>
+				</div>
+		<div class="row-fluid" style="height: 200px; padding:15px;">
+            <textarea style="border:1px solid #ccc; width:100%" name="" rows="7"></textarea>
+		</div>
+	</div>
+</div>
+	</div>
+	
+
+				
+			
+			
+			
+		
+		
+<div ng-hide ng-controller="customerLandscapeInitUsergroupController"></div>
+
+
+ 	

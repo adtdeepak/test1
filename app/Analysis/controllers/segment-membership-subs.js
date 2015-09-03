@@ -1,20 +1,5 @@
 angular.module('Analysis')
 
-.controller('segmentDeepDiveController', function($scope, CustomService, chartsService, ChartOptionsService, DataService, DataConversionService, $location) {
-	$scope.selectedGroup = [{"key":"All Users","selected":false},{"key":"Project Managers","selected": false},{"key":"Creative Agencies","selected": false},
-	                        {"key":"Finance Executives","selected": false},{"key":"Musicians","selected": false},{"key":"Photographers","selected": false}];
-	function getSelectedGroupFromUrl(){
-		var urlIndex = $location.search();
-
-		$.each($scope.selectedGroup, function(key, value){
-			$scope.selectedGroup[key].selected= false;
-			if($scope.selectedGroup[key].key == urlIndex.currentlySelected){
-				$scope.selectedGroup[key].selected= true;
-			}
-		})
-	}
-	getSelectedGroupFromUrl();
-})
 .controller('comparisonController', function($scope, CustomService, chartsService, ChartOptionsService, DataService, DataConversionService) {
     //chart options
     var chartOptions;

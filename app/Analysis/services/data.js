@@ -64,6 +64,21 @@ angular.module('Analysis')
 		
 	};
 	
+	this.getCustomerAnalysisData = function(reqData, success, fail) {
+		var requestWS = postRequestWS(
+				'http://jsonstub.com/analysis/customer/analysis', 
+				reqData,
+				success, 
+				fail,
+				function(result) {
+					return result;
+				}
+		);
+		requestWS();
+		//sendRequest(cacheKey, "summaryCache", success, requestWS);
+		
+	};
+	
 	
 	this.getOverviewData = function(reqData, success, fail) {
 		var requestWS = postRequestWS(
