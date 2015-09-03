@@ -8428,7 +8428,7 @@ div#progressBar {
   margin-top: 10px;
 }
 #segment-overview table.dataTable tr.oddRowColor{
-	background: #e9e9e9 !important;
+	background: #dcefef none repeat scroll 0 0 !important;
 }
 #segment-overview table.dataTable tr.evenRowColor{
 	background: #f6f6f6 !important;
@@ -8823,4 +8823,6 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ccfffff
 .cTable{
 align:center !important;
 }
+.text-center{text-align: center;}
+.bold{font-weight: 600; background:  rgba(0, 0, 0, 0.06) none repeat scroll 0 0;}
 

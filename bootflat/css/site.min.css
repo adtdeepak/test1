@@ -1854,6 +1854,7 @@ th {
     border-top: 1px solid #ddd;
     line-height: 1.42857;
     padding: 8px;
+    font-size: 13px;
     vertical-align: middle;
 }
 .table > thead > tr > th {
