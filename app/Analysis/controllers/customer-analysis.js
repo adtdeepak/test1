@@ -165,12 +165,24 @@ angular.module('Analysis')
    var chartData;
    var chartDataObj = {};
    var deepdiveData;
+   $scope.behaviourWidgets =[{"name":"activeUsersTrendRevenue","selected":true}, 
+	                          {"name":"activeUsersTrendPaidusers","selected":false},
+							  {"name":"activeUsersTrendF2P","selected":false},
+							  {"name":"activeUsersTrendEngagementScore","selected":false}];
+   
 	$scope.deepdiveDataSuccess = function(result) {
 		deepdiveData = result.data;
 		$scope.behaviourData = deepdiveData.engagementBehaviour.data;
+		$scope.selectedBehaviour('activeUsersTrendRevenue');
  		
 	}
 	$scope.selectedBehaviour = function(trendName){
+		$.each($scope.behaviourWidgets, function(key, value){
+			value.selected = false;
+			if(value.name == trendName){
+				value.selected = true;
+			}
+		})
 		chartData = DataConversionService.getHorizontalBarChartData(deepdiveData.engagementBehaviour[trendName]);
 	    chartOptions = ChartOptionsService.activeUsersAreaChart(chartData, trendName, "%age Active users, Past 6 months", 300);
 		chartOBJ = chartsService.areaChart.call($('#subsAreaChart'),chartOptions, $scope);

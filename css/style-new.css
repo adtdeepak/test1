@@ -8437,7 +8437,9 @@ div#progressBar {
 	background: #3ea8dc !important;
 	color: #fff;
 }
-
+.mouse-pointer:hover{
+	cursor: pointer;
+}
 /* media query */
 @media (min-width: 320px) {
     .col-lg-5ths {

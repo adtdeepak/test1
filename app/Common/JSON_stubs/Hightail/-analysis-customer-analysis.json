@@ -105,19 +105,27 @@
 			"data":{
 				"TotalRevenue":{
 					"value":"228 Million",
-					"yoy":"2"
+					"yoy":"2",
+					"name":"Total Revenue",
+					"id":"activeUsersTrendRevenue"
 				},
 				"PaidUser":{
 					"value":"1.9 Million",
-					"yoy":"4"
+					"yoy":"4",
+					"name":"Paid User",
+					"id":"activeUsersTrendPaidusers"
 				},
 				"Freetopaidconversion":{
 					"value":"2.8",
-					"yoy":"1.2"
+					"yoy":"1.2",
+					"name":"Free to paid conversion",
+					"id":"activeUsersTrendF2P"
 				},
 				"Engagementscore":{
 					"value":"65",
-					"yoy":"1"
+					"yoy":"1",
+					"name":"Engagement score",
+					"id":"activeUsersTrendEngagementScore"
 				}
 			}
 		},
