@@ -49,9 +49,9 @@ angular.module('Analysis')
 		return requestWS;
 	}
 	
-	this.getUsergroupDeepdiveData = function(reqData, success, fail) {
+	this.getSegmentDeepdiveData = function(reqData, userGroup, success, fail) {
 		var requestWS = postRequestWS(
-				'http://jsonstub.com/analysis/usergroup/deepdive', 
+				'http://jsonstub.com/analysis/segment/deepdive/'+userGroup, 
 				reqData,
 				success, 
 				fail,

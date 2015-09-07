@@ -4,16 +4,18 @@ angular.module('Analysis')
 	setTimeout(function () { CustomService.appInit(); }, 1000);
 })
 
-.controller('segmentDeepDiveController', function($scope, CustomService, chartsService, ChartOptionsService, DataService, DataConversionService, $location) {
-	$scope.selectedGroup = [{"key":"All Users","selected":false},{"key":"Project Managers","selected": false},{"key":"Creative Agencies","selected": false},
-	                        {"key":"Finance Executives","selected": false},{"key":"Musicians","selected": false},{"key":"Photographers","selected": false}];
+.controller('segmentDeepDiveController', function($scope, $rootScope, CustomService, chartsService, ChartOptionsService, DataService, DataConversionService, $location) {
+	$scope.selectedGroup = [{"name":"All Users","key":"allusers","selected":false},{"name":"Project Managers","key":"projectmanagers","selected": false},{"name":"Creative Agencies","key":"creativeagencies","selected": false},
+	                        {"name":"Finance Executives","key":"financeexecutives","selected": false},{"name":"Musicians","key":"musicians", "selected": false},{"name":"Photographers","key":"photographers","selected": false}];
+	$rootScope.selectedUserGroup = "allusers";
 	function getSelectedGroupFromUrl(){
 		var urlIndex = $location.search();
 		if(urlIndex.currentlySelected){
 			$.each($scope.selectedGroup, function(key, value){
 				$scope.selectedGroup[key].selected= false;
-				if($scope.selectedGroup[key].key == urlIndex.currentlySelected){
+				if($scope.selectedGroup[key].name == urlIndex.currentlySelected){
 					$scope.selectedGroup[key].selected= true;
+					$rootScope.selectedUserGroup = $scope.selectedGroup[key].key;
 				}
 			})
 		}else{
@@ -22,7 +24,7 @@ angular.module('Analysis')
 	}
 	getSelectedGroupFromUrl();
 })
-.controller('overviewUsergroupController', function($scope, CustomService, chartsService, ChartOptionsService, DataService, DataConversionService) {
+.controller('overviewUsergroupController', function($scope, $rootScope, CustomService, chartsService, ChartOptionsService, DataService, DataConversionService) {
 		
 	 //Profile chart options
     var chartOptions;
@@ -51,13 +53,13 @@ angular.module('Analysis')
 				return false; 
 			} 
 		} 
-		DataService.getUsergroupDeepdiveData(requestData, func, $scope.fail); 
+		DataService.getSegmentDeepdiveData(requestData,$rootScope.selectedUserGroup, func, $scope.fail); 
 
 	} 
 	loadUsergroupDeepdiveData();
 })
 
-.controller('profileUsergroupController', function($scope, CustomService, chartsService, ChartOptionsService, DataConversionService, DataService) {
+.controller('profileUsergroupController', function($scope, $rootScope, CustomService, chartsService, ChartOptionsService, DataConversionService, DataService) {
     
 	 //Profile chart options
     var chartOptions;
@@ -99,14 +101,14 @@ angular.module('Analysis')
 				return false; 
 			} 
 		} 
-		DataService.getUsergroupDeepdiveData(requestData, func, $scope.fail); 
+		DataService.getSegmentDeepdiveData(requestData,$rootScope.selectedUserGroup, func, $scope.fail); 
 
 	} 
 	loadUsergroupDeepdiveData();
 	
 })
 
-.controller('engagmentUsergroupController', function($scope, CustomService, chartsService, ChartOptionsService, DataService, DataConversionService) {
+.controller('engagmentUsergroupController', function($scope, $rootScope, CustomService, chartsService, ChartOptionsService, DataService, DataConversionService) {
 
 	 //Profile chart options
    var chartOptions;
@@ -150,29 +152,43 @@ angular.module('Analysis')
 				return false; 
 			} 
 		} 
-		DataService.getUsergroupDeepdiveData(requestData, func, $scope.fail); 
+		DataService.getSegmentDeepdiveData(requestData,$rootScope.selectedUserGroup, func, $scope.fail); 
 
 	} 
 	loadUsergroupDeepdiveData();
 	
 })
 
-.controller('engagmentBehaviourController', function($scope, CustomService, chartsService, ChartOptionsService, DataService, DataConversionService) {
+.controller('engagmentBehaviourController', function($scope, $rootScope, CustomService, chartsService, ChartOptionsService, DataService, DataConversionService) {
 
 	 //Profile chart options
-   var chartOptions;
-   var chartData;
-   var chartDataObj = {};
-   var deepdiveData;
+  var chartOptions;
+  var chartData;
+  var chartDataObj = {};
+  var deepdiveData;
+  $scope.behaviourWidgets =[{"name":"activeUsersTrendRevenue","displayName":"Total Revenue","selected":true}, 
+	                          {"name":"activeUsersTrendPaidusers","displayName":"Paid User","selected":false},
+							  {"name":"activeUsersTrendF2P","displayName":"Free to paid conversion","selected":false},
+							  {"name":"activeUsersTrendEngagementScore","displayName":"Engagement score","selected":false}];
+  
 	$scope.deepdiveDataSuccess = function(result) {
 		deepdiveData = result.data;
 		$scope.behaviourData = deepdiveData.engagementBehaviour.data;
- 		
+		$scope.selectedBehaviour('activeUsersTrendRevenue');
+		
 	}
 	$scope.selectedBehaviour = function(trendName){
+		var displayName = "";
+		$.each($scope.behaviourWidgets, function(key, value){
+			value.selected = false;
+			if(value.name == trendName){
+				value.selected = true;
+				displayName = value.displayName;
+			}
+		})
 		chartData = DataConversionService.getHorizontalBarChartData(deepdiveData.engagementBehaviour[trendName]);
 		var legendName = deepdiveData.engagementBehaviour[trendName].legend;
-	    chartOptions = ChartOptionsService.activeUsersAreaChart(chartData, legendName, trendName, "%age Active users, Past 6 months", 300);
+	    chartOptions = ChartOptionsService.activeUsersAreaChart(chartData, legendName, displayName, "", 300);
 		chartOBJ = chartsService.areaChart.call($('#subsAreaChart'),chartOptions, $scope);
 		
 	}
@@ -187,14 +203,14 @@ angular.module('Analysis')
 				return false; 
 			} 
 		} 
-		DataService.getUsergroupDeepdiveData(requestData, func, $scope.fail); 
+		DataService.getSegmentDeepdiveData(requestData,$rootScope.selectedUserGroup, func, $scope.fail); 
 
 	} 
 	loadUsergroupDeepdiveData();
 	
 })
 
-.controller('campaignCalenderController', function($scope, CustomService, chartsService, ChartOptionsService, DataService, DataConversionService, UtilitiesService) {
+.controller('campaignCalenderController', function($scope, $rootScope, CustomService, chartsService, ChartOptionsService, DataService, DataConversionService, UtilitiesService) {
 	
 	$scope.options = UtilitiesService.getDataTableOptions();
 	var columOptions = {
@@ -245,13 +261,13 @@ angular.module('Analysis')
 				return false; 
 			} 
 		} 
-		DataService.getUsergroupDeepdiveData(requestData, func, $scope.fail); 
+		DataService.getSegmentDeepdiveData(requestData,$rootScope.selectedUserGroup,  func, $scope.fail); 
 
 	} 
 	loadUsergroupDeepdiveData();
 })
 
-.controller('customInsightsController', function($scope, CustomService, chartsService, ChartOptionsService, DataService, DataConversionService, UtilitiesService) {
+.controller('customInsightsController', function($scope, $rootScope, CustomService, chartsService, ChartOptionsService, DataService, DataConversionService, UtilitiesService) {
 	
 	var deepdiveData;
 	$scope.deepdiveDataSuccess = function(result) {
@@ -271,7 +287,7 @@ angular.module('Analysis')
 				return false; 
 			} 
 		} 
-		DataService.getUsergroupDeepdiveData(requestData, func, $scope.fail); 
+		DataService.getSegmentDeepdiveData(requestData,$rootScope.selectedUserGroup,  func, $scope.fail); 
 
 	} 
 	loadUsergroupDeepdiveData();

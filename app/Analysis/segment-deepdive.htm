@@ -75,7 +75,7 @@
 						</div>
 						<div class="widget-content metric-widgets">
 							<div class="row-fluid">
-								<div class="actual-value"><span  style="color: #3ea8dc;">{{overviewData.totalUser.value}} Million</span></div>
+								<div class="actual-value"><span  style="color: #3ea8dc;">{{overviewData.totalUser.value}}</span></div>
 							</div>
 							<div class="box-content-bottom">
 								<ul>
@@ -96,7 +96,7 @@
 						</div>
 						<div class="widget-content metric-widgets">
 							<div class="row-fluid">
-								<div class="actual-value"><span style="color: #1b6395;">{{overviewData.freeUser.value}} Million</span></div>
+								<div class="actual-value"><span style="color: #1b6395;">{{overviewData.freeUser.value}}</span></div>
 							</div>
 							<div class="box-content-bottom">
 								<ul>
@@ -115,7 +115,7 @@
 						</div>
 						<div class="widget-content metric-widgets">
 							<div class="row-fluid">
-								<div class="actual-value"><span style="color: #3ea8dc;">{{overviewData.paidUser.value}} Million</span></div>
+								<div class="actual-value"><span style="color: #3ea8dc;">{{overviewData.paidUser.value}}</span></div>
 							</div>
 							<div class="box-content-bottom">
 								<ul>
@@ -220,9 +220,10 @@
 		</div>
         <div style="background:#fff !important;" class="half-width">
 				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
-					<div style="border:1px solid   #1b6395; " class="brdr-left ">
+					<div style="border:1px solid   #1b6395; "ng-class="{'brdr-left mouse-pointer':true, 'active': behaviourWidgets[0].selected}"
+						 ng-click="selectedBehaviour('activeUsersTrendRevenue')">
 						<div class="">
-							<div class="panel-heading" style="font-weight:600; background: #1b6395 none repeat scroll 0 0; color: #fff; padding:5px; margin-bottom:10px;">Total Revenue
+							<div class="panel-heading" style="font-weight:600; background: #1b6395 none repeat scroll 0 0; color: #fff; padding:5px; margin-bottom:10px;">{{behaviourData.TotalRevenue.name}}
 							</div>
 						</div>
 						<div class="widget-content metric-widgets">
@@ -239,9 +240,10 @@
 					</div>
 				</div>
 				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
-					<div style="border:1px solid  #3ea8dc;" class="brdr-left ">
+					<div style="border:1px solid  #3ea8dc;" ng-class="{'brdr-left mouse-pointer':true, 'active': behaviourWidgets[1].selected}" 
+					    ng-click="selectedBehaviour('activeUsersTrendPaidusers')">
 						<div class="">
-							<div class="panel-heading" style="font-weight:600; background:#3ea8dc none repeat scroll 0 0; color: #fff; padding:5px; margin-bottom:10px;">Paid User
+							<div class="panel-heading" style="font-weight:600; background:#3ea8dc none repeat scroll 0 0; color: #fff; padding:5px; margin-bottom:10px;">{{behaviourData.PaidUser.name}}
 							</div>
 						</div>
 						<div class="widget-content metric-widgets">
@@ -260,9 +262,10 @@
 				</div>
 			<div  style="background:#fff !important;" class="half-width">
 				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
-					<div style="border:1px solid  #1b6395; " class="brdr-left ">
+					<div style="border:1px solid  #1b6395;  "ng-class="{'brdr-left mouse-pointer':true, 'active': behaviourWidgets[2].selected}"
+						ng-click="selectedBehaviour('activeUsersTrendF2P')">
 						<div class="">
-							<div class="panel-heading" style="font-weight:600;background: #1b6395  none repeat scroll 0 0; color: #fff; padding:5px; margin-bottom:10px;">Free to paid converstion
+							<div class="panel-heading" style="font-weight:600;background: #1b6395  none repeat scroll 0 0; color: #fff; padding:5px; margin-bottom:10px;">{{behaviourData.Freetopaidconversion.name}}
 							</div>
 						</div>
 						<div class="widget-content metric-widgets">
@@ -279,9 +282,10 @@
 					</div>
 				</div>
 				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
-					<div style="border:1px solid  #3ea8dc; " class="brdr-left ">
+					<div style="border:1px solid  #3ea8dc;  "ng-class="{'brdr-left mouse-pointer':true, 'active': behaviourWidgets[3].selected}"
+						ng-click="selectedBehaviour('activeUsersTrendEngagementScore')">
 						<div class="">
-							<div class="panel-heading" style="font-weight:600; background:#3ea8dc none repeat scroll 0 0; color: #fff; padding:5px; margin-bottom:10px;">Engagement score
+							<div class="panel-heading" style="font-weight:600; background:#3ea8dc none repeat scroll 0 0; color: #fff; padding:5px; margin-bottom:10px;">{{behaviourData.Engagementscore.name}}
 							</div>
 						</div>
 						<div class="widget-content metric-widgets">
@@ -298,27 +302,17 @@
 					</div>
 				</div>
 				</div>
-	
-            <div class="row nopadding">
-			<div><div style="width:50%; float:left; padding: 25px 15px 15px 15px;"><h4 style="padding:0px; margin:0px;">Trends</h4></div><div style="width:50%; float:right; padding: 25px 15px 15px 15px">
-                    <div class="btn-group pull-right">
-					    <button class="btn bkgd-white" style="min-width: 200px; background:#fff; border:1px solid #ccc; text-align: left;color: #555555;">Select a behaviour</button>
-					    <button style="background:#666;" class="btn dropdown-toggle bkgd-white" data-toggle="dropdown">
-					    <span class="caret"></span>
-					   </button>
-					 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="min-width: 224px;">
-					   <li><a tabindex="-1" href="#" ng-click="selectedBehaviour('activeUsersTrendRevenue')">Total Revenue</a></li>
-					   <li><a tabindex="-1" href="#" ng-click="selectedBehaviour('activeUsersTrendPaidusers')">Paid user</a></li>
-					   <li><a tabindex="-1" href="#" ng-click="selectedBehaviour('activeUsersTrendF2P')">Free to paid converstion</a></li>
-                       <li><a tabindex="-1" href="#" ng-click="selectedBehaviour('activeUsersTrendEngagementScore')">Engagement score</a></li>
-					 </ul>
-					</div> 
-                </div>
-                </div>
-			<div  class="col-sm-9 col-md-9 col-lg-9">
+
+			<div class="row nopadding">
+				<div>
+					<div style="width: 50%; float: left; padding: 25px 15px 15px 15px;">
+						<h4 style="padding: 0px; margin: 0px;">Trends</h4>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-12 col-lg-12">
 					<div class="acqChart" id="subsAreaChart"></div>
+				</div>
 			</div>
-		</div>
 		</div>
         
        
