@@ -51,11 +51,11 @@
     <div style="padding:25px 0px 15px 0px; border-top:1px solid #ccc;" class="filter" ng-controller="segmentDeepDiveController">
       <ul>
        <li><a ng-class="{'active-gray': selectedGroup[0].selected}" href="analysis.htm#/customer-analysis?currentlySelected=All Users">All user</a></li>  
-          <li><a ng-class="{'active-gray': selectedGroup[1].selected}" href="analysis.htm#/customer-analysis?currentlySelected=Project Managers">Project Managers</a></li>
-            <li><a ng-class="{'active-gray': selectedGroup[2].selected}"  href="analysis.htm#/customer-analysis?currentlySelected=Creative Agencies">Creative Agencies</a></li>
-            <li><a ng-class="{'active-gray': selectedGroup[3].selected}"  href="analysis.htm#/customer-analysis?currentlySelected=Finance Executives">Finance Executives</a></li>
-            <li><a ng-class="{'active-gray': selectedGroup[4].selected}"  href="analysis.htm#/customer-analysis?currentlySelected=Musicians">Musicians</a></li>  
-            <li><a ng-class="{'active-gray': selectedGroup[5].selected}"  href="analysis.htm#/customer-analysis?currentlySelected=Photographers">Photographers</a></li>       
+          <li><a ng-class="{'active-gray': selectedGroup[1].selected}" href="analysis.htm#/segment-deepdive?currentlySelected=Project Managers">Project Managers</a></li>
+            <li><a ng-class="{'active-gray': selectedGroup[2].selected}"  href="analysis.htm#/segment-deepdive?currentlySelected=Creative Agencies">Creative Agencies</a></li>
+            <li><a ng-class="{'active-gray': selectedGroup[3].selected}"  href="analysis.htm#/segment-deepdive?currentlySelected=Finance Executives">Finance Executives</a></li>
+            <li><a ng-class="{'active-gray': selectedGroup[4].selected}"  href="analysis.htm#/segment-deepdive?currentlySelected=Musicians">Musicians</a></li>  
+            <li><a ng-class="{'active-gray': selectedGroup[5].selected}"  href="analysis.htm#/segment-deepdive?currentlySelected=Photographers">Photographers</a></li>       
         </ul>     
     </div>
    
@@ -188,16 +188,13 @@
 					<div class="acqChart" id="loginUsageChart"></div>
 				</div>
 				
-                <div class="col-md-4">
-					<div class="acqChart" id="statusChart"></div>
-				</div>
-                
-				
-			
 				<div  class="col-md-4">
 					<div class="acqChart" id="loginDurationColEng"></div>
 				</div>
 				
+                <div class="col-md-4">
+					<div class="acqChart" id="statusChart"></div>
+				</div>
 			</div>
 		
 		

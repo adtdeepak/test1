@@ -67,8 +67,8 @@ angular.module('Analysis')
 	$scope.deepdiveDataSuccess = function(result) {
 		var deepdiveData = result.data;
 		
-		chartData = DataConversionService.getPieChartData(deepdiveData.productProfile.revenueTrend);
-	    chartOptions = ChartOptionsService.getPieChart(chartData, "Product Plan", "%age of Revenue", 300);
+		chartData = DataConversionService.getPieChartData(deepdiveData.productProfile.users);
+	    chartOptions = ChartOptionsService.getPieChart(chartData, "Product Plan", "%age of Users", 300);
 		chartOBJ = chartsService.donutChart.call($('#userProfileTrend'),chartOptions, $scope);
 		//chart data and options for signup pie chart
 		chartData = DataConversionService.getPieChartData(deepdiveData.productProfile.revenueTrend);
@@ -76,15 +76,15 @@ angular.module('Analysis')
 		chartOBJ = chartsService.donutChart.call($('#revenueProfileTrend'),chartOptions, $scope);
 		
 		chartData = DataConversionService.getPieChartData(deepdiveData.demographicProfile.gender);
-	    chartOptions = ChartOptionsService.getPieChart(chartData, "Gender", "%age of users Male/Female", 300);
+	    chartOptions = ChartOptionsService.getPieChartFixedLegend(chartData, "Gender", "%age of users Male/Female", 300);
 		chartOBJ = chartsService.donutChart.call($('#genderProfileChart'),chartOptions, $scope);
 		//chart data and options for signup pie chart
 		chartData = DataConversionService.getPieChartData(deepdiveData.demographicProfile.age);
-	    chartOptions = ChartOptionsService.getPieChart(chartData, "Age distribution", "%age of total user", 300);
+	    chartOptions = ChartOptionsService.getPieChartFixedLegend(chartData, "Age distribution", "%age of total user", 300);
 		chartOBJ = chartsService.donutChart.call($('#ageProfileChart'),chartOptions, $scope);
 		//chart data and options for signup pie chart
 		chartData = DataConversionService.getPieChartData(deepdiveData.demographicProfile.location);
-	    chartOptions = ChartOptionsService.getPieChart(chartData, "Location", "%age of total user", 300);
+	    chartOptions = ChartOptionsService.getPieChartFixedLegend(chartData, "Location", "%age of total user", 300);
 		chartOBJ = chartsService.donutChart.call($('#locationProfileChart'),chartOptions, $scope);
 		
 		
@@ -187,7 +187,7 @@ angular.module('Analysis')
 		})
 		chartData = DataConversionService.getHorizontalBarChartData(deepdiveData.engagementBehaviour[trendName]);
 		var legendName = deepdiveData.engagementBehaviour[trendName].legend;
-	    chartOptions = ChartOptionsService.activeUsersAreaChart(chartData, legendName, displayName, "", 300);
+	    chartOptions = ChartOptionsService.analysisTrendLineChart(chartData, legendName, displayName, "", 300);
 		chartOBJ = chartsService.areaChart.call($('#subsAreaChart'),chartOptions, $scope);
 		
 	}

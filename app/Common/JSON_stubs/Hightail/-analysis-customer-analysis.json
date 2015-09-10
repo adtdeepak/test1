@@ -24,13 +24,11 @@
 			}
         	},
         	"productProfile":{
-        	"users":[{
-        		"name":"Basic",
-        		"values": 77
-        	},{
-        		"name":"Enterprise",
-        		"values": 23
-        	}],
+        	"users":{
+        		"name":["Basic", "Enterprise"],
+        		"values":[77, 23],
+        		"color":["#36729d","#fb7d7d"]
+        	},
 			"revenueTrend":{
         		"name":["Basic", "Enterprise"],
         		"values":[53, 47],
@@ -76,9 +74,9 @@
         		"color":"#05395d"
         	},
         	"loginDuration":{
-        		"xAxisData" : ["<10 mins", "10-30 mins", "30-45 mins", ">45 mins"],
+        		"name" : ["<10 mins", "10-30 mins", "30-45 mins", ">45 mins"],
         		 "values":[47.6, 26, 12.2, 3.7, 10.5],
-        		"color":["#0e4b77", "#05395d","#56d8ca", "#959595"]
+        		"color":"#05395d"
         	}
         	
         },

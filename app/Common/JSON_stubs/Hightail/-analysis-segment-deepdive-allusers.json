@@ -24,13 +24,11 @@
 			}
         	},
         	"productProfile":{
-        	"users":[{
-        		"name":"Basic",
-        		"values": 45
-        	},{
-        		"name":"Enterprise",
-        		"values": 55
-        	}],
+        	"users":{
+        		"name":["Basic", "Enterprise"],
+        		"values":[45, 55],
+        		"color":["#36729d","#fb7d7d"]
+        	},
 			"revenueTrend":{
         		"name":["Basic", "Enterprise"],
         		"values":[21, 79],
@@ -132,7 +130,7 @@
 		},
 		"campaignCalender":{
         "tableData":[{
-    		"Campaign ID":"19",
+    		"CampaignID":"19",
     		"userGroup":"Musicians",
     		"description":"Create music by collaborating with other musicians anytime, anywhere.",
 			"targetUsers":"135751",
@@ -141,7 +139,7 @@
     		"startDate":"12/01/2012",
     		"endDate":"12/31/2012"
     	},{
-    		"Campaign ID":"21",
+    		"CampaignID":"21",
     		"userGroup":"Photographers",
     		"description":"Upoad on the go photos using the Mobile App",
 			"targetUsers":"416303",
@@ -150,7 +148,7 @@
     		"startDate":"12/01/2012",
     		"endDate":"12/31/2012"
     	},{
-    		"Campaign ID":"73",
+    		"CampaignID":"73",
     		"userGroup":"Creative Agencies",
     		"description":"Edit, control and manage your work without errors, using Version control",
 			"targetUsers":"380103",
@@ -159,7 +157,7 @@
     		"startDate":"12/01/2012",
     		"endDate":"12/31/2012"
     	},{
-    		"Campaign ID":"87",
+    		"CampaignID":"87",
     		"userGroup":"Project Managers",
     		"description":"Audit, control and monitor file access rights",
 			"targetUsers":"316752",

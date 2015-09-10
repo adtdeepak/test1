@@ -185,6 +185,64 @@ angular.module('Analysis')
 		}
 	};
 	
+	this.getPieChartFixedLegend = function(data, title, subtitle, height){
+		return {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie',
+                height:height
+            },
+            title: {
+                text: title,
+	            align:'center',
+	            style: {
+	                color: '#686868',
+	                fontWeight: 'bold'
+	            }
+            },
+            subtitle: {
+            	text:subtitle,
+	            align:'center',
+	            style: {
+	                color: '#686868',
+	                fontWeight: 'bold'
+	            }
+            },
+            legend: {
+                align: 'right',
+                verticalAlign:'middle',
+                width: 110,
+                itemWidth: 100,
+                itemStyle: {
+                    fontSize:'10px',
+                    font: '10pt Trebuchet MS, Verdana, sans-serif',
+                   color: '#A0A0A0'
+                }
+          },
+            tooltip: {
+                pointFormat: '<b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: false
+                    },
+                    showInLegend: true
+                }
+            },
+            series: [{
+                name: "",
+                colorByPoint: true,
+                data: data
+            }]
+		}
+	};
+	
+	
 	this.getPieChartWithNoLegend = function(data, title, subtitle, height){
 		return {
             chart: {
@@ -477,6 +535,44 @@ this.getTrendingBarChartSeries = function(data, title, subtitle, height, color){
 		return {
 	        chart: {
 	            type: 'area',
+                height:300
+	        },
+	        title: {
+	            text: title,
+	            align:'left'
+	        },
+	        subtitle: {
+	            text: subtitle,
+	            align:'left',
+	            style: {
+	                color: '#686868',
+	                fontWeight: 'bold'
+	            }
+	        },
+	        tooltip: {
+	            valueSuffix: '%'
+	        },
+	        xAxis: {
+	        	//x-axis data
+	            categories: data.xAxisData,
+	            title: {
+	                text: null
+	            }
+	        },
+	        series: [{
+	            name: legendName,
+	            data: data.data,
+	            color:data.color
+	        }]
+		}
+		
+	};
+	
+	this.analysisTrendLineChart = function(data,legendName, title, subtitle){
+		console.log("data:", data);
+		return {
+	        chart: {
+	            type: 'line',
                 height:300
 	        },
 	        title: {

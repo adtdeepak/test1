@@ -45,11 +45,11 @@ angular.module('Analysis')
 
 		chartData = DataConversionService.getPieChartData(segmentOverviewData.data.size.allUsers);
 	    chartOptions = ChartOptionsService.getPieChart(chartData, "Size", " ", 300);
-		chartOBJ = chartsService.pieChart.call($('#sizePieChart'),chartOptions, $scope);
+		chartOBJ = chartsService.donutChart.call($('#sizePieChart'),chartOptions, $scope);
 		
 		chartData = DataConversionService.getPieChartData(segmentOverviewData.data.revenue.dollars);
 	    chartOptions = ChartOptionsService.getPieChart(chartData, "Revenue", " ", 300);
-		chartOBJ = chartsService.pieChart.call($('#revenuePieChart'),chartOptions, $scope);
+		chartOBJ = chartsService.donutChart.call($('#revenuePieChart'),chartOptions, $scope);
 		
 		chartData = DataConversionService.getHorizontalBarChartData(segmentOverviewData.data.freeToPaidConversion);
 	    chartOptions = ChartOptionsService.getFreeToPaidBarChart(chartData, "Free to Paid Conversion", "", 300, "#EE7E34");

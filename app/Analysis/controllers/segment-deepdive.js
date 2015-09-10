@@ -68,8 +68,8 @@ angular.module('Analysis')
 	$scope.deepdiveDataSuccess = function(result) {
 		var deepdiveData = result.data;
 		
-		chartData = DataConversionService.getPieChartData(deepdiveData.productProfile.revenueTrend);
-	    chartOptions = ChartOptionsService.getPieChart(chartData, "Product Plan", "%age of Revenue", 300);
+		chartData = DataConversionService.getPieChartData(deepdiveData.productProfile.users);
+	    chartOptions = ChartOptionsService.getPieChart(chartData, "Product Plan", "%age of Users", 300);
 		chartOBJ = chartsService.donutChart.call($('#userProfileTrend'),chartOptions, $scope);
 		//chart data and options for signup pie chart
 		chartData = DataConversionService.getPieChartData(deepdiveData.productProfile.revenueTrend);
@@ -77,15 +77,15 @@ angular.module('Analysis')
 		chartOBJ = chartsService.donutChart.call($('#revenueProfileTrend'),chartOptions, $scope);
 		
 		chartData = DataConversionService.getPieChartData(deepdiveData.demographicProfile.gender);
-	    chartOptions = ChartOptionsService.getPieChart(chartData, "Gender", "%age of users Male/Female", 300);
+	    chartOptions = ChartOptionsService.getPieChartFixedLegend(chartData, "Gender", "%age of users Male/Female", 300);
 		chartOBJ = chartsService.donutChart.call($('#genderProfileChart'),chartOptions, $scope);
 		//chart data and options for signup pie chart
 		chartData = DataConversionService.getPieChartData(deepdiveData.demographicProfile.age);
-	    chartOptions = ChartOptionsService.getPieChart(chartData, "Age distribution", "%age of total user", 300);
+	    chartOptions = ChartOptionsService.getPieChartFixedLegend(chartData, "Age distribution", "%age of total user", 300);
 		chartOBJ = chartsService.donutChart.call($('#ageProfileChart'),chartOptions, $scope);
 		//chart data and options for signup pie chart
 		chartData = DataConversionService.getPieChartData(deepdiveData.demographicProfile.location);
-	    chartOptions = ChartOptionsService.getPieChart(chartData, "Location", "%age of total user", 300);
+	    chartOptions = ChartOptionsService.getPieChartFixedLegend(chartData, "Location", "%age of total user", 300);
 		chartOBJ = chartsService.donutChart.call($('#locationProfileChart'),chartOptions, $scope);
 		
 		
@@ -119,16 +119,18 @@ angular.module('Analysis')
 		var deepdiveData = result.data;
 		
 		chartData = DataConversionService.getHorizontalBarChartData(deepdiveData.productUsage.login);
+		console.log("chartData login", chartData)
 		chartOptions = ChartOptionsService.getLoginBarChart(chartData, "Logins", "Avg Logins per week", 300);
 		chartOBJ = chartsService.basicBar.call($('#loginUsageChart'),chartOptions, $scope);
 		
 		chartData = DataConversionService.getPieChartData(deepdiveData.productUsage.status);
-	    chartOptions = ChartOptionsService.getProfilePieChart(chartData, "Status", "Avg time spend per login", 300);
+	    chartOptions = ChartOptionsService.getProfilePieChart(chartData, "Profile Status", "Percentage of users", 300);
 		chartOBJ = chartsService.donutChart.call($('#statusChart'),chartOptions, $scope);
 		
 		
 		chartData = DataConversionService.getHorizontalBarChartData(deepdiveData.productUsage.loginDuration);
-		chartOptions = ChartOptionsService.getLoginBarChart(chartData, "Login Duration", "Avg Logins per week", 300);
+		console.log("chartData login duration", chartData)
+		chartOptions = ChartOptionsService.getLoginBarChart(chartData, "Login Duration", "Avg time spend per login", 300);
 		chartOBJ = chartsService.basicBar.call($('#loginDurationColEng'),chartOptions, $scope);
 		
 		chartData = DataConversionService.getHorizontalBarChartData(deepdiveData.productUsage.trendingFeatures);
@@ -188,7 +190,7 @@ angular.module('Analysis')
 		})
 		chartData = DataConversionService.getHorizontalBarChartData(deepdiveData.engagementBehaviour[trendName]);
 		var legendName = deepdiveData.engagementBehaviour[trendName].legend;
-	    chartOptions = ChartOptionsService.activeUsersAreaChart(chartData, legendName, displayName, "", 300);
+	    chartOptions = ChartOptionsService.analysisTrendLineChart(chartData, legendName, displayName, "", 300);
 		chartOBJ = chartsService.areaChart.call($('#subsAreaChart'),chartOptions, $scope);
 		
 	}
@@ -243,7 +245,7 @@ angular.module('Analysis')
 			$scope.error = false;
 			$scope.options.aaData = [];
 			$.each(data, function(key, obj) {
-					$scope.options.aaData.push([obj.SNo, obj.userGroup,  obj.description, obj.targetUsers,
+					$scope.options.aaData.push([obj.CampaignID, obj.userGroup,  obj.description, obj.targetUsers,
 					                            obj.response, obj.Impact,  obj.startDate, obj.endDate]);
 				})
 		} catch (e) {
