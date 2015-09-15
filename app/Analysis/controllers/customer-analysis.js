@@ -234,6 +234,24 @@ angular.module('Analysis')
 		$scope.addData(deepdiveData.campaignCalender.tableData);
 	}
 
+	 $scope.tableOptions = {
+		    	"bPaginate": false,
+		    	"bSort":false,
+		    	"fnRowCallback" : function(nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+					if(iDisplayIndex%2 != 0){
+						className = "oddRowColor";
+					}else{
+						className = "evenRowColor";
+					}
+					$(nRow).addClass(className);
+				},
+				"createdRow": function ( row, data, index ) {
+		             $('td', row).eq(0).addClass('bold');
+		             $('td', row).not(':eq(0)').addClass('text-center');
+		        }
+	};
+	$.extend(true, $scope.options, $scope.tableOptions);
+	
 	$scope.addData = function(data) {
 		$scope.dataLoaded = true;
 		if (!data)

@@ -8433,6 +8433,13 @@ div#progressBar {
 #segment-overview table.dataTable tr.evenRowColor{
 	background: #f6f6f6 !important;
 }
+#analysis-cl table.dataTable tr.oddRowColor{
+	background: #dcefef none repeat scroll 0 0 !important;
+}
+#analysis-cl table.dataTable tr.evenRowColor{
+	background: #f6f6f6 !important;
+}
+
 .campaign-overview table.dataTable tr.oddRowColor{
 	background: #e9e9e9 !important;
 }
