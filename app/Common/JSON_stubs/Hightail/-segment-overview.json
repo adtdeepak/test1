@@ -6,17 +6,17 @@
         	"allUsers":{
         		"name":["Project Managers","Finance Executives","Photographers","Musicians","Creative Agencies"],
         		"values":[458459,767042,606567,943418,316534 ],
-        		"color":["#36729d", "#149ae3","#fb7d7d", "#56d8ca", "#c5c4c4"]
+        		"color":["#999999", "#1B6395","#149AE3", "#56D8CA", "#C5C4C4"]
         	},
 			"freeUsers":{
         		"name":["Project Managers","Finance Executives","Photographers","Musicians","Creative Agencies"],
         		"values":[441675,736125,588900,883350,294450],
-        		"color":["#36729d", "#149ae3","#fb7d7d", "#56d8ca", "#c5c4c4"]
+        		"color":["#999999", "#1B6395","#149AE3", "#56D8CA", "#C5C4C4"]
         	},
 			"paidUsers":{
         		"name":["Project Managers","Finance Executives","Photographers","Musicians","Creative Agencies"],
         		"values":[16784, 30917, 17667, 60068, 22084],
-        		"color":["#36729d", "#149ae3","#fb7d7d", "#56d8ca", "#c5c4c4"]
+        		"color":["#999999", "#1B6395","#149AE3", "#56D8CA", "#C5C4C4"]
         	}
         },
         "freeToPaidConversion":{
@@ -28,12 +28,12 @@
         	"dollars":{
         		"name":["Project Managers","Finance Executives","Photographers","Musicians","Creative Agencies"],
         		"values":[4632210, 8843310, 5053320, 17265510, 6316650],
-        		"color":["#36729d", "#149ae3","#fb7d7d", "#56d8ca", "#c5c4c4"]
+        		"color":["#999999", "#1B6395","#149AE3", "#56D8CA", "#C5C4C4"]
         	},
 			"percentage":{
         		"name":["Project Managers","Finance Executives","Photographers","Musicians","Creative Agencies"],
         		"values":[11, 21, 12, 41, 15],
-        		"color":["#36729d", "#149ae3","#fb7d7d", "#56d8ca", "#c5c4c4"]
+        		"color":["#999999", "#1B6395","#149AE3", "#56D8CA", "#C5C4C4"]
         	}
         },
 		"DemographicProfile":[{

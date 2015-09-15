@@ -6,7 +6,7 @@
         	"userTrend":{
         		"name":["Free Users", "Paid Users"],
         		"values":[93, 7],
-        		"color":["#1b6395", "#149ae3"]
+        		"color":["#999999", "#1B6395"]
         	},
 			"data":{
 				"totalUser":{
@@ -27,36 +27,36 @@
         	"users":{
         		"name":["Basic", "Enterprise"],
         		"values":[80, 20],
-        		"color":["#36729d","#fb7d7d"]
+        		"color":["#999999", "#1B6395"]
         	},
 			"revenueTrend":{
         		"name":["Basic", "Enterprise"],
         		"values":[57, 42],
-        		"color":["#36729d","#fb7d7d"]
+        		"color":["#999999", "#1B6395"]
         	}
         	},
 			"demographicProfile":{
         	"gender":{
         		"name":["Male", "Female"],
         		"values":[43, 57],
-        		"color":["#1b6395", "#149ae3"]
+        		"color":["#999999", "#1B6395"]
         	},
         	"age":{
         		"name":["18yrs - 24yrs", "25yrs - 34yrs", "35yrs - 54yrs", "54yrs +"],
         		"values":[45.8, 34.3, 13.4, 6.5],
-        		"color":["#36729d", "#149ae3","#fb7d7d", "#56d8ca"]
+        		"color":["#999999", "#1B6395","#149AE3", "#56D8CA"]
         	},
         	"location":{
         		"name":["Europe", "Asia", "Latin America", "North America", "Middle East", "Africa", "Oceania"],
         		"values":[12.4, 14.6, 40.9, 23.3, 2.8, 3.6, 2.3],
-        		"color":["#0e4b77", "#05395d","#56d8ca", "#959595","#1b6395", "#149ae3","#fb7d7d"]
+        		"color":["#999999", "#1B6395","#149AE3", "#56D8CA","#C5C4C4", "#555555","#05395D"]
         	}
         	},
 			 "productUsage":{
         	"status":{
         		"name":["Complete", "Incomplete"],
         		"values":[45, 50],
-        		"color": ["#1b6395", "#149ae3"]
+        		"color":["#999999", "#1B6395"]
         	},
         	"trendingFeatures":{
         		"name":["Account Settings","Digital Sign","Company information","Folders","Contacts","Home Page","Profile"],

@@ -4,18 +4,9 @@
     "data": {
         "overall": {
             "userTrend": {
-                "name": [
-                    "Free Users",
-                    "Paid Users"
-                ],
-                "values": [
-                    97,
-                    3
-                ],
-                "color": [
-                    "#1b6395",
-                    "#149ae3"
-                ]
+                "name": ["Free Users","Paid Users"],
+                "values": [97,3],
+                "color":["#999999", "#1B6395"]
             },
             "data": {
                 "totalUser": {
@@ -34,113 +25,38 @@
         },
         "productProfile": {
             "users": {
-                "name": [
-                    "Basic",
-                    "Enterprise"
-                ],
-                "values": [
-                    90,
-                    10
-                ],
-                "color": [
-                    "#36729d",
-                    "#fb7d7d"
-                ]
+                "name": ["Basic","Enterprise"],
+                "values": [90,10],
+                "color":["#999999", "#1B6395"]
             },
             "revenueTrend": {
-                "name": [
-                    "Basic",
-                    "Enterprise"
-                ],
-                "values": [
-                    75,
-                    25
-                ],
-                "color": [
-                    "#36729d",
-                    "#fb7d7d"
-                ]
+                "name": ["Basic", "Enterprise"],
+                "values": [75,25],
+                "color":["#999999", "#1B6395"]
             }
         },
         "demographicProfile": {
             "gender": {
-                "name": [
-                    "Male",
-                    "Female"
-                ],
-                "values": [
-                    61,
-                    39
-                ],
-                "color": [
-                    "#1b6395",
-                    "#149ae3"
-                ]
+                "name": ["Male","Female"],
+                "values": [61,39],
+                "color":["#999999", "#1B6395"]
             },
             "age": {
-                "name": [
-                    "18yrs - 24yrs",
-                    "25yrs - 34yrs",
-                    "35yrs - 54yrs",
-                    "54yrs +"
-                ],
-                "values": [
-                    25.8,
-                    44.3,
-                    23.4,
-                    6.5
-                ],
-                "color": [
-                    "#36729d",
-                    "#149ae3",
-                    "#fb7d7d",
-                    "#56d8ca"
-                ]
+                "name": ["18yrs - 24yrs","25yrs - 34yrs","35yrs - 54yrs","54yrs +"],
+                "values": [25.8,44.3,23.4,6.5],
+                "color":["#999999", "#1B6395","#149AE3", "#56D8CA"]
             },
             "location": {
-                "name": [
-                    "Europe",
-                    "Asia",
-                    "Latin America",
-                    "North America",
-                    "Middle East",
-                    "Africa",
-                    "Oceania"
-                ],
-                "values": [
-                    52.4,
-                    4.6,
-                    10.9,
-                    23.3,
-                    2.8,
-                    3.6,
-                    2.3
-                ],
-                "color": [
-                    "#0e4b77",
-                    "#05395d",
-                    "#56d8ca",
-                    "#959595",
-                    "#1b6395",
-                    "#149ae3",
-                    "#fb7d7d"
-                ]
+                "name": ["Europe","Asia","Latin America","North America","Middle East","Africa","Oceania"],
+                "values": [52.4,4.6,10.9,23.3,2.8,3.6,2.3],
+                "color":["#999999", "#1B6395","#149AE3", "#56D8CA","#C5C4C4", "#555555","#05395D"]
             }
         },
         "productUsage": {
             "status": {
-                "name": [
-                    "Complete",
-                    "Incomplete"
-                ],
-                "values": [
-                    65,
-                    35
-                ],
-                "color": [
-                    "#1b6395",
-                    "#149ae3"
-                ]
+                "name": ["Complete","Incomplete"],
+                "values": [65,35],
+                "color":["#999999", "#1B6395"]
             },
             "trendingFeatures": {
                 "name": [
