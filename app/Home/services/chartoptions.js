@@ -77,12 +77,12 @@ angular.module('Home')
 		};
 	};	
 
-	this.getBasicLineChart = function(data, title, subtitle, width){
+	this.getBasicLineChart = function(data, title, subtitle){
 		
 		return {
 			chart:{
 				height:200,
-				width:width,
+				//width:width,
 				spacingLeft :50
 			},
 	        title: {

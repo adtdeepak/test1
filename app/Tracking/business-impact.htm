@@ -9,8 +9,8 @@
 <li class="active">Business Analysis</li>
 </ul>
 </div>
-	<div ng-controller="businessImpactMatricesController" ng-if ="isBusinessImpactViewable">
-			<div class="AcquisitionPanel contentPanel1">
+	<div class="row nopadding" ng-controller="businessImpactMatricesController" ng-if ="isBusinessImpactViewable">
+			<div class="row AcquisitionPanel contentPanel1">
                  <div style="margin-bottom:0px;" class="panel panel-default">
 					<div class="panel-heading">Key Business Metrics</div>
 				</div>
@@ -36,44 +36,38 @@
 					<p class="widget-title pull-right" style="padding-right:28px">As of Saturday, September 12, 2015</p>
                         <ng-include ng-show="error" src="'partials/error.htm'"></ng-include>
                         <div class="progress-loading" ng-if="!error && !dataLoaded"></div>
-						<ul ng-hide="error" class="box-list clearfix" >
-							<li ng-repeat="data in businessImpact"  ng-hide="data.display==false" ng-if="menuSynced" ng-click="menu.widgetSelected(data)">
-								<div class="box-list-innerwrap ">
-									<div ng-class="{'box-listShadow': true, selected: data.subGroupBy==select}">
-										<!-- <a href="#" class="help tooltip-new">
-											<figure>
-												<img src="images/icon-info.png" />
-											</figure>
-											<span><img alt="Tooltip" src="images/tooltip-arrow.png" class="callout">{{Tooltip.TOOLTIP_TRAC_SUMMARY_BUSINESSIMPACT[data.subGroupBy]}}</span>
-										</a> -->
-										<div class="box-content-top">
-											<h3>{{data.subgroupName}}</h3>
-											<div
-												class="value-orange trackingLink">
-												{{data.actualToDate}}</div>
-												<p ng-if="data.subgroupName =='Revenue' || data.subgroupName =='Cost of Acqusition'
-												 || data.subgroupName=='ARPU' || data.subgroupName=='Recurring Revenue' || data.subgroupName=='New Revenue'" class='widget-text'>(in USD)</p>
-											<p ng-if="data.subgroupName !='Revenue' && data.subgroupName !='Cost of Acqusition' && data.subgroupName!='ARPU'
-											  && data.subgroupName!='Free To Paid Conversion' && data.subgroupName!='Recurring Revenue' && data.subgroupName!='New Revenue'" class='widget-text'>(Number of users)</p>
-											<p ng-if="data.subgroupName =='Free To Paid Conversion'" class='widget-text'>(in Percentage)</p>
-											<!-- <p class="duration">Week To Date Actual</p> -->
-											<p class="value1">
-												<span>{{data.forecast.value}}</span>
-											</p>
-											<p class="duration1" style="margin-top: -10px;">{{forecastText}}</p>
-										</div>
-										<div class="box-content-bottom">
-											<ul>
-												<li class="{{data.versusLast.trend=='-ve'?'down':'up'}}">{{data.versusLast.value}}
-													{{vsLastText}}</li>
-												<li class="{{data.versusSameLastYear.trend=='-ve'?'down':'up'}}">{{data.versusSameLastYear.value}}
-													{{vsLastYearText}}</li>
-											</ul>
-										</div>
-									</div>
+						<ul class="row-fluid metric-widgets"
+					style="margin:  10px 20px 10px 10px;" data-page="businessImpact">
+					<li class="col-md-5ths col-xs-6" ng-repeat="data in businessImpact"
+						ng-hide="data.display == false">
+						<div class="col-sm-11 col-md-11 metrics-content metrics-content-height">
+							<a href="{{trackingHtmlName}}.htm#/business-impact?currentlySelected={{data.subGroupBy}}&&name={{data.subgroupName}}">
+								<div class="box-content-top">
+									<h3>{{data.subgroupName}}</h3>
+									<div class="value-orange trackingLink">{{data.actualToDate}}</div>
+									<p
+										ng-if="data.subgroupName =='Revenue' || data.subgroupName =='Cost of Acqusition' || data.subgroupName=='ARPU'"
+										class='widget-text'>(in USD)</p>
+									<p
+										ng-if="data.subgroupName !='Revenue' && data.subgroupName !='Cost of Acqusition' && data.subgroupName!='ARPU'"
+										class='widget-text'>(Number of users)</p>
+									
+									<p class="value1">
+										<span>{{data.forecast.value}}</span>
+									</p>
+									<p class="duration1">{{forecastText}}</p>
 								</div>
-							</li>
-						</ul>
+								<div class="box-content-bottom">
+									<ul>
+										<li class="{{data.versusLast.trend=='-ve'?'down':'up'}}">{{data.versusLast.value}} {{vsLastText}}</li>
+										<li
+											class="{{data.versusSameLastYear.trend=='-ve'?'down':'up'}}">{{data.versusSameLastYear.value}} {{vsLastYearText}}</li>
+									</ul>
+								</div>
+							</a>
+						</div>
+					</li>
+				</ul>
 					</div>
 				</div>
 			</div>
@@ -88,8 +82,8 @@
 					<div class="contentPanel">
 					 <div class="progress-loading" ng-if="!error && !dataLoaded"></div>
                         <ng-include ng-show="error" src="'partials/error.htm'"></ng-include>
-						 <ul ng-hide="error" class="summary-list clearfix">
-                                        <li ng-show="businessImpactSummary.versusLast.value">
+						 <ul ng-hide="error" class="row-fluid summary-list clearfix">
+                                        <li ng-show="businessImpactSummary.versusLast.value" class="col-md-5ths col-xs-6">
                                             <div class="summarylistInnerwrap">
                                                  <p>
                                                     {{toLastText}}
@@ -100,7 +94,7 @@
                                                
                                             </div>
                                         </li>
-                                        <li ng-show="businessImpactSummary.versusSameLastYear.value">
+                                        <li ng-show="businessImpactSummary.versusSameLastYear.value" class="col-md-5ths col-xs-6">
                                             <div class="summarylistInnerwrap">
                                                 <p>
                                                     {{toLastLYText}}
@@ -111,7 +105,7 @@
                                                 
                                             </div>
                                         </li>
-                                        <li ng-show="businessImpactSummary.actualToDate">
+                                        <li ng-show="businessImpactSummary.actualToDate" class="col-md-5ths col-xs-6">
                                             <div class="summarylistInnerwrap ">
                                                   <p>
                                                      {{businessImpactSummary.subgroupName}}
@@ -122,7 +116,7 @@
                                               
                                             </div>
                                         </li>
-                                        <li ng-show="businessImpactSummary.diffFromTarget.value">
+                                        <li ng-show="businessImpactSummary.diffFromTarget.value" class="col-md-5ths col-xs-6">
                                             <div class="summarylistInnerwrap">
                                                 <p>
                                                     Difference from Target
@@ -133,7 +127,7 @@
                                                 
                                             </div>
                                         </li>
-                                        <li ng-show="businessImpactSummary.forecast.value">
+                                        <li ng-show="businessImpactSummary.forecast.value" class="col-md-5ths col-xs-6">
                                             <div class="summarylistInnerwrap">
                                                  <p>
                                                     {{forecastText}}
