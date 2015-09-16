@@ -58,7 +58,7 @@ type='text/css'>
 
         <div id="contentarea">
             
-        		<div style="  position: fixed;  right: 105px; top: 50px;z-index: 1000; " class="breadcrumbTrackContainer" ng-controller = "commonController">
+        		<div class="breadcrumbTrackContainer time-nav" ng-controller = "commonController">
 				<div id="timePeriodTabs">
 					<ul>
 						<li ng-class="{'active': selectedIndex[0].selected}"><a class="" href="#"
@@ -101,13 +101,6 @@ type='text/css'>
 	<ng-include src="'partials/navigation-header.htm'"></ng-include>
 <div class="container" id="track-summary" ng-cloak>
     
-     <div class="col-md-8">
-<ul style="margin-left:-30px; margin-bottom:10px;" class="breadcrumb">
-<li>
-<a style="color:#666;" href="home.htm"></a>
-</li>
-</ul>
-</div>
  
 	<div class="row acquisition-panel"
 		ng-controller="acquisitionFunnelController">
@@ -115,13 +108,13 @@ type='text/css'>
 					<div class="panel-heading">Funnel</div>
 				</div>
 		
-		<div class="row-fluid">
-			<div class="half-width">
-				<div class="col-sm-5 col-md-5 wdgt-hgt-new">
+		<div class="row-fluid col-sm-12" style="margin: 20px 0px; float: left;">
+			<div class="col-sm-6">
+				<div class="col-sm-6 ">
 					<div class="customDiv bkgd-darkblue" ng-click="acqFunnelWidget('Visitors')"
 					 ng-class="{'active': acqFunnelWidgets[0].selected}">
 						<div class="">
-							<div class="panel-heading">Visitors</div>
+							<div class="panel-heading text-center">Visitors</div>
 						</div>
 						<div class="widget-content">
 							<div class="row-fluid">
@@ -130,18 +123,18 @@ type='text/css'>
 										number}}</span>
 								</div>
 							</div>
-                            <div class="rateValue">Unique Visitor: 70%</div>
+                            <div class="rateValue">Unique Visitors: 70%</div>
 							
 							<div id="sparkleLineVisitor"></div>
 							<div class="chart"></div>
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-5 col-md-5 wdgt-hgt-new">
+				<div class="col-sm-6 ">
 					<div class="customDiv bkgd-blue" ng-click="acqFunnelWidget('Registrations')"
 					 ng-class="{'active': acqFunnelWidgets[1].selected}">
 						<div class="">
-							<div class="panel-heading">Registrations</div>
+							<div class="panel-heading text-center">Registrations</div>
 						</div>
 						<div class="widget-content">
 							<div class="row-fluid">
@@ -158,12 +151,12 @@ type='text/css'>
 					</div>
 				</div>
 			</div>
-			<div class="half-width">
-				<div class="col-sm-5 col-md-5 wdgt-hgt-new">
+			<div class="col-sm-6">
+				<div class="col-sm-6">
 					<div class="customDiv bkgd-darkblue" ng-click="acqFunnelWidget('Subscriptions')"
 					 ng-class="{'active': acqFunnelWidgets[2].selected}">
 						<div class="">
-							<div class="panel-heading">Subscriptions</div>
+							<div class="panel-heading text-center">Subscriptions</div>
 						</div>
 						<div class="widget-content">
 							<div class="row-fluid">
@@ -179,11 +172,11 @@ type='text/css'>
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-5 col-md-5 wdgt-hgt-new">
+				<div class="col-sm-6">
 					<div class="customDiv bkgd-blue" ng-click="acqFunnelWidget('Cancellations')"
 					 ng-class="{'active': acqFunnelWidgets[3].selected}">
 						<div class="">
-							<div class="panel-heading">Cancellations</div>
+							<div class="panel-heading text-center">Cancellations</div>
 						</div>
 						<div class="widget-content">
 							<div class="row-fluid">

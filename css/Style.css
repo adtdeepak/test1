@@ -6117,11 +6117,18 @@ a.tooltip-new span {
 	}
 }
 
+@media (max-width: 1024px) and (min-width:768px) {
+    .acquisition-panel{margin-top: -20px !important;}
+    .time-nav{  right: 25px !important; }
+   
+}
+
 @media all and (max-width: 1160px) and (min-width:1024px) {
 	#menu-container ul.tab-menu li ul li.first {
 		padding-left: 0px;
 	}
 }
+ .time-nav{position: fixed;  right: 105px; top: 50px; z-index: 1000;}
 
 .filter-label {
 	float: left;
@@ -8267,7 +8274,7 @@ div#progressBar {
 }
 .acquisition-panel{
 	clear: both;
-	margin-top: 30px;
+	margin-top: 45px;
 	margin-bottom: 10px;
 	border: 1px solid #d0d0d0;
 	position: relative;
