@@ -14,7 +14,7 @@
                     "actualToDate": "62",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "62",
-                    "subgroupName": "EAScore",
+                    "subgroupName": "Engagement Score",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "0.03",
@@ -217,7 +217,7 @@
                     "actualToDate": "8100",
                     "actualToDateTrend": "-ve",
                     "monthlyAvg": "8108",
-                    "subgroupName": "Esign",
+                    "subgroupName": "eSign",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "226",
@@ -283,7 +283,7 @@
                     "actualToDate": "62",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "62",
-                    "subgroupName": "EAScore",
+                    "subgroupName": "Engagement Score",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "0.05",
@@ -486,7 +486,7 @@
                     "actualToDate": "18630",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "34864",
-                    "subgroupName": "Esign",
+                    "subgroupName": "eSign",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "339",
@@ -552,7 +552,7 @@
                     "actualToDate": "61",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "62",
-                    "subgroupName": "EAScore",
+                    "subgroupName": "Engagement Score",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "0.76",
@@ -755,7 +755,7 @@
                     "actualToDate": "61479",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "115052",
-                    "subgroupName": "Esign",
+                    "subgroupName": "eSign",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "881",
@@ -821,7 +821,7 @@
                     "actualToDate": "60",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "62",
-                    "subgroupName": "EAScore",
+                    "subgroupName": "Engagement Score",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "2.4",
@@ -1024,7 +1024,7 @@
                     "actualToDate": "242190",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "460210",
-                    "subgroupName": "Esign",
+                    "subgroupName": "eSign",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "3524",
