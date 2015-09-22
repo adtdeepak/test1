@@ -12,8 +12,8 @@
                     "checked": true
                 },
                 {
-                    "menuItemID": "m_newPaidUsers",
-                    "menuItemName": "New Paid Users",
+                    "menuItemID": "m_reg",
+                    "menuItemName": "Registrations",
                     "menuType": "widget",
                     "checked": true
                 },
@@ -24,14 +24,14 @@
                     "checked": true
                 },
                 {
-                    "menuItemID": "m_reg",
-                    "menuItemName": "Registrations",
+                    "menuItemID": "m_newPaidUsers",
+                    "menuItemName": "New Paid Users",
                     "menuType": "widget",
                     "checked": true
                 },
                 {
                     "menuItemID": "m_convRate",
-                    "menuItemName": "Cost of Acqusition",
+                    "menuItemName": "Cost of Acquisition",
                     "menuType": "widget",
                     "checked": true
                 },

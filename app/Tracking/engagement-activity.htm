@@ -56,7 +56,7 @@
 								<label> Select widget</label>
 							</div>
 							<div class="popupcnt">
-								<input type="checkbox" checked="true" disabled="true" /><label>EA
+								<input type="checkbox" checked="true" disabled="true" /><label>Engagement
 									Score </label>
 							</div>
 							<div class="popupcnt top" ng-repeat="data in userSettings.menus">
@@ -89,8 +89,8 @@
 											
 											<div ng-class="{'value-red trackingLink':data.versusLast.trend=='-ve' , 'value-orange trackingLink':data.versusLast.trend=='+ve' , 'value-green trackingLink':data.actualValue.level=='high'}">
 											{{data.actualToDate| number}}</div>
-                                            <p ng-if="data.subgroupName=='EAScore'" class='widget-text'>(in Percentage)</p>
-                                            <p ng-if="data.subgroupName!='EAScore'" class='widget-text'>(Count of users)</p>
+                                            <p ng-if="data.subgroupName=='Engagement Score'" class='widget-text'>(in Percentage)</p>
+                                            <p ng-if="data.subgroupName!='Engagement Score'" class='widget-text'>(Count of users)</p>
                                             <p class="value1"><span class="ng-binding">{{data.monthlyAvg| number}}</span</p>
 											<p class="duration">4 {{timePeriod}} Average</p>
                                             

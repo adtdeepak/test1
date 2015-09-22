@@ -19,7 +19,7 @@ window.CONFIG = {
 window.MENU_WIDGET_LINK = {
 	m_revenue : "Revenue",
 	m_newPaidUsers : "NewPaidUsers",
-	m_convRate : "CostofAcqusition",
+	m_convRate : "CostofAcquisition",
 	m_reg : "Registrations",
 	m_arpu : "ARPU",
 	m_newRevenue : "NewRevenue",

@@ -19,7 +19,7 @@
                 },
                 {
                     "menuItemID": "m_EsignUsers",
-                    "menuItemName": "Esign",
+                    "menuItemName": "eSign",
                     "menuType": "module",
                     "checked": true
                 },

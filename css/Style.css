@@ -8445,9 +8445,9 @@ div#progressBar {
   color: #525252;
   margin-top: -15px;
   line-height: 20px;
-  padding-left: 16px;
+  padding-left: 0px;
   list-style: none;
-  text-align: left;
+  text-align: center;
 }
 
 [ng-controller="businessImpactMatricesController"] ul li :hover{
