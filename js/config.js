@@ -86,38 +86,38 @@ window.appConstants = {
 	
 	//summary
 	track_BI_summary_forecast_monthly: "Forecast for this month",
-	track_BI_comparedLast_monthly : "Compared to last month",
-	track_BI_comparedLastYear_monthly : "Compared to same week last month",
+	track_BI_comparedLast_monthly : "Versus last month",
+	track_BI_comparedLastYear_monthly : "Versus same week last month",
 	
 	track_BI_summary_forecast_weekly: "Forecast for this week",
-	track_BI_comparedLast_weekly : "Compared to last week",
-	track_BI_comparedLastYear_weekly : "Compared to same week last year",
+	track_BI_comparedLast_weekly : "Versus last week",
+	track_BI_comparedLastYear_weekly : "Versus same week last year",
 	
 	track_BI_summary_forecast_quarterly : "Forecast for this quarter",
-	track_BI_comparedLast_quarterly : "Compared to last quarter",
-	track_BI_comparedLastYear_quarterly : "Compared to same quarter last year",
+	track_BI_comparedLast_quarterly : "Versus last quarter",
+	track_BI_comparedLastYear_quarterly : "Versus same quarter last year",
 	
 	track_BI_summary_forecast_yearly : "Forecast for this year",
-	track_BI_comparedLast_yearly : "Compared to last year",
-	track_BI_comparedLastYear_yearly : "Compared to last year",
+	track_BI_comparedLast_yearly : "Versus last year",
+	track_BI_comparedLastYear_yearly : "Versus last year",
 	
 	//Engagement activity constants
 	//summary
 	track_EA_summary_forecast_monthly: "Forecast for this month",
-	track_EA_comparedLast_monthly : "Compared to last month",
-	track_EA_comparedLastYear_monthly : "Compared to same week last month",
+	track_EA_comparedLast_monthly : "Versus last month",
+	track_EA_comparedLastYear_monthly : "Versus same week last month",
 	
 	track_EA_summary_forecast_weekly: "Forecast for this week",
-	track_EA_comparedLast_weekly : "Compared to last week",
-	track_EA_comparedLastYear_weekly : "Compared to same week last year",
+	track_EA_comparedLast_weekly : "Versus last week",
+	track_EA_comparedLastYear_weekly : "Versus same week last year",
 	
 	track_EA_summary_forecast_quarterly : "Forecast for this quarter",
-	track_EA_comparedLast_quarterly : "Compared to last quarter",
-	track_EA_comparedLastYear_quarterly : "Compared to same quarter last year",
+	track_EA_comparedLast_quarterly : "Versus last quarter",
+	track_EA_comparedLastYear_quarterly : "Versus same quarter last year",
 	
 	track_EA_summary_forecast_yearly : "Forecast for this year",
-	track_EA_comparedLast_yearly : "Compared to last year",
-	track_EA_comparedLastYear_yearly : "Compared to last year",
+	track_EA_comparedLast_yearly : "Versus last year",
+	track_EA_comparedLastYear_yearly : "Versus last year",
 	
 	track_EA_averagePeriod_weekly : "4 weeks Average",
 	track_EA_averagePeriod_monthly : "4 months Average",

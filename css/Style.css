@@ -4539,7 +4539,7 @@ ul.acquisitiontabs li:last-child {
 	background: -ms-linear-gradient(top, #ffffff 0%, #efefef 100%);
 	/* IE10+ */
 	background: linear-gradient(to bottom, #ffffff 0%, #efefef 100%);
-	cursor: pointer;
+	cursor: auto;
 	position: relative;
 }
 
@@ -6000,7 +6000,7 @@ h3.subTitle {
 	color: #2b2b2b;
 	font-weight: 600;
 	font-family: Arial, Sans-Serif !important;
-	padding-bottom: 10px;
+	/* padding-bottom: 10px; */
 }
 
 .popupcnt {
@@ -6008,7 +6008,7 @@ h3.subTitle {
 }
 
 .popupcnt.top {
-	padding-top: 10px;
+	padding-top: 0px;
 }
 
 .popupcnt label {
@@ -8274,7 +8274,7 @@ div#progressBar {
 }
 .acquisition-panel{
 	clear: both;
-	margin-top: 45px;
+	margin-top: 30px;
 	margin-bottom: 10px;
 	border: 1px solid #d0d0d0;
 	position: relative;
@@ -8880,6 +8880,11 @@ div#progressBar {
 }
 .campaign-overview #productUsageTable tr:hover td, .campaign-overview #onGoingCampaignTable tr:hover td, .campaign-overview #pastCampaignTable tr:hover td{
     background: none !important;
+}
+.text-ellipsis {
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 /* media query */
 @media (min-width: 320px) {

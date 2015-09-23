@@ -258,7 +258,7 @@ type='text/css'>
 						<div class="col-sm-11 col-md-11 metrics-content metrics-content-height">
 							<a href="{{trackingHtmlName}}.htm#/business-impact?currentlySelected={{data.subGroupBy}}&&name={{data.subgroupName}}">
 								<div class="box-content-top">
-									<h3>{{data.subgroupName}}</h3>
+									<h3 class="text-ellipsis" title="{{data.subgroupName}}">{{data.subgroupName}}</h3>	
 									<div class="value-orange trackingLink">{{data.actualToDate}}</div>
 									<p
 										ng-if="data.subgroupName =='Revenue' || data.subgroupName =='Cost of Acquisition' || data.subgroupName=='ARPU' && data.subgroupName!='Free To Paid Conversion'"
@@ -327,8 +327,7 @@ type='text/css'>
 							<a
 								href="{{trackingHtmlName}}.htm#/engagement-activity?currentlySelected={{data.subGroupBy}}&&name={{data.subgroupName}}">
 								<div class="box-content-top">
-									<h3>{{data.subgroupName}}</h3>
-									
+									<h3 class="text-ellipsis" title="{{data.subgroupName}}">{{data.subgroupName}}</h3>
 									<div class="value-orange">{{data.actualToDate| number}}</div>
                                     <p ng-if="data.subgroupName=='Engagement Score'" class='widget-text'>(in
 										Percentage)</p>
@@ -379,7 +378,7 @@ type='text/css'>
 							<div class="box-content-top">
 								<a
 									href="{{trackingHtmlName}}.htm#/user-group-engagement?currentlySelected={{data.groupBy}}&&name={{data.groupName}}">
-									<h3>{{data.groupName}}</h3>									
+									<h3 class="text-ellipsis" title="{{data.groupName}}">{{data.groupName}}</h3>									
 									<div class="value-green trackingLink">
 										{{data.actual| number}}</div>
                                     <p class='widget-text'>(Count of members)</p>

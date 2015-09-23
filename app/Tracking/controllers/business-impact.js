@@ -186,7 +186,7 @@ angular.module('Tracking')
     $scope.success = function (businessImpactTrendData) {
         try {
         	if($rootScope.selectedPeriod == "weekly")
-             	$scope.trendPeriod = "Sept 06 to Sept 13";
+             	$scope.trendPeriod = "Sept 06 to Sept 12";
              if($rootScope.selectedPeriod == "monthly")
              	$scope.trendPeriod = "Sept 01 to Sept 30";
              if($rootScope.selectedPeriod == "quarterly")
