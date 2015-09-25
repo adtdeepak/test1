@@ -4556,12 +4556,13 @@ ul.acquisitiontabs li:last-child {
 }
 
 .summary-list li {
-	width: 20%;
+	/* width: 20%; */
 	float: left;
 	text-align: center;
 	min-height: 75px;
 	list-style: none;
 	position: relative;
+	margin-bottom: 15px;
 }
 
 .summary-list li.width {
@@ -8359,6 +8360,20 @@ div#progressBar {
 .metrics-content a{
 	text-decoration:none;
 }
+.metrics-content.selected{
+	background: #555555;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color:#fff;
+}
+.metrics-content.selected h3{
+	color:#2EABD0;
+}
+.metrics-content.selected .value-orange{
+	color: #f5874f;
+}
 .metric-widgets li{
 	list-style:none;
 	margin-bottom:20px;
@@ -8397,7 +8412,6 @@ div#progressBar {
 }
 .metric-widgets>li .value1 {
   margin-top: 10px;
-  color: #2b2b2b;
   font-size: 12px;
 }
 
@@ -8405,7 +8419,6 @@ div#progressBar {
   color:#fff;
 }
 .metric-widgets>li .duration, .metric-widgets>li .duration1 {
-  color: #525252;
   font-size: 12px;
 }
 .metric-widgets>li :hover .duration, .metric-widgets>li :hover .duration1 {
@@ -8435,21 +8448,18 @@ div#progressBar {
 }
 .metric-widgets .box-content-bottom ul li.down {
   background: url('../images/arrow-red.png') no-repeat left center;
-  color: #525252;
 }
 .metric-widgets :hover .box-content-bottom ul li.down {
 	color: #fff;
 }
 .metric-widgets .box-content-bottom ul li.up {
   background: url('../images/arrow-green.png') no-repeat left center;
-  color: #525252;
 }
 .metric-widgets :hover  .box-content-bottom ul li.up {
 	color: #fff;
 }
 .metric-widgets .box-content-bottom ul li {
   font-size: 12px;
-  color: #525252;
   margin-top: -15px;
   line-height: 20px;
   padding-left: 0px;
@@ -8919,6 +8929,9 @@ div#progressBar {
 	.big-fontSize {
 	  font-size: 20px;
 	}
+	.summary-list li .summary-value{
+		font-size: 14px;
+	}
 }
 @media (min-width: 360px) {
 	#analysis-cl.container{
@@ -8929,6 +8942,9 @@ div#progressBar {
 	}
 	.big-fontSize {
 	  font-size: 20px;
+	}
+	.summary-list li .summary-value{
+		font-size: 14px;
 	}
 }
 @media (min-width: 768px) {
@@ -8962,6 +8978,9 @@ div#progressBar {
 	}
 	.big-fontSize {
 	  font-size: 27px;
+	}
+	.summary-list li .summary-value{
+		font-size: 20px;
 	}
 }
 

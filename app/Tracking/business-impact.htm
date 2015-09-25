@@ -10,85 +10,70 @@
 </ul>
 </div>
 	<div class="row nopadding" ng-controller="businessImpactMatricesController" ng-if ="isBusinessImpactViewable">
-			<div class="row AcquisitionPanel contentPanel1">
+			<div class="row nopadding AcquisitionPanel contentPanel1">
                  <div style="margin-bottom:0px;" class="panel panel-default">
 					<div class="panel-heading">Key Business Metrics</div>
 				</div>
 				
 				<a href="javascript:;" class="pull-right filter-option-menu filter-option-menu1"> </a>
-					<div class="options-filter options-filter1  width clearfix">
-						<img src="images/popmenu-arrow.png" class="popmenu-arrow" />
-						<div>
-							<div class="popupTitle">
-								<label> Select widget</label>
-							</div>
-							<div class="popupcnt top" ng-repeat="data in userSettings.menus">
-									<div class="height">
-										<input type="checkbox" ng-model="data.checked" ng-change="menu.onSelect(data)"> 
-										<label>{{data.menuItemName}}</label>
-									</div>
-									
-								</div>
+				<div class="options-filter options-filter1  width clearfix">
+					<img src="images/popmenu-arrow.png" class="popmenu-arrow" />
+					<div>
+						<div class="popupTitle">
+							<label> Select widget</label>
 						</div>
-					</div>
-				<div class="filterContainer">
-					<div class="contentPanel">
-					<p class="widget-title pull-right" style="padding-right:28px">As of Saturday, September 12, 2015</p>
-                        <ng-include ng-show="error" src="'partials/error.htm'"></ng-include>
-                        <div class="progress-loading" ng-if="!error && !dataLoaded"></div>
-						<ul ng-hide="error" class="box-list clearfix" >
-							<li ng-repeat="data in businessImpact"  ng-hide="data.display==false" ng-if="menuSynced" ng-click="menu.widgetSelected(data)">
-								<div class="box-list-innerwrap ">
-									<div ng-class="{'box-listShadow': true, selected: data.subGroupBy==select}">
-										<!-- <a href="#" class="help tooltip-new">
-											<figure>
-												<img src="images/icon-info.png" />
-											</figure>
-											<span><img alt="Tooltip" src="images/tooltip-arrow.png" class="callout">{{Tooltip.TOOLTIP_TRAC_SUMMARY_BUSINESSIMPACT[data.subGroupBy]}}</span>
-										</a> -->
-										<div class="box-content-top">
-											<h3>{{data.subgroupName}}</h3>
-											<div
-												class="value-orange trackingLink">
-												{{data.actualToDate}}</div>
-												<p ng-if="data.subgroupName =='Revenue' || data.subgroupName =='Cost of Acqusition'
-												 || data.subgroupName=='ARPU' || data.subgroupName=='Recurring Revenue' || data.subgroupName=='New Revenue'" class='widget-text'>(in USD)</p>
-											<p ng-if="data.subgroupName !='Revenue' && data.subgroupName !='Cost of Acqusition' && data.subgroupName!='ARPU'
-											  && data.subgroupName!='Free To Paid Conversion' && data.subgroupName!='Recurring Revenue' && data.subgroupName!='New Revenue'" class='widget-text'>(Number of users)</p>
-											<p ng-if="data.subgroupName =='Free To Paid Conversion'" class='widget-text'>(in Percentage)</p>
-											<!-- <p class="duration">Week To Date Actual</p> -->
-											<p class="value1">
-												<span>{{data.forecast.value}}</span>
-											</p>
-											<p class="duration1" style="margin-top: -10px;">{{forecastText}}</p>
-										</div>
-										<div class="box-content-bottom">
-											<ul>
-												<li class="{{data.versusLast.trend=='-ve'?'down':'up'}}">{{data.versusLast.value}}
-													{{vsLastText}}</li>
-												<li class="{{data.versusSameLastYear.trend=='-ve'?'down':'up'}}">{{data.versusSameLastYear.value}}
-													{{vsLastYearText}}</li>
-											</ul>
-										</div>
-									</div>
+						<div class="popupcnt top" ng-repeat="data in userSettings.menus">
+								<div class="height">
+									<input type="checkbox" ng-model="data.checked" ng-change="menu.onSelect(data)"> 
+									<label>{{data.menuItemName}}</label>
 								</div>
-							</li>
-						</ul>
+								
+							</div>
 					</div>
 				</div>
+				<p class="widget-title pull-right" style="padding-right:28px; margin-top: 6px;">As of Saturday, September 12, 2015</p> 
+				<ul class="row-fluid metric-widgets"
+					style="margin:  44px 20px 10px 10px;" data-page="businessImpact">
+					<li class="col-md-5ths col-xs-6" ng-repeat="data in businessImpact"
+						ng-hide="data.display == false" ng-click="menu.widgetSelected(data)">
+						<div class="col-sm-11 col-md-11 metrics-content metrics-content-height"
+						 ng-class="{selected: data.subGroupBy==select}">
+								<div class="box-content-top">
+									<h3 class="text-ellipsis" title="{{data.subgroupName}}">{{data.subgroupName}}</h3>	
+									<div class="value-orange trackingLink">{{data.actualToDate}}</div>
+									<p
+										ng-if="data.subgroupName =='Revenue' || data.subgroupName =='Cost of Acquisition' || data.subgroupName=='ARPU' && data.subgroupName!='Free To Paid Conversion'"
+										class='widget-text'>(in USD)</p>
+									<p
+										ng-if="data.subgroupName !='Revenue' && data.subgroupName !='Cost of Acquisition' && data.subgroupName!='ARPU' && data.subgroupName!='Free To Paid Conversion'"
+										class='widget-text'>(Count of users)</p>
+									<p
+										ng-if="data.subgroupName =='Free To Paid Conversion'"
+										class='widget-text'>(in Percentage)</p>
+									<p class="value1">
+										<span>{{data.forecast.value}}</span>
+									</p>
+									<p class="duration1">{{forecastText}}</p>
+								</div>
+								<div class="box-content-bottom">
+									<ul>
+										<li class="{{data.versusLast.trend=='-ve'?'down':'up'}}">{{data.versusLast.value}} {{vsLastText}}</li>
+										<li
+											class="{{data.versusSameLastYear.trend=='-ve'?'down':'up'}}">{{data.versusSameLastYear.value}} {{vsLastYearText}}</li>
+									</ul>
+								</div>
+						</div>
+					</li>
+				</ul>
 			</div>
 			</div>
 			<div ng-controller="businessImpactSummaryController" ng-if ="isBusinessImpactViewable">
-			<div class="AcquisitionPanel">
+			<div class="row AcquisitionPanel">
                  <div style="margin-bottom:0px;" class="panel panel-default">
 					<div class="panel-heading"> {{heading}} Summary</div>
 				</div>
-				
-				<div class="Acquisition">
-					<div class="contentPanel">
-					 <div class="progress-loading" ng-if="!error && !dataLoaded"></div>
-                        <ng-include ng-show="error" src="'partials/error.htm'"></ng-include>
-						 <ul ng-hide="error" class="row-fluid summary-list clearfix">
+				<ul ng-hide="error" class="row-fluid summary-list clearfix"
+				style="margin: 20px 0px 5px 10px;">
                                         <li ng-show="businessImpactSummary.versusLast.value" class="col-md-5ths col-xs-6">
                                             <div class="summarylistInnerwrap">
                                                  <p>
@@ -145,240 +130,27 @@
                                             </div>
                                         </li>
                                     </ul>
-					</div>
-				</div>
-			</div>
-			</div>
-			<div ng-controller = "businessImpactTrendController" ng-if ="isBusinessImpactViewable">
-			<div class="AcquisitionPanel">
-                 <div style="margin-bottom:0px;" class="panel panel-default">
-					<div class="panel-heading">{{heading}} Trend</div>
-				</div>
 				
-				<div class="Acquisition">
-					<div class="contentPanel tableHeading">
-						<!-- <div class="chartTitle">
-							<h3 class="chartTitleText">Key Business Matrices</h3>
-						</div> -->
-						 <div class="progress-loading" ng-if="!error && !dataLoaded"></div>
-						<p class="widget-title pull-right" style="padding-right:7px;margin-top: -23px;">Current period from {{trendPeriod}}, 2014</p>
-                        	<a href="#" class="help tooltip-new">
-								<figure>
-									<img src="images/icon-info.png" />
-								</figure>
-								<span><img alt="Tooltip" src="images/tooltip-arrow.png" class="callout">
-									{{Tooltip.TOOLTIP_TRAC_BI_TREND}}</span>
-							</a> 
-                        <ng-include ng-show="error" src="'partials/error.htm'" class="forChart"></ng-include>
-						<div ng-hide="error" id="subsTrendChart" class="DivAcquisitionChart"></div>
-						<div ng-hide="error" id="subsTrendCohort" class="hidden gridRow3 ">
-							<section class="gridRowInnerWrap ">
-								<table class="GDtable">
-								
-									<thead>
-										<tr>
-											<th>period</th>
-											<th>Day 1</th>
-											<th>Day 2</th>
-											<th>Day 3</th>
-											<th>Day 4</th>
-											<th>Day 5</th>
-											<th>Day 6</th>
-											<th>Day 7</th>
-											<th>Day 8</th>
-											<th>Day 9</th>
-											<th>Day 10</th>
-											<th>Day 11</th>
-											<th>Day 12</th>
-											<th>Day 13</th>
-											<th>Day 14</th>
-											<th>Day 15</th>
-										</tr>
-									</thead>
-									<tbody>
-										<!-- <tr ng-repeat="data in businessImpactCohort.data"> -->
-										<!-- For network call -->
-										<tr ng-repeat="data in businessImpactCohort">
-											<td ng-repeat="data in data">
-												{{data.value}}
-											</td>
-										</tr>
-									</tbody>
-								</table>
-								<a href="#" class="zoomThis"></a>
-							</section>
-						</div>
-					</div>
-				</div>
 			</div>
 			</div>
-        <!--
-			<div ng-controller="businessImpactDeepDiveController" ng-if ="isBusinessImpactViewable">
-			<div class="AcquisitionPanel">
-				<article class="title_panel clearfix">
-					<p class="pull-left heading">
-						<span>{{heading}} Deep Dive</span>
-					</p>
-					<span class="valid30 pull-right"> </span>
-				</article>
-				<div class="tab_container Acquisition tableHeading">
-					<div class="contentPanel">
-					<div class="progress-loading" ng-if="!error && !dataLoaded"></div>
-                        <ng-include ng-show="error" src="'partials/error.htm'"></ng-include>
-						<section ng-hide="error" class="tablecontent contentScroll-disabled">
-						<div id="deepDive1">
-						<table ng-hide="error || !dataLoaded" class="GDtable" my-table options="options">
-								<colgroup>
-									<col>
-									<col>
-									<col>
-									<col>
-									<col>
-									<col>
-									<col>
-								</colgroup>
-								<thead>
-									<tr>
-										<th>User Group</th>
-										<th>WTD Actual</th>
-										<th>Forecast this {{timePeriodText}}</th>
-										<th>Target this {{timePeriodText}}</th>
-										<th>Difference from Target</th>
-										<th>Vs. Last {{timePeriodText}}</th>
-										<th>Vs. Same {{sameLastYearText}}</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr ng-repeat="data in businessImpactDeepDive">
-										<td >{{data.userGroupName}}</td>
-										<td ><span>{{data.wtdActual}}</span></td>
-										<td >{{data.curWeekForecast}}</td>
-										<td ><span>{{data.curWeekTarget}}</span></td>
-										<td>{{data.diffFromTarget}}</td>
-										<td class="center up">
-											<figure ng-if='data.versusLastWeekTrend=="up"'>
-												<img  src="images/arrow-up-green.png" alt="arrow"
-													width="10px" height="5px" title="arrow" />{{data.versusLastWeek}}</figure>
-											<figure ng-if='data.versusLastWeekTrend=="down"'>
-												<img  src="images/arrow-red.png" alt="arrow"
-													width="10px" height="5px" title="arrow" />{{data.versusLastWeek}}</figure>
-										</td>
-										<td class="center">
-											<figure ng-if='data.versusLastWeekTrend=="up"'>
-												<img  src="images/arrow-up-green.png" alt="arrow"
-													width="10px" height="5px" title="arrow" />{{data.versusLastYear}}</figure>
-											<figure ng-if='data.versusLastWeekTrend=="down"'>
-												<img  src="images/arrow-red.png" alt="arrow"
-													width="10px" height="5px" title="arrow" />{{data.versusLastYear}}</figure>
-										</td>
-									</tr>
-								</tbody>
-								</table>
-						 <!--  <table class="GDtable">
-								<thead>
-									<tr>
-										<th>User Group</th>
-										<th>WTD Actual</th>
-										<th>Forecast this week</th>
-										<th>Target this week</th>
-										<th>Difference from Target</th>
-										<th>Vs. Last week</th>
-										<th>Vs. Same week Last year</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr ng-repeat="data in businessImpactDeepDive">
-										<td >{{data.userGroupName}}</td>
-										<td ><span>{{data.wtdActual}}</span></td>
-										<td >{{data.curWeekForecast}}</td>
-										<td ><span>{{data.curWeekTarget}}</span></td>
-										<td>{{data.diffFromTarget}}</td>
-										<td class="center up">
-											<figure ng-if='data.versusLastWeekTrend=="up"'>
-												<img  src="images/arrow-up-green.png" alt="arrow"
-													width="10px" height="5px" title="arrow" />{{data.versusLastWeek}}</figure>
-											<figure ng-if='data.versusLastWeekTrend=="down"'>
-												<img  src="images/arrow-red.png" alt="arrow"
-													width="10px" height="5px" title="arrow" />{{data.versusLastWeek}}</figure>
-										</td>
-										<td class="center">
-											<figure ng-if='data.versusLastWeekTrend=="up"'>
-												<img  src="images/arrow-up-green.png" alt="arrow"
-													width="10px" height="5px" title="arrow" />{{data.versusLastYear}}</figure>
-											<figure ng-if='data.versusLastWeekTrend=="down"'>
-												<img  src="images/arrow-red.png" alt="arrow"
-													width="10px" height="5px" title="arrow" />{{data.versusLastYear}}</figure>
-										</td>
-									</tr>
-								</tbody>
-							</table> 
-							<a href="#" class="zoomThis"></a>
-							</div>
-							</section>
-							</div>
-							
-						<div id="deepDive2" class="hidden gridRow3">
-                            <ng-include ng-show="error" src="'partials/error.htm'"></ng-include>
-							<section ng-hide="error" class="gridRowInnerWrap">
-									<table class="GDtable">
-									
-								<thead>
-									<tr>
-										<th>User Group</th>
-										<th>Free User</th>
-										<th>Paid User</th>
-										<th>Conversion Rate</th>
-										<th>Projection this Week</th>
-										<th>Last Week</th>
-										<th>MOM</th>										
-										<th>Next Week Forecast</th>
-										<th>This Week Target</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr ng-repeat="data in businessImpactCohortDeepDive.data">
-										<td class="left">{{data.userGroupName}}</td>
-										<td class="center"><span>{{data.FreeUserCount}}</span></td>
-										<td class="left">{{data.PaidUserCount}}</td>
-										<td class="left">{{data.convRate}}</td>
-										<td class="left">{{data.CurWeekProj}}</td>
-										<td class="center up">
-											<figure>
-												<img ng-if='data.LastWeekTrend<"0"' src="images/arrow-red.png" alt="arrow"
-													width="10px" height="5px" title="arrow" /><label ng-if='data.LastWeekTrend<"0"'>{{data.LastWeekTrend.substr(1)}}</label>
-												<img ng-if='data.LastWeekTrend>"0"' src="images/arrow-up-green.png" alt="arrow"
-													width="10px" height="5px" title="arrow" /><label ng-if='data.LastWeekTrend>"0"'>{{data.LastWeekTrend}}</label></figure>
-										</td>
-										<td class="center">
-											<figure>
-												<img ng-if='data.MOM<"0"' src="images/arrow-red.png" alt="arrow"
-													width="10px" height="5px" title="arrow" /><label ng-if='data.MOM<"0"'>{{data.MOM.substr(1)}}</label>
-												<img ng-if='data.MOM>"0"' src="images/arrow-up-green.png" alt="arrow"
-													width="10px" height="5px" title="arrow" /><label ng-if='data.MOM>"0"'>{{data.MOM}}</label></figure>
-											
-										</td>
-										<td class="center">
-											<figure>
-												<img ng-if='data.NextWeekForecast<"0"' src="images/arrow-red.png" alt="arrow"
-													width="10px" height="5px" title="arrow" /><label ng-if='data.NextWeekForecast<"0"'>{{data.NextWeekForecast.substr(1)}}</label>
-												<img ng-if='data.NextWeekForecast>"0"' src="images/arrow-up-green.png" alt="arrow"
-													width="10px" height="5px" title="arrow" /><label ng-if='data.NextWeekForecast>"0"'>{{data.NextWeekForecast}}</label></figure>
-											
-										</td>
-										<td class="left">{{data.CurWeekTarget}}</td>
-									</tr>
 
-								</tbody>
-							</table>
-								<a href="#" class="zoomThis"></a>
-							</section>
-						</div>
-						</section>
-					</div>
-				</div>
-				</div>
+
+		<div class="row acquisition-panel"
+			ng-controller="businessImpactTrendController"
+			ng-if="isBusinessImpactViewable">
+			<div style="margin-bottom: 15px;" class="panel panel-default">
+				<div class="panel-heading">{{heading}} Trend</div>
 			</div>
-	</div>-->
+
+			<div class="row-fluid" style="padding: 0px 11px;">
+				<div class="pull-right chart-textNote" style="">Current period
+					from {{trendPeriod}}, 2015</div>
+			</div>
+			<div class="row" style="margin-top: 30px; margin-bottom: 10px">
+				<div ng-hide="error" class="DivAcquisitionChart" id="subsTrendChart"></div>
+			</div>
+		</div>
+
 
 <!----------------------------------------------->
 <div id="boxes">

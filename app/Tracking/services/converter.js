@@ -167,12 +167,16 @@ angular.module('Tracking')
 	this.toBusinessImpactTrend = function(data) {
 		var resultData = {};
 		var yAxisTitle = data.yAxisTitle;
+		var yAxisPrefix = "";
+		if(data.groupBy=='Revenue' || data.groupBy=='CostofAcqusition'){
+			yAxisPrefix = "$";
+		}
 		$.each(data.timeRanges, function(key, timeRange) {
 			var _data = {};
 			var startOfWeek;
 			var endOfWeek;
 			// Getting Chart options from ChartOptionsService
-			_data['chartOptions'] = ChartOptionsService.getBusinessImpactTrend(yAxisTitle);
+			_data['chartOptions'] = ChartOptionsService.getBusinessImpactTrend(yAxisTitle, yAxisPrefix);
 			var chartData = [];
 			var target = [];
 			var actual = [];

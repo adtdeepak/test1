@@ -99,6 +99,10 @@ angular.module('Tracking')
     var errorConstants = RequestConstantsFactory['ERROR_MSGS'];
     $scope.dataLoaded = false;
     $scope.urlIndex = $location.search();
+    
+    if(!$scope.urlIndex.currentlySelected){
+    	$scope.urlIndex = {"currentlySelected": "MobileAppuser", "name": "Mobile App"}
+    }
     $scope.select = $scope.urlIndex.currentlySelected;
     $scope.menuType = [];
     $scope.menuData = [];
@@ -109,33 +113,37 @@ angular.module('Tracking')
 
     $scope.menu.getUserSettings("EA",
 			function (userSettingsData) {
-    	//console.log("getUserSettings:", userSettingsData)
 			    $scope.userSettings = userSettingsData;
 			});
 
     //Watch for SummaryExpired
     $rootScope.$on('onCacheExpiry', loadData);
 
-    $scope.$on('periodChange', loadData);
+    $scope.$on('periodChange', updateData);
     $scope.$on('menuSave', function () {
         $scope.menu.saveMenu("EA", "", $scope.userSettings);
     });
     
-
+   function updateData(){
+    	 $scope.dataLoaded = true;
+         $scope.error = false;
+         if (!$scope.successData[$rootScope.selectedPeriod])
+             throw { message: "Selected period data not available!", type: "internal" };
+         $scope.engagementActivity = $scope.successData[$rootScope.selectedPeriod];
+         $.each($scope.successData[$rootScope.selectedPeriod], function(key, value){
+        	 if(value.subGroupBy == $scope.select){
+        		 $scope.menu.setData($scope.engagementActivity);
+             	 $scope.menu.widgetSelected(value);
+        	 }
+         })
+         $scope.averageTimePeriodText = $scope.Constants[$scope.Constants.EA_Prefix + 'averagePeriod_' + $scope.selectedPeriod];
+    }
+    
     $scope.success = function (engagementActivity) {
         try {
-            if($rootScope.selectedPeriod == 'weekly'){
-            	$scope.timePeriod = "Weekly";
-            }else {
-            	$scope.timePeriod = "Monthly";
-            }
-            $scope.dataLoaded = true;
-            $scope.error = false;
-            if (!engagementActivity[$rootScope.selectedPeriod])
-                throw { message: "Selected period data not available!", type: "internal" };
-            $scope.engagementActivity = engagementActivity[$rootScope.selectedPeriod];
+        	$scope.successData = engagementActivity;
+        	updateData();
             $scope.menu.setData($scope.engagementActivity);
-            $scope.averageTimePeriodText = $scope.Constants[$scope.Constants.EA_Prefix + 'averagePeriod_' + $scope.selectedPeriod];
         } catch (e) {
             $scope.error = true;
             UtilitiesService.throwError(e);
@@ -246,6 +254,15 @@ angular.module('Tracking')
     $scope.$on('periodChange', loadData);
     $scope.$on('dataReady', loadData);
 
+    if($rootScope.selectedPeriod == "weekly")
+     	$scope.trendPeriod = "Sept 06 to Sept 12";
+     if($rootScope.selectedPeriod == "monthly")
+     	$scope.trendPeriod = "Sept 01 to Sept 30";
+     if($rootScope.selectedPeriod == "quarterly")
+     	$scope.trendPeriod = "Jul 01 to Sept 30";
+     if($rootScope.selectedPeriod == "yearly")
+     	$scope.trendPeriod = "Jan 01 to Sept 30";
+    
     $scope.success = function (engagementActivityTrend) {
         try {
             $scope.dataLoaded = true;

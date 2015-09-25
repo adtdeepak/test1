@@ -87,7 +87,7 @@ window.appConstants = {
 	//summary
 	track_BI_summary_forecast_monthly: "Forecast for this month",
 	track_BI_comparedLast_monthly : "Versus last month",
-	track_BI_comparedLastYear_monthly : "Versus same week last month",
+	track_BI_comparedLastYear_monthly : "Versus same month last year",
 	
 	track_BI_summary_forecast_weekly: "Forecast for this week",
 	track_BI_comparedLast_weekly : "Versus last week",
@@ -105,7 +105,7 @@ window.appConstants = {
 	//summary
 	track_EA_summary_forecast_monthly: "Forecast for this month",
 	track_EA_comparedLast_monthly : "Versus last month",
-	track_EA_comparedLastYear_monthly : "Versus same week last month",
+	track_EA_comparedLastYear_monthly : "Versus same month last year",
 	
 	track_EA_summary_forecast_weekly: "Forecast for this week",
 	track_EA_comparedLast_weekly : "Versus last week",

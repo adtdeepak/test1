@@ -21,17 +21,12 @@ angular.module('Tracking')
 
 .controller("businessImpactMatricesController", function ($scope, $rootScope,Permission, MenuService, NetworkService, DataService, RequestConstantsFactory ,UtilitiesService, sharedProperties, $location, DataConversionService, StorageService) {
 
-    if($rootScope.selectedPeriod == "weekly")
-    	$scope.trendPeriod = "Nov 09 to Nov 13";
-    if($rootScope.selectedPeriod == "monthly")
-    	$scope.trendPeriod = "Nov 01 to Nov 13";
-    if($rootScope.selectedPeriod == "quarterly")
-    	$scope.trendPeriod = "Oct 01 to Nov 13";
-    if($rootScope.selectedPeriod == "yearly")
-    	$scope.trendPeriod = "Jan 01 to Nov 13";
 	var errorConstants = RequestConstantsFactory['ERROR_MSGS'];
 	$scope.dataLoaded = false;
     $scope.urlIndex = $location.search();
+    if(!$scope.urlIndex.currentlySelected){
+    	$scope.urlIndex = {"currentlySelected": "Revenue", "name": "Revenue"}
+    }
     $scope.menuType = [];
     $scope.menuData = [];
     $scope.userSettings = {};
@@ -43,25 +38,33 @@ angular.module('Tracking')
 								    $scope.userSettings = userSettingsData;
 								});
     $rootScope.$on('onCacheExpiry', loadData);
-    $scope.$on('periodChange', loadData);
+    $scope.$on('periodChange', updateData);
     $scope.$on('menuSave', function () {
         $scope.menu.saveMenu("BI", "", $scope.businessImpact);
     });
 
+    function updateData(){
+   	 $scope.dataLoaded = true;
+        $scope.error = false;
+        if (!$scope.successData[$rootScope.selectedPeriod])
+            throw { message: "Selected period data not available!", type: "internal" };
+        $scope.businessImpact = $scope.successData[$rootScope.selectedPeriod];
+        $.each($scope.successData[$rootScope.selectedPeriod], function(key, value){
+       	 if(value.subGroupBy == $scope.select){
+       		 $scope.menu.setData($scope.businessImpact);
+            	 $scope.menu.widgetSelected(value);
+       	 }
+        })
+        $scope.forecastText = $scope.Constants[$scope.Constants.BI_Prefix + 'forecast_' + $scope.selectedPeriod];
+        $scope.vsLastText = $scope.Constants[$scope.Constants.BI_Prefix + 'vsLast_' + $scope.selectedPeriod];
+        $scope.vsLastYearText = $scope.Constants[$scope.Constants.BI_Prefix + 'vsLastYear_' + $scope.selectedPeriod];   }
+    
+    
     $scope.success = function (trackSummaryBI) {
-    	$scope.dataLoaded = true;
-        try {
-            $scope.error = false;
-            if (!trackSummaryBI[$rootScope.selectedPeriod])
-                throw { message: "Selected period data not available!", type: "internal" };
-            $scope.businessImpact = trackSummaryBI[$rootScope.selectedPeriod];
-            $scope.menu.setData($scope.businessImpact);
-            $scope.forecastText = $scope.Constants[$scope.Constants.BI_Prefix + 'forecast_' + $scope.selectedPeriod];
-            $scope.vsLastText = $scope.Constants[$scope.Constants.BI_Prefix + 'vsLast_' + $scope.selectedPeriod];
-            $scope.vsLastYearText = $scope.Constants[$scope.Constants.BI_Prefix + 'vsLastYear_' + $scope.selectedPeriod];
-        } catch (e) {
-        	$scope.fail(errorConstants.DATA_ERR);
-        }
+    	
+    	$scope.successData = trackSummaryBI;
+    	updateData();
+        $scope.menu.setData($scope.businessImpact);
     }
     $scope.fail = function (msg) {
         $scope.error = true;
@@ -123,6 +126,7 @@ angular.module('Tracking')
         try {
         	$scope.dataLoaded = true;
             $scope.error = false;
+            $scope.heading = sharedProperties.getHeading();
             if(sharedProperties.getSubGroupBy()!= null){
             	businessImpactSummary[$rootScope.selectedPeriod].forEach(function (data) {
                     if (data.subGroupBy == sharedProperties.getSubGroupBy()) {
@@ -195,6 +199,7 @@ angular.module('Tracking')
              	$scope.trendPeriod = "Jan 01 to Sept 30";
         	$scope.dataLoaded = true;
             $scope.error = false;
+            $scope.heading = sharedProperties.getHeading();
             chartOBJ = chartsService.splineArea.call($('#subsTrendChart'), businessImpactTrendData[$rootScope.selectedPeriod], businessImpactTrendData[$rootScope.selectedPeriod].chartOptions, $scope);
         } catch (e) {
         	$scope.fail(errorConstants.DATA_ERR);

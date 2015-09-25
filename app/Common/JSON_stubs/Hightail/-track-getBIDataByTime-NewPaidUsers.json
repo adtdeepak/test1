@@ -2,7 +2,7 @@
     "status": "OK",
     "message": "Request Processed Successfully",
     "groupBy": "NewPaidUsers",
-    "yAxisTitle":"Number",
+    "yAxisTitle":"Number of users",
     "timeRanges": [
         {
             "periodFrom": "11012014",

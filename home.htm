@@ -265,7 +265,7 @@ type='text/css'>
 										class='widget-text'>(in USD)</p>
 									<p
 										ng-if="data.subgroupName !='Revenue' && data.subgroupName !='Cost of Acquisition' && data.subgroupName!='ARPU' && data.subgroupName!='Free To Paid Conversion'"
-										class='widget-text'>(Number of users)</p>
+										class='widget-text'>(Count of users)</p>
 									<p
 										ng-if="data.subgroupName =='Free To Paid Conversion'"
 										class='widget-text'>(in Percentage)</p>
@@ -381,7 +381,7 @@ type='text/css'>
 									<h3 class="text-ellipsis" title="{{data.groupName}}">{{data.groupName}}</h3>									
 									<div class="value-green trackingLink">
 										{{data.actual| number}}</div>
-                                    <p class='widget-text'>(Count of members)</p>
+                                    <p class='widget-text'>(Count of users)</p>
                                     <p class="value1"><span class="ng-binding">{{data.periodAvg| number}}</span></p>
 									<p class="duration">{{averageTimePeriodText}}</p>
 								</a>
