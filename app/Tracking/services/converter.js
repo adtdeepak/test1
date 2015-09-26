@@ -229,7 +229,7 @@ angular.module('Tracking')
 			var startOfWeek;
 			var endOfWeek;
 			// Getting Chart options from ChartOptionsService
-			_data['chartOptions'] = ChartOptionsService.getBusinessImpactTrend(yAxisTitle);
+			_data['chartOptions'] = ChartOptionsService.getUserGroupTrendChartOption(yAxisTitle);
 			var chartData = [];
 			var actual = [];
 			var xAxis = [];

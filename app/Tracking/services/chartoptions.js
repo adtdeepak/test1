@@ -269,6 +269,81 @@ this.getBasicLineChart = function(data, title, subtitle, width){
 		};
 	};
 
+	this.getUserGroupTrendChartOption = function(yAxisTitle) {	
+		return {	
+			chart:{
+				//width:1024,
+				height:300,
+				spacingRight : 80,
+				spacingLeft : 15
+			},
+			legend: {
+				align: "right",
+				symbolPadding:20,
+				layout: "vertical",
+				itemMarginTop:28,
+				itemMarginBottom:15,
+				//padding: 50,
+				verticalAlign: 'middle',
+				itemStyle: {
+					color: '#000000',
+					font: '10pt Carrois Gothic, sans-serif'
+				},
+				//fill:'none',
+				itemWidth: 100,
+				symbolWidth: 20,
+				symbolHeight:18,
+				height: 250	,
+				y:1,
+				x:-50
+			},
+			yAxis: {
+				gridLineWidth: 0,
+				prefix:"a",
+				min: 0,
+				title: {
+					text: yAxisTitle,
+					style:{
+						color: '#000000',
+						font: '12pt arial, sans-serif',
+						fontWeight:'bold'
+					}
+				},
+				labels:{
+					formatter: function(){
+						var val = this.value;
+						return val.toLocaleString();
+					},
+					style:{
+						color: '#000000',
+						font: '10pt arial, sans-serif'
+					}
+				}
+			},
+			tooltip: {
+	            valueSuffix: '%'
+	        },
+	        navigation: {
+	            buttonOptions: {
+                    symbolFill:'#32CABB',
+                    x: 80,
+	                theme: {
+	                    states: {
+	                        hover: {
+	                            fill: '#FFFFFF'
+	                        },
+	                        select: {
+	                            stroke: '#039',
+	                            fill: '#FFFFFF'
+	                        }
+	                    }
+	                }
+	            }
+	        }
+
+		};
+	};
+	
 	
 
 	this.getEngagementActivityScoreData = function(data) {	
