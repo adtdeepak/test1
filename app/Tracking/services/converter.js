@@ -168,15 +168,19 @@ angular.module('Tracking')
 		var resultData = {};
 		var yAxisTitle = data.yAxisTitle;
 		var yAxisPrefix = "";
-		if(data.groupBy=='Revenue' || data.groupBy=='CostofAcqusition'){
+		var yAxixSuffix = "";
+		if(data.groupBy=='Revenue' || data.groupBy=='CostofAcqusition'||data.groupBy=='ARPU' || data.groupBy=='NewRevenue' || data.groupBy=='RecurringRevenue' ){
 			yAxisPrefix = "$";
+		}
+		if(data.groupBy=='freeToPaidConversion'){
+			yAxixSuffix = "%";
 		}
 		$.each(data.timeRanges, function(key, timeRange) {
 			var _data = {};
 			var startOfWeek;
 			var endOfWeek;
 			// Getting Chart options from ChartOptionsService
-			_data['chartOptions'] = ChartOptionsService.getBusinessImpactTrend(yAxisTitle, yAxisPrefix);
+			_data['chartOptions'] = ChartOptionsService.getBusinessImpactTrend(yAxisTitle, yAxisPrefix, yAxixSuffix);
 			var chartData = [];
 			var target = [];
 			var actual = [];

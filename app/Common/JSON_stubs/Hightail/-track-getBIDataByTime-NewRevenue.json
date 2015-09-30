@@ -1,8 +1,8 @@
 {
     "status": "OK",
     "message": "Request Processed Successfully",
-    "groupBy": "NewPaidUsers",
-    "yAxisTitle":"$",
+    "groupBy": "NewRevenue",
+    "yAxisTitle":"",
     "timeRanges": [
         {
             "periodFrom": "11012014",

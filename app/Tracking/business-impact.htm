@@ -42,10 +42,10 @@
 									<h3 class="text-ellipsis" title="{{data.subgroupName}}">{{data.subgroupName}}</h3>	
 									<div class="value-orange trackingLink">{{data.actualToDate}}</div>
 									<p
-										ng-if="data.subgroupName =='Revenue' || data.subgroupName =='Cost of Acquisition' || data.subgroupName=='ARPU' && data.subgroupName!='Free To Paid Conversion'"
+										ng-if="data.subgroupName =='Revenue' || data.subgroupName =='Cost of Acquisition' || data.subgroupName=='ARPU'|| data.subgroupName=='New Revenue'|| data.subgroupName=='Recurring Revenue' && data.subgroupName!='Free To Paid Conversion'"
 										class='widget-text'>(in USD)</p>
 									<p
-										ng-if="data.subgroupName !='Revenue' && data.subgroupName !='Cost of Acquisition' && data.subgroupName!='ARPU' && data.subgroupName!='Free To Paid Conversion'"
+										ng-if="data.subgroupName !='Revenue' && data.subgroupName !='Cost of Acquisition' && data.subgroupName!='ARPU' && data.subgroupName!='Free To Paid Conversion' && data.subgroupName!='New Revenue' && data.subgroupName!='Recurring Revenue'"
 										class='widget-text'>(Count of users)</p>
 									<p
 										ng-if="data.subgroupName =='Free To Paid Conversion'"

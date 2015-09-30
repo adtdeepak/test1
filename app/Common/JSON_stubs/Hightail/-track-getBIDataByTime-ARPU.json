@@ -2,7 +2,7 @@
     "status": "OK",
     "message": "Request Processed Successfully",
     "groupBy": "ARPU",
-    "yAxisTitle":"$",
+    "yAxisTitle":"",
     "timeRanges": [
         {
             "periodFrom": "11012014",

@@ -158,8 +158,8 @@ angular.module('DecisionWorkbench')
 		
 		var dataSet = [];
 		var dataSet1 = [];
-		var accordianTrendData = $scope.otherAccordianData[$scope.groupHeading][$scope.selectedRowId];
-		$scope.userGroupData =  $scope.otherAccordianData[$scope.groupHeading][$scope.selectedRowId].userGroup.targetedUsers[0];
+		var accordianTrendData = $scope.otherAccordianData["All Users"][$scope.selectedRowId];
+		$scope.userGroupData =  $scope.otherAccordianData["All Users"][$scope.selectedRowId].userGroup.targetedUsers[0];
 		console.log("$scope.userGroupData:", $scope.userGroupData)
 		$.each(dataSetObjProduct, function (key, obj) {
 			dataSet.push([obj.feature,
@@ -179,7 +179,7 @@ angular.module('DecisionWorkbench')
 		        "columns": [
 		            { "title": "Feature" },
 		            { "title": "Current Usage level" },
-		            { "title": "Idea Usage level" },
+		            { "title": "Idea Uage level" },
 		            { "title": "Impact on EG score"}
 		        ],
             dom: '<"dataTableContainer"t><"dataTablePaginateContainer"p>'

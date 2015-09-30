@@ -66,6 +66,10 @@ angular.module('Tracking')
 	var errorConstants = RequestConstantsFactory['ERROR_MSGS'];
 	$scope.dataLoaded = false;
 	$scope.urlIndex = $location.search();
+	
+	if(!$scope.urlIndex.currentlySelected){
+    	$scope.urlIndex = {"currentlySelected": "ProjectManagers", "name": "Project Managers"}
+    }
 	$scope.select = $scope.urlIndex.currentlySelected;
 	$scope.userSettings = {};
 	$scope.menuType = [];
@@ -79,26 +83,32 @@ angular.module('Tracking')
 		$scope.userSettings = userSettingsData;
 	});
 
-	$scope.$on('periodChange', loadData);
+	$scope.$on('periodChange', updateData);
 	$rootScope.$on('onCacheExpiry', loadData);
 	$scope.$on('menuSave', function () {
 		$scope.menu.saveMenu("UG", "", $scope.userGroup);
 	});
+	
+	function updateData(){
+		$scope.dataLoaded = true;
+		$scope.error = false;
+		if (!$scope.successData[$rootScope.selectedPeriod])
+			throw { message: "Selected period data not available!", type: "internal" };
+			$scope.userGroup = $scope.successData[$rootScope.selectedPeriod];
+			$.each($scope.successData[$rootScope.selectedPeriod], function(key, value){
+				if(value.groupBy == $scope.select){
+					//$scope.menu.setData($scope.userGroup);
+					$scope.menu.selected(value);
+				}
+			})
+			$scope.averageTimePeriodText = $scope.Constants[$scope.Constants.EA_Prefix + 'averagePeriod_' + $scope.selectedPeriod];
+	}
 
 	$scope.success = function(userGroup) {
 		try{ 
-			if($rootScope.selectedPeriod == 'weekly'){
-		    	$scope.timePeriod = "Weekly";
-		    }else {
-		    	$scope.timePeriod = "Monthly";
-		    }
-			$scope.dataLoaded = true;
-			$scope.error = false;
-			 if (!userGroup[$rootScope.selectedPeriod])
-	                throw { message: "Selected period data not available!", type: "internal" };
-			$scope.userGroup = userGroup[$rootScope.selectedPeriod];
+			$scope.successData = userGroup;
+			updateData();
 			$scope.menu.setData($scope.userGroup);
-			$scope.averageTimePeriodText = $scope.Constants[$scope.Constants.EA_Prefix + 'averagePeriod_' + $scope.selectedPeriod];
 		} catch (e) {
 			$scope.fail(errorConstants.DATA_ERR);
 		}
@@ -116,14 +126,14 @@ angular.module('Tracking')
         }
     }
 
-	$scope.$watch(
+	/*$scope.$watch(
 			function(){
 				return sharedProperties.getSubGroupBy();
 			},
 			function (newValue) {
 				loadData();
 			}
-	);
+	);*/
 
 	var requestData=
 	{
@@ -146,7 +156,7 @@ angular.module('Tracking')
 
 	} 
 
-	//loadData();
+	loadData();
 })
 
 .controller("userGroupSummaryController",function($scope, $rootScope, Permission,RequestConstantsFactory,sharedProperties, DataService, UtilitiesService){
@@ -180,6 +190,7 @@ angular.module('Tracking')
 				$scope.forecastText = $scope.Constants[$scope.Constants.EA_Prefix + 'summary_forecast_' + $rootScope.selectedPeriod];
 				$scope.toLastText = $scope.Constants[$scope.Constants.EA_Prefix + 'comparedLast_' + $rootScope.selectedPeriod];
 				$scope.toLastLYText = $scope.Constants[$scope.Constants.EA_Prefix + 'comparedLastYear_' + $rootScope.selectedPeriod];
+				$scope.timePeriodText =  $scope.Constants[$scope.Constants.TRACK_Prefix + $rootScope.selectedPeriod];
 			}
 		} catch (e) {
 			$scope.fail(errorConstants.DATA_ERR);
@@ -197,15 +208,6 @@ angular.module('Tracking')
         	}
         }
     }
-	//Watching the value of shared property
-	$scope.$watch(
-			function () {
-				return sharedProperties.getSubGroupBy();
-			},
-			function (newValue) {
-				loadData();
-			}
-	);
 
 	var requestData=
 	{
@@ -239,18 +241,21 @@ angular.module('Tracking')
 	 $rootScope.$on('UserGroupError',function(){
 			$scope.fail(errorConstants.DATA_ERR);
 		})
+
+	
 	$scope.success = function(uGTrendData) {
 		 try {
-			 	if($rootScope.selectedPeriod == "weekly")
-		         	$scope.trendPeriod = "Sept 06 to Sept 13";
-		         if($rootScope.selectedPeriod == "monthly")
-		         	$scope.trendPeriod = "Sept 01 to Sept 30";
-		         if($rootScope.selectedPeriod == "quarterly")
-		         	$scope.trendPeriod = "Jul 01 to Sept 30";
-		         if($rootScope.selectedPeriod == "yearly")
-		         	$scope.trendPeriod = "Jan 01 to Sept 30";
+			 if($rootScope.selectedPeriod == "weekly")
+					$scope.trendPeriod = "Sept 06 to Sept 12";
+				if($rootScope.selectedPeriod == "monthly")
+					$scope.trendPeriod = "Sept 01 to Sept 30";
+				if($rootScope.selectedPeriod == "quarterly")
+					$scope.trendPeriod = "Jul 01 to Sept 30";
+				if($rootScope.selectedPeriod == "yearly")
+					$scope.trendPeriod = "Jan 01 to Sept 30";
 	        	$scope.dataLoaded = true;
 	            $scope.error = false;
+	            $scope.heading = sharedProperties.getHeading();
 	            chartOBJ = chartsService.splineArea.call($('#trendChart'), uGTrendData[$rootScope.selectedPeriod], uGTrendData[$rootScope.selectedPeriod].chartOptions, $scope);
 	        } catch (e) {
 	        	$scope.fail(errorConstants.DATA_ERR);
@@ -289,102 +294,6 @@ angular.module('Tracking')
 			} 
 		} 
 		DataService.getUserGroupTrendData(requestData, func, $scope.fail); 
-
-	} 
-})
-
-.controller("userGroupDeepDiveController",function($scope, $rootScope, DataService, Permission,DataConversionService, RequestConstantsFactory,UtilitiesService){
-	var errorConstants = RequestConstantsFactory['ERROR_MSGS'];
-	$scope.dataLoaded = false;
-	$scope.campaignTableoptions= UtilitiesService.getDataTableOptions();
-	$scope.engagementTableOptions= UtilitiesService.getDataTableOptions();
-	$rootScope.$on('onCacheExpiry', loadData);
-	$scope.$on('periodChange',loadData);
-	$scope.$on('dataReady', loadData);
-	$scope.currentView = "campaign";
-	
-	 $rootScope.$on('UserGroupError',function(){
-			$scope.fail(errorConstants.DATA_ERR);
-		})
-	$scope.changeCurrentView = function(value){
-		$scope.currentView = value;
-	};
-	$scope.addCampaignData = function (data) {
-		try{
-			$scope.dataLoaded = true;
-			$scope.error = false;
-			$scope.campaignTableoptions.aaData = [];
-			 if (!data)
-	                throw "noDataError";
-			$.each(data, function(key, obj){
-				$scope.campaignTableoptions.aaData.push(["<a href='#' data-modal='#campaignDialog' name='modal' id='"+obj.groupId+"' ng-click='ugClicked' class='campaignDialog'>"+obj.groupName+"</a>",
-				                                         obj.noOfUsers,obj.baseExpectedConv,
-				                                         obj.newUsersAchieved,
-				                                         obj.comparedToLastPeriod,
-				                                         obj.target,
-				                                         obj.convUplift,
-				                                         obj.timeRemaining
-				                                         ]);
-			})
-		} catch (e) {
-			console.log("ERROR TH",$scope.error)
-			$scope.fail(errorConstants.DATA_ERR);
-		}
-	};
-	$scope.addEngagementData = function (data) {
-		try{
-			$scope.dataLoaded = true;
-			$scope.error = false;
-			$scope.engagementTableOptions.aaData = [];
-			$.each(data, function(key, obj){
-				$scope.engagementTableOptions.aaData.push([obj.groupName,obj.activeUsers,obj.avgLogins,
-				                                           obj.recurringBooking,
-				                                           obj.arpu,
-				                                           obj.engagementLevel,
-				                                           obj.engagementScore
-				                                           ]);
-			})
-		} catch (e) {
-			$scope.fail(errorConstants.DATA_ERR);
-		}
-	};
-	$scope.fail = function (msg) {
-        $scope.error = true;
-        $scope.hasErrorMsg = true;
-        if(msg){
-        	if(msg instanceof Object){
-        		$scope.errorMsg = (msg.statusText == "" ? errorConstants.NETWORK_ERR  : msg.statusText);
-        	} else {
-                $scope.errorMsg = msg;
-        	}
-        }
-    }
-	
-	var campaignReqData={
-			"groupBy" : "cmpgnView",
-	};
-	var engagementReqData={
-			"groupBy" : "engmtView",
-	};
-	var campaignReqData = $.extend(true,campaignReqData, UtilitiesService.getRequestData());
-	var engagementReqData = $.extend(true,engagementReqData, UtilitiesService.getRequestData());
-
-	var cacheKey = "UGDD" + JSON.stringify(campaignReqData);
-
-	function loadData(addCampaignData, addEngagementData) {
-		console.log("DEEEP DR EXECUTED!!")
-		var addCampaignDataCallback = $scope.addCampaignData; 
-		var addEngagementDataCallback = $scope.addEngagementData;
-		if (arguments[1]) { 
-			if (arguments[1].key == cacheKey) { 
-				addCampaignData = addEngagementData = null;
-			} else { 
-				return false; 
-			} 
-		} 
-
-		DataService.getUserGroupDeepDiveData(campaignReqData, addCampaignDataCallback, $scope.fail);
-		DataService.getUserGroupDeepDiveData(engagementReqData, addEngagementDataCallback, $scope.fail);
 
 	} 
 })

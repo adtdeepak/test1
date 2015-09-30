@@ -114,11 +114,12 @@ angular.module('Tracking')
 				fail,
 				function(result) {
 					var cData = DataConversionService.toBusinessImpactTrend(result);
-					StorageService.put(cacheKey, cData, StorageService.getCache("business-impactCache"));
+					//StorageService.put(cacheKey, cData, StorageService.getCache("business-impactCache"));
 					return cData;
 				}
 		);
-		sendRequest(cacheKey, "business-impactCache", success, requestWS);
+		requestWS();
+		//sendRequest(cacheKey, "business-impactCache", success, requestWS);
 	};
 
 	this.getBusinessImpactDeepDiveTableData = function(reqData, success, fail) {

@@ -37,6 +37,7 @@ window.appConstants = {
 	
 	API_BASE_URL : "http://130.211.181.21:8080/absolutdata",
 	
+	TRACK_Prefix : "track_",
 	BI_Prefix : "track_BI_",
 	EA_Prefix : "track_EA_",
 	SUMMARY_Prefix : "track_Summary_",
@@ -69,15 +70,15 @@ window.appConstants = {
 	//Metrics
 	track_BI_forecast_monthly: "Monthly Forecast",
 	track_BI_vsLast_monthly : "vs. Last Month",
-	track_BI_vsLastYear_monthly : "vs. same Month LY",
+	track_BI_vsLastYear_monthly : "vs. Same Month LY",
 	
 	track_BI_forecast_weekly: "Weekly Forecast",
 	track_BI_vsLast_weekly : "vs. Last Week",
-	track_BI_vsLastYear_weekly : "vs. same Week LY",
+	track_BI_vsLastYear_weekly : "vs. Same Week LY",
 	
 	track_BI_forecast_quarterly: "Quarterly Forecast",
 	track_BI_vsLast_quarterly : "vs. Last Quarter",
-	track_BI_vsLastYear_quarterly : "vs. same quarter LY",
+	track_BI_vsLastYear_quarterly : "vs. Same Quarter LY",
 
 	track_BI_forecast_yearly: "Yearly Forecast",
 	track_BI_vsLast_yearly : "vs. Last Year",
@@ -136,6 +137,10 @@ window.appConstants = {
 	track_UG_avgLogin_quaterly : "Average Login Per Quater",
 	track_UG_avgLogin_yearly : "Average Login Per Year",
 	
+	track_weekly : "week",
+	track_monthly : "month",
+	track_quarterly : "quarter",
+	track_yearly : "year",
 	//Business Impact 
 	//Deep Dive
 	track_BI_DeepDive_weekly : "week",

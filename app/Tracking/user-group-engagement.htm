@@ -49,39 +49,6 @@
 						</div>
 					</li>
 				</ul>
-				<!-- <div class="filterContainer">
-					<div class="contentPanel">
-					<p class="widget-title pull-right" style="padding-right:28px">Current period from {{trendPeriod}}, 2014</p>
-					<p class="widget-title pull-right" style="padding-right:28px">As of Saturday, September 12, 2015</p>
-					<div class="progress-loading" ng-if="!error && !dataLoaded"></div>
-					<ng-include ng-show="error" src="'partials/error.htm'"></ng-include>
-						<ul ng-hide="error" data-page="userGroup" class="box-list  clearfix">
-							<li ng-repeat="data in userGroup" ng-hide="data.display==false" ng-if="menuSynced" ng-click="menu.selected(data)">
-								<div class="box-list-innerwrap">
-									<div ng-class="{'box-listShadow': true, selected: data.groupBy==select}">
-										<a href="#" class="help tooltip-new">
-											<figure>
-												<img src="images/icon-info.png" />
-											</figure>
-											<span><img alt="Tooltip" src="images/tooltip-arrow.png" class="callout">{{Tooltip.TOOLTIP_TRAC_SUMMARY_USERGROUP[data.groupBy]}}</span>
-										</a>
-										<div class="box-content-top">
-											<h3>{{data.groupName}}</h3>
-											
-											<div class="value-green trackingLink">
-											{{data.actual| number}}</div>
-                                            <p class='widget-text'>(Count of users)</p>
-                                            <p  class="value1"><span class="ng-binding">{{data.periodAvg| number}}</span></p>
-											<p class="duration">{{averageTimePeriodText}}</p>
-                                          
-										</div>
-									</div>
-								</div>
-							</li>
-
-						</ul>
-					</div>
-				</div> -->
 			</div>
 			<div class="AcquisitionPanel" ng-controller="userGroupSummaryController" ng-if="isUserGroupViewable">
                   <div style="margin-bottom:15px;" class="panel panel-default">
@@ -100,7 +67,7 @@
 							</li>
 							<li ng-show="UserGroupSummary.activeUsersPerPeriod!=null" class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
 								<div class="summarylistInnerwrap">
-									<p>Active Users Per Week</p>
+									<p>Active users per {{timePeriodText}}</p>
 									<div class="summary-value">
 										{{UserGroupSummary.activeUsersPerPeriod | number}}</div>
 
@@ -108,7 +75,7 @@
 							</li>
 							<li ng-show="UserGroupSummary.actual!=null" class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
 								<div class="summarylistInnerwrap">
-									<p>Total subscribers</p>
+									<p>Total members</p>
 									<div class="summary-value">
 										{{UserGroupSummary.actual | number}}</div>
 

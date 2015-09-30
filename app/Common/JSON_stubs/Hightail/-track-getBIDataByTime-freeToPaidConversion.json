@@ -2,7 +2,7 @@
     "status": "OK",
     "message": "Request Processed Successfully",
     "groupBy": "freeToPaidConversion",
-    "yAxisTitle":"%",
+    "yAxisTitle":"",
     "timeRanges": [
         {
             "periodFrom": "11012014",

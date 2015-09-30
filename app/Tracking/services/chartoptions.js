@@ -194,7 +194,7 @@ this.getBasicLineChart = function(data, title, subtitle, width){
 		};
 	};	
 	
-	this.getBusinessImpactTrend = function(yAxisTitle, yAxisPrefix) {	
+	this.getBusinessImpactTrend = function(yAxisTitle, yAxisPrefix, yAxisSuffix) {	
 		return {	
 			chart:{
 				//width:1024,
@@ -237,7 +237,7 @@ this.getBasicLineChart = function(data, title, subtitle, width){
 				labels:{
 					formatter: function(){
 						var val = this.value;
-						return yAxisPrefix+val.toLocaleString();
+						return yAxisPrefix+val.toLocaleString()+yAxisSuffix;
 					},
 					style:{
 						color: '#000000',
