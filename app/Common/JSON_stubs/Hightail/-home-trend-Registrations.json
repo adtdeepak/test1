@@ -2,6 +2,7 @@
     "status": "OK",
     "message": "Request Processed Successfully",
     "groupBy": "Registrations",
+    "legend": "No. of unique Registrants",
     "timeRanges": [
         {
             "periodFrom": "11012014",

@@ -62,7 +62,7 @@ angular.module('Home')
 			});
 			plotBandRange.push(UtilitiesService.getPlotBandRange(xAxis));
 			var tempObj = [{
-                "name": data.groupBy,
+                "name": data.legend,
                 "data": value
             }]
 			_data['xAxis'] =xAxis;

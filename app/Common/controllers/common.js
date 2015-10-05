@@ -7,9 +7,19 @@ angular.module('AnalyticsApp')
     $scope.periods = window.appConstants.TIME_PERIODS;
     $scope.selected = $scope.periods[0];
     $rootScope.selectedUserMode = window.appConstants.DEFAULT_USER_MODE;    
+
     //This array of objects - is to decide which time period to be selected 1st
 	$scope.selectedIndex = [{"key":"weekly","selected":true},{"key":"monthly","selected": false},{"key":"quarterly","selected": false},{"key":"yearly","selected": false}];
-
+    if(localStorage.getItem("selectedPeriod")){
+    	$.each($scope.selectedIndex, function(key, value){
+    		value.selected = false;
+    		if(value.key == localStorage.getItem("selectedPeriod")){
+    			value.selected = true;
+    			$scope.selected = $scope.periods[key];
+    		}
+    	})
+    }
+    
 	$rootScope.$on('$routeChangeSuccess', function(evt, cur, prev) {
 		$scope.thisPage = $location.path();
 	});
@@ -18,6 +28,7 @@ angular.module('AnalyticsApp')
 
     $scope.broadcastPeriodChange = function () {
         $rootScope.selectedPeriod = $scope.selected.key;
+        localStorage.setItem("selectedPeriod", selectedPeriod);
         $rootScope.$broadcast('periodChange');
     }
     $rootScope.builddoLoad = false;
@@ -43,6 +54,7 @@ angular.module('AnalyticsApp')
     	    	$scope.selectedIndex[index].selected= true;
     		}
     	})
+    	localStorage.setItem("selectedPeriod", selectedPeriod);
         $rootScope.selectedPeriod = selectedPeriod;
         $rootScope.$broadcast('periodChange');
     }

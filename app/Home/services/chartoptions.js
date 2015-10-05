@@ -101,6 +101,11 @@ angular.module('Home')
 	            }]
 	        },
 	        yAxis: {
+	        	 labels: {
+	                 formatter: function () {
+	                     return this.value.toLocaleString();
+	                 }
+	             },
 	            title: {
 	                text: ''
 	            },

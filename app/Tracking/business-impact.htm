@@ -57,9 +57,27 @@
 								</div>
 								<div class="box-content-bottom">
 									<ul>
-										<li class="{{data.versusLast.trend=='-ve'?'down':'up'}}">{{data.versusLast.value}} {{vsLastText}}</li>
-										<li
-											class="{{data.versusSameLastYear.trend=='-ve'?'down':'up'}}">{{data.versusSameLastYear.value}} {{vsLastYearText}}</li>
+										<li>
+											<div style="margin-left:-10px;" ng-if="data.versusLast.trend=='-ve'">
+												<img src="images/arrow-red.png" alt="arrow" style="margin-right:5px;">
+												{{data.versusLast.value}} {{vsLastText}}
+											</div>
+											<div style="margin-left:-10px;" ng-if="data.versusLast.trend!='-ve'">
+												<img src="images/arrow-green.png" alt="arrow" style="margin-right:5px;">
+												{{data.versusLast.value}} {{vsLastText}}
+											</div>											
+										</li>
+										
+										<li>
+											<div style="margin-left:-10px;" ng-if="data.versusSameLastYear.trend=='-ve'">
+												<img src="images/arrow-red.png" alt="arrow" style="margin-right:5px;">
+												{{data.versusSameLastYear.value}} {{vsLastYearText}}
+											</div>
+											<div style="margin-left:-10px;" ng-if="data.versusSameLastYear.trend!='-ve'">
+												<img src="images/arrow-green.png" alt="arrow" style="margin-right:5px;">
+												{{data.versusSameLastYear.value}} {{vsLastYearText}}
+											</div>											
+										</li>
 									</ul>
 								</div>
 						</div>
