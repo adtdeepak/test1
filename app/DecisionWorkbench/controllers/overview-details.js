@@ -168,7 +168,7 @@ angular.module('DecisionWorkbench')
 			              obj.impactOnEGScore]);
 		});
 		$(document).ready(function() {
-		    $('#demo').html( '<table cellpadding="0" cellspacing="0" border="0" class="display" id="productUsageTable"></table>' );
+		    $('#demo').html( '<table style="text-align:center;" cellpadding="0" cellspacing="0" border="0" class="display" id="productUsageTable"></table>' );
 		 
 		    $('#productUsageTable').dataTable( {
 		    	"bPaginate":false,
@@ -179,7 +179,7 @@ angular.module('DecisionWorkbench')
 		        "columns": [
 		            { "title": "Feature" },
 		            { "title": "Current Usage level" },
-		            { "title": "Idea Uage level" },
+		            { "title": "Ideal Uage level" },
 		            { "title": "Impact on EG score"}
 		        ],
             dom: '<"dataTableContainer"t><"dataTablePaginateContainer"p>'
