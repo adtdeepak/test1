@@ -88,16 +88,27 @@ angular.module('DecisionWorkbench')
 	$scope.featuresOptions = UtilitiesService.getDataTableOptions();
 	var columOptions = {
 			"aoColumns" : [ {
-				"sClass" : "each-row-details"
+				"sClass" : "each-row-details",
+				"sWidth" : "100px"
 			}, {
-				"sClass" : "each-row-details"
+				"sClass" : "each-row-details",
+				"sWidth" : "150px"
 			}, {
-				"sClass" : "each-row-details"
+				"sClass" : "each-row-details",
+				"sWidth" : "110px"
 			}, {
-				"sClass" : "each-row-details"
+				"sClass" : "each-row-details",
+				"sWidth" : "200px"
 			}, {
-				"sClass" : "each-row-details"
-			},null, null],
+				"sClass" : "each-row-details",
+				"sWidth" : "200px"
+			},{
+				"sClass" : "",
+				"sWidth" : "100px"
+			}, {
+				"sClass" : "",
+				"sWidth" : "100px"
+			}],
 			'fnCreatedRow': function (nRow, aData, iDataIndex) {
 				  $.each($('td', nRow), function (colIndex) {
 					  if(aData){
@@ -108,6 +119,7 @@ angular.module('DecisionWorkbench')
 			        });
 		    },
 		    "bPaginate":false,
+		    "sScrollX": "100%",
 			"fnRowCallback" : function(nRow, aData, iDisplayIndex, iDisplayIndexFull) {
 				if(iDisplayIndex%2 != 0){
 					className = "oddRowColor";

@@ -119,8 +119,7 @@ type='text/css'>
 						<div class="widget-content">
 							<div class="row-fluid">
 								<div>
-									<span class="funnel-font-size">{{visitors.actualTillDate|
-										number}}</span>
+									<span class="funnel-font-size" ng-bind="visitors.actualTillDate |number"></span>
 								</div>
 							</div>
                             <div class="rateValue">Unique Visitors: 70%</div>
@@ -139,12 +138,11 @@ type='text/css'>
 						<div class="widget-content">
 							<div class="row-fluid">
 								<div>
-									<span class="funnel-font-size">{{registrations.actualTillDate|
-										number}}</span>
+									<span class="funnel-font-size" ng-bind="registrations.actualTillDate |number"></span>
 								</div>
 							</div>
 							<div class="rateValue">Acquisition Rate:
-								{{registrations.acquisitionRate}}%</div>
+							<span ng-bind="registrations.acquisitionRate"></span>%</div>
 							<div id="sparkleLineVisitor"></div>
 							<div class="chart"></div>
 						</div>
@@ -161,12 +159,11 @@ type='text/css'>
 						<div class="widget-content">
 							<div class="row-fluid">
 								<div>
-									<span class="funnel-font-size">{{subscriptions.actualTillDate|
-										number}}</span>
+									<span class="funnel-font-size" ng-bind="subscriptions.actualTillDate |number"></span>
 								</div>
 							</div>
 							<div class="rateValue">Conversion Rate:
-								{{subscriptions.conversionRate}}%</div>
+							<span ng-bind="subscriptions.conversionRate"></span>%</div>
 							<div id="sparkleLineVisitor"></div>
 							<div class="chart"></div>
 						</div>
@@ -181,12 +178,11 @@ type='text/css'>
 						<div class="widget-content">
 							<div class="row-fluid">
 								<div>
-									<span class="funnel-font-size">{{cancellations.actualTillDate|
-										number}}</span>
+									<span class="funnel-font-size"  ng-bind="cancellations.actualTillDate |number"></span>
 								</div>
 							</div>
 							<div class="rateValue">Churn Rate:
-								{{cancellations.churnRate}}%</div>
+							<span ng-bind="cancellations.churnRate"></span>%</div>
 							<div id="sparkleLineVisitor"></div>
 							<div class="chart"></div>
 						</div>
@@ -204,8 +200,9 @@ type='text/css'>
 		
 		<div class="row-fluid" style="padding: 0px 11px;">
 			<div class="pull-right chart-textNote" style="">Current period
-				from {{trendPeriod}}, 2015</div>
-			<h2 class="block-chartTitle">{{acqTrendTitle}}</h2>
+				from <span ng-bind="trendPeriod"></span>, 2015</div>
+			<h2 class="block-chartTitle">
+			<span ng-bind="acqTrendTitle"></span></h2>
 		</div>
 		<div class="row" style="margin-top: 30px; margin-bottom: 10px">
 			<div ng-hide="error" class="DivAcquisitionChart"
