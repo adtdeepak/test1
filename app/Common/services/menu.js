@@ -18,7 +18,7 @@ angular.module('AnalyticsApp')
 		
 		$scope.fail = function () {
 	        $scope.error = true;
-	        $rootScope.$broadcast('dataReady');
+	        $rootScope.$broadcast('periodChange');
 	        //$scope.hasErrorMsg = true;
 	        //$scope.errorMsg = "Network Error !!";
 	    } 
@@ -145,7 +145,7 @@ angular.module('AnalyticsApp')
 		    		sharedProperties.setSubGroupBy($scope.urlIndex.currentlySelected);
 		            sharedProperties.setHeading($scope.urlIndex.name);
 		    	}
-                $rootScope.$broadcast('dataReady');
+                $rootScope.$broadcast('periodChange');
                 menuSyncActive = false;
 	        }
         }
@@ -171,7 +171,7 @@ angular.module('AnalyticsApp')
 			function (newValue, oldValue) {
 				//load the data as per the selection
                 if(newValue != null && newValue != oldValue){
-		    	    $rootScope.$broadcast('dataReady');
+		    	    $rootScope.$broadcast('periodChange');
 				    $rootScope.heading = sharedProperties.getHeading();
                 }
 			}

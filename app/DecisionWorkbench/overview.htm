@@ -171,18 +171,22 @@
 </div>
 
 <script>
-		$(document).ready(function(){
-			$(".xclose").click(function(){
-				window.temp = $(this);
-				$(this).toggleClass("expandclose");
-				$(this).parents().closest('.collapseDiv').next().collapse('toggle');
-			});
-			
-			$(".dropdown-menu li a").click(function(){
-			      $(this).parents().closest('.btn-group').find(".btn:first-child").text($(this).text());
-			      $(this).parents().closest('.btn-group').find(".btn:first-child").val($(this).text());
+$(document).ready(function(){
+	$(".xclose").click(function(){
+		window.temp = $(this);
+		if(!$(this).hasClass("expandclose")){
+			$(".xclose").removeClass("expandclose");
+			$(".collapse").removeClass("in");
+		}
+		$(this).toggleClass("expandclose");
+		$(this).parents().closest('.collapseDiv').next().collapse('toggle');
+	});
+	
+	$(".dropdown-menu li a").click(function(){
+	      $(this).parents().closest('.btn-group').find(".btn:first-child").text($(this).text());
+	      $(this).parents().closest('.btn-group').find(".btn:first-child").val($(this).text());
 
-			   });
+	   });
 
-		});
+});
 </script>

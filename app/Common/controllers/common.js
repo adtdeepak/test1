@@ -26,14 +26,14 @@ angular.module('AnalyticsApp')
     // This selectedPeriod will be used across the app
     $rootScope.selectedPeriod = $scope.selected.key;
 
-    $scope.broadcastPeriodChange = function () {
+   /* $scope.broadcastPeriodChange = function () {
         $rootScope.selectedPeriod = $scope.selected.key;
         localStorage.setItem("selectedPeriod", selectedPeriod);
         $rootScope.$broadcast('periodChange');
-    }
+    }*/
     $rootScope.builddoLoad = false;
 
-    $scope.userModeSelected = function (selectedUserMode) {
+   /* $scope.userModeSelected = function (selectedUserMode) {
         angular.element('.freeMode').each(function () {
             if (angular.element(this).parent().hasClass('active')) {
                 angular.element(this).parent().removeClass('active');
@@ -44,7 +44,7 @@ angular.module('AnalyticsApp')
         $rootScope.selectedUserMode = selectedUserMode;
         $rootScope.$broadcast('periodChange');
     }
-    
+    */
   //This function will be called when time period is selected
     $scope.broadcastPeriodChange = function (selectedPeriod, index) {
     	console.log("selectedPeriod:", selectedPeriod, index)
