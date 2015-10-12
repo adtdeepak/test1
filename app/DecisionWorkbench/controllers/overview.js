@@ -148,8 +148,6 @@ angular.module('DecisionWorkbench')
 						  if(aData[1]){
 							  $(this).attr('attr', aData[1].split('<br>ES')[0]+'&selectedId='+aData[0]+'&type='+aData[7]);
 						  }
-				            // For example, adding data-* attributes to the cell
-				           /* $(this).attr('attr', "Enterprise users");*/
 				        });
 			    },
 			    "bPaginate":false,
