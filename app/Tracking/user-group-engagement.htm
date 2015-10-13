@@ -58,7 +58,7 @@
 				<div class="row filterContainer">
 						<ul ng-hide="error" class="row summary-list clearfix">
 							<li ng-show="UserGroupSummary.engScore!=null" class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
-								<div class="summarylistInnerwrap">
+								<div class="summary-widget">
 									<p>Engagement Score</p>
 									<div class="summary-value">
 										{{UserGroupSummary.engScore | number}}</div>
@@ -66,7 +66,7 @@
 								</div>
 							</li>
 							<li ng-show="UserGroupSummary.activeUsersPerPeriod!=null" class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
-								<div class="summarylistInnerwrap">
+								<div class="summary-widget">
 									<p>Active users per {{timePeriodText}}</p>
 									<div class="summary-value">
 										{{UserGroupSummary.activeUsersPerPeriod | number}}</div>
@@ -74,7 +74,7 @@
 								</div>
 							</li>
 							<li ng-show="UserGroupSummary.actual!=null" class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
-								<div class="summarylistInnerwrap">
+								<div class="summary-widget">
 									<p>Total members</p>
 									<div class="summary-value">
 										{{UserGroupSummary.actual | number}}</div>
@@ -82,7 +82,7 @@
 								</div>
 							</li>
 							<li ng-show="UserGroupSummary.newSubscriptions!=null" class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
-								<div class="summarylistInnerwrap">
+								<div class="summary-widget">
 									<p>New paid users</p>
 									<div class="summary-value">
 										{{UserGroupSummary.newSubscriptions | number}}</div>
@@ -90,7 +90,7 @@
 								</div>
 							</li>
 							<li ng-show="UserGroupSummary.conversionRate!=null" class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
-								<div class="summarylistInnerwrap">
+								<div class="summary-widget">
 									<p>Conversion Rate</p>
 									<div class="summary-value">
 										{{UserGroupSummary.conversionRate}}</div>
@@ -98,7 +98,7 @@
 								</div>
 							</li>
 							<li ng-show="UserGroupSummary.newRegistrations!=null" class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
-								<div class="summarylistInnerwrap last">
+								<div class="summary-widget last">
 									<p>New Registrations</p>
 									<div class="summary-value">
 									 {{UserGroupSummary.newRegistrations | number}}</div>
