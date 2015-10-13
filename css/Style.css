@@ -8170,7 +8170,7 @@ div#progressBar {
 .navbar-inverse .navbar-nav>.active>a{
   border-bottom: 0px solid #f6f6f6;
  /*  background: url(images/triangle.png) no-repeat; */
-  background-color: #2D2D2D;
+  background-color: #000;
   background-position: -25px 38px;
 }
 .navbar-inverse .navbar-nav>li>a{
