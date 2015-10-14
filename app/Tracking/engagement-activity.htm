@@ -87,7 +87,7 @@
 				<ng-include ng-show="error" src="'partials/error.htm'"></ng-include>
 				<ul ng-hide="error" class="row-fluid summary-list clearfix" style="margin: 20px 0px 5px 10px;">
 					<li ng-show="engagementActivitySummary.versusLast.value" class="col-md-5ths col-xs-6">
-						<div class="summarylistInnerwrap">
+						<div class="summary-widget">
 							<p>{{toLastText}}</p>
 							<div
 								class="{{engagementActivitySummary.versusLast.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
@@ -96,7 +96,7 @@
 						</div>
 					</li>
 					<li ng-show="engagementActivitySummary.versusSameLastYear.value" class="col-md-5ths col-xs-6">
-						<div class="summarylistInnerwrap">
+						<div class="summary-widget">
 							<p>{{toLastLYText}}</p>
 							<div
 								class="{{engagementActivitySummary.versusSameLastYear.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
@@ -105,7 +105,7 @@
 						</div>
 					</li>
 					<li ng-show="engagementActivitySummary.Numberofactivities.value" class="col-md-5ths col-xs-6">
-						<div class="summarylistInnerwrap">
+						<div class="summary-widget">
 							<p>Count of {{heading}}</p>
 							<div class="summary-value"
 								ng-if="engagementActivitySummary.Numberofactivities.value=='NA'">
@@ -117,7 +117,7 @@
 						</div>
 					</li>
 					<li ng-show="engagementActivitySummary.Percentageactiveusers.value" class="col-md-5ths col-xs-6">
-						<div class="summarylistInnerwrap">
+						<div class="summary-widget">
 							<p>% Penetration in active users</p>
 							<div
 								ng-class="{'summary-value':true,'summary-value-down':engagementActivitySummary.Percentageactiveusers.trend=='-ve', 'summary-value-up':engagementActivitySummary.Percentageactiveusers.trend=='+ve'}">
@@ -125,7 +125,7 @@
 						</div>
 					</li>
 					<li ng-show="engagementActivitySummary.AvgCountperuser.value" class="col-md-5ths col-xs-6">
-						<div class="summarylistInnerwrap last">
+						<div class="summary-widget last">
 							<p>Avg. count of activity per user</p>
 							<div
 								ng-class="{'summary-value':true,'summary-value-down':engagementActivitySummary.AvgCountperuser.trend=='-ve', 'summary-value-up':engagementActivitySummary.AvgCountperuser.trend=='+ve'}">

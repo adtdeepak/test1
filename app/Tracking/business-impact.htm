@@ -93,7 +93,7 @@
 				<ul ng-hide="error" class="row-fluid summary-list clearfix"
 				style="margin: 20px 0px 5px 10px;">
                                         <li ng-show="businessImpactSummary.versusLast.value" class="col-md-5ths col-xs-6">
-                                            <div class="summarylistInnerwrap">
+                                            <div class="summary-widget">
                                                  <p>
                                                     {{toLastText}}
                                                 </p>
@@ -104,7 +104,7 @@
                                             </div>
                                         </li>
                                         <li ng-show="businessImpactSummary.versusSameLastYear.value" class="col-md-5ths col-xs-6">
-                                            <div class="summarylistInnerwrap">
+                                            <div class="summary-widget">
                                                 <p>
                                                     {{toLastLYText}}
                                                 </p>
@@ -115,7 +115,7 @@
                                             </div>
                                         </li>
                                         <li ng-show="businessImpactSummary.actualToDate" class="col-md-5ths col-xs-6">
-                                            <div class="summarylistInnerwrap ">
+                                            <div class="summary-widget ">
                                                   <p>
                                                      {{businessImpactSummary.subgroupName}}
                                                 </p>
@@ -126,7 +126,7 @@
                                             </div>
                                         </li>
                                         <li ng-show="businessImpactSummary.diffFromTarget.value" class="col-md-5ths col-xs-6">
-                                            <div class="summarylistInnerwrap">
+                                            <div class="summary-widget">
                                                 <p>
                                                     Difference from Target
                                                 </p>
@@ -137,7 +137,7 @@
                                             </div>
                                         </li>
                                         <li ng-show="businessImpactSummary.forecast.value" class="col-md-5ths col-xs-6">
-                                            <div class="summarylistInnerwrap">
+                                            <div class="summary-widget">
                                                  <p>
                                                     {{forecastText}}
                                                 </p>
