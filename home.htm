@@ -57,21 +57,21 @@ type='text/css'>
 <div class="transparentMask"></div>
 
         <div id="contentarea">
-            
-        		<div class="breadcrumbTrackContainer time-nav" ng-controller = "commonController">
-				<div id="timePeriodTabs">
+            <div class="breadcrumbTrackContainer time-nav" scroll
+        		ng-class="{'time-nav-scroll-down': scrolledDown}" ng-controller = "commonController">
+				<div id="timePeriodTabs" ng-class="{'scroll-down': scrolledDown}">
 					<ul>
-						<li ng-class="{'active': selectedIndex[0].selected}"><a class="" href="#"
+						<li ng-class="{'active': selectedIndex[0].selected, 'scroll-down': scrolledDown}"><a class="" href="#"
 							ng-click="broadcastPeriodChange('weekly',0)">Weekly</a></li>
-						<li ng-class="{'active': selectedIndex[1].selected}"><a class="" href="#"
+						<li ng-class="{'active': selectedIndex[1].selected, 'scroll-down': scrolledDown}"><a class="" href="#"
 							ng-click="broadcastPeriodChange('monthly',1)">Monthly</a></li>
-						<li ng-class="{'active': selectedIndex[2].selected}"><a class="" href="#"
+						<li ng-class="{'active': selectedIndex[2].selected, 'scroll-down': scrolledDown}"><a class="" href="#"
 							ng-click="broadcastPeriodChange('quarterly',2)">Quarterly</a></li>
-						<li ng-class="{'active': selectedIndex[3].selected}"><a class="" href="#"
+						<li ng-class="{'active': selectedIndex[3].selected, 'scroll-down': scrolledDown}"><a class="" href="#"
 							ng-click="broadcastPeriodChange('yearly',3)">Yearly</a></li>
 					</ul>
 				</div>
-				<div id="exportIconsPanel" style="background: #ffffff !important;">
+				<div id="exportIconsPanel" style="background: #ffffff !important;" ng-if="!scrolledDown">
 					<ul>
 						<li title="Print" class="Printicon">&nbsp;</li>
 						<li class="iconExport export">
@@ -456,6 +456,7 @@ type='text/css'>
 	<script src="app/Common/directives/slider-ng.js"></script>
 	<script src="app/Common/directives/dataTable-ng.js"></script>
 	<script src="app/Common/directives/elements.js"></script>
+	<script src="app/Common/directives/scroll.js"></script>
 
 	<!-- Angular Filters -->
 	<script src="app/Common/filters/numeric.js"></script>

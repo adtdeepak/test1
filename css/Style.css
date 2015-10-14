@@ -921,6 +921,9 @@ h1.pull-left {
   margin-right: 15px;
 }
 
+#timePeriodTabs.scroll-down{
+	margin-right: 0px;
+}
 #timePeriodTabs ul {
 	margin: 0px;
 	padding: 0px;
@@ -933,13 +936,17 @@ h1.pull-left {
 	background: #ffffff;
 	text-align: center !important;
 	list-style: none;
-	
 	margin-right: 8px;
 	font-size: 13px;
     border: 1px solid #ccc;
     border-radius: 5px;
 	color: #525252;
 	font-weight: normal;
+}
+#timePeriodTabs ul li.scroll-down{
+	float:none !important;
+	margin-top:5px;
+	margin-right: 0px;
 }
 #timePeriodTabs ul li:hover{
 	
@@ -6130,6 +6137,7 @@ a.tooltip-new span {
 	}
 }
  .time-nav{position: fixed;  right: 105px; top: 50px; z-index: 1000;}
+ .time-nav-scroll-down{position: fixed;  right: 10px; top: 50px; z-index: 1000;}
 
 .filter-label {
 	float: left;
@@ -9131,3 +9139,4 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ccfffff
 	background: -ms-linear-gradient(top, #ffffff 0%, #efefef 100%);
 	/* IE10+ */
 	background: linear-gradient(to bottom, #ffffff 0%, #efefef 100%); border:1px solid #d0d0d0; border-radius:3px;}
+
