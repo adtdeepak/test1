@@ -73,6 +73,11 @@ this.getBasicLineChart = function(data, title, subtitle, width){
 	        	enabled: false
 	        },
 	        yAxis: {
+	            labels: {
+	                formatter: function () {
+	                    return this.value.toLocaleString();
+	                }
+	            },
 	            title: {
 	                text: ''
 	            },
