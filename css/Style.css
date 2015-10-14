@@ -3663,11 +3663,11 @@ select.small {
 }
 [ng-controller="acquisitionFunnelController"] .customDiv.active{
 	background: #333;
-	border: 2px solid #333;
+	border: 1px solid #333;
 }
 [ng-controller="acquisitionFunnelController"] .customDiv:hover{
     background: #333;
-    border: 2px solid #333;
+    border: 1px solid #333;
   
  }
 
@@ -8003,7 +8003,7 @@ div#progressBar {
 
 .customDiv{
 	/* height:100%; */
-  	width: 105%;
+  	width: 100%;
 	color:#fff;
 }
 .dotted{
@@ -8830,7 +8830,7 @@ div#progressBar {
     background-repeat: no-repeat;
     background-position: 0px -90px;
     margin-right: 50px;
-    margin-left: 15px;
+    margin-left: 10px;
 }
 .wishlist-unselected:hover{
 	background: url('../images/execute-icon.png');

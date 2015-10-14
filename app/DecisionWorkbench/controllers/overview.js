@@ -92,7 +92,7 @@ angular.module('DecisionWorkbench')
 				"sWidth" : "100px"
 			}, {
 				"sClass" : "each-row-details",
-				"sWidth" : "150px"
+				"sWidth" : "180px"
 			}, {
 				"sClass" : "each-row-details",
 				"sWidth" : "110px"
@@ -101,7 +101,7 @@ angular.module('DecisionWorkbench')
 				"sWidth" : "200px"
 			}, {
 				"sClass" : "each-row-details",
-				"sWidth" : "200px"
+				"sWidth" : "180px"
 			},{
 				"sClass" : "",
 				"sWidth" : "100px"
@@ -133,15 +133,20 @@ angular.module('DecisionWorkbench')
 		//Table options for user group Table
 		var columOptionsAttr = {
 				"aoColumns" : [ {
-					"sClass" : "each-row-details"
+					"sClass" : "each-row-details",
+                    "sWidth" : "100px"
 				}, {
-					"sClass" : "each-row-details"
+					"sClass" : "each-row-details",
+				    "sWidth" : "180px"
 				}, {
-					"sClass" : "each-row-details"
+					"sClass" : "each-row-details",
+                    "sWidth" : "110px"
 				}, {
-					"sClass" : "each-row-details"
+					"sClass" : "each-row-details",
+                    "sWidth" : "200px"
 				}, {
-					"sClass" : "each-row-details"
+					"sClass" : "each-row-details",
+                    "sWidth" : "180px"
 				},null, null],
 				'fnCreatedRow': function (nRow, aData, iDataIndex) {
 					  $.each($('td', nRow), function (colIndex) {
