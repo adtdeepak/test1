@@ -3,7 +3,7 @@ angular.module('DecisionWorkbench')
 .controller( "overviewController", function($scope, DataService, CustomService, ChartOptionsService, $rootScope, UtilitiesService, $location) {
 
 	$scope.userGroupDropdownText = 'Creative Agencies';
-	$scope.featureDropdownText = '3rd Party integration API';
+	$scope.featureDropdownText = '3rd Party Integration API';
 	$scope.rowClicked = function(attribute){
 		console.log("clicked controller:", attribute);
 		window.location = "#/overview-details?selectedGroup="+attribute;

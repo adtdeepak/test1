@@ -500,6 +500,7 @@ this.getColumnBarChart = function(data, title, subtitle, height, color){
 	        },
 	        yAxis: {
 	            title: {
+                     text:'Count of users'
 	            },
 	            labels: {
 	                overflow: 'justify'

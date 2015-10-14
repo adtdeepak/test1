@@ -8885,6 +8885,7 @@ div#progressBar {
 
 .campaign-overview #productUsageTable thead tr th, .campaign-overview #onGoingCampaignTable thead tr th, .campaign-overview #pastCampaignTable thead tr th {
     background: #666 !important;
+    font-weight: 600;
     color: #ffffff;
     font-size:15px;
 }
