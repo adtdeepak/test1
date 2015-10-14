@@ -178,9 +178,9 @@ angular.module('DecisionWorkbench')
 		        "bSort": false,
 		        "columns": [
 		            { "title": "Feature" },
-		            { "title": "Current usage level" },
-		            { "title": "Ideal usage level" },
-		            { "title": "Impact on engagement score"}
+		            { "title": "Current Usage Level" },
+		            { "title": "Ideal Usage Level" },
+		            { "title": "Impact on Engagement Score"}
 		        ],
             dom: '<"dataTableContainer"t><"dataTablePaginateContainer"p>'
 		    } );   
