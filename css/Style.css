@@ -8349,6 +8349,7 @@ div#progressBar {
 	text-align:center;
 	border:1px solid #d0d0d0;
 	width:105%;
+    padding: 0px;
   background: #ffffff;
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
   background: -moz-linear-gradient(top, #ffffff 0%, #efefef 100%);
