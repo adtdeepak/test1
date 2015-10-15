@@ -561,7 +561,13 @@ angular.module('AnalyticsApp')
 					}]
 				},
 				yAxis:{
-					gridLineWidth:0
+					gridLineWidth:0,
+					labels:{
+						formatter: function(){
+							var val = this.value;
+							return val.toLocaleString();
+						}
+					}
 				},
 				credits: {
 					enabled: false
