@@ -52,7 +52,8 @@ angular.module('Tracking')
 this.getBasicLineChart = function(data, title, subtitle, width){
 		return {
 			chart:{
-				height:300
+				height:300,
+				plotBorderWidth:1
 			},
 	        title: {
 	            text: title
@@ -62,17 +63,23 @@ this.getBasicLineChart = function(data, title, subtitle, width){
 	            x: -20
 	        },
 	        xAxis: {
-	            categories: data.xAxis/*,
+	            categories: data.xAxis,
 	            plotBands: [{ // mark the weekend
 	                color: '#EFFCFB',
-	                from: data.plotBand[0][0],
-	                to: data.plotBand[0][1]
-	            }]*/
+	                from: data.plotBand[0],
+	                to: data.plotBand[1]
+	            }]
 	        },
 	        exporting:{
 	        	enabled: false
 	        },
 	        yAxis: {
+	        	 gridLineWidth: 0,
+	            labels: {
+	                formatter: function () {
+	                    return this.value.toLocaleString();
+	                }
+	            },
 	            title: {
 	                text: ''
 	            },

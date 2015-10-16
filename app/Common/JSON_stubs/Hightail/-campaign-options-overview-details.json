@@ -16,9 +16,9 @@
     {
         "id": 19,
         "campaignType":"User Groups",
-        "userGroup": "Musicians<br>ES between 50% - 70%",
+        "userGroup": "Musicians<br>Engagement score (50% - 70%)",
         "description": "Create music by collaborating with other musicians, anytime, anwhere.",
-        "impact": "Increase in engagement by 15%",
+        "impact": "Increase engagement by 15%",
         "featurePromoted":"Collaborate","wishlist": "no",
         "execute": "no"
     },
@@ -576,16 +576,16 @@
 						        	}
         					}],
 							"incrementalImpact":[{"revenue":"4,500,000","paidUsers":"37,500","F2PconversionRate":"0.5%","EGScore":"15%"}],
-							"reasons":["Usage of collaborate feature increase by 25%", "Users who collaborate are 35% more engaged than users who do not use collaborate"]
+							"reasons":["Usage of collaborate feature increases by 25%.", "Users who collaborate are 35% more engaged than users who do not collaborate."]
 						},
 						"tableData":{
-							"productUsage":[{"feature":"Send","currentUsageLevel":37,"ideaUsagelevel":50,"impactOnEGScore":"1%"},
-											{"feature":"Share","currentUsageLevel":42,"ideaUsagelevel":50,"impactOnEGScore":"0.50%"},
-											{"feature":"Collaborate","currentUsageLevel":15,"ideaUsagelevel":35,"impactOnEGScore":"1.50%"},
-											{"feature":"Archive","currentUsageLevel":20,"ideaUsagelevel":25,"impactOnEGScore":"2%"},
-											{"feature":"Premium content security","currentUsageLevel":1,"ideaUsagelevel":3,"impactOnEGScore":"4%"}],
-							"onGoingCampaign":[{"campaignID":61,"campaignDescription":"Record, listen and share your music on the go. Download mobile app","Impact":"Increase in engagement by 12%","Channel":"Email","startDate":"12/1/2012"}],
-							"pastCampaign":[{"campaignID":34,"campaignDescription":"Now, share your music with your friends, family and colleagues","Impact":"Increase in engagement by 7%","Channel":" Home page Advertisement","endDate":"11/1/2012"}]
+							"productUsage":[{"feature":"Send","currentUsageLevel":37,"ideaUsagelevel":50,"impactOnEGScore":"1.0%"},
+											{"feature":"Share","currentUsageLevel":42,"ideaUsagelevel":50,"impactOnEGScore":"0.5%"},
+											{"feature":"Collaborate","currentUsageLevel":15,"ideaUsagelevel":35,"impactOnEGScore":"1.5%"},
+											{"feature":"Archive","currentUsageLevel":20,"ideaUsagelevel":25,"impactOnEGScore":"2.0%"},
+											{"feature":"Premium content security","currentUsageLevel":1,"ideaUsagelevel":3,"impactOnEGScore":"4.0%"}],
+							"onGoingCampaign":[{"campaignID":61,"campaignDescription":"Record, listen and share your music on the go. Download mobile app","Impact":"Increase engagement by 12%","Channel":"Email","startDate":"15/9/2015"}],
+							"pastCampaign":[{"campaignID":34,"campaignDescription":"Now share your music with your friends, family and colleagues","Impact":"Increase engagement by 7%","Channel":" Home page Advertisement","endDate":"15/8/2015"}]
 						}
 				},
 				"87":{

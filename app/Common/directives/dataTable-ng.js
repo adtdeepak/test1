@@ -211,7 +211,7 @@ angular.module('AnalyticsApp')
                     '<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">'+
 					'<div style="border:1px solid  #adadad; " class="brdr-left ">'+
 						'<div class="">'+
-							'<div class="panel-heading " style="font-weight:600; text-align:center; background:#adadad none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'Conversion %'+'</div>'+
+							'<div class="panel-heading " style="font-weight:600; text-align:center; background:#adadad none repeat scroll 0 0; color: #fff;padding:5px; margin-bottom:10px;">'+'Conversion Percentage'+'</div>'+
 						'</div>'+
 						'<div  style="padding:20px !important;" class="widget-content metric-widgets">'+
 							'<div class="row-fluid">'+
@@ -246,7 +246,7 @@ angular.module('AnalyticsApp')
     			
     			'<div style="margin: 0 15px; " class="row ">'+
     				'<div class="row nopadding">'+'</div>'+
-                    '<div style=" border-bottom: 3px double #666;  font-size: 16px; margin: 15px 0px;" class="heading-overview">'+'Description of user group'+'</div>'+
+                    '<div style=" border-bottom: 3px double #666;  font-size: 16px; margin: 15px 0px;" class="heading-overview">'+'Description of User Group'+'</div>'+
     					'<div class="half-width">'+
                     '<div style="border: 1px solid #666;  float: left;     width: 100%;">'+
     						'<div style=" margin: 0px 15px 0; padding: 0; "  class="col-sm-4 col-md-4 col-lg-4-1">'+
@@ -288,7 +288,7 @@ angular.module('AnalyticsApp')
     				'</div>'+
     			'</div>'+
                     
-    			'<div style=" border-bottom: 3px double #666;  font-size: 16px; margin: 15px 15px;" class="heading-overview">'+'Description of Product usage'+'</div>'+
+    			'<div style=" border-bottom: 3px double #666;  font-size: 16px; margin: 15px 15px;" class="heading-overview">'+'Description of Product Usage'+'</div>'+
     			'<div style="margin: 15px 15px;" id="demo">'+
 					'<div  id="productUsageTable">'+'</div>'+
 				'</div>'+

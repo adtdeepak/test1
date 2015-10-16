@@ -205,12 +205,12 @@ angular.module('Tracking')
 			chartData.push({
 				name : 'Actual',
 				data : actual,
-				color : '#26A48E',
+				color : '#1B6395',
 
 			}, {
 				name : 'Target',
 				data : target,
-				color : '#32CABB',
+				color : '#149AE3',
 
 			});
 
@@ -256,7 +256,7 @@ angular.module('Tracking')
 			chartData.push({
 				name : 'Actual',
 				data : actual,
-				color : '#26A48E',
+				color : '#1B6395',
 
 			});
 
@@ -365,11 +365,11 @@ angular.module('Tracking')
 				_data[timeRange.periodName] ={
 						value: [{
 							name: 'Actual',
-							data: timeRange.data/*,
-							color:'#26A48E'*/
+							data: timeRange.data,
+							color:'#1B6395'
 						}],
-						xAxis : timeRange.xAxis
-						//plotBand :plotBandRange
+						xAxis : timeRange.xAxis,
+						plotBand :[2.5,5]
 				}
 		});
 		_data['engagementScore'] =  currentScore;

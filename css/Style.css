@@ -921,6 +921,9 @@ h1.pull-left {
   margin-right: 15px;
 }
 
+#timePeriodTabs.scroll-down{
+	margin-right: 0px;
+}
 #timePeriodTabs ul {
 	margin: 0px;
 	padding: 0px;
@@ -933,13 +936,17 @@ h1.pull-left {
 	background: #ffffff;
 	text-align: center !important;
 	list-style: none;
-	
 	margin-right: 8px;
 	font-size: 13px;
     border: 1px solid #ccc;
     border-radius: 5px;
 	color: #525252;
 	font-weight: normal;
+}
+#timePeriodTabs ul li.scroll-down{
+	float:none !important;
+	margin-top:5px;
+	margin-right: 0px;
 }
 #timePeriodTabs ul li:hover{
 	
@@ -4383,7 +4390,7 @@ ul.acquisitiontabs li:last-child {
 	right: 13px;
 	width: 250px;
 	line-height: 24px;
-	z-index: 10010;
+	z-index: 9;
 	-webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.22);
 	-moz-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.22);
 	box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.22);
@@ -6130,6 +6137,7 @@ a.tooltip-new span {
 	}
 }
  .time-nav{position: fixed;  right: 105px; top: 50px; z-index: 1000;}
+ .time-nav-scroll-down{position: fixed;  right: 10px; top: 50px; z-index: 1000;}
 
 .filter-label {
 	float: left;
@@ -8341,6 +8349,7 @@ div#progressBar {
 	text-align:center;
 	border:1px solid #d0d0d0;
 	width:105%;
+    padding: 0px;
   background: #ffffff;
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
   background: -moz-linear-gradient(top, #ffffff 0%, #efefef 100%);
@@ -8885,6 +8894,7 @@ div#progressBar {
 
 .campaign-overview #productUsageTable thead tr th, .campaign-overview #onGoingCampaignTable thead tr th, .campaign-overview #pastCampaignTable thead tr th {
     background: #666 !important;
+    font-weight: 600;
     color: #ffffff;
     font-size:15px;
 }
@@ -9117,4 +9127,17 @@ box-shadow:0px 1px 0px rgba(255,255,255,0.5);
 filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ccffffff,Positive=true);
 }
 
-}
+.summary-widget{background:
+		url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZmVmZWYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #ffffff 0%, #efefef 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff),
+		color-stop(100%, #efefef)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffffff 0%, #efefef 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffffff 0%, #efefef 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ffffff 0%, #efefef 100%);
+	/* IE10+ */
+	background: linear-gradient(to bottom, #ffffff 0%, #efefef 100%); border:1px solid #d0d0d0; border-radius:3px;}
+

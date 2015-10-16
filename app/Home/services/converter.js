@@ -63,7 +63,8 @@ angular.module('Home')
 			plotBandRange.push(UtilitiesService.getPlotBandRange(xAxis));
 			var tempObj = [{
                 "name": data.legend,
-                "data": value
+                "data": value,
+                "color":"#1B6395"
             }]
 			_data['xAxis'] =xAxis;
 			_data['value'] =tempObj;
