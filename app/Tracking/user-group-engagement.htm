@@ -14,7 +14,10 @@
                   <div style="margin-bottom:15px;" class="panel panel-default">
 					<div class="panel-heading">User Groups Metrics</div>
 				</div>
-				
+					<div style=" position: absolute;
+    right: 50px;
+    top: 50px;" class="chart-textNote">As of Saturday,
+							Sept 12, 2015 </div>
 				<a href="javascript:;" class="pull-right filter-option-menu filter-option-menu1"> </a>
 				<div style="margin-top: 55px;" class="options-filter options-filter1  width clearfix">
 					<img src="images/popmenu-arrow.png" class="popmenu-arrow" />
@@ -22,6 +25,7 @@
 						<div class="popupTitle">
 							<label> Select User Group</label>
 						</div>
+                        
 						<div class="popupcnt top" ng-repeat="data in userSettings.menus" >
 							<div class="height">
 								<input type="checkbox" ng-model="data.checked" ng-change="menu.onSelect(data)"/> 
@@ -59,7 +63,7 @@
 						<ul ng-hide="error" class="row summary-list clearfix">
 							<li ng-show="UserGroupSummary.engScore!=null" class="col-md-5ths col-xs-6">
 								<div class="summary-widget">
-									<p>Engagement Score</p>
+									<p>Engagement score</p>
 									<div class="summary-value">
 										{{UserGroupSummary.engScore | number}}</div>
 
@@ -91,7 +95,7 @@
 							</li>
 							<li ng-show="UserGroupSummary.conversionRate!=null" class="col-md-5ths col-xs-6">
 								<div class="summary-widget">
-									<p>Conversion Rate</p>
+									<p>Conversion rate</p>
 									<div class="summary-value">
 										{{UserGroupSummary.conversionRate}}</div>
 

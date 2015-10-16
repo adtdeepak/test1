@@ -16,7 +16,7 @@
 				</div>
 				
 				<a href="javascript:;" class="pull-right filter-option-menu filter-option-menu1"> </a>
-				<div class="options-filter options-filter1  width clearfix">
+				<div class="options-filter  width clearfix">
 					<img src="images/popmenu-arrow.png" class="popmenu-arrow" />
 					<div>
 						<div class="popupTitle">
@@ -58,22 +58,22 @@
 								<div class="box-content-bottom">
 									<ul>
 										<li>
-											<div style="margin-left:-10px;" ng-if="data.versusLast.trend=='-ve'">
+											<div ng-if="data.versusLast.trend=='-ve'">
 												<img src="images/arrow-red.png" alt="arrow" style="margin-right:5px;">
 												{{data.versusLast.value}} {{vsLastText}}
 											</div>
-											<div style="margin-left:-10px;" ng-if="data.versusLast.trend!='-ve'">
+											<div  ng-if="data.versusLast.trend!='-ve'">
 												<img src="images/arrow-green.png" alt="arrow" style="margin-right:5px;">
 												{{data.versusLast.value}} {{vsLastText}}
 											</div>											
 										</li>
 										
 										<li>
-											<div style="margin-left:-10px;" ng-if="data.versusSameLastYear.trend=='-ve'">
+											<div  ng-if="data.versusSameLastYear.trend=='-ve'">
 												<img src="images/arrow-red.png" alt="arrow" style="margin-right:5px;">
 												{{data.versusSameLastYear.value}} {{vsLastYearText}}
 											</div>
-											<div style="margin-left:-10px;" ng-if="data.versusSameLastYear.trend!='-ve'">
+											<div  ng-if="data.versusSameLastYear.trend!='-ve'">
 												<img src="images/arrow-green.png" alt="arrow" style="margin-right:5px;">
 												{{data.versusSameLastYear.value}} {{vsLastYearText}}
 											</div>											
@@ -128,7 +128,7 @@
                                         <li ng-show="businessImpactSummary.diffFromTarget.value" class="col-md-5ths col-xs-6">
                                             <div class="summary-widget">
                                                 <p>
-                                                    Difference from Target
+                                                    Difference from target
                                                 </p>
                                                 <div class="{{businessImpactSummary.diffFromTarget.trend=='-ve'?'summary-value summary-value-down':'summary-value summary-value-up'}}">
                                                    {{businessImpactSummary.diffFromTarget.value}}
