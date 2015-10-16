@@ -55,31 +55,35 @@
                          <a tabindex="-1" >Segmentation</a>
                          <ul class="dropdown-menu"	ng-click="trackUrlClicked(trackingHtmlName)">
                                    
-					          <li ng-click="navModuleClicked(analysisHtmlname, '#/segment-overview')"><a tabindex="-1" href="#/segment-overview">Overview</a></li>                         
-                                 <li ng-click="navModuleClicked(analysisHtmlname, '#/segment-deepdive')"><a tabindex="-1" href="#/segment-deepdive">Deepdive</a></li>
-                               </ul> 
+				            <li ng-click="navModuleClicked(analysisHtmlname, '#/segment-overview')"><a tabindex="-1" href="#/segment-overview">Overview</a></li>                         
+                            <li ng-click="navModuleClicked(analysisHtmlname, '#/segment-deepdive')"><a tabindex="-1" href="#/segment-deepdive">Deepdive</a></li>
+                           </ul>  
                         </li>
                         
                          </ul>                       
 				</li>
                 
-				<li class="dropdown" ng-class="{active: mainHtml=='campaign-options' || mainHtml=='decision-workbench'}">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#"> {{decisionWorkbenchTab}}
+				<li ng-class="{active: mainHtml=='campaign-options'}" ng-click="navModuleClicked(decisionWorkbenchHtmlName, '#/overview')"><a href="campaign-options.htm#/overview">{{decisionWorkbenchTab}}</a></li>
+
+				<!-- <li class="dropdown" ng-class="{active: mainHtml=='campaign-options' || mainHtml=='decision-workbench'}">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="campaign-options.htm#/wishlist"> {{decisionWorkbenchTab}}
 					 <span class="caret"></span></a>
-					<ul class="dropdown-menu" ng-controller="dwLinkController">
+					<ul class="dropdown-menu" ng-controller="dwLinkController"> -->
 						<!-- <li class="first" ng-click="navModuleClicked(decisionWorkbenchHtmlName, '#/index')"><a ng-if="isSetGoalsEditable"
 							href="#/index" ng-class="{active: thisPage=='/index'||thisPage=='/builddo'}">
 							{{dw_index_tabText}}</a></li>
 						<li ng-click="navModuleClicked(decisionWorkbenchHtmlName, '#/review-do')"> <a ng-if="isReviewDOViewable" href="#/review-do"
 							ng-class="{active: thisPage=='/review-do'}">
 							{{dw_reviewdo_tabText}}</a></li> -->
-							<li class="first" ng-click="navModuleClicked(decisionWorkbenchHtmlName, '#/overview')"><a href="#/overview">
-							Overview</a></li>
-							<li ng-click="navModuleClicked(decisionWorkbenchHtmlName, '#/wishlist')"><a href="#/wishlist">
+							<!-- <li class="first" ng-click="navModuleClicked(decisionWorkbenchHtmlName, '#/overview')"><a href="#/overview">
+							Overview</a></li> -->
+							<!-- <li ng-click="navModuleClicked(decisionWorkbenchHtmlName, '#/wishlist')"><a href="#/wishlist">
 							Wishlist</a></li>
 							<li ng-click="navModuleClicked(decisionWorkbenchHtmlName, '#/selected')"><a href="#/selected">
-							Selected</a></li>
-					</ul></li>
+							Selected</a></li> -->
+					<!-- </ul></li> -->
+					<li ng-class="{active: mainHtml=='wishlist'}" ng-click="navModuleClicked(decisionWorkbenchHtmlName, '#/wishlist')"><a href="campaign-options.htm#/wishlist">Wishlist</a></li>
+					<li ng-class="{active: mainHtml=='selected'}" ng-click="navModuleClicked(decisionWorkbenchHtmlName, ''#/selected'')"><a href="campaign-options.htm#/selected">Selected</a></li>
                    <li style="border-left:1px solid #ccc;" class="dropdown"><a style="padding: 4px 5px 4px 20px;" class="dropdown-toggle"
 					data-toggle="dropdown" href="#" ng-controller="dwLinkController"><img width="35" src="images/profile-pic.png" alt="D-ASSIST $ CONVERTER"	title="D-ASSIST $ CONVERTER" />
 			
@@ -92,6 +96,7 @@
                            
                          </ul>                       
 				</li>
+
 			</ul>
 			<ng-include src="'partials/header.htm'"></ng-include>
 		</div>

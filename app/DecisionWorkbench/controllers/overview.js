@@ -297,6 +297,4 @@ angular.module('DecisionWorkbench')
 	getAllUserTableData();
 	
 })
-
-
 	
