@@ -9140,4 +9140,34 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ccfffff
 	background: -ms-linear-gradient(top, #ffffff 0%, #efefef 100%);
 	/* IE10+ */
 	background: linear-gradient(to bottom, #ffffff 0%, #efefef 100%); border:1px solid #d0d0d0; border-radius:3px;}
+.campaign-home-widget-content {
+    background: #fff none repeat scroll 0 0;
+    color: #575757;
+    font-size: 12px;
+    padding: 15px 0px;
+    text-align: center;
+}
+.campaign-home-box{}
+.campaign-home-box:hover{    border: 1px solid #333;}
 
+.showme{display: none; background: #666 none repeat scroll 0 0;
+    border-radius: 3px;
+    color: #fff;
+    padding: 10px;
+    width: 400px; margin-top: 15px;}
+.showhim:hover .showme{display : block;}
+.hideme{display:block;}
+.showhim:hover .hideme{display:none;}
+.orange-btn{ background-color: #F5874F;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 50px;
+    padding: 8px 22px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    top: 0;}
