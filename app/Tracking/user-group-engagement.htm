@@ -44,11 +44,11 @@
 						ng-class="{selected: data.groupBy==select}">
 							<div class="box-content-top">
 									<h3 class="text-ellipsis" title="{{data.groupName}}">{{data.groupName}}</h3>									
-									<div class="value-orange trackingLink">
-										{{data.actual| number}}</div>
-                                    <p class='widget-text'>(Count of users)</p>
-                                    <p class="value1"><span class="ng-binding">{{data.periodAvg| number}}</span></p>
-									<p class="duration">{{averageTimePeriodText}}</p>
+									<div class="value-orange trackingLink">{{data.newSubscriptions | number}}
+										<!-- {{data.actual| number}} --></div>
+                                    <p class='widget-text'>(New paid users)</p>
+                                    <p class="value1"><span class="ng-binding">{{data.conversionRate}}</span></p>
+									<p class="duration">Avg conversion rate<!-- {{averageTimePeriodText}} --></p>
 							</div>
 						</div>
 					</li>
@@ -69,14 +69,6 @@
 
 								</div>
 							</li>
-							<li ng-show="UserGroupSummary.activeUsersPerPeriod!=null"  class="col-md-5ths col-xs-6">
-								<div class="summary-widget">
-									<p>Active users per {{timePeriodText}}</p>
-									<div class="summary-value">
-										{{UserGroupSummary.activeUsersPerPeriod | number}}</div>
-
-								</div>
-							</li>
 							<li ng-show="UserGroupSummary.actual!=null" class="col-md-5ths col-xs-6">
 								<div class="summary-widget">
 									<p>Total members</p>
@@ -85,19 +77,27 @@
 
 								</div>
 							</li>
-							<li ng-show="UserGroupSummary.newSubscriptions!=null" class="col-md-5ths col-xs-6">
+							<li ng-show="UserGroupSummary.conversionRate!=null" class="col-md-5ths col-xs-6">
 								<div class="summary-widget">
-									<p>New paid users</p>
+									<p>New Registrations</p>
 									<div class="summary-value">
-										{{UserGroupSummary.newSubscriptions | number}}</div>
+										{{UserGroupSummary.newRegistrations | number}}</div>
 
 								</div>
 							</li>
-							<li ng-show="UserGroupSummary.conversionRate!=null" class="col-md-5ths col-xs-6">
+							<li ng-show="UserGroupSummary.newSubscriptions!=null" class="col-md-5ths col-xs-6">
 								<div class="summary-widget">
-									<p>Conversion rate</p>
+									<p>{{averageTimePeriodText}}</p>
 									<div class="summary-value">
-										{{UserGroupSummary.conversionRate}}</div>
+										{{UserGroupSummary.periodAvg | number}}</div>
+
+								</div>
+							</li>
+							<li ng-show="UserGroupSummary.activeUsersPerPeriod!=null"  class="col-md-5ths col-xs-6">
+								<div class="summary-widget">
+									<p>Active users per {{timePeriodText}}</p>
+									<div class="summary-value">
+										{{UserGroupSummary.activeUsersPerPeriod | number}}</div>
 
 								</div>
 							</li>
