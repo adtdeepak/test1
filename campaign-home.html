@@ -120,17 +120,23 @@
                                         <lable>Select User Group</lable>
                                         </div>
                                         <div class="col-lg-7 no-padding">
-                                            <div class="col-lg-8">
-                                       <select>
-                                            <option>1</option>
-                                           <option>2</option>
-                                           <option>3</option>
-                                        </select>
-                                                </div>
+                                            <div class="btn-group pull-right" style="margin-top: -6px;margin-right: 30px;">
+					    <button ng-init="usergroupclicked='Creative Agencies'" class="btn bkgd-white" style="min-width: 200px;text-align: left;color: #555555;">{{usergroupclicked}}</button>
+					    <button class="btn dropdown-toggle bkgd-white" data-toggle="dropdown">
+					    <span class="caret"></span>
+						   </button>
+						 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="min-width: 224px;">
+						   <li><a tabindex="-1" href="#"  ng-click="usergroupclicked = 'Creative Agencies'">Creative Agencies</a></li>
+						   <li><a tabindex="-1" href="#" ng-click="usergroupclicked = 'Finance Executives'">Finance Executives</a></li>
+						   <li><a tabindex="-1" href="#" ng-click="usergroupclicked = 'Musicians'">Musicians</a></li>
+						   <li><a tabindex="-1" href="#" ng-click="usergroupclicked = 'Photographers'">Photographers</a></li>
+						   <li><a tabindex="-1" href="#" ng-click="usergroupclicked = 'Project Managers'">Project Managers</a></li>
+						 </ul>
+						</div>
                                             
                                            <div class="container-button col-lg-4">
-<a class="orange-btn" href="">Go</a>
-</div>
+											<a class="orange-btn"  href="campaign-options.htm#/overview?usergroup={{usergroupclicked}}">Go</a>
+											</div>
                                         </div>
                                    
                                 
@@ -162,16 +168,26 @@
                                         <lable>Select Features</lable>
                                         </div>
                                         <div class="col-lg-7 no-padding">
-                                            <div class="col-lg-8">
-                                       <select>
-                                            <option>1</option>
-                                           <option>2</option>
-                                           <option>3</option>
-                                        </select>
-                                                </div>
+                                            					<div class="btn-group pull-right" style="margin-top: -6px;margin-right: 30px;">
+					    <button ng-init="feature='3rd Party Integration API'" class="btn bkgd-white" style="min-width: 200px;text-align: left;color: #555555;">{{feature}}</button>
+					    <button class="btn dropdown-toggle bkgd-white" data-toggle="dropdown">
+					    <span class="caret"></span>
+					   </button>
+					 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="min-width: 224px;">
+					   <li><a tabindex="-1" href="#" ng-click="feature = '3rd Party Integration API'">3rd Party Integration API</a></li>
+					   <li><a tabindex="-1" href="#"  ng-click="feature = 'Collaborate'">Collaborate</a></li>
+					   <li><a tabindex="-1" href="#"  ng-click="feature = 'eSign'">eSign</a></li>
+					   <li><a tabindex="-1" href="#"  ng-click="feature = 'Full Text Search'">Full Text Search</a></li>
+					   <li><a tabindex="-1" href="#"  ng-click="feature = 'Microsoft 365 Integration'">Microsoft 365 Integration</a></li>
+					   <li><a tabindex="-1" href="#"  ng-click="feature = 'Mobile App'">Mobile App</a></li>
+					   <li><a tabindex="-1" href="#"  ng-click="feature = 'Storage Space'">Storage Space</a></li>
+					   <li><a tabindex="-1" href="#"  ng-click="feature = 'Version History'">Version History</a></li>
+					   <li><a tabindex="-1" href="#"  ng-click="feature = 'Workspace Share'">Workspace Share</a></li>
+					 </ul>
+					</div>
                                             
                                            <div class="container-button col-lg-4">
-<a class="orange-btn" href="">Go</a>
+<a class="orange-btn" href="campaign-options.htm#/overview?featuregroup={{feature}}"">Go</a>
 </div>
                                         </div>
                                    

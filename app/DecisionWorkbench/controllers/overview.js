@@ -2,8 +2,26 @@ angular.module('DecisionWorkbench')
 
 .controller( "overviewController", function($scope, DataService, CustomService, ChartOptionsService, $rootScope, UtilitiesService, $location) {
 
-	$scope.userGroupDropdownText = 'Creative Agencies';
-	$scope.featureDropdownText = '3rd Party Integration API';
+
+	if($location.url().indexOf("usergroup") > -1){
+		var usergroup = $location.search().usergroup ;
+		$scope.userGroupDropdownText = usergroup;
+		$scope.featureDropdownText = '3rd Party Integration API';
+		
+	}
+	else if($location.url().indexOf("featuregroup") > -1){
+		var featuregroup = $location.search().featuregroup ;
+		$scope.userGroupDropdownText = 'Creative Agencies';
+		$scope.featureDropdownText = featuregroup;
+	
+	}
+	else{
+		$scope.userGroupDropdownText = 'Creative Agencies';
+		$scope.featureDropdownText = '3rd Party Integration API';
+	};
+
+	// $scope.userGroupDropdownText = 'Creative Agencies';
+	// $scope.featureDropdownText = '3rd Party Integration API';
 	$scope.rowClicked = function(attribute){
 		console.log("clicked controller:", attribute);
 		window.location = "#/overview-details?selectedGroup="+attribute;
