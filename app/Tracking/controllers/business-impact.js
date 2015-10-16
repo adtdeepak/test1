@@ -34,9 +34,9 @@ angular.module('Tracking')
     //Setting shared property value when the widget is selected
     $scope.selected = MenuService.widgetSelected;
     $scope.menu.getUserSettings("BI",
-								function (userSettingsData) {
-								    $scope.userSettings = userSettingsData;
-								});
+        function (userSettingsData) {
+            $scope.userSettings = userSettingsData;
+    });
     $rootScope.$on('onCacheExpiry', loadData);
     $scope.$on('periodChange', updateData);
     $scope.$on('menuSave', function () {
