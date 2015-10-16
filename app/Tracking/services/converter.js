@@ -368,8 +368,8 @@ angular.module('Tracking')
 							data: timeRange.data,
 							color:'#1B6395'
 						}],
-						xAxis : timeRange.xAxis
-						//plotBand :plotBandRange
+						xAxis : timeRange.xAxis,
+						plotBand :[2.5,5]
 				}
 		});
 		_data['engagementScore'] =  currentScore;
