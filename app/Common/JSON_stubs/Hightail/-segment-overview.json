@@ -37,7 +37,7 @@
         	}
         },
 		"DemographicProfile":[{
-			"name":"% Male",
+			"name":"Percentage males",
 			"ProjectManagers":"60%",
 			"FinanceExecutives":"42%",
 			"Photographers":"61%",
@@ -45,7 +45,7 @@
 			"CreativeAgencies":"65%"
 		},
 		{
-			"name":"Median Age",
+			"name":"Median age",
 			"ProjectManagers":"35 years",
 			"FinanceExecutives":"45 years",
 			"Photographers":"28 years",
@@ -61,7 +61,7 @@
 			"CreativeAgencies":"Global"
 		},
 		{
-			"name":"% Employed Fulltime",
+			"name":"Percentage employed fulltime",
 			"ProjectManagers":"90%",
 			"FinanceExecutives":"75%",
 			"Photographers":"60%",
@@ -85,7 +85,7 @@
 			"CreativeAgencies":"3,313"
 		}],
 		"ProductUsage":[{
-			"name":"Avg. Login per week",
+			"name":"Avg. login per week",
 			"ProjectManagers":"5",
 			"FinanceExecutives":"8",
 			"Photographers":"4",
@@ -93,14 +93,14 @@
 			"CreativeAgencies":"22"
 		},
 		{
-			"name":"Avg. Time spent online per login",
+			"name":"Avg. time spent online per login",
 			"ProjectManagers":"30 mins",
 			"FinanceExecutives":"45 mins",
 			"Photographers":"15 mins",
 			"Musicians":"5 mins",
 			"CreativeAgencies":"10 mins"
 		},{
-			"name":"Percentage Active users",
+			"name":"Percentage active users",
 			"ProjectManagers":"40%",
 			"FinanceExecutives":"50%",
 			"Photographers":"25%",
@@ -108,14 +108,14 @@
 			"CreativeAgencies":"30%"
 		},
 		{
-			"name":"Profile Status (Completed)",
+			"name":"Profile status (Completed)",
 			"ProjectManagers":"40%",
 			"FinanceExecutives":"35%",
 			"Photographers":"65%",
 			"Musicians":"55%",
 			"CreativeAgencies":"55%"
 		},{
-			"name":"Mobile App Users",
+			"name":"Mobile app users",
 			"ProjectManagers":"35%",
 			"FinanceExecutives":"69%",
 			"Photographers":"80%",
@@ -123,15 +123,15 @@
 			"CreativeAgencies":"40%"
 		},
 		{
-			"name":"Favourite Features",
-			"ProjectManagers":"Microsoft 365 integration",
-			"FinanceExecutives":"Esign",
+			"name":"Favourite features",
+			"ProjectManagers":"Microsoft 365 Integration",
+			"FinanceExecutives":"eSign",
 			"Photographers":"Mobile App",
 			"Musicians":"Share",
 			"CreativeAgencies":"Collaborate"
 		}],
 		"Engagement":[{
-			"name":"Engagement Score",
+			"name":"Engagement score",
 			"ProjectManagers":"65",
 			"FinanceExecutives":"53",
 			"Photographers":"62",
@@ -147,7 +147,7 @@
 			"CreativeAgencies":"87"
 		},
 		{
-			"name":"Number Campaigns this year",
+			"name":"Number of campaigns this year",
 			"ProjectManagers":"4",
 			"FinanceExecutives":"1",
 			"Photographers":"2",
