@@ -37,7 +37,7 @@
         	}
         },
 		"DemographicProfile":[{
-			"name":"% Male",
+			"name":"Percentage Males",
 			"ProjectManagers":"60%",
 			"FinanceExecutives":"42%",
 			"Photographers":"61%",
@@ -61,7 +61,7 @@
 			"CreativeAgencies":"Global"
 		},
 		{
-			"name":"% Employed Fulltime",
+			"name":"Percentage Employed Fulltime",
 			"ProjectManagers":"90%",
 			"FinanceExecutives":"75%",
 			"Photographers":"60%",
@@ -124,8 +124,8 @@
 		},
 		{
 			"name":"Favourite Features",
-			"ProjectManagers":"Microsoft 365 integration",
-			"FinanceExecutives":"Esign",
+			"ProjectManagers":"Microsoft 365 Integration",
+			"FinanceExecutives":"eSign",
 			"Photographers":"Mobile App",
 			"Musicians":"Share",
 			"CreativeAgencies":"Collaborate"
