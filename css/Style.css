@@ -9156,18 +9156,27 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ccfffff
 }
 .text-box{font-weight:600; color: #fff; padding:5px; text-align:center;}
 
-.showme{display: none; background: #666 none repeat scroll 0 0;
+.showme{background: #666 none repeat scroll 0 0;
+	opacity: 0;
     border-radius: 3px;
     color: #fff;
     padding: 10px;
-    width: 400px; margin-top: 15px;}
+    width: 400px; margin-top: 15px;
+ -webkit-transition: all .25s ease;
+   -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+     -o-transition: all .25s ease;
+        transition: all .25s ease;
+}
 
-.showhim:hover .showme{display : block;}
+.showhim:hover .showme{display : block;opacity: 1}
 .showhim:active .showme{
 	display: block ;
 }
 .activetab{
+	opacity: 1;
 	display: block;
+	visibility: visible;
 }
 /*.hideme{display:block;}
 .showhim:hover .hideme{display:none;}*/
