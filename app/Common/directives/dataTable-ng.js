@@ -30,7 +30,7 @@ angular.module('AnalyticsApp')
                     row.child(format(scope.otherData[rowCount])).show();
                     tr.addClass('shown');
                 }
-            } );
+            });
             $('.dataTableContainer').off('click').on('click', 'td .wishlist-unselected', function (e) {
             	e.stopPropagation();
             	var selected = "yes";
@@ -177,7 +177,7 @@ angular.module('AnalyticsApp')
         		return '<div class="tableAccOuterContainer">'+
         		'<div class="row nopadding">'+
     			'<div style=" border-bottom: 3px double #666;  font-size: 16px; margin: 0 15px;" class="heading-overview">'+'Incremental Impact'+'</div>'+
-                    '<div style="float:left; width100%;>'+
+                    '<div style="float:left; width:100%;>'+
                    '<div style=" padding-bottom: 25px;" class="half-width">'+
                     '<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">'+
 					'<div style="border:1px solid  #adadad; " class="brdr-left ">'+
