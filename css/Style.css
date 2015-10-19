@@ -9151,6 +9151,9 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ccfffff
 .blue-light{background: #3ea8dc; border:1px solid  #3ea8dc;}
 .dark-blue{ background: #1B6395; border: 1px solid #1B6395;}
 .campaign-home-box:hover{    border: 1px solid #333; background: #000;}
+.campaign-home-box-tab{
+	border: 1px solid #333; background: #000;
+}
 .text-box{font-weight:600; color: #fff; padding:5px; text-align:center;}
 
 .showme{display: none; background: #666 none repeat scroll 0 0;
@@ -9158,9 +9161,16 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ccfffff
     color: #fff;
     padding: 10px;
     width: 400px; margin-top: 15px;}
+
 .showhim:hover .showme{display : block;}
-.hideme{display:block;}
-.showhim:hover .hideme{display:none;}
+.showhim:active .showme{
+	display: block ;
+}
+.activetab{
+	display: block;
+}
+/*.hideme{display:block;}
+.showhim:hover .hideme{display:none;}*/
 .orange-btn{ background-color: #F5874F;
     border: 1px solid #ccc;
     border-radius: 5px;

@@ -1,0 +1,84 @@
+<head>
+     <title>D-ASSIST $ CONVERTER</title>
+	<link rel="shortcut icon" href="images/logo.ico"/>
+</head>
+
+	<div class="container campaign-overview" ng-cloak  style="padding-top: 30px;">
+		<div id="progressbar"><div class="progress-label">Loading...</div></div>
+		<div id="wait">Please Wait</div>
+	</div>
+<script>
+
+$(document).ready(function(){
+    var newurl ="#overview";
+	 var time = 40;
+     
+
+	if (window.location.href.toLowerCase().indexOf("byimpact") >= 0){
+		newurl = "#overview";
+		time = 40;
+		
+	}
+	else if(window.location.href.indexOf("usergroup") >= 0){
+		
+		 var usergroup = window.location.href.split('=');
+		 newurl = "#overview?usergroup=" + usergroup[1];
+		 time = 50;
+	}
+	else if(window.location.href.indexOf("featuregroup") >= 0){
+		var featuregroup = window.location.href.split('=');
+		 newurl = "#overview?featuregroup=" + featuregroup[1];
+		 time = 50;
+	}
+	else{
+		newurl = "#custom-filter";
+		time = 40;
+	};
+    $(function() {
+    var progressbar = $( "#progressbar" ),
+      progressLabel = $( ".progress-label" );
+ 
+    progressbar.progressbar({
+      value: false,
+      change: function() {
+        progressLabel.text( "Processing " + progressbar.progressbar( "value" ) + "%" );
+      },
+      complete: function() {
+       location.href = newurl;
+      }
+    });
+ 
+    function progress() {
+      var val = progressbar.progressbar( "value" ) || 0;
+ 
+      progressbar.progressbar( "value", val + 2 );
+ 
+      if ( val < 99 ) {
+        setTimeout( progress, time );
+      }
+    }
+ 
+    setTimeout( progress, 0 );
+  });
+});
+</script>
+<style>
+  .ui-progressbar {
+    position: relative;
+    margin-top: 25%;
+    margin-bottom: 25%;
+    background: grey;
+  }
+  .progress-label {
+    position: absolute;
+    left: 50%;
+    top: 4px;
+    /*font-weight: bold;*/
+    color: #fff;
+    /*text-shadow: 1px 1px 0 #fff;*/
+  }
+  #wait{
+  	text-align: center;
+  	color: #000;
+  }
+  </style>
