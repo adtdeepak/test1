@@ -7,7 +7,7 @@ angular.module('DecisionWorkbench')
 	$scope.selectedGroup = [{"key":"All Users","selected":false},{"key":"Project Managers","selected": false},{"key":"Creative Agencies","selected": false},
 	                        {"key":"Finance Executives","selected": false},{"key":"Musicians","selected": false},{"key":"Photographers","selected": false}];
 	
-	$scope.selectedFeature = [{"key":"3rd Party integration API","selected":false},{"key":"Collaborate","selected": false},{"key":"E-Sign","selected": false},
+	$scope.selectedFeature = [{"key":"3rd Party Integration API","selected":false},{"key":"Collaborate","selected": false},{"key":"E-Sign","selected": false},
 	                        {"key":"Full Text Search","selected": false},{"key":"Microsoft 365 integration","selected": false},{"key":"Mobile App","selected": false},
 	                        {"key":"Storage Space","selected": false},{"key":"Version History","selected": false},{"key":"Workspace share","selected": false}];
 
@@ -45,7 +45,7 @@ angular.module('DecisionWorkbench')
 		if($scope.campaignType[1].selected){
 			$scope.broadcastselectedGroup("All Users", 0);
 		}else{
-			$scope.broadcastselectedFeature("3rd Party integration API", 0);
+			$scope.broadcastselectedFeature("3rd Party Integration API", 0);
 		}
 	}
 	
@@ -350,4 +350,3 @@ angular.module('DecisionWorkbench')
 	
 
 })
-
