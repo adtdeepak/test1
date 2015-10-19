@@ -42,8 +42,10 @@ $(document).ready(function(){
       value: false,
       change: function() {
         progressLabel.text( "Processing " + progressbar.progressbar( "value" ) + "%" );
+       
       },
       complete: function() {
+         
        location.href = newurl;
       }
     });
@@ -52,10 +54,14 @@ $(document).ready(function(){
       var val = progressbar.progressbar( "value" ) || 0;
  
       progressbar.progressbar( "value", val + 2 );
- 
+      if(val > 96){
+        $('.ui-widget-header').css('background','green') ;
+      };
       if ( val < 99 ) {
         setTimeout( progress, time );
       }
+      
+      
     }
  
     setTimeout( progress, 0 );
