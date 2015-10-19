@@ -44,7 +44,7 @@ $(document).ready(function(){
         progressLabel.text( "Processing " + progressbar.progressbar( "value" ) + "%" );
       },
       complete: function() {
-       location.href = newurl;
+       // location.href = newurl;
       }
     });
  
@@ -65,13 +65,17 @@ $(document).ready(function(){
 <style>
   .ui-progressbar {
     position: relative;
-    margin-top: 25%;
-    margin-bottom: 25%;
-    background: grey;
+    margin-top: 22%;
+    /*margin-bottom: 25%;*/
+    background: #777;
+  }
+  .ui-widget-header{
+    background: #f5874f;
+    border: 1px solid #f5874f;
   }
   .progress-label {
     position: absolute;
-    left: 50%;
+    left: 45.5%;
     top: 4px;
     /*font-weight: bold;*/
     color: #fff;
