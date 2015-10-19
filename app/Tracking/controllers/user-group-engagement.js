@@ -191,6 +191,7 @@ angular.module('Tracking')
 				$scope.toLastText = $scope.Constants[$scope.Constants.EA_Prefix + 'comparedLast_' + $rootScope.selectedPeriod];
 				$scope.toLastLYText = $scope.Constants[$scope.Constants.EA_Prefix + 'comparedLastYear_' + $rootScope.selectedPeriod];
 				$scope.timePeriodText =  $scope.Constants[$scope.Constants.TRACK_Prefix + $rootScope.selectedPeriod];
+				$scope.averageTimePeriodText = $scope.Constants[$scope.Constants.EA_Prefix + 'averagePeriod_' + $scope.selectedPeriod];
 			}
 		} catch (e) {
 			$scope.fail(errorConstants.DATA_ERR);
