@@ -111,19 +111,19 @@
 				"PaidUser":{
 					"value":"147 K",
 					"yoy":"4",
-					"name":"Paid User",
+					"name":"Paid Users",
 					"id":"activeUsersTrendPaidusers"
 				},
 				"Freetopaidconversion":{
 					"value":"5",
 					"yoy":"1.2",
-					"name":"Free to paid conversion",
+					"name":"Free to Paid Conversion",
 					"id":"activeUsersTrendF2P"
 				},
 				"Engagementscore":{
 					"value":"62",
 					"yoy":"1",
-					"name":"Engagement score",
+					"name":"Engagement Score",
 					"id":"activeUsersTrendEngagementScore"
 				}
 			}
@@ -135,36 +135,36 @@
     		"description":"Create music by collaborating with other musicians anytime, anywhere.",
 			"targetUsers":"135751",
 			"response":"31222",
-			"Impact":"Increase in engagement by 15",
-    		"startDate":"12/01/2012",
-    		"endDate":"12/31/2012"
+			"Impact":"Increase engagement by 15%",
+    		"startDate":"12/01/2015",
+    		"endDate":"12/31/2015"
     	},{
     		"CampaignID":"21",
     		"userGroup":"Photographers",
     		"description":"Upoad on the go photos using the Mobile App",
 			"targetUsers":"416303",
 			"response":"99912",
-			"Impact":"Increase Engagement by 7",
-    		"startDate":"12/01/2012",
-    		"endDate":"12/31/2012"
+			"Impact":"Increase Engagement by 7%",
+    		"startDate":"12/01/2015",
+    		"endDate":"12/31/2015"
     	},{
     		"CampaignID":"73",
     		"userGroup":"Creative Agencies",
     		"description":"Edit, control and manage your work without errors, using Version control",
 			"targetUsers":"380103",
 			"response":"38000",
-			"Impact":"Campaign conversion rate 0.9",
-    		"startDate":"12/01/2012",
-    		"endDate":"12/31/2012"
+			"Impact":"Campaign conversion rate 0.9%",
+    		"startDate":"12/01/2015",
+    		"endDate":"12/31/2015"
     	},{
     		"CampaignID":"87",
     		"userGroup":"Project Managers",
     		"description":"Audit, control and monitor file access rights",
 			"targetUsers":"316752",
 			"response":"47512",
-			"Impact":"Campaign conversion rate 15",
-    		"startDate":"12/01/2012",
-    		"endDate":"12/31/2012"
+			"Impact":"Campaign conversion rate 15%",
+    		"startDate":"12/01/2015",
+    		"endDate":"12/31/2015"
     	}]
 		},
 		"customInsights":{

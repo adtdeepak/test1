@@ -9150,18 +9150,21 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ccfffff
 .campaign-home-box{ }
 .blue-light{background: #3ea8dc; border:1px solid  #3ea8dc;}
 .dark-blue{ background: #1B6395; border: 1px solid #1B6395;}
-.campaign-home-box:hover{    border: 1px solid #333; background: #000;}
+.campaign-home-box:hover{    border: 1px solid #333; background: #000; cursor:pointer;}
 .campaign-home-box-tab{
 	border: 1px solid #333; background: #000;
 }
+.campaign-home-box a{}
+.campaign-home-box a:hover{color: #000;}
 .text-box{font-weight:600; color: #fff; padding:5px; text-align:center;}
 
 .showme{background: #666 none repeat scroll 0 0;
 	opacity: 0;
     border-radius: 3px;
     color: #fff;
+    display: none;
     padding: 10px;
-    width: 400px; margin-top: 15px;
+    width: 450px; margin-top: 15px;
  -webkit-transition: all .25s ease;
    -moz-transition: all .25s ease;
     -ms-transition: all .25s ease;
@@ -9169,7 +9172,7 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ccfffff
         transition: all .25s ease;
 }
 
-.showhim:hover .showme{display : block;opacity: 1}
+/*.showhim:hover .showme{display : block;opacity: 1}*/
 .showhim:active .showme{
 	display: block ;
 }
@@ -9178,8 +9181,7 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ccfffff
 	display: block;
 	visibility: visible;
 }
-/*.hideme{display:block;}
-.showhim:hover .hideme{display:none;}*/
+
 .orange-btn{ background-color: #F5874F;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -9193,3 +9195,6 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ccfffff
     text-align: center;
     text-decoration: none;
     top: 0;}
+.analysis-light-blue{ border: 1px solid #1b6395;}
+.analysis-light-blue .lightbox{ background: #1b6395;}
+
