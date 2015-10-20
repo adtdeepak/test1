@@ -23,12 +23,12 @@ $(document).ready(function(){
 		
 		 var usergroup = window.location.href.split('=');
 		 newurl = "#overview?usergroup=" + usergroup[1];
-		 time = 50;
+		 time = 40;
 	}
 	else if(window.location.href.indexOf("featuregroup") >= 0){
 		var featuregroup = window.location.href.split('=');
 		 newurl = "#overview?featuregroup=" + featuregroup[1];
-		 time = 50;
+		 time = 40;
 	}
 	else{
 		newurl = "#custom-filter";
@@ -57,7 +57,7 @@ $(document).ready(function(){
       if(val > 96){
         $('.ui-widget-header').css('background','green') ;
       };
-      if ( val < 99 ) {
+      if ( val < 98 ) {
         setTimeout( progress, time );
       }
       
