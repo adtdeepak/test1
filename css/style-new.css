@@ -8819,4 +8819,12 @@ align:center !important;
 }
 .text-center{text-align: center !important;}
 .bold{font-weight: 600; background:  rgba(0, 0, 0, 0.06) none repeat scroll 0 0;}
+.analysis-dark-blue{ border: 1px solid #1b6395; background: #1b6395;}
+.analysis-dark-blue .textbox{ background: #fff !important;  padding: 10px 5px 1px 5px !important;}
+.analysis-dark-blue:hover{ border: 1px solid #000; background: #000;}
+.analysis-light-blue{ border: 1px solid #3ea8dc; background: #3ea8dc;}
+.analysis-light-blue .textbox{ background: #fff !important;  padding: 10px 5px 1px 5px !important;}
+.analysis-light-blue:hover{ border: 1px solid #000; background: #000;}
+
+
 

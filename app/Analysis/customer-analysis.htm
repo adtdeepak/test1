@@ -215,13 +215,13 @@
 		</div>
         <div style="background:#fff !important;" class="half-width">
 				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
-					<div style="border:1px solid   #1b6395; "ng-class="{'brdr-left mouse-pointer':true, 'active': behaviourWidgets[0].selected}"
+					<div class="analysis-dark-blue" ng-class="{'brdr-left mouse-pointer':true, 'active': behaviourWidgets[0].selected}"
 						 ng-click="selectedBehaviour('activeUsersTrendRevenue')">
 						<div class="">
-							<div class="panel-heading" style="font-weight:600; background: #1b6395 none repeat scroll 0 0; color: #fff; padding:5px; margin-bottom:10px;">{{behaviourData.TotalRevenue.name}}
+							<div class="panel-heading" style="font-weight:600;  color: #fff; padding:5px;">{{behaviourData.TotalRevenue.name}}
 							</div>
 						</div>
-						<div class="widget-content metric-widgets">
+						<div class="widget-content metric-widgets textbox">
 							<div class="row-fluid">
 								<div class="actual-value"><span  style="color: #3ea8dc;">{{behaviourData.TotalRevenue.value}}</span></div>
 							</div>
@@ -235,13 +235,13 @@
 					</div>
 				</div>
 				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
-					<div style="border:1px solid  #3ea8dc;" ng-class="{'brdr-left mouse-pointer':true, 'active': behaviourWidgets[1].selected}" 
+					<div class="analysis-light-blue" ng-class="{'brdr-left mouse-pointer':true, 'active': behaviourWidgets[1].selected}" 
 					    ng-click="selectedBehaviour('activeUsersTrendPaidusers')">
 						<div class="">
-							<div class="panel-heading" style="font-weight:600; background:#3ea8dc none repeat scroll 0 0; color: #fff; padding:5px; margin-bottom:10px;">{{behaviourData.PaidUser.name}}
+							<div class="panel-heading" style="font-weight:600; color: #fff; padding:5px; ">{{behaviourData.PaidUser.name}}
 							</div>
 						</div>
-						<div class="widget-content metric-widgets">
+						<div class="widget-content metric-widgets textbox">
 							<div class="row-fluid">
 								<div class="actual-value"><span  style="color: #3ea8dc;">{{behaviourData.PaidUser.value}}</span></div>
 							</div>
@@ -257,13 +257,13 @@
 				</div>
 			<div  style="background:#fff !important;" class="half-width">
 				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
-					<div style="border:1px solid  #1b6395;  "ng-class="{'brdr-left mouse-pointer':true, 'active': behaviourWidgets[2].selected}"
+					<div class="analysis-dark-blue" ng-class="{'brdr-left mouse-pointer':true, 'active': behaviourWidgets[2].selected}"
 						ng-click="selectedBehaviour('activeUsersTrendF2P')">
 						<div class="">
-							<div class="panel-heading" style="font-weight:600;background: #1b6395  none repeat scroll 0 0; color: #fff; padding:5px; margin-bottom:10px;">{{behaviourData.Freetopaidconversion.name}}
+							<div class="panel-heading" style="font-weight:600; color: #fff; padding:5px;">{{behaviourData.Freetopaidconversion.name}}
 							</div>
 						</div>
-						<div class="widget-content metric-widgets">
+						<div class="widget-content metric-widgets textbox">
 							<div class="row-fluid">
 								<div class="actual-value"><span style="color: #1b6395;">{{behaviourData.Freetopaidconversion.value}} %</span></div>
 							</div>
@@ -277,13 +277,13 @@
 					</div>
 				</div>
 				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
-					<div style="border:1px solid  #3ea8dc;  "ng-class="{'brdr-left mouse-pointer':true, 'active': behaviourWidgets[3].selected}"
+					<div class="analysis-light-blue" ng-class="{'brdr-left mouse-pointer':true, 'active': behaviourWidgets[3].selected}"
 						ng-click="selectedBehaviour('activeUsersTrendEngagementScore')">
 						<div class="">
-							<div class="panel-heading" style="font-weight:600; background:#3ea8dc none repeat scroll 0 0; color: #fff; padding:5px; margin-bottom:10px;">{{behaviourData.Engagementscore.name}}
+							<div class="panel-heading" style="font-weight:600; color: #fff; padding:5px;">{{behaviourData.Engagementscore.name}}
 							</div>
 						</div>
-						<div class="widget-content metric-widgets">
+						<div class="widget-content metric-widgets textbox">
 							<div class="row-fluid">
 								<div class="actual-value"><span style="color: #3ea8dc;">{{behaviourData.Engagementscore.value}}</span></div>
 							</div>
@@ -300,7 +300,7 @@
 
 			<div class="row nopadding">
 				<div>
-					<div style="width: 50%; float: left; padding: 25px 15px 15px 15px;">
+					<div style="width: 50%; margin-top:125px; padding: 25px 15px 15px 15px;">
 						<h4 style="padding: 0px; margin: 0px;">Trends</h4>
 					</div>
 				</div>
