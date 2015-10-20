@@ -9198,3 +9198,6 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ccfffff
 .analysis-dark-blue{ border: 1px solid #1b6395;}
 .analysis-dark-blue .lightbox{ background: #1b6395;}
 
+.smSubsTable {
+	width: 100% !important;
+}

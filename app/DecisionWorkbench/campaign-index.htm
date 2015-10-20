@@ -1,0 +1,189 @@
+<head>
+     <title>D-ASSIST $ CONVERTER</title>
+	<link rel="shortcut icon" href="images/logo.ico"/>
+</head>
+
+			<div class="container campaign-overview" ng-cloak  style="padding-top: 30px;">
+                <div class="col-md-8">
+                    <ul style="margin-left:-30px; margin-bottom:10px;" class="breadcrumb">
+                        <li><a style="color:#666;" href="home.htm">Home</a></li>
+                        <li class="active">Campaign Options</li>
+
+                    </ul>
+                </div>
+                <div class="col-md-4-big">
+        
+                    <div id="exportIconsPanel" ng-if="thisPage!='/builddo'" style="background: #ffffff !important;">
+                        <ul>
+						  <li title="Print" class="Printicon">&nbsp;</li>
+						  <li class="iconExport export">
+							 <ul>
+								    <li class="top"><a href="#" alt="Export to Pdf"
+									title="Export to Pdf" ng-click="pdfExport()">
+										<figure>
+											<img src="images/icon-pdf.png" />
+										</figure></a></li>
+                                    <li><a href="#" alt="Export to Excel"
+									title="Export to Excel">
+										<figure>
+											<img src="images/icon-excel.png" />
+										</figure>
+								</a></li>
+								    <li><a href="#" alt="Export to Word" title="Export to Word">
+										<figure>
+											<img src="images/icon-word.png" />
+										</figure>
+								</a></li>
+							</ul>
+						</li>
+					</ul>
+
+        
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="row nopadding" style="border:1px solid #ccc; background:#fff;">
+                    <div class="collapseDiv">
+                        <div class="panel-heading">Top Campaign Recommendations</div>
+			        </div>
+			         <div>
+                        <div style="background:#fff !important;  padding: 10px 0 20px;" class="half-width">
+                            <div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
+                                <a href="#progress?byimpact"><div class="campaign-home-box dark-blue">
+						
+                                    <div class="campaign-home-widget-content metric-widgets">
+                                        <div class="row-fluid">
+                                            <div class="actual-value"><img src="images/campaign-home-icon/by-impact.png"></div>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="panel-heading text-box" >By Impact</div>
+                                    </div>
+					           </div></a>
+                            </div>
+                            <div  class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
+                                  
+                            <div  class="showhim campaign-home-box blue-light"> 
+                                <div>
+                                    <div class="campaign-home-widget-content metric-widgets">
+                                        <div class="row-fluid">
+                                            <div class="actual-value"><img src="images/campaign-home-icon/by-usergroup.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="panel-heading text-box" >By User Group</div>
+                                    </div>
+                                </div>
+                                <div class="showme col-lg-12 no-padding">
+                                	<span style=" left: 113px;position: absolute;top: -15px;"><img src="images/campaign-home-icon/up-arrow.png">
+                                	</span>
+                                    <div  style="padding: 10px 0px;" class="col-lg-4 no-padding">
+                                        <lable>Select User Group</lable>
+                                    </div>
+                                    <div  style="padding: 0px 10px 0px 0px;" class="col-lg-8 no-padding">
+	                                    <div style="padding:5px 0px;" class="btn-group col-lg-10">
+						    				<button ng-init="usergroupclicked='Creative Agencies'" class="btn bkgd-white" style="min-width: 200px;text-align: left;color: #555555;">{{usergroupclicked}}</button>
+						    				<button class="btn dropdown-toggle bkgd-white" data-toggle="dropdown">
+						    					<span style="color:#777;" class="caret"></span>
+							  	 			</button>
+											 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="min-width: 224px;">
+											   <li><a tabindex="-1" href="#"  ng-click="usergroupclicked = 'Creative Agencies'">Creative Agencies</a></li>
+											   <li><a tabindex="-1" href="#" ng-click="usergroupclicked = 'Finance Executives'">Finance Executives</a></li>
+											   <li><a tabindex="-1" href="#" ng-click="usergroupclicked = 'Musicians'">Musicians</a></li>
+											   <li><a tabindex="-1" href="#" ng-click="usergroupclicked = 'Photographers'">Photographers</a></li>
+											   <li><a tabindex="-1" href="#" ng-click="usergroupclicked = 'Project Managers'">Project Managers</a></li>
+											 </ul>
+										</div>
+	                                            
+	                                   <div style="float: right;    height: 30px;    margin-top: -5px;    padding: 0 0 0 7px;" class="container-button col-lg-2">
+											<a style=" padding: 5px 10px;" class="orange-btn"  href="#progress?usergroup={{usergroupclicked}}">Go</a>
+										</div>
+                                	</div>
+                                </div>
+							</div>
+                               
+                            </div>
+                      
+                         </div>
+                           <div style="background:#fff !important;  padding: 10px 0 20px;" class="half-width">
+                               <div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
+                                   <div class="showhim tab campaign-home-box dark-blue">
+	                                   <div>
+	                                       <div class="campaign-home-widget-content metric-widgets">
+	                                           <div class="row-fluid">
+	                                               <div class="actual-value"><img src="images/campaign-home-icon/by-feature.png"></div>
+	                                           </div>
+	                                       </div>
+	                                       <div class="">
+	                                           <div class="panel-heading text-box" >By Features</div>
+	                                       </div>
+	                                   </div>
+	                                    <div class="showme col-lg-12 no-padding">
+	                                		<span style=" left: 113px;position: absolute;top: -15px;"><img src="images/campaign-home-icon/up-arrow.png">
+	                                		</span>
+	                                        <div  style="padding: 10px 0px;" class="col-lg-4 no-padding">
+	                                        	<lable>Select Features</lable>
+	                                        </div>
+	                                        <div style="padding: 0px 10px 0px 0px;" class="col-lg-8 no-padding">
+	                        					<div class="btn-group col-lg-10" style="padding:5px 0px;" >
+							    					<button ng-init="feature='3rd Party Integration API'" class="btn bkgd-white" style="min-width: 200px;text-align: left;color: #555555;">{{feature}}</button>
+							   						<button class="btn dropdown-toggle bkgd-white" data-toggle="dropdown">
+					    								<span style="color:#777;" class="caret"></span>
+							   						</button>
+													<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="min-width: 224px;">
+							   							<li><a tabindex="-1" href="#" ng-click="feature = '3rd Party Integration API'">3rd Party Integration API</a></li>
+													    <li><a tabindex="-1" href="#"  ng-click="feature = 'Collaborate'">Collaborate</a></li>
+													    <li><a tabindex="-1" href="#"  ng-click="feature = 'eSign'">eSign</a></li>
+													    <li><a tabindex="-1" href="#"  ng-click="feature = 'Full Text Search'">Full Text Search</a></li>
+													    <li><a tabindex="-1" href="#"  ng-click="feature = 'Microsoft 365 Integration'">Microsoft 365 Integration</a></li>
+													    <li><a tabindex="-1" href="#"  ng-click="feature = 'Mobile App'">Mobile App</a></li>
+													    <li><a tabindex="-1" href="#"  ng-click="feature = 'Storage Space'">Storage Space</a></li>
+													    <li><a tabindex="-1" href="#"  ng-click="feature = 'Version History'">Version History</a></li>
+													    <li><a tabindex="-1" href="#"  ng-click="feature = 'Workspace Share'">Workspace Share</a></li>
+													</ul>
+												</div>
+		                                        <div style="float: right;    height: 30px;    margin-top: -5px;    padding: 0 0 0 7px;" class="container-button col-lg-2">
+													<a style=" padding: 5px 10px;" class="orange-btn" href="#progress?featuregroup={{feature}}" >Go</a>
+												</div>
+	                                    	</div>
+	                                	</div>
+                            		</div>
+                   			   </div>
+                        		<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
+                 	     	<a href="#progress?custom">
+                                <div class="blue-light campaign-home-box">
+                                    <div class="campaign-home-widget-content metric-widgets">
+                                        <div class="row-fluid">
+                                            <div class="actual-value"><img src="images/campaign-home-icon/custom.png" ></div>
+										</div>
+									</div>
+			                        <div class="">
+										<div class="panel-heading text-box" >Custom Campaign Option</div>
+									</div>
+								</div>
+							</a>
+								</div>
+						   </div>
+		        	 </div>
+		    </div>
+		
+            </div>
+			
+			
+		  </div>
+    </div>
+	<script type="text/javascript">
+
+$(document).ready(function(){
+
+		$('.showhim').click(function() {
+			$(".showme").removeClass('activetab');
+			$(".campaign-home-box").removeClass('campaign-home-box-tab');
+			$(this).addClass('campaign-home-box-tab');
+		    $(this).find(".showme").addClass('activetab');
+		});
+	});
+
+
+	</script>
