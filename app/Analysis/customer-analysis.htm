@@ -215,7 +215,7 @@
 		</div>
         <div style="background:#fff !important;" class="half-width">
 				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
-					<div class="analysis-dark-blue" ng-class="{'brdr-left mouse-pointer':true, 'active': behaviourWidgets[0].selected}"
+					<div class="analysis-dark-blue analysis-tab active-analysis-tab" ng-class="{'brdr-left mouse-pointer':true, 'active': behaviourWidgets[0].selected}"
 						 ng-click="selectedBehaviour('activeUsersTrendRevenue')">
 						<div class="">
 							<div class="panel-heading" style="font-weight:600;  color: #fff; padding:5px;">{{behaviourData.TotalRevenue.name}}
@@ -235,7 +235,7 @@
 					</div>
 				</div>
 				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
-					<div class="analysis-light-blue" ng-class="{'brdr-left mouse-pointer':true, 'active': behaviourWidgets[1].selected}" 
+					<div class="analysis-light-blue analysis-tab" ng-class="{'brdr-left mouse-pointer':true, 'active': behaviourWidgets[1].selected}" 
 					    ng-click="selectedBehaviour('activeUsersTrendPaidusers')">
 						<div class="">
 							<div class="panel-heading" style="font-weight:600; color: #fff; padding:5px; ">{{behaviourData.PaidUser.name}}
@@ -257,7 +257,7 @@
 				</div>
 			<div  style="background:#fff !important;" class="half-width">
 				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
-					<div class="analysis-dark-blue" ng-class="{'brdr-left mouse-pointer':true, 'active': behaviourWidgets[2].selected}"
+					<div class="analysis-dark-blue analysis-tab" ng-class="{'brdr-left mouse-pointer':true, 'active': behaviourWidgets[2].selected}"
 						ng-click="selectedBehaviour('activeUsersTrendF2P')">
 						<div class="">
 							<div class="panel-heading" style="font-weight:600; color: #fff; padding:5px;">{{behaviourData.Freetopaidconversion.name}}
@@ -277,7 +277,7 @@
 					</div>
 				</div>
 				<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
-					<div class="analysis-light-blue" ng-class="{'brdr-left mouse-pointer':true, 'active': behaviourWidgets[3].selected}"
+					<div class="analysis-light-blue analysis-tab" ng-class="{'brdr-left mouse-pointer':true, 'active': behaviourWidgets[3].selected}"
 						ng-click="selectedBehaviour('activeUsersTrendEngagementScore')">
 						<div class="">
 							<div class="panel-heading" style="font-weight:600; color: #fff; padding:5px;">{{behaviourData.Engagementscore.name}}
@@ -372,6 +372,15 @@
 
 
  	
-// <script type="text/javascript">
-// 	$('.revenue .highcharts-legend').attr('transform', 'translate(50,400)')
-// </script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+		$('.analysis-tab').click(function() {
+			$(".analysis-tab").removeClass('active-analysis-tab');
+			$(this).addClass('active-analysis-tab');
+		});
+	});
+
+
+	</script>
