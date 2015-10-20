@@ -8264,6 +8264,7 @@ div#progressBar {
 .metric-widgets .box-content-bottom ul li.up {
   background: url('../images/arrow-green.png') no-repeat left center;
   color: #525252;
+  background-position: 28px;
 }
 .metric-widgets :hover  .box-content-bottom ul li.up {
 	color: #fff;
@@ -8273,7 +8274,7 @@ div#progressBar {
   color: #525252;
   margin-top: -15px;
   line-height: 20px;
-  padding-left: 16px;
+  padding-left: 45px;
   list-style: none;
   text-align: left;
   margin-left: 20%;

@@ -327,8 +327,9 @@ angular.module('Analysis')
 	            max:100,
 	            title: {
 	            },
+
 	            labels: {
-	                overflow: 'justify'
+	                overflow: 'justify',
 	            }
 	        },
 	        tooltip: {
@@ -454,10 +455,15 @@ this.getTrendingBarChart = function(data, title, subtitle, height, color){
 	        yAxis: {
 	            min: 0,
 	            max:100,
+	            valueSuffix : '%',
 	            title: {
 	            },
 	            labels: {
-	                overflow: 'justify'
+	                overflow: 'justify',
+	                formatter: function () {
+                    var val = this.value;
+                    return val + "%";
+                },
 	            }
 	        },
 	        tooltip: {
