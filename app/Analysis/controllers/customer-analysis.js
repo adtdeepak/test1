@@ -68,11 +68,11 @@ angular.module('Analysis')
 		var deepdiveData = result.data;
 		
 		chartData = DataConversionService.getPieChartData(deepdiveData.productProfile.users);
-	    chartOptions = ChartOptionsService.getPieChartFixedLegend(chartData, "Product Plan", "%age of Users", 300);
+	    chartOptions = ChartOptionsService.getPieChartLeftLegend(chartData, "Product Plan", "%age of Users", 300);
 		chartOBJ = chartsService.donutChart.call($('#userProfileTrend'),chartOptions, $scope);
 		//chart data and options for signup pie chart
 		chartData = DataConversionService.getPieChartData(deepdiveData.productProfile.revenueTrend);
-	    chartOptions = ChartOptionsService.getPieChartFixedLegend(chartData, "Product Plan", "%age of Revenue", 300);
+	    chartOptions = ChartOptionsService.getPieChartLeftLegend(chartData, "Product Plan", "%age of Revenue", 300);
 		chartOBJ = chartsService.donutChart.call($('#revenueProfileTrend'),chartOptions, $scope);
 		
 		chartData = DataConversionService.getPieChartData(deepdiveData.demographicProfile.gender);

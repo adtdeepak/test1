@@ -242,6 +242,63 @@ angular.module('Analysis')
 		}
 	};
 	
+	this.getPieChartLeftLegend = function(data, title, subtitle, height){
+		return {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie',
+                height:height
+            },
+            title: {
+                text: title,
+	            align:'center',
+	            style: {
+	                color: '#686868',
+	                fontWeight: 'bold'
+	            }
+            },
+            subtitle: {
+            	text:subtitle,
+	            align:'center',
+	            style: {
+	                color: '#686868',
+	                fontWeight: 'bold'
+	            }
+            },
+            legend: {
+                align: 'right',
+                verticalAlign:'middle',
+                width: 110,
+                itemWidth: 100,
+                x:-70,
+                itemStyle: {
+                    fontSize:'10px',
+                    font: '10pt Trebuchet MS, Verdana, sans-serif',
+                   color: '#A0A0A0'
+                }
+          },
+            tooltip: {
+                pointFormat: '<b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: false
+                    },
+                    showInLegend: true
+                }
+            },
+            series: [{
+                name: "",
+                colorByPoint: true,
+                data: data
+            }]
+		}
+	};
 	
 	this.getPieChartWithNoLegend = function(data, title, subtitle, height){
 		return {
@@ -326,10 +383,15 @@ angular.module('Analysis')
 	            min: 0,
 	            max:100,
 	            title: {
+	            	text:"Users"
 	            },
 
 	            labels: {
 	                overflow: 'justify',
+	                formatter: function () {
+                    var val = this.value;
+                    return val + "%";
+                },
 	            }
 	        },
 	        tooltip: {
@@ -457,6 +519,7 @@ this.getTrendingBarChart = function(data, title, subtitle, height, color){
 	            max:100,
 	            valueSuffix : '%',
 	            title: {
+	            	text : "Users"
 	            },
 	            labels: {
 	                overflow: 'justify',
