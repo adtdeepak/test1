@@ -133,7 +133,7 @@ angular.module('Analysis')
 	$scope.profileDataSuccess = function(profileData) {
 	    //chart data and options for gender pie chart
 		chartData = DataConversionService.getPieChartData(profileData.data.pieData.gender);
-	    chartOptions = ChartOptionsService.getProfilePieChart(chartData, "Gender", "% of users Male/Female", 275);
+	    chartOptions = ChartOptionsService.getProfilePieChart(chartData, "Gender", "% of users", 275);
 		chartOBJ = chartsService.pieChart.call($('#genderPieChart'),chartOptions, $scope);
 		
 	    //chart data and options for age pie chart
