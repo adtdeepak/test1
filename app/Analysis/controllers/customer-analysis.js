@@ -168,9 +168,9 @@ angular.module('Analysis')
    var chartDataObj = {};
    var deepdiveData;
    $scope.behaviourWidgets =[{"name":"activeUsersTrendRevenue","displayName":"Total Revenue","selected":true}, 
-	                          {"name":"activeUsersTrendPaidusers","displayName":"Paid User","selected":false},
-							  {"name":"activeUsersTrendF2P","displayName":"Free to paid conversion","selected":false},
-							  {"name":"activeUsersTrendEngagementScore","displayName":"Engagement score","selected":false}];
+	                          {"name":"activeUsersTrendPaidusers","displayName":"Paid Users","selected":false},
+							  {"name":"activeUsersTrendF2P","displayName":"Free to Paid Conversion","selected":false},
+							  {"name":"activeUsersTrendEngagementScore","displayName":"Engagement Score","selected":false}];
    
 	$scope.deepdiveDataSuccess = function(result) {
 		deepdiveData = result.data;

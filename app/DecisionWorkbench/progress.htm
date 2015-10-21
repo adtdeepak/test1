@@ -11,28 +11,28 @@
 
 $(document).ready(function(){
     var newurl ="#overview";
-	 var time = 40;
+	 var time = 300;
      
 
 	if (window.location.href.toLowerCase().indexOf("byimpact") >= 0){
 		newurl = "#overview";
-		time = 40;
+		time = 300;
 		
 	}
 	else if(window.location.href.indexOf("usergroup") >= 0){
 		
 		 var usergroup = window.location.href.split('=');
 		 newurl = "#overview?usergroup=" + usergroup[1];
-		 time = 40;
+		 time = 300;
 	}
 	else if(window.location.href.indexOf("featuregroup") >= 0){
 		var featuregroup = window.location.href.split('=');
 		 newurl = "#overview?featuregroup=" + featuregroup[1];
-		 time = 40;
+		 time = 300;
 	}
 	else{
 		newurl = "#custom-filter";
-		time = 40;
+		time = 300;
 	};
     $(function() {
     var progressbar = $( "#progressbar" ),
