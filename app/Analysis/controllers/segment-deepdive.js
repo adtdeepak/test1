@@ -68,11 +68,11 @@ angular.module('Analysis')
 		var deepdiveData = result.data;
 		
 		chartData = DataConversionService.getPieChartData(deepdiveData.productProfile.users);
-	    chartOptions = ChartOptionsService.getPieChartLeftLegend(chartData, "Product Plan", "Percentage of Users", 300);
+	    chartOptions = ChartOptionsService.getPieChartLeftLegend(chartData, "Product Plan", "Percentage of users", 300);
 		chartOBJ = chartsService.donutChart.call($('#userProfileTrend'),chartOptions, $scope);
 		//chart data and options for signup pie chart
 		chartData = DataConversionService.getPieChartData(deepdiveData.productProfile.revenueTrend);
-	    chartOptions = ChartOptionsService.getPieChartLeftLegend(chartData, "Product Plan", "Percentage of Revenue", 300);
+	    chartOptions = ChartOptionsService.getPieChartLeftLegend(chartData, "Product Plan", "Percentage of revenue", 300);
 		chartOBJ = chartsService.donutChart.call($('#revenueProfileTrend'),chartOptions, $scope);
 		
 		chartData = DataConversionService.getPieChartData(deepdiveData.demographicProfile.gender);
@@ -168,9 +168,9 @@ angular.module('Analysis')
   var chartDataObj = {};
   var deepdiveData;
   $scope.behaviourWidgets =[{"name":"activeUsersTrendRevenue","displayName":"Total Revenue","selected":true}, 
-	                          {"name":"activeUsersTrendPaidusers","displayName":"Paid User","selected":false},
-							  {"name":"activeUsersTrendF2P","displayName":"Free to paid conversion","selected":false},
-							  {"name":"activeUsersTrendEngagementScore","displayName":"Engagement score","selected":false}];
+	                          {"name":"activeUsersTrendPaidusers","displayName":"Paid Users","selected":false},
+							  {"name":"activeUsersTrendF2P","displayName":"Free to Paid Conversion","selected":false},
+							  {"name":"activeUsersTrendEngagementScore","displayName":"Engagement Score","selected":false}];
   
 	$scope.deepdiveDataSuccess = function(result) {
 		deepdiveData = result.data;
@@ -248,6 +248,7 @@ angular.module('Analysis')
 		try {
 			$scope.error = false;
 			$scope.options.aaData = [];
+			console.log(data);
 			$.each(data, function(key, obj) {
 					$scope.options.aaData.push([obj.CampaignID, obj.userGroup,  obj.description, obj.targetUsers,
 					                            obj.response, obj.Impact,  obj.startDate, obj.endDate]);

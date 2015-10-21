@@ -669,6 +669,19 @@ this.getTrendingBarChartSeries = function(data, title, subtitle, height, color){
 	        tooltip: {
 	            valueSuffix: '%'
 	        },
+	        yAxis: {
+	            title: {
+	            	text:"Users"
+	            },
+
+	            labels: {
+	                overflow: 'justify',
+	                formatter: function () {
+                    var val = this.value;
+                    return val + "%";
+                },
+	            }
+	        },
 	        xAxis: {
 	        	//x-axis data
 	            categories: data.xAxisData,
