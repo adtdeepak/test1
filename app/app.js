@@ -172,6 +172,7 @@ angular.module('AnalyticsApp',['ngRoute', 'jmdobry.angular-cache'])
 .controller("navigationController",function($scope){
 	var locationUrl = location.href;
 	$scope.mainHtml = location.href.split("/")[4].split(".")[0];
+	console.log($scope.mainHtml);
 	console.log("locationUrl:", location.href.split("/")[4].split(".")[0]);
 	
 });
