@@ -116,19 +116,19 @@
 				"PaidUser":{
 					"value":"1.9 Million",
 					"yoy":"4",
-					"name":"Paid User",
+					"name":"Paid Users",
 					"id":"activeUsersTrendPaidusers"
 				},
 				"Freetopaidconversion":{
 					"value":"2.8",
 					"yoy":"1.2",
-					"name":"Free to paid conversion",
+					"name":"Free to Paid Conversion",
 					"id":"activeUsersTrendF2P"
 				},
 				"Engagementscore":{
 					"value":"65",
 					"yoy":"1",
-					"name":"Engagement score",
+					"name":"Engagement Score",
 					"id":"activeUsersTrendEngagementScore"
 				}
 			}
@@ -140,45 +140,45 @@
     		"description":"Join today and get 10 storage extra",
 			"targetUsers":"135751",
 			"response":"31222",
-			"Impact":"Campaign conversion rate 23",
-    		"startDate":"12/01/2012",
-    		"endDate":"12/31/2012"
+			"Impact":"Campaign conversion rate 23%",
+    		"startDate":"12/01/2015",
+    		"endDate":"12/31/2015"
     	},{
     		"CampaignID":"2",
     		"userGroup":"Photographers",
     		"description":"Mobile app downloads",
 			"targetUsers":"416303",
 			"response":"99912",
-			"Impact":"Increase engagement 12",
-    		"startDate":"12/01/2012",
-    		"endDate":"12/31/2012"
+			"Impact":"Increase engagement by 12%",
+    		"startDate":"12/01/2015",
+    		"endDate":"12/31/2015"
     	},{
     		"CampaignID":"3",
-    		"userGroup":"Enterprise users",
+    		"userGroup":"Enterprise Users",
     		"description":"Connect with Microsoft office 365",
 			"targetUsers":"380103",
 			"response":"38000",
-			"Impact":"Increase engagement by  5.6",
-    		"startDate":"12/01/2012",
-    		"endDate":"12/31/2012"
+			"Impact":"Increase engagement by  5.6%",
+    		"startDate":"12/01/2015",
+    		"endDate":"12/31/2015"
     	},{
     		"CampaignID":"4",
     		"userGroup":"Project Managers",
     		"description":"Audit, control and monitor file access rights",
 			"targetUsers":"316752",
 			"response":"47512",
-			"Impact":"Campaign conversion rate 15",
-    		"startDate":"12/01/2012",
-    		"endDate":"12/31/2012"
+			"Impact":"Campaign conversion rate 15%",
+    		"startDate":"12/01/2015",
+    		"endDate":"12/31/2015"
     	},{
     		"CampaignID":"5",
-    		"userGroup":"Enterprise users",
+    		"userGroup":"Enterprise Users",
     		"description":"Password protected files",
 			"targetUsers":"1791914",
 			"response":"161272",
-			"Impact":"Increase engagement 5",
-    		"startDate":"12/01/2012",
-    		"endDate":"12/31/2012"
+			"Impact":"Increase engagement by 5%",
+    		"startDate":"12/01/2015",
+    		"endDate":"12/31/2015"
     	}]
 		},
 		"customInsights":{

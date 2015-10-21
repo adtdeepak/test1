@@ -111,13 +111,13 @@
 				"PaidUser":{
 					"value":"60 K",
 					"yoy":"4",
-					"name":"Paid User",
+					"name":"Paid Users",
 					"id":"activeUsersTrendPaidusers"
 				},
 				"Freetopaidconversion":{
 					"value":"3.2",
 					"yoy":"1.2",
-					"name":"Free to paid conversion",
+					"name":"Free to Paid Conversion",
 					"id":"activeUsersTrendF2P"
 				},
 				"Engagementscore":{
@@ -135,27 +135,27 @@
     		"description":"Create music by collaborating with other musicians anytime, anywhere.",
 			"targetUsers":"135751",
 			"response":"31222",
-			"Impact":"Increase in engagement by 15",
-    		"startDate":"12/01/2012",
-    		"endDate":"12/31/2012"
+			"Impact":"Increase engagement by 15%",
+    		"startDate":"12/01/2015",
+    		"endDate":"12/31/2015"
     	},{
     		"CampaignID":"7",
     		"userGroup":"Musicians",
     		"description":"Now play your music on multiple applications via 3rd party integration",
 			"targetUsers":"416303",
 			"response":"99912",
-			"Impact":"Campaign conversion rate 3",
-    		"startDate":"12/01/2012",
-    		"endDate":"12/31/2012"
+			"Impact":"Campaign conversion rate 3%",
+    		"startDate":"12/01/2015",
+    		"endDate":"12/31/2015"
     	},{
     		"CampaignID":"61",
     		"userGroup":"Musicians",
     		"description":"Record, listen and share your music on the go. Download the mobile app",
 			"targetUsers":"380103",
 			"response":"38000",
-			"Impact":"Increase in engagement by 12",
-    		"startDate":"12/01/2012",
-    		"endDate":"12/31/2012"
+			"Impact":"Increase engagement by 12%",
+    		"startDate":"12/01/2015",
+    		"endDate":"12/31/2015"
     	}]
 		},
 		"customInsights":{
