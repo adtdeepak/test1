@@ -135,7 +135,7 @@
 	<div   ng-controller="profileUsergroupController">
 		<div style="border:1px solid #ccc; padding-bottom:15px !important;" class="row nopadding">
 				<div style="margin-bottom:15px;" class="panel panel-default">
-					<div class="panel-heading">Product profile</div>
+					<div class="panel-heading">Product Profile</div>
 				</div>
 
 			<div class="full-width">
@@ -363,14 +363,16 @@
 </div>
 	</div>
 	
-
-				
-			
-			
-			
-		
 		
 <div ng-hide ng-controller="customerLandscapeInitUsergroupController"></div>
 
 
- 	
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.analysis-tab').click(function() {
+			$(".analysis-tab").removeClass('active-analysis-tab');
+			$(this).addClass('active-analysis-tab');
+		});
+	});
+</script>
+
