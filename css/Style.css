@@ -2515,9 +2515,8 @@ li.Logout ul li a span {
 }
 
 .innerwrap {
-	border: 1px solid #d0d0d0;
-	margin: 10px;
-	padding: 10px;
+	
+	padding: 20px;
 	/* height: 234px; */
 	position: relative;
 }

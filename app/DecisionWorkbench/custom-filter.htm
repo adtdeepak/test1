@@ -14,7 +14,6 @@
 </ul>
 </div>
     <div class="col-md-4-big">
-       
         <div id="exportIconsPanel" ng-if="thisPage!='/builddo'" style="background: #ffffff !important;">
     <ul>
 						<li title="Print" class="Printicon">&nbsp;</li>
@@ -44,88 +43,53 @@
     </div>
     </div>
     <div class="clear"></div>
-    <div class="pull-right" id="timePeriodTabs" style="margin:0px; width:100%; padding-top:13px; border-top:1px solid #ccc;">
-					<ul style="margin-right:-8px;">
-						<li><a
-							class="" href="#" ng-click="broadcastPeriodChange('weekly',0)">Features</a></li>
-						<li ng-class="{'active': selectedIndex[1].selected}"><a
-							class="" href="#" ng-click="broadcastPeriodChange('monthly',1)">User Group</a></li>
-					</ul>
-				</div>
+    
 	<div class="row">
 	
 	
 		
-		<div class="row nopadding" style="margin-top:53px !important;border:1px solid grey;">
+		<div class="row nopadding" style="border:1px solid grey;">
 			<div class="collapseDiv">
 				<div class="panel-heading"> Filters
+                     
+
 				</div>
 			</div>
 			<div class="filterContainer">
 	<div style="width: 100%; margin: 0 auto">
-		<div class="halfwidth">
+		<div class="col-lg-5 " style="padding:0px;">
 			<section class="innerwrap">
-				<h3>User Group</h3>
-				<div class="DragDrop clearfix">
-					<div id="fieldChooser" tabindex="1">
-						<div class="clearfix">
-							<h4>Available User Group</h4>
-							<h4>Selected User Group</h4>
-						</div>
-						<div class="clearfix">
-							<div class="DragDropContainer" data-drop="true" ng-model="availUG" jqyoui-droppable="{multiple:true}" data-jqyoui-options="{accept:'.fc-field:not([ng-model=availCA]):not([ng-model=selectedCA])'}">
-                                <div id="sourceFields1">
-								    <div class="fc-field" data-id="{{userGroup.groupId}}" data-jqyoui-options="{revert: 'invalid', containment: '#fieldChooser'}" data-default="{{userGroup.default}}" ng-init="userGroup.default = false"
-									    ng-repeat="userGroup in availUG" data-drag="true" jqyoui-draggable="{index: {{$index}},animate:false}" ng-model="availUG">
-									    {{userGroup.groupName}}</div>
-                                </div>
-						    </div>
-							<div class="DragDropContainer" data-drop="true" ng-model="selectedUG" jqyoui-droppable="{multiple:true}"  data-jqyoui-options="{accept:'.fc-field:not([ng-model=availCA]):not([ng-model=selectedCA])'}">
-								<div id="destinationFields1">
-                                    <div class="fc-field" ng-repeat="userGroup in selectedUG" data-jqyoui-options="{revert: 'invalid', containment: '#fieldChooser'}" data-default="{{userGroup.default}}" ng-init="userGroup.default = true"
-									    data-id="{{userGroup.groupId}}"  data-drag="true" jqyoui-draggable="{index: {{$index}},animate:false}" ng-model="selectedUG">{{userGroup.groupName}}</div>
-                                </div>
-							</div>
-						</div>
-					</div>
-				</div>
+                <lable style="padding-right: 15px;">Select User Group</lable>
+                 <select id="done" class="selectpicker" multiple data-done-button="true">
+                     <option>Applezxcbvbc</option>
+                     <option>Banana</option>
+                     <option>Orange</option>
+                     <option>Pineapple</option>
+                  
+                </select>
+			
+				
 			</section>
 		</div>
-		<div class="halfwidth">
+		<div style="padding:0px;" class="col-lg-5">
 			<section class="innerwrap">
-				<h3>Conversion Activity</h3>
-				<div class="DragDrop clearfix">
-					<div id="fieldChooser1" tabindex="1">
-						<div class="clearfix">
-							<h4>Available Conversion Activity</h4>
-							<h4>Selected Conversion Activity</h4>
-						</div>
-						<div class="clearfix">
-							<div class="DragDropContainer1" data-drop="true" ng-model="availCA" jqyoui-droppable="{multiple:true}" data-jqyoui-options="{accept:'.fc-field:not([ng-model=availUG]):not([ng-model=selectedUG])'}">
-								<div id="sourceFields1">
-									<div class="fc-field" tabindex="1"
-										data-id="{{activity.convActivityId}}" data-jqyoui-options="{revert: 'invalid', containment: '#fieldChooser1'}" ng-init="activity.default = false"  data-default="{{activity.default}}"
-										ng-repeat="activity in availCA"  data-drag="true" jqyoui-draggable="{index: {{$index}},animate:false}" ng-model="availCA">
-										{{activity.convActivityName}}</div>
-								</div>
-							</div>
-							<div class="DragDropContainer1" data-drop="true" ng-model="selectedCA" jqyoui-droppable="{multiple:true}" data-jqyoui-options="{accept:'.fc-field:not([ng-model=availUG]):not([ng-model=selectedUG])'}">
-								<div id="destinationFields1">
-									<div class="fc-field " ng-repeat="activity in selectedCA" data-jqyoui-options="{revert: 'invalid', containment: '#fieldChooser1'}" data-default="{{activity.default}}"  ng-init="activity.default = true"
-										data-id="{{activity.convActivityId}}"  data-drag="true" jqyoui-draggable="{index: {{$index}},animate:false}" ng-model="selectedCA">
-										{{activity.convActivityName}}</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+                 <lable style="padding-right: 15px;">Select Features</lable>
+                 <select id="done1" class="selectpicker" multiple data-done-button="true">
+                     <option>Applezxcbvbc</option>
+                     <option>Banana</option>
+                     <option>Orange</option>
+                     <option>Pineapple</option>
+                  
+                </select>
 			</section>
 		</div>
+         <div class="pull-right col-lg-2" style="    margin: 0;    padding: 11px;"> <div class="container-button"><a href="#" class="button-blue">Apply Filter</a></div></div>
 	</div>
-                  <div class="pull-right" style="margin: 10px 10px 10px 0px;"> <div class="container-button"><a href="#" class="button-blue">Apply Filter</a></div></div>
+                 
+                 
 	
 </div>
-		</div><div class="row nopadding" style="margin-top:10px !important;border:1px solid grey;">
+		</div><div class="row nopadding" style="margin-top:10px !important;border:1px solid grey; display:none;">
 			<div class="collapseDiv">
 				<div class="panel-heading"> Best Campaign Options for job seekers
 				</div>
@@ -164,17 +128,15 @@
 
 <script>
 		$(document).ready(function(){
-			$(".xclose").click(function(){
-				window.temp = $(this);
-				$(this).toggleClass("expandclose");
-				$(this).parents().closest('.collapsibleDiv').next().collapse('toggle');
-			});
-			
-			$(".dropdown-menu li a").click(function(){
-			      $(this).parents().closest('.btn-group').find(".btn:first-child").text($(this).text());
-			      $(this).parents().closest('.btn-group').find(".btn:first-child").val($(this).text());
+			  $(document).ready(function () {
+                    $("#done").selectpicker();
+                });
 
-			});
+		});
+    $(document).ready(function(){
+			  $(document).ready(function () {
+                    $("#done1").selectpicker();
+                });
 
 		});
 </script>

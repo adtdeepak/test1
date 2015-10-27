@@ -116,6 +116,9 @@ this.getBasicLineChart = function(data, title, subtitle, width){
 	            x: -20
 	        },
 	        xAxis: {
+                title: {
+	            text: 'Week'
+	        },
 	            categories: data.xAxis/*,
 	            plotBands: [{ // mark the weekend
 	                color: '#EFFCFB',

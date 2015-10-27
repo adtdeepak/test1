@@ -27,7 +27,7 @@
 <link href="css/New.css" rel="Stylesheet" type="text/css" />
 <link href="css/device.css" rel="Stylesheet" type="text/css" />
 <link href="css/Charts.css" rel="Stylesheet" type="text/css" />
-
+<link rel="stylesheet" href="dist/css/bootstrap-select.css">    
 <!-- Framework related JS -->
 <script src="js/lib/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
 <script src="js/lib/jquery/jquery-ui.js"></script>
@@ -37,6 +37,7 @@
 <script src="js/lib/angular/angular-cache.js" type="text/javascript"></script>
 <script src="js/lib/angular/angular-dragdrop.min.js" type="text/javascript"></script>
 <script src="js/lib/bootstrap.min.js" type="text/javascript"></script>
+<script src="dist/js/bootstrap-select.js"></script>    
 </head>
 <body ng-controller="mainAppContent" ng-cloak>
 	<ng-include src="'partials/navigation-header.htm'"></ng-include>
@@ -195,6 +196,25 @@
 	<script src="app/DecisionWorkbench/services/data.js"></script>
 	<script src="app/DecisionWorkbench/services/chartoptions.js"></script>
 	<script src="app/DecisionWorkbench/services/converter.js"></script>
+<script>
+  $(document).ready(function () {
+    var mySelect = $('#first-disabled2');
 
+    $('#special').on('click', function () {
+      mySelect.find('option:selected').prop('disabled', true);
+      mySelect.selectpicker('refresh');
+    });
+
+    $('#special2').on('click', function () {
+      mySelect.find('option:disabled').prop('disabled', false);
+      mySelect.selectpicker('refresh');
+    });
+
+    $('#basic2').selectpicker({
+      liveSearch: true,
+      maxOptions: 1
+    });
+  });
+</script>
 </body>
 </html>

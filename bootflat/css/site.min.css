@@ -805,7 +805,7 @@ a:focus, a:hover {
     text-decoration: underline;
 }
 a:focus {
-    outline: thin dotted;
+  
     outline-offset: -2px;
 }
 figure {
@@ -2003,7 +2003,7 @@ select[multiple], select[size] {
     height: auto;
 }
 input[type="checkbox"]:focus, input[type="file"]:focus, input[type="radio"]:focus {
-    outline: thin dotted;
+   
     outline-offset: -2px;
 }
 output {
@@ -2322,7 +2322,7 @@ select.form-group-lg[multiple] .form-control, select.input-lg[multiple], textare
     white-space: nowrap;
 }
 .btn.active.focus, .btn.active:focus, .btn.focus, .btn.focus:active, .btn:active:focus, .btn:focus {
-    outline: thin dotted;
+   
     outline-offset: -2px;
 }
 .btn.focus, .btn:focus, .btn:hover {
@@ -5250,8 +5250,8 @@ blockquote {
     color: #434a54;
 }
 .btn-default.active, .btn-default:active, .btn-default:focus, .btn-default:hover {
-    background-color: #ccd1d9;
-    border-color: #ccd1d9;
+    background-color: #fff;
+    border-color: #000; color: #269ecb;
 }
 .btn-default, .btn-default.disabled, .btn-default[disabled] {
     background-color: #fff;
@@ -5309,7 +5309,7 @@ blockquote {
     border-left-color: #96a0ad;
 }
 .btn-group .btn-default.active, .btn-group .btn-default:active, .btn-group .btn-default:focus, .btn-group.open .btn-default.dropdown-toggle {
-    color: #fff;
+    color: #333; background: #fff;
 }
 .btn-group .btn-primary, .btn-group .btn-primary.active, .btn-group .btn-primary:active, .btn-group .btn-primary:focus {
     border-left-color: #269ecb;

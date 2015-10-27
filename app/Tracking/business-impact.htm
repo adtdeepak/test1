@@ -68,7 +68,7 @@
 											</div>											
 										</li>
 										
-										<li>
+										<li ng-if="vsLastText != vsLastYearText">
 											<div  ng-if="data.versusSameLastYear.trend=='-ve'">
 												<img src="images/arrow-red.png" alt="arrow" style="margin-right:5px;">
 												{{data.versusSameLastYear.value}} {{vsLastYearText}}
