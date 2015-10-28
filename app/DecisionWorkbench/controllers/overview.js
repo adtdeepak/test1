@@ -1,7 +1,7 @@
 angular.module('DecisionWorkbench')
 
 .controller( "overviewController", function($scope, DataService, CustomService, ChartOptionsService, $rootScope, UtilitiesService, $location) {
-
+	
 
 	if($location.url().indexOf("usergroup") > -1){
 		var usergroup = $location.search().usergroup ;
@@ -19,7 +19,7 @@ angular.module('DecisionWorkbench')
 		$scope.userGroupDropdownText = 'Creative Agencies';
 		$scope.featureDropdownText = '3rd Party Integration API';
 	};
-
+	
 	// $scope.userGroupDropdownText = 'Creative Agencies';
 	// $scope.featureDropdownText = '3rd Party Integration API';
 	$scope.rowClicked = function(attribute){
@@ -221,6 +221,7 @@ angular.module('DecisionWorkbench')
 	
 	//Populating data for overall table
 	$scope.addData = function(data) {
+		console.log(data);
 	    $rootScope.builddoLoad = true;
 		$scope.dataLoaded = true;
 		if (!data)
@@ -244,6 +245,7 @@ angular.module('DecisionWorkbench')
 	
 	//Populating data for user group table
 	$scope.addUserGroupsTableData = function(data) {
+		console.log(data);
 	    $rootScope.builddoLoad = true;
 		$scope.dataLoaded = true;
 		if (!data)

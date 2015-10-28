@@ -63,27 +63,22 @@
                          </ul>                       
 				</li>
                 
-				<li ng-class="{active: mainHtml=='campaign-index' || mainHtml== 'overview-details'}" ng-click="navModuleClicked(decisionWorkbenchHtmlName, '#/overview')"><a href="campaign-options.htm#/campaign-index">{{decisionWorkbenchTab}}</a></li>
+				<!-- <li ng-class="{active: mainHtml=='campaign-index' || mainHtml== 'overview-details'}" ng-click="navModuleClicked(decisionWorkbenchHtmlName, '#/overview')"><a href="campaign-options.htm#/campaign-index">{{decisionWorkbenchTab}}</a></li> -->
 				<!-- campaign-options.htm#/overview -->
-				<!-- <li class="dropdown" ng-class="{active: mainHtml=='campaign-options' || mainHtml=='decision-workbench'}">
+				<li class="dropdown" ng-class="{active: mainHtml=='campaign-options' || mainHtml=='decision-workbench'}">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="campaign-options.htm#/wishlist"> {{decisionWorkbenchTab}}
 					 <span class="caret"></span></a>
-					<ul class="dropdown-menu" ng-controller="dwLinkController"> -->
-						<!-- <li class="first" ng-click="navModuleClicked(decisionWorkbenchHtmlName, '#/index')"><a ng-if="isSetGoalsEditable"
-							href="#/index" ng-class="{active: thisPage=='/index'||thisPage=='/builddo'}">
-							{{dw_index_tabText}}</a></li>
-						<li ng-click="navModuleClicked(decisionWorkbenchHtmlName, '#/review-do')"> <a ng-if="isReviewDOViewable" href="#/review-do"
-							ng-class="{active: thisPage=='/review-do'}">
-							{{dw_reviewdo_tabText}}</a></li> -->
-							<!-- <li class="first" ng-click="navModuleClicked(decisionWorkbenchHtmlName, '#/overview')"><a href="#/overview">
-							Overview</a></li> -->
-							<!-- <li ng-click="navModuleClicked(decisionWorkbenchHtmlName, '#/wishlist')"><a href="#/wishlist">
-							Wishlist</a></li>
-							<li ng-click="navModuleClicked(decisionWorkbenchHtmlName, '#/selected')"><a href="#/selected">
-							Selected</a></li> -->
-					<!-- </ul></li> -->
-					<li ng-class="{active: mainHtml=='wishlist'}" ng-click="navModuleClicked(decisionWorkbenchHtmlName, '#/wishlist')"><a href="campaign-options.htm#/wishlist">Wishlist</a></li>
-					<li ng-class="{active: mainHtml=='selected'}" ng-click="navModuleClicked(decisionWorkbenchHtmlName, '#/selected')"><a href="campaign-options.htm#/selected">Selected</a></li>
+					<ul class="dropdown-menu" ng-controller="dwLinkController">
+						
+							<li class="first" ><a href="campaign-options.htm#/campaign-index">
+							Build Campaigns</a></li>
+							<li ng-click="navModuleClicked(decisionWorkbenchHtmlName, '#/wishlist')"><a href="campaign-options.htm#/wishlist">
+							Saved Campaigns</a></li>
+							<li ng-click="navModuleClicked(decisionWorkbenchHtmlName, '#/selected')"><a href="campaign-options.htm#/selected">
+							Active Campaigns</a></li>
+					</ul></li>
+					<!-- <li ng-class="{active: mainHtml=='wishlist'}" ng-click="navModuleClicked(decisionWorkbenchHtmlName, '#/wishlist')"><a href="campaign-options.htm#/wishlist">Wishlist</a></li>
+					<li ng-class="{active: mainHtml=='selected'}" ng-click="navModuleClicked(decisionWorkbenchHtmlName, '#/selected')"><a href="campaign-options.htm#/selected">Saved</a></li> -->
                    <li style="border-left:1px solid #000;" class="dropdown"><a style="padding: 10px;" class="dropdown-toggle"
 					data-toggle="dropdown" href="#" ng-controller="dwLinkController"><img width="24" src="images/profile-pic.png" alt="D-ASSIST $ CONVERTER"	title="D-ASSIST $ CONVERTER" />
 			

@@ -14,24 +14,25 @@ $(document).ready(function(){
 	 var time = 300;
      
 
-	if (window.location.href.toLowerCase().indexOf("byimpact") >= 0){
+	if (window.location.href.toLowerCase().indexOf("byimpact") >= 0 && window.location.href.indexOf("custom") < 0){
 		newurl = "#overview";
 		time = 300;
 		
 	}
-	else if(window.location.href.indexOf("usergroup") >= 0){
+	else if(window.location.href.indexOf("usergroup") >= 0 && window.location.href.indexOf("custom") < 0){
 		
 		 var usergroup = window.location.href.split('=');
 		 newurl = "#overview?usergroup=" + usergroup[1];
 		 time = 300;
 	}
-	else if(window.location.href.indexOf("featuregroup") >= 0){
+	else if(window.location.href.indexOf("featuregroup") >= 0 && window.location.href.indexOf("custom") < 0 ){
 		var featuregroup = window.location.href.split('=');
 		 newurl = "#overview?featuregroup=" + featuregroup[1];
 		 time = 300;
 	}
 	else{
-		newurl = "#custom-filter";
+     var params= window.location.href.split('=true&');
+		newurl = "#custom-filter?" + params[1];
 		time = 300;
 	};
     $(function() {

@@ -103,7 +103,7 @@ this.getBasicLineChart = function(data, title, subtitle, width){
 		
 	};
 	
-	this.getBasicLineChartEAScore = function(data, title, subtitle, width){
+	this.getBasicLineChartEAScore = function(data, title, subtitle, width , xtitle){
 		return {
 			chart:{
 				height:300
@@ -117,7 +117,7 @@ this.getBasicLineChart = function(data, title, subtitle, width){
 	        },
 	        xAxis: {
                 title: {
-	            text: 'Week'
+	            text: xtitle
 	        },
 	            categories: data.xAxis/*,
 	            plotBands: [{ // mark the weekend

@@ -7,7 +7,7 @@
     <div class="col-md-8">
 <ul style="margin-left:-30px; margin-bottom:5px;" class="breadcrumb">
 <li>
-<a style="color:#666;" href="home.htm">Home</a>
+	<a style="color:#666;" href="home.htm">Home</a>
 </li>
 <li><a style="color:#666;" href="campaign-options.htm#/campaign-index">Campaign Options</a></li>
     <li class="active">Custom Options</li>
@@ -60,12 +60,12 @@
 		<div class="col-lg-5 " style="padding:0px;">
 			<section class="innerwrap">
                 <lable style="padding-right: 15px;">Select User Group</lable>
-                 <select id="done" class="selectpicker" multiple data-done-button="true">
-                     <option>Applezxcbvbc</option>
-                     <option>Banana</option>
-                     <option>Orange</option>
-                     <option>Pineapple</option>
-                  
+                 <select ng-model="selectedusers" id="done" class="selectpicker" multiple data-done-button="true">
+                     <option>Creative Agencies</option>
+                     <option>Finance Executives</option>
+                     <option>Musicians</option>
+                     <option>Photographers</option>
+                  	 <option>Project Managers</option>
                 </select>
 			
 				
@@ -74,50 +74,50 @@
 		<div style="padding:0px;" class="col-lg-5">
 			<section class="innerwrap">
                  <lable style="padding-right: 15px;">Select Features</lable>
-                 <select id="done1" class="selectpicker" multiple data-done-button="true">
-                     <option>Applezxcbvbc</option>
-                     <option>Banana</option>
-                     <option>Orange</option>
-                     <option>Pineapple</option>
+                  <select ng-model="selectedfeatures" id="done1" class="selectpicker" multiple data-done-button="true">
+                     <option>3rd Party Integration API</option>
+                     <option>Collaborate</option>
+                     <option>eSign</option>
+                     <option>Full Text Search</option>
+                     <option>Microsoft 365 Integration</option>
+                     <option>Mobile App</option>
+                     <option>Storage Space</option>
+                     <option>Version History</option>
+                     <option>Workspace Share</option>
                   
                 </select>
 			</section>
 		</div>
-         <div class="pull-right col-lg-2" style="    margin: 0;    padding: 11px;"> <div class="container-button"><a href="#" class="button-blue">Apply Filter</a></div></div>
+       <!--   <div class="pull-right col-lg-2" style="    margin: 0;    padding: 11px;"> <div class="container-button"><a href="#progress?custom=true&usergroup={{selectedusers}}&featuregroup={{selectedfeatures}}" class="button-blue">Apply Filter</a></div></div> -->
+          <div class="pull-right col-lg-2" style="    margin: 0;    padding: 11px;" ng-click="apply()"> <div class="container-button"><a href="#" class="button-blue">Apply Filter</a></div></div>
 	</div>
                  
                  
 	
 </div>
-		</div><div class="row nopadding" style="margin-top:10px !important;border:1px solid grey; display:none;">
+		</div><div class="row nopadding" style="margin-top:10px !important;border:1px solid grey; ">
 			<div class="collapseDiv">
-				<div class="panel-heading"> Best Campaign Options for job seekers
+				<div class="panel-heading"> Best Campaign Options
 				</div>
 			</div>
 			<div class="collapse in" style="padding: 5px;">
-				<table class="table borderless smSubsTable noMarginBtm accordionTable1" my-table  options="options">
-					<colgroup>
-						<col width="10%">
-						<col width="20%">
-						<col width="25%">
-						<col width="25%">
-						<col width="10%">
-						<col width="10%">
-					</colgroup>
+				<table class="table borderless smSubsTable noMarginBtm" my-table  options="options" table-data="rowClicked" wishlist-data="wishlistSelected" execute-data="executeSelected">
+                   
 					<thead>
 				      <tr>
-				        <th>S.No</th>
+				        <th>Campaign Id</th>
 				        <th>User Group</th>
+				        <th>Feature Promoted</th>
 				        <th>Campaign Description</th>
-				        <th>Impact</th>
+				        <th>Expected Impact</th>
 				        <th>Wishlist</th>
 				        <th>Execute</th>
 				      </tr>
 				    </thead>
 				</table>
-					<div class="pull-right" style="margin: 10px 10px 10px 0px;text-decoration: underline;">
+					<!-- <div class="pull-right" style="margin: 10px 10px 10px 0px;text-decoration: underline;">
 						<a href="#/overview-details?selectedGroup=jobHoppers">Go back</a>
-					</div>
+					</div> -->
 			</div>
 		</div>
 	</div>

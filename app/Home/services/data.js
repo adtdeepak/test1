@@ -88,7 +88,7 @@ angular.module('Home')
 	this.getTrackSummaryFunnelData = function(reqData, success, fail) {
 		var cacheKey = "summaryFunnel" + JSON.stringify(reqData);
 		var requestWS = postRequestWS(
-				RequestConstantsFactory['TRAC_URL'].GET_ACQ_FUNNEL_DATA, 
+				// RequestConstantsFactory['TRAC_URL'].GET_ACQ_FUNNEL_DATA, 
 				reqData,
 				success, 
 				fail,

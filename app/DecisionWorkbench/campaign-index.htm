@@ -153,7 +153,8 @@
                         		<div class="col-sm-6 col-md-6 col-lg-6 wdgt-hgt">
                                                 
                             <div class="showhim campaign-home-box blue-light"> 
-                                <div>
+                                <a href="#custom-filter">
+                                	<div>
                                     <div class="campaign-home-widget-content metric-widgets">
                                         <div class="row-fluid">
                                             <div class="actual-value"><img src="images/campaign-home-icon/custom.png">
@@ -161,10 +162,11 @@
                                         </div>
                                     </div>
                                     <div class="">
-                                        <div class="panel-heading text-box" >Custom Campaign Option</div>
+                                        <div class="panel-heading text-box" >Custom Campaign Options</div>
                                     </div>
                                 </div>
-                                <div  style="left: -610px; width:860px;"  class="showme col-lg-12 no-padding">
+                                </a>
+                                <!-- <div  style="left: -610px; width:860px;"  class="showme col-lg-12 no-padding">
                                 	<span style=" right: 113px;position: absolute;top: -15px;"><img src="images/campaign-home-icon/up-arrow.png">
                                 	</span>
                                     <div style="padding:0px;" class="col-lg-6">
@@ -172,19 +174,13 @@
                                         <lable>Select User Group</lable>
                                     </div>
                                     <div  style="padding: 0px 10px 0px 0px;" class="col-lg-8 no-padding">
-	                                    <div style="padding:5px 0px;" class="btn-group col-lg-11">
-						    				<button ng-init="usergroupclicked='Creative Agencies'" class="btn bkgd-white" style="min-width: 200px;text-align: left;color: #555555;">{{usergroupclicked}}</button>
-						    				<button class="btn dropdown-toggle bkgd-white" data-toggle="dropdown">
-						    					<span style="color:#777;" class="caret"></span>
-							  	 			</button>
-											 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="min-width: 224px;">
-											   <li><a tabindex="-1" href="#"  ng-click="usergroupclicked = 'Creative Agencies'">Creative Agencies</a></li>
-											   <li><a tabindex="-1" href="#" ng-click="usergroupclicked = 'Finance Executives'">Finance Executives</a></li>
-											   <li><a tabindex="-1" href="#" ng-click="usergroupclicked = 'Musicians'">Musicians</a></li>
-											   <li><a tabindex="-1" href="#" ng-click="usergroupclicked = 'Photographers'">Photographers</a></li>
-											   <li><a tabindex="-1" href="#" ng-click="usergroupclicked = 'Project Managers'">Project Managers</a></li>
-											 </ul>
-										</div>
+	                                    <select ng-model="selectedusers" id="done" class="selectpicker" multiple data-done-button="true">
+						                     <option>Creative Agencies</option>
+						                     <option>Finance Executives</option>
+						                     <option>Musicians</option>
+						                     <option>Photographers</option>
+						                  	 <option>Project Managers</option>
+						                </select>
 	                                 
                                 	</div>
                                     </div>
@@ -193,26 +189,25 @@
                                         <lable style="float:right; padding-right:15px;">Select Features</lable>
                                     </div>
                                     <div  style="padding: 0px 0px 0px 0px;" class="col-lg-8 no-padding">
-	                                    <div style="padding:5px 0px;" class="btn-group col-lg-10">
-						    				<button ng-init="usergroupclicked='Creative Agencies'" class="btn bkgd-white" style="min-width: 200px;text-align: left;color: #555555;">{{usergroupclicked}}</button>
-						    				<button class="btn dropdown-toggle bkgd-white" data-toggle="dropdown">
-						    					<span style="color:#777;" class="caret"></span>
-							  	 			</button>
-											 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="min-width: 224px;">
-											   <li><a tabindex="-1" href="#"  ng-click="usergroupclicked = 'Creative Agencies'">Creative Agencies</a></li>
-											   <li><a tabindex="-1" href="#" ng-click="usergroupclicked = 'Finance Executives'">Finance Executives</a></li>
-											   <li><a tabindex="-1" href="#" ng-click="usergroupclicked = 'Musicians'">Musicians</a></li>
-											   <li><a tabindex="-1" href="#" ng-click="usergroupclicked = 'Photographers'">Photographers</a></li>
-											   <li><a tabindex="-1" href="#" ng-click="usergroupclicked = 'Project Managers'">Project Managers</a></li>
-											 </ul>
-										</div>
+	                                    <select ng-model="selectedfeatures" id="done1" class="selectpicker" multiple data-done-button="true">
+						                     <option>3rd Party Integration API</option>
+						                     <option>Collaborate</option>
+						                     <option>eSign</option>
+						                     <option>Full Text Search</option>
+						                     <option>Microsoft 365 Integration</option>
+						                     <option>Mobile App</option>
+						                     <option>Storage Space</option>
+						                     <option>Version History</option>
+						                     <option>Workspace Share</option>
+						                  
+						                </select>
 	                                            
 	                                   <div style="float: right;    height: 30px;    margin-top: -5px;    padding: 0 0 0 0px;" class="container-button col-lg-2">
-											<a style=" padding: 5px 10px;" class="orange-btn"  href="#progress?custom">Go</a>
+											<a style=" padding: 5px 10px;" class="orange-btn"  href="#progress?custom=true&usergroup={{selectedusers}}&featuregroup={{selectedfeatures}}">Go</a>
 										</div>
                                 	</div>
                                     </div>
-                                </div>
+                                </div> -->
 							</div>
                  	   
 								</div>
@@ -235,6 +230,10 @@ $(document).ready(function(){
 			$(this).addClass('campaign-home-box-tab');
 		    $(this).find(".showme").addClass('activetab');
 		});
+		$("#done").selectpicker();
+		$("#done1").selectpicker();
+
+		
 	});
 
 

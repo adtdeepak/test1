@@ -34,7 +34,15 @@ angular.module('Tracking')
             else {
                 $scope.error = false;
             //    var scoreChartOptions = ChartOptionsService.getEngagementActivityScoreData();
-                chartOptions = ChartOptionsService.getBasicLineChartEAScore(engagementScore[$rootScope.selectedPeriod], "Engagement Score Trend", "", 1000);
+                if($rootScope.selectedPeriod == "yearly")
+                    var title = "Years";
+                if($rootScope.selectedPeriod == "quarterly")
+                    var title = "Quarters";
+                if($rootScope.selectedPeriod == "monthly")
+                    var title = "Months";
+                if($rootScope.selectedPeriod == "weekly")
+                    var title = "Weeks";
+                chartOptions = ChartOptionsService.getBasicLineChartEAScore(engagementScore[$rootScope.selectedPeriod], "Engagement Score Trend", "", 1000, title);
                 chartOBJ = chartsService.basicLine.call($('#scoreChart'),chartOptions, $scope);
                 loadDonutChart(engagementScore['engagementScore']);
             }
@@ -265,6 +273,14 @@ angular.module('Tracking')
     
     $scope.success = function (engagementActivityTrend) {
         try {
+             if($rootScope.selectedPeriod == "weekly")
+                $scope.trendPeriod = "Sept 06 to Sept 12";
+             if($rootScope.selectedPeriod == "monthly")
+                $scope.trendPeriod = "Sept 01 to Sept 30";
+             if($rootScope.selectedPeriod == "quarterly")
+                $scope.trendPeriod = "Jul 01 to Sept 30";
+             if($rootScope.selectedPeriod == "yearly")
+                $scope.trendPeriod = "Jan 01 to Sept 30";
             $scope.dataLoaded = true;
             if (!engagementActivityTrend[$rootScope.selectedPeriod]) {
                 $scope.error = true;
