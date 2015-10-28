@@ -1,6 +1,7 @@
 angular.module('DecisionWorkbench')
 	
 .controller("customFilterController", function ($scope, $element, $location, RequestConstantsFactory, DataService, $rootScope, CustomService, UtilitiesService, sharedProperties) {
+	$scope.showtable = 'true';
 	var parsed_result_usergroup;
 	var parsed_result_featuregroup;
 	$scope.apply = function (argument) {
@@ -12,6 +13,7 @@ angular.module('DecisionWorkbench')
 			 parsed_result_featuregroup = angular.fromJson(featuregroups);
 		getInnerPageData();
 		getAllUserTableData();
+		$scope.showtable = 'false';
 
 	};
 	// var params = $location.search();
@@ -118,6 +120,7 @@ angular.module('DecisionWorkbench')
 		var merged = $.merge(merged_usergroup, merged_featuregroup);
 
 		console.log(merged);
+		
 		$scope.addData(merged);
 		// $scope.clickUserGroup($scope.userGroupDropdownText);
 		// $scope.clickFeature($scope.featureDropdownText);
