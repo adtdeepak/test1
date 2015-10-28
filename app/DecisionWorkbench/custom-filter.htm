@@ -95,6 +95,33 @@
                  
 	
 </div>
+
+
+		<div class="row">
+			<select data-placeholder="Choose a Country..." class="chosen-select" multiple style="width:350px;" tabindex="4">
+            <option value=""></option>
+           
+           
+            <option value="Liberia">Liberia</option>
+            <option value="Libya">Libya</option>
+            <option value="Liechtenstein">Liechtenstein</option>
+            <option value="Lithuania">Lithuania</option>
+            <option value="Luxembourg">Luxembourg</option>
+            <option value="Macao">Macao</option>
+           
+            <option value="Madagascar">Madagascar</option>
+            <option value="Malawi">Malawi</option>
+            <option value="Malaysia">Malaysia</option>
+            <option value="Maldives">Maldives</option>
+            <option value="Mali">Mali</option>
+            <option value="Malta">Malta</option>
+            <option value="Marshall Islands">Marshall Islands</option>
+           
+        
+          </select>
+		</div>
+
+
 		</div><div class="row nopadding" ng-hide="showtable" style="margin-top:10px !important;border:1px solid grey; ">
 			<div class="collapseDiv">
 				<div class="panel-heading"> Best Campaign Options
@@ -128,15 +155,22 @@
 
 <script>
 		$(document).ready(function(){
-			  $(document).ready(function () {
+			  
                     $("#done").selectpicker();
-                });
-
-		});
-    $(document).ready(function(){
-			  $(document).ready(function () {
+               
+   
                     $("#done1").selectpicker();
-                });
 
+	    var config = {
+	      '.chosen-select'           : {},
+	      '.chosen-select-deselect'  : {allow_single_deselect:true},
+	      '.chosen-select-no-single' : {disable_search_threshold:10},
+	      '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+	      '.chosen-select-width'     : {width:"95%"}
+	    }
+	    for (var selector in config) {
+	      $(selector).chosen(config[selector]);
+	    }
+	 
 		});
 </script>
