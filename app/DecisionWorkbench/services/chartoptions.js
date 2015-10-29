@@ -475,11 +475,13 @@ this.getColumnBarChart = function(data, title, subtitle, height, color){
 	        },
 	        title: {
 	            text: title,
-	            align:'center',
-	            y:200,
+	            verticalAlign: 'top',
+	            align:'left',
+	            y:15,
 	            style: {
 	                color: '#686868',
-	                fontWeight: 'bold'
+	                fontWeight: 'bold',
+	                fontSize: "15px"
 	            }
 	        },
 	        subtitle: {
@@ -500,7 +502,7 @@ this.getColumnBarChart = function(data, title, subtitle, height, color){
 	        },
 	        yAxis: {
 	            title: {
-                     text:'Count of users'
+                     text:'No. of new registrants'
 	            },
 	            labels: {
 	                overflow: 'justify',

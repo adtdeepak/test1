@@ -106,7 +106,7 @@ angular.module('DecisionWorkbench')
 	//Overall campaign data
 	$scope.overallDataSuccess = function(response){
 		$scope.overallResponse = response.data;
-		console.log(parsed_result_usergroup);
+		console.log(response.data);
 		var merged_usergroup = [];
 		var merged_featuregroup = [];
 		angular.forEach(parsed_result_usergroup,function(value) {
