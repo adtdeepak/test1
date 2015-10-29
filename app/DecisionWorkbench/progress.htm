@@ -15,19 +15,20 @@ $(document).ready(function(){
      
 
 	if (window.location.href.toLowerCase().indexOf("byimpact") >= 0 && window.location.href.indexOf("custom") < 0){
-		newurl = "#overview";
+		newurl = "#overview-details?selectedGroup=All Users";
 		time = 300;
 		
 	}
 	else if(window.location.href.indexOf("usergroup") >= 0 && window.location.href.indexOf("custom") < 0){
 		
 		 var usergroup = window.location.href.split('=');
-		 newurl = "#overview?usergroup=" + usergroup[1];
+     console.log(usergroup[1]);
+		 newurl = "#overview-details?selectedGroup=User Groups&group=" + usergroup[1];
 		 time = 300;
 	}
 	else if(window.location.href.indexOf("featuregroup") >= 0 && window.location.href.indexOf("custom") < 0 ){
 		var featuregroup = window.location.href.split('=');
-		 newurl = "#overview?featuregroup=" + featuregroup[1];
+		 newurl = "#overview-details?selectedGroup=Features&group=" + featuregroup[1];
 		 time = 300;
 	}
 	else{

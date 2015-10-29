@@ -4,8 +4,8 @@ angular.module('DecisionWorkbench')
 	
 	$scope.campaignType = [{"name":"Features","selected":false},{"name":"User Groups","selected":true}];
 	
-	$scope.selectedGroup = [{"key":"All Users","selected":false},{"key":"Project Managers","selected": false},{"key":"Creative Agencies","selected": false},
-	                        {"key":"Finance Executives","selected": false},{"key":"Musicians","selected": false},{"key":"Photographers","selected": false}];
+	$scope.selectedGroup = [{"key":"All Users","selected":false,"index":0},{"key":"Project Managers","selected": false,"index":1},{"key":"Creative Agencies","selected": false,"index":2},
+	                        {"key":"Finance Executives","selected": false,"index":3},{"key":"Musicians","selected": false,"index":4},{"key":"Photographers","selected": false,"index":5}];
 	
 	$scope.selectedFeature = [{"key":"3rd Party Integration API","selected":false},{"key":"Collaborate","selected": false},{"key":"E-Sign","selected": false},
 	                        {"key":"Full Text Search","selected": false},{"key":"Microsoft 365 integration","selected": false},{"key":"Mobile App","selected": false},
@@ -13,19 +13,20 @@ angular.module('DecisionWorkbench')
 
 	var initialExpand  = true;
 	var urlSelectedRowId = '';
+	var urlIndex = $location.search();
 	function getSelectedGroupFromUrl(){
-		var urlIndex = $location.search();
-		$scope.campaignTypeSelected(urlIndex.type);
-
+		urlIndex = $location.search();
+		$scope.campaignTypeSelected(urlIndex.selectedGroup);
+			// alert(urlIndex.selectedGroup);
 		$.each($scope.selectedGroup, function(key, value){
 			$scope.selectedGroup[key].selected= false;
-			if($scope.selectedGroup[key].key == urlIndex.selectedGroup){
+			if($scope.selectedGroup[key].key == urlIndex.group){
 				$scope.selectedGroup[key].selected= true;
 			}
 		})
 		$.each($scope.selectedFeature, function(key, value){
 			$scope.selectedFeature[key].selected= false;
-			if($scope.selectedFeature[key].key == urlIndex.selectedGroup){
+			if($scope.selectedFeature[key].key == urlIndex.group){
 				$scope.selectedFeature[key].selected= true;
 			}
 		})
@@ -40,14 +41,26 @@ angular.module('DecisionWorkbench')
 			value.selected = false;
 			if(value.name == name){
 				value.selected = true;
+			};
+			if($scope.campaignType[1].selected){
+				$.each($scope.selectedGroup, function(key, value){
+					if($scope.selectedGroup[key].key == urlIndex.group){
+						var index = $scope.selectedGroup[key].index;
+						$scope.broadcastselectedGroup(urlIndex.group, index);
+					};
+				})
+			}else{
+				$.each($scope.selectedFeature, function(key, value){
+					if($scope.selectedFeature[key].key == urlIndex.group){
+						var index = $scope.selectedFeature[key].index;
+						$scope.broadcastselectedFeature(urlIndex.group, index);
+					};
+				
+				})
 			}
 		})
-		if($scope.campaignType[1].selected){
-			$scope.broadcastselectedGroup("All Users", 0);
-		}else{
-			$scope.broadcastselectedFeature("3rd Party Integration API", 0);
-		}
-	}
+		
+}
 	
 	$scope.wishlistSelected = function(attribute, isSelected){
 		var selectedGroup;
@@ -243,7 +256,7 @@ angular.module('DecisionWorkbench')
 		var chartOptions;
 		var chartData;
 		chartData = DataConversionService.getHorizontalBarChartData(accordianTrendData.userGroup.trend);
-	    chartOptions = ChartOptionsService.getColumnBarChart(chartData, "", "Month of joining", 220, "#F5874F");
+	    chartOptions = ChartOptionsService.getColumnBarChart(chartData, "New Registrants added per month", "Month of joining", 220, "#F5874F");
 		chartOBJ = chartsService.basicBar.call($('.monthBarChart'),chartOptions, $scope);
 		
 		
@@ -268,7 +281,8 @@ angular.module('DecisionWorkbench')
 			},{
 				"sClass" : "row-expand-details"
 			}],
-			"bPaginate":false,
+			"bPaginate":true,
+			"iDisplayLength": 10,
 			'fnCreatedRow': function (nRow, aData, iDataIndex) {
 				  $.each($('td', nRow), function (colIndex) {
 					  if(aData){
