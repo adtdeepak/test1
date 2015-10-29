@@ -120,10 +120,10 @@ window.appConstants = {
 	track_EA_comparedLast_yearly : "Versus last year",
 	track_EA_comparedLastYear_yearly : "Versus last year",
 	
-	track_EA_averagePeriod_weekly : "4 weeks average",
-	track_EA_averagePeriod_monthly : "4 months average",
-	track_EA_averagePeriod_quarterly : "4 quarters average",
-	track_EA_averagePeriod_yearly : "4 years average",
+	track_EA_averagePeriod_weekly : "Trailing 3 week average",
+	track_EA_averagePeriod_monthly : "Trailing 3 month average",
+	track_EA_averagePeriod_quarterly : "Trailing 3 quarter average",
+	track_EA_averagePeriod_yearly : "Trailing 3 year average",
 	
 	//User Group
 	//summary
