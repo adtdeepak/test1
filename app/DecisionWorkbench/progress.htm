@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 	if (window.location.href.toLowerCase().indexOf("byimpact") >= 0 && window.location.href.indexOf("custom") < 0){
 		newurl = "#overview-details?selectedGroup=All Users";
-		time = 300;
+		time = 400;
 		
 	}
 	else if(window.location.href.indexOf("usergroup") >= 0 && window.location.href.indexOf("custom") < 0){
@@ -24,17 +24,17 @@ $(document).ready(function(){
 		 var usergroup = window.location.href.split('=');
      console.log(usergroup[1]);
 		 newurl = "#overview-details?selectedGroup=User Groups&group=" + usergroup[1];
-		 time = 300;
+		 time = 400;
 	}
 	else if(window.location.href.indexOf("featuregroup") >= 0 && window.location.href.indexOf("custom") < 0 ){
 		var featuregroup = window.location.href.split('=');
 		 newurl = "#overview-details?selectedGroup=Features&group=" + featuregroup[1];
-		 time = 300;
+		 time = 400;
 	}
 	else{
      var params= window.location.href.split('=true&');
 		newurl = "#custom-filter?" + params[1];
-		time = 300;
+		time = 400;
 	};
     $(function() {
     var progressbar = $( "#progressbar" ),
@@ -55,7 +55,7 @@ $(document).ready(function(){
     function progress() {
       var val = progressbar.progressbar( "value" ) || 0;
  
-      progressbar.progressbar( "value", val + 2 );
+      progressbar.progressbar( "value", val + Math.floor((Math.random() * 4) + 1) );
       if(val > 96){
         $('.ui-widget-header').css('background','green') ;
       };

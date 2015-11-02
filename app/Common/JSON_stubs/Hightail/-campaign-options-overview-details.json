@@ -9,6 +9,8 @@
         "campaignType":"User Groups",
         "userGroup": "Photographers<br>Engagement score (50% - 70%)",
         "description": "Upload on the go photos using the Mobile App",
+        "engagementscore" : "70%",
+        "engagementimpact" : "7%",
         "impact": "Increase engagement by 7%",
         "featurePromoted":"Mobile App","wishlist": "no",
         "execute": "no"
@@ -18,6 +20,8 @@
         "campaignType":"User Groups",
         "userGroup": "Musicians<br>Engagement score (50% - 70%)",
         "description": "Create music by collaborating with other musicians, anytime, anwhere.",
+        "engagementscore" : "70%",
+        "engagementimpact" : "15%",
         "impact": "Increase engagement by 15%",
         "featurePromoted":"Collaborate","wishlist": "no",
         "execute": "no"
@@ -27,6 +31,8 @@
         "campaignType":"User Groups",
         "userGroup": "Creative Agencies<br>Engagement score (70% - 100%)",
         "description": "Edit, control and manage your work without errors, using Version control",
+        "engagementscore" : "100%",
+        "engagementimpact" : "1%",
         "impact": "Campaign conversion rate 0.9%",
         "featurePromoted":"Version Control","wishlist": "no",
         "execute": "no"
@@ -36,6 +42,8 @@
         "campaignType":"User Groups",
         "userGroup": "Creative Agencies<br>Engagement score (50% - 70%)",
         "description": "Securely share your documents with your colleagues Work space share",
+        "engagementscore" : "70%",
+        "engagementimpact" : "15%",
         "impact": "Increase engagement by 15%",
         "featurePromoted":"Microsoft 365 Integration","wishlist": "no",
         "execute": "no"
@@ -44,6 +52,8 @@
         "campaignType":"User Groups",
         "userGroup": "Project Managers<br>Engagement score (0% - 50%)",
         "description": "Manage your work on the go, download mobile app now",
+        "engagementscore" : "50%",
+        "engagementimpact" : "5%",
         "impact": "Increase engagement by 5.5%",
         "featurePromoted":"Mobile App","wishlist": "no",
         "execute": "no"
@@ -53,6 +63,8 @@
         "campaignType":"User Groups",
         "userGroup": "Project Managers<br>Engagement score (0% - 50%)",
         "description": "Securely share your documents with your colleagues Work space share",
+        "engagementscore" : "50%",
+        "engagementimpact" : "4%",
         "impact": "Increase engagement by 4%",
         "featurePromoted":"Mobile App","wishlist": "no",
         "execute": "no"
@@ -62,6 +74,8 @@
         "campaignType":"User Groups",
         "userGroup": "Project Managers<br>Engagement score (50% - 70%)",
         "description": "Now use key words to search through files; using Full text search",
+        "engagementscore" : "70%",
+        "engagementimpact" : "2%",
         "impact": "Increase engagement by 2.2%",
         "featurePromoted":"Full Text Search","wishlist": "no",
         "execute": "no"
@@ -70,6 +84,8 @@
         "campaignType":"User Groups",
         "userGroup": "Musicians<br>Engagement score (70% - 100%)",
         "description": "Now play your music on multiple applications via advanced 3rd party integrations",
+        "engagementscore" : "100%",
+        "engagementimpact" : "3%",
         "impact": "Campaign conversion rate 3%",
         "featurePromoted":"Mobile App","wishlist": "no",
         "execute": "no"
@@ -79,6 +95,8 @@
         "campaignType":"User Groups",
         "userGroup": "Musicians<br>Engagement score (0% - 50%)",
         "description": "Now, share your music with your friends, family and colleagues",
+        "engagementscore" : "50%",
+        "engagementimpact" : "7%",
         "impact": "Increase engagement by 7%",
         "featurePromoted":"Mobile App","wishlist": "no",
         "execute": "no"
@@ -88,6 +106,8 @@
         "campaignType":"User Groups",
         "userGroup": "Musicians<br>Engagement score (50% - 70%)",
         "description": "Record, listen and share your music on the go. Download mobile app",
+        "engagementscore" : "70%",
+        "engagementimpact" : "12%",
         "impact": "Increase engagement by 12%",
         "featurePromoted":"Mobile App","wishlist": "no",
         "execute": "no"
@@ -96,6 +116,8 @@
         "campaignType":"User Groups",
         "userGroup": "Finance Executives<br>Engagement score (50% - 70%)",
         "description": "Add personal and official signature to your files",
+        "engagementscore" : "70%",
+        "engagementimpact" : "2%",
         "impact": "Campaign conversion rate 2%",
         "featurePromoted":"eSign","wishlist": "no",
         "execute": "no"
@@ -105,6 +127,8 @@
         "campaignType":"User Groups",
         "userGroup": "Finance Executives<br>Engagement score (0% - 50%)",
         "description": "Access files from any where, Become pro and increase your cloud storage space upto 10 GB",
+        "engagementscore" : "50%",
+        "engagementimpact" : "3%",
         "impact": "Increase engagement by 3%",
         "featurePromoted":"Mobile App","wishlist": "no",
         "execute": "no"
@@ -114,6 +138,8 @@
         "campaignType":"User Groups",
         "userGroup": "Finance Executives<br>Engagement score (50% - 70%)",
         "description": "Securely share your documents with your colleagues Work space share",
+        "engagementscore" : "70%",
+        "engagementimpact" : "4%",
         "impact": "Increase engagement by 3.7%",
         "featurePromoted":"Workspace Share","wishlist": "no",
         "execute": "no"
@@ -123,6 +149,8 @@
         "campaignType":"User Groups",
         "userGroup": "Finance Executives<br>Engagement score (70% - 100%)",
         "description": "Now read all your documents in your favourite text reader Microsoft 365 Integration",
+        "engagementscore" : "100%",
+        "engagementimpact" : "7%",
         "impact": "Campaign conversion rate 7%",
         "featurePromoted":"Microsoft 365 Integration","wishlist": "no",
         "execute": "no"
@@ -132,6 +160,8 @@
         "campaignType":"User Groups",
         "userGroup": "Finance Executives<br>Engagement score (0% - 50%)",
         "description": "Now use key words to search through files; using Full text search",
+        "engagementscore" : "50%",
+        "engagementimpact" : "15%",
         "impact": "Increase engagement by 15%",
         "featurePromoted":"Full Text Search","wishlist": "no",
         "execute": "no"
@@ -140,6 +170,8 @@
         "campaignType":"User Groups",
         "userGroup": "Photographers<br>Engagement score (0% - 50%)",
         "description": "Use the collaborate feature to minize multiple sharing",
+        "engagementscore" : "50%",
+        "engagementimpact" : "4%",
         "impact": "Increase engagement by 4%",
         "featurePromoted":"Collaborate","wishlist": "no",
         "execute": "no"
@@ -149,6 +181,8 @@
         "campaignType":"User Groups",
         "userGroup": "Photographers<br>Engagement score (70% - 100%)",
         "description": "Manage content using version control",
+        "engagementscore" : "100%",
+        "engagementimpact" : "9%",
         "impact": "Campaign conversion rate 9%",
         "featurePromoted":"Version History","wishlist": "no",
         "execute": "no"
@@ -158,6 +192,8 @@
         "campaignType":"User Groups",
         "userGroup": "Photographers<br>Engagement score (70% - 100%)",
         "description": "Integrate with 3rd party imaging apps seamlesly",
+        "engagementscore" : "100%",
+        "engagementimpact" : "4%",
         "impact": "Campaign conversion rate 4%",
         "featurePromoted":"3rd Party Integration API","wishlist": "no",
         "execute": "no"
@@ -167,6 +203,8 @@
         "campaignType":"User Groups",
         "userGroup": "Photographers<br>Engagement score (0% - 50%)",
         "description": "Welcome Campaign",
+        "engagementscore" : "50%",
+        "engagementimpact" : "3%",
         "impact": "Increase engagement by 3%",
         "featurePromoted":"Mobile App","wishlist": "no",
         "execute": "no"
@@ -176,6 +214,8 @@
         "campaignType":"User Groups",
         "userGroup": "Photographers<br>Engagement score (70% - 100%)",
         "description": "Never worry about deleting files with increased storage space",
+        "engagementscore" : "100%",
+        "engagementimpact" : "9%",
         "impact": "Campaign conversion rate 9%",
         "featurePromoted":"Storage Space","wishlist": "no",
         "execute": "no"
@@ -184,6 +224,8 @@
         "campaignType":"User Groups",
         "userGroup": "Creative Agencies<br>Engagement score (70% - 100%)",
         "description": "Now read all your documents in Microsoft 365 Integration",
+        "engagementscore" : "100%",
+        "engagementimpact" : "5%",
         "impact": "Campaign conversion rate 4.5%",
         "featurePromoted":"Microsoft 365 Integration","wishlist": "no",
         "execute": "no"
@@ -193,6 +235,8 @@
         "campaignType":"User Groups",
         "userGroup": "Creative Agencies<br>Engagement score (70% - 100%)",
         "description": "Access files from any where, Become pro and increase your cloud storage space upto 10 GB",
+        "engagementscore" : "100%",
+        "engagementimpact" : "2%",
         "impact": "Campaign conversion rate 2%",
         "featurePromoted":"Storage Space","wishlist": "no",
         "execute": "no"
@@ -202,6 +246,8 @@
         "campaignType":"User Groups",
         "userGroup": "Creative Agencies<br>Engagement score (0% - 50%)",
         "description": "Add personal and official signature to your content",
+        "engagementscore" : "50%",
+        "engagementimpact" : "7%",
         "impact": "Increase engagement by 7%",
         "featurePromoted":"eSign","wishlist": "no",
         "execute": "no"
