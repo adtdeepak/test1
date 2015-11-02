@@ -6252,7 +6252,7 @@ a.tooltip-new span {
 }
 
 .ng-hide {
-	display: block !important;
+	/*display: block !important;*/
 	position: relative;
 	top: -9999px;
 	left: -9999px;

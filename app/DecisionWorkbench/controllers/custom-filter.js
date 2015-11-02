@@ -12,7 +12,7 @@ angular.module('DecisionWorkbench')
 	$scope.engagementimpact = [{"key":"1%","selected": false},{"key":"2%","selected": false},{"key":"3%","selected": false},{"key":"4%","selected": false},{"key":"5%","selected": false},{"key":"6%","selected": false},{"key":"7%","selected": false},{"key":"8%","selected": false},{"key":"9%","selected": false},{"key":"10%","selected": false},{"key":"11%","selected": false},{"key":"12%","selected": false},{"key":"13%","selected": false},{"key":"14%","selected": false},{"key":"15%","selected": false}];                       
 	$scope.campaignId = [{"key":1,"selected": false},{"key":2,"selected": false},{"key":3,"selected": false},{"key":4,"selected": false},{"key":5,"selected": false},{"key":6,"selected": false},{"key":7,"selected": false},{"key":8,"selected": false},{"key":9,"selected": false},{"key":10,"selected": false},{"key":11,"selected": false},{"key":12,"selected": false},{"key":13,"selected": false},{"key":14,"selected": false},{"key":15,"selected": false},{"key":16,"selected": false},{"key":17,"selected": false},{"key":18,"selected": false},{"key":19,"selected": false},{"key":20,"selected": false},{"key":21,"selected": false},{"key":22,"selected": false},{"key":23,"selected": false},{"key":24,"selected": false},{"key":25,"selected": false},{"key":26,"selected": false},{"key":27,"selected": false},{"key":28,"selected": false},{"key":29,"selected": false},{"key":30,"selected": false},{"key":31,"selected": false},{"key":32,"selected": false},{"key":33,"selected": false},{"key":34,"selected": false},{"key":35,"selected": false},{"key":36,"selected": false},{"key":37,"selected": false},{"key":38,"selected": false},{"key":39,"selected": false},{"key":40,"selected": false},{"key":41,"selected": false},{"key":42,"selected": false},{"key":43,"selected": false},{"key":44,"selected": false},{"key":45,"selected": false},{"key":46,"selected": false},{"key":47,"selected": false},{"key":48,"selected": false},{"key":49,"selected": false},{"key":50,"selected": false},{"key":51,"selected": false},{"key":52,"selected": false},{"key":53,"selected": false},{"key":54,"selected": false},{"key":55,"selected": false},{"key":56,"selected": false},{"key":57,"selected": false},{"key":58,"selected": false},{"key":59,"selected": false},{"key":60,"selected": false},{"key":61,"selected": false},{"key":62,"selected": false},{"key":63,"selected": false},{"key":64,"selected": false},{"key":65,"selected": false},{"key":66,"selected": false},{"key":67,"selected": false},{"key":68,"selected": false},{"key":69,"selected": false},{"key":70,"selected": false},{"key":71,"selected": false},{"key":72,"selected": false},{"key":73,"selected": false},{"key":74,"selected": false},{"key":75,"selected": false},{"key":76,"selected": false},{"key":77,"selected": false},{"key":78,"selected": false},{"key":79,"selected": false},{"key":80,"selected": false},{"key":81,"selected": false},{"key":82,"selected": false},{"key":83,"selected": false},{"key":84,"selected": false},{"key":85,"selected": false},{"key":86,"selected": false},{"key":87,"selected": false},{"key":88,"selected": false},{"key":89,"selected": false},{"key":90,"selected": false},{"key":91,"selected": false},{"key":92,"selected": false},{"key":93,"selected": false},{"key":94,"selected": false},{"key":95,"selected": false},{"key":96,"selected": false},{"key":97,"selected": false},{"key":98,"selected": false},{"key":99,"selected": false},{"key":100,"selected": false}];
 	$scope.engagementscore = [{"key":"10%","selected": false},{"key":"20%","selected": false},{"key":"30%","selected": false},{"key":"40%","selected": false},{"key":"50%","selected": false},{"key":"60%","selected": false},{"key":"70%","selected": false},{"key":"80%","selected": false},{"key":"90%","selected": false},{"key":"100%","selected": false}];
-	$scope.showtable = 'true';
+	$scope.showtable = 'false';
 
 	var usergroupoptions = [];
 	var featureoptions = [];
@@ -230,14 +230,14 @@ angular.module('DecisionWorkbench')
 		}	
 		if(tokenlist.length == 0){
 			$scope.showtokens = "false";
-			$scope.showtable = "true";
+			$scope.showtable = "false";
 		}
 
 	};
 	$scope.applyfilter = function () {
 			getInnerPageData();
 			getAllUserTableData();
-			$scope.showtable = 'false';
+			$scope.showtable = 'true';
 	};
 	var parsed_result_usergroup;
 	var parsed_result_featuregroup;
@@ -390,7 +390,13 @@ angular.module('DecisionWorkbench')
 					})
 		})
 		 merged = $.merge(merged, scorelist);
-		 finaldata = merged;
+		 // if(merged.length == 0){
+		 // 	finaldata = [{"description":"No data to display"}];
+		 // }
+		 // else{
+		 	finaldata = merged;
+		 // }
+		 
 		
 		// var merged = $.merge(merged_usergroup, merged_featuregroup);
 		// finaldata = merged;
@@ -490,11 +496,17 @@ angular.module('DecisionWorkbench')
 		try {
 			$scope.error = false;
 			$scope.options.aaData = [];
-			$.each(data, function(key, obj) {
+			if(data.length == 0){
+				$scope.options.aaData.push([, , ,  "No Records Found"]);
+			}
+			else{
+				$.each(data, function(key, obj) {
 				var executeSection = "<a href='resources/selected_campaign_info.xlsx' download><div class='execute-unselected'></div></a>";
 					$scope.options.aaData.push([obj.id, obj.userGroup, obj.featurePromoted,  obj.description, obj.impact,
 					                           "<div class='wishlist-unselected'></div>" , executeSection, obj.campaignType]);
 				})
+			}
+			
 		} catch (e) {
 			$scope.fail(errorConstants.DATA_ERR);
 		}
