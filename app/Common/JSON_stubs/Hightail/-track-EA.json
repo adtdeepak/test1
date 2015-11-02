@@ -13,7 +13,7 @@
                     "subGroupBy": "EAScore",
                     "actualToDate": "62",
                     "actualToDateTrend": "+ve",
-                    "monthlyAvg": "62",
+                    "monthlyAvg": "64",
                     "subgroupName": "Engagement Score",
                     "groupName": "engagementActivity",
                     "versusLast": {
@@ -69,9 +69,9 @@
                 {
                     "groupBy": "EA",
                     "subGroupBy": "MobileAppuser",
-                    "actualToDate": "90000",
+                    "actualToDate": "91992",
                     "actualToDateTrend": "-ve",
-                    "monthlyAvg": "90699",
+                    "monthlyAvg": "80113",
                     "subgroupName": "Mobile App",
                     "groupName": "engagementActivity",
                     "versusLast": {
@@ -282,7 +282,7 @@
                     "subGroupBy": "EAScore",
                     "actualToDate": "62",
                     "actualToDateTrend": "+ve",
-                    "monthlyAvg": "62",
+                    "monthlyAvg": "64",
                     "subgroupName": "Engagement Score",
                     "groupName": "engagementActivity",
                     "versusLast": {

@@ -1,19 +1,201 @@
 angular.module('DecisionWorkbench')
 	
 .controller("customFilterController", function ($scope, $element, $location, RequestConstantsFactory, DataService, $rootScope, CustomService, UtilitiesService, sharedProperties) {
+	$scope.showoptions = "false";
+	$scope.showtokens = "false";
+	$scope.UserGroup = [{"key":"All Users","selected":false,"index":0},{"key":"Project Managers","selected": false,"index":1},{"key":"Creative Agencies","selected": false,"index":2},
+	                        {"key":"Finance Executives","selected": false,"index":3},{"key":"Musicians","selected": false,"index":4},{"key":"Photographers","selected": false,"index":5}];
+	
+	$scope.Feature = [{"key":"3rd Party Integration API","selected":false},{"key":"Collaborate","selected": false},{"key":"eSign","selected": false},
+	                        {"key":"Full Text Search","selected": false},{"key":"Microsoft 365 Integration","selected": false},{"key":"Mobile App","selected": false},
+	                        {"key":"Storage Space","selected": false},{"key":"Version History","selected": false},{"key":"Workspace share","selected": false}];
+
+	$scope.campaignId = [{"key":1,"selected": false},{"key":2,"selected": false},{"key":3,"selected": false},{"key":4,"selected": false},{"key":5,"selected": false},{"key":6,"selected": false},{"key":7,"selected": false},{"key":8,"selected": false},{"key":9,"selected": false},{"key":10,"selected": false},{"key":11,"selected": false},{"key":12,"selected": false},{"key":13,"selected": false},{"key":14,"selected": false},{"key":15,"selected": false},{"key":16,"selected": false},{"key":17,"selected": false},{"key":18,"selected": false},{"key":19,"selected": false},{"key":20,"selected": false},{"key":21,"selected": false},{"key":22,"selected": false},{"key":23,"selected": false},{"key":24,"selected": false},{"key":25,"selected": false},{"key":26,"selected": false},{"key":27,"selected": false},{"key":28,"selected": false},{"key":29,"selected": false},{"key":30,"selected": false},{"key":31,"selected": false},{"key":32,"selected": false},{"key":33,"selected": false},{"key":34,"selected": false},{"key":35,"selected": false},{"key":36,"selected": false},{"key":37,"selected": false},{"key":38,"selected": false},{"key":39,"selected": false},{"key":40,"selected": false},{"key":41,"selected": false},{"key":42,"selected": false},{"key":43,"selected": false},{"key":44,"selected": false},{"key":45,"selected": false},{"key":46,"selected": false},{"key":47,"selected": false},{"key":48,"selected": false},{"key":49,"selected": false},{"key":50,"selected": false},{"key":51,"selected": false},{"key":52,"selected": false},{"key":53,"selected": false},{"key":54,"selected": false},{"key":55,"selected": false},{"key":56,"selected": false},{"key":57,"selected": false},{"key":58,"selected": false},{"key":59,"selected": false},{"key":60,"selected": false},{"key":61,"selected": false},{"key":62,"selected": false},{"key":63,"selected": false},{"key":64,"selected": false},{"key":65,"selected": false},{"key":66,"selected": false},{"key":67,"selected": false},{"key":68,"selected": false},{"key":69,"selected": false},{"key":70,"selected": false},{"key":71,"selected": false},{"key":72,"selected": false},{"key":73,"selected": false},{"key":74,"selected": false},{"key":75,"selected": false},{"key":76,"selected": false},{"key":77,"selected": false},{"key":78,"selected": false},{"key":79,"selected": false},{"key":80,"selected": false},{"key":81,"selected": false},{"key":82,"selected": false},{"key":83,"selected": false},{"key":84,"selected": false},{"key":85,"selected": false},{"key":86,"selected": false},{"key":87,"selected": false},{"key":88,"selected": false},{"key":89,"selected": false},{"key":90,"selected": false},{"key":91,"selected": false},{"key":92,"selected": false},{"key":93,"selected": false},{"key":94,"selected": false},{"key":95,"selected": false},{"key":96,"selected": false},{"key":97,"selected": false},{"key":98,"selected": false},{"key":99,"selected": false},{"key":100,"selected": false}];
 	$scope.showtable = 'true';
+
+	var usergroupoptions = [];
+	var featureoptions = [];
+	var campaignidoptions = [];
+	var tokenlist =[];
+
+	$scope.groupselected = function (option) {
+
+
+		if(option == "User Group"){
+			$scope.optionselected = $scope.UserGroup ;
+			$scope.group = "User Group";
+			$scope.selectedTab = "User Group";
+
+		}
+		if(option == "Features"){
+			$scope.optionselected = $scope.Feature;
+			$scope.group = "Features";
+			$scope.selectedTab = "Features";
+
+		}	
+		if(option == "Campaign Id"){
+			$scope.optionselected = $scope.campaignId;
+			$scope.group = "Campaign Id";
+			$scope.selectedTab = "Campaign Id";
+		}
+		if(option == "Score"){
+			$scope.optionselected = "";
+			$scope.group = "Score";
+			$scope.selectedTab = "Score";
+		}
+		if(option == "Impact"){
+			$scope.optionselected = "";
+			$scope.group = "Impact";
+			$scope.selectedTab = "Impact";
+		}
+		// angular.forEach($scope.tokenlist,function  (value) {
+		// 	if(value.group == option){
+		// 		$("#selectFilterCustom li").each(function (item) {
+		// 			// $(this).find('span.state-icon').removeClass("glyphicon-unchecked");
+		// 			console.log($(this));
+		// 			var tokenname = $(this).find('span.tokenname').text();
+		// 			console.log(tokenname);
+		// 		})
+		// 	}
+		// })
+		$scope.showoptions = "true";
+	};
+	$scope.optionclicked = function (group , name ,event) {
+		var item = {"group":group,"name":name,"id":event.currentTarget.id,"selected":true};
+		
+		console.log(item);
+		
+		// $scope.tokenlist = tokenlist;
+		$scope.showtokens = "true";
+		if($(event.currentTarget).children('span').hasClass('glyphicon-check')){
+			$(event.currentTarget).children('span').addClass('glyphicon-unchecked');
+			$(event.currentTarget).children('span').removeClass('glyphicon-check');
+			if(group == "User Group"){
+				angular.forEach($scope.UserGroup,function(value){
+		         	if(value.key == name){
+		         		value.selected =true;
+		         	}
+		        })
+			}
+			if(group == "Feature"){
+				angular.forEach($scope.Feature,function(value){
+		         	if(value.key == name){
+		         		value.selected =true;
+		         	}
+		        })
+			}
+			if(group == "Campaign Id"){
+				angular.forEach($scope.campaignId,function(value){
+		         	if(value.key == name){
+		         		value.selected =true;
+		         	}
+		        })
+			}
+			// if(group == "Campaign Id"){
+			// 	value.selected =false;
+			// }
+			angular.forEach($scope.tokenlist ,function (value , index) {
+				if(value.name == name){
+					
+					$scope.removeItem(index ,group , name);
+				}
+			})
+
+			
+		}
+		else{
+			if(group == "User Group"){
+			if (usergroupoptions.indexOf(name) == -1) {
+				 usergroupoptions.push(name);
+		         tokenlist.push(item);
+		         angular.forEach($scope.UserGroup,function(value){
+		         	if(value.key == name){
+		         		value.selected =true;
+		         	}
+		         })
+		     }
+		}
+		if(group == "Features"){
+			if (featureoptions.indexOf(name) == -1) {
+				 featureoptions.push(name);
+		         tokenlist.push(item);
+		         angular.forEach($scope.Feature,function(value){
+		         	if(value.key == name){
+		         		value.selected =true;
+		         	}
+		         })
+		     }
+		}	
+		if(group == "Campaign Id"){
+			if (campaignidoptions.indexOf(name) == -1) {
+				 campaignidoptions.push(name);
+		         tokenlist.push(item);
+		         angular.forEach($scope.campaignId,function(value){
+		         	if(value.key == name){
+		         		value.selected =true;
+		         	}
+		         })
+		     }
+		}
+		$scope.tokenlist = tokenlist;
+		$(event.currentTarget).children('span').removeClass('glyphicon-unchecked');
+		$(event.currentTarget).children('span').addClass('glyphicon-check');
+		}
+		
+	}
+	
+	$scope.removeItem = function (index , group , name , id) {
+		$scope.tokenlist.splice(index, 1);
+		tokenlist = $scope.tokenlist;
+		if(group == "User Group"){
+			
+			usergroupoptions.splice($.inArray(name,usergroupoptions),1);
+			angular.forEach($scope.UserGroup ,function (value ) {
+
+				if(value.key == name){
+					value.selected = false;
+				}
+			})
+		}
+		if(group == "Features"){
+			featureoptions.splice($.inArray(name,featureoptions),1);
+			angular.forEach($scope.Feature ,function (value ) {
+				if(value.key == name){
+					value.selected = false;
+				}
+			})
+		}	
+		if(group == "Campaign Id"){
+			campaignidoptions.splice($.inArray(name,campaignidoptions),1);
+			angular.forEach($scope.campaignId ,function (value ) {
+				if(value.key == name){
+					value.selected = false;
+				}
+			})
+		}	
+		if(tokenlist.length == 0){
+			$scope.showtokens = "false";
+			$scope.showtable = "true";
+		}
+
+	};
+	$scope.applyfilter = function () {
+			getInnerPageData();
+			getAllUserTableData();
+			$scope.showtable = 'false';
+	};
 	var parsed_result_usergroup;
 	var parsed_result_featuregroup;
 	$scope.apply = function (argument) {
-		var usergroups = $scope.selectedusers;
-		var featuregroups = $scope.selectedfeatures;
-		if(usergroups)
-			parsed_result_usergroup = angular.fromJson(usergroups);
-		if(featuregroups)
-			 parsed_result_featuregroup = angular.fromJson(featuregroups);
-		getInnerPageData();
-		getAllUserTableData();
-		$scope.showtable = 'false';
+		// var usergroups = $scope.selectedusers;
+		// var featuregroups = $scope.selectedfeatures;
+		// if(usergroups)
+		// 	parsed_result_usergroup = angular.fromJson(usergroups);
+		// if(featuregroups)
+		// 	 parsed_result_featuregroup = angular.fromJson(featuregroups);
+		// getInnerPageData();
+		// getAllUserTableData();
+		
 
 	};
 	// var params = $location.search();
@@ -105,23 +287,48 @@ angular.module('DecisionWorkbench')
 
 	//Overall campaign data
 	$scope.overallDataSuccess = function(response){
-		$scope.overallResponse = response.data;
-		console.log(response.data);
+		$scope.overallResponse = response.data.bestCampaignOptions;
 		var merged_usergroup = [];
 		var merged_featuregroup = [];
-		angular.forEach(parsed_result_usergroup,function(value) {
-			// console.log(response.data[value]);
-			$.merge(merged_usergroup, response.data[value]);
-		})
-		angular.forEach(parsed_result_featuregroup,function(value) {
-			// console.log(response.data[value]);
-			$.merge(merged_featuregroup, response.data[value]);
-		})
-		var merged = $.merge(merged_usergroup, merged_featuregroup);
+		var finaldata = [];
+		angular.forEach(usergroupoptions,function(value) {
+			// console.log(response.data.bestCampaignOptions[value]);
+			$.merge(merged_usergroup, response.data.bestCampaignOptions[value]);
 
-		console.log(merged);
+		})
+		angular.forEach(featureoptions,function(value) {
+			// console.log(response.data.bestCampaignOptions[value]);
+			$.merge(merged_featuregroup, response.data.bestCampaignOptions[value]);
+		})
+		var campaignIdlist = [];
+		var merged = $.merge(merged_usergroup, merged_featuregroup);
+		finaldata = merged;
+		if(campaignidoptions.length != 0){
+
+			if(finaldata.length == 0){
+				angular.forEach(campaignidoptions,function (value) {
+					angular.forEach(response.data.bestCampaignOptions["All Users"],function (values) {
+						if(values.id == parseInt(value)){
+
+							campaignIdlist.push(values);
+						}
+					})
+				})
+			}
+			else{
+				angular.forEach(campaignidoptions,function (value) {
+					angular.forEach(merged,function (values) {
+						if(values.id == parseInt(value)){
+							campaignIdlist.push(values);
+						}
+					})
+				})
+			}
+		}
+		finaldata = $.merge(finaldata, campaignIdlist);
 		
-		$scope.addData(merged);
+		
+		$scope.addData(finaldata);
 		// $scope.clickUserGroup($scope.userGroupDropdownText);
 		// $scope.clickFeature($scope.featureDropdownText);
 		// $scope.addUserGroupsTableData(response.data.jobHoppers);
@@ -184,7 +391,7 @@ angular.module('DecisionWorkbench')
 
 		//Populating data for overall table
 	$scope.addData = function(data) {
-
+		// console.log(data);
 	    $rootScope.builddoLoad = true;
 		$scope.dataLoaded = true;
 		if (!data)
@@ -214,7 +421,7 @@ angular.module('DecisionWorkbench')
     			return false; 
     		} 
     	} 
-    	DataService.getAllUserData(requestData, func, $scope.fail); 
+    	DataService.getOverviewDetailsData(requestData, func, $scope.fail); 
 	
 	} 
 	//Get inner page data
@@ -231,8 +438,7 @@ angular.module('DecisionWorkbench')
     	DataService.getOverviewDetailsData(requestData, func, $scope.fail); 
 	
 	} 
-	getInnerPageData();
-	getAllUserTableData();
+	
 })
 
 

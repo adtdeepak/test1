@@ -1,6 +1,18 @@
 <head>
      <title>D-ASSIST $ CONVERTER</title>
 	<link rel="shortcut icon" href="images/logo.ico"/>
+  <style >
+  .groupactive{
+    background-color: #666 !important;
+  }
+  .groupactive a{
+    background-color: #666 !important;
+  }
+  .list-group-item:hover{
+    background-color: #3ea8dc;
+    cursor: pointer;
+  }
+  </style>
 </head>
 
 <div class="container campaign-overview" ng-cloak style="padding-top: 30px;" ng-controller="customFilterController">
@@ -96,22 +108,26 @@
                     <div class="custom-filter-inner-box">
                          <span style="  left: 20px;    position: absolute;    top: 55px;"><img src="images/down.png"></span>
                         <ul>
-                            <li><a  href="#/overview-details?selectedGroup=All Users">User Group</a></li>
-                            <li><a  href="#/overview-details?selectedGroup=All Users">Features</a></li>
-                            <li><a  href="#/overview-details?selectedGroup=All Users">Engagement Score</a></li>
-                            <li><a  href="#/overview-details?selectedGroup=All Users">Campaign ID</a></li>
-                            <li><a  href="#/overview-details?selectedGroup=All Users">Expected Impact</a></li>
+                            <li ng-class="{'groupactive':selectedTab == 'User Group'}" ng-click="groupselected('User Group')"><a>User Group</a></li>
+                            <li ng-class="{'groupactive':selectedTab == 'Features'}" ng-click="groupselected('Features')"><a  >Features</a></li>
+                            <li ng-class="{'groupactive':selectedTab == 'Score'}" ng-click="groupselected('Score')"><a  >Engagement Score</a></li>
+                            <li ng-class="{'groupactive':selectedTab == 'Campaign Id'}" ng-click="groupselected('Campaign Id')"><a  >Campaign ID</a></li>
+                            <li ng-class="{'groupactive':selectedTab == 'Impact'}" ng-click="groupselected('Impact')"><a  >Expected Impact</a></li>
                         </ul>
                      </div>
                 </div>
-                <div class="col-lg-3 custom-filter-div">
+                <div ng-show="showoptions" class="col-lg-3 custom-filter-div">
                     <h2>Select Options</h2>   
                     <div style="padding:0px;" class="custom-filter-inner-box">
                          <span style="  left: 20px;    position: absolute; z-index:999;    top: 55px;"><img src="images/down.png"></span>
                       
-        		<ul style="margin:0px;" class="list-group checked-list-box">
-                  <li class="list-group-item text-left"><i class="icon-check"></i>Cras justo odio</li>
-                  <li class="list-group-item text-left" data-checked="true">Dapibus ac facilisis in</li>
+        		<ul style="margin:0px;" class="list-group checked-list-box" id="selectFilterCustom">
+                  <li  ng-repeat="item in optionselected" id={{group}}_{{$index}}  class="list-group-item text-left" ng-click="optionclicked(group,item.key,$event)" ng-class="{'groupactive' : item.selected }"  myattr={{group}} >
+                  	<span class="state-icon glyphicon" ng-class="{'glyphicon-check' : item.selected ,'glyphicon-unchecked' : !item.selected}">
+                  		<input class="hidden" type="checkbox" /> 
+                  	</span>
+                  	{{item.key}}</li>
+                 <!--  <li class="list-group-item text-left">Dapibus ac facilisis in</li>
                   <li class="list-group-item text-left">Morbi leo risus</li>
                   <li class="list-group-item text-left">Porta ac consectetur ac</li>
                   <li class="list-group-item text-left">Vestibulum at eros</li>
@@ -119,33 +135,35 @@
                   <li class="list-group-item text-left">Dapibus ac facilisis in</li>
                   <li class="list-group-item text-left">Morbi leo risus</li>
                   <li class="list-group-item text-left">Porta ac consectetur ac</li>
-                  <li class="list-group-item text-left">Vestibulum at eros</li>
+                  <li class="list-group-item text-left">Vestibulum at eros</li> -->
                 </ul>
            
                     </div>
                 </div>
                 
-                <div class="col-lg-6 custom-filter-div">
+                <div ng-show="showtokens" class="col-lg-6 custom-filter-div">
                     <h2>Select Options</h2>  
                     <div class="custom-filter-inner-box chosen-container chosen-container-multi chosen-with-drop chosen-container-active">
-                        <span style="  left: 20px;    position: absolute;    top: -6px;"><img src="images/down.png"></span>                      <ul class="text-left chosen-choices">
-                        <li class="search-choice">
-                            <span>United Kingdom</span>
-                            <span class="state-icon glyphicon glyphicon-remove"></span>
-                        </li> 
-                           <li class="search-choice">
-                            <span>United Kingdom</span>
-                            <span class="state-icon glyphicon glyphicon-remove"></span>
-                        </li>
-                           <li class="search-choice">
-                            <span>United Kingdom</span>
-                            <span class="state-icon glyphicon glyphicon-remove"></span>
-                        </li>
+                        <span style="  left: 20px;    position: absolute;    top: -6px;"><img src="images/down.png">
+                        </span>                     
+                        <ul class="text-left chosen-choices" >
+	                        <li class="search-choice" ng-repeat="token in tokenlist">
+	                            <span >{{token.name}}</span>
+	                            <span id={{token.id}} ng-click="removeItem($index,token.group,token.name,token.id)" class="state-icon glyphicon glyphicon-remove"></span>
+	                        </li> 
+	                           <!-- <li class="search-choice">
+	                            <span>United Kingdom</span>
+	                            <span class="state-icon glyphicon glyphicon-remove"></span>
+	                        </li>
+	                           <li class="search-choice">
+	                            <span>United Kingdom</span>
+	                            <span class="state-icon glyphicon glyphicon-remove"></span>
+	                        </li> -->
                     </ul>
                     </div>
                 </div>
-                <div style="padding:0px;" class="col-lg-12">
-                    <div class="pull-right col-lg-2" style="    margin: 0;    padding: 0 0 10px;"> <div class="container-button"><a href="#progress?custom=true&usergroup={{selectedusers}}&featuregroup={{selectedfeatures}}" class="button-blue">Apply Filter</a></div>
+                <div ng-show="showtokens" style="padding:0px;" class="col-lg-12">
+                    <div ng-click="applyfilter()" class="pull-right col-lg-2" style="margin: 0;padding: 0 0 10px;"> <div class="container-button" ><a href="#" class="button-blue">Apply Filter</a></div>
                 </div>
 	</div>
                  
@@ -201,81 +219,86 @@
 		});
 </script>
 <script>
-    $('.list-group.checked-list-box .list-group-item').each(function () {
-        
-        // Settings
-        var $widget = $(this),
-            $checkbox = $('<input type="checkbox" class="hidden" />'),
-            color = ($widget.data('color') ? $widget.data('color') : "primary"),
-            style = ($widget.data('style') == "button" ? "btn-" : "list-group-item-"),
-            settings = {
-                on: {
-                    icon: 'glyphicon glyphicon-check'
-                },
-                off: {
-                    icon: 'glyphicon glyphicon-unchecked'
-                }
-            };
+	
+		// $('#selectFilterCustom li').each(function () {
+  //       // alert("cszdsad");
+  //       // Settings
+  //       // alert("fdff");
+  //       var $widget = $(this),
+  //           $checkbox = $('<input type="checkbox" class="hidden" />'),
+  //           color = ($widget.data('color') ? $widget.data('color') : "primary"),
+  //           style = ($widget.data('style') == "button" ? "btn-" : "list-group-item-"),
+  //           settings = {
+  //               on: {
+  //                   icon: 'glyphicon glyphicon-check'
+  //               },
+  //               off: {
+  //                   icon: 'glyphicon glyphicon-unchecked'
+  //               }
+  //           };
             
-        $widget.css('cursor', 'pointer')
-        $widget.append($checkbox);
+  //       $widget.css('cursor', 'pointer')
+  //       $widget.append($checkbox);
 
-        // Event Handlers
-        $widget.on('click', function () {
-            $checkbox.prop('checked', !$checkbox.is(':checked'));
-            $checkbox.triggerHandler('change');
-            updateDisplay();
-        });
-        $checkbox.on('change', function () {
-            updateDisplay();
-        });
+  //       // Event Handlers
+  //       $widget.on('click', function () {
+  //       	// alert(3465);
+  //           $checkbox.prop('checked', !$checkbox.is(':checked'));
+  //           $checkbox.triggerHandler('change');
+  //           updateDisplay();
+  //       });
+  //       $checkbox.on('change', function () {
+  //           updateDisplay();
+  //       });
           
 
-        // Actions
-        function updateDisplay() {
-            var isChecked = $checkbox.is(':checked');
+  //       // Actions
+  //       function updateDisplay() {
+  //           var isChecked = $checkbox.is(':checked');
 
-            // Set the button's state
-            $widget.data('state', (isChecked) ? "on" : "off");
+  //           // Set the button's state
+  //           $widget.data('state', (isChecked) ? "on" : "off");
 
-            // Set the button's icon
-            $widget.find('.state-icon')
-                .removeClass()
-                .addClass('state-icon ' + settings[$widget.data('state')].icon);
+  //           // Set the button's icon
+  //           $widget.find('.state-icon')
+  //               .removeClass()
+  //               .addClass('state-icon ' + settings[$widget.data('state')].icon);
 
-            // Update the button's color
-            if (isChecked) {
-                $widget.addClass(style + color + ' active');
-            } else {
-                $widget.removeClass(style + color + ' active');
-            }
-        }
+  //           // Update the button's color
+  //           if (isChecked) {
+  //               $widget.addClass(style + color + ' active');
+  //           } else {
+  //               $widget.removeClass(style + color + ' active');
+  //           }
+  //       }
 
-        // Initialization
-        function init() {
+  //       // Initialization
+  //       function init() {
             
-            if ($widget.data('checked') == true) {
-                $checkbox.prop('checked', !$checkbox.is(':checked'));
-            }
+  //           if ($widget.data('checked') == true) {
+  //               $checkbox.prop('checked', !$checkbox.is(':checked'));
+  //           }
             
-            updateDisplay();
+  //           updateDisplay();
 
-            // Inject the icon if applicable
-            if ($widget.find('.state-icon').length == 0) {
-                $widget.prepend('<span class="state-icon ' + settings[$widget.data('state')].icon + '"></span>');
-            }
-        }
-        init();
-    });
+  //           // Inject the icon if applicable
+  //           if ($widget.find('.state-icon').length == 0) {
+  //               $widget.prepend('<span class="state-icon ' + settings[$widget.data('state')].icon + '"></span>');
+  //           }
+  //       }
+  //       init();
+  //   });
     
-    $('#get-checked-data').on('click', function(event) {
-        event.preventDefault(); 
-        var checkedItems = {}, counter = 0;
-        $("#check-list-box li.active").each(function(idx, li) {
-            checkedItems[counter] = $(li).text();
-            counter++;
-        });
-        $('#display-json').html(JSON.stringify(checkedItems, null, '\t'));
-    });
+  //   $('#get-checked-data').on('click', function(event) {
+  //       event.preventDefault(); 
+  //       var checkedItems = {}, counter = 0;
+  //       $("#check-list-box li.active").each(function(idx, li) {
+  //           checkedItems[counter] = $(li).text();
+  //           counter++;
+  //       });
+  //       $('#display-json').html(JSON.stringify(checkedItems, null, '\t'));
+  //   });
+	
+    
 </script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> 
+<link rel="stylesheet" href="../fonts/font-awesome.min.css"> 
