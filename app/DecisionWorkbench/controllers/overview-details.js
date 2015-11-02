@@ -9,7 +9,7 @@ angular.module('DecisionWorkbench')
 	
 	$scope.selectedFeature = [{"key":"3rd Party Integration API","selected":false},{"key":"Collaborate","selected": false},{"key":"eSign","selected": false},
 	                        {"key":"Full Text Search","selected": false},{"key":"Microsoft 365 Integration","selected": false},{"key":"Mobile App","selected": false},
-	                        {"key":"Storage Space","selected": false},{"key":"Version History","selected": false},{"key":"Workspace Share","selected": false}];
+	                        {"key":"Storage Space","selected": false},{"key":"Version History","selected": false},{"key":"Workspace Share","selected": false},{"key":"All Features","selected": false}];
 
 	var initialExpand  = true;
 	var urlSelectedRowId = '';
