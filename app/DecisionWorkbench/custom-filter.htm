@@ -64,10 +64,10 @@
 			<div class="collapseDiv">
 				<div class="panel-heading"> Filters
                      
-
+          <div id="xclosetop" class="pull-right xclose expandclose"></div>
 				</div>
 			</div>
-			<div class="filterContainer">
+			<div class="filterContainer in">
 	<!--<div style="width: 100%; margin: 0 auto">
 		<div class="col-lg-5 " style="padding:0px;">
 			<section class="innerwrap">
@@ -163,7 +163,7 @@
                     </div>
                 </div>
                 <div ng-show="showtokens" style="padding:0px;" class="col-lg-12">
-                    <div ng-click="applyfilter()" class="pull-right col-lg-2" style="margin: 0;padding: 0 0 10px;"> <div class="container-button" ><a href="#" class="button-blue">Apply Filter</a></div>
+                    <div id="apply" ng-click="applyfilter()" class="pull-right col-lg-2" style="margin: 0;padding: 0 0 10px;"> <div class="container-button" ><a href="#" class="button-blue">Apply Filter</a></div>
                 </div>
 	</div>
                  
@@ -176,11 +176,11 @@
 
 
 		</div><div class="row nopadding" ng-hide="showtable" style="margin-top:10px !important;border:1px solid grey; ">
-			<div class="collapseDiv">
+			<div class="">
 				<div class="panel-heading"> Best Campaign Options
 				</div>
 			</div>
-			<div class="collapse in" style="padding: 5px;">
+			<div class="" style="padding: 5px;">
 				<table class="table borderless smSubsTable noMarginBtm" my-table  options="options" table-data="rowClicked" wishlist-data="wishlistSelected" execute-data="executeSelected">
                    
 					<thead>
@@ -208,13 +208,24 @@
 
 <script>
 		$(document).ready(function(){
-			  
-                    $("#done").selectpicker();
+			  $(".xclose").click(function(){
+          window.temp = $(this);
+          if(!$(this).hasClass("expandclose")){
+            $(".xclose").removeClass("expandclose");
+            $(".collapse").removeClass("in");
+          }
+        $(this).toggleClass("expandclose");
+        $(this).parents().closest('.collapseDiv').next().collapse('toggle');
+  });
+                    // $("#done").selectpicker();
                
    
-                    $("#done1").selectpicker();
+                    // $("#done1").selectpicker();
             
-
+$("#apply").click(function(){
+  $(".xclose").toggleClass("expandclose");
+        $(".xclose").parents().closest('.collapseDiv').next().collapse('toggle');
+});
 	 
 		});
 </script>
