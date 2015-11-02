@@ -44,7 +44,7 @@
 }
 
 body {
-	background: none repeat scroll 0 0 #F7F7F7;
+	background: none repeat scroll 0 0 #F7F7F7 !important;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-o-box-sizing: border-box;
@@ -2834,7 +2834,7 @@ span.valid30 {
 }
 
 .filterContainer {
-	display: block;
+
 }
 
 .Acquisition1 {
@@ -6252,7 +6252,7 @@ a.tooltip-new span {
 }
 
 .ng-hide {
-	/*display: block !important;*/
+	display: block !important;
 	position: relative;
 	top: -9999px;
 	left: -9999px;
@@ -8711,7 +8711,7 @@ div#progressBar {
 
 .feature-tabs li {
 	height: 145px;
-	width: 10.75%;
+	width: 9.65%;
     margin-right: 0px;
 	display: inline-table;
 	padding: 0px;
@@ -8731,7 +8731,7 @@ div#progressBar {
   border: 2px solid #132D52;
   border-radius: 5px;
   height:145px;
-  width: 10.75%;
+  width: 9.65%;
 }
 
 .heading-groups-row{
@@ -8799,6 +8799,9 @@ div#progressBar {
 
 .integration-image{
 	background-image: url('../images/campaign-icons/integration API-1.png');
+}
+.all-feature-image{
+	background-image: url('../images/campaign-home-icon/by-feature.png');
 }
 .collaborate-image{
 	background-image: url('../images/campaign-icons/Collaborate.png');
