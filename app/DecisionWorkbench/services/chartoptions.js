@@ -480,8 +480,8 @@ this.getColumnBarChart = function(data, title, subtitle, height, color){
 	            y:15,
 	            style: {
 	                color: '#686868',
-	                fontWeight: 'bold',
-	                fontSize: "15px"
+	                fontWeight: '600',
+	                fontSize: "12px !important;"
 	            }
 	        },
 	        subtitle: {
