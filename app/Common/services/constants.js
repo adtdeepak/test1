@@ -101,7 +101,6 @@ angular.module('AnalyticsApp')
 	BUILDDO.WATERFALL_TARGET = "target";
 	BUILDDO.WATERFALL_ACHIEVABLE = "achievable";
 	BUILDDO.PERIOD_DATA_MAX_UPLIFT = "maximumUplift";
-	
 	CONSTANTS['BUILDDO'] = BUILDDO;
 	
 	/*-------------------------Response--------------------------*/
