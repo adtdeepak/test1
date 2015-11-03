@@ -186,7 +186,7 @@ angular.module('Home',['ngRoute', 'AnalyticsApp','highcharts-ng'])
     });
 }]);
 
-angular.module('DecisionWorkbench',['ngRoute', 'AnalyticsApp', 'ngDragDrop'])
+angular.module('DecisionWorkbench',['ngRoute', 'AnalyticsApp', 'ngDragDrop','uiSlider'])
 .config(['$routeProvider', function($routeProvider) {
 	$routeProvider.when('/:page', {
 		templateUrl: function(params){ return 'app/DecisionWorkbench/' + params.page + '.htm';}

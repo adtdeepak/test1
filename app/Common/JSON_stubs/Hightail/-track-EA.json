@@ -13,7 +13,7 @@
                     "subGroupBy": "EAScore",
                     "actualToDate": "62",
                     "actualToDateTrend": "+ve",
-                    "monthlyAvg": "64",
+                    "monthlyAvg": "54",
                     "subgroupName": "Engagement Score",
                     "groupName": "engagementActivity",
                     "versusLast": {
@@ -282,7 +282,7 @@
                     "subGroupBy": "EAScore",
                     "actualToDate": "62",
                     "actualToDateTrend": "+ve",
-                    "monthlyAvg": "64",
+                    "monthlyAvg": "54",
                     "subgroupName": "Engagement Score",
                     "groupName": "engagementActivity",
                     "versusLast": {

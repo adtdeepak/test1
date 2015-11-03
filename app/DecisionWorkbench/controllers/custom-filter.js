@@ -20,14 +20,16 @@ angular.module('DecisionWorkbench')
 	var impactoptions = [];
 	var scoreoptions = [];
 	var tokenlist =[];
+	$scope.showslider = 'true';
 
 	$scope.groupselected = function (option) {
-
+		$('#sliderrange').css("display", 'none');
 
 		if(option == "User Group"){
 			$scope.optionselected = $scope.UserGroup ;
 			$scope.group = "User Group";
 			$scope.selectedTab = "User Group";
+
 
 		}
 		if(option == "Features"){
@@ -47,7 +49,10 @@ angular.module('DecisionWorkbench')
 			$scope.selectedTab = "Score";
 		}
 		if(option == "Impact"){
-			$scope.optionselected = $scope.engagementimpact;
+			
+			$('#sliderrange').css("display", 'block');
+			$scope.optionselected ='';
+			$scope.showslider = 'true';
 			$scope.group = "impact";
 			$scope.selectedTab = "Impact";
 		}
@@ -63,6 +68,20 @@ angular.module('DecisionWorkbench')
 		// })
 		$scope.showoptions = "true";
 	};
+	$scope.sliderchange = function(){
+
+		$scope.change = true;
+		$scope.showtokens = "true";
+	}
+	$scope.removeimpact = function(){
+		$scope.change = false;
+
+		if(tokenlist.length == 0){
+			$scope.showtokens = "false";
+			$scope.showtable = "false";
+		}
+
+	}
 	$scope.optionclicked = function (group , name ,event) {
 		var item = {"group":group,"name":name,"id":event.currentTarget.id,"selected":true};
 		
@@ -228,7 +247,7 @@ angular.module('DecisionWorkbench')
 				}
 			})
 		}	
-		if(tokenlist.length == 0){
+		if(tokenlist.length == 0 && $scope.change == false){
 			$scope.showtokens = "false";
 			$scope.showtable = "false";
 		}
@@ -370,15 +389,24 @@ angular.module('DecisionWorkbench')
 					})
 		})
 		merged = $.merge(merged, campaignIdlist);
-		angular.forEach(impactoptions,function(value) {
-			// console.log(response.data.bestCampaignOptions[value]);
-			angular.forEach(response.data.bestCampaignOptions["All Users"],function (values) {
-						if(values.engagementimpact == value){
+		// angular.forEach(impactoptions,function(value) {
+		// 	// console.log(response.data.bestCampaignOptions[value]);
+		// 	angular.forEach(response.data.bestCampaignOptions["All Users"],function (values) {
+		// 				if(values.engagementimpact == value){
 
-							impactlist.push(values);
-						}
-					})
-		})
+		// 					impactlist.push(values);
+		// 				}
+		// 			})
+		// })
+		if($scope.change == true){
+			// alert($scope.minrange);
+			angular.forEach(response.data.bestCampaignOptions["All Users"],function (values) {
+				if(values.engagementimpact >= $scope.minrange && values.engagementimpact <= $scope.maxrange){
+
+					impactlist.push(values);
+				}
+			})
+		}
 		 merged = $.merge(merged, impactlist);
 		 angular.forEach(scoreoptions,function(value) {
 			// console.log(response.data.bestCampaignOptions[value]);
