@@ -14,7 +14,12 @@
     background-color: #3ea8dc;
     cursor: pointer;
   }
+  .bar{
+    left: 0px;
+  }
+
   </style>
+
 </head>
 
 <div class="container campaign-overview" ng-cloak style="padding-top: 30px;" ng-controller="customFilterController">
@@ -64,7 +69,7 @@
 		
 		<div class="row nopadding" style="border:1px solid #333;">
 			<div class="collapseDiv">
-				<div class="panel-heading"> Filters
+				<div class="panel-heading"> Filters 
                      
           <div id="xclosetop" class="pull-right xclose expandclose"></div>
 				</div>
@@ -121,14 +126,20 @@
                 <div ng-show="showoptions" class="col-lg-3 custom-filter-div">
                     <h2>Select Options</h2>   
                     <div style="padding:0px;" class="custom-filter-inner-box">
-                         <span style="  left: 20px;    position: absolute; z-index:999;    top: 55px;"><img src="images/down.png"></span>
-                      
+                         <span style="  left: 20px;    position: absolute; z-index:999;    top: 55px;"><img src="images/down.png"></span>    
         		<ul style="margin:0px;" class="list-group checked-list-box" id="selectFilterCustom">
                   <li  ng-repeat="item in optionselected" id={{group}}_{{$index}}  class="list-group-item text-left" ng-click="optionclicked(group,item.key,$event)" ng-class="{'groupactive' : item.selected }"  myattr={{group}} >
                   	<span class="state-icon glyphicon" ng-class="{'glyphicon-check' : item.selected ,'glyphicon-unchecked' : !item.selected}">
                   		<input class="hidden" type="checkbox" /> 
                   	</span>
                   	{{item.key}}</li>
+                
+                        <div id="sliderrange"  style="top: 0px;left: 0px;margin:auto;width:90%;margin-top: 40px;">
+                          <p>Expected Impact From: {{minrange}}%</p>
+                          <p>Expected Impact To : {{maxrange}}%</p>
+                         <slider ng-mouseup="sliderchange()"  style="top: 0px;left: 0px;margin:auto;width:90%;margin-top: 30px;" ng-init="minrange = 1;maxrange =15" floor="0" ceiling="50" ng-model-low="minrange" ng-model-high="maxrange"></slider>
+                      </div>
+                    
                  <!--  <li class="list-group-item text-left">Dapibus ac facilisis in</li>
                   <li class="list-group-item text-left">Morbi leo risus</li>
                   <li class="list-group-item text-left">Porta ac consectetur ac</li>
@@ -139,7 +150,7 @@
                   <li class="list-group-item text-left">Porta ac consectetur ac</li>
                   <li class="list-group-item text-left">Vestibulum at eros</li> -->
                 </ul>
-           
+                     
                     </div>
                 </div>
                 
@@ -153,6 +164,10 @@
 	                            <span >{{token.name}}</span>
 	                            <span id={{token.id}} ng-click="removeItem($index,token.group,token.name,token.id)" class="state-icon glyphicon glyphicon-remove"></span>
 	                        </li> 
+                          <li ng-if="change == true" class="search-choice">
+                              <span >Impact: {{minrange}}%-{{maxrange}}%</span>
+                              <span id={{token.id}} ng-click="removeimpact()" class="state-icon glyphicon glyphicon-remove"></span>
+                          </li> 
 	                           <!-- <li class="search-choice">
 	                            <span>United Kingdom</span>
 	                            <span class="state-icon glyphicon glyphicon-remove"></span>
@@ -167,12 +182,16 @@
                 <div ng-show="showtokens" style="padding:0px;" class="col-lg-12">
                     <div id="apply" ng-click="applyfilter()" class="pull-right col-lg-2" style="margin: 0;padding: 0 0 10px;"> <div class="container-button" ><a href="#" class="button-blue">Apply Filter</a></div>
                 </div>
+              
+       
+        
+    
 	</div>
                  
                  
 	
 </div>
-
+  
 
 		
 
