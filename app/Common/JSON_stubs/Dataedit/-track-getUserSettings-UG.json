@@ -1,0 +1,41 @@
+{
+    "status": "OK",
+    "message": "Request Processed Successfully",
+    "data": [
+        {
+            "groupBy": "UG",
+            "menus": [
+                {
+                    "menuItemID": "m_ProjectManagers",
+                    "menuItemName": "Project Managers",
+                    "menuType": "userGroup",
+                    "checked": true
+                },
+                {
+                    "menuItemID": "m_FinanceExecutives",
+                    "menuItemName": "Finance Executives",
+                    "menuType": "userGroup",
+                    "checked": true
+                },
+                {
+                    "menuItemID": "m_Photographers",
+                    "menuItemName": "Photographers",
+                    "menuType": "userGroup",
+                    "checked": true
+                },
+                {
+                    "menuItemID": "m_Musicians",
+                    "menuItemName": "Musicians",
+                    "menuType": "userGroup",
+                    "checked": true
+                },
+                {
+                    "menuItemID": "m_CreativeAgencies",
+                    "menuItemName": "Creative Agencies",
+                    "menuType": "userGroup",
+                    "checked": true
+                }
+            ]
+        }
+    ]
+}

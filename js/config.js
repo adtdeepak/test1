@@ -8,6 +8,7 @@ window.appConstants = {
 	sukhi:"Hightail",
 	harsh:"Soundcloud",
 	edison:"Hightail",
+	ashimamittal:"Dataedit",
 	password:"abs0lutd@ta",
 	DEFAULT_USER_MODE:	"freemium",
 	

@@ -1,0 +1,135 @@
+{
+    "status": "OK",
+    "message": "Request Processed Successfully",
+    "groupBy": "ARPU",
+    "yAxisTitle":"",
+    "timeRanges": [
+        {
+            "periodFrom": "11012014",
+            "periodTo": "11302014",
+            "periodName": "weekly",
+            "reportingInterval": "daily",
+            "data": [
+                {           
+                    "startDate": "08-23-2015",
+                    "actual": 80,
+                    "target": 80
+                },
+                {
+                    "startDate": "08-30-2015",
+                    "actual": 80,
+                    "target": 80
+                },
+                {
+                    "startDate": "09-06-2015",
+                    "actual": 80,
+                    "target": 80
+                },
+                {
+                    "startDate": "09-13-2015",
+                    "actual": 80,
+                    "target": 80
+                },
+                {
+                    "startDate": "09-20-2015",
+                    "actual": 80,
+                    "target": 80
+                }
+            ]
+        },
+        {
+            "periodFrom": "11012014",
+            "periodTo": "11302014",
+            "periodName": "monthly",
+            "reportingInterval": "weekly",
+            "data": [
+                {         
+                    "startDate": "7-1-2015",
+                    "actual": 79,
+                    "target": 79
+                },
+                {
+                    "startDate": "8-1-2015",
+                    "actual": 80,
+                    "target": 80
+                },
+                {
+                    "startDate": "9-1-2015",
+                    "actual": 80,
+                    "target": 80
+                },
+                {
+                    "startDate": "10-1-2015",
+                    "actual": 80,
+                    "target": 80
+                },
+                {
+                    "startDate": "11-1-2015",
+                    "actual": 81,
+                    "target": 81
+                }
+            ]
+        },
+        {
+            "periodFrom": "11012014",
+            "periodTo": "11302014",
+            "periodName": "quarterly",
+            "reportingInterval": "monthly",
+            "data": [
+                {
+                    "startDate": "1-1-2015",
+                    "actual": 78,
+                    "target": 78
+                },
+                {
+                    "startDate": "4-1-2015",
+                    "actual": 80,
+                    "target": 80
+                },
+                {
+                    "startDate": "7-1-2015",
+                    "actual": 80,
+                    "target": 80
+                },
+                {
+                    "startDate": "10-1-2015",
+                    "actual": 82,
+                    "target": 82
+                },
+                {
+                    "startDate": "1-1-2016",
+                    "actual": 82,
+                    "target": 82
+                }
+            ]
+        },
+        {
+            "periodFrom": "11012014",
+            "periodTo": "11302014",
+            "periodName": "yearly",
+            "reportingInterval": "monthly",
+            "data": [
+                {
+                    "startDate": "1-1-2013",
+                    "actual": 70,
+                    "target": 70
+                },
+                {
+                    "startDate": "1-1-2014",
+                    "actual": 76,
+                    "target": 76
+                },
+                {
+                    "startDate": "1-1-2015",
+                    "actual": 80,
+                    "target": 80
+                },
+                {
+                    "startDate": "1-1-2016",
+                    "actual": 90,
+                    "target": 90
+                }
+            ]
+        }
+    ]
+}

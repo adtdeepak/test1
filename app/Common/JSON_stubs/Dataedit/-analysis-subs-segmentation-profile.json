@@ -1,0 +1,26 @@
+{
+    "status": "OK",
+    "message": "Request processed successfully",
+    "data": {
+        "pieData":{
+        	"gender":{
+        		"name":["Male", "Female"],
+        		"values":[57.9, 42.1],
+        		"color":["#1b6395", "#149ae3"]
+        	},
+        	"location":{
+        		"name":["US", "Europe", "China", "Others"],
+        		"values":[55, 21, 10, 14],
+        		"color":["#0e4b77", "#05395d","#56d8ca", "#959595"]
+        	}
+        },
+        "trend":{
+        	"login":{
+        		"name":["18-24", "25-34", "35-54", "54+"],
+        		"values":[25.8, 34.3, 33.4, 6.6],
+        		"color":"#05395d"
+        	}
+        }
+    }
+}
+

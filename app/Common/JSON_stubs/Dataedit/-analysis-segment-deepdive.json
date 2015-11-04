@@ -1,0 +1,195 @@
+{
+    "status": "OK",
+    "message": "Request processed successfully",
+    "data": {
+        "overall":{
+        	"userTrend":{
+        		"name":["Free Users", "Paid Users"],
+        		"values":[79, 21],
+        		"color":["#1b6395", "#149ae3"]
+        	},
+			"data":{
+				"totalUser":{
+					"value":"9 Million",
+					"yoy":"10"
+				},
+				"freeUser":{
+					"value":"7.1 Million",
+					"yoy":"13"
+				},
+				"paidUser":{
+					"value":"1.9 Million",
+					"yoy":"4"
+				}
+			}
+        	},
+        	"productProfile":{
+        	"users":[{
+        		"name":"Basic",
+        		"values":1045000
+        	},{
+        		"name":"Premium",
+        		"values":475000
+        	},{
+        		"name":"Enterprise",
+        		"values":380000
+        	}],
+			"revenueTrend":{
+        		"name":["Basic", "Premium", "Enterprise"],
+        		"values":[20, 30, 50],
+        		"color":["#36729d", "#149ae3","#fb7d7d"]
+        	}
+        	},
+			"demographicProfile":{
+        	"gender":{
+        		"name":["Male", "Female"],
+        		"values":[55, 45],
+        		"color":["#1b6395", "#149ae3"]
+        	},
+        	"age":{
+        		"name":["18yrs - 24yrs", "25yrs - 34yrs", "35yrs - 54yrs", "54yrs +"],
+        		"values":[25.8, 34.3, 33.4, 6.5],
+        		"color":["#36729d", "#149ae3","#fb7d7d", "#56d8ca"]
+        	},
+        	"location":{
+        		"name":["Europe", "Asia", "Latin America", "North America", "Middle East", "Africa", "Oceania"],
+        		"values":[22.4, 14.6, 10.9, 43.3, 2.8, 3.6, 2.3],
+        		"color":["#0e4b77", "#05395d","#56d8ca", "#959595","#1b6395", "#149ae3","#fb7d7d"]
+        	}
+        	},
+			 "productUsage":{
+        	"status":{
+        		"name":["Complete", "Incomplete"],
+        		"values":[50, 50],
+        		"color": ["#1b6395", "#149ae3"]
+        	},
+        	"trendingFeatures":{
+        		"name":["Account Settings","Digital Sign","Company information","Folders","Contacts","Home Page","Profile"],
+        		"values":[22, 44, 59, 64, 67, 71, 80],
+        		"color":"#fb7d7d"
+        	},
+        	"trendingActivities":{
+        		"name":["Send Files", "Premium Delivery", "Secure Share", "E-Sign", "Archivals", "Work Space Share"],
+        		"values":[76.9, 68.6, 38.3, 27.9,35, 38.2 ],
+        		"color":"#1b6395"
+        	},
+        	"login":{
+        		"name":[">10", "5-10", "2-5", "Once a week"],
+        		"values":[11, 15, 10, 64],
+        		"color":"#05395d"
+        	},
+        	"loginDuration":{
+        		"name" : ["<10 mins", "10-30 mins", "30-45 mins", ">45 mins"],
+        		 "values":[47.6, 26, 12.2, 3.7, 10.5],
+        		"color":["#0e4b77", "#05395d","#56d8ca", "#959595"]
+        	}
+        	
+        },
+		"engagementBehaviour":{
+        	"activeUsersTrendRevenue":{
+        		"legend":"Revenue",
+        		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+        		"values":[5, 10, 7, 8, 10, 12, 15, 10, 12, 12, 15, 17, 25, 22, 20, 28],
+        		"color":"#05395d"},
+			"activeUsersTrendPaidusers":{
+        		"legend":"Paid Users",
+        		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+        		"values":[41667,83333,58333,66667,83333,100000,125000,83333,100000,100000,125000,141667,208333,183333,166667,233333],
+        		"color":"#05395d"},
+        	"activeUsersTrendEngagementScore":{
+        		"legend":"Engagement Score",
+        		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+        		"values":[55,56,52,54,61,60,61,65,66,68,68,70,75,80,80,85],
+        		"color":"#05395d"},
+        	"activeUsersTrendF2P":{
+        		"legend":"Conversion Rate",
+        		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+        		"values":[1.2,1.5,1.8,1.5,2.5,2.4,2.5,2.8,3,3.1,3,3.1,3.5,4,4.1,4.5],
+        		"color":"#05395d"},
+			"data":{
+				"TotalRevenue":{
+					"value":"228 Million",
+					"yoy":"2",
+					"name":"Total Revenue",
+					"id":"activeUsersTrendRevenue"
+				},
+				"PaidUser":{
+					"value":"1.9 Million",
+					"yoy":"4",
+					"name":"Paid Users",
+					"id":"activeUsersTrendPaidusers"
+				},
+				"Freetopaidconversion":{
+					"value":"2.8",
+					"yoy":"1.2",
+					"name":"Free to Paid Conversion",
+					"id":"activeUsersTrendF2P"
+				},
+				"Engagementscore":{
+					"value":"65",
+					"yoy":"1",
+					"name":"Engagement Score",
+					"id":"activeUsersTrendEngagementScore"
+				}
+			}
+		},
+		"campaignCalender":{
+        "tableData":[{
+    		"CampaignID":"1",
+    		"userGroup":"Project Managers",
+    		"description":"Join today and get 10 storage extra",
+			"targetUsers":"135751",
+			"response":"31222",
+			"Impact":"Campaign conversion rate 23%",
+    		"startDate":"12/01/2015",
+    		"endDate":"12/31/2015"
+    	},{
+    		"CampaignID":"2",
+    		"userGroup":"Photographers",
+    		"description":"Mobile app downloads",
+			"targetUsers":"416303",
+			"response":"99912",
+			"Impact":"Increase engagement by 12%",
+    		"startDate":"12/01/2015",
+    		"endDate":"12/31/2015"
+    	},{
+    		"CampaignID":"3",
+    		"userGroup":"Enterprise Users",
+    		"description":"Connect with Microsoft office 365",
+			"targetUsers":"380103",
+			"response":"38000",
+			"Impact":"Increase engagement by  5.6%",
+    		"startDate":"12/01/2015",
+    		"endDate":"12/31/2015"
+    	},{
+    		"CampaignID":"4",
+    		"userGroup":"Project Managers",
+    		"description":"Audit, control and monitor file access rights",
+			"targetUsers":"316752",
+			"response":"47512",
+			"Impact":"Campaign conversion rate 15%",
+    		"startDate":"12/01/2015",
+    		"endDate":"12/31/2015"
+    	},{
+    		"CampaignID":"5",
+    		"userGroup":"Enterprise Users",
+    		"description":"Password protected files",
+			"targetUsers":"1791914",
+			"response":"161272",
+			"Impact":"Increase engagement by 5%",
+    		"startDate":"12/01/2015",
+    		"endDate":"12/31/2015"
+    	}]
+		},
+		"customInsights":{
+			"data":[
+			{"point":""},
+			{"point":""},
+			{"point":""},
+			{"point":""}
+			]
+		}
+         
+    }
+}
+

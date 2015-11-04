@@ -1,0 +1,43 @@
+{
+    "status": "OK",
+    "message": "Request Processed Successfully",
+    "groupBy": "MobileAppuser",
+    "timeRanges": [
+        {
+            "periodFrom": "12-17-2014",
+            "periodTo": "06-17-2015",
+            "reportingInterval": "weekly",
+            "periodName": "weekly",
+            "maxRows": 5,
+            "data": [89430, 93904, 89352, 94917, 91843],
+            "xAxis":["Week 35", "Week 36", "This week","Week 38","Week 39"]
+        },
+        {
+            "periodFrom": "9-1-2014",
+            "periodTo": "07-17-2016",
+            "reportingInterval": "monthly",
+            "periodName": "monthly",
+            "maxRows": 5,
+            "data": [370252, 349724, 378544, 373424, 350172],
+            "xAxis": ["Jul 15","Aug 15","This Month","Oct 15","Nov 15"]
+        },
+        {
+            "periodFrom": "01-17-2014",
+            "periodTo": "07-19-2016",
+            "reportingInterval": "quarterly",
+            "periodName": "quarterly",
+            "maxRows": 5,
+            "data": [1605480, 1726323, 1856261, 1995980, 2114722],
+            "xAxis": ["Q1 (2015)","Q2 (2015)","This Quarter","Q4 (2015)", "Q1 (2016)"]
+        },
+        {
+            "periodFrom": "01-08-2014",
+            "periodTo": "07-19-2016",
+            "reportingInterval": "monthly",
+            "periodName": "yearly",
+            "maxRows": 5,
+            "data": [5747235, 7184044, 8445427, 6678312],
+            "xAxis": ["2013", "2014", "This Year", "2016"]
+        }
+    ]
+}

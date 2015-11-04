@@ -1,0 +1,51 @@
+{
+    "status": "OK",
+    "message": "Request Processed Successfully",
+    "timeRanges": [
+        {
+            "periodFrom": "12-17-2014",
+            "periodTo": "06-17-2015",
+            "reportingInterval": "weekly",
+            "periodName": "weekly",
+            "maxRows": 5,
+            "data": [61.1,61.5,61.2,61.1,63.4,63.3,63.4,61.1,63.7,63.3,61.8,62.5,62.3,63.6,61.7,63.5,61.4,61.3,62.9,63.4,61.3,61.1,63.6,63.8,62.8,61.5,61.5,62.5,62.6,63.6,63.3,62.9,62.7,63.6,61.5,61.3,63.8],
+            "xAxis":["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37"]
+        },
+        {
+            "periodFrom": "9-1-2014",
+            "periodTo": "07-17-2016",
+            "reportingInterval": "monthly",
+            "periodName": "monthly",
+            "maxRows": 5,
+            "data": [62.9,61.0,61.4,63.3,62.1,63.2,63.0,61.2],
+            "xAxis": ["Jan-15","Feb-15","Mar-15","Apr-15","May-15","Jun-15","Jul-15","Aug-15","Sep-15","Oct-15","Nov-15","Dec-15"]
+        },
+        {
+            "periodFrom": "01-17-2014",
+            "periodTo": "07-19-2016",
+            "reportingInterval": "quarterly",
+            "periodName": "quarterly",
+            "maxRows": 5,
+            "data": [57.6,57.3,57.8,58.7,58.2,59.1,59.2,60.1,60.1,61.8,61.1,62.4],
+            "xAxis": ["Q1 (2013)","Q2 (2013)","Q3 (2013)","Q4 (2013)","Q1 (2014)","Q2 (2014)","Q3 (2014)","Q4 (2014)","Q1 (2015)","Q2 (2015)","Q3 (2015)","Q4 (2015)"]
+        },
+        {
+            "periodFrom": "01-08-2014",
+            "periodTo": "07-19-2016",
+            "reportingInterval": "monthly",
+            "periodName": "yearly",
+            "maxRows": 5,
+            "data": [57.0,57.8,59.2,61.4],
+            "xAxis": ["2012","2013","2014","2015"]
+        }
+    ],
+    "currentScore": {
+        "score": 62,
+        "versusLastWeek": "6",
+        "versusLastWeekTrend": "-ve",
+        "versusLastMonth": "4",
+        "versusLastMonthTrend": "+ve",
+        "versusTarget": "8",
+        "versusTargetTrend": "+ve"
+    }
+}

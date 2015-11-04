@@ -1,0 +1,46 @@
+{
+    "status": "OK",
+    "message": "Request processed successfully",
+    "data": {
+        "pieData":{
+        	"gender":{
+        		"name":["Male", "Female"],
+        		"values":[64, 36],
+        		"color":["#1b6395", "#149ae3"]
+        	},
+        	"age":{
+        		"name":["15-25", "25-30", "30-40", "40-50", "50-65", ">65"],
+        		"values":[5, 15, 35, 25, 15, 5],
+        		"color":["#36729d", "#149ae3","#fb7d7d", "#56d8ca", "#c5c4c4", "#ffcaca"]
+        	},
+        	"location":{
+        		"name":["US", "Europe", "China", "Others"],
+        		"values":[55, 21, 10, 14],
+        		"color":["#0e4b77", "#05395d","#56d8ca", "#959595"]
+        	},
+        	"signup":{
+        		"name":["Professional", "Personal"],
+        		"values":[29, 71],
+        		"color":["#1b6395", "#149ae3"]
+        	},
+        	"accessMode":{
+        		"name":["Mobile", "Web", "Mix"],
+        		"values":[15, 36, 49],
+        		"color":["#1b6395", "#56d8ca","#149ae3"]
+        	},
+        	"platform":{
+        		"name":["Android", "iOS", "Windows", "Others"],
+        		"values":[34, 44, 10, 12],
+        		"color":["#36729d", "#0e4b77","#56d8ca", "#c5c4c4"]
+        	}
+        },
+        "trend":{
+        	"login":{
+        		"name":[">10", "5-10", "2-5", "Once a week"],
+        		"values":[11, 15, 10, 64],
+        		"color":"#05395d"
+        	}
+        }
+    }
+}
+

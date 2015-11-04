@@ -1,0 +1,1082 @@
+{
+    "status": "OK",
+    "message": "Request Processed Successfully",
+    "timeRanges": [
+        {
+            "periodFrom": "09-06-2015",
+            "periodTo": "09-12-2015",
+            "periodName": "weekly",
+            "reportingInterval": "weekly",
+            "data": [
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "EAScore",
+                    "actualToDate": "62",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "54",
+                    "subgroupName": "Engagement Score",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "0.03",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "2.0",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "NA",
+                        "trend": ""
+                    },
+                    "Percentageactiveusers": {
+                        "value": "NA",
+                        "trend": ""
+                    },
+                    "AvgCountperuser": {
+                        "value": "NA",
+                        "trend": ""
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "VersionControl",
+                    "actualToDate": "270000",
+                    "actualToDateTrend": "-ve",
+                    "monthlyAvg": "270727",
+                    "subgroupName": "Version control",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "1500",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "25000",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "302990",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "12%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "1",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "MobileAppuser",
+                    "actualToDate": "91992",
+                    "actualToDateTrend": "-ve",
+                    "monthlyAvg": "80113",
+                    "subgroupName": "Mobile App",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "971",
+                        "trend": "-ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "2023",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "146978",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "4%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "1",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "Imagesenders",
+                    "actualToDate": "135000",
+                    "actualToDateTrend": "-ve",
+                    "monthlyAvg": "136089",
+                    "subgroupName": "Image Files",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "689",
+                        "trend": "-ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "1435",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "257391",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "6%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "2",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "Videosenders",
+                    "actualToDate": "54000",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "53157",
+                    "subgroupName": "Video files",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "172",
+                        "trend": "-ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "358",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "72008",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "2%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "1",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "Microsoft365integrations",
+                    "actualToDate": "9000",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "9058",
+                    "subgroupName": "Microsoft 365 Integration",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "391",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "816",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "13973",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "0.4%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "1",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "PremiumDeliveryUsers",
+                    "actualToDate": "9000",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "9035",
+                    "subgroupName": "Premium delivery",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "161",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "3365",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "10765",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "0.4%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "1",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "EsignUsers",
+                    "actualToDate": "8100",
+                    "actualToDateTrend": "-ve",
+                    "monthlyAvg": "8108",
+                    "subgroupName": "eSign",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "226",
+                        "trend": "-ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "471",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "15499",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "0.37%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "2",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "WorkspaceshareUsers",
+                    "actualToDate": "9000",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "9047",
+                    "subgroupName": "Workspace share",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "87",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "181",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "13163",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "0.42%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "1",
+                        "trend": "+ve"
+                    }
+                }
+            ]
+        },
+        {
+            "periodFrom": "09-01-2015",
+            "periodTo": "09-30-2015",
+            "periodName": "monthly",
+            "reportingInterval": "monthly",
+            "data": [
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "EAScore",
+                    "actualToDate": "62",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "54",
+                    "subgroupName": "Engagement Score",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "0.05",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "2.0",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "NA",
+                        "trend": ""
+                    },
+                    "Percentageactiveusers": {
+                        "value": "NA",
+                        "trend": ""
+                    },
+                    "AvgCountperuser": {
+                        "value": "NA",
+                        "trend": ""
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "VersionControl",
+                    "actualToDate": "621000",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "1164126",
+                    "subgroupName": "Version control",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "2250",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "37500",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "1302857",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "12%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "2",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "MobileAppuser",
+                    "actualToDate": "207000",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "390005",
+                    "subgroupName": "Mobile App",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "1456",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "3034",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "632005",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "4%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "3",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "Imagesenders",
+                    "actualToDate": "310500",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "585182",
+                    "subgroupName": "Image Files",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "1033",
+                        "trend": "-ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "2152",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "1106781",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "6%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "4",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "Videosenders",
+                    "actualToDate": "124200",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "232875",
+                    "subgroupName": "Video files",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "258",
+                        "trend": "-ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "537",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "309634",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "2%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "2",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "Microsoft365integrations",
+                    "actualToDate": "20700",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "38949",
+                    "subgroupName": "Microsoft 365 Integration",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "586",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "1224",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "60083",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "0.5%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "3",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "PremiumDeliveryUsers",
+                    "actualToDate": "20700",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "38850",
+                    "subgroupName": "Premium delivery",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "2422",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "5047",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "46289",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "0.5%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "2",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "EsignUsers",
+                    "actualToDate": "18630",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "34864",
+                    "subgroupName": "eSign",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "339",
+                        "trend": "-ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "706",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "66645",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "0.4%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "4",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "WorkspaceshareUsers",
+                    "actualToDate": "20700",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "38902",
+                    "subgroupName": "Workspace share",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "130",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "271",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "56600",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "0.5%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "3",
+                        "trend": "+ve"
+                    }
+                }
+            ]
+        },
+        {
+            "periodFrom": "07-01-2015",
+            "periodTo": "09-12-2015",
+            "periodName": "quarterly",
+            "reportingInterval": "quarterly",
+            "data": [
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "EAScore",
+                    "actualToDate": "61",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "62",
+                    "subgroupName": "Engagement Score",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "0.76",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "2.4",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "NA",
+                        "trend": ""
+                    },
+                    "Percentageactiveusers": {
+                        "value": "NA",
+                        "trend": "-ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "NA",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "VersionControl",
+                    "actualToDate": "2049300",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "3841616",
+                    "subgroupName": "Version control",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "5850",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "97500",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "4299428",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "12%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "2",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "MobileAppuser",
+                    "actualToDate": "683100",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "1287018",
+                    "subgroupName": "Mobile App",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "3786",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "78890",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "2085617",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "4%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "3",
+                        "trend": "-ve"
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "Imagesenders",
+                    "actualToDate": "1024650",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "1931102",
+                    "subgroupName": "Image Files",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "2687",
+                        "trend": "-ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "55960",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "3652378",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "6%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "3.5",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "Videosenders",
+                    "actualToDate": "409860",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "768487",
+                    "subgroupName": "Video files",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "670",
+                        "trend": "-ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "13960",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "1021793",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "2%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "2",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "Microsoft365integrations",
+                    "actualToDate": "68310",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "128533",
+                    "subgroupName": "Microsoft 365 Integration",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "1524",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "3182",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "198276",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "0.4%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "3",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "PremiumDeliveryUsers",
+                    "actualToDate": "68310",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "128206",
+                    "subgroupName": "Premium delivery",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "6298",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "13123",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "152755",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "0.4%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "2.5",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "EsignUsers",
+                    "actualToDate": "61479",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "115052",
+                    "subgroupName": "eSign",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "881",
+                        "trend": "-ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "1836",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "219930",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "0.4%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "3",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "WorkspaceshareUsers",
+                    "actualToDate": "68310",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "128376",
+                    "subgroupName": "Workspace share",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "339",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "7053",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "186782",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "0.4%",
+                        "trend": "-ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "3",
+                        "trend": "+ve"
+                    }
+                }
+            ]
+        },
+        {
+            "periodFrom": "01-01-2015",
+            "periodTo": "09-12-2015",
+            "periodName": "yearly",
+            "reportingInterval": "yearly",
+            "data": [
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "EAScore",
+                    "actualToDate": "60",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "62",
+                    "subgroupName": "Engagement Score",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "2.4",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "2.4",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "NA",
+                        "trend": ""
+                    },
+                    "Percentageactiveusers": {
+                        "value": "NA",
+                        "trend": ""
+                    },
+                    "AvgCountperuser": {
+                        "value": "NA",
+                        "trend": ""
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "VersionControl",
+                    "actualToDate": "807300",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "1536646",
+                    "subgroupName": "Version control",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "39000",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "39000",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "4299428",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "12%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "5",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "MobileAppuser",
+                    "actualToDate": "329100",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "514807",
+                    "subgroupName": "Mobile App",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "31556",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "31556",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "2085617",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "5%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "6",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "Imagesenders",
+                    "actualToDate": "403650",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "772441",
+                    "subgroupName": "Image Files",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "22384",
+                        "trend": "-ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "22384",
+                        "trend": "-ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "3652378",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "6%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "9",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "Videosenders",
+                    "actualToDate": "161460",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "307395",
+                    "subgroupName": "Video files",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "26800",
+                        "trend": "-ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "26800",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "1021793",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "2%",
+                        "trend": "-ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "6",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "Microsoft365integrations",
+                    "actualToDate": "269100",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "514132",
+                    "subgroupName": "Microsoft 365 Integration",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "12728",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "12728",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "198276",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "4%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "1",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "PremiumDeliveryUsers",
+                    "actualToDate": "269,100",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "512826",
+                    "subgroupName": "Premium delivery",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "25192",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "25192",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "1527552",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "4%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "5",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "EsignUsers",
+                    "actualToDate": "242190",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "460210",
+                    "subgroupName": "eSign",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "3524",
+                        "trend": "-ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "3524",
+                        "trend": "-ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "1119930",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "3.5%",
+                        "trend": "-ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "4",
+                        "trend": "+ve"
+                    }
+                },
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "WorkspaceshareUsers",
+                    "actualToDate": "269100",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "513507",
+                    "subgroupName": "Workspace share",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "2820",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "2820",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "286782",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "4%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "1",
+                        "trend": "+ve"
+                    }
+                }
+            ]
+        }
+    ]
+}

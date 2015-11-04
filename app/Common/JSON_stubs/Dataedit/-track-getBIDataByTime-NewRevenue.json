@@ -1,0 +1,135 @@
+{
+    "status": "OK",
+    "message": "Request Processed Successfully",
+    "groupBy": "NewRevenue",
+    "yAxisTitle":"",
+    "timeRanges": [
+        {
+            "periodFrom": "11012014",
+            "periodTo": "11302014",
+            "periodName": "weekly",
+            "reportingInterval": "daily",
+            "data": [
+                {              
+                    "startDate": "08-23-2015",
+                    "actual": 385360,
+                    "target": 350000
+                },
+                {
+                    "startDate": "08-30-2015",
+                    "actual": 373120,
+                    "target": 380000
+                },
+                {
+                    "startDate": "09-06-2015",
+                    "actual": 388240,
+                    "target": 400000
+                },
+                {
+                    "startDate": "09-13-2015",
+                    "actual": 391680,
+                    "target": 450000
+                },
+                {
+                    "startDate": "09-20-2015",
+                    "actual": 413120,
+                    "target": 480000
+                }
+            ]
+        },
+        {
+            "periodFrom": "11012014",
+            "periodTo": "11302014",
+            "periodName": "monthly",
+            "reportingInterval": "monthly",
+            "data": [
+                {       
+					"startDate": "7-1-2015",
+                    "actual": 1400616,
+                    "target": 3326240
+                },
+                {
+                    "startDate": "8-1-2015",
+                    "actual": 1462709,
+                    "target": 2925624
+                },
+                {
+                    "startDate": "9-1-2015",
+                    "actual": 776560,
+                    "target": 2462915
+                },
+                {
+                    "startDate": "10-1-2015",
+                    "actual": 1598177,
+                    "target": 2686355
+                },
+                {
+                    "startDate": "11-1-2015",
+                    "actual": 1740146,
+                    "target": 2088178
+                }
+            ]
+        },
+        {
+            "periodFrom": "11012014",
+            "periodTo": "11302014",
+            "periodName": "quarterly",
+            "reportingInterval": "quarterly",
+            "data": [
+                {          
+                    "startDate": "1-1-2015",
+                    "actual": 3787908,
+                    "target": 4978721
+                },
+                {
+                    "startDate": "4-1-2015",
+                    "actual": 4209019,
+                    "target": 6190813
+                },
+                {
+                    "startDate": "7-1-2015",
+                    "actual": 2329680,
+                    "target": 6981794
+                },
+                {
+                    "startDate": "10-1-2015",
+                    "actual": 5010754,
+                    "target": 9652114
+                },
+                {
+                    "startDate": "1-1-2016",
+                    "actual": 5386519,
+                    "target": 9641360
+                }
+            ]
+        },
+        {
+            "periodFrom": "11012014",
+            "periodTo": "11302014",
+            "periodName": "yearly",
+            "reportingInterval": "monthly",
+            "data": [
+                {
+                    "startDate": "1-1-2013",
+                    "actual": 9604137,
+                    "target": 26000000
+                },
+                {
+                    "startDate": "1-1-2014",
+                    "actual": 15161544,
+                    "target": 24914884
+                },
+                {
+                    "startDate": "1-1-2015",
+                    "actual": 11778000,
+                    "target": 27667000
+                },
+                {
+                    "startDate": "1-1-2016",
+                    "actual": 36848840,
+                    "target": 43317050
+                }
+            ]
+        }
+    ]
+}

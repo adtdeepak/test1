@@ -1,0 +1,116 @@
+{
+    "status": "OK",
+    "message": "Request Processed Successfully",
+    "groupBy": "Visitors",
+    "legend": "No. of unique visitors",
+    "timeRanges": [
+        {
+            "periodFrom": "11012014",
+            "periodTo": "11302014",
+            "periodName": "weekly",
+            "reportingInterval": "daily",
+            "data": [
+                {
+                    "startDate": "08-23-2015",
+                    "value": 1204460
+                },
+                {
+                    "startDate": "08-30-2015",
+                    "value": 1166070
+                },
+                {
+                    "startDate": "09-06-2015",
+                    "value": 1161610
+                },
+                {
+                    "startDate": "09-13-2015",
+                    "value": 1224100
+                },
+                {
+                    "startDate": "09-20-2015",
+                    "value": 1291070
+                }
+            ]
+        },
+        {
+            "periodFrom": "11012014",
+            "periodTo": "11302014",
+            "periodName": "monthly",
+            "reportingInterval": "weekly",
+            "data": [
+                {
+                    "startDate": "7-1-2015",
+                    "value": 4817840
+                },
+                {
+                    "startDate": "8-1-2015",
+                    "value": 4664280
+                },
+                {
+                    "startDate": "9-1-2015",
+                    "value": 2323220
+                },
+                {
+                    "startDate": "10-1-2015",
+                    "value": 4896400
+                },
+                {
+                    "startDate": "11-1-2015",
+                    "value": 5164280
+                }
+            ]
+        },
+        {
+            "periodFrom": "11012014",
+            "periodTo": "11302014",
+            "periodName": "quarterly",
+            "reportingInterval": "monthly",
+            "data": [
+                {
+                    "startDate": "1-1-2015",
+                    "value": 14453520
+                },
+                {
+                    "startDate": "4-1-2015",
+                    "value": 13992840
+                },
+                {
+                    "startDate": "7-1-2015",
+                    "value": 6969660
+                },
+                {
+                    "startDate": "10-1-2015",
+                    "value": 14689200
+                },
+                {
+                    "startDate": "1-1-2016",
+                    "value": 15492840
+                }
+            ]
+        },
+        {
+            "periodFrom": "11012014",
+            "periodTo": "11302014",
+            "periodName": "yearly",
+            "reportingInterval": "monthly",
+            "data": [
+                {        
+                    "startDate": "1-1-2013",
+                    "value": 61250890
+                },
+                {
+                    "startDate": "1-1-2014",
+                    "value": 69268750
+                },
+                {
+                    "startDate": "1-1-2015",
+                    "value": 36806250
+                },
+                {
+                    "startDate": "1-1-2016",
+                    "value": 93052670
+                }
+            ]
+        }
+    ]
+}

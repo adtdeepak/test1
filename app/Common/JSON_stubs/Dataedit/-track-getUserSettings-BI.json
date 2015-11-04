@@ -1,0 +1,59 @@
+{
+    "status": "OK",
+    "message": "Request Processed Successfully",
+    "data": [
+        {
+            "groupBy": "BI",
+            "menus": [
+                {
+                    "menuItemID": "m_revenue",
+                    "menuItemName": "Revenue",
+                    "menuType": "widget",
+                    "checked": true
+                },
+                {
+                    "menuItemID": "m_reg",
+                    "menuItemName": "Registrations",
+                    "menuType": "widget",
+                    "checked": true
+                },
+                {
+                    "menuItemID": "m_freeToPaidConversion",
+                    "menuItemName": "Free To Paid Conversion",
+                    "menuType": "widget",
+                    "checked": true
+                },
+                {
+                    "menuItemID": "m_newPaidUsers",
+                    "menuItemName": "New Paid Users",
+                    "menuType": "widget",
+                    "checked": true
+                },
+                {
+                    "menuItemID": "m_convRate",
+                    "menuItemName": "Cost of Acquisition",
+                    "menuType": "widget",
+                    "checked": true
+                },
+                {
+                    "menuItemID": "m_arpu",
+                    "menuItemName": "ARPU",
+                    "menuType": "widget",
+                    "checked": false
+                },
+                {
+                    "menuItemID": "m_newRevenue",
+                    "menuItemName": "New Revenue",
+                    "menuType": "widget",
+                    "checked": false
+                },
+                {
+                    "menuItemID": "m_recurringRevenue",
+                    "menuItemName": "Recurring Revenue",
+                    "menuType": "widget",
+                    "checked": false
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,116 @@
+{
+    "status": "OK",
+    "message": "Request Processed Successfully",
+    "groupBy": "ProjectManagers",
+    "yAxisTitle":"",
+    "timeRanges": [
+        {
+            "periodFrom": "11012014",
+            "periodTo": "11302014",
+            "periodName": "weekly",
+            "reportingInterval": "daily",
+            "data": [
+                {
+                    "startDate": "08-23-2015",
+                    "actual": 19271
+                },
+                {
+                    "startDate": "08-30-2015",
+                    "actual": 18657
+                },
+                {
+                    "startDate": "09-06-2015",
+                    "actual": 19414
+                },
+                {
+                    "startDate": "09-13-2015",
+                    "actual": 19586
+                },
+                {
+                    "startDate": "09-20-2015",
+                    "actual": 20657
+                }
+            ]
+        },
+        {
+            "periodFrom": "11012014",
+            "periodTo": "11302014",
+            "periodName": "monthly",
+            "reportingInterval": "weekly",
+            "data": [
+                {
+                   "startDate": "7-1-2015",
+                    "actual": 77084
+                },
+                {
+                    "startDate": "8-1-2015",
+                    "actual": 74628
+                },
+                {
+                    "startDate": "9-1-2015",
+                    "actual": 38828
+                },
+                {
+                    "startDate": "10-1-2015",
+                    "actual": 78342
+                },
+                {
+                    "startDate": "11-1-2015",
+                    "actual": 82628
+                }
+            ]
+        },
+        {
+            "periodFrom": "11012014",
+            "periodTo": "11302014",
+            "periodName": "quarterly",
+            "reportingInterval": "monthly",
+            "data": [
+                {
+                  "startDate": "1-1-2015",
+                    "actual": 231252
+                },
+                {
+                    "startDate": "4-1-2015",
+                    "actual": 223884
+                },
+                {
+                    "startDate": "7-1-2015",
+                    "actual": 116484
+                },
+                {
+                    "startDate": "10-1-2015",
+                    "actual": 235026
+                },
+                {
+                    "startDate": "1-1-2016",
+                    "actual": 247884
+                }
+            ]
+        },
+        {
+            "periodFrom": "11012014",
+            "periodTo": "11302014",
+            "periodName": "yearly",
+            "reportingInterval": "monthly",
+            "data": [
+                {
+					"startDate": "1-1-2013",
+                    "actual": 980014
+                },
+                {
+                    "startDate": "1-1-2014",
+                    "actual": 1108300
+                },
+                {
+                    "startDate": "1-1-2015",
+                    "actual": 588900
+                },
+                {
+                    "startDate": "1-1-2016",
+                    "actual": 1488842
+                }
+            ]
+        }
+    ]
+}

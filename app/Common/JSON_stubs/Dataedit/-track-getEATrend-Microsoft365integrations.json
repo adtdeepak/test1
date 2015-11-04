@@ -1,0 +1,43 @@
+{
+    "status": "OK",
+    "message": "Request Processed Successfully",
+    "groupBy": "Microsoft365Integration",
+    "timeRanges": [
+        {
+            "periodFrom": "12-17-2014",
+            "periodTo": "06-17-2015",
+            "reportingInterval": "weekly",
+            "periodName": "weekly",
+            "maxRows": 5,
+            "data": [90570, 91570, 89235, 92491, 89343],
+            "xAxis":["Week 35", "Week 36", "This week","Week 38","Week 39"]
+        },
+        {
+            "periodFrom": "9-1-2014",
+            "periodTo": "07-17-2016",
+            "reportingInterval": "monthly",
+            "periodName": "monthly",
+            "maxRows": 5,
+            "data": [364412, 366576, 369472, 352688, 352700],
+            "xAxis": ["Jul 15","Aug 15","This Month","Oct 15","Nov 15"]
+        },
+        {
+            "periodFrom": "01-17-2014",
+            "periodTo": "07-19-2016",
+            "reportingInterval": "quarterly",
+            "periodName": "quarterly",
+            "maxRows": 5,
+            "data": [1617071, 1738786, 1869662, 2010390, 2072998],
+            "xAxis": ["Q1 (2015)","Q2 (2015)","This Quarter","Q4 (2015)", "Q1 (2016)"]
+        },
+        {
+            "periodFrom": "01-08-2014",
+            "periodTo": "07-19-2016",
+            "reportingInterval": "monthly",
+            "periodName": "yearly",
+            "maxRows": 5,
+            "data": [5788727, 7235909, 8357585, 6569880],
+            "xAxis": ["2013", "2014", "This Year", "2016"]
+        }
+    ]
+}

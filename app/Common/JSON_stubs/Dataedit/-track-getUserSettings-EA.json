@@ -1,0 +1,77 @@
+{
+    "status": "OK",
+    "message": "Request Processed Successfully",
+    "data": [
+        {
+            "groupBy": "EA",
+            "menus": [
+                {
+                    "menuItemID": "m_MobileAppuser",
+                    "menuItemName": "Mobile App",
+                    "menuType": "module",
+                    "checked": true
+                },
+                {
+                    "menuItemID": "m_Imagesenders",
+                    "menuItemName": "Image files",
+                    "menuType": "module",
+                    "checked": true
+                },
+                {
+                    "menuItemID": "m_EsignUsers",
+                    "menuItemName": "eSign",
+                    "menuType": "module",
+                    "checked": true
+                },
+                {
+                    "menuItemID": "m_Microsoft365integrations",
+                    "menuItemName": "Microsoft 365 integration",
+                    "menuType": "module",
+                    "checked": true
+                },
+                {
+                    "menuItemID": "m_VersionControl",
+                    "menuItemName": "Version control",
+                    "menuType": "module",
+                    "checked": false
+                },
+                {
+                    "menuItemID": "m_PremiumDeliveryUsers",
+                    "menuItemName": "Premium delivery",
+                    "menuType": "module",
+                    "checked": false
+                },
+                {
+                    "menuItemID": "m_Videosenders",
+                    "menuItemName": "Video files",
+                    "menuType": "module",
+                    "checked": false
+                },
+                {
+                    "menuItemID": "m_WorkspaceshareUsers",
+                    "menuItemName": "Workspace share",
+                    "menuType": "module",
+                    "checked": false
+                },
+                {
+                    "menuItemID": "m_StorageSpace",
+                    "menuItemName": "Storage Space",
+                    "menuType": "module",
+                    "checked": false
+                },
+                {
+                    "menuItemID": "m_Collaborate",
+                    "menuItemName": "Collaborate",
+                    "menuType": "module",
+                    "checked": false
+                },
+                {
+                    "menuItemID": "m_Fulltextsearch",
+                    "menuItemName": "Full text search",
+                    "menuType": "module",
+                    "checked": false
+                }
+            ]
+        }
+    ]
+}

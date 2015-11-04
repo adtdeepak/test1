@@ -1,0 +1,333 @@
+{
+    "status": "OK",
+    "message": "Request processed successfully",
+    "data": {
+        "pieData":{
+        	"revenue":{
+        		"name":["Senior Mngt", "Finance Execs", "Freshers", "Recruiters"],
+        		"values":[10, 22, 32, 36],
+        		"color":["#5097D7", "#1b6395", "#fb7d7d", "#32cabb"]
+        	},
+        	"subscribers":{
+        		"name":["Senior Mngt", "Finance Execs", "Freshers", "Recruiters"],
+        		"values":[10, 22, 32, 36],
+        		"color":["#5097D7", "#1b6395", "#fb7d7d", "#32cabb"]
+        	},
+        	"newSubscribers":{
+        		"name":["Senior Mngt", "Finance Execs", "Freshers", "Recruiters"],
+        		"values":[10, 22, 32, 36],
+        		"color":["#5097D7", "#1b6395", "#fb7d7d", "#32cabb"]
+        	},
+        	"cancels":{
+        		"name":["Senior Mngt", "Finance Execs", "Freshers", "Recruiters"],
+        		"values":[10, 22, 32, 36],
+        		"color":["#5097D7", "#1b6395", "#fb7d7d", "#32cabb"]
+        	}
+        },
+        "trend":{
+        	"stageCompletion":{
+        		"xAxisData":["Mar", "Apr", "May", "Jun", "Jul", "Aug"],
+        		"series":[{
+			        "name": "Advanced",
+			        "data": [12, 24, 19, 14],
+			        "color":"#1b6395"
+			    }, {
+			        "name": "Basic",
+			        "data": [23, 30, 28, 25],
+			        "color":"#05395d"
+			    }, {
+			        "name": "Onboarding",
+			        "data": [36, 34, 26, 33],
+			        "color":"#32cabb"
+			    }]
+        	},
+        	"churnRisk":{
+        		"xAxisData":["Freshers", "Finance Execs", "Senior Mngt", "Recruiters"],
+        		"series":[{
+			        "name": "High",
+			        "data": [12, 24, 19, 14],
+			        "color":"#1b6395"
+			    }, {
+			        "name": "Medium",
+			        "data": [23, 30, 28, 25],
+			        "color":"#05395d"
+			    }, {
+			        "name": "Low",
+			        "data": [36, 34, 26, 33],
+			        "color":"#32cabb"
+			    }]
+        	}
+        },
+        	"tableData":{
+        		"overall":{
+        			"data":[
+		        			{
+		        			"heading" : "Subscribers", 
+		        			"subHeading" : "New",  
+		        			"value1" :"$11,413",
+		        			"value2":"$27,717", 
+		        			"value3":"$44,021",  
+		        			"value4":"$58,694"  
+		        			},
+		        			{
+		        			"heading" : "", 
+		        			"subHeading" : "Recurring",  
+		        			"value1" :"$216,842",
+		        			"value2":"$526,616", 
+		        			"value3":"$836,390",  
+		        			"value4":"$1,115,187"  
+		        			},
+		        			{
+		        			"heading" : "", 
+		        			"subHeading" : "Cancels",  
+		        			"value1" :"$7,893",
+		        			"value2":"$9,873", 
+		        			"value3":"$3,489",  
+		        			"value4":"$5,631"  
+		        			}
+        				]
+        			},
+        		"businessImpact":{
+        			"data":[
+		        			{
+		        			"heading" : "Subscribers", 
+		        			"subHeading" : "New",  
+		        			"value1" :"$11,413",
+		        			"value2":"$27,717", 
+		        			"value3":"$44,021",  
+		        			"value4":"$58,694"  
+		        			},
+		        			{
+		        			"heading" : "", 
+		        			"subHeading" : "Recurring",  
+		        			"value1" :"$216,842",
+		        			"value2":"$526,616", 
+		        			"value3":"$836,390",  
+		        			"value4":"$1,115,187"  
+		        			},
+		        			{
+		        			"heading" : "LTV", 
+		        			"subHeading" : "Lifetime Value",  
+		        			"value1" :"182",
+		        			"value2":"197", 
+		        			"value3":"204",  
+		        			"value4":"112"  
+		        			},
+		        			{
+		        			"heading" : "", 
+		        			"subHeading" : "Lifetime Months",  
+		        			"value1" :"21",
+		        			"value2":"23", 
+		        			"value3":"25",  
+		        			"value4":"12"  
+		        			},
+		        			{
+		        			"heading" : "ARPU", 
+		        			"subHeading" : "ARPU",  
+		        			"value1" :"13",
+		        			"value2":"14", 
+		        			"value3":"12.5",  
+		        			"value4":"15.4"  
+		        			}
+	        			]
+        		},
+        		"customerProfile":{
+        			"data":[
+		        			{
+		        			"heading" : "User Specific", 
+		        			"subHeading" : "Avg. Work Experience (Yrs)",  
+		        			"value1" :"4",
+		        			"value2":"2", 
+		        			"value3":"6.5",  
+		        			"value4":"7"  
+		        			},
+		        			{
+		        			"heading" : "", 
+		        			"subHeading" : "Highest Educational Degree",  
+		        			"value1" :"High School",
+		        			"value2":"Masters", 
+		        			"value3":"Masters",  
+		        			"value4":"Graduate"  
+		        			},
+		        			{
+		        			"heading" : "", 
+		        			"subHeading" : "Location",  
+		        			"value1" :"North America",
+		        			"value2":"Asia-Pac", 
+		        			"value3":"Asia-Pac",  
+		        			"value4":"Europe"  
+		        			},
+		        			{
+		        			"heading" : "", 
+		        			"subHeading" : "Gender",  
+		        			"value1" :"Mix",
+		        			"value2":"Mix", 
+		        			"value3":"Female",  
+		        			"value4":"Male"  
+		        			},
+		        			{
+		        			"heading" : "", 
+		        			"subHeading" : "Industry",  
+		        			"value1" :"Mix",
+		        			"value2":"Manuf.", 
+		        			"value3":"Tech",  
+		        			"value4":"Telecom"  
+		        			}
+		        		]
+        		},
+        		"productUsage":{
+        			"data":[					
+		        			{
+		        			"heading" : "User Specific", 
+		        			"subHeading" : "Active",  
+		        			"value1" :"23%",
+		        			"value2":"12%", 
+		        			"value3":"34%",  
+		        			"value4":"22%"  
+		        			},
+		        			{
+		        			"heading" : "", 
+		        			"subHeading" : "Dormant",  
+		        			"value1" :"77%",
+		        			"value2":"88%", 
+		        			"value3":"66%",  
+		        			"value4":"78%"  
+		        			},
+		        			{
+		        			"heading" : "Login Trends", 
+		        			"subHeading" : "Avg Duration",  
+		        			"value1" :"12 mins",
+		        			"value2":"16 mins", 
+		        			"value3":"19 mins",  
+		        			"value4":"22 mins"  
+		        			},
+		        			{
+		        			"heading" : "", 
+		        			"subHeading" : "Login Frequency (per week)",  
+		        			"value1" :"7",
+		        			"value2":"8", 
+		        			"value3":"12",  
+		        			"value4":"1"  
+		        			},
+		        			{
+		        			"heading" : "Adoption", 
+		        			"subHeading" : "Onboarding",  
+		        			"value1" :"19%",
+		        			"value2":"23%", 
+		        			"value3":"37%",  
+		        			"value4":"12%"  
+		        			}
+		        		]
+        		},
+        		"retention":{
+        			"data":[
+        					{
+		        			"heading" : "Churn Rate", 
+		        			"subHeading" : "Cancels",  
+		        			"value1" :"$7,893",
+		        			"value2":"$9,873", 
+		        			"value3":"$3,489",  
+		        			"value4":"$5,631"  
+		        			},
+		        			{
+		        			"heading" : "", 
+		        			"subHeading" : "Overall Rate",  
+		        			"value1" :"23%",
+		        			"value2":"31%", 
+		        			"value3":"36%",  
+		        			"value4":"41%"  
+		        			},
+		        			{
+		        			"heading" : "", 
+		        			"subHeading" : "Avg Duration",  
+		        			"value1" :"33%",
+		        			"value2":"27%", 
+		        			"value3":"12%",  
+		        			"value4":"36%"  
+		        			},
+		        			{
+		        			"heading" : "", 
+		        			"subHeading" : "Dormant Churn",  
+		        			"value1" :"67%",
+		        			"value2":"77%", 
+		        			"value3":"88%",  
+		        			"value4":"64%"  
+		        			},
+		        			{
+		        			"heading" : "Risk profile", 
+		        			"subHeading" : "Low Risk",  
+		        			"value1" :"23%",
+		        			"value2":"", 
+		        			"value3":"",  
+		        			"value4":""  
+		        			},
+		        			{
+		        			"heading" : "", 
+		        			"subHeading" : "Medium Risk",  
+		        			"value1" :"44%",
+		        			"value2":"", 
+		        			"value3":"",  
+		        			"value4":""  
+		        			},
+		        			{
+		        			"heading" : "", 
+		        			"subHeading" : "High Risk",  
+		        			"value1" :"23%",
+		        			"value2":"", 
+		        			"value3":"",  
+		        			"value4":""  
+		        			},
+		        			{
+		        			"heading" : "Tenure before churn", 
+		        			"subHeading" : "0-15 days",  
+		        			"value1" :"",
+		        			"value2":"", 
+		        			"value3":"",  
+		        			"value4":""  
+		        			},
+		        			{
+		        			"heading" : "", 
+		        			"subHeading" : "15-30 days",  
+		        			"value1" :"",
+		        			"value2":"", 
+		        			"value3":"",  
+		        			"value4":""  
+		        			},
+		        			{
+		        			"heading" : "", 
+		        			"subHeading" : "1-3 months",  
+		        			"value1" :"",
+		        			"value2":"", 
+		        			"value3":"",  
+		        			"value4":""  
+		        			},
+		        			{
+		        			"heading" : "", 
+		        			"subHeading" : "3-6 months",  
+		        			"value1" :"",
+		        			"value2":"", 
+		        			"value3":"",  
+		        			"value4":""  
+		        			},
+		        			{
+		        			"heading" : "", 
+		        			"subHeading" : "6-12 months",  
+		        			"value1" :"",
+		        			"value2":"", 
+		        			"value3":"",  
+		        			"value4":""  
+		        			},
+		        			{
+		        			"heading" : "", 
+		        			"subHeading" : ">1 year",  
+		        			"value1" :"",
+		        			"value2":"", 
+		        			"value3":"",  
+		        			"value4":""  
+		        			}
+		        		]
+        		}
+        	}
+    }
+}
+

@@ -1,0 +1,24 @@
+{
+    "status": "OK",
+    "message": "Request processed successfully",
+    "data": {
+        "pieData":{
+        	"subscribers":{
+        		"name":["Active Subscribers", "Dormant Subscribers"],
+        		"values":[59, 41],
+        		"color":["#A6A6A6", "#308BCB"]
+        	}
+        },
+        "trend":{
+        	"totalRevenue":{
+	    		"data":[{
+	                "name": "Total Revenue",
+	                "data": [112, 106, 109, 108, 111, 112, 106, 109, 108, 111, 109, 108]
+	            }],
+	    		"categories":["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+        }
+        }
+        
+    }
+}
+

@@ -1,0 +1,116 @@
+{
+    "status": "OK",
+    "message": "Request Processed Successfully",
+    "groupBy": "Cancellations",
+    "legend": "No. of subscribers",
+    "timeRanges": [
+        {
+            "periodFrom": "11012014",
+            "periodTo": "11302014",
+            "periodName": "weekly",
+            "reportingInterval": "daily",
+            "data": [
+                {
+                    "startDate": "08-23-2015",
+                    "value": 1927
+                },
+                {
+                    "startDate": "08-30-2015",
+                    "value": 1865
+                },
+                {
+                    "startDate": "09-06-2015",
+                    "value": 1941
+                },
+                {
+                    "startDate": "09-13-2015",
+                    "value": 1958
+                },
+                {
+                    "startDate": "09-20-2015",
+                    "value": 2065
+                }
+            ]
+        },
+        {
+            "periodFrom": "11012014",
+            "periodTo": "11302014",
+            "periodName": "monthly",
+            "reportingInterval": "weekly",
+            "data": [
+                {
+                    "startDate": "7-1-2015",
+                    "value": 7708
+                },
+                {
+                    "startDate": "8-1-2015",
+                    "value": 7462
+                },
+                {
+                    "startDate": "9-1-2015",
+                    "value": 3882
+                },
+                {
+                    "startDate": "10-1-2015",
+                    "value": 7834
+                },
+                {
+                    "startDate": "11-1-2015",
+                    "value": 8262
+                }
+            ]
+        },
+        {
+            "periodFrom": "11012014",
+            "periodTo": "11302014",
+            "periodName": "quarterly",
+            "reportingInterval": "monthly",
+            "data": [
+                {
+                    "startDate": "1-1-2015",
+                    "value": 23125
+                },
+                {
+                    "startDate": "4-1-2015",
+                    "value": 22388
+                },
+                {
+                    "startDate": "7-1-2015",
+                    "value": 11648
+                },
+                {
+                    "startDate": "10-1-2015",
+                    "value": 23502
+                },
+                {
+                    "startDate": "1-1-2016",
+                    "value": 24788
+                }
+            ]
+        },
+        {
+            "periodFrom": "11012014",
+            "periodTo": "11302014",
+            "periodName": "yearly",
+            "reportingInterval": "monthly",
+            "data": [
+                {   
+                    "startDate": "1-1-2013",
+                    "value": 98001
+                },
+                {
+                    "startDate": "1-1-2014",
+                    "value": 110830
+                },
+                {
+                    "startDate": "1-1-2015",
+                    "value": 58890
+                },
+                {
+                    "startDate": "1-1-2016",
+                    "value": 148884
+                }
+            ]
+        }
+    ]
+}

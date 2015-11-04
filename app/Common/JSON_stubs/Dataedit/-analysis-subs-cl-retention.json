@@ -1,0 +1,79 @@
+{
+    "status": "OK",
+    "message": "Request processed successfully",
+    "data": {
+        "pieData":{
+        	"gender":{
+        		"name":["Male", "Female"],
+        		"values":[64, 36],
+        		"color":["#1b6395", "#149ae3"]
+        	},
+        	"age":{
+        		"name":["15-25", "25-30", "30-40", "40-50", "50-65", ">65"],
+        		"values":[5, 15, 35, 25, 15, 5],
+        		"color":["#36729d", "#149ae3","#fb7d7d", "#56d8ca", "#c5c4c4", "#ffcaca"]
+        	},
+        	"location":{
+        		"name":["US", "Europe", "China", "Others"],
+        		"values":[55, 21, 10, 14],
+        		"color":["#0e4b77", "#05395d","#56d8ca", "#959595"]
+        	},
+        	"signup":{
+        		"name":["Professional", "Personal"],
+        		"values":[29, 71],
+        		"color":["#1b6395", "#149ae3"]
+        	},
+        	"accessMode":{
+        		"name":["Mobile", "Web", "Mix"],
+        		"values":[15, 36, 49],
+        		"color":["#1b6395", "#56d8ca","#149ae3"]
+        	},
+        	"platform":{
+        		"name":["Android", "iOS", "Windows", "Others"],
+        		"values":[34, 44, 10, 12],
+        		"color":["#36729d", "#0e4b77","#56d8ca", "#c5c4c4"]
+        	}
+        },
+        "trend":{
+        	"login":{
+        		"name":[">10", "5-10", "2-5", "Once a week"],
+        		"values":[11, 15, 10, 64],
+        		"color":"#05395d"
+        	},
+        	"churnActivities":{
+        		"name":["Adding Connections", "Reviewing Profiles", "Reading Blogs", "Updating Profile"],
+        		"values":[66, 45, 34, 22],
+        		"color":"#fb7d7d"
+        	},
+        	"churnModules":{
+        		"name":["Whos viewed your profile", "Add Connections", "Messages", "Notifications"],
+        		"values":[82, 35, 24, 18],
+        		"color":"#1b6395"
+        	},
+			"churnTenure":{
+        		"xAxisData" : ["0-15 days", "15-30 days", "1-3 months", "3-6 months", "6-12 months", ">1 year"],
+        		"data" : [{
+			    	"name": "Tenure",
+			    	"data":[25, 22, 10, 5, 23, 15],
+			    	"color":"#fb7d7d"
+			    }]
+        	},
+			"churnInactiveDays":{
+        		"xAxisData" : ["0-15 days", "15-30 days", "1-3 months", "3-6 months", "6-12 months", ">1 year"],
+        		"data" : [{
+			    	"name": "Inactive days",
+			    	"data":[25, 22, 10, 5, 23, 15],
+			    	"color":"#fb7d7d"
+			    }]
+        	},
+        	"cancels":{
+        		"xAxisData" : ["Mar", "Apr", "May", "Jun", "Jul", "Aug"],
+        		"data" : [{
+			    	"name": "Cancels",
+			    	"data":[187821, 154776, 260862, 246949, 315644, 297208],
+			    	"color":"#fb7d7d"
+			    }]
+        	}
+        }
+    }
+}
