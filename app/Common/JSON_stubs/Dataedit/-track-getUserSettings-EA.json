@@ -13,7 +13,7 @@
                 },
                 {
                     "menuItemID": "m_Imagesenders",
-                    "menuItemName": "Image files",
+                    "menuItemName": "Automatic Backup",
                     "menuType": "module",
                     "checked": true
                 },

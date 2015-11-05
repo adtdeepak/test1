@@ -9,8 +9,8 @@
             "reportingInterval": "weekly",
             "periodName": "weekly",
             "maxRows": 5,
-            "data": [89430, 93904, 89352, 94917, 91843],
-            "xAxis":["Week 35", "Week 36", "This week","Week 38","Week 39"]
+            "data": [7516, 7820, 8602, 8774, 91843],
+            "xAxis":["Week 36", "This week","Week 38","Week 39"]
         },
         {
             "periodFrom": "9-1-2014",
@@ -18,8 +18,8 @@
             "reportingInterval": "monthly",
             "periodName": "monthly",
             "maxRows": 5,
-            "data": [62.9, 61.0, 61.4, 63.3, 62.1],
-            "xAxis": ["Jul 15","Aug 15","This Month","Oct 15","Nov 15"]
+            "data": [27402, 32034, 34000, 35400],
+            "xAxis": ["Aug 15","This Month","Oct 15","Nov 15"]
         },
         {
             "periodFrom": "01-17-2014",
@@ -27,8 +27,8 @@
             "reportingInterval": "quarterly",
             "periodName": "quarterly",
             "maxRows": 5,
-            "data": [57.6, 57.3, 57.8, 58.7, 58.2],
-            "xAxis": ["Q1 (2015)","Q2 (2015)","This Quarter","Q4 (2015)", "Q1 (2016)"]
+            "data": [73253,96253,110322,140232],
+            "xAxis": ["Q2 (2015)","This Quarter","Q4 (2015)", "Q1 (2016)"]
         },
         {
             "periodFrom": "01-08-2014",
@@ -36,8 +36,8 @@
             "reportingInterval": "monthly",
             "periodName": "yearly",
             "maxRows": 5,
-            "data": [57.0, 57.8, 59.2, 61.4],
-            "xAxis": ["2013", "2014", "This Year", "2016"]
+            "data": [375625,402049,450283],
+            "xAxis": ["This Year", "2016","2017"]
         }
     ]
 }

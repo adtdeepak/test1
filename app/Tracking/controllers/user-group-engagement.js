@@ -68,7 +68,7 @@ angular.module('Tracking')
 	$scope.urlIndex = $location.search();
 	
 	if(!$scope.urlIndex.currentlySelected){
-    	$scope.urlIndex = {"currentlySelected": "ProjectManagers", "name": "Project Managers"}
+    	$scope.urlIndex = {"currentlySelected": "OfficeGoers", "name": "Office Goers"}
     }
 	$scope.select = $scope.urlIndex.currentlySelected;
 	$scope.userSettings = {};

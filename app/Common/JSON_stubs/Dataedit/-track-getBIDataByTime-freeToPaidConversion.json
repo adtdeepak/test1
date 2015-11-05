@@ -12,28 +12,28 @@
             "data": [
                 {          
                     "startDate": "08-23-2015",
-                    "actual": 5,
-                    "target": 5
+                    "actual": 6.5,
+                    "target": 5.9
                 },
                 {
                     "startDate": "08-30-2015",
-                    "actual": 5,
-                    "target": 5
+                    "actual": 6.3,
+                    "target": 6.2
                 },
                 {
                     "startDate": "09-06-2015",
-                    "actual": 5,
-                    "target": 5
+                    "actual": 6.4,
+                    "target": 6.5
                 },
                 {
                     "startDate": "09-13-2015",
-                    "actual": 5,
-                    "target": 5
+                    "actual": 6.2,
+                    "target": 6.5
                 },
                 {
                     "startDate": "09-20-2015",
-                    "actual": 5,
-                    "target": 5
+                    "actual": 6.0,
+                    "target": 6.5
                 }
             ]
         },
@@ -45,28 +45,28 @@
             "data": [
                 {          
 					"startDate": "7-1-2015",
-                    "actual": 4.6,
-                    "target": 5
+                    "actual": 6.0,
+                    "target": 5.9
                 },
                 {
                     "startDate": "8-1-2015",
-                    "actual": 4.9,
-                    "target": 5
+                    "actual": 5.9,
+                    "target": 6.2
                 },
                 {
                     "startDate": "9-1-2015",
-                    "actual": 5.0,
-                    "target": 5
+                    "actual": 5.8,
+                    "target": 6.5
                 },
                 {
                     "startDate": "10-1-2015",
-                    "actual": 5.1,
-                    "target": 5
+                    "actual": 5.6,
+                    "target": 6.5
                 },
                 {
                     "startDate": "11-1-2015",
-                    "actual": 5.2,
-                    "target": 5
+                    "actual": 5.3,
+                    "target": 6.5
                 }
             ]
         },
@@ -78,28 +78,28 @@
             "data": [
                 {          
                     "startDate": "1-1-2015",
-                    "actual": 4.2,
-                    "target": 4.2
+                    "actual": 6.4,
+                    "target": 5.9
                 },
                 {
                     "startDate": "4-1-2015",
-                    "actual": 4.7,
-                    "target": 5.0
+                    "actual": 6.2,
+                    "target": 6.2
                 },
                 {
                     "startDate": "7-1-2015",
-                    "actual": 5.0,
-                    "target": 5.0
+                    "actual": 6.4,
+                    "target": 6.5
                 },
                 {
                     "startDate": "10-1-2015",
-                    "actual": 5.2,
-                    "target":  5.2
+                    "actual": 6.0,
+                    "target":  6.5
                 },
                 {
                     "startDate": "1-1-2016",
-                    "actual": 5.3,
-                    "target": 5.5
+                    "actual": 5.8,
+                    "target": 6.5
                 }
             ]
         },
@@ -111,23 +111,28 @@
             "data": [
                 {   
                     "startDate": "1-1-2013",
-                    "actual": 2.8,
-                    "target": 3.2
+                    "actual": 5.5,
+                    "target": 5.9
                 },
                 {
                     "startDate": "1-1-2014",
-                    "actual": 3.6,
-                    "target": 4.0
+                    "actual": 5.4,
+                    "target": 6.2
                 },
                 {
                     "startDate": "1-1-2015",
-                    "actual": 5.0,
-                    "target": 5.0
+                    "actual": 5.3,
+                    "target": 6.5
                 },
                 {
                     "startDate": "1-1-2016",
-                    "actual": 5.5,
-                    "target": 6.0
+                    "actual": 5.2,
+                    "target": 6.5
+                },
+                {
+                    "startDate": "1-1-2016",
+                    "actual": 5.0,
+                    "target": 6.5
                 }
             ]
         }

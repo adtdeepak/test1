@@ -6,20 +6,20 @@
             "groupBy": "UG",
             "menus": [
                 {
-                    "menuItemID": "m_ProjectManagers",
-                    "menuItemName": "Project Managers",
+                    "menuItemID": "m_OfficeGoers",
+                    "menuItemName": "Office Goers",
                     "menuType": "userGroup",
                     "checked": true
                 },
                 {
-                    "menuItemID": "m_FinanceExecutives",
-                    "menuItemName": "Finance Executives",
+                    "menuItemID": "m_Teachers",
+                    "menuItemName": "Teachers",
                     "menuType": "userGroup",
                     "checked": true
                 },
                 {
-                    "menuItemID": "m_Photographers",
-                    "menuItemName": "Photographers",
+                    "menuItemID": "m_FriendsAndFamily",
+                    "menuItemName": "Friends And Family",
                     "menuType": "userGroup",
                     "checked": true
                 },
@@ -34,6 +34,12 @@
                     "menuItemName": "Creative Agencies",
                     "menuType": "userGroup",
                     "checked": true
+                },
+                {
+                    "menuItemID": "m_Others",
+                    "menuItemName": "Others",
+                    "menuType": "userGroup",
+                    "checked": false
                 }
             ]
         }

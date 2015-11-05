@@ -24,6 +24,7 @@ angular.module('AnalyticsApp')
 	    } 
 		//to be called when a menu is selected
 		this.onSelect = function(selectedMenu) {
+			console.log(selectedMenu);
 			menuUpdated = true
 			var checkedCount = 0;
 			userSettings.menus.forEach(function(menu) {

@@ -54,7 +54,7 @@ angular.module('AnalyticsApp')
         		
         		var client = window.appConstants[localStorage.getItem('userName')];
         		if(client == undefined){
-            		stubUrl = './app/Common/JSON_stubs/Hightail/'+ stubUrl +'.json';
+            		stubUrl = './app/Common/JSON_stubs/Dataedit/'+ stubUrl +'.json';
         		}else{
         			//This will match the user with respective client
         			stubUrl = './app/Common/JSON_stubs/'+client+'/'+ stubUrl +'.json';

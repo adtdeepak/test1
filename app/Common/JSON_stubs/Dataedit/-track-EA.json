@@ -37,6 +37,36 @@
                         "trend": ""
                     }
                 },
+               
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "Collaborate",
+                    "actualToDate": "27826",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "26370",
+                    "subgroupName": "Collaborate",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "1458",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "3769",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "68942",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "29%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "2.4",
+                        "trend": "+ve"
+                    }
+                },
                 {
                     "groupBy": "EA",
                     "subGroupBy": "VersionControl",
@@ -95,61 +125,62 @@
                         "trend": "+ve"
                     }
                 },
-                {
+                 {
                     "groupBy": "EA",
                     "subGroupBy": "Imagesenders",
-                    "actualToDate": "135000",
-                    "actualToDateTrend": "-ve",
-                    "monthlyAvg": "136089",
-                    "subgroupName": "Image Files",
-                    "groupName": "engagementActivity",
-                    "versusLast": {
-                        "value": "689",
-                        "trend": "-ve"
-                    },
-                    "versusSameLastYear": {
-                        "value": "1435",
-                        "trend": "+ve"
-                    },
-                    "Numberofactivities": {
-                        "value": "257391",
-                        "trend": "+ve"
-                    },
-                    "Percentageactiveusers": {
-                        "value": "6%",
-                        "trend": "+ve"
-                    },
-                    "AvgCountperuser": {
-                        "value": "2",
-                        "trend": "+ve"
-                    }
-                },
-                {
-                    "groupBy": "EA",
-                    "subGroupBy": "Videosenders",
-                    "actualToDate": "54000",
+                    "actualToDate": "1764385",
                     "actualToDateTrend": "+ve",
-                    "monthlyAvg": "53157",
-                    "subgroupName": "Video files",
+                    "monthlyAvg": "1563823",
+                    "subgroupName": "Automatic Backup",
                     "groupName": "engagementActivity",
                     "versusLast": {
-                        "value": "172",
-                        "trend": "-ve"
+                        "value": "54082",
+                        "trend": "+ve"
                     },
                     "versusSameLastYear": {
-                        "value": "358",
+                        "value": "49755",
                         "trend": "+ve"
                     },
                     "Numberofactivities": {
-                        "value": "72008",
+                        "value": "1764385",
                         "trend": "+ve"
                     },
                     "Percentageactiveusers": {
-                        "value": "2%",
+                        "value": "65%",
                         "trend": "+ve"
                     },
                     "AvgCountperuser": {
                         "value": "1",
+                        "trend": "+ve"
+                    }
+                },
+                
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "Videosenders",
+                    "actualToDate": "7820",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "6573",
+                    "subgroupName": "Video files",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "304",
+                        "trend": "-ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "7820",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "13294",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "6.7%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "1.7",
                         "trend": "+ve"
                     }
                 },
@@ -306,6 +337,36 @@
                         "trend": ""
                     }
                 },
+                
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "Collaborate",
+                    "actualToDate": "129266",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "117244",
+                    "subgroupName": "Collaborate",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "6498",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "6738",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "312823",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "29%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "2.4",
+                        "trend": "+ve"
+                    }
+                },
                 {
                     "groupBy": "EA",
                     "subGroupBy": "VersionControl",
@@ -367,58 +428,59 @@
                 {
                     "groupBy": "EA",
                     "subGroupBy": "Imagesenders",
-                    "actualToDate": "310500",
+                    "actualToDate": "2789733",
                     "actualToDateTrend": "+ve",
-                    "monthlyAvg": "585182",
-                    "subgroupName": "Image Files",
+                    "monthlyAvg": "2584228",
+                    "subgroupName": "Automatic Backup",
                     "groupName": "engagementActivity",
                     "versusLast": {
-                        "value": "1033",
-                        "trend": "-ve"
+                        "value": "235325",
+                        "trend": "+ve"
                     },
                     "versusSameLastYear": {
-                        "value": "2152",
+                        "value": "241433",
                         "trend": "+ve"
                     },
                     "Numberofactivities": {
-                        "value": "1106781",
+                        "value": "3347680",
                         "trend": "+ve"
                     },
                     "Percentageactiveusers": {
-                        "value": "6%",
+                        "value": "65%",
                         "trend": "+ve"
                     },
                     "AvgCountperuser": {
-                        "value": "4",
+                        "value": "1.2",
                         "trend": "+ve"
                     }
                 },
+               
                 {
                     "groupBy": "EA",
                     "subGroupBy": "Videosenders",
-                    "actualToDate": "124200",
+                    "actualToDate": "32034",
                     "actualToDateTrend": "+ve",
-                    "monthlyAvg": "232875",
+                    "monthlyAvg": "30547",
                     "subgroupName": "Video files",
                     "groupName": "engagementActivity",
                     "versusLast": {
-                        "value": "258",
+                        "value": "4632",
                         "trend": "-ve"
                     },
                     "versusSameLastYear": {
-                        "value": "537",
+                        "value": "32024",
                         "trend": "+ve"
                     },
                     "Numberofactivities": {
-                        "value": "309634",
+                        "value": "54458",
                         "trend": "+ve"
                     },
                     "Percentageactiveusers": {
-                        "value": "2%",
+                        "value": "6.4%",
                         "trend": "+ve"
                     },
                     "AvgCountperuser": {
-                        "value": "2",
+                        "value": "1.7",
                         "trend": "+ve"
                     }
                 },
@@ -575,6 +637,36 @@
                         "trend": "+ve"
                     }
                 },
+                
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "Collaborate",
+                    "actualToDate": "387796",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "358324",
+                    "subgroupName": "Collaborate",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "34720",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "34616",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "922954",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "28%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "2.4",
+                        "trend": "+ve"
+                    }
+                },
                 {
                     "groupBy": "EA",
                     "subGroupBy": "VersionControl",
@@ -636,58 +728,59 @@
                 {
                     "groupBy": "EA",
                     "subGroupBy": "Imagesenders",
-                    "actualToDate": "1024650",
+                    "actualToDate": "3267932",
                     "actualToDateTrend": "+ve",
-                    "monthlyAvg": "1931102",
-                    "subgroupName": "Image Files",
+                    "monthlyAvg": "3027478",
+                    "subgroupName": "Automatic Backup",
                     "groupName": "engagementActivity",
                     "versusLast": {
-                        "value": "2687",
-                        "trend": "-ve"
+                        "value": "325242",
+                        "trend": "+ve"
                     },
                     "versusSameLastYear": {
-                        "value": "55960",
+                        "value": "331096",
                         "trend": "+ve"
                     },
                     "Numberofactivities": {
-                        "value": "3652378",
+                        "value": "6862657",
                         "trend": "+ve"
                     },
                     "Percentageactiveusers": {
-                        "value": "6%",
+                        "value": "65%",
                         "trend": "+ve"
                     },
                     "AvgCountperuser": {
-                        "value": "3.5",
+                        "value": "2.1",
                         "trend": "+ve"
                     }
                 },
+                
                 {
                     "groupBy": "EA",
                     "subGroupBy": "Videosenders",
-                    "actualToDate": "409860",
+                    "actualToDate": "96253",
                     "actualToDateTrend": "+ve",
-                    "monthlyAvg": "768487",
+                    "monthlyAvg": "85093",
                     "subgroupName": "Video files",
                     "groupName": "engagementActivity",
                     "versusLast": {
-                        "value": "670",
+                        "value": "23000",
                         "trend": "-ve"
                     },
                     "versusSameLastYear": {
-                        "value": "13960",
+                        "value": "96253",
                         "trend": "+ve"
                     },
                     "Numberofactivities": {
-                        "value": "1021793",
+                        "value": "146305",
                         "trend": "+ve"
                     },
                     "Percentageactiveusers": {
-                        "value": "2%",
+                        "value": "6.1%",
                         "trend": "+ve"
                     },
                     "AvgCountperuser": {
-                        "value": "2",
+                        "value": "1.5",
                         "trend": "+ve"
                     }
                 },
@@ -844,6 +937,36 @@
                         "trend": ""
                     }
                 },
+               
+                {
+                    "groupBy": "EA",
+                    "subGroupBy": "Collaborate",
+                    "actualToDate": "1551188",
+                    "actualToDateTrend": "+ve",
+                    "monthlyAvg": "1416235",
+                    "subgroupName": "Collaborate",
+                    "groupName": "engagementActivity",
+                    "versusLast": {
+                        "value": "234221",
+                        "trend": "+ve"
+                    },
+                    "versusSameLastYear": {
+                        "value": "218528",
+                        "trend": "+ve"
+                    },
+                    "Numberofactivities": {
+                        "value": "3722851",
+                        "trend": "+ve"
+                    },
+                    "Percentageactiveusers": {
+                        "value": "28%",
+                        "trend": "+ve"
+                    },
+                    "AvgCountperuser": {
+                        "value": "2.4",
+                        "trend": "+ve"
+                    }
+                },
                 {
                     "groupBy": "EA",
                     "subGroupBy": "VersionControl",
@@ -905,58 +1028,59 @@
                 {
                     "groupBy": "EA",
                     "subGroupBy": "Imagesenders",
-                    "actualToDate": "403650",
+                    "actualToDate": "3476801",
                     "actualToDateTrend": "+ve",
-                    "monthlyAvg": "772441",
-                    "subgroupName": "Image Files",
+                    "monthlyAvg": "3282100",
+                    "subgroupName": "Automatic Backup",
                     "groupName": "engagementActivity",
                     "versusLast": {
-                        "value": "22384",
-                        "trend": "-ve"
+                        "value": "345234",
+                        "trend": "+ve"
                     },
                     "versusSameLastYear": {
-                        "value": "22384",
-                        "trend": "-ve"
+                        "value": "345924",
+                        "trend": "+ve"
                     },
                     "Numberofactivities": {
-                        "value": "3652378",
+                        "value": "10430402",
                         "trend": "+ve"
                     },
                     "Percentageactiveusers": {
-                        "value": "6%",
+                        "value": "65%",
                         "trend": "+ve"
                     },
                     "AvgCountperuser": {
-                        "value": "9",
+                        "value": "0.3",
                         "trend": "+ve"
                     }
                 },
+                
                 {
                     "groupBy": "EA",
                     "subGroupBy": "Videosenders",
-                    "actualToDate": "161460",
+                    "actualToDate": "375625",
                     "actualToDateTrend": "+ve",
-                    "monthlyAvg": "307395",
+                    "monthlyAvg": "375625",
                     "subgroupName": "Video files",
                     "groupName": "engagementActivity",
                     "versusLast": {
-                        "value": "26800",
+                        "value": "37625",
                         "trend": "-ve"
                     },
                     "versusSameLastYear": {
-                        "value": "26800",
+                        "value": "37625",
                         "trend": "+ve"
                     },
                     "Numberofactivities": {
-                        "value": "1021793",
+                        "value": "507094",
                         "trend": "+ve"
                     },
                     "Percentageactiveusers": {
-                        "value": "2%",
+                        "value": "5.5%",
                         "trend": "-ve"
                     },
                     "AvgCountperuser": {
-                        "value": "6",
+                        "value": "1.4",
                         "trend": "+ve"
                     }
                 },

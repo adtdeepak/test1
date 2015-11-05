@@ -35,31 +35,31 @@
                 {
                     "groupBy": "BI",
                     "subGroupBy": "Registrations",
-                    "actualToDate": "97,071",
+                    "actualToDate": " 96,534",
                     "actualToDateTrend": "+ve",
                     "subgroupName": "Registrations",
                     "groupName": "businessImpact",
                     "versusLast": {
-                        "value": "3,786",
+                        "value": "363",
                         "trend": "+ve"
                     },
                     "versusSameLastYear": {
-                        "value": "4,854",
+                        "value": "345",
                         "trend": "+ve"
                     },
                     "forecast": {
-                        "value": "94,158",
+                        "value": " 96,700",
                         "trend": "-ve"
                     },
                     "diffFromTarget": {
-                        "value": "1,071",
+                        "value": "3,466",
                         "trend": "+ve"
                     }
                 },
                 {
                     "groupBy": "BI",
                     "subGroupBy": "freeToPaidConversion",
-                    "actualToDate": "5%",
+                    "actualToDate": "6.4%",
                     "actualToDateTrend": "+ve",
                     "subgroupName": "Free To Paid Conversion",
                     "groupName": "businessImpact",
@@ -72,35 +72,35 @@
                         "trend": "+ve"
                     },
                     "forecast": {
-                        "value": "5%",
+                        "value": "6.4%",
                         "trend": "-ve"
                     },
                     "diffFromTarget": {
-                        "value": "0%",
-                        "trend": "+ve"
+                        "value": "0.1%",
+                        "trend": "-ve"
                     }
                 },
                 {
                     "groupBy": "BI",
                     "subGroupBy": "NewPaidUsers",
-                    "actualToDate": "4,853",
+                    "actualToDate": "6,217",
                     "actualToDateTrend": "+ve",
                     "subgroupName": "New Paid Users",
                     "groupName": "businessImpact",
                     "versusLast": {
-                        "value": "189",
+                        "value": "304",
                         "trend": "-ve"
                     },
                     "versusSameLastYear": {
-                        "value": "243",
+                        "value": "432",
                         "trend": "+ve"
                     },
                     "forecast": {
-                        "value": "4,610",
+                        "value": " 6,273",
                         "trend": "-ve"
                     },
                     "diffFromTarget": {
-                        "value": "347",
+                        "value": "283",
                         "trend": "+ve"
                     }
                 },
@@ -235,31 +235,31 @@
                 {
                     "groupBy": "BI",
                     "subGroupBy": "Registrations",
-                    "actualToDate": "194,140 ",
+                    "actualToDate": " 383,252",
                     "actualToDateTrend": "+ve",
                     "subgroupName": "Registrations",
                     "groupName": "businessImpact",
                     "versusLast": {
-                        "value": "179,000",
+                        "value": " 26,890",
                         "trend": "+ve"
                     },
                     "versusSameLastYear": {
-                        "value": "9,707",
+                        "value": " 34,820",
                         "trend": "+ve"
                     },
                     "forecast": {
-                        "value": "447,768",
+                        "value": " 384,573",
                         "trend": "+ve"
                     },
                     "diffFromTarget": {
-                        "value": "180,860",
+                        "value": "16,748",
                         "trend": "-ve"
                     }
                 },
                 {
                     "groupBy": "BI",
                     "subGroupBy": "freeToPaidConversion",
-                    "actualToDate": "5%",
+                    "actualToDate": "5.8%",
                     "actualToDateTrend": "+ve",
                     "subgroupName": "Free To Paid Conversion",
                     "groupName": "businessImpact",
@@ -272,35 +272,35 @@
                         "trend": "+ve"
                     },
                     "forecast": {
-                        "value": "5%",
+                        "value": "5.8%",
                         "trend": "-ve"
                     },
                     "diffFromTarget": {
-                        "value": "0.0%",
-                        "trend": "+ve"
+                        "value": "0.7%",
+                        "trend": "-ve"
                     }
                 },
                 {
                     "groupBy": "BI",
                     "subGroupBy": "NewPaidUsers",
-                    "actualToDate": "9,707",
+                    "actualToDate": "22,383",
                     "actualToDateTrend": "+ve",
                     "subgroupName": "New Paid Users",
                     "groupName": "businessImpact",
                     "versusLast": {
-                        "value": "8,950",
+                        "value": "4,421",
                         "trend": "-ve"
                     },
                     "versusSameLastYear": {
-                        "value": "485",
+                        "value": "5,683",
                         "trend": "+ve"
                     },
                     "forecast": {
-                        "value": "21,456",
+                        "value": "24,567",
                         "trend": "+ve"
                     },
                     "diffFromTarget": {
-                        "value": "15,293",
+                        "value": "3,618",
                         "trend": "-ve"
                     }
                 },
@@ -435,31 +435,31 @@
                 {
                     "groupBy": "BI",
                     "subGroupBy": "Registrations",
-                    "actualToDate": "582,420",
+                    "actualToDate": " 1,124,029",
                     "actualToDateTrend": "+ve",
                     "subgroupName": "Registrations",
                     "groupName": "businessImpact",
                     "versusLast": {
-                        "value": "537,000",
+                        "value": " 118,897",
                         "trend": "+ve"
                     },
                     "versusSameLastYear": {
-                        "value": "29,121",
+                        "value": " 32,832",
                         "trend": "+ve"
                     },
                     "forecast": {
-                        "value": "1,343,304",
+                        "value": " 1,125,194",
                         "trend": "+ve"
                     },
                     "diffFromTarget": {
-                        "value": "1,617,580",
+                        "value": "75,971",
                         "trend": "+ve"
                     }    
                 },
                 { 
                     "groupBy": "BI",
                     "subGroupBy": "freeToPaidConversion",
-                    "actualToDate": "5%",
+                    "actualToDate": "6.4%",
                     "actualToDateTrend": "+ve",
                     "subgroupName": "Free To Paid Conversion",
                     "groupName": "businessImpact",
@@ -472,35 +472,35 @@
                         "trend": "+ve"
                     },
                     "forecast": {
-                        "value": "5%",
+                        "value": "6.3%",
                         "trend": "-ve"
                     },
                     "diffFromTarget": {
-                        "value": "0%",
-                        "trend": "+ve"
+                        "value": "0.1%",
+                        "trend": "-ve"
                     }
                 },
                 {
                     "groupBy": "BI",
                     "subGroupBy": "NewPaidUsers",
-                    "actualToDate": "29,121",
+                    "actualToDate": " 72,387",
                     "actualToDateTrend": "+ve",
                     "subgroupName": "New Paid Users",
                     "groupName": "businessImpact",
                     "versusLast": {
-                        "value": "26,850",
+                        "value": " 7,507",
                         "trend": "-ve"
                     },
                     "versusSameLastYear": {
-                        "value": "1,456",
+                        "value": "34,532",
                         "trend": "+ve"
                     },
                     "forecast": {
-                        "value": "64,367",
+                        "value": "75,639",
                         "trend": "+ve"
                     },
                     "diffFromTarget": {
-                        "value": "47,879",
+                        "value": "5,613",
                         "trend": "+ve"
                     }
                 },
@@ -635,31 +635,31 @@
                 {
                     "groupBy": "BI",
                     "subGroupBy": "Registrations",
-                    "actualToDate": "2,944,500",
+                    "actualToDate": " 4,456,493",
                     "actualToDateTrend": "+ve",
                     "subgroupName": "Registrations",
                     "groupName": "businessImpact",
                     "versusLast": {
-                        "value": "2,597,000",
+                        "value": " 401,771",
                         "trend": "+ve"
                     },
                     "versusSameLastYear": {
-                        "value": "2,597,000",
+                        "value": " 401,771",
                         "trend": "+ve"
                     },
                     "forecast": {
-                        "value": "6,649,800",
+                        "value": " 4,457,402",
                         "trend": "+ve"
                     },
                     "diffFromTarget": {
-                        "value": "6,055,500",
+                        "value": "343,507",
                         "trend": "-ve"
                     }  
                 },
                 {
                     "groupBy": "BI",
                     "subGroupBy": "freeToPaidConversion",
-                    "actualToDate": "5%",
+                    "actualToDate": "5.3%",
                     "actualToDateTrend": "+ve",
                     "subgroupName": "Free To Paid Conversion",
                     "groupName": "businessImpact",
@@ -672,35 +672,35 @@
                         "trend": "+ve"
                     },
                     "forecast": {
-                        "value": "5%",
+                        "value": "5.4%",
                         "trend": "-ve"
                     },
                     "diffFromTarget": {
-                        "value": "0%",
-                        "trend": "+ve"
+                        "value": "1.2%",
+                        "trend": "-ve"
                     }
                 },
                 {
                     "groupBy": "BI",
                     "subGroupBy": "NewPaidUsers",
-                    "actualToDate": "147,225",
+                    "actualToDate": "235,748",
                     "actualToDateTrend": "+ve",
                     "subgroupName": "New Paid Users",
                     "groupName": "businessImpact",
                     "versusLast": {
-                        "value": "129,850",
+                        "value": "7,410",
                         "trend": "+ve"
                     },
                     "versusSameLastYear": {
-                        "value": "129,850",
+                        "value": "7,410",
                         "trend": "+ve"
                     },
                     "forecast": {
-                        "value": "318,636",
+                        "value": "243,723",
                         "trend": "+ve"
                     },
                     "diffFromTarget": {
-                        "value": "159,775",
+                        "value": "76,252",
                         "trend": "+ve"
                     }  
                 },

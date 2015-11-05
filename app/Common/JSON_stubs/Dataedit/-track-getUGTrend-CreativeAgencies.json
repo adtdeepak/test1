@@ -12,24 +12,21 @@
             "data": [
                 {
                     "startDate": "08-23-2015",
-                    "actual": 9636
+                    "actual": 55.1
                 },
                 {
                     "startDate": "08-30-2015",
-                    "actual": 9329
+                    "actual": 55
                 },
                 {
                     "startDate": "09-06-2015",
-                    "actual": 9707
+                    "actual": 55
                 },
                 {
                     "startDate": "09-13-2015",
-                    "actual": 9793
-                },
-                {
-                    "startDate": "09-20-2015",
-                    "actual": 10329
+                    "actual": 54.8
                 }
+                
             ]
         },
         {
@@ -40,24 +37,21 @@
             "data": [
                 {
                    "startDate": "7-1-2015",
-                    "actual": 38542
+                    "actual": 54.8
                 },
                 {
                     "startDate": "8-1-2015",
-                    "actual": 37314
+                    "actual": 54
                 },
                 {
                     "startDate": "9-1-2015",
-                    "actual": 19414
+                    "actual": 54
                 },
                 {
                     "startDate": "10-1-2015",
-                    "actual": 39171
-                },
-                {
-                    "startDate": "11-1-2015",
-                    "actual": 41314
+                    "actual": 54
                 }
+              
             ]
         },
         {
@@ -68,24 +62,21 @@
             "data": [
                 {
                   "startDate": "1-1-2015",
-                    "actual": 115626
+                    "actual": 54.4
                 },
                 {
                     "startDate": "4-1-2015",
-                    "actual": 111942
+                    "actual": 54.2
                 },
                 {
                     "startDate": "7-1-2015",
-                    "actual": 58242
+                    "actual": 54
                 },
                 {
                     "startDate": "10-1-2015",
-                    "actual": 117513
-                },
-                {
-                    "startDate": "1-1-2016",
-                    "actual": 123942
+                    "actual": 53.4
                 }
+               
             ]
         },
         {
@@ -96,19 +87,19 @@
             "data": [
                 {
 					"startDate": "1-1-2013",
-                    "actual": 490007
+                    "actual": 54.6
                 },
                 {
                     "startDate": "1-1-2014",
-                    "actual": 554150
+                    "actual": 54.3
                 },
                 {
                     "startDate": "1-1-2015",
-                    "actual": 294450
+                    "actual": 54
                 },
                 {
                     "startDate": "1-1-2016",
-                    "actual": 744421
+                    "actual": 54
                 }
             ]
         }

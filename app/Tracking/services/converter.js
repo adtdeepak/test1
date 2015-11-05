@@ -364,7 +364,7 @@ angular.module('Tracking')
 				//plotBandRange.push(UtilitiesService.getPlotBandRange(xAxis));
 				_data[timeRange.periodName] ={
 						value: [{
-							name: 'Actual',
+							name: 'Count Of Users',
 							data: timeRange.data,
 							color:'#1B6395'
 						}],

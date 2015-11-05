@@ -12,23 +12,28 @@
             "data": [
                 {
                     "startDate": "08-23-2015",
-                    "value": 1927
+                    "value":  1508 
+
                 },
                 {
                     "startDate": "08-30-2015",
-                    "value": 1865
+                    "value":  2093 
+
                 },
                 {
                     "startDate": "09-06-2015",
-                    "value": 1941
+                    "value":  2667 
+
                 },
                 {
                     "startDate": "09-13-2015",
-                    "value": 1958
+                    "value":  2282 
+
                 },
                 {
                     "startDate": "09-20-2015",
-                    "value": 2065
+                    "value":  2340 
+
                 }
             ]
         },
@@ -40,23 +45,28 @@
             "data": [
                 {
                     "startDate": "7-1-2015",
-                    "value": 7708
+                    "value":  5366 
+
                 },
                 {
                     "startDate": "8-1-2015",
-                    "value": 7462
+                    "value":  6232 
+
                 },
                 {
                     "startDate": "9-1-2015",
-                    "value": 3882
+                    "value":  9512 
+
                 },
                 {
                     "startDate": "10-1-2015",
-                    "value": 7834
+                    "value":  8033 
+
                 },
                 {
                     "startDate": "11-1-2015",
-                    "value": 8262
+                    "value":  7606 
+
                 }
             ]
         },
@@ -68,23 +78,28 @@
             "data": [
                 {
                     "startDate": "1-1-2015",
-                    "value": 23125
+                    "value":  22180 
+
                 },
                 {
                     "startDate": "4-1-2015",
-                    "value": 22388
+                    "value":  23552 
+
                 },
                 {
                     "startDate": "7-1-2015",
-                    "value": 11648
+                    "value":  25698 
+
                 },
                 {
                     "startDate": "10-1-2015",
-                    "value": 23502
+                    "value":  18182 
+
                 },
                 {
                     "startDate": "1-1-2016",
-                    "value": 24788
+                    "value":  24548 
+
                 }
             ]
         },
@@ -96,19 +111,28 @@
             "data": [
                 {   
                     "startDate": "1-1-2013",
-                    "value": 98001
+                    "value":  85873 
+
                 },
                 {
                     "startDate": "1-1-2014",
-                    "value": 110830
+                    "value":  96815 
+
                 },
                 {
                     "startDate": "1-1-2015",
-                    "value": 58890
+                    "value":  59880 
+
                 },
                 {
                     "startDate": "1-1-2016",
-                    "value": 148884
+                    "value":  69469 
+
+                },
+                {
+                    "startDate": "1-1-2017",
+                    "value":  102241 
+
                 }
             ]
         }
