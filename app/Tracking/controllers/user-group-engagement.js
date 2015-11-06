@@ -106,6 +106,8 @@ angular.module('Tracking')
 
 	$scope.success = function(userGroup) {
 		try{ 
+
+			console.log(userGroup);
 			$scope.successData = userGroup;
 			updateData();
 			$scope.menu.setData($scope.userGroup);

@@ -395,9 +395,9 @@ type='text/css'>
 								<a
 									href="{{trackingHtmlName}}.htm#/user-group-engagement?currentlySelected={{data.groupBy}}&&name={{data.groupName}}">
 									<h3 class="text-ellipsis" title="{{data.groupName}}">{{data.groupName}}</h3>									
-									<div class="value-orange trackingLink">{{data.newSubscriptions | number}}
+									<div class="value-orange trackingLink">{{data.engScore | number}}%
 										<!-- {{data.actual| number}} --></div>
-                                    <p style="font-size:13px;" class="duration">New paid users</p><hr style="margin: 20px 50px 5px;">
+                                    <p style="font-size:13px;" class="duration">Engagement score</p><hr style="margin: 20px 50px 5px;">
                                    <div class="value-orange trackingLink">{{data.conversionRate}}</div>
 									<p style="font-size:13px;" class="duration">Avg conversion rate<!-- {{averageTimePeriodText}} --></p>
 								</a>

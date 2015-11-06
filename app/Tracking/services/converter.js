@@ -254,7 +254,7 @@ angular.module('Tracking')
 			});
 			plotBandRange.push(UtilitiesService.getPlotBandRange(xAxis));
 			chartData.push({
-				name : 'Actual',
+				name : 'Engagement Trend',
 				data : actual,
 				color : '#1B6395',
 
@@ -351,7 +351,7 @@ angular.module('Tracking')
 		return _data;
 	}
 
-	this.toGetEAScoreTrend = function(data){
+	this.toGetEAScoreTrend = function(data,name){
 		var _data = {};
 		var currentScore = data.currentScore;
 		$.each(data.timeRanges, function(key, timeRange) {
@@ -364,7 +364,7 @@ angular.module('Tracking')
 				//plotBandRange.push(UtilitiesService.getPlotBandRange(xAxis));
 				_data[timeRange.periodName] ={
 						value: [{
-							name: 'Count Of Users',
+							name: name ,
 							data: timeRange.data,
 							color:'#1B6395'
 						}],

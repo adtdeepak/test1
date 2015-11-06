@@ -44,9 +44,9 @@
 						ng-class="{selected: data.groupBy==select}">
 							<div class="box-content-top">
 									<h3 class="text-ellipsis" title="{{data.groupName}}">{{data.groupName}}</h3>									
-									<div class="value-orange trackingLink">{{data.newSubscriptions | number}}
+									<div class="value-orange trackingLink">{{data.engScore | number}}
 										<!-- {{data.actual| number}} --></div>
-                                    <p style="font-size:13px;" class="duration">New paid users</p><hr style="margin: 20px 50px 5px;">
+                                    <p style="font-size:13px;" class="duration">Engagement score</p><hr style="margin: 20px 50px 5px;">
                                 <div class="value-orange trackingLink">{{data.conversionRate}}</div>
 									<p style="font-size:13px;" class="duration">Avg conversion rate<!-- {{averageTimePeriodText}} --></p>
 							</div>
@@ -61,6 +61,14 @@
 				
 				<div class="row filterContainer">
 						<ul ng-hide="error" class="row summary-list clearfix">
+							<li ng-show="UserGroupSummary.conversionRate!=null" class="col-md-5ths col-xs-6">
+								<div class="summary-widget">
+									<p>New registrations</p>
+									<div class="summary-value">
+										{{UserGroupSummary.newRegistrations | number}}</div>
+
+								</div>
+							</li>
 							<li ng-show="UserGroupSummary.engScore!=null" class="col-md-5ths col-xs-6">
 								<div class="summary-widget">
 									<p>Engagement score</p>
@@ -77,14 +85,7 @@
 
 								</div>
 							</li>
-							<li ng-show="UserGroupSummary.conversionRate!=null" class="col-md-5ths col-xs-6">
-								<div class="summary-widget">
-									<p>New registrations</p>
-									<div class="summary-value">
-										{{UserGroupSummary.newRegistrations | number}}</div>
-
-								</div>
-							</li>
+							
 							<li ng-show="UserGroupSummary.newSubscriptions!=null" class="col-md-5ths col-xs-6">
 								<div class="summary-widget">
 									<p>{{averageTimePeriodText}}</p>

@@ -155,7 +155,7 @@ angular.module('Tracking')
 				fail,
 				function(result) {
 					//var cData = DataConversionService.toGetEngagementActivityScoreData(result);
-					var cData = DataConversionService.toGetEAScoreTrend(result);
+					var cData = DataConversionService.toGetEAScoreTrend(result,'Engagement Score');
 					//StorageService.put(cacheKey, cData, StorageService.getCache("engagement-activityCache"));
 					return cData;
 				}
@@ -191,7 +191,7 @@ angular.module('Tracking')
 				function(result) {
 					//var cData = DataConversionService.toGetEngagementActivityTrendData(result);
 					//StorageService.put(cacheKey, cData, StorageService.getCache("engagement-activityCache"));
-					var cData = DataConversionService.toGetEAScoreTrend(result);
+					var cData = DataConversionService.toGetEAScoreTrend(result, "Count Of Users");
 					return cData;
 				}
 		);

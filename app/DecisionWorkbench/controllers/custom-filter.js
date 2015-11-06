@@ -3,12 +3,12 @@ angular.module('DecisionWorkbench')
 .controller("customFilterController", function ($scope, $element, $location, RequestConstantsFactory, DataService, $rootScope, CustomService, UtilitiesService, sharedProperties) {
 	$scope.showoptions = "false";
 	$scope.showtokens = "false";
-	$scope.UserGroup = [{"key":"All Users","selected":false,"index":0},{"key":"Project Managers","selected": false,"index":1},{"key":"Creative Agencies","selected": false,"index":2},
-	                        {"key":"Finance Executives","selected": false,"index":3},{"key":"Musicians","selected": false,"index":4},{"key":"Photographers","selected": false,"index":5}];
+	$scope.UserGroup = [{"key":"All Users","selected":false,"index":0},{"key":"Office Goers","selected": false,"index":1},{"key":"Teachers","selected": false,"index":2},
+	                        {"key":"Musicians","selected": false,"index":3},{"key":"Creative Agencies","selected": false,"index":4},{"key":"Family And Friends","selected": false,"index":5}];
 	
-	$scope.Feature = [{"key":"3rd Party Integration API","selected":false},{"key":"Collaborate","selected": false},{"key":"eSign","selected": false},
-	                        {"key":"Full Text Search","selected": false},{"key":"Microsoft 365 Integration","selected": false},{"key":"Mobile App","selected": false},
-	                        {"key":"Storage Space","selected": false},{"key":"Version History","selected": false},{"key":"Workspace Share","selected": false}];
+	$scope.Feature = [{"key":"Online video and audio streaming","selected":false},{"key":"Collaborate","selected": false},{"key":"Automatic Backup","selected": false},
+	                        {"key":"Mobile App","selected": false},{"key":"eSign","selected": false}, {"key":"Microsoft 365 Integration","selected": false},{"key":"Version Control","selected": false},{"key":"Workspace Share","selected": false},
+	                        {"key":"Full Text Search","selected": false},{"key":"Storage Space","selected": false},{"key":"All Features","selected": false}];
 	$scope.engagementimpact = [{"key":"1%","selected": false},{"key":"2%","selected": false},{"key":"3%","selected": false},{"key":"4%","selected": false},{"key":"5%","selected": false},{"key":"6%","selected": false},{"key":"7%","selected": false},{"key":"8%","selected": false},{"key":"9%","selected": false},{"key":"10%","selected": false},{"key":"11%","selected": false},{"key":"12%","selected": false},{"key":"13%","selected": false},{"key":"14%","selected": false},{"key":"15%","selected": false}];                       
 	$scope.campaignId = [{"key":1,"selected": false},{"key":2,"selected": false},{"key":3,"selected": false},{"key":4,"selected": false},{"key":5,"selected": false},{"key":6,"selected": false},{"key":7,"selected": false},{"key":8,"selected": false},{"key":9,"selected": false},{"key":10,"selected": false},{"key":11,"selected": false},{"key":12,"selected": false},{"key":13,"selected": false},{"key":14,"selected": false},{"key":15,"selected": false},{"key":16,"selected": false},{"key":17,"selected": false},{"key":18,"selected": false},{"key":19,"selected": false},{"key":20,"selected": false},{"key":21,"selected": false},{"key":22,"selected": false},{"key":23,"selected": false},{"key":24,"selected": false},{"key":25,"selected": false},{"key":26,"selected": false},{"key":27,"selected": false},{"key":28,"selected": false},{"key":29,"selected": false},{"key":30,"selected": false},{"key":31,"selected": false},{"key":32,"selected": false},{"key":33,"selected": false},{"key":34,"selected": false},{"key":35,"selected": false},{"key":36,"selected": false},{"key":37,"selected": false},{"key":38,"selected": false},{"key":39,"selected": false},{"key":40,"selected": false},{"key":41,"selected": false},{"key":42,"selected": false},{"key":43,"selected": false},{"key":44,"selected": false},{"key":45,"selected": false},{"key":46,"selected": false},{"key":47,"selected": false},{"key":48,"selected": false},{"key":49,"selected": false},{"key":50,"selected": false},{"key":51,"selected": false},{"key":52,"selected": false},{"key":53,"selected": false},{"key":54,"selected": false},{"key":55,"selected": false},{"key":56,"selected": false},{"key":57,"selected": false},{"key":58,"selected": false},{"key":59,"selected": false},{"key":60,"selected": false},{"key":61,"selected": false},{"key":62,"selected": false},{"key":63,"selected": false},{"key":64,"selected": false},{"key":65,"selected": false},{"key":66,"selected": false},{"key":67,"selected": false},{"key":68,"selected": false},{"key":69,"selected": false},{"key":70,"selected": false},{"key":71,"selected": false},{"key":72,"selected": false},{"key":73,"selected": false},{"key":74,"selected": false},{"key":75,"selected": false},{"key":76,"selected": false},{"key":77,"selected": false},{"key":78,"selected": false},{"key":79,"selected": false},{"key":80,"selected": false},{"key":81,"selected": false},{"key":82,"selected": false},{"key":83,"selected": false},{"key":84,"selected": false},{"key":85,"selected": false},{"key":86,"selected": false},{"key":87,"selected": false},{"key":88,"selected": false},{"key":89,"selected": false},{"key":90,"selected": false},{"key":91,"selected": false},{"key":92,"selected": false},{"key":93,"selected": false},{"key":94,"selected": false},{"key":95,"selected": false},{"key":96,"selected": false},{"key":97,"selected": false},{"key":98,"selected": false},{"key":99,"selected": false},{"key":100,"selected": false}];
 	$scope.engagementscore = [{"key":"10%","selected": false},{"key":"20%","selected": false},{"key":"30%","selected": false},{"key":"40%","selected": false},{"key":"50%","selected": false},{"key":"60%","selected": false},{"key":"70%","selected": false},{"key":"80%","selected": false},{"key":"90%","selected": false},{"key":"100%","selected": false}];
@@ -381,7 +381,7 @@ angular.module('DecisionWorkbench')
 		var merged = $.merge(merged_usergroup, merged_featuregroup);
 		angular.forEach(campaignidoptions,function(value) {
 			// console.log(response.data.bestCampaignOptions[value]);
-			angular.forEach(response.data.bestCampaignOptions["All Users"],function (values) {
+			angular.forEach(response.data.bestCampaignOptions["By Impact"],function (values) {
 						if(values.id == parseInt(value)){
 
 							campaignIdlist.push(values);
@@ -400,7 +400,7 @@ angular.module('DecisionWorkbench')
 		// })
 		if($scope.change == true){
 			// alert($scope.minrange);
-			angular.forEach(response.data.bestCampaignOptions["All Users"],function (values) {
+			angular.forEach(response.data.bestCampaignOptions["By Impact"],function (values) {
 				if(values.engagementimpact >= $scope.minrange && values.engagementimpact <= $scope.maxrange){
 
 					impactlist.push(values);
@@ -410,7 +410,7 @@ angular.module('DecisionWorkbench')
 		 merged = $.merge(merged, impactlist);
 		 angular.forEach(scoreoptions,function(value) {
 			// console.log(response.data.bestCampaignOptions[value]);
-			angular.forEach(response.data.bestCampaignOptions["All Users"],function (values) {
+			angular.forEach(response.data.bestCampaignOptions["By Impact"],function (values) {
 						if(values.engagementscore == value){
 
 							scorelist.push(values);

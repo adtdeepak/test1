@@ -2,9 +2,8 @@ angular.module('DecisionWorkbench')
 
 .controller( "selectedCampaignController", function($scope, DataService,$timeout, CustomService, ChartOptionsService, $rootScope, UtilitiesService, chartsService, $location, DataConversionService ) {	
 	
-	$scope.selectedGroup = [{"key":"All Users","selected":false},{"key":"Project Managers","selected": false},{"key":"Enterprise users","selected": false},
-	                        {"key":"Finance executives","selected": false},{"key":"Musicians","selected": false},{"key":"Photographers","selected": false},
-	                        {"key":"videographers","selected": false}];
+	$scope.selectedGroup = [{"key":"All Users","selected":false,"index":0},{"key":"Office Goers","selected": false,"index":1},{"key":"Teachers","selected": false,"index":2},
+	                        {"key":"Musicians","selected": false,"index":3},{"key":"Creative Agencies","selected": false,"index":4},{"key":"Family And Friends","selected": false,"index":5}];
 
 	var initialExpand  = true;
 	var urlSelectedRowId = '';

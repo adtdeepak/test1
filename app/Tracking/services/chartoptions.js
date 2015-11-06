@@ -144,6 +144,7 @@ this.getBasicLineChart = function(data, title, subtitle, width){
 	            valueSuffix: ''
 	        },
 	        legend: {
+	        	
 	            layout: 'vertical',
 	            align: 'right',
 	            verticalAlign: 'middle',

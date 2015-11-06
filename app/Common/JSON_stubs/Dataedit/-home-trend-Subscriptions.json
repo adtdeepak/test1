@@ -11,7 +11,7 @@
             "reportingInterval": "daily",
             "data": [
                 {
-				    "startDate": "08-23-2015",
+                    "startDate": "08-23-2015",
                     "value": 4370
                 },
                 {

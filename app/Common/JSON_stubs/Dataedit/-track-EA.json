@@ -41,7 +41,7 @@
                 {
                     "groupBy": "EA",
                     "subGroupBy": "Collaborate",
-                    "actualToDate": "27826",
+                    "actualToDate": "28726",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "26370",
                     "subgroupName": "Collaborate",
@@ -161,7 +161,7 @@
                     "actualToDate": "7820",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "6573",
-                    "subgroupName": "Video files",
+                    "subgroupName": "Online Videos",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "304",
@@ -202,35 +202,6 @@
                     },
                     "Numberofactivities": {
                         "value": "13973",
-                        "trend": "+ve"
-                    },
-                    "Percentageactiveusers": {
-                        "value": "0.4%",
-                        "trend": "+ve"
-                    },
-                    "AvgCountperuser": {
-                        "value": "1",
-                        "trend": "+ve"
-                    }
-                },
-                {
-                    "groupBy": "EA",
-                    "subGroupBy": "PremiumDeliveryUsers",
-                    "actualToDate": "9000",
-                    "actualToDateTrend": "+ve",
-                    "monthlyAvg": "9035",
-                    "subgroupName": "Premium delivery",
-                    "groupName": "engagementActivity",
-                    "versusLast": {
-                        "value": "161",
-                        "trend": "+ve"
-                    },
-                    "versusSameLastYear": {
-                        "value": "3365",
-                        "trend": "+ve"
-                    },
-                    "Numberofactivities": {
-                        "value": "10765",
                         "trend": "+ve"
                     },
                     "Percentageactiveusers": {
@@ -461,7 +432,7 @@
                     "actualToDate": "32034",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "30547",
-                    "subgroupName": "Video files",
+                    "subgroupName": "Online Videos",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "4632",
@@ -510,35 +481,6 @@
                     },
                     "AvgCountperuser": {
                         "value": "3",
-                        "trend": "+ve"
-                    }
-                },
-                {
-                    "groupBy": "EA",
-                    "subGroupBy": "PremiumDeliveryUsers",
-                    "actualToDate": "20700",
-                    "actualToDateTrend": "+ve",
-                    "monthlyAvg": "38850",
-                    "subgroupName": "Premium delivery",
-                    "groupName": "engagementActivity",
-                    "versusLast": {
-                        "value": "2422",
-                        "trend": "+ve"
-                    },
-                    "versusSameLastYear": {
-                        "value": "5047",
-                        "trend": "+ve"
-                    },
-                    "Numberofactivities": {
-                        "value": "46289",
-                        "trend": "+ve"
-                    },
-                    "Percentageactiveusers": {
-                        "value": "0.5%",
-                        "trend": "+ve"
-                    },
-                    "AvgCountperuser": {
-                        "value": "2",
                         "trend": "+ve"
                     }
                 },
@@ -761,7 +703,7 @@
                     "actualToDate": "96253",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "85093",
-                    "subgroupName": "Video files",
+                    "subgroupName": "Online Videos",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "23000",
@@ -810,35 +752,6 @@
                     },
                     "AvgCountperuser": {
                         "value": "3",
-                        "trend": "+ve"
-                    }
-                },
-                {
-                    "groupBy": "EA",
-                    "subGroupBy": "PremiumDeliveryUsers",
-                    "actualToDate": "68310",
-                    "actualToDateTrend": "+ve",
-                    "monthlyAvg": "128206",
-                    "subgroupName": "Premium delivery",
-                    "groupName": "engagementActivity",
-                    "versusLast": {
-                        "value": "6298",
-                        "trend": "+ve"
-                    },
-                    "versusSameLastYear": {
-                        "value": "13123",
-                        "trend": "+ve"
-                    },
-                    "Numberofactivities": {
-                        "value": "152755",
-                        "trend": "+ve"
-                    },
-                    "Percentageactiveusers": {
-                        "value": "0.4%",
-                        "trend": "+ve"
-                    },
-                    "AvgCountperuser": {
-                        "value": "2.5",
                         "trend": "+ve"
                     }
                 },
@@ -1050,7 +963,7 @@
                         "trend": "+ve"
                     },
                     "AvgCountperuser": {
-                        "value": "0.3",
+                        "value": "3",
                         "trend": "+ve"
                     }
                 },
@@ -1061,7 +974,7 @@
                     "actualToDate": "375625",
                     "actualToDateTrend": "+ve",
                     "monthlyAvg": "375625",
-                    "subgroupName": "Video files",
+                    "subgroupName": "Online Videos",
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "37625",
@@ -1110,35 +1023,6 @@
                     },
                     "AvgCountperuser": {
                         "value": "1",
-                        "trend": "+ve"
-                    }
-                },
-                {
-                    "groupBy": "EA",
-                    "subGroupBy": "PremiumDeliveryUsers",
-                    "actualToDate": "269,100",
-                    "actualToDateTrend": "+ve",
-                    "monthlyAvg": "512826",
-                    "subgroupName": "Premium delivery",
-                    "groupName": "engagementActivity",
-                    "versusLast": {
-                        "value": "25192",
-                        "trend": "+ve"
-                    },
-                    "versusSameLastYear": {
-                        "value": "25192",
-                        "trend": "+ve"
-                    },
-                    "Numberofactivities": {
-                        "value": "1527552",
-                        "trend": "+ve"
-                    },
-                    "Percentageactiveusers": {
-                        "value": "4%",
-                        "trend": "+ve"
-                    },
-                    "AvgCountperuser": {
-                        "value": "5",
                         "trend": "+ve"
                     }
                 },

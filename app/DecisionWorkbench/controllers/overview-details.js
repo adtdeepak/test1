@@ -4,12 +4,12 @@ angular.module('DecisionWorkbench')
 	
 	$scope.campaignType = [{"name":"Features","selected":false},{"name":"User Groups","selected":true}];
 	
-	$scope.selectedGroup = [{"key":"All Users","selected":false,"index":0},{"key":"Project Managers","selected": false,"index":1},{"key":"Creative Agencies","selected": false,"index":2},
-	                        {"key":"Finance Executives","selected": false,"index":3},{"key":"Musicians","selected": false,"index":4},{"key":"Photographers","selected": false,"index":5}];
+	$scope.selectedGroup = [{"key":"All Users","selected":false,"index":0},{"key":"Office Goers","selected": false,"index":1},{"key":"Teachers","selected": false,"index":2},
+	                        {"key":"Musicians","selected": false,"index":3},{"key":"Creative Agencies","selected": false,"index":4},{"key":"Family And Friends","selected": false,"index":5}];
 	
-	$scope.selectedFeature = [{"key":"3rd Party Integration API","selected":false},{"key":"Collaborate","selected": false},{"key":"eSign","selected": false},
-	                        {"key":"Full Text Search","selected": false},{"key":"Microsoft 365 Integration","selected": false},{"key":"Mobile App","selected": false},
-	                        {"key":"Storage Space","selected": false},{"key":"Version History","selected": false},{"key":"Workspace Share","selected": false},{"key":"All Features","selected": false}];
+	$scope.selectedFeature = [{"key":"Online video and audio streaming","selected":false},{"key":"Collaborate","selected": false},{"key":"Automatic Backup","selected": false},
+	                        {"key":"Mobile App","selected": false},{"key":"eSign","selected": false}, {"key":"Microsoft 365 Integration","selected": false},{"key":"Version Control","selected": false},{"key":"Workspace Share","selected": false},
+	                        {"key":"Full Text Search","selected": false},{"key":"Storage Space","selected": false},{"key":"All Features","selected": false}];
 
 	var initialExpand  = true;
 	var urlSelectedRowId = '';

@@ -9,7 +9,7 @@
             "reportingInterval": "weekly",
             "periodName": "weekly",
             "maxRows": 5,
-            "data": [7516, 7820, 8602, 8774, 91843],
+            "data": [7516, 7820, 8602, 8774],
             "xAxis":["Week 36", "This week","Week 38","Week 39"]
         },
         {
