@@ -5,9 +5,9 @@
     "bestCampaignOptions":{
         "By Impact":[
             {
-                "id": 19,
+                "id": 4,
                 "campaignType":"User Groups",
-                "userGroup": "Office goers<br>Engagement score (50% - 70%)",
+                "userGroup": "Office goers",
                 "description": "Add personal and official signature to your files",
                 "engagementscore" : "70%",
                 "engagementimpact" : 32,
@@ -16,9 +16,9 @@
                 "execute": "no"
             },
             {
-                "id": 73,
+                "id": 29,
                 "campaignType":"User Groups",
-                "userGroup": "Office goers - Bankers<br>Engagement score (70% - 100%)",
+                "userGroup": "Office goers - Bankers",
                 "description": "Get full user access control on your shared confidential files",
                 "engagementscore" : "100%",
                 "engagementimpact" : 31,
@@ -27,9 +27,9 @@
                 "execute": "no"
             },
             {
-                "id": 87,
+                "id": 6,
                 "campaignType":"User Groups",
-                "userGroup": "Office goers - Consultants<br>Engagement score (50% - 70%)",
+                "userGroup": "Office goers - Consultants",
                 "description": "See your team’s work evolve over time through our visual collaboration tool",
                 "engagementscore" : "70%",
                 "engagementimpact" : 27,
@@ -38,9 +38,9 @@
                 "execute": "no"
             },
             {
-                "id": 57,
+                "id": 7,
                 "campaignType":"User Groups",
-                "userGroup": "Office goers - C-level executives<br>Engagement score (50% - 70%)",
+                "userGroup": "Office goers - C-level executives",
                 "description": "Unite your team on a single platform where all their work is saved and shared",
                 "engagementscore" : "70%",
                 "engagementimpact" : 26,
@@ -49,9 +49,9 @@
                 "execute": "no"
             },
             {
-                "id": 21,
+                "id": 8,
                 "campaignType":"User Groups",
-                "userGroup": "Office goers - Bankers<br>Engagement score (50% - 70%)",
+                "userGroup": "Office goers - Bankers",
                 "description": "Share confidential financial reports with your clients with high level of data security in place",
                 "engagementscore" : "70%",
                 "engagementimpact" : 24,
@@ -60,20 +60,20 @@
                 "execute": "no"
             },
             {
-                "id": 7,
+                "id": 9,
                 "campaignType":"User Groups",
-                "userGroup": "Office goers - C-level executives<br>Engagement score (70% - 100%)",
+                "userGroup": "Office goers - C-level executives",
                 "description": "Securely share and access files from your mobile devices using Enterprise Mobility Management",
                 "engagementscore" : "100%",
                 "engagementimpact" : 22,
                 "impact": "Engagement score of Office goers will increase by 22 percent",
-                "featurePromoted":"Integration with EMM (Enterprise Mobility Management)","wishlist": "no",
+                "featurePromoted":"Integration with EMM","wishlist": "no",
                 "execute": "no"
             },
             {
-                "id": 39,
+                "id": 10,
                 "campaignType":"User Groups",
-                "userGroup": "Office goers - Operations teams<br>Engagement score (70% - 90%)",
+                "userGroup": "Office goers - Operations teams",
                 "description": "Securely share and access files from your mobile devices using Enterprise Mobility Management",
                 "engagementscore" : "90%",
                 "engagementimpact" : 19,
@@ -82,9 +82,9 @@
                 "execute": "no"
             },
             {
-                "id": 23,
+                "id": 11,
                 "campaignType":"User Groups",
-                "userGroup": "Teachers - Schools and colleges<br>Engagement score (50% - 70%)",
+                "userGroup": "Teachers - Schools and colleges",
                 "description": "Your students can play your video clippings at desired speed ensuring they grasp the content",
                 "engagementscore" : "70%",
                 "engagementimpact" : 19,
@@ -93,9 +93,9 @@
                 "execute": "no"
             },
             {
-                "id": 61,
+                "id": 12,
                 "campaignType":"User Groups",
-                "userGroup": "Office goers - Project Managers<br>Engagement score (50% - 70%)",
+                "userGroup": "Office goers - Project Managers",
                 "description": "Focus on creating great work and not on managing feedback. Collaborate with your team anywhere anytime.",
                 "engagementscore" : "70%",
                 "engagementimpact" : 18,
@@ -106,7 +106,7 @@
             {
                 "id": 25,
                 "campaignType":"User Groups",
-                "userGroup": "Musicians - Budding Artists<br>Engagement score (50% - 70%)",
+                "userGroup": "Musicians - Budding Artists",
                 "description": "Share music recorded on phone. Recipients can listen to your music without loss of quality.",
                 "engagementscore" : "70%",
                 "engagementimpact" : 17,
@@ -115,9 +115,9 @@
                 "execute": "no"
             },
             {
-                "id": 88,
+                "id": 14,
                 "campaignType":"User Groups",
-                "userGroup": "Creative Agencies<br>Engagement score (70% - 100%)",
+                "userGroup": "Creative Agencies",
                 "description": "Securely share your documents with your colleagues Work space share",
                 "engagementscore" : "100%",
                 "engagementimpact" : 15,
@@ -126,9 +126,9 @@
                 "execute": "no"
             },
             {
-                "id": 89,
+                "id": 15,
                 "campaignType":"User Groups",
-                "userGroup": "Teachers - Schools and colleges<br>Engagement score (20% - 40%)",
+                "userGroup": "Teachers - Schools and colleges",
                 "description": "Share lectures recorded on phone. Students can listen to your clippings without loss of quality.",
                 "engagementscore" : "40%",
                 "engagementimpact" : 13,
@@ -137,9 +137,9 @@
                 "execute": "no"
             },
             {
-                "id": 12,
+                "id": 16,
                 "campaignType":"User Groups",
-                "userGroup": "Musicians - Professional Music Composers<br>Engagement score (70% - 100%)",
+                "userGroup": "Musicians - Professional Music Composers",
                 "description": "Share HD quality files with your close network.",
                 "engagementscore" : "100%",
                 "engagementimpact" : 12,
@@ -148,9 +148,9 @@
                 "execute": "no"
             },
             {
-                "id": 6,
+                "id": 17,
                 "campaignType":"User Groups",
-                "userGroup": "Friends and family - Leisure photographers<br>Engagement score (70% - 100%)",
+                "userGroup": "Friends and family - Leisure photographers",
                 "description": "Never worry about deleting files with increased storage space",
                 "engagementscore" : "100%",
                 "engagementimpact" : 12,
@@ -159,9 +159,9 @@
                 "execute": "no"
             },
             {
-                "id": 68,
+                "id": 18,
                 "campaignType":"User Groups",
-                "userGroup": "Musicians - Professional Music Composers<br>Engagement score (70% - 100%)",
+                "userGroup": "Musicians - Professional Music Composers",
                 "description": "Share compositions with select group and get inline feedback and annotations.",
                 "engagementscore" : "100%",
                 "engagementimpact" : 10,
@@ -170,9 +170,9 @@
                 "execute": "no"
             },
              {
-                "id": 60,
+                "id": 19,
                 "campaignType":"User Groups",
-                "userGroup": "Creative Agencies<br>Engagement score (70% - 100%)",
+                "userGroup": "Creative Agencies",
                 "description": "Edit, control and manage your work without errors, using Version control",
                 "engagementscore" : "100%",
                 "engagementimpact" : 9,
@@ -181,9 +181,9 @@
                 "execute": "no"
             },
             {
-                "id": 33,
+                "id": 20,
                 "campaignType":"User Groups",
-                "userGroup": "Musicians - Professional Music Composers<br>Engagement score (0% - 50%)",
+                "userGroup": "Musicians - Professional Music Composers",
                 "description": "Recipients can stream your music on any device without perceivable loss of quality",
                 "engagementscore" : "50%",
                 "engagementimpact" : 8,
@@ -192,9 +192,9 @@
                 "execute": "no"
             },
             {
-                "id": 70,
+                "id": 21,
                 "campaignType":"User Groups",
-                "userGroup": "Creative Agencies<br>Engagement score (0% - 50%)",
+                "userGroup": "Creative Agencies",
                 "description": "Now read all your documents in Microsoft 365 Integration",
                 "engagementscore" : "50%",
                 "engagementimpact" : 8,
@@ -203,9 +203,9 @@
                 "execute": "no"
             },
             {
-                "id": 72,
+                "id": 22,
                 "campaignType":"User Groups",
-                "userGroup": "Friends and family - Leisure photographers<br>Engagement score (0% - 40%)",
+                "userGroup": "Friends and family - Leisure photographers",
                 "description": "Upload on the go photos using the Mobile App",
                 "engagementscore" : "40%",
                 "engagementimpact" : 8,
@@ -214,9 +214,9 @@
                 "execute": "no"
             },
             {
-                "id": 51,
+                "id": 23,
                 "campaignType":"User Groups",
-                "userGroup": "Creative Agencies<br>Engagement score (70% - 100%)",
+                "userGroup": "Creative Agencies",
                 "description": "Add personal and official signature to your content",
                 "engagementscore" : "100%",
                 "engagementimpact" : 7,
@@ -225,9 +225,9 @@
                 "execute": "no"
             },
             {
-                "id": 48,
+                "id": 24,
                 "campaignType":"User Groups",
-                "userGroup": "Friends and family<br>Engagement score (70% - 60%)",
+                "userGroup": "Friends and family",
                 "description": "Never worry about deleting files with increased storage space",
                 "engagementscore" : "60%",
                 "engagementimpact" : 7,
@@ -236,9 +236,9 @@
                 "execute": "no"
             },
             {
-                "id": 65,
+                "id": 13,
                 "campaignType":"User Groups",
-                "userGroup": "Creative Agencies<br>Engagement score (70% - 100%)",
+                "userGroup": "Creative Agencies",
                 "description": "Secure forward your composition to your clients, ensuring the confidentiality of the work",
                 "engagementscore" : "100%",
                 "engagementimpact" : 5,
@@ -247,9 +247,9 @@
                 "execute": "no"
             },
             {
-                "id": 98,
+                "id": 26,
                 "campaignType":"User Groups",
-                "userGroup": "Friends and family<br>Engagement score (0% - 10%)",
+                "userGroup": "Friends and family",
                 "description": "Never lose your cherished memories. Automatic back-up of your photos from all devices",
                 "engagementscore" : "10%",
                 "engagementimpact" : 5,
@@ -258,9 +258,9 @@
                 "execute": "no"
             },
             {
-                "id": 93,
+                "id": 27,
                 "campaignType":"User Groups",
-                "userGroup": "Friends And Family<br>Engagement score (70% - 100%)",
+                "userGroup": "Friends And Family",
                 "description": "Single account for your entire family",
                 "engagementscore" : "100%",
                 "engagementimpact" : 4,
@@ -269,14 +269,25 @@
                 "execute": "no"
             },
             {
-                "id": 83,
+                "id": 28,
                 "campaignType":"User Groups",
-                "userGroup": "Creative Agencies<br>Engagement score (0% - 50%)",
+                "userGroup": "Creative Agencies",
                 "description": "Access files from any where, Become pro and increase your cloud storage space upto 10 GB",
                 "engagementscore" : "50%",
                 "engagementimpact" : 2,
                 "impact": "Engagement score of Creative Agencies  will increase by 2 percent",
                 "featurePromoted":"Storage Space","wishlist": "no",
+                "execute": "no"
+            },
+            {
+                "id": 5,
+                "campaignType":"User Groups",
+                "userGroup": "Office goers - Project Managers",
+                "description": "Unite your team on a single platform where all their work is saved and shared",
+                "engagementscore" : "70%",
+                "engagementimpact" : 23,
+                "impact": "Engagement score of Office goers will increase by 23 percent",
+                "featurePromoted":"Team Sign-ups","wishlist": "no",
                 "execute": "no"
             }
 
@@ -286,7 +297,7 @@
     {
         "id": 21,
         "campaignType":"User Groups",
-        "userGroup": "Office goers - Bankers<br>Engagement score (50% - 70%)",
+        "userGroup": "Office goers - Bankers",
         "description": "Share confidential financial reports with your clients with high level of data security in place",
         "engagementscore" : "70%",
         "engagementimpact" : 24,
@@ -297,7 +308,7 @@
     {
         "id": 19,
         "campaignType":"User Groups",
-        "userGroup": "Office goers<br>Engagement score (50% - 70%)",
+        "userGroup": "Office goers",
         "description": "Add personal and official signature to your files",
         "engagementscore" : "70%",
         "engagementimpact" : 32,
@@ -308,7 +319,7 @@
     {
         "id": 73,
         "campaignType":"User Groups",
-        "userGroup": "Office goers - Bankers<br>Engagement score (70% - 100%)",
+        "userGroup": "Office goers - Bankers",
         "description": "Get full user access control on your shared confidential files",
         "engagementscore" : "100%",
         "engagementimpact" : 31,
@@ -319,7 +330,7 @@
     {
         "id": 87,
         "campaignType":"User Groups",
-        "userGroup": "Office goers - Consultants<br>Engagement score (50% - 70%)",
+        "userGroup": "Office goers - Consultants",
         "description": "See your team’s work evolve over time through our visual collaboration tool",
         "engagementscore" : "70%",
         "engagementimpact" : 27,
@@ -330,7 +341,7 @@
     {
         "id": 40,
         "campaignType":"User Groups",
-        "userGroup": "Office goers - C-level executives<br>Engagement score (0% - 50%)",
+        "userGroup": "Office goers - C-level executives",
         "description": "Unite your team on a single platform where all their work is saved and shared",
         "engagementscore" : "50%",
         "engagementimpact" : 26,
@@ -339,9 +350,9 @@
         "execute": "no"
     },
     {
-        "id": 5,
+        "id": 65,
         "campaignType":"User Groups",
-        "userGroup": "Office goers - Bankers<br>Engagement score (0% - 50%)",
+        "userGroup": "Office goers - Bankers",
         "description": "Share confidential financial reports with your clients with high level of data security in place",
         "engagementscore" : "50%",
         "engagementimpact" : 24,
@@ -350,9 +361,9 @@
         "execute": "no"
     },
     {
-        "id": 15,
+        "id": 5,
         "campaignType":"User Groups",
-        "userGroup": "Office goers - Project Managers<br>Engagement score (50% - 70%)",
+        "userGroup": "Office goers - Project Managers",
         "description": "Unite your team on a single platform where all their work is saved and shared",
         "engagementscore" : "70%",
         "engagementimpact" : 23,
@@ -362,18 +373,18 @@
     }, {
         "id": 7,
         "campaignType":"User Groups",
-        "userGroup": "Office goers - C-level executives<br>Engagement score (70% - 100%)",
+        "userGroup": "Office goers - C-level executives",
         "description": "Securely share and access files from your mobile devices using Enterprise Mobility Management",
         "engagementscore" : "100%",
         "engagementimpact" : 22,
         "impact": "Engagement score of Office goers will increase by 22 percent",
-        "featurePromoted":"Integration with EMM (Enterprise Mobility Management)","wishlist": "no",
+        "featurePromoted":"Integration with EMM","wishlist": "no",
         "execute": "no"
     },
     {
         "id": 34,
         "campaignType":"User Groups",
-        "userGroup": "Office goers - Operations teams<br>Engagement score (0% - 50%)",
+        "userGroup": "Office goers - Operations teams",
         "description": "Update your files online without losing any previous version. Our in-built version control takes care.",
         "engagementscore" : "50%",
         "engagementimpact" : 19,
@@ -384,7 +395,7 @@
     {
         "id": 61,
         "campaignType":"User Groups",
-        "userGroup": "Office goers - Project Managers<br>Engagement score (50% - 70%)",
+        "userGroup": "Office goers - Project Managers",
         "description": "Focus on creating great work and not on managing feedback. Collaborate with your team anywhere anytime.",
         "engagementscore" : "70%",
         "engagementimpact" : 18,
@@ -395,7 +406,7 @@
     {
         "id": 23,
         "campaignType":"User Groups",
-        "userGroup": "Teachers - Schools and colleges<br>Engagement score (50% - 70%)",
+        "userGroup": "Teachers - Schools and colleges",
         "description": "Your students can play your video clippings at desired speed ensuring they grasp the content",
         "engagementscore" : "70%",
         "engagementimpact" : 19,
@@ -406,7 +417,7 @@
     {
         "id": 2,
         "campaignType":"User Groups",
-        "userGroup": "Teachers - Schools and colleges<br>Engagement score (0% - 50%)",
+        "userGroup": "Teachers - Schools and colleges",
         "description": "Share lectures recorded on phone. Students can listen to your clippings without loss of quality.",
         "engagementscore" : "50%",
         "engagementimpact" : 13,
@@ -417,7 +428,7 @@
     {
         "id": 25,
         "campaignType":"User Groups",
-        "userGroup": "Musicians - Budding Artists<br>Engagement score (50% - 70%)",
+        "userGroup": "Musicians - Budding Artists",
         "description": "Share music recorded on phone. Recipients can listen to your music without loss of quality.",
         "engagementscore" : "70%",
         "engagementimpact" : 17,
@@ -428,7 +439,7 @@
     {
         "id": 12,
         "campaignType":"User Groups",
-        "userGroup": "Musicians - Professional Music Composers<br>Engagement score (70% - 100%)",
+        "userGroup": "Musicians - Professional Music Composers",
         "description": "Share HD quality files with your close network.",
         "engagementscore" : "100%",
         "engagementimpact" : 12,
@@ -439,7 +450,7 @@
     {
         "id": 66,
         "campaignType":"User Groups",
-        "userGroup": "Musicians - Professional Music Composers<br>Engagement score (0% - 50%)",
+        "userGroup": "Musicians - Professional Music Composers",
         "description": "Share compositions with select group and get inline feedback and annotations.",
         "engagementscore" : "50%",
         "engagementimpact" : 10,
@@ -450,7 +461,7 @@
     {
         "id": 33,
         "campaignType":"User Groups",
-        "userGroup": "Musicians - Professional Music Composers<br>Engagement score (0% - 50%)",
+        "userGroup": "Musicians - Professional Music Composers",
         "description": "Recipients can stream your music on any device without perceivable loss of quality",
         "engagementscore" : "50%",
         "engagementimpact" : 8,
@@ -461,7 +472,7 @@
     {
         "id": 53,
         "campaignType":"User Groups",
-        "userGroup": "Creative Agencies<br>Engagement score (70% - 100%)",
+        "userGroup": "Creative Agencies",
         "description": "Securely share your documents with your colleagues Work space share",
         "engagementscore" : "100%",
         "engagementimpact" : 15,
@@ -472,7 +483,7 @@
     {
         "id": 60,
         "campaignType":"User Groups",
-        "userGroup": "Creative Agencies<br>Engagement score (70% - 100%)",
+        "userGroup": "Creative Agencies",
         "description": "Edit, control and manage your work without errors, using Version control",
         "engagementscore" : "100%",
         "engagementimpact" : 9,
@@ -483,7 +494,7 @@
     {
         "id": 72,
         "campaignType":"User Groups",
-        "userGroup": "Creative Agencies<br>Engagement score (0% - 50%)",
+        "userGroup": "Creative Agencies",
         "description": "Now read all your documents in Microsoft 365 Integration",
         "engagementscore" : "50%",
         "engagementimpact" : 8,
@@ -494,7 +505,7 @@
     {
         "id": 57,
         "campaignType":"User Groups",
-        "userGroup": "Creative Agencies<br>Engagement score (70% - 100%)",
+        "userGroup": "Creative Agencies",
         "description": "Never worry about deleting files with increased storage space",
         "engagementscore" : "100%",
         "engagementimpact" : 9,
@@ -505,7 +516,7 @@
     {
         "id": 51,
         "campaignType":"User Groups",
-        "userGroup": "Creative Agencies<br>Engagement score (70% - 100%)",
+        "userGroup": "Creative Agencies",
         "description": "Add personal and official signature to your content",
         "engagementscore" : "100%",
         "engagementimpact" : 7,
@@ -516,7 +527,7 @@
     {
         "id": 99,
         "campaignType":"User Groups",
-        "userGroup": "Creative Agencies<br>Engagement score (70% - 100%)",
+        "userGroup": "Creative Agencies",
         "description": "Secure forward your composition to your clients, ensuring the confidentiality of the work",
         "engagementscore" : "100%",
         "engagementimpact" : 5,
@@ -527,7 +538,7 @@
     {
         "id": 83,
         "campaignType":"User Groups",
-        "userGroup": "Creative Agencies<br>Engagement score (0% - 50%)",
+        "userGroup": "Creative Agencies",
         "description": "Access files from any where, Become pro and increase your cloud storage space upto 10 GB",
         "engagementscore" : "50%",
         "engagementimpact" : 2,
@@ -538,7 +549,7 @@
     {
         "id": 59,
         "campaignType":"User Groups",
-        "userGroup": "Friends and family - Leisure photographers<br>Engagement score (70% - 100%)",
+        "userGroup": "Friends and family - Leisure photographers",
         "description": "Never worry about deleting files with increased storage space",
         "engagementscore" : "100%",
         "engagementimpact" : 12,
@@ -549,7 +560,7 @@
     {
         "id": 93,
         "campaignType":"User Groups",
-        "userGroup": "Friends and family - Leisure photographers<br>Engagement score (70% - 100%)",
+        "userGroup": "Friends and family - Leisure photographers",
         "description": "Upload on the go photos using the Mobile App",
         "engagementscore" : "100%",
         "engagementimpact" : 8,
@@ -560,7 +571,7 @@
     {
         "id": 46,
         "campaignType":"User Groups",
-        "userGroup": "Friends And Family<br>Engagement score (70% - 100%)",
+        "userGroup": "Friends And Family",
         "description": "Never worry about deleting files with increased storage space",
         "engagementscore" : "100%",
         "engagementimpact" : 7,
@@ -571,7 +582,7 @@
     {
         "id": 36,
         "campaignType":"User Groups",
-        "userGroup": "Friends And Family<br>Engagement score (70% - 100%)",
+        "userGroup": "Friends And Family",
         "description": "Never lose your cherished memories. Automatic back-up of your photos from all devices",
         "engagementscore" : "100%",
         "engagementimpact" : 5,
@@ -582,7 +593,7 @@
     {
         "id": 39,
         "campaignType":"User Groups",
-        "userGroup": "Friends And Family<br>Engagement score (70% - 100%)",
+        "userGroup": "Friends And Family",
         "description": "Single account for your entire family",
         "engagementscore" : "100%",
         "engagementimpact" : 4,
@@ -595,7 +606,7 @@
     {
         "id": 21,
         "campaignType":"User Groups",
-        "userGroup": "Office goers - Bankers<br>Engagement score (50% - 70%)",
+        "userGroup": "Office goers - Bankers",
         "description": "Share confidential financial reports with your clients with high level of data security in place",
         "engagementscore" : "70%",
         "engagementimpact" : 24,
@@ -606,7 +617,7 @@
     {
         "id": 19,
         "campaignType":"User Groups",
-        "userGroup": "Office goers<br>Engagement score (50% - 70%)",
+        "userGroup": "Office goers",
         "description": "Add personal and official signature to your files",
         "engagementscore" : "70%",
         "engagementimpact" : 32,
@@ -617,7 +628,7 @@
     {
         "id": 73,
         "campaignType":"User Groups",
-        "userGroup": "Office goers - Bankers<br>Engagement score (70% - 100%)",
+        "userGroup": "Office goers - Bankers",
         "description": "Get full user access control on your shared confidential files",
         "engagementscore" : "100%",
         "engagementimpact" : 31,
@@ -628,7 +639,7 @@
     {
         "id": 87,
         "campaignType":"User Groups",
-        "userGroup": "Office goers - Consultants<br>Engagement score (50% - 70%)",
+        "userGroup": "Office goers - Consultants",
         "description": "See your team’s work evolve over time through our visual collaboration tool",
         "engagementscore" : "70%",
         "engagementimpact" : 27,
@@ -638,7 +649,7 @@
     },{
         "id": 40,
         "campaignType":"User Groups",
-        "userGroup": "Office goers - C-level executives<br>Engagement score (0% - 50%)",
+        "userGroup": "Office goers - C-level executives",
         "description": "Unite your team on a single platform where all their work is saved and shared",
         "engagementscore" : "50%",
         "engagementimpact" : 26,
@@ -647,9 +658,9 @@
         "execute": "no"
     },
     {
-        "id": 5,
+        "id": 65,
         "campaignType":"User Groups",
-        "userGroup": "Office goers - Bankers<br>Engagement score (0% - 50%)",
+        "userGroup": "Office goers - Bankers",
         "description": "Share confidential financial reports with your clients with high level of data security in place",
         "engagementscore" : "50%",
         "engagementimpact" : 24,
@@ -658,9 +669,9 @@
         "execute": "no"
     },
     {
-        "id": 15,
+        "id": 5,
         "campaignType":"User Groups",
-        "userGroup": "Office goers - Project Managers<br>Engagement score (50% - 70%)",
+        "userGroup": "Office goers - Project Managers",
         "description": "Unite your team on a single platform where all their work is saved and shared",
         "engagementscore" : "70%",
         "engagementimpact" : 23,
@@ -670,18 +681,18 @@
     }, {
         "id": 7,
         "campaignType":"User Groups",
-        "userGroup": "Office goers - C-level executives<br>Engagement score (70% - 100%)",
+        "userGroup": "Office goers - C-level executives",
         "description": "Securely share and access files from your mobile devices using Enterprise Mobility Management",
         "engagementscore" : "100%",
         "engagementimpact" : 22,
         "impact": "Engagement score of Office goers will increase by 22 percent",
-        "featurePromoted":"Integration with EMM (Enterprise Mobility Management)","wishlist": "no",
+        "featurePromoted":"Integration with EMM","wishlist": "no",
         "execute": "no"
     },
     {
         "id": 34,
         "campaignType":"User Groups",
-        "userGroup": "Office goers - Operations teams<br>Engagement score (0% - 50%)",
+        "userGroup": "Office goers - Operations teams",
         "description": "Update your files online without losing any previous version. Our in-built version control takes care.",
         "engagementscore" : "50%",
         "engagementimpact" : 19,
@@ -692,7 +703,7 @@
     {
         "id": 61,
         "campaignType":"User Groups",
-        "userGroup": "Office goers - Project Managers<br>Engagement score (50% - 70%)",
+        "userGroup": "Office goers - Project Managers",
         "description": "Focus on creating great work and not on managing feedback. Collaborate with your team anywhere anytime.",
         "engagementscore" : "70%",
         "engagementimpact" : 18,
@@ -707,7 +718,7 @@
     {
         "id": 23,
         "campaignType":"User Groups",
-        "userGroup": "Teachers - Schools and colleges<br>Engagement score (50% - 70%)",
+        "userGroup": "Teachers - Schools and colleges",
         "description": "Your students can play your video clippings at desired speed ensuring they grasp the content",
         "engagementscore" : "70%",
         "engagementimpact" : 19,
@@ -718,7 +729,7 @@
     {
         "id": 2,
         "campaignType":"User Groups",
-        "userGroup": "Teachers - Schools and colleges<br>Engagement score (0% - 50%)",
+        "userGroup": "Teachers - Schools and colleges",
         "description": "Share lectures recorded on phone. Students can listen to your clippings without loss of quality.",
         "engagementscore" : "50%",
         "engagementimpact" : 13,
@@ -734,7 +745,7 @@
     {
         "id": 25,
         "campaignType":"User Groups",
-        "userGroup": "Musicians - Budding Artists<br>Engagement score (50% - 70%)",
+        "userGroup": "Musicians - Budding Artists",
         "description": "Share music recorded on phone. Recipients can listen to your music without loss of quality.",
         "engagementscore" : "70%",
         "engagementimpact" : 17,
@@ -745,7 +756,7 @@
     {
         "id": 12,
         "campaignType":"User Groups",
-        "userGroup": "Musicians - Professional Music Composers<br>Engagement score (70% - 100%)",
+        "userGroup": "Musicians - Professional Music Composers",
         "description": "Share HD quality files with your close network.",
         "engagementscore" : "100%",
         "engagementimpact" : 12,
@@ -756,7 +767,7 @@
     {
         "id": 66,
         "campaignType":"User Groups",
-        "userGroup": "Musicians - Professional Music Composers<br>Engagement score (0% - 50%)",
+        "userGroup": "Musicians - Professional Music Composers",
         "description": "Share compositions with select group and get inline feedback and annotations.",
         "engagementscore" : "50%",
         "engagementimpact" : 10,
@@ -767,7 +778,7 @@
     {
         "id": 33,
         "campaignType":"User Groups",
-        "userGroup": "Musicians - Professional Music Composers<br>Engagement score (0% - 50%)",
+        "userGroup": "Musicians - Professional Music Composers",
         "description": "Recipients can stream your music on any device without perceivable loss of quality",
         "engagementscore" : "50%",
         "engagementimpact" : 8,
@@ -783,7 +794,7 @@
     {
         "id": 89,
         "campaignType":"User Groups",
-        "userGroup": "Creative Agencies<br>Engagement score (70% - 100%)",
+        "userGroup": "Creative Agencies",
         "description": "Securely share your documents with your colleagues Work space share",
         "engagementscore" : "100%",
         "engagementimpact" : 15,
@@ -794,7 +805,7 @@
     {
         "id": 60,
         "campaignType":"User Groups",
-        "userGroup": "Creative Agencies<br>Engagement score (70% - 100%)",
+        "userGroup": "Creative Agencies",
         "description": "Edit, control and manage your work without errors, using Version control",
         "engagementscore" : "100%",
         "engagementimpact" : 9,
@@ -805,7 +816,7 @@
     {
         "id": 72,
         "campaignType":"User Groups",
-        "userGroup": "Creative Agencies<br>Engagement score (0% - 50%)",
+        "userGroup": "Creative Agencies",
         "description": "Now read all your documents in Microsoft 365 Integration",
         "engagementscore" : "50%",
         "engagementimpact" : 8,
@@ -816,7 +827,7 @@
     {
         "id": 57,
         "campaignType":"User Groups",
-        "userGroup": "Creative Agencies<br>Engagement score (70% - 100%)",
+        "userGroup": "Creative Agencies",
         "description": "Never worry about deleting files with increased storage space",
         "engagementscore" : "100%",
         "engagementimpact" : 9,
@@ -827,7 +838,7 @@
     {
         "id": 51,
         "campaignType":"User Groups",
-        "userGroup": "Creative Agencies<br>Engagement score (70% - 100%)",
+        "userGroup": "Creative Agencies",
         "description": "Add personal and official signature to your content",
         "engagementscore" : "100%",
         "engagementimpact" : 7,
@@ -838,7 +849,7 @@
     {
         "id": 93,
         "campaignType":"User Groups",
-        "userGroup": "Creative Agencies<br>Engagement score (70% - 100%)",
+        "userGroup": "Creative Agencies",
         "description": "Secure forward your composition to your clients, ensuring the confidentiality of the work",
         "engagementscore" : "100%",
         "engagementimpact" : 5,
@@ -849,7 +860,7 @@
     {
         "id": 83,
         "campaignType":"User Groups",
-        "userGroup": "Creative Agencies<br>Engagement score (0% - 50%)",
+        "userGroup": "Creative Agencies",
         "description": "Access files from any where, Become pro and increase your cloud storage space upto 10 GB",
         "engagementscore" : "50%",
         "engagementimpact" : 2,
@@ -863,7 +874,7 @@
     {
         "id": 93,
         "campaignType":"User Groups",
-        "userGroup": "Friends and family - Leisure photographers<br>Engagement score (70% - 100%)",
+        "userGroup": "Friends and family - Leisure photographers",
         "description": "Never worry about deleting files with increased storage space",
         "engagementscore" : "100%",
         "engagementimpact" : 12,
@@ -874,7 +885,7 @@
     {
         "id": 93,
         "campaignType":"User Groups",
-        "userGroup": "Friends and family - Leisure photographers<br>Engagement score (70% - 100%)",
+        "userGroup": "Friends and family - Leisure photographers",
         "description": "Upload on the go photos using the Mobile App",
         "engagementscore" : "100%",
         "engagementimpact" : 8,
@@ -885,7 +896,7 @@
     {
         "id": 93,
         "campaignType":"User Groups",
-        "userGroup": "Friends And Family<br>Engagement score (70% - 100%)",
+        "userGroup": "Friends And Family",
         "description": "Never worry about deleting files with increased storage space",
         "engagementscore" : "100%",
         "engagementimpact" : 7,
@@ -896,7 +907,7 @@
     {
         "id": 93,
         "campaignType":"User Groups",
-        "userGroup": "Friends And Family<br>Engagement score (70% - 100%)",
+        "userGroup": "Friends And Family",
         "description": "Never lose your cherished memories. Automatic back-up of your photos from all devices",
         "engagementscore" : "100%",
         "engagementimpact" : 5,
@@ -907,7 +918,7 @@
     {
         "id": 93,
         "campaignType":"User Groups",
-        "userGroup": "Friends And Family<br>Engagement score (70% - 100%)",
+        "userGroup": "Friends And Family",
         "description": "Single account for your entire family",
         "engagementscore" : "100%",
         "engagementimpact" : 4,
@@ -920,7 +931,7 @@
     {
         "id": 60,
         "campaignType":"Features",
-        "userGroup": "Teachers - Schools and colleges<br>Engagement score (70% - 100%)",
+        "userGroup": "Teachers - Schools and colleges",
         "description": "Your students can play your video clippings at desired speed ensuring they grasp the content",
         "engagementscore" : "100%",
         "engagementimpact" : 19,
@@ -931,7 +942,7 @@
     {
         "id": 7,
         "campaignType":"Features",
-        "userGroup": "Musicians - Budding Artists<br>Engagement score (70% - 100%)",
+        "userGroup": "Musicians - Budding Artists",
         "description": "Share music recorded on phone. Recipients can listen to your music without loss of quality.",
         "engagementscore" : "100%",
         "engagementimpact" : 17,
@@ -942,7 +953,7 @@
     {
         "id": 33,
         "campaignType":"Features",
-        "userGroup": "Teachers - Schools and colleges<br>Engagement score (0% - 50%)",
+        "userGroup": "Teachers - Schools and colleges",
         "description": "Share lectures recorded on phone. Students can listen to your clippings without loss of quality.",
         "engagementscore" : "50%",
         "engagementimpact" : 13,
@@ -953,7 +964,7 @@
     {
         "id": 19,
         "campaignType":"User Groups",
-        "userGroup": "Musicians - Professional Music Composers<br>Engagement score (50% - 70%)",
+        "userGroup": "Musicians - Professional Music Composers",
         "description": "Share HD quality files with your close network.",
         "engagementscore" : "70%",
         "engagementimpact" : 12,
@@ -964,7 +975,7 @@
     {
         "id":23,
         "campaignType":"Features",
-        "userGroup":"Musicians - Professional Music Composers<br>Engagement score (50% - 70%)",
+        "userGroup":"Musicians - Professional Music Composers",
         "description":"Share compositions with select group and get inline feedback and annotations.",
         "engagementscore" : "100%",
         "engagementimpact" : 10,
@@ -976,7 +987,7 @@
     {
         "id":83,
         "campaignType":"Features",
-        "userGroup":"Musicians - Professional Music Composers<br>Engagement score (0% - 50%)",
+        "userGroup":"Musicians - Professional Music Composers",
         "description":"Recipients can stream your music on any device without perceivable loss of quality",
         "engagementscore" : "50%",
         "engagementimpact" : 8,
@@ -988,7 +999,7 @@
     {
         "id":66,
         "campaignType":"Features",
-        "userGroup":"Creative Agencies<br>Engagement score (0% - 50%)",
+        "userGroup":"Creative Agencies",
         "description":"Secure forward your composition to your clients, ensuring the confidentiality of the work",
         "engagementscore" : "50%",
         "engagementimpact" : 5,
@@ -1000,7 +1011,7 @@
     {
         "id":94,
         "campaignType":"Features",
-        "userGroup":"Office goers - Bankers<br>Engagement score (0% - 70%)",
+        "userGroup":"Office goers - Bankers",
         "description":"Get full user access control on your shared confidential files",
         "engagementscore" : "70%",
         "engagementimpact" : 31,
@@ -1012,7 +1023,7 @@
     {
         "id":69,
         "campaignType":"Features",
-        "userGroup":"Office goers - Consultants<br>Engagement score (0% - 20%)",
+        "userGroup":"Office goers - Consultants",
         "description":"See your team’s work evolve over time through our visual collaboration tool",
         "engagementscore" : "20%",
         "engagementimpact" : 27,
@@ -1024,7 +1035,7 @@
     {
         "id":70,
         "campaignType":"Features",
-        "userGroup":"Office goers - C-level executives<br>Engagement score (0% - 60%)",
+        "userGroup":"Office goers - C-level executives",
         "description":"Unite your team on a single platform where all their work is saved and shared",
         "engagementscore" : "60%",
         "engagementimpact" : 26,
@@ -1036,7 +1047,7 @@
     {
         "id":71,
         "campaignType":"Features",
-        "userGroup":"Office goers - Bankers<br>Engagement score (0% - 80%)",
+        "userGroup":"Office goers - Bankers",
         "description":"Share confidential financial reports with your clients with high level of data security in place",
         "engagementscore" : "80%",
         "engagementimpact" : 24,
@@ -1046,9 +1057,9 @@
         "execute":"no"
     },
     {
-        "id":72,
+        "id":5,
         "campaignType":"Features",
-        "userGroup":"Office goers - Project Managers<br>Engagement score (0% - 50%)",
+        "userGroup":"Office goers - Project Managers",
         "description":"Unite your team on a single platform where all their work is saved and shared",
         "engagementscore" : "50%",
         "engagementimpact" : 23,
@@ -1060,19 +1071,19 @@
     {
         "id":73,
         "campaignType":"Features",
-        "userGroup":"Office goers - C-level executives<br>Engagement score (0% - 20%)",
+        "userGroup":"Office goers - C-level executives",
         "description":"Securely share and access files from your mobile devices using Enterprise Mobility Management",
         "engagementscore" : "20%",
         "engagementimpact" : 22,
         "impact":"Engagement score of Office goers will increase by 22 percent",
-        "featurePromoted":"Integration with EMM (Enterprise Mobility Management)",
+        "featurePromoted":"Integration with EMM",
         "wishlist":"no",
         "execute":"no"
     },
     {
         "id":74,
         "campaignType":"Features",
-        "userGroup":"Office goers - Project Managers<br>Engagement score (0% - 40%)",
+        "userGroup":"Office goers - Project Managers",
         "description":"Focus on creating great work and not on managing feedback. Collaborate with your team anywhere anytime.",
         "engagementscore" : "40%",
         "engagementimpact" : 18,
@@ -1084,7 +1095,7 @@
     {
         "id":75,
         "campaignType":"Features",
-        "userGroup":"Friends and family<br>Engagement score (0% - 40%)",
+        "userGroup":"Friends and family",
         "description":"Single account for your entire family",
         "engagementscore" : "40%",
         "engagementimpact" : 4,
@@ -1096,7 +1107,7 @@
     {
         "id":76,
         "campaignType":"Features",
-        "userGroup":"Friends and family<br>Engagement score (0% - 50%)",
+        "userGroup":"Friends and family",
         "description":"Never lose your cherished memories. Automatic back-up of your photos from all devices",
         "engagementscore" : "50%",
         "engagementimpact" : 5,
@@ -1108,7 +1119,7 @@
     {
         "id":77,
         "campaignType":"Features",
-        "userGroup":"Musicians - Budding Artists<br>Engagement score (0% - 30%)",
+        "userGroup":"Musicians - Budding Artists",
         "description":"Record, listen and share your music on the go. Download mobile app",
         "engagementscore" : "30%",
         "engagementimpact" : 12,
@@ -1120,7 +1131,7 @@
     {
         "id":78,
         "campaignType":"Features",
-        "userGroup":"Friends and family - Leisure photographers<br>Engagement score (0% - 50%)",
+        "userGroup":"Friends and family - Leisure photographers",
         "description":"Upload on the go photos using the Mobile App",
         "engagementscore" : "50%",
         "engagementimpact" : 8,
@@ -1132,7 +1143,7 @@
     {
         "id":79,
         "campaignType":"Features",
-        "userGroup":"Office Goers<br>Engagement score (0% - 50%)",
+        "userGroup":"Office Goers",
         "description":"Manage your work on the go, download mobile app now",
         "engagementscore" : "50%",
         "engagementimpact" : 6,
@@ -1144,7 +1155,7 @@
     {
         "id":80,
         "campaignType":"Features",
-        "userGroup":"Office goers<br>Engagement score (0% - 20%)",
+        "userGroup":"Office goers",
         "description":"Add personal and official signature to your files",
         "engagementscore" : "20%",
         "engagementimpact" : 32,
@@ -1156,7 +1167,7 @@
     {
         "id":81,
         "campaignType":"Features",
-        "userGroup":"Creative Agencies<br>Engagement score (0% - 20%)",
+        "userGroup":"Creative Agencies",
         "description":"Add personal and official signature to your content",
         "engagementscore" : "20%",
         "engagementimpact" : 7,
@@ -1168,7 +1179,7 @@
     {
         "id":82,
         "campaignType":"Features",
-        "userGroup":"Creative Agencies<br>Engagement score (0% - 20%)",
+        "userGroup":"Creative Agencies",
         "description":"Securely share your documents with your colleagues Work space share",
         "engagementscore" : "20%",
         "engagementimpact" : 15,
@@ -1180,7 +1191,7 @@
     {
         "id":83,
         "campaignType":"Features",
-        "userGroup":"Creative Agencies<br>Engagement score (0% - 10%)",
+        "userGroup":"Creative Agencies",
         "description":"Now read all your documents in Microsoft 365 Integration",
         "engagementscore" : "10%",
         "engagementimpact" : 8,
@@ -1192,7 +1203,7 @@
     {
         "id":84,
         "campaignType":"Features",
-        "userGroup":"Office goers - Operations teams<br>Engagement score (0% - 20%)",
+        "userGroup":"Office goers - Operations teams",
         "description":"Update your files online without losing any previous version. Our in-built version control takes care.",
         "engagementscore" : "20%",
         "engagementimpact" : 19,
@@ -1204,7 +1215,7 @@
     {
         "id":85,
         "campaignType":"Features",
-        "userGroup":"Office goers<br>Engagement score (0% - 40%)",
+        "userGroup":"Office goers",
         "description":"Edit, control and manage your work without errors, using Version control",
         "engagementscore" : "40%",
         "engagementimpact" : 9,
@@ -1216,7 +1227,7 @@
     {
         "id":86,
         "campaignType":"Features",
-        "userGroup":"Office goers - Project Managers<br>Engagement score (0% - 20%)",
+        "userGroup":"Office goers - Project Managers",
         "description":"Securely share your documents with your colleagues Work space share",
         "engagementscore" : "20%",
         "engagementimpact" : 5,
@@ -1228,7 +1239,7 @@
     {
         "id":87,
         "campaignType":"Features",
-        "userGroup":"Office goers<br>Engagement score (0% - 60%)",
+        "userGroup":"Office goers",
         "description":"Securely share your documents with your colleagues Work space share",
         "engagementscore" : "60%",
         "engagementimpact" : 3,
@@ -1240,7 +1251,7 @@
     {
         "id":88,
         "campaignType":"Features",
-        "userGroup":"Office goers<br>Engagement score (0% - 90%)",
+        "userGroup":"Office goers",
         "description":"Securely share your documents with your colleagues Work space share",
         "engagementscore" : "90%",
         "engagementimpact" : 2,
@@ -1252,7 +1263,7 @@
     {
         "id":89,
         "campaignType":"Features",
-        "userGroup":"Friends and family - Leisure photographers<br>Engagement score (0% - 90%)",
+        "userGroup":"Friends and family - Leisure photographers",
         "description":"Never worry about deleting files with increased storage space",
         "engagementscore" : "90%",
         "engagementimpact" : 12,
@@ -1264,7 +1275,7 @@
     {
         "id":90,
         "campaignType":"Features",
-        "userGroup":"Friends and family<br>Engagement score (0% - 90%)",
+        "userGroup":"Friends and family",
         "description":"Never worry about deleting files with increased storage space",
         "engagementscore" : "90%",
         "engagementimpact" : 7,
@@ -1276,7 +1287,7 @@
     {
         "id":91,
         "campaignType":"Features",
-        "userGroup":"Creative Agencies<br>Engagement score (0% - 90%)",
+        "userGroup":"Creative Agencies",
         "description":"Access files from any where, Become pro and increase your cloud storage space upto 10 GB",
         "engagementscore" : "90%",
         "engagementimpact" : 2,
@@ -1288,7 +1299,7 @@
     {
         "id":92,
         "campaignType":"Features",
-        "userGroup":"Office goers - Project Managers<br>Engagement score (0% - 90%)",
+        "userGroup":"Office goers - Project Managers",
         "description":"Now use key words to search through files; using Full text search",
         "engagementscore" : "90%",
         "engagementimpact" : 2,
@@ -1300,7 +1311,7 @@
     {
         "id":93,
         "campaignType":"Features",
-        "userGroup":"Office goers - Bankers<br>Engagement score (0% - 90%)",
+        "userGroup":"Office goers - Bankers",
         "description":"Now use key words to search through files; using Full text search",
         "engagementscore" : "90%",
         "engagementimpact" : 1,
@@ -1311,11 +1322,11 @@
     }
     
     ],
-"Online video and audio streaming":[
+"Online streaming":[
     {
         "id": 60,
         "campaignType":"Features",
-        "userGroup": "Teachers - Schools and colleges<br>Engagement score (70% - 100%)",
+        "userGroup": "Teachers - Schools and colleges",
         "description": "Your students can play your video clippings at desired speed ensuring they grasp the content",
         "engagementscore" : "100%",
         "engagementimpact" : 19,
@@ -1326,7 +1337,7 @@
     {
         "id": 7,
         "campaignType":"Features",
-        "userGroup": "Musicians - Budding Artists<br>Engagement score (70% - 100%)",
+        "userGroup": "Musicians - Budding Artists",
         "description": "Share music recorded on phone. Recipients can listen to your music without loss of quality.",
         "engagementscore" : "100%",
         "engagementimpact" : 17,
@@ -1337,7 +1348,7 @@
     {
         "id": 33,
         "campaignType":"Features",
-        "userGroup": "Teachers - Schools and colleges<br>Engagement score (0% - 50%)",
+        "userGroup": "Teachers - Schools and colleges",
         "description": "Share lectures recorded on phone. Students can listen to your clippings without loss of quality.",
         "engagementscore" : "50%",
         "engagementimpact" : 13,
@@ -1348,7 +1359,7 @@
     {
         "id": 19,
         "campaignType":"User Groups",
-        "userGroup": "Musicians - Professional Music Composers<br>Engagement score (50% - 70%)",
+        "userGroup": "Musicians - Professional Music Composers",
         "description": "Share HD quality files with your close network.",
         "engagementscore" : "70%",
         "engagementimpact" : 12,
@@ -1359,7 +1370,7 @@
     {
         "id":23,
         "campaignType":"Features",
-        "userGroup":"Musicians - Professional Music Composers<br>Engagement score (50% - 70%)",
+        "userGroup":"Musicians - Professional Music Composers",
         "description":"Share compositions with select group and get inline feedback and annotations.",
         "engagementscore" : "100%",
         "engagementimpact" : 10,
@@ -1371,7 +1382,7 @@
     {
         "id":83,
         "campaignType":"Features",
-        "userGroup":"Musicians - Professional Music Composers<br>Engagement score (0% - 50%)",
+        "userGroup":"Musicians - Professional Music Composers",
         "description":"Recipients can stream your music on any device without perceivable loss of quality",
         "engagementscore" : "50%",
         "engagementimpact" : 8,
@@ -1383,7 +1394,7 @@
     {
         "id":66,
         "campaignType":"Features",
-        "userGroup":"Creative Agencies<br>Engagement score (0% - 50%)",
+        "userGroup":"Creative Agencies",
         "description":"Secure forward your composition to your clients, ensuring the confidentiality of the work",
         "engagementscore" : "50%",
         "engagementimpact" : 5,
@@ -1397,7 +1408,7 @@
     {  
       "id":94,
       "campaignType":"Features",
-      "userGroup":"Office goers - Bankers<br>Engagement score (0% - 70%)",
+      "userGroup":"Office goers - Bankers",
       "description":"Get full user access control on your shared confidential files",
       "engagementscore":"70%",
       "engagementimpact":31,
@@ -1409,7 +1420,7 @@
    {  
       "id":69,
       "campaignType":"Features",
-      "userGroup":"Office goers - Consultants<br>Engagement score (0% - 20%)",
+      "userGroup":"Office goers - Consultants",
       "description":"See your team’s work evolve over time through our visual collaboration tool",
       "engagementscore":"20%",
       "engagementimpact":27,
@@ -1421,7 +1432,7 @@
    {  
       "id":70,
       "campaignType":"Features",
-      "userGroup":"Office goers - C-level executives<br>Engagement score (0% - 60%)",
+      "userGroup":"Office goers - C-level executives",
       "description":"Unite your team on a single platform where all their work is saved and shared",
       "engagementscore":"60%",
       "engagementimpact":26,
@@ -1433,7 +1444,7 @@
    {  
       "id":71,
       "campaignType":"Features",
-      "userGroup":"Office goers - Bankers<br>Engagement score (0% - 80%)",
+      "userGroup":"Office goers - Bankers",
       "description":"Share confidential financial reports with your clients with high level of data security in place",
       "engagementscore":"80%",
       "engagementimpact":24,
@@ -1443,9 +1454,9 @@
       "execute":"no"
    },
    {  
-      "id":72,
+      "id":5,
       "campaignType":"Features",
-      "userGroup":"Office goers - Project Managers<br>Engagement score (0% - 50%)",
+      "userGroup":"Office goers - Project Managers",
       "description":"Unite your team on a single platform where all their work is saved and shared",
       "engagementscore":"50%",
       "engagementimpact":23,
@@ -1457,19 +1468,19 @@
    {  
       "id":73,
       "campaignType":"Features",
-      "userGroup":"Office goers - C-level executives<br>Engagement score (0% - 20%)",
+      "userGroup":"Office goers - C-level executives",
       "description":"Securely share and access files from your mobile devices using Enterprise Mobility Management",
       "engagementscore":"20%",
       "engagementimpact":22,
       "impact":"Engagement score of Office goers will increase by 22 percent",
-      "featurePromoted":"Integration with EMM (Enterprise Mobility Management)",
+      "featurePromoted":"Integration with EMM",
       "wishlist":"no",
       "execute":"no"
    },
    {  
       "id":74,
       "campaignType":"Features",
-      "userGroup":"Office goers - Project Managers<br>Engagement score (0% - 40%)",
+      "userGroup":"Office goers - Project Managers",
       "description":"Focus on creating great work and not on managing feedback. Collaborate with your team anywhere anytime.",
       "engagementscore":"40%",
       "engagementimpact":18,
@@ -1481,7 +1492,7 @@
    {  
       "id":75,
       "campaignType":"Features",
-      "userGroup":"Friends and family<br>Engagement score (0% - 40%)",
+      "userGroup":"Friends and family",
       "description":"Single account for your entire family",
       "engagementscore":"40%",
       "engagementimpact":4,
@@ -1495,7 +1506,7 @@
 {  
       "id":76,
       "campaignType":"Features",
-      "userGroup":"Friends and family<br>Engagement score (0% - 50%)",
+      "userGroup":"Friends and family",
       "description":"Never lose your cherished memories. Automatic back-up of your photos from all devices",
       "engagementscore":"50%",
       "engagementimpact":5,
@@ -1509,7 +1520,7 @@
     {  
       "id":77,
       "campaignType":"Features",
-      "userGroup":"Musicians - Budding Artists<br>Engagement score (0% - 30%)",
+      "userGroup":"Musicians - Budding Artists",
       "description":"Record, listen and share your music on the go. Download mobile app",
       "engagementscore":"30%",
       "engagementimpact":12,
@@ -1521,7 +1532,7 @@
    {  
       "id":78,
       "campaignType":"Features",
-      "userGroup":"Friends and family - Leisure photographers<br>Engagement score (0% - 50%)",
+      "userGroup":"Friends and family - Leisure photographers",
       "description":"Upload on the go photos using the Mobile App",
       "engagementscore":"50%",
       "engagementimpact":8,
@@ -1533,7 +1544,7 @@
    {  
       "id":79,
       "campaignType":"Features",
-      "userGroup":"Office Goers<br>Engagement score (0% - 50%)",
+      "userGroup":"Office Goers",
       "description":"Manage your work on the go, download mobile app now",
       "engagementscore":"50%",
       "engagementimpact":6,
@@ -1547,7 +1558,7 @@
     {  
       "id":80,
       "campaignType":"Features",
-      "userGroup":"Office goers<br>Engagement score (0% - 20%)",
+      "userGroup":"Office goers",
       "description":"Add personal and official signature to your files",
       "engagementscore":"20%",
       "engagementimpact":32,
@@ -1559,7 +1570,7 @@
    {  
       "id":81,
       "campaignType":"Features",
-      "userGroup":"Creative Agencies<br>Engagement score (0% - 20%)",
+      "userGroup":"Creative Agencies",
       "description":"Add personal and official signature to your content",
       "engagementscore":"20%",
       "engagementimpact":7,
@@ -1573,7 +1584,7 @@
     {  
       "id":82,
       "campaignType":"Features",
-      "userGroup":"Creative Agencies<br>Engagement score (0% - 20%)",
+      "userGroup":"Creative Agencies",
       "description":"Securely share your documents with your colleagues Work space share",
       "engagementscore":"20%",
       "engagementimpact":15,
@@ -1585,7 +1596,7 @@
    {  
       "id":83,
       "campaignType":"Features",
-      "userGroup":"Creative Agencies<br>Engagement score (0% - 10%)",
+      "userGroup":"Creative Agencies",
       "description":"Now read all your documents in Microsoft 365 Integration",
       "engagementscore":"10%",
       "engagementimpact":8,
@@ -1599,7 +1610,7 @@
     {  
       "id":84,
       "campaignType":"Features",
-      "userGroup":"Office goers - Operations teams<br>Engagement score (0% - 20%)",
+      "userGroup":"Office goers - Operations teams",
       "description":"Update your files online without losing any previous version. Our in-built version control takes care.",
       "engagementscore":"20%",
       "engagementimpact":19,
@@ -1611,7 +1622,7 @@
    {  
       "id":85,
       "campaignType":"Features",
-      "userGroup":"Office goers<br>Engagement score (0% - 40%)",
+      "userGroup":"Office goers",
       "description":"Edit, control and manage your work without errors, using Version control",
       "engagementscore":"40%",
       "engagementimpact":9,
@@ -1625,7 +1636,7 @@
     {  
       "id":86,
       "campaignType":"Features",
-      "userGroup":"Office goers - Project Managers<br>Engagement score (0% - 20%)",
+      "userGroup":"Office goers - Project Managers",
       "description":"Securely share your documents with your colleagues Work space share",
       "engagementscore":"20%",
       "engagementimpact":5,
@@ -1637,7 +1648,7 @@
    {  
       "id":87,
       "campaignType":"Features",
-      "userGroup":"Office goers<br>Engagement score (0% - 60%)",
+      "userGroup":"Office goers",
       "description":"Securely share your documents with your colleagues Work space share",
       "engagementscore":"60%",
       "engagementimpact":3,
@@ -1649,7 +1660,7 @@
    {  
       "id":88,
       "campaignType":"Features",
-      "userGroup":"Office goers<br>Engagement score (0% - 90%)",
+      "userGroup":"Office goers",
       "description":"Securely share your documents with your colleagues Work space share",
       "engagementscore":"90%",
       "engagementimpact":2,
@@ -1663,7 +1674,7 @@
     {  
       "id":89,
       "campaignType":"Features",
-      "userGroup":"Friends and family - Leisure photographers<br>Engagement score (0% - 90%)",
+      "userGroup":"Friends and family - Leisure photographers",
       "description":"Never worry about deleting files with increased storage space",
       "engagementscore":"90%",
       "engagementimpact":12,
@@ -1675,7 +1686,7 @@
    {  
       "id":90,
       "campaignType":"Features",
-      "userGroup":"Friends and family<br>Engagement score (0% - 90%)",
+      "userGroup":"Friends and family",
       "description":"Never worry about deleting files with increased storage space",
       "engagementscore":"90%",
       "engagementimpact":7,
@@ -1687,7 +1698,7 @@
    {  
       "id":91,
       "campaignType":"Features",
-      "userGroup":"Creative Agencies<br>Engagement score (0% - 90%)",
+      "userGroup":"Creative Agencies",
       "description":"Access files from any where, Become pro and increase your cloud storage space upto 10 GB",
       "engagementscore":"90%",
       "engagementimpact":2,
@@ -1701,7 +1712,7 @@
     {  
       "id":92,
       "campaignType":"Features",
-      "userGroup":"Office goers - Project Managers<br>Engagement score (0% - 90%)",
+      "userGroup":"Office goers - Project Managers",
       "description":"Now use key words to search through files; using Full text search",
       "engagementscore":"90%",
       "engagementimpact":2,
@@ -1713,7 +1724,7 @@
    {  
       "id":93,
       "campaignType":"Features",
-      "userGroup":"Office goers - Bankers<br>Engagement score (0% - 90%)",
+      "userGroup":"Office goers - Bankers",
       "description":"Now use key words to search through files; using Full text search",
       "engagementscore":"90%",
       "engagementimpact":1,
@@ -1735,8 +1746,8 @@
 								"color":"#1b6395"
 							},
 							"targetedUsers":[
-							{"size": "456,384" ,"male":"42%","female":"58%","activeUsers":"261,905","appUsersPercentage":"22%","appUsers": "145,872" ,
-							"name":"Photographers","imageClass":"photographers-image",
+							{"size": "456,384" ,"male":"42%","female":"58%","activeUsers":"261,905","appUsersPercentage":"32%","appUsers": "145,872" ,
+							"name":"Budding Artists","imageClass":"musicians-image",
 							"gender":{
 						        		"name":["male","female"],
 						        		"values":[42, 58],
@@ -1756,43 +1767,44 @@
                                             {"feature":"Automatic Backup","currentUsageLevel":7,"ideaUsagelevel":7,"impactOnEGScore":"0.10%"}],
 							"onGoingCampaign":[{"campaignID":923,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 1.2%","Channel":"Home page Advertisement","startDate":"03/03/2015"},
 {"campaignID":562,"campaignDescription":"Welcome Campaign","Impact":"Activity of users increased by 5%","Channel":"Inbox Message","startDate":"02/02/2014"}],
-							"pastCampaign":[{"campaignID":12,"campaignDescription":"Play at 0.5X, 1X, 1.5X and 2X speed","Impact":"Activity of users increased by 0.5%","Channel":"Banner Ad","startDate":"10/09/2014"},
-{"campaignID":901,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 2%","Channel":"Inbox Message","startDate":"05/01/2015"}]
+							"pastCampaign":[{"campaignID":12,"campaignDescription":"Play at 0.5X, 1X, 1.5X and 2X speed","Impact":"Activity of users increased by 0.5%","Channel":"Banner Ad","endDate":"10/09/2014"},
+{"campaignID":901,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 2%","Channel":"Inbox Message","endDate":"05/01/2015"}]
 						}
 				},
-				"57":{
-						"userGroup":{
-							"trend":{
-								"name":["Jan", "Feb", "Mar", "Apr","May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-								"values":[11313,15647,13093,10001,8907,9732,10123,11963,10438,8003,12900,13631],
-								"color":"#1b6395"
-							},
-							"targetedUsers":[
-							{"size": "34,265" ,"male":"77%","female":"23%","activeUsers":"56%","appUsersPercentage":"56%","appUsers": "15%" ,
-							"name":"Project Managers","imageClass":"enterprise-image",
-							"gender":{
-						        		"name":["male","female"],
-						        		"values":[62, 38],
-						        		"color":["#F5874F", "#ADADAD"]
-						        	}
-        					}],
-							"incrementalImpact":[{"revenue":"2,932,200","paidUsers":"24,435","F2PconversionRate":" 0.9%","EGScore":" 20%"}],
-							"reasons":["Additional 17% Project Managers (2398 users) and subsequently 56% Operations team (49264 users) expected to adopt team sign-up", "Team sign-up leads to additional 61% activity and in-turn 23% overall increase in conversion for the UG"]
-						},
-						"tableData":{
-							"productUsage":[{"feature":"Team Sign-ups","currentUsageLevel":5,"ideaUsagelevel":12,"impactOnEGScore":"0.73%"},
-											{"feature":"eSign","currentUsageLevel":2,"ideaUsagelevel":7,"impactOnEGScore":"1.60%"},
-											{"feature":"User privileges","currentUsageLevel":4,"ideaUsagelevel":9,"impactOnEGScore":"1.55%"},
-											{"feature":"Visual collaboration","currentUsageLevel":12,"ideaUsagelevel":21,"impactOnEGScore":"0.55%"},
-											{"feature":"Integration with EMM","currentUsageLevel":1,"ideaUsagelevel":8,"impactOnEGScore":"0.80%"},
+                "5":{
+                        "userGroup":{
+                            "trend":{
+                                "name":["Jan", "Feb", "Mar", "Apr","May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                                "values":[11313,15647,13093,10001,8907,9732,10123,11963,10438,8003,12900,13631],
+                                "color":"#1b6395"
+                            },
+                            "targetedUsers":[
+                            {"size": "34,265" ,"male":"77%","female":"23%","activeUsers":"56%","appUsersPercentage":"15%","appUsers": "15%" ,
+                            "name":"Project Managers","imageClass":"project-manager-image",
+                                "gender":{
+                                            "name":["male","female"],
+                                            "values":[62, 38],
+                                            "color":["#F5874F", "#ADADAD"]
+                                        }
+                            }],
+                            "incrementalImpact":[{"revenue":"2,932,200","paidUsers":"24,435","F2PconversionRate":" 0.9%","EGScore":" 20%"}],
+                            "reasons":["Additional 17% Project Managers (2398 users) and subsequently 56% Operations team (49264 users) expected to adopt team sign-up", "Team sign-up leads to additional 61% activity and in-turn 23% overall increase in conversion for the UG"]
+                        },
+                        "tableData":{
+                            "productUsage":[{"feature":"Team Sign-ups","currentUsageLevel":5,"ideaUsagelevel":12,"impactOnEGScore":"0.73%"},
+                                            {"feature":"eSign","currentUsageLevel":2,"ideaUsagelevel":7,"impactOnEGScore":"1.60%"},
+                                            {"feature":"User privileges","currentUsageLevel":4,"ideaUsagelevel":9,"impactOnEGScore":"1.55%"},
+                                            {"feature":"Visual collaboration","currentUsageLevel":12,"ideaUsagelevel":21,"impactOnEGScore":"0.55%"},
+                                            {"feature":"Integration with EMM","currentUsageLevel":1,"ideaUsagelevel":8,"impactOnEGScore":"0.80%"},
                                             {"feature":"Data security","currentUsageLevel":7,"ideaUsagelevel":11,"impactOnEGScore":"1.42%"},
                                             {"feature":"Version control","currentUsageLevel":7,"ideaUsagelevel":8,"impactOnEGScore":"0.40%"}],
-							"onGoingCampaign":[{"campaignID":542,"campaignDescription":"See your team’s work evolve over time through our visual collaboration tool","Impact":"Activity of users increased by 2%","Channel":"Home page Advertisement","startDate":"01/06/2015"},
+                            "onGoingCampaign":[{"campaignID":542,"campaignDescription":"See your team’s work evolve over time through our visual collaboration tool","Impact":"Activity of users increased by 2%","Channel":"Home page Advertisement","startDate":"01/06/2015"},
 {"campaignID":213,"campaignDescription":"Update your files online without losing any previous version. Our in-built version control takes care.","Impact":"Activity of users increased by 5%","Channel":"Inbox Message","startDate":"02/02/2014"}],
-							"pastCampaign":[{"campaignID":243,"campaignDescription":"Share your files directly with your contacts","Impact":"Activity of users increased by 0.5%","Channel":"Banner Ad","endDate":"01/01/2015"},
+                            "pastCampaign":[{"campaignID":243,"campaignDescription":"Share your files directly with your contacts","Impact":"Activity of users increased by 0.5%","Channel":"Banner Ad","endDate":"01/01/2015"},
 {"campaignID":67,"campaignDescription":"Add personal and official signature to your files","Impact":"Activity of users increased by 2%","Channel":"Inbox Message","endDate":"05/01/2015"}]
-						}
-				},
+                        }
+                },
+	
 				
 				
 				"1":{
@@ -2055,7 +2067,7 @@
 				        	}
 						}
 				},
-				"5":{
+				"0":{
 					"impact":{
 						"conversion":{
 							"data":[{

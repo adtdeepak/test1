@@ -165,7 +165,7 @@
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "304",
-                        "trend": "-ve"
+                        "trend": "+ve"
                     },
                     "versusSameLastYear": {
                         "value": "7820",
@@ -436,7 +436,7 @@
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "4632",
-                        "trend": "-ve"
+                        "trend": "+ve"
                     },
                     "versusSameLastYear": {
                         "value": "32024",
@@ -447,7 +447,7 @@
                         "trend": "+ve"
                     },
                     "Percentageactiveusers": {
-                        "value": "6.4%",
+                        "value": "6.5%",
                         "trend": "+ve"
                     },
                     "AvgCountperuser": {
@@ -707,7 +707,7 @@
                     "groupName": "engagementActivity",
                     "versusLast": {
                         "value": "23000",
-                        "trend": "-ve"
+                        "trend": "+ve"
                     },
                     "versusSameLastYear": {
                         "value": "96253",
@@ -977,11 +977,11 @@
                     "subgroupName": "Online Videos",
                     "groupName": "engagementActivity",
                     "versusLast": {
-                        "value": "37625",
-                        "trend": "-ve"
+                        "value": "375625",
+                        "trend": "+ve"
                     },
                     "versusSameLastYear": {
-                        "value": "37625",
+                        "value": "375625",
                         "trend": "+ve"
                     },
                     "Numberofactivities": {
@@ -990,7 +990,7 @@
                     },
                     "Percentageactiveusers": {
                         "value": "5.5%",
-                        "trend": "-ve"
+                        "trend": "+ve"
                     },
                     "AvgCountperuser": {
                         "value": "1.4",

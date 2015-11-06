@@ -27,7 +27,7 @@
                     "menuItemID": "m_Microsoft365integrations",
                     "menuItemName": "Microsoft 365 integration",
                     "menuType": "module",
-                    "checked": true
+                    "checked": false
                 },
                 {
                     "menuItemID": "m_VersionControl",
@@ -39,7 +39,7 @@
                     "menuItemID": "m_Videosenders",
                     "menuItemName": "Online Videos",
                     "menuType": "module",
-                    "checked": false
+                    "checked": true
                 },
                 {
                     "menuItemID": "m_WorkspaceshareUsers",

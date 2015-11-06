@@ -186,7 +186,7 @@ angular.module('AnalyticsApp')
 						'</div>'+
 						'<div  style="padding:20px !important;" class="widget-content metric-widgets">'+
 							'<div class="row-fluid">'+
-								'<div class="actual-value">'+'<span  style="color: #adadad;">$'+data.userGroup.incrementalImpact[0].revenue+'</span>'+'</div>'+
+								'<div style="background-position:25px" class="actual-value upArrow">'+'<span  style="color: #adadad;">$'+data.userGroup.incrementalImpact[0].revenue+'</span>'+'</div>'+
 							'</div>'+							
 						'</div>'+
 					'</div>'+
@@ -238,7 +238,7 @@ angular.module('AnalyticsApp')
 				'</div>'+
                     '<div  style="padding:15px;">'+
                     '<div style="width:100%; float:left;">'+
-                    '<p style="border: 1px solid #ccc; font-size: 14px;   padding: 10px;    width: 50%;">'+'<b>Reasons</b><br/>'+data.userGroup.reasons[0]+'<br/>'+data.userGroup.reasons[1]+'</p>'+
+                    '<p style="border: 1px solid #ccc; font-size: 14px;   padding: 10px;    width: 100%;">'+'<b>Reasons</b><br/>'+data.userGroup.reasons[0]+'<br/>'+data.userGroup.reasons[1]+'</p>'+
                     '</div>'+                   
                     '</div>'+
                     '</div>'+

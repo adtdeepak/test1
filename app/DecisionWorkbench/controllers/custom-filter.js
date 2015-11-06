@@ -6,7 +6,7 @@ angular.module('DecisionWorkbench')
 	$scope.UserGroup = [{"key":"All Users","selected":false,"index":0},{"key":"Office Goers","selected": false,"index":1},{"key":"Teachers","selected": false,"index":2},
 	                        {"key":"Musicians","selected": false,"index":3},{"key":"Creative Agencies","selected": false,"index":4},{"key":"Family And Friends","selected": false,"index":5}];
 	
-	$scope.Feature = [{"key":"Online video and audio streaming","selected":false},{"key":"Collaborate","selected": false},{"key":"Automatic Backup","selected": false},
+	$scope.Feature = [{"key":"Online streaming","selected":false},{"key":"Collaborate","selected": false},{"key":"Automatic Backup","selected": false},
 	                        {"key":"Mobile App","selected": false},{"key":"eSign","selected": false}, {"key":"Microsoft 365 Integration","selected": false},{"key":"Version Control","selected": false},{"key":"Workspace Share","selected": false},
 	                        {"key":"Full Text Search","selected": false},{"key":"Storage Space","selected": false},{"key":"All Features","selected": false}];
 	$scope.engagementimpact = [{"key":"1%","selected": false},{"key":"2%","selected": false},{"key":"3%","selected": false},{"key":"4%","selected": false},{"key":"5%","selected": false},{"key":"6%","selected": false},{"key":"7%","selected": false},{"key":"8%","selected": false},{"key":"9%","selected": false},{"key":"10%","selected": false},{"key":"11%","selected": false},{"key":"12%","selected": false},{"key":"13%","selected": false},{"key":"14%","selected": false},{"key":"15%","selected": false}];                       

@@ -71,7 +71,7 @@ angular.module('Analysis')
 			$scope.error = false;
 			$scope.options.aaData = [];
 			$.each(data, function(key, obj) {
-					$scope.options.aaData.push([ obj.name, obj.ProjectManagers, obj.FinanceExecutives,  obj.Photographers, obj.Musicians, obj.CreativeAgencies]);
+					$scope.options.aaData.push([ obj.name, obj.OfficeGoers, obj.Teachers,  obj.Musicians, obj.CreativeAgencies, obj.FriendsAndFamily]);
 				})
 		} catch (e) {
 			//$scope.fail(errorConstants.DATA_ERR);
@@ -86,7 +86,7 @@ angular.module('Analysis')
 			$scope.error = false;
 			$scope.productProfileOptions.aaData = [];
 			$.each(productProfileData, function(key, obj) {
-				$scope.productProfileOptions.aaData.push([ obj.name, obj.ProjectManagers, obj.FinanceExecutives,  obj.Photographers, obj.Musicians, obj.CreativeAgencies]);
+				$scope.productProfileOptions.aaData.push([ obj.name, obj.OfficeGoers, obj.Teachers,  obj.Musicians, obj.CreativeAgencies, obj.FriendsAndFamily]);
 			})
 		} catch (e) {
 			//$scope.fail(errorConstants.DATA_ERR);
@@ -101,7 +101,7 @@ angular.module('Analysis')
 			$scope.error = false;
 			$scope.productUsageOptions.aaData = [];
 			$.each(data, function(key, obj) {
-					$scope.productUsageOptions.aaData.push([ obj.name, obj.ProjectManagers, obj.FinanceExecutives,  obj.Photographers, obj.Musicians, obj.CreativeAgencies]);
+					$scope.productUsageOptions.aaData.push([ obj.name, obj.OfficeGoers, obj.Teachers,  obj.Musicians, obj.CreativeAgencies, obj.FriendsAndFamily]);
 				})
 		} catch (e) {
 			//$scope.fail(errorConstants.DATA_ERR);
@@ -116,7 +116,7 @@ angular.module('Analysis')
 			$scope.error = false;
 			$scope.engagementOptions.aaData = [];
 			$.each(data, function(key, obj) {
-					$scope.engagementOptions.aaData.push([ obj.name, obj.ProjectManagers, obj.FinanceExecutives,  obj.Photographers, obj.Musicians, obj.CreativeAgencies]);
+					$scope.engagementOptions.aaData.push([ obj.name, obj.OfficeGoers, obj.Teachers,  obj.Musicians, obj.CreativeAgencies, obj.FriendsAndFamily]);
 				})
 		} catch (e) {
 			//$scope.fail(errorConstants.DATA_ERR);
@@ -130,7 +130,7 @@ angular.module('Analysis')
 			$scope.error = false;
 			$scope.currentCampaignOptions.aaData = [];
 			$.each(data, function(key, obj) {
-					$scope.currentCampaignOptions.aaData.push([ obj.name, obj.ProjectManagers, obj.FinanceExecutives,  obj.Photographers, obj.Musicians, obj.CreativeAgencies]);
+					$scope.currentCampaignOptions.aaData.push([ obj.name, obj.OfficeGoers, obj.Teachers,  obj.Musicians, obj.CreativeAgencies, obj.FriendsAndFamily]);
 				})
 		} catch (e) {
 			//$scope.fail(errorConstants.DATA_ERR);

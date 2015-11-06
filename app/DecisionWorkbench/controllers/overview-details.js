@@ -7,7 +7,7 @@ angular.module('DecisionWorkbench')
 	$scope.selectedGroup = [{"key":"All Users","selected":false,"index":0},{"key":"Office Goers","selected": false,"index":1},{"key":"Teachers","selected": false,"index":2},
 	                        {"key":"Musicians","selected": false,"index":3},{"key":"Creative Agencies","selected": false,"index":4},{"key":"Family And Friends","selected": false,"index":5}];
 	
-	$scope.selectedFeature = [{"key":"Online video and audio streaming","selected":false},{"key":"Collaborate","selected": false},{"key":"Automatic Backup","selected": false},
+	$scope.selectedFeature = [{"key":"Online streaming","selected":false},{"key":"Collaborate","selected": false},{"key":"Automatic Backup","selected": false},
 	                        {"key":"Mobile App","selected": false},{"key":"eSign","selected": false}, {"key":"Microsoft 365 Integration","selected": false},{"key":"Version Control","selected": false},{"key":"Workspace Share","selected": false},
 	                        {"key":"Full Text Search","selected": false},{"key":"Storage Space","selected": false},{"key":"All Features","selected": false}];
 
@@ -173,7 +173,7 @@ angular.module('DecisionWorkbench')
 		var dataSet1 = [];
 		var accordianTrendData = $scope.otherAccordianData["All Users"][$scope.selectedRowId];
 		$scope.userGroupData =  $scope.otherAccordianData["All Users"][$scope.selectedRowId].userGroup.targetedUsers[0];
-		console.log("$scope.userGroupData:", $scope.userGroupData)
+		console.log("$scope.userGroupData:", $scope.userGroupData);
 		$.each(dataSetObjProduct, function (key, obj) {
 			dataSet.push([obj.feature,
 			              obj.currentUsageLevel,
