@@ -228,7 +228,7 @@ hr {
     -moz-border-left-colors: none;
     -moz-border-right-colors: none;
     -moz-border-top-colors: none;
-    border-color: #eee -moz-use-text-color -moz-use-text-color;
+    border-color: #eee;
     border-image: none;
     border-style: solid none none;
     border-width: 1px 0 0;
