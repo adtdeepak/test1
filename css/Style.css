@@ -8776,6 +8776,21 @@ div#progressBar {
 .project-manager-image {
 	background-image: url('../images/campaign-icons/project-manager.png');
 }
+.teacher-image {
+	background-image: url('../images/campaign-icons/teacher.png');
+}
+.office-goers-image {
+	background-image: url('../images/campaign-icons/office-goers.png');
+}
+.family-friends-image {
+	background-image: url('../images/campaign-icons/family&friends.png');
+}
+.Video-Audio-image {
+	background-image: url('../images/campaign-icons/audio&vd.png');
+}
+.cloud-image {
+	background-image: url('../images/campaign-icons/cloud-file.png');
+}
 
 .enterprise-image {
 	background-image: url('../images/campaign-icons/enterprise.png');
