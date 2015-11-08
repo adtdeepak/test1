@@ -97,7 +97,7 @@ angular.module('Tracking')
 			$scope.userGroup = $scope.successData[$rootScope.selectedPeriod];
 			$.each($scope.successData[$rootScope.selectedPeriod], function(key, value){
 				if(value.groupBy == $scope.select){
-					//$scope.menu.setData($scope.userGroup);
+					$scope.menu.setData($scope.userGroup);
 					$scope.menu.selected(value);
 				}
 			})

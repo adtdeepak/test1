@@ -5,21 +5,21 @@
         "overall":{
         	"userTrend":{
         		"name":["Free Users", "Paid Users"],
-        		"values":[95, 5],
+        		"values":[94, 6],
         		"color":["#1B6395", "#999999"]
         	},
 			"data":{
 				"totalUser":{
-					"value":"3 Million",
-					"yoy":"10"
+					"value":" 5,367,253",
+					"yoy":"3.50"
 				},
 				"freeUser":{
-					"value":"2.9 Million",
-					"yoy":"13"
+					"value":" 5,045,218",
+					"yoy":"1.10"
 				},
 				"paidUser":{
-					"value":"147 K",
-					"yoy":"4"
+					"value":" 322,035",
+					"yoy":"3"
 				}
 			}
         	},
@@ -47,9 +47,9 @@
         		"color":["#1B6395", "#999999","#149AE3", "#56D8CA"]
         	},
         	"location":{
-        		"name":["Europe", "Asia", "Latin America", "North America", "Middle East", "Africa", "Oceania"],
-        		"values":[22.4, 14.6, 10.9, 43.3, 2.8, 3.6, 2.3],
-        		"color":["#05395D", "#999999","#149AE3", "#1B6395","#C5C4C4", "#555555","#56D8CA"]
+        		"name":["Northwest", "MidWest", "NorthEast", "South"],
+        		"values":[24, 15, 33, 28],
+        		"color":["#05395D", "#999999","#149AE3", "#1B6395"]
         	}
         	},
 			 "productUsage":{
@@ -59,12 +59,12 @@
         		"color": ["#1B6395", "#999999"]
         	},
         	"trendingFeatures":{
-        		"name":["Account Settings","Digital Sign","Company information","Folders","Contacts","Home Page","Profile"],
+        		"name":["Collaborate","Automatic Backup","Mobile App","Microsoft 365 Integration","Workspace Share","Online streaming","Version Control"],
         		"values":[22, 44, 59, 64, 67, 71, 80],
         		"color":"#fb7d7d"
         	},
         	"trendingActivities":{
-        		"name":["Send Files", "Premium Delivery", "Secure Share", "E-Sign", "Version Control", "Work Space Share"],
+        		"name":["Automatic Backup", "Visual collaboration", "Team Sign-ups", "Microsoft 365 Integration", "Workspace Share", "Share and stream using phone"],
         		"values":[76.9, 68.6, 38.3, 27.9,35, 38.2 ],
         		"color":"#1b6395"
         	},
@@ -84,7 +84,7 @@
         	"activeUsersTrendRevenue":{
         		"legend":"Revenue",
         		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
-        		"values":[2.5, 2.6, 2.8, 3, 3.5, 3.2, 3, 4.5, 5.3],
+        		"values":[5.10, 5.46, 6.06, 6.12, 5.28, 3.84, 4.56, 5.88, 6],
         		"color":"#05395d"},
 			"activeUsersTrendPaidusers":{
         		"legend":"Paid Users",
@@ -103,19 +103,19 @@
         		"color":"#05395d"},
 				"data":{
 				"TotalRevenue":{
-					"value":"42 Million",
+					"value":"$5.8 million",
 					"yoy":"2",
 					"name":"Total Revenue",
 					"id":"activeUsersTrendRevenue"
 				},
 				"PaidUser":{
-					"value":"147 K",
+					"value":" 322,035",
 					"yoy":"4",
 					"name":"Paid Users",
 					"id":"activeUsersTrendPaidusers"
 				},
 				"Freetopaidconversion":{
-					"value":"5",
+					"value":"6",
 					"yoy":"1.2",
 					"name":"Free to Paid Conversion",
 					"id":"activeUsersTrendF2P"
@@ -130,39 +130,39 @@
 		},
 		"campaignCalender":{
         "tableData":[{
-    		"CampaignID":"19",
-    		"userGroup":"Musicians",
-    		"description":"Create music by collaborating with other musicians anytime, anywhere.",
+    		"CampaignID":"12",
+            "userGroup":"Musicians - Professional Music Composers",
+            "description":"Share HD quality files with your close network.",
 			"targetUsers":"135751",
 			"response":"31222",
-			"Impact":"Increase engagement by 15%",
+			"Impact":"Engagement score of Musicians will increase by 12 percent",
     		"startDate":"12/01/2015",
     		"endDate":"12/31/2015"
     	},{
-    		"CampaignID":"21",
-    		"userGroup":"Photographers",
-    		"description":"Upoad on the go photos using the Mobile App",
-			"targetUsers":"416303",
+    		"CampaignID":"23",
+            "userGroup":"Teachers - Schools and colleges",
+            "description":"Your students can play your video clippings at desired speed ensuring they grasp the content",
+            "targetUsers":"416303",
 			"response":"99912",
-			"Impact":"Increase Engagement by 7%",
+			"Impact":"Engagement score of Teachers will increase by 19 percent",
     		"startDate":"12/01/2015",
     		"endDate":"12/31/2015"
     	},{
-    		"CampaignID":"73",
-    		"userGroup":"Creative Agencies",
-    		"description":"Edit, control and manage your work without errors, using Version control",
-			"targetUsers":"380103",
+    		"CampaignID":"99",
+            "userGroup":"Creative Agencies",
+            "description":"Secure forward your composition to your clients, ensuring the confidentiality of the work",
+            "targetUsers":"380103",
 			"response":"38000",
-			"Impact":"Campaign conversion rate 0.9%",
+			"Impact":"Engagement score of Creative agencies will increase by 5 percent",
     		"startDate":"12/01/2015",
     		"endDate":"12/31/2015"
     	},{
-    		"CampaignID":"87",
-    		"userGroup":"Project Managers",
-    		"description":"Audit, control and monitor file access rights",
-			"targetUsers":"316752",
+    		"CampaignID":"5",
+            "userGroup":"Office goers - Project Manager",
+            "description":"Unite your team on a single platform where all their work is saved and shared",
+            "targetUsers":"316752",
 			"response":"47512",
-			"Impact":"Campaign conversion rate 15%",
+            "Impact":"Engagement score of Office goers will increase by 23 percent",
     		"startDate":"12/01/2015",
     		"endDate":"12/31/2015"
     	}]

@@ -4,155 +4,147 @@
     "data": {
         "size":{
         	"allUsers":{
-        		"name":["Project Managers","Finance Executives","Photographers","Musicians","Creative Agencies"],
-        		"values":[458459,767042,606567,943418,316534 ],
-        		"color":["#C5C4C4", "#999999","#149AE3", "#1B6395", "#56D8CA"]
+        		"name":["Office Goers","Teachers","Musicians","Creative Agencies","Friends And Family","others"],
+        		"values":[268362.65,805088,912433,483053,2790972,107345 ],
+        		"color":["#C5C4C4", "#999999","#149AE3", "#1B6395", "#56D8CA","#149AE3"]
         	},
 			"freeUsers":{
-        		"name":["Project Managers","Finance Executives","Photographers","Musicians","Creative Agencies"],
-        		"values":[441675,736125,588900,883350,294450],
-        		"color":["#C5C4C4", "#999999","#149AE3", "#1B6395", "#56D8CA"]
+        		"name":["Office Goers","Teachers","Musicians","Creative Agencies","Friends And Family","others"],
+        		"values":[268362.65,805088,912433,483053,2790972,107345 ],
+        		"color":["#C5C4C4", "#999999","#149AE3", "#1B6395", "#56D8CA","#149AE3"]
         	},
 			"paidUsers":{
-        		"name":["Project Managers","Finance Executives","Photographers","Musicians","Creative Agencies"],
-        		"values":[16784, 30917, 17667, 60068, 22084],
-        		"color":["#C5C4C4", "#999999","#149AE3", "#1B6395", "#56D8CA"]
+        		"name":["Office Goers","Teachers","Musicians","Creative Agencies","Friends And Family","others"],
+        		"values":[268362.65,805088,912433,483053,2790972,107345 ],
+        		"color":["#C5C4C4", "#999999","#149AE3", "#1B6395", "#56D8CA","#149AE3"]
         	}
         },
         "freeToPaidConversion":{
-        		"name":["Project Managers", "Finance Executives", "Photographers", "Musicians", "Creative Agencies"],
+        		"name":["Office Goers","Teachers","Musicians","Creative Agencies","Friends And Family"],
         		"values":[4.5, 5.1, 2.1, 3.2, 1.5],
         		"color":"#fb7d7d"
         },
 		"revenue":{
         	"dollars":{
-        		"name":["Project Managers","Finance Executives","Photographers","Musicians","Creative Agencies"],
-        		"values":[4632210, 8843310, 5053320, 17265510, 6316650],
+        		"name":["Office Goers","Teachers","Musicians","Creative Agencies","Friends And Family","others"],
+        		"values":[10, 20, 22, 13, 30,5],
         		"color":["#C5C4C4", "#999999","#149AE3", "#1B6395", "#56D8CA"]
         	},
 			"percentage":{
-        		"name":["Project Managers","Finance Executives","Photographers","Musicians","Creative Agencies"],
-        		"values":[11, 21, 12, 41, 15],
-        		"color":["#C5C4C4", "#999999","#149AE3", "#1B6395", "#56D8CA"]
+        		"name":["Office Goers","Teachers","Musicians","Creative Agencies","Friends And Family","others"],
+        		"values":[10, 20, 22, 13, 30,5],
+        		"color":["#C5C4C4", "#999999","#149AE3", "#1B6395", "#56D8CA","#149AE3"]
         	}
         },
 		"DemographicProfile":[{
 			"name":"Percentage males",
-			"ProjectManagers":"60%",
-			"FinanceExecutives":"42%",
-			"Photographers":"61%",
-			"Musicians":"46%",
-			"CreativeAgencies":"65%"
+			"OfficeGoers":"60%",
+			"Teachers":"42%",
+			"Musicians":"61%",
+			"CreativeAgencies":"46%",
+			"FriendsAndFamily":"55%"
 		},
 		{
 			"name":"Median age",
-			"ProjectManagers":"35 years",
-			"FinanceExecutives":"45 years",
-			"Photographers":"28 years",
-			"Musicians":"32 years",
-			"CreativeAgencies":"38 years"
-		},
-		{
-			"name":"Region",
-			"ProjectManagers":"North America",
-			"FinanceExecutives":"Asia",
-			"Photographers":"Europe",
-			"Musicians":"Latin America",
-			"CreativeAgencies":"Global"
+			"OfficeGoers":"35 years",
+			"Teachers":"45 years",
+			"Musicians":"28 years",
+			"CreativeAgencies":"25 years",
+			"FriendsAndFamily":"38 years"
 		},
 		{
 			"name":"Percentage employed fulltime",
-			"ProjectManagers":"90%",
-			"FinanceExecutives":"75%",
-			"Photographers":"60%",
-			"Musicians":"44%",
-			"CreativeAgencies":"50%"
+			"OfficeGoers":"90%",
+			"Teachers":"75%",
+			"Musicians":"42%",
+			"CreativeAgencies":"65%",
+			"FriendsAndFamily":"50%"
 		}],
 		"ProductProfile":[{
 			"name":"Basic ($40)",
-			"ProjectManagers":"7,553",
-			"FinanceExecutives":"23,188",
-			"Photographers":"15,900",
-			"Musicians":"48,054",
-			"CreativeAgencies":"18,771"
+			"OfficeGoers":"7,553",
+			"Teachers":"23,188",
+			"Musicians":"15,900",
+			"CreativeAgencies":"48,054",
+			"FriendsAndFamily":"18,771"
 		},
 		{
 			"name":"Enterprise ($120)",
-			"ProjectManagers":"9,231",
-			"FinanceExecutives":"7,729",
-			"Photographers":"1,767",
-			"Musicians":"12,014",
-			"CreativeAgencies":"3,313"
+			"OfficeGoers":"9,231",
+			"Teachers":"7,729",
+			"Musicians":"1,767",
+			"CreativeAgencies":"12,014",
+			"FriendsAndFamily":"3,313"
 		}],
 		"ProductUsage":[{
 			"name":"Avg. login per week",
-			"ProjectManagers":"5",
-			"FinanceExecutives":"8",
-			"Photographers":"4",
-			"Musicians":"2",
-			"CreativeAgencies":"22"
+			"OfficeGoers":"5",
+			"Teachers":"8",
+			"Musicians":"4",
+			"CreativeAgencies":"2",
+			"FriendsAndFamily":"22"
 		},
 		{
 			"name":"Avg. time spent online per login",
-			"ProjectManagers":"30 mins",
-			"FinanceExecutives":"45 mins",
-			"Photographers":"15 mins",
-			"Musicians":"5 mins",
-			"CreativeAgencies":"10 mins"
+			"OfficeGoers":"30 mins",
+			"Teachers":"45 mins",
+			"Musicians":"15 mins",
+			"CreativeAgencies":"5 mins",
+			"FriendsAndFamily":"10 mins"
 		},{
 			"name":"Percentage active users",
-			"ProjectManagers":"40%",
-			"FinanceExecutives":"50%",
-			"Photographers":"25%",
-			"Musicians":"20%",
-			"CreativeAgencies":"30%"
+			"OfficeGoers":"40%",
+			"Teachers":"50%",
+			"Musicians":"25%",
+			"CreativeAgencies":"20%",
+			"FriendsAndFamily":"30%"
 		},
 		{
 			"name":"Profile status (Completed)",
-			"ProjectManagers":"40%",
-			"FinanceExecutives":"35%",
-			"Photographers":"65%",
-			"Musicians":"55%",
-			"CreativeAgencies":"55%"
+			"OfficeGoers":"40%",
+			"Teachers":"35%",
+			"Musicians":"65%",
+			"CreativeAgencies":"55%",
+			"FriendsAndFamily":"55%"
 		},{
 			"name":"Mobile app users",
-			"ProjectManagers":"35%",
-			"FinanceExecutives":"69%",
-			"Photographers":"80%",
-			"Musicians":"20%",
-			"CreativeAgencies":"40%"
+			"OfficeGoers":"35%",
+			"Teachers":"69%",
+			"Musicians":"80%",
+			"CreativeAgencies":"20%",
+			"FriendsAndFamily":"40%"
 		},
 		{
 			"name":"Favourite features",
-			"ProjectManagers":"Microsoft 365 Integration",
-			"FinanceExecutives":"eSign",
-			"Photographers":"Mobile App",
-			"Musicians":"Share",
-			"CreativeAgencies":"Collaborate"
+			"OfficeGoers":"Automatic Backup",
+			"Teachers":"eSign",
+			"Musicians":"Collaborate",
+			"CreativeAgencies":"Mobile App",
+			"FriendsAndFamily":"Automatic Backup"
 		}],
 		"Engagement":[{
 			"name":"Engagement score",
-			"ProjectManagers":"65",
-			"FinanceExecutives":"53",
-			"Photographers":"62",
-			"Musicians":"60",
-			"CreativeAgencies":"70"
+			"OfficeGoers":"25",
+			"Teachers":"45",
+			"Musicians":"63",
+			"CreativeAgencies":"55",
+			"FriendsAndFamily":"61"
 		}],
 		"CurrentCampaigns":[{
 			"name":"Campaign ID",
-			"ProjectManagers":"40",
-			"FinanceExecutives":"33",
-			"Photographers":"72",
-			"Musicians":"61",
-			"CreativeAgencies":"87"
+			"OfficeGoers":"40",
+			"Teachers":"33",
+			"Musicians":"72",
+			"CreativeAgencies":"61",
+			"FriendsAndFamily":"87"
 		},
 		{
 			"name":"Number of campaigns this year",
-			"ProjectManagers":"4",
-			"FinanceExecutives":"1",
-			"Photographers":"2",
-			"Musicians":"3",
-			"CreativeAgencies":"5"
+			"OfficeGoers":"4",
+			"Teachers":"1",
+			"Musicians":"2",
+			"CreativeAgencies":"3",
+			"FriendsAndFamily":"5"
 		}]
         
         

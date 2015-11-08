@@ -5,8 +5,8 @@ angular.module('Analysis')
 })
 
 .controller('customerAnalysisGroupsController', function($scope, CustomService, chartsService, ChartOptionsService, DataService, DataConversionService, $location) {
-	$scope.selectedGroup = [{"key":"All Users","selected":false},{"key":"Project Managers","selected": false},{"key":"Creative Agencies","selected": false},
-	                        {"key":"Finance Executives","selected": false},{"key":"Musicians","selected": false},{"key":"Photographers","selected": false}];
+	$scope.selectedGroup = [{"name":"All Users","key":"allusers","selected":false},{"name":"Office Goers","key":"officegoers","selected": false},{"name":"Teachers","key":"teachers","selected": false},
+	                        {"name":"Musicians","key":"musicians","selected": false},{"name":"Creative Agencies","key":"creativeagencies", "selected": false},{"name":"Friends And Family","key":"friendsandfamily","selected": false}];
 	function getSelectedGroupFromUrl(){
 		var urlIndex = $location.search();
 		if(urlIndex.currentlySelected){
