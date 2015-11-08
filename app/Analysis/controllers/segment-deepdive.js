@@ -5,8 +5,8 @@ angular.module('Analysis')
 })
 
 .controller('segmentDeepDiveController', function($scope, $rootScope, CustomService, chartsService, ChartOptionsService, DataService, DataConversionService, $location) {
-	$scope.selectedGroup = [{"name":"All Users","key":"allusers","selected":false},{"name":"Project Managers","key":"projectmanagers","selected": false},{"name":"Creative Agencies","key":"creativeagencies","selected": false},
-	                        {"name":"Finance Executives","key":"financeexecutives","selected": false},{"name":"Musicians","key":"musicians", "selected": false},{"name":"Photographers","key":"photographers","selected": false}];
+	$scope.selectedGroup = [{"name":"All Users","key":"allusers","selected":false},{"name":"Office Goers","key":"officegoers","selected": false},{"name":"Teachers","key":"teachers","selected": false},
+	                        {"name":"Musicians","key":"musicians","selected": false},{"name":"Creative Agencies","key":"creativeagencies", "selected": false},{"name":"Friends And Family","key":"friendsandfamily","selected": false}];
 	$rootScope.selectedUserGroup = "allusers";
 	function getSelectedGroupFromUrl(){
 		var urlIndex = $location.search();
