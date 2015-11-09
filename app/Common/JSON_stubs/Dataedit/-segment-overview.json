@@ -21,7 +21,7 @@
         },
         "freeToPaidConversion":{
         		"name":["Office Goers","Teachers","Musicians","Creative Agencies","Friends And Family"],
-        		"values":[4.5, 5.1, 2.1, 3.2, 1.5],
+        		"values":[3.4, 5.8, 5.7, 5.9, 5.0],
         		"color":"#fb7d7d"
         },
 		"revenue":{

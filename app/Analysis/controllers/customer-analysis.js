@@ -133,7 +133,7 @@ angular.module('Analysis')
 		chartOBJ = chartsService.basicBar.call($('#loginDurationColEng'),chartOptions, $scope);
 		
 		chartData = DataConversionService.getHorizontalBarChartData(deepdiveData.productUsage.trendingFeatures);
-	    chartOptions = ChartOptionsService.getTrendingBarChart(chartData, "Trending Features", "", 300, "#EE7E34");
+	    chartOptions = ChartOptionsService.getTrendingBarChart(chartData, "Conversion Drivers", "", 300, "#EE7E34");
 		chartOBJ = chartsService.basicBar.call($('#trendActProChart'),chartOptions, $scope);
 		
 		chartData = DataConversionService.getHorizontalBarChartData(deepdiveData.productUsage.trendingActivities);

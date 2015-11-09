@@ -281,7 +281,15 @@ angular.module('DecisionWorkbench')
 			},{
 				"sClass" : "row-expand-details"
 			}],
+            "order": [],
+            "columnDefs": [ {
+                    "targets"  : 'no-sort',
+                    "orderable": false
+            }],
 			"bPaginate":true,
+            "bSortable": false,
+            "aSortable" : false,
+            "orderable": false,
 			"iDisplayLength": 10,
 			'fnCreatedRow': function (nRow, aData, iDataIndex) {
 				  $.each($('td', nRow), function (colIndex) {
@@ -346,7 +354,7 @@ angular.module('DecisionWorkbench')
 	
 	function getAllUserTableData() {
 		var requestData = {};
-		var func = $scope.overallDataSuccess; 
+		var func = $scope.overallDataSuccess;
     	if (arguments[1]) { 
     		if (arguments[1].key == cacheKey) { 
     			func = null; 
