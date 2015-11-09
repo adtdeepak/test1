@@ -249,7 +249,7 @@ angular.module('Tracking')
 	$scope.success = function(uGTrendData) {
 		 try {
 			 if($rootScope.selectedPeriod == "weekly")
-					$scope.trendPeriod = "Sept 06 to Sept 12";
+					$scope.trendPeriod = "Sept 24 to Sept 30";
 				if($rootScope.selectedPeriod == "monthly")
 					$scope.trendPeriod = "Sept 01 to Sept 30";
 				if($rootScope.selectedPeriod == "quarterly")
