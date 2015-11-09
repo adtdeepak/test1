@@ -59,7 +59,7 @@
         		"color": ["#1B6395", "#999999"]
         	},
         	"trendingFeatures":{
-        		"name":["Collaborate","Automatic Backup","Mobile App","Microsoft 365 Integration","Workspace Share","Online streaming","Version Control"],
+        		"name":["Automatic back-up","Mobile App","Version Control","eSign","Visual Collaboration","Collaboration","Online Video and Audio Streaming"],
         		"values":[22, 44, 59, 64, 67, 71, 80],
         		"color":"#fb7d7d"
         	},
