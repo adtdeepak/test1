@@ -27,8 +27,8 @@ angular.module('Home')
     $scope.cancellations = {};
     $scope.subscriptions = {};
     $scope.registrations = {};
-    $scope.acqFunnelWidgets =[{"name":"Visitors","selected":true}, 
-                              {"name":"Registrations","selected":false},
+    $scope.acqFunnelWidgets =[{"name":"Visitors","selected":false}, 
+                              {"name":"Registrations","selected":true},
                               {"name":"Subscriptions","selected":false},
                               {"name":"Cancellations","selected":false}];
     
@@ -128,8 +128,8 @@ angular.module('Home')
     //Watch for SummaryExpired
     $rootScope.$on('onCacheExpiry', loadData);
     $scope.$on('periodChange', loadData);
-    $scope.widgetName = 'Visitors';
-    $scope.acqTrendTitle = 'Visitors';
+    $scope.widgetName = 'Registrations';
+    $scope.acqTrendTitle = 'Registrations';
     $rootScope.$on("acqFunnelWidget", function(event, widgetName){
         $scope.acqTrendTitle = widgetName;
         $scope.widgetName = widgetName;
