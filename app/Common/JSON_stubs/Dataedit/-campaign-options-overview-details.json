@@ -1738,7 +1738,7 @@
      "otherData":{
      
      	"All Users":{
-     	"25":{
+     	    "25":{
 						"userGroup":{
 							"trend":{
 								"name":["Jan", "Feb", "Mar", "Apr","May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
@@ -1771,7 +1771,370 @@
 {"campaignID":901,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 2%","Channel":"Inbox Message","endDate":"05/01/2015"}]
 						}
 				},
-                "5":{
+     	    "29":{
+						"userGroup":{
+							"trend":{
+								"name":["Jan", "Feb", "Mar", "Apr","May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+								"values":[11313,15647,13093,10001,8907,9732,10123,11963,10438,8003,12900,13631],
+								"color":"#1b6395"
+							},
+							"targetedUsers":[
+                            {"size": "34,265" ,"male":"77%","female":"23%","activeUsers":"56%","appUsersPercentage":"15%","appUsers": "15%" ,
+                            "name":"Project Managers","imageClass":"project-manager-image",
+                                "gender":{
+                                            "name":["male","female"],
+                                            "values":[62, 38],
+                                            "color":["#F5874F", "#ADADAD"]
+                                        }
+                            }],
+							"incrementalImpact":[{"revenue":"36,497","paidUsers":"456","F2PconversionRate":" 5%","EGScore":"23%"}],
+                            "reasons":["Additional 17% Project Managers (2398 users) and subsequently 56% Operations team (49264 users) expected to adopt team sign-up", "Team sign-up leads to additional 61% activity and in-turn 23% overall increase in conversion for the UG"]
+                        },
+                        "tableData":{
+                            "productUsage":[{"feature":"Team Sign-ups","currentUsageLevel":5,"ideaUsagelevel":12,"impactOnEGScore":"0.73%"},
+                                            {"feature":"eSign","currentUsageLevel":2,"ideaUsagelevel":7,"impactOnEGScore":"1.60%"},
+                                            {"feature":"User privileges","currentUsageLevel":4,"ideaUsagelevel":9,"impactOnEGScore":"1.55%"},
+                                            {"feature":"Visual collaboration","currentUsageLevel":12,"ideaUsagelevel":21,"impactOnEGScore":"0.55%"},
+                                            {"feature":"Integration with EMM","currentUsageLevel":1,"ideaUsagelevel":8,"impactOnEGScore":"0.80%"},
+                                            {"feature":"Data security","currentUsageLevel":7,"ideaUsagelevel":11,"impactOnEGScore":"1.42%"},
+                                            {"feature":"Version control","currentUsageLevel":7,"ideaUsagelevel":8,"impactOnEGScore":"0.40%"}],
+                            "onGoingCampaign":[{"campaignID":542,"campaignDescription":"See your team’s work evolve over time through our visual collaboration tool","Impact":"Activity of users increased by 2%","Channel":"Home page Advertisement","startDate":"01/06/2015"},
+{"campaignID":213,"campaignDescription":"Update your files online without losing any previous version. Our in-built version control takes care.","Impact":"Activity of users increased by 5%","Channel":"Inbox Message","startDate":"02/02/2014"}],
+                            "pastCampaign":[{"campaignID":243,"campaignDescription":"Share your files directly with your contacts","Impact":"Activity of users increased by 0.5%","Channel":"Banner Ad","endDate":"01/01/2015"},
+{"campaignID":67,"campaignDescription":"Add personal and official signature to your files","Impact":"Activity of users increased by 2%","Channel":"Inbox Message","endDate":"05/01/2015"}]
+                        }
+				},
+     	    "28":{
+						"userGroup":{
+							"trend":{
+								"name":["Jan", "Feb", "Mar", "Apr","May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+								"values":[11313,15647,13093,10001,8907,9732,10123,11963,10438,8003,12900,13631],
+								"color":"#1b6395"
+							},
+							"targetedUsers":[
+							{"size": "456,384" ,"male":"42%","female":"58%","activeUsers":"261,905","appUsersPercentage":"32%","appUsers": "145,872" ,
+							"name":"Budding Artists","imageClass":"enterprise-image",
+							"gender":{
+						        		"name":["male","female"],
+						        		"values":[42, 58],
+						        		"color":["#F5874F", "#ADADAD"]
+						        	}
+        					}],
+							"incrementalImpact":[{"revenue":"107,486","paidUsers":1344,"F2PconversionRate":"9%","EGScore":"17%"}],
+							"reasons":["Additional 21% of Budding Artists (55000 users) are expected to start sharing/streaming music using phone", "Average engagament of Buddings Artists who share and stream using phone is 37% percent points higher than non-phone users"]
+						},
+						"tableData":{
+							"productUsage":[{"feature":"Share and stream using phone","currentUsageLevel":7,"ideaUsagelevel":15,"impactOnEGScore":"1.42%"},
+											{"feature":"Share HD version","currentUsageLevel":4,"ideaUsagelevel":9,"impactOnEGScore":"1.50%"},
+											{"feature":"Annotations / Inline commenting","currentUsageLevel":2,"ideaUsagelevel":8,"impactOnEGScore":"1.10%"},
+											{"feature":"Play according to network speed","currentUsageLevel":12,"ideaUsagelevel":21,"impactOnEGScore":"0.55%"},
+											{"feature":"Mobile App","currentUsageLevel":13,"ideaUsagelevel":22,"impactOnEGScore":"0.23%"},
+                                            {"feature":"Storage Space","currentUsageLevel":7,"ideaUsagelevel":8,"impactOnEGScore":"0.20%"},
+                                            {"feature":"Automatic Backup","currentUsageLevel":7,"ideaUsagelevel":7,"impactOnEGScore":"0.10%"}],
+							"onGoingCampaign":[{"campaignID":923,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 1.2%","Channel":"Home page Advertisement","startDate":"03/03/2015"},
+{"campaignID":562,"campaignDescription":"Welcome Campaign","Impact":"Activity of users increased by 5%","Channel":"Inbox Message","startDate":"02/02/2014"}],
+							"pastCampaign":[{"campaignID":12,"campaignDescription":"Play at 0.5X, 1X, 1.5X and 2X speed","Impact":"Activity of users increased by 0.5%","Channel":"Banner Ad","endDate":"10/09/2014"},
+{"campaignID":901,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 2%","Channel":"Inbox Message","endDate":"05/01/2015"}]
+						}
+				},
+     	    "27":{
+						"userGroup":{
+							"trend":{
+								"name":["Jan", "Feb", "Mar", "Apr","May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+								"values":[11313,15647,13093,10001,8907,9732,10123,11963,10438,8003,12900,13631],
+								"color":"#1b6395"
+							},
+							"targetedUsers":[
+							{"size": "456,384" ,"male":"42%","female":"58%","activeUsers":"261,905","appUsersPercentage":"32%","appUsers": "145,872" ,
+							"name":"Budding Artists","imageClass":"family-friends-image",
+							"gender":{
+						        		"name":["male","female"],
+						        		"values":[42, 58],
+						        		"color":["#F5874F", "#ADADAD"]
+						        	}
+        					}],
+							"incrementalImpact":[{"revenue":"107,486","paidUsers":1344,"F2PconversionRate":"9%","EGScore":"17%"}],
+							"reasons":["Additional 21% of Budding Artists (55000 users) are expected to start sharing/streaming music using phone", "Average engagament of Buddings Artists who share and stream using phone is 37% percent points higher than non-phone users"]
+						},
+						"tableData":{
+							"productUsage":[{"feature":"Share and stream using phone","currentUsageLevel":7,"ideaUsagelevel":15,"impactOnEGScore":"1.42%"},
+											{"feature":"Share HD version","currentUsageLevel":4,"ideaUsagelevel":9,"impactOnEGScore":"1.50%"},
+											{"feature":"Annotations / Inline commenting","currentUsageLevel":2,"ideaUsagelevel":8,"impactOnEGScore":"1.10%"},
+											{"feature":"Play according to network speed","currentUsageLevel":12,"ideaUsagelevel":21,"impactOnEGScore":"0.55%"},
+											{"feature":"Mobile App","currentUsageLevel":13,"ideaUsagelevel":22,"impactOnEGScore":"0.23%"},
+                                            {"feature":"Storage Space","currentUsageLevel":7,"ideaUsagelevel":8,"impactOnEGScore":"0.20%"},
+                                            {"feature":"Automatic Backup","currentUsageLevel":7,"ideaUsagelevel":7,"impactOnEGScore":"0.10%"}],
+							"onGoingCampaign":[{"campaignID":923,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 1.2%","Channel":"Home page Advertisement","startDate":"03/03/2015"},
+{"campaignID":562,"campaignDescription":"Welcome Campaign","Impact":"Activity of users increased by 5%","Channel":"Inbox Message","startDate":"02/02/2014"}],
+							"pastCampaign":[{"campaignID":12,"campaignDescription":"Play at 0.5X, 1X, 1.5X and 2X speed","Impact":"Activity of users increased by 0.5%","Channel":"Banner Ad","endDate":"10/09/2014"},
+{"campaignID":901,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 2%","Channel":"Inbox Message","endDate":"05/01/2015"}]
+						}
+				},
+     	    "26":{
+						"userGroup":{
+							"trend":{
+								"name":["Jan", "Feb", "Mar", "Apr","May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+								"values":[11313,15647,13093,10001,8907,9732,10123,11963,10438,8003,12900,13631],
+								"color":"#1b6395"
+							},
+							"targetedUsers":[
+							{"size": "456,384" ,"male":"42%","female":"58%","activeUsers":"261,905","appUsersPercentage":"32%","appUsers": "145,872" ,
+							"name":"Budding Artists","imageClass":"family-friends-image",
+							"gender":{
+						        		"name":["male","female"],
+						        		"values":[42, 58],
+						        		"color":["#F5874F", "#ADADAD"]
+						        	}
+        					}],
+							"incrementalImpact":[{"revenue":"107,486","paidUsers":1344,"F2PconversionRate":"9%","EGScore":"17%"}],
+							"reasons":["Additional 21% of Budding Artists (55000 users) are expected to start sharing/streaming music using phone", "Average engagament of Buddings Artists who share and stream using phone is 37% percent points higher than non-phone users"]
+						},
+						"tableData":{
+							"productUsage":[{"feature":"Share and stream using phone","currentUsageLevel":7,"ideaUsagelevel":15,"impactOnEGScore":"1.42%"},
+											{"feature":"Share HD version","currentUsageLevel":4,"ideaUsagelevel":9,"impactOnEGScore":"1.50%"},
+											{"feature":"Annotations / Inline commenting","currentUsageLevel":2,"ideaUsagelevel":8,"impactOnEGScore":"1.10%"},
+											{"feature":"Play according to network speed","currentUsageLevel":12,"ideaUsagelevel":21,"impactOnEGScore":"0.55%"},
+											{"feature":"Mobile App","currentUsageLevel":13,"ideaUsagelevel":22,"impactOnEGScore":"0.23%"},
+                                            {"feature":"Storage Space","currentUsageLevel":7,"ideaUsagelevel":8,"impactOnEGScore":"0.20%"},
+                                            {"feature":"Automatic Backup","currentUsageLevel":7,"ideaUsagelevel":7,"impactOnEGScore":"0.10%"}],
+							"onGoingCampaign":[{"campaignID":923,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 1.2%","Channel":"Home page Advertisement","startDate":"03/03/2015"},
+{"campaignID":562,"campaignDescription":"Welcome Campaign","Impact":"Activity of users increased by 5%","Channel":"Inbox Message","startDate":"02/02/2014"}],
+							"pastCampaign":[{"campaignID":12,"campaignDescription":"Play at 0.5X, 1X, 1.5X and 2X speed","Impact":"Activity of users increased by 0.5%","Channel":"Banner Ad","endDate":"10/09/2014"},
+{"campaignID":901,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 2%","Channel":"Inbox Message","endDate":"05/01/2015"}]
+						}
+				},
+     	    "24":{
+						"userGroup":{
+							"trend":{
+								"name":["Jan", "Feb", "Mar", "Apr","May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+								"values":[11313,15647,13093,10001,8907,9732,10123,11963,10438,8003,12900,13631],
+								"color":"#1b6395"
+							},
+							"targetedUsers":[
+							{"size": "456,384" ,"male":"42%","female":"58%","activeUsers":"261,905","appUsersPercentage":"32%","appUsers": "145,872" ,
+							"name":"Budding Artists","imageClass":"family-friends-image",
+							"gender":{
+						        		"name":["male","female"],
+						        		"values":[42, 58],
+						        		"color":["#F5874F", "#ADADAD"]
+						        	}
+        					}],
+							"incrementalImpact":[{"revenue":"107,486","paidUsers":1344,"F2PconversionRate":"9%","EGScore":"17%"}],
+							"reasons":["Additional 21% of Budding Artists (55000 users) are expected to start sharing/streaming music using phone", "Average engagament of Buddings Artists who share and stream using phone is 37% percent points higher than non-phone users"]
+						},
+						"tableData":{
+							"productUsage":[{"feature":"Share and stream using phone","currentUsageLevel":7,"ideaUsagelevel":15,"impactOnEGScore":"1.42%"},
+											{"feature":"Share HD version","currentUsageLevel":4,"ideaUsagelevel":9,"impactOnEGScore":"1.50%"},
+											{"feature":"Annotations / Inline commenting","currentUsageLevel":2,"ideaUsagelevel":8,"impactOnEGScore":"1.10%"},
+											{"feature":"Play according to network speed","currentUsageLevel":12,"ideaUsagelevel":21,"impactOnEGScore":"0.55%"},
+											{"feature":"Mobile App","currentUsageLevel":13,"ideaUsagelevel":22,"impactOnEGScore":"0.23%"},
+                                            {"feature":"Storage Space","currentUsageLevel":7,"ideaUsagelevel":8,"impactOnEGScore":"0.20%"},
+                                            {"feature":"Automatic Backup","currentUsageLevel":7,"ideaUsagelevel":7,"impactOnEGScore":"0.10%"}],
+							"onGoingCampaign":[{"campaignID":923,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 1.2%","Channel":"Home page Advertisement","startDate":"03/03/2015"},
+{"campaignID":562,"campaignDescription":"Welcome Campaign","Impact":"Activity of users increased by 5%","Channel":"Inbox Message","startDate":"02/02/2014"}],
+							"pastCampaign":[{"campaignID":12,"campaignDescription":"Play at 0.5X, 1X, 1.5X and 2X speed","Impact":"Activity of users increased by 0.5%","Channel":"Banner Ad","endDate":"10/09/2014"},
+{"campaignID":901,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 2%","Channel":"Inbox Message","endDate":"05/01/2015"}]
+						}
+				},    
+     	    "23":{
+						"userGroup":{
+							"trend":{
+								"name":["Jan", "Feb", "Mar", "Apr","May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+								"values":[11313,15647,13093,10001,8907,9732,10123,11963,10438,8003,12900,13631],
+								"color":"#1b6395"
+							},
+							"targetedUsers":[
+							{"size": "456,384" ,"male":"42%","female":"58%","activeUsers":"261,905","appUsersPercentage":"32%","appUsers": "145,872" ,
+							"name":"Budding Artists","imageClass":"enterprise-image",
+							"gender":{
+						        		"name":["male","female"],
+						        		"values":[42, 58],
+						        		"color":["#F5874F", "#ADADAD"]
+						        	}
+        					}],
+							"incrementalImpact":[{"revenue":"107,486","paidUsers":1344,"F2PconversionRate":"9%","EGScore":"17%"}],
+							"reasons":["Additional 21% of Budding Artists (55000 users) are expected to start sharing/streaming music using phone", "Average engagament of Buddings Artists who share and stream using phone is 37% percent points higher than non-phone users"]
+						},
+						"tableData":{
+							"productUsage":[{"feature":"Share and stream using phone","currentUsageLevel":7,"ideaUsagelevel":15,"impactOnEGScore":"1.42%"},
+											{"feature":"Share HD version","currentUsageLevel":4,"ideaUsagelevel":9,"impactOnEGScore":"1.50%"},
+											{"feature":"Annotations / Inline commenting","currentUsageLevel":2,"ideaUsagelevel":8,"impactOnEGScore":"1.10%"},
+											{"feature":"Play according to network speed","currentUsageLevel":12,"ideaUsagelevel":21,"impactOnEGScore":"0.55%"},
+											{"feature":"Mobile App","currentUsageLevel":13,"ideaUsagelevel":22,"impactOnEGScore":"0.23%"},
+                                            {"feature":"Storage Space","currentUsageLevel":7,"ideaUsagelevel":8,"impactOnEGScore":"0.20%"},
+                                            {"feature":"Automatic Backup","currentUsageLevel":7,"ideaUsagelevel":7,"impactOnEGScore":"0.10%"}],
+							"onGoingCampaign":[{"campaignID":923,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 1.2%","Channel":"Home page Advertisement","startDate":"03/03/2015"},
+{"campaignID":562,"campaignDescription":"Welcome Campaign","Impact":"Activity of users increased by 5%","Channel":"Inbox Message","startDate":"02/02/2014"}],
+							"pastCampaign":[{"campaignID":12,"campaignDescription":"Play at 0.5X, 1X, 1.5X and 2X speed","Impact":"Activity of users increased by 0.5%","Channel":"Banner Ad","endDate":"10/09/2014"},
+{"campaignID":901,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 2%","Channel":"Inbox Message","endDate":"05/01/2015"}]
+						}
+				},
+     	    "22":{
+						"userGroup":{
+							"trend":{
+								"name":["Jan", "Feb", "Mar", "Apr","May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+								"values":[11313,15647,13093,10001,8907,9732,10123,11963,10438,8003,12900,13631],
+								"color":"#1b6395"
+							},
+							"targetedUsers":[
+							{"size": "456,384" ,"male":"42%","female":"58%","activeUsers":"261,905","appUsersPercentage":"32%","appUsers": "145,872" ,
+							"name":"Budding Artists","imageClass":"family-friends-image",
+							"gender":{
+						        		"name":["male","female"],
+						        		"values":[42, 58],
+						        		"color":["#F5874F", "#ADADAD"]
+						        	}
+        					}],
+							"incrementalImpact":[{"revenue":"107,486","paidUsers":1344,"F2PconversionRate":"9%","EGScore":"17%"}],
+							"reasons":["Additional 21% of Budding Artists (55000 users) are expected to start sharing/streaming music using phone", "Average engagament of Buddings Artists who share and stream using phone is 37% percent points higher than non-phone users"]
+						},
+						"tableData":{
+							"productUsage":[{"feature":"Share and stream using phone","currentUsageLevel":7,"ideaUsagelevel":15,"impactOnEGScore":"1.42%"},
+											{"feature":"Share HD version","currentUsageLevel":4,"ideaUsagelevel":9,"impactOnEGScore":"1.50%"},
+											{"feature":"Annotations / Inline commenting","currentUsageLevel":2,"ideaUsagelevel":8,"impactOnEGScore":"1.10%"},
+											{"feature":"Play according to network speed","currentUsageLevel":12,"ideaUsagelevel":21,"impactOnEGScore":"0.55%"},
+											{"feature":"Mobile App","currentUsageLevel":13,"ideaUsagelevel":22,"impactOnEGScore":"0.23%"},
+                                            {"feature":"Storage Space","currentUsageLevel":7,"ideaUsagelevel":8,"impactOnEGScore":"0.20%"},
+                                            {"feature":"Automatic Backup","currentUsageLevel":7,"ideaUsagelevel":7,"impactOnEGScore":"0.10%"}],
+							"onGoingCampaign":[{"campaignID":923,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 1.2%","Channel":"Home page Advertisement","startDate":"03/03/2015"},
+{"campaignID":562,"campaignDescription":"Welcome Campaign","Impact":"Activity of users increased by 5%","Channel":"Inbox Message","startDate":"02/02/2014"}],
+							"pastCampaign":[{"campaignID":12,"campaignDescription":"Play at 0.5X, 1X, 1.5X and 2X speed","Impact":"Activity of users increased by 0.5%","Channel":"Banner Ad","endDate":"10/09/2014"},
+{"campaignID":901,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 2%","Channel":"Inbox Message","endDate":"05/01/2015"}]
+						}
+				},  
+     	    "21":{
+						"userGroup":{
+							"trend":{
+								"name":["Jan", "Feb", "Mar", "Apr","May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+								"values":[11313,15647,13093,10001,8907,9732,10123,11963,10438,8003,12900,13631],
+								"color":"#1b6395"
+							},
+							"targetedUsers":[
+							{"size": "456,384" ,"male":"42%","female":"58%","activeUsers":"261,905","appUsersPercentage":"32%","appUsers": "145,872" ,
+							"name":"Budding Artists","imageClass":"enterprise-image",
+							"gender":{
+						        		"name":["male","female"],
+						        		"values":[42, 58],
+						        		"color":["#F5874F", "#ADADAD"]
+						        	}
+        					}],
+							"incrementalImpact":[{"revenue":"107,486","paidUsers":1344,"F2PconversionRate":"9%","EGScore":"17%"}],
+							"reasons":["Additional 21% of Budding Artists (55000 users) are expected to start sharing/streaming music using phone", "Average engagament of Buddings Artists who share and stream using phone is 37% percent points higher than non-phone users"]
+						},
+						"tableData":{
+							"productUsage":[{"feature":"Share and stream using phone","currentUsageLevel":7,"ideaUsagelevel":15,"impactOnEGScore":"1.42%"},
+											{"feature":"Share HD version","currentUsageLevel":4,"ideaUsagelevel":9,"impactOnEGScore":"1.50%"},
+											{"feature":"Annotations / Inline commenting","currentUsageLevel":2,"ideaUsagelevel":8,"impactOnEGScore":"1.10%"},
+											{"feature":"Play according to network speed","currentUsageLevel":12,"ideaUsagelevel":21,"impactOnEGScore":"0.55%"},
+											{"feature":"Mobile App","currentUsageLevel":13,"ideaUsagelevel":22,"impactOnEGScore":"0.23%"},
+                                            {"feature":"Storage Space","currentUsageLevel":7,"ideaUsagelevel":8,"impactOnEGScore":"0.20%"},
+                                            {"feature":"Automatic Backup","currentUsageLevel":7,"ideaUsagelevel":7,"impactOnEGScore":"0.10%"}],
+							"onGoingCampaign":[{"campaignID":923,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 1.2%","Channel":"Home page Advertisement","startDate":"03/03/2015"},
+{"campaignID":562,"campaignDescription":"Welcome Campaign","Impact":"Activity of users increased by 5%","Channel":"Inbox Message","startDate":"02/02/2014"}],
+							"pastCampaign":[{"campaignID":12,"campaignDescription":"Play at 0.5X, 1X, 1.5X and 2X speed","Impact":"Activity of users increased by 0.5%","Channel":"Banner Ad","endDate":"10/09/2014"},
+{"campaignID":901,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 2%","Channel":"Inbox Message","endDate":"05/01/2015"}]
+						}
+				},  
+     	    "20":{
+						"userGroup":{
+							"trend":{
+								"name":["Jan", "Feb", "Mar", "Apr","May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+								"values":[11313,15647,13093,10001,8907,9732,10123,11963,10438,8003,12900,13631],
+								"color":"#1b6395"
+							},
+							"targetedUsers":[
+							{"size": "456,384" ,"male":"42%","female":"58%","activeUsers":"261,905","appUsersPercentage":"32%","appUsers": "145,872" ,
+							"name":"Budding Artists","imageClass":"musicians-image",
+							"gender":{
+						        		"name":["male","female"],
+						        		"values":[42, 58],
+						        		"color":["#F5874F", "#ADADAD"]
+						        	}
+        					}],
+							"incrementalImpact":[{"revenue":"107,486","paidUsers":1344,"F2PconversionRate":"9%","EGScore":"17%"}],
+							"reasons":["Additional 21% of Budding Artists (55000 users) are expected to start sharing/streaming music using phone", "Average engagament of Buddings Artists who share and stream using phone is 37% percent points higher than non-phone users"]
+						},
+						"tableData":{
+							"productUsage":[{"feature":"Share and stream using phone","currentUsageLevel":7,"ideaUsagelevel":15,"impactOnEGScore":"1.42%"},
+											{"feature":"Share HD version","currentUsageLevel":4,"ideaUsagelevel":9,"impactOnEGScore":"1.50%"},
+											{"feature":"Annotations / Inline commenting","currentUsageLevel":2,"ideaUsagelevel":8,"impactOnEGScore":"1.10%"},
+											{"feature":"Play according to network speed","currentUsageLevel":12,"ideaUsagelevel":21,"impactOnEGScore":"0.55%"},
+											{"feature":"Mobile App","currentUsageLevel":13,"ideaUsagelevel":22,"impactOnEGScore":"0.23%"},
+                                            {"feature":"Storage Space","currentUsageLevel":7,"ideaUsagelevel":8,"impactOnEGScore":"0.20%"},
+                                            {"feature":"Automatic Backup","currentUsageLevel":7,"ideaUsagelevel":7,"impactOnEGScore":"0.10%"}],
+							"onGoingCampaign":[{"campaignID":923,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 1.2%","Channel":"Home page Advertisement","startDate":"03/03/2015"},
+{"campaignID":562,"campaignDescription":"Welcome Campaign","Impact":"Activity of users increased by 5%","Channel":"Inbox Message","startDate":"02/02/2014"}],
+							"pastCampaign":[{"campaignID":12,"campaignDescription":"Play at 0.5X, 1X, 1.5X and 2X speed","Impact":"Activity of users increased by 0.5%","Channel":"Banner Ad","endDate":"10/09/2014"},
+{"campaignID":901,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 2%","Channel":"Inbox Message","endDate":"05/01/2015"}]
+						}
+				},  
+     	    "19":{
+						"userGroup":{
+							"trend":{
+								"name":["Jan", "Feb", "Mar", "Apr","May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+								"values":[11313,15647,13093,10001,8907,9732,10123,11963,10438,8003,12900,13631],
+								"color":"#1b6395"
+							},
+							"targetedUsers":[
+							{"size": "456,384" ,"male":"42%","female":"58%","activeUsers":"261,905","appUsersPercentage":"32%","appUsers": "145,872" ,
+							"name":"Budding Artists","imageClass":"enterprise-image",
+							"gender":{
+						        		"name":["male","female"],
+						        		"values":[42, 58],
+						        		"color":["#F5874F", "#ADADAD"]
+						        	}
+        					}],
+							"incrementalImpact":[{"revenue":"107,486","paidUsers":1344,"F2PconversionRate":"9%","EGScore":"17%"}],
+							"reasons":["Additional 21% of Budding Artists (55000 users) are expected to start sharing/streaming music using phone", "Average engagament of Buddings Artists who share and stream using phone is 37% percent points higher than non-phone users"]
+						},
+						"tableData":{
+							"productUsage":[{"feature":"Share and stream using phone","currentUsageLevel":7,"ideaUsagelevel":15,"impactOnEGScore":"1.42%"},
+											{"feature":"Share HD version","currentUsageLevel":4,"ideaUsagelevel":9,"impactOnEGScore":"1.50%"},
+											{"feature":"Annotations / Inline commenting","currentUsageLevel":2,"ideaUsagelevel":8,"impactOnEGScore":"1.10%"},
+											{"feature":"Play according to network speed","currentUsageLevel":12,"ideaUsagelevel":21,"impactOnEGScore":"0.55%"},
+											{"feature":"Mobile App","currentUsageLevel":13,"ideaUsagelevel":22,"impactOnEGScore":"0.23%"},
+                                            {"feature":"Storage Space","currentUsageLevel":7,"ideaUsagelevel":8,"impactOnEGScore":"0.20%"},
+                                            {"feature":"Automatic Backup","currentUsageLevel":7,"ideaUsagelevel":7,"impactOnEGScore":"0.10%"}],
+							"onGoingCampaign":[{"campaignID":923,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 1.2%","Channel":"Home page Advertisement","startDate":"03/03/2015"},
+{"campaignID":562,"campaignDescription":"Welcome Campaign","Impact":"Activity of users increased by 5%","Channel":"Inbox Message","startDate":"02/02/2014"}],
+							"pastCampaign":[{"campaignID":12,"campaignDescription":"Play at 0.5X, 1X, 1.5X and 2X speed","Impact":"Activity of users increased by 0.5%","Channel":"Banner Ad","endDate":"10/09/2014"},
+{"campaignID":901,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 2%","Channel":"Inbox Message","endDate":"05/01/2015"}]
+						}
+				},  
+     	    "18":{
+						"userGroup":{
+							"trend":{
+								"name":["Jan", "Feb", "Mar", "Apr","May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+								"values":[11313,15647,13093,10001,8907,9732,10123,11963,10438,8003,12900,13631],
+								"color":"#1b6395"
+							},
+							"targetedUsers":[
+							{"size": "456,384" ,"male":"42%","female":"58%","activeUsers":"261,905","appUsersPercentage":"32%","appUsers": "145,872" ,
+							"name":"Budding Artists","imageClass":"musicians-image",
+							"gender":{
+						        		"name":["male","female"],
+						        		"values":[42, 58],
+						        		"color":["#F5874F", "#ADADAD"]
+						        	}
+        					}],
+							"incrementalImpact":[{"revenue":"107,486","paidUsers":1344,"F2PconversionRate":"9%","EGScore":"17%"}],
+							"reasons":["Additional 21% of Budding Artists (55000 users) are expected to start sharing/streaming music using phone", "Average engagament of Buddings Artists who share and stream using phone is 37% percent points higher than non-phone users"]
+						},
+						"tableData":{
+							"productUsage":[{"feature":"Share and stream using phone","currentUsageLevel":7,"ideaUsagelevel":15,"impactOnEGScore":"1.42%"},
+											{"feature":"Share HD version","currentUsageLevel":4,"ideaUsagelevel":9,"impactOnEGScore":"1.50%"},
+											{"feature":"Annotations / Inline commenting","currentUsageLevel":2,"ideaUsagelevel":8,"impactOnEGScore":"1.10%"},
+											{"feature":"Play according to network speed","currentUsageLevel":12,"ideaUsagelevel":21,"impactOnEGScore":"0.55%"},
+											{"feature":"Mobile App","currentUsageLevel":13,"ideaUsagelevel":22,"impactOnEGScore":"0.23%"},
+                                            {"feature":"Storage Space","currentUsageLevel":7,"ideaUsagelevel":8,"impactOnEGScore":"0.20%"},
+                                            {"feature":"Automatic Backup","currentUsageLevel":7,"ideaUsagelevel":7,"impactOnEGScore":"0.10%"}],
+							"onGoingCampaign":[{"campaignID":923,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 1.2%","Channel":"Home page Advertisement","startDate":"03/03/2015"},
+{"campaignID":562,"campaignDescription":"Welcome Campaign","Impact":"Activity of users increased by 5%","Channel":"Inbox Message","startDate":"02/02/2014"}],
+							"pastCampaign":[{"campaignID":12,"campaignDescription":"Play at 0.5X, 1X, 1.5X and 2X speed","Impact":"Activity of users increased by 0.5%","Channel":"Banner Ad","endDate":"10/09/2014"},
+{"campaignID":901,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 2%","Channel":"Inbox Message","endDate":"05/01/2015"}]
+						}
+				},              
+            "5":{
                         "userGroup":{
                             "trend":{
                                 "name":["Jan", "Feb", "Mar", "Apr","May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
@@ -1787,7 +2150,7 @@
                                             "color":["#F5874F", "#ADADAD"]
                                         }
                             }],
-                            "incrementalImpact":[{"revenue":"2,932,200","paidUsers":"24,435","F2PconversionRate":" 0.9%","EGScore":" 20%"}],
+                            "incrementalImpact":[{"revenue":"36,497","paidUsers":"456","F2PconversionRate":" 5%","EGScore":"23%"}],
                             "reasons":["Additional 17% Project Managers (2398 users) and subsequently 56% Operations team (49264 users) expected to adopt team sign-up", "Team sign-up leads to additional 61% activity and in-turn 23% overall increase in conversion for the UG"]
                         },
                         "tableData":{
@@ -1804,10 +2167,7 @@
 {"campaignID":67,"campaignDescription":"Add personal and official signature to your files","Impact":"Activity of users increased by 2%","Channel":"Inbox Message","endDate":"05/01/2015"}]
                         }
                 },
-	
-				
-				
-				"1":{
+            "1":{
 					"impact":{
 						"conversion":{
 							"data":[{
@@ -1872,7 +2232,7 @@
 				        	}
 						}
 				},
-				 "2":{
+            "2":{
 				"impact":{
 				"conversion":{
 					"data":[{
@@ -2002,7 +2362,96 @@
 		        	}
 				}
 				},
-				"4":{
+            "4":{
+					"impact":{
+						"conversion":{
+							"data":[{
+							    	"name": "Conversion",
+							    	"data":[3],
+							    	"color":"#999999"
+							    },{
+							    	"name": "Conversion",
+							    	"data":[5],
+							    	"color":"#009E0F"
+							    }]
+							 },
+							 "userConverted":{
+							"data":[{
+							    	"name": "Conversion",
+							    	"data":[20353],
+							    	"color":"#999999"
+							    },{
+							    	"name": "Conversion",
+							    	"data":[33922],
+							    	"color":"#009E0F"
+							    }]
+							 },
+							 "revenue":{
+							"data":[{
+							    	"name": "Conversion",
+							    	"data":[793],
+							    	"color":"#999999"
+							    },{
+							    	"name": "Conversion",
+							    	"data":[1322],
+							    	"color":"#009E0F"
+							    }]
+							 }
+						},
+						"userGroup":{
+							"trend":{
+								"name":["Jan-15", "Feb-15", "Mar-15", "Apr-15","May-15", "Jun-15", "Jul-15", "Aug-15", "Sep-15", "Oct-15", "Nov-15", "Dec-15"],
+								"values":[50, 75, 50, 75, 50, 75, 50, 75, 50, 75],
+								"color":"#1b6395"
+							},
+							"otherData":{
+								"name":"Job Hoppers",
+								"value":"678457",
+								"activeUsers":{
+									"":"40%",
+									"male":"65%",
+									"female":"35%"
+								},
+								"appUsers":{
+									"percantage":"40%",
+									"value":"257645"
+								}
+								
+							},
+                            "targetedUsers":[
+                            {"size": "34,265" ,"male":"77%","female":"23%","activeUsers":"56%","appUsersPercentage":"15%","appUsers": "15%" ,
+                            "name":"Project Managers","imageClass":"project-manager-image",
+                                "gender":{
+                                            "name":["male","female"],
+                                            "values":[62, 38],
+                                            "color":["#F5874F", "#ADADAD"]
+                                        }
+                            }],
+                            "incrementalImpact":[{"revenue":"36,497","paidUsers":"456","F2PconversionRate":" 5%","EGScore":"23%"}],
+                            "reasons":["Additional 17% Project Managers (2398 users) and subsequently 56% Operations team (49264 users) expected to adopt team sign-up", "Team sign-up leads to additional 61% activity and in-turn 23% overall increase in conversion for the UG"]
+                        },
+                        "tableData":{
+                            "productUsage":[{"feature":"Team Sign-ups","currentUsageLevel":5,"ideaUsagelevel":12,"impactOnEGScore":"0.73%"},
+                                            {"feature":"eSign","currentUsageLevel":2,"ideaUsagelevel":7,"impactOnEGScore":"1.60%"},
+                                            {"feature":"User privileges","currentUsageLevel":4,"ideaUsagelevel":9,"impactOnEGScore":"1.55%"},
+                                            {"feature":"Visual collaboration","currentUsageLevel":12,"ideaUsagelevel":21,"impactOnEGScore":"0.55%"},
+                                            {"feature":"Integration with EMM","currentUsageLevel":1,"ideaUsagelevel":8,"impactOnEGScore":"0.80%"},
+                                            {"feature":"Data security","currentUsageLevel":7,"ideaUsagelevel":11,"impactOnEGScore":"1.42%"},
+                                            {"feature":"Version control","currentUsageLevel":7,"ideaUsagelevel":8,"impactOnEGScore":"0.40%"}],
+                            "onGoingCampaign":[{"campaignID":542,"campaignDescription":"See your team’s work evolve over time through our visual collaboration tool","Impact":"Activity of users increased by 2%","Channel":"Home page Advertisement","startDate":"01/06/2015"},
+{"campaignID":213,"campaignDescription":"Update your files online without losing any previous version. Our in-built version control takes care.","Impact":"Activity of users increased by 5%","Channel":"Inbox Message","startDate":"02/02/2014"}],
+                            "pastCampaign":[{"campaignID":243,"campaignDescription":"Share your files directly with your contacts","Impact":"Activity of users increased by 0.5%","Channel":"Banner Ad","endDate":"01/01/2015"},
+{"campaignID":67,"campaignDescription":"Add personal and official signature to your files","Impact":"Activity of users increased by 2%","Channel":"Inbox Message","endDate":"05/01/2015"}]
+                        },
+						"engagement":{
+							"trend":{
+				        		"name":["", "", ""],
+				        		"values":[14, 49, 14],
+				        		"color":"#05395d"
+				        	}
+						}
+				},
+            "0":{
 					"impact":{
 						"conversion":{
 							"data":[{
@@ -2067,7 +2516,7 @@
 				        	}
 						}
 				},
-				"0":{
+            "6":{
 					"impact":{
 						"conversion":{
 							"data":[{
@@ -2122,73 +2571,32 @@
 									"value":"257645"
 								}
 								
-							}
-						},
-						"engagement":{
-							"trend":{
-				        		"name":["", "", ""],
-				        		"values":[14, 49, 14],
-				        		"color":"#05395d"
-				        	}
-						}
-				},
-				"6":{
-					"impact":{
-						"conversion":{
-							"data":[{
-							    	"name": "Conversion",
-							    	"data":[3],
-							    	"color":"#999999"
-							    },{
-							    	"name": "Conversion",
-							    	"data":[5],
-							    	"color":"#009E0F"
-							    }]
-							 },
-							 "userConverted":{
-							"data":[{
-							    	"name": "Conversion",
-							    	"data":[20353],
-							    	"color":"#999999"
-							    },{
-							    	"name": "Conversion",
-							    	"data":[33922],
-							    	"color":"#009E0F"
-							    }]
-							 },
-							 "revenue":{
-							"data":[{
-							    	"name": "Conversion",
-							    	"data":[793],
-							    	"color":"#999999"
-							    },{
-							    	"name": "Conversion",
-							    	"data":[1322],
-							    	"color":"#009E0F"
-							    }]
-							 }
-						},
-						"userGroup":{
-							"trend":{
-								"name":["Jan-15", "Feb-15", "Mar-15", "Apr-15","May-15", "Jun-15", "Jul-15", "Aug-15", "Sep-15", "Oct-15", "Nov-15", "Dec-15"],
-								"values":[50, 75, 50, 75, 50, 75, 50, 75, 50, 75],
-								"color":"#1b6395"
 							},
-							"otherData":{
-								"name":"Job Hoppers",
-								"value":"678457",
-								"activeUsers":{
-									"":"40%",
-									"male":"65%",
-									"female":"35%"
-								},
-								"appUsers":{
-									"percantage":"40%",
-									"value":"257645"
-								}
-								
-							}
-						},
+                            "targetedUsers":[
+                            {"size": "34,265" ,"male":"77%","female":"23%","activeUsers":"56%","appUsersPercentage":"15%","appUsers": "15%" ,
+                            "name":"Project Managers","imageClass":"project-manager-image",
+                                "gender":{
+                                            "name":["male","female"],
+                                            "values":[62, 38],
+                                            "color":["#F5874F", "#ADADAD"]
+                                        }
+                            }],
+                            "incrementalImpact":[{"revenue":"36,497","paidUsers":"456","F2PconversionRate":" 5%","EGScore":"23%"}],
+                            "reasons":["Additional 17% Project Managers (2398 users) and subsequently 56% Operations team (49264 users) expected to adopt team sign-up", "Team sign-up leads to additional 61% activity and in-turn 23% overall increase in conversion for the UG"]
+                        },
+                        "tableData":{
+                            "productUsage":[{"feature":"Team Sign-ups","currentUsageLevel":5,"ideaUsagelevel":12,"impactOnEGScore":"0.73%"},
+                                            {"feature":"eSign","currentUsageLevel":2,"ideaUsagelevel":7,"impactOnEGScore":"1.60%"},
+                                            {"feature":"User privileges","currentUsageLevel":4,"ideaUsagelevel":9,"impactOnEGScore":"1.55%"},
+                                            {"feature":"Visual collaboration","currentUsageLevel":12,"ideaUsagelevel":21,"impactOnEGScore":"0.55%"},
+                                            {"feature":"Integration with EMM","currentUsageLevel":1,"ideaUsagelevel":8,"impactOnEGScore":"0.80%"},
+                                            {"feature":"Data security","currentUsageLevel":7,"ideaUsagelevel":11,"impactOnEGScore":"1.42%"},
+                                            {"feature":"Version control","currentUsageLevel":7,"ideaUsagelevel":8,"impactOnEGScore":"0.40%"}],
+                            "onGoingCampaign":[{"campaignID":542,"campaignDescription":"See your team’s work evolve over time through our visual collaboration tool","Impact":"Activity of users increased by 2%","Channel":"Home page Advertisement","startDate":"01/06/2015"},
+{"campaignID":213,"campaignDescription":"Update your files online without losing any previous version. Our in-built version control takes care.","Impact":"Activity of users increased by 5%","Channel":"Inbox Message","startDate":"02/02/2014"}],
+                            "pastCampaign":[{"campaignID":243,"campaignDescription":"Share your files directly with your contacts","Impact":"Activity of users increased by 0.5%","Channel":"Banner Ad","endDate":"01/01/2015"},
+{"campaignID":67,"campaignDescription":"Add personal and official signature to your files","Impact":"Activity of users increased by 2%","Channel":"Inbox Message","endDate":"05/01/2015"}]
+                        },
 						"engagement":{
 							"trend":{
 				        		"name":["", "", ""],
@@ -2197,7 +2605,7 @@
 				        	}
 						}
 				},
-				 "7":{
+            "7":{
 				"impact":{
 				"conversion":{
 					"data":[{
@@ -2233,7 +2641,7 @@
 					    }]
 					 }
 				},
-						"userGroup":{
+				"userGroup":{
 							"trend":{
 								"name":["Jan-15", "Feb-15", "Mar-15", "Apr-15","May-15", "Jun-15", "Jul-15", "Aug-15", "Sep-15", "Oct-15", "Nov-15", "Dec-15"],
 								"values":[50, 75, 50, 75, 50, 75, 50, 75, 50, 75],
@@ -2252,8 +2660,32 @@
 									"value":"257645"
 								}
 								
-							}
-						},
+							},
+                            "targetedUsers":[
+                            {"size": "34,265" ,"male":"77%","female":"23%","activeUsers":"56%","appUsersPercentage":"15%","appUsers": "15%" ,
+                            "name":"Project Managers","imageClass":"project-manager-image",
+                                "gender":{
+                                            "name":["male","female"],
+                                            "values":[62, 38],
+                                            "color":["#F5874F", "#ADADAD"]
+                                        }
+                            }],
+                            "incrementalImpact":[{"revenue":"36,497","paidUsers":"456","F2PconversionRate":" 5%","EGScore":"23%"}],
+                            "reasons":["Additional 17% Project Managers (2398 users) and subsequently 56% Operations team (49264 users) expected to adopt team sign-up", "Team sign-up leads to additional 61% activity and in-turn 23% overall increase in conversion for the UG"]
+                        },
+                        "tableData":{
+                            "productUsage":[{"feature":"Team Sign-ups","currentUsageLevel":5,"ideaUsagelevel":12,"impactOnEGScore":"0.73%"},
+                                            {"feature":"eSign","currentUsageLevel":2,"ideaUsagelevel":7,"impactOnEGScore":"1.60%"},
+                                            {"feature":"User privileges","currentUsageLevel":4,"ideaUsagelevel":9,"impactOnEGScore":"1.55%"},
+                                            {"feature":"Visual collaboration","currentUsageLevel":12,"ideaUsagelevel":21,"impactOnEGScore":"0.55%"},
+                                            {"feature":"Integration with EMM","currentUsageLevel":1,"ideaUsagelevel":8,"impactOnEGScore":"0.80%"},
+                                            {"feature":"Data security","currentUsageLevel":7,"ideaUsagelevel":11,"impactOnEGScore":"1.42%"},
+                                            {"feature":"Version control","currentUsageLevel":7,"ideaUsagelevel":8,"impactOnEGScore":"0.40%"}],
+                            "onGoingCampaign":[{"campaignID":542,"campaignDescription":"See your team’s work evolve over time through our visual collaboration tool","Impact":"Activity of users increased by 2%","Channel":"Home page Advertisement","startDate":"01/06/2015"},
+{"campaignID":213,"campaignDescription":"Update your files online without losing any previous version. Our in-built version control takes care.","Impact":"Activity of users increased by 5%","Channel":"Inbox Message","startDate":"02/02/2014"}],
+                            "pastCampaign":[{"campaignID":243,"campaignDescription":"Share your files directly with your contacts","Impact":"Activity of users increased by 0.5%","Channel":"Banner Ad","endDate":"01/01/2015"},
+{"campaignID":67,"campaignDescription":"Add personal and official signature to your files","Impact":"Activity of users increased by 2%","Channel":"Inbox Message","endDate":"05/01/2015"}]
+                        },
 				"engagement":{
 					"trend":{
 		        		"name":["", "", ""],
@@ -2317,8 +2749,32 @@
 									"value":"257645"
 								}
 								
-							}
-						},
+							},
+                            "targetedUsers":[
+                            {"size": "34,265" ,"male":"77%","female":"23%","activeUsers":"56%","appUsersPercentage":"15%","appUsers": "15%" ,
+                            "name":"Project Managers","imageClass":"project-manager-image",
+                                "gender":{
+                                            "name":["male","female"],
+                                            "values":[62, 38],
+                                            "color":["#F5874F", "#ADADAD"]
+                                        }
+                            }],
+                            "incrementalImpact":[{"revenue":"36,497","paidUsers":"456","F2PconversionRate":" 5%","EGScore":"23%"}],
+                            "reasons":["Additional 17% Project Managers (2398 users) and subsequently 56% Operations team (49264 users) expected to adopt team sign-up", "Team sign-up leads to additional 61% activity and in-turn 23% overall increase in conversion for the UG"]
+                        },
+                        "tableData":{
+                            "productUsage":[{"feature":"Team Sign-ups","currentUsageLevel":5,"ideaUsagelevel":12,"impactOnEGScore":"0.73%"},
+                                            {"feature":"eSign","currentUsageLevel":2,"ideaUsagelevel":7,"impactOnEGScore":"1.60%"},
+                                            {"feature":"User privileges","currentUsageLevel":4,"ideaUsagelevel":9,"impactOnEGScore":"1.55%"},
+                                            {"feature":"Visual collaboration","currentUsageLevel":12,"ideaUsagelevel":21,"impactOnEGScore":"0.55%"},
+                                            {"feature":"Integration with EMM","currentUsageLevel":1,"ideaUsagelevel":8,"impactOnEGScore":"0.80%"},
+                                            {"feature":"Data security","currentUsageLevel":7,"ideaUsagelevel":11,"impactOnEGScore":"1.42%"},
+                                            {"feature":"Version control","currentUsageLevel":7,"ideaUsagelevel":8,"impactOnEGScore":"0.40%"}],
+                            "onGoingCampaign":[{"campaignID":542,"campaignDescription":"See your team’s work evolve over time through our visual collaboration tool","Impact":"Activity of users increased by 2%","Channel":"Home page Advertisement","startDate":"01/06/2015"},
+{"campaignID":213,"campaignDescription":"Update your files online without losing any previous version. Our in-built version control takes care.","Impact":"Activity of users increased by 5%","Channel":"Inbox Message","startDate":"02/02/2014"}],
+                            "pastCampaign":[{"campaignID":243,"campaignDescription":"Share your files directly with your contacts","Impact":"Activity of users increased by 0.5%","Channel":"Banner Ad","endDate":"01/01/2015"},
+{"campaignID":67,"campaignDescription":"Add personal and official signature to your files","Impact":"Activity of users increased by 2%","Channel":"Inbox Message","endDate":"05/01/2015"}]
+                        },
 				"engagement":{
 					"trend":{
 		        		"name":["", "", ""],
@@ -2327,7 +2783,7 @@
 		        	}
 				}
 				},
-				"9":{
+            "9":{
 					"impact":{
 						"conversion":{
 							"data":[{
@@ -2382,8 +2838,32 @@
 									"value":"257645"
 								}
 								
-							}
-						},
+							},
+                            "targetedUsers":[
+                            {"size": "34,265" ,"male":"77%","female":"23%","activeUsers":"56%","appUsersPercentage":"15%","appUsers": "15%" ,
+                            "name":"Project Managers","imageClass":"project-manager-image",
+                                "gender":{
+                                            "name":["male","female"],
+                                            "values":[62, 38],
+                                            "color":["#F5874F", "#ADADAD"]
+                                        }
+                            }],
+                            "incrementalImpact":[{"revenue":"36,497","paidUsers":"456","F2PconversionRate":" 5%","EGScore":"23%"}],
+                            "reasons":["Additional 17% Project Managers (2398 users) and subsequently 56% Operations team (49264 users) expected to adopt team sign-up", "Team sign-up leads to additional 61% activity and in-turn 23% overall increase in conversion for the UG"]
+                        },
+                        "tableData":{
+                            "productUsage":[{"feature":"Team Sign-ups","currentUsageLevel":5,"ideaUsagelevel":12,"impactOnEGScore":"0.73%"},
+                                            {"feature":"eSign","currentUsageLevel":2,"ideaUsagelevel":7,"impactOnEGScore":"1.60%"},
+                                            {"feature":"User privileges","currentUsageLevel":4,"ideaUsagelevel":9,"impactOnEGScore":"1.55%"},
+                                            {"feature":"Visual collaboration","currentUsageLevel":12,"ideaUsagelevel":21,"impactOnEGScore":"0.55%"},
+                                            {"feature":"Integration with EMM","currentUsageLevel":1,"ideaUsagelevel":8,"impactOnEGScore":"0.80%"},
+                                            {"feature":"Data security","currentUsageLevel":7,"ideaUsagelevel":11,"impactOnEGScore":"1.42%"},
+                                            {"feature":"Version control","currentUsageLevel":7,"ideaUsagelevel":8,"impactOnEGScore":"0.40%"}],
+                            "onGoingCampaign":[{"campaignID":542,"campaignDescription":"See your team’s work evolve over time through our visual collaboration tool","Impact":"Activity of users increased by 2%","Channel":"Home page Advertisement","startDate":"01/06/2015"},
+{"campaignID":213,"campaignDescription":"Update your files online without losing any previous version. Our in-built version control takes care.","Impact":"Activity of users increased by 5%","Channel":"Inbox Message","startDate":"02/02/2014"}],
+                            "pastCampaign":[{"campaignID":243,"campaignDescription":"Share your files directly with your contacts","Impact":"Activity of users increased by 0.5%","Channel":"Banner Ad","endDate":"01/01/2015"},
+{"campaignID":67,"campaignDescription":"Add personal and official signature to your files","Impact":"Activity of users increased by 2%","Channel":"Inbox Message","endDate":"05/01/2015"}]
+                        },
 						"engagement":{
 							"trend":{
 				        		"name":["", "", ""],
@@ -2392,7 +2872,7 @@
 				        	}
 						}
 				},
-				 "10":{
+            "10":{
 				"impact":{
 				"conversion":{
 					"data":[{
@@ -2447,8 +2927,32 @@
 									"value":"257645"
 								}
 								
-							}
-						},
+							},
+                            "targetedUsers":[
+                            {"size": "34,265" ,"male":"77%","female":"23%","activeUsers":"56%","appUsersPercentage":"15%","appUsers": "15%" ,
+                            "name":"Project Managers","imageClass":"project-manager-image",
+                                "gender":{
+                                            "name":["male","female"],
+                                            "values":[62, 38],
+                                            "color":["#F5874F", "#ADADAD"]
+                                        }
+                            }],
+                            "incrementalImpact":[{"revenue":"36,497","paidUsers":"456","F2PconversionRate":" 5%","EGScore":"23%"}],
+                            "reasons":["Additional 17% Project Managers (2398 users) and subsequently 56% Operations team (49264 users) expected to adopt team sign-up", "Team sign-up leads to additional 61% activity and in-turn 23% overall increase in conversion for the UG"]
+                        },
+                        "tableData":{
+                            "productUsage":[{"feature":"Team Sign-ups","currentUsageLevel":5,"ideaUsagelevel":12,"impactOnEGScore":"0.73%"},
+                                            {"feature":"eSign","currentUsageLevel":2,"ideaUsagelevel":7,"impactOnEGScore":"1.60%"},
+                                            {"feature":"User privileges","currentUsageLevel":4,"ideaUsagelevel":9,"impactOnEGScore":"1.55%"},
+                                            {"feature":"Visual collaboration","currentUsageLevel":12,"ideaUsagelevel":21,"impactOnEGScore":"0.55%"},
+                                            {"feature":"Integration with EMM","currentUsageLevel":1,"ideaUsagelevel":8,"impactOnEGScore":"0.80%"},
+                                            {"feature":"Data security","currentUsageLevel":7,"ideaUsagelevel":11,"impactOnEGScore":"1.42%"},
+                                            {"feature":"Version control","currentUsageLevel":7,"ideaUsagelevel":8,"impactOnEGScore":"0.40%"}],
+                            "onGoingCampaign":[{"campaignID":542,"campaignDescription":"See your team’s work evolve over time through our visual collaboration tool","Impact":"Activity of users increased by 2%","Channel":"Home page Advertisement","startDate":"01/06/2015"},
+{"campaignID":213,"campaignDescription":"Update your files online without losing any previous version. Our in-built version control takes care.","Impact":"Activity of users increased by 5%","Channel":"Inbox Message","startDate":"02/02/2014"}],
+                            "pastCampaign":[{"campaignID":243,"campaignDescription":"Share your files directly with your contacts","Impact":"Activity of users increased by 0.5%","Channel":"Banner Ad","endDate":"01/01/2015"},
+{"campaignID":67,"campaignDescription":"Add personal and official signature to your files","Impact":"Activity of users increased by 2%","Channel":"Inbox Message","endDate":"05/01/2015"}]
+                        },
 				"engagement":{
 					"trend":{
 		        		"name":["", "", ""],
@@ -2512,7 +3016,31 @@
 									"value":"257645"
 								}
 								
-							}
+							},
+                            "targetedUsers":[
+							{"size": "456,384" ,"male":"42%","female":"58%","activeUsers":"261,905","appUsersPercentage":"32%","appUsers": "145,872" ,
+							"name":"Budding Artists","imageClass":"teacher-image",
+							"gender":{
+						        		"name":["male","female"],
+						        		"values":[42, 58],
+						        		"color":["#F5874F", "#ADADAD"]
+						        	}
+        					}],
+                            "incrementalImpact":[{"revenue":"107,486","paidUsers":1344,"F2PconversionRate":"9%","EGScore":"17%"}],
+							"reasons":["Additional 21% of Budding Artists (55000 users) are expected to start sharing/streaming music using phone", "Average engagament of Buddings Artists who share and stream using phone is 37% percent points higher than non-phone users"]
+						},
+                "tableData":{
+							"productUsage":[{"feature":"Share and stream using phone","currentUsageLevel":7,"ideaUsagelevel":15,"impactOnEGScore":"1.42%"},
+											{"feature":"Share HD version","currentUsageLevel":4,"ideaUsagelevel":9,"impactOnEGScore":"1.50%"},
+											{"feature":"Annotations / Inline commenting","currentUsageLevel":2,"ideaUsagelevel":8,"impactOnEGScore":"1.10%"},
+											{"feature":"Play according to network speed","currentUsageLevel":12,"ideaUsagelevel":21,"impactOnEGScore":"0.55%"},
+											{"feature":"Mobile App","currentUsageLevel":13,"ideaUsagelevel":22,"impactOnEGScore":"0.23%"},
+                                            {"feature":"Storage Space","currentUsageLevel":7,"ideaUsagelevel":8,"impactOnEGScore":"0.20%"},
+                                            {"feature":"Automatic Backup","currentUsageLevel":7,"ideaUsagelevel":7,"impactOnEGScore":"0.10%"}],
+							"onGoingCampaign":[{"campaignID":923,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 1.2%","Channel":"Home page Advertisement","startDate":"03/03/2015"},
+{"campaignID":562,"campaignDescription":"Welcome Campaign","Impact":"Activity of users increased by 5%","Channel":"Inbox Message","startDate":"02/02/2014"}],
+							"pastCampaign":[{"campaignID":12,"campaignDescription":"Play at 0.5X, 1X, 1.5X and 2X speed","Impact":"Activity of users increased by 0.5%","Channel":"Banner Ad","endDate":"10/09/2014"},
+{"campaignID":901,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 2%","Channel":"Inbox Message","endDate":"05/01/2015"}]
 						},
 				"engagement":{
 					"trend":{
@@ -2522,7 +3050,7 @@
 		        	}
 				}
 				},
-				"12":{
+            "12":{
 					"impact":{
 						"conversion":{
 							"data":[{
@@ -2577,8 +3105,32 @@
 									"value":"257645"
 								}
 								
-							}
-						},
+							},
+                            "targetedUsers":[
+                            {"size": "34,265" ,"male":"77%","female":"23%","activeUsers":"56%","appUsersPercentage":"15%","appUsers": "15%" ,
+                            "name":"Project Managers","imageClass":"project-manager-image",
+                                "gender":{
+                                            "name":["male","female"],
+                                            "values":[62, 38],
+                                            "color":["#F5874F", "#ADADAD"]
+                                        }
+                            }],
+                            "incrementalImpact":[{"revenue":"36,497","paidUsers":"456","F2PconversionRate":" 5%","EGScore":"23%"}],
+                            "reasons":["Additional 17% Project Managers (2398 users) and subsequently 56% Operations team (49264 users) expected to adopt team sign-up", "Team sign-up leads to additional 61% activity and in-turn 23% overall increase in conversion for the UG"]
+                        },
+                        "tableData":{
+                            "productUsage":[{"feature":"Team Sign-ups","currentUsageLevel":5,"ideaUsagelevel":12,"impactOnEGScore":"0.73%"},
+                                            {"feature":"eSign","currentUsageLevel":2,"ideaUsagelevel":7,"impactOnEGScore":"1.60%"},
+                                            {"feature":"User privileges","currentUsageLevel":4,"ideaUsagelevel":9,"impactOnEGScore":"1.55%"},
+                                            {"feature":"Visual collaboration","currentUsageLevel":12,"ideaUsagelevel":21,"impactOnEGScore":"0.55%"},
+                                            {"feature":"Integration with EMM","currentUsageLevel":1,"ideaUsagelevel":8,"impactOnEGScore":"0.80%"},
+                                            {"feature":"Data security","currentUsageLevel":7,"ideaUsagelevel":11,"impactOnEGScore":"1.42%"},
+                                            {"feature":"Version control","currentUsageLevel":7,"ideaUsagelevel":8,"impactOnEGScore":"0.40%"}],
+                            "onGoingCampaign":[{"campaignID":542,"campaignDescription":"See your team’s work evolve over time through our visual collaboration tool","Impact":"Activity of users increased by 2%","Channel":"Home page Advertisement","startDate":"01/06/2015"},
+{"campaignID":213,"campaignDescription":"Update your files online without losing any previous version. Our in-built version control takes care.","Impact":"Activity of users increased by 5%","Channel":"Inbox Message","startDate":"02/02/2014"}],
+                            "pastCampaign":[{"campaignID":243,"campaignDescription":"Share your files directly with your contacts","Impact":"Activity of users increased by 0.5%","Channel":"Banner Ad","endDate":"01/01/2015"},
+{"campaignID":67,"campaignDescription":"Add personal and official signature to your files","Impact":"Activity of users increased by 2%","Channel":"Inbox Message","endDate":"05/01/2015"}]
+                        },
 						"engagement":{
 							"trend":{
 				        		"name":["", "", ""],
@@ -2587,7 +3139,7 @@
 				        	}
 						}
 				},
-				 "13":{
+            "13":{
 				"impact":{
 				"conversion":{
 					"data":[{
@@ -2642,7 +3194,31 @@
 									"value":"257645"
 								}
 								
-							}
+							},
+                            "targetedUsers":[
+							{"size": "456,384" ,"male":"42%","female":"58%","activeUsers":"261,905","appUsersPercentage":"32%","appUsers": "145,872" ,
+							"name":"Budding Artists","imageClass":"teacher-image",
+							"gender":{
+						        		"name":["male","female"],
+						        		"values":[42, 58],
+						        		"color":["#F5874F", "#ADADAD"]
+						        	}
+        					}],
+                            "incrementalImpact":[{"revenue":"107,486","paidUsers":1344,"F2PconversionRate":"9%","EGScore":"17%"}],
+							"reasons":["Additional 21% of Budding Artists (55000 users) are expected to start sharing/streaming music using phone", "Average engagament of Buddings Artists who share and stream using phone is 37% percent points higher than non-phone users"]
+						},
+                "tableData":{
+							"productUsage":[{"feature":"Share and stream using phone","currentUsageLevel":7,"ideaUsagelevel":15,"impactOnEGScore":"1.42%"},
+											{"feature":"Share HD version","currentUsageLevel":4,"ideaUsagelevel":9,"impactOnEGScore":"1.50%"},
+											{"feature":"Annotations / Inline commenting","currentUsageLevel":2,"ideaUsagelevel":8,"impactOnEGScore":"1.10%"},
+											{"feature":"Play according to network speed","currentUsageLevel":12,"ideaUsagelevel":21,"impactOnEGScore":"0.55%"},
+											{"feature":"Mobile App","currentUsageLevel":13,"ideaUsagelevel":22,"impactOnEGScore":"0.23%"},
+                                            {"feature":"Storage Space","currentUsageLevel":7,"ideaUsagelevel":8,"impactOnEGScore":"0.20%"},
+                                            {"feature":"Automatic Backup","currentUsageLevel":7,"ideaUsagelevel":7,"impactOnEGScore":"0.10%"}],
+							"onGoingCampaign":[{"campaignID":923,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 1.2%","Channel":"Home page Advertisement","startDate":"03/03/2015"},
+{"campaignID":562,"campaignDescription":"Welcome Campaign","Impact":"Activity of users increased by 5%","Channel":"Inbox Message","startDate":"02/02/2014"}],
+							"pastCampaign":[{"campaignID":12,"campaignDescription":"Play at 0.5X, 1X, 1.5X and 2X speed","Impact":"Activity of users increased by 0.5%","Channel":"Banner Ad","endDate":"10/09/2014"},
+{"campaignID":901,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 2%","Channel":"Inbox Message","endDate":"05/01/2015"}]
 						},
 				"engagement":{
 					"trend":{
@@ -2707,7 +3283,31 @@
 									"value":"257645"
 								}
 								
-							}
+							},
+                            "targetedUsers":[
+							{"size": "456,384" ,"male":"42%","female":"58%","activeUsers":"261,905","appUsersPercentage":"32%","appUsers": "145,872" ,
+							"name":"Budding Artists","imageClass":"enterprise-image",
+							"gender":{
+						        		"name":["male","female"],
+						        		"values":[42, 58],
+						        		"color":["#F5874F", "#ADADAD"]
+						        	}
+        					}],
+                            "incrementalImpact":[{"revenue":"107,486","paidUsers":1344,"F2PconversionRate":"9%","EGScore":"17%"}],
+							"reasons":["Additional 21% of Budding Artists (55000 users) are expected to start sharing/streaming music using phone", "Average engagament of Buddings Artists who share and stream using phone is 37% percent points higher than non-phone users"]
+						},
+                "tableData":{
+							"productUsage":[{"feature":"Share and stream using phone","currentUsageLevel":7,"ideaUsagelevel":15,"impactOnEGScore":"1.42%"},
+											{"feature":"Share HD version","currentUsageLevel":4,"ideaUsagelevel":9,"impactOnEGScore":"1.50%"},
+											{"feature":"Annotations / Inline commenting","currentUsageLevel":2,"ideaUsagelevel":8,"impactOnEGScore":"1.10%"},
+											{"feature":"Play according to network speed","currentUsageLevel":12,"ideaUsagelevel":21,"impactOnEGScore":"0.55%"},
+											{"feature":"Mobile App","currentUsageLevel":13,"ideaUsagelevel":22,"impactOnEGScore":"0.23%"},
+                                            {"feature":"Storage Space","currentUsageLevel":7,"ideaUsagelevel":8,"impactOnEGScore":"0.20%"},
+                                            {"feature":"Automatic Backup","currentUsageLevel":7,"ideaUsagelevel":7,"impactOnEGScore":"0.10%"}],
+							"onGoingCampaign":[{"campaignID":923,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 1.2%","Channel":"Home page Advertisement","startDate":"03/03/2015"},
+{"campaignID":562,"campaignDescription":"Welcome Campaign","Impact":"Activity of users increased by 5%","Channel":"Inbox Message","startDate":"02/02/2014"}],
+							"pastCampaign":[{"campaignID":12,"campaignDescription":"Play at 0.5X, 1X, 1.5X and 2X speed","Impact":"Activity of users increased by 0.5%","Channel":"Banner Ad","endDate":"10/09/2014"},
+{"campaignID":901,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 2%","Channel":"Inbox Message","endDate":"05/01/2015"}]
 						},
 				"engagement":{
 					"trend":{
@@ -2717,7 +3317,7 @@
 		        	}
 				}
 				},
-				"15":{
+            "15":{
 					"impact":{
 						"conversion":{
 							"data":[{
@@ -2772,7 +3372,31 @@
 									"value":"257645"
 								}
 								
-							}
+							},
+                            "targetedUsers":[
+							{"size": "456,384" ,"male":"42%","female":"58%","activeUsers":"261,905","appUsersPercentage":"32%","appUsers": "145,872" ,
+							"name":"Budding Artists","imageClass":"teacher-image",
+							"gender":{
+						        		"name":["male","female"],
+						        		"values":[42, 58],
+						        		"color":["#F5874F", "#ADADAD"]
+						        	}
+        					}],
+                            "incrementalImpact":[{"revenue":"107,486","paidUsers":1344,"F2PconversionRate":"9%","EGScore":"17%"}],
+							"reasons":["Additional 21% of Budding Artists (55000 users) are expected to start sharing/streaming music using phone", "Average engagament of Buddings Artists who share and stream using phone is 37% percent points higher than non-phone users"]
+						},
+                "tableData":{
+							"productUsage":[{"feature":"Share and stream using phone","currentUsageLevel":7,"ideaUsagelevel":15,"impactOnEGScore":"1.42%"},
+											{"feature":"Share HD version","currentUsageLevel":4,"ideaUsagelevel":9,"impactOnEGScore":"1.50%"},
+											{"feature":"Annotations / Inline commenting","currentUsageLevel":2,"ideaUsagelevel":8,"impactOnEGScore":"1.10%"},
+											{"feature":"Play according to network speed","currentUsageLevel":12,"ideaUsagelevel":21,"impactOnEGScore":"0.55%"},
+											{"feature":"Mobile App","currentUsageLevel":13,"ideaUsagelevel":22,"impactOnEGScore":"0.23%"},
+                                            {"feature":"Storage Space","currentUsageLevel":7,"ideaUsagelevel":8,"impactOnEGScore":"0.20%"},
+                                            {"feature":"Automatic Backup","currentUsageLevel":7,"ideaUsagelevel":7,"impactOnEGScore":"0.10%"}],
+							"onGoingCampaign":[{"campaignID":923,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 1.2%","Channel":"Home page Advertisement","startDate":"03/03/2015"},
+{"campaignID":562,"campaignDescription":"Welcome Campaign","Impact":"Activity of users increased by 5%","Channel":"Inbox Message","startDate":"02/02/2014"}],
+							"pastCampaign":[{"campaignID":12,"campaignDescription":"Play at 0.5X, 1X, 1.5X and 2X speed","Impact":"Activity of users increased by 0.5%","Channel":"Banner Ad","endDate":"10/09/2014"},
+{"campaignID":901,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 2%","Channel":"Inbox Message","endDate":"05/01/2015"}]
 						},
 						"engagement":{
 							"trend":{
@@ -2782,7 +3406,7 @@
 				        	}
 						}
 				},
-				 "16":{
+            "16":{
 				"impact":{
 				"conversion":{
 					"data":[{
@@ -2837,7 +3461,31 @@
 									"value":"257645"
 								}
 								
-							}
+							},
+                            "targetedUsers":[
+							{"size": "456,384" ,"male":"42%","female":"58%","activeUsers":"261,905","appUsersPercentage":"32%","appUsers": "145,872" ,
+							"name":"Budding Artists","imageClass":"musicians-image",
+							"gender":{
+						        		"name":["male","female"],
+						        		"values":[42, 58],
+						        		"color":["#F5874F", "#ADADAD"]
+						        	}
+        					}],
+                            "incrementalImpact":[{"revenue":"107,486","paidUsers":1344,"F2PconversionRate":"9%","EGScore":"17%"}],
+							"reasons":["Additional 21% of Budding Artists (55000 users) are expected to start sharing/streaming music using phone", "Average engagament of Buddings Artists who share and stream using phone is 37% percent points higher than non-phone users"]
+						},
+                "tableData":{
+							"productUsage":[{"feature":"Share and stream using phone","currentUsageLevel":7,"ideaUsagelevel":15,"impactOnEGScore":"1.42%"},
+											{"feature":"Share HD version","currentUsageLevel":4,"ideaUsagelevel":9,"impactOnEGScore":"1.50%"},
+											{"feature":"Annotations / Inline commenting","currentUsageLevel":2,"ideaUsagelevel":8,"impactOnEGScore":"1.10%"},
+											{"feature":"Play according to network speed","currentUsageLevel":12,"ideaUsagelevel":21,"impactOnEGScore":"0.55%"},
+											{"feature":"Mobile App","currentUsageLevel":13,"ideaUsagelevel":22,"impactOnEGScore":"0.23%"},
+                                            {"feature":"Storage Space","currentUsageLevel":7,"ideaUsagelevel":8,"impactOnEGScore":"0.20%"},
+                                            {"feature":"Automatic Backup","currentUsageLevel":7,"ideaUsagelevel":7,"impactOnEGScore":"0.10%"}],
+							"onGoingCampaign":[{"campaignID":923,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 1.2%","Channel":"Home page Advertisement","startDate":"03/03/2015"},
+{"campaignID":562,"campaignDescription":"Welcome Campaign","Impact":"Activity of users increased by 5%","Channel":"Inbox Message","startDate":"02/02/2014"}],
+							"pastCampaign":[{"campaignID":12,"campaignDescription":"Play at 0.5X, 1X, 1.5X and 2X speed","Impact":"Activity of users increased by 0.5%","Channel":"Banner Ad","endDate":"10/09/2014"},
+{"campaignID":901,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 2%","Channel":"Inbox Message","endDate":"05/01/2015"}]
 						},
 				"engagement":{
 					"trend":{
@@ -2883,7 +3531,7 @@
 					    }]
 					 }
 				},
-						"userGroup":{
+				"userGroup":{
 							"trend":{
 								"name":["Jan-15", "Feb-15", "Mar-15", "Apr-15","May-15", "Jun-15", "Jul-15", "Aug-15", "Sep-15", "Oct-15", "Nov-15", "Dec-15"],
 								"values":[50, 75, 50, 75, 50, 75, 50, 75, 50, 75],
@@ -2902,7 +3550,31 @@
 									"value":"257645"
 								}
 								
-							}
+							},
+                            "targetedUsers":[
+							{"size": "456,384" ,"male":"42%","female":"58%","activeUsers":"261,905","appUsersPercentage":"32%","appUsers": "145,872" ,
+							"name":"Budding Artists","imageClass":"family-friends-image",
+							"gender":{
+						        		"name":["male","female"],
+						        		"values":[42, 58],
+						        		"color":["#F5874F", "#ADADAD"]
+						        	}
+        					}],
+                            "incrementalImpact":[{"revenue":"107,486","paidUsers":1344,"F2PconversionRate":"9%","EGScore":"17%"}],
+							"reasons":["Additional 21% of Budding Artists (55000 users) are expected to start sharing/streaming music using phone", "Average engagament of Buddings Artists who share and stream using phone is 37% percent points higher than non-phone users"]
+						},
+                "tableData":{
+							"productUsage":[{"feature":"Share and stream using phone","currentUsageLevel":7,"ideaUsagelevel":15,"impactOnEGScore":"1.42%"},
+											{"feature":"Share HD version","currentUsageLevel":4,"ideaUsagelevel":9,"impactOnEGScore":"1.50%"},
+											{"feature":"Annotations / Inline commenting","currentUsageLevel":2,"ideaUsagelevel":8,"impactOnEGScore":"1.10%"},
+											{"feature":"Play according to network speed","currentUsageLevel":12,"ideaUsagelevel":21,"impactOnEGScore":"0.55%"},
+											{"feature":"Mobile App","currentUsageLevel":13,"ideaUsagelevel":22,"impactOnEGScore":"0.23%"},
+                                            {"feature":"Storage Space","currentUsageLevel":7,"ideaUsagelevel":8,"impactOnEGScore":"0.20%"},
+                                            {"feature":"Automatic Backup","currentUsageLevel":7,"ideaUsagelevel":7,"impactOnEGScore":"0.10%"}],
+							"onGoingCampaign":[{"campaignID":923,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 1.2%","Channel":"Home page Advertisement","startDate":"03/03/2015"},
+{"campaignID":562,"campaignDescription":"Welcome Campaign","Impact":"Activity of users increased by 5%","Channel":"Inbox Message","startDate":"02/02/2014"}],
+							"pastCampaign":[{"campaignID":12,"campaignDescription":"Play at 0.5X, 1X, 1.5X and 2X speed","Impact":"Activity of users increased by 0.5%","Channel":"Banner Ad","endDate":"10/09/2014"},
+{"campaignID":901,"campaignDescription":"Share and stream using phone","Impact":"Activity of users increased by 2%","Channel":"Inbox Message","endDate":"05/01/2015"}]
 						},
 				"engagement":{
 					"trend":{
