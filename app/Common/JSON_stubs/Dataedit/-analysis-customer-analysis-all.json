@@ -1,0 +1,1065 @@
+{
+    "status": "OK",
+    "message": "Request processed successfully",
+    "data":{
+    	"allusers":{
+    		"data": {
+		        "overall":{
+		        	"userTrend":{
+		        		"name":["Free Users", "Paid Users"],
+		        		"values":[94, 6],
+		        		"color":["#1B6395", "#999999"]
+		        	},
+					"data":{
+						"totalUser":{
+							"value":" 5,367,253",
+							"yoy":"3.50"
+						},
+						"freeUser":{
+							"value":" 5,045,218",
+							"yoy":"1.10"
+						},
+						"paidUser":{
+							"value":" 322,035",
+							"yoy":"3"
+						}
+					}
+		        	},
+		        	"productProfile":{
+		        	"users":{
+		        		"name":["Basic", "Enterprise"],
+		        		"values":[77, 23],
+		        		"color":["#1B6395", "#999999"]
+		        	},
+					"revenueTrend":{
+		        		"name":["Basic", "Enterprise"],
+		        		"values":[53, 47],
+		        		"color":["#1B6395", "#999999"]
+		        	}
+		        	},
+					"demographicProfile":{
+		        	"gender":{
+		        		"name":["Male", "Female"],
+		        		"values":[55, 45],
+		        		"color":["#1B6395", "#999999"]
+		        	},
+		        	"age":{
+		        		"name":["18yrs - 24yrs", "25yrs - 34yrs", "35yrs - 54yrs", "54yrs +"],
+		        		"values":[25.8, 34.3, 33.4, 6.5],
+		        		"color":["#1B6395", "#999999","#149AE3", "#56D8CA"]
+		        	},
+		        	"location":{
+		        		"name":["Northwest", "MidWest", "NorthEast", "South"],
+		        		"values":[24, 15, 33, 28],
+		        		"color":["#05395D", "#999999","#149AE3", "#1B6395"]
+		        	}
+		        	},
+					 "productUsage":{
+		        	"status":{
+		        		"name":["Complete", "Incomplete"],
+		        		"values":[50, 50],
+		        		"color": ["#1B6395", "#999999"]
+		        	},
+		        	"trendingFeatures":{
+		        		"name":["Automatic back-up","Mobile App","Version Control","eSign","Visual Collaboration","Collaboration","Online Video and Audio Streaming"],
+		        		"values":[22, 44, 59, 64, 67, 71, 80],
+		        		"color":"#fb7d7d"
+		        	},
+		        	"trendingActivities":{
+		        		"name":["Automatic Backup", "Visual collaboration", "Team Sign-ups", "Microsoft 365 Integration", "Workspace Share", "Share and stream using phone"],
+		        		"values":[76.9, 68.6, 38.3, 27.9,35, 38.2 ],
+		        		"color":"#1b6395"
+		        	},
+		        	"login":{
+		        		"name":[">10", "5-10", "2-5", "Once a week"],
+		        		"values":[11, 15, 10, 64],
+		        		"color":"#05395d"
+		        	},
+		        	"loginDuration":{
+		        		"name" : ["<10 mins", "10-30 mins", "30-45 mins", ">45 mins"],
+		        		 "values":[47.6, 26, 12.2, 3.7, 10.5],
+		        		"color":"#05395d"
+		        	}
+		        	
+		        },
+				"engagementBehaviour":{
+		        	"activeUsersTrendRevenue":{
+		        		"legend":"Revenue",
+		        		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+		        		"values":[5.10, 5.46, 6.06, 6.12, 5.28, 3.84, 4.56, 5.88, 6],
+		        		"color":"#05395d"},
+					"activeUsersTrendPaidusers":{
+		        		"legend":"Paid Users",
+		        		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+		        		"values":[16290,16155,16730,17186,17814,17000,17729,18284,9707],
+		        		"color":"#05395d"},
+		        	"activeUsersTrendEngagementScore":{
+		        		"legend":"Engagement Score",
+		        		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+		        		"values":[62.9,61.0,61.4,61.9,62.1,63.0,63.2,63.6,63.3],
+		        		"color":"#05395d"},
+		        	"activeUsersTrendF2P":{
+		        		"legend":"Conversion Rate",
+		        		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+		        		"values":[3.1,3.2,3.3,3.6,4.4,4,4.6,4.9,5],
+		        		"color":"#05395d"},
+						"data":{
+						"TotalRevenue":{
+							"value":"$5.8 million",
+							"yoy":"2",
+							"name":"Total Revenue",
+							"id":"activeUsersTrendRevenue"
+						},
+						"PaidUser":{
+							"value":" 322,035",
+							"yoy":"4",
+							"name":"Paid Users",
+							"id":"activeUsersTrendPaidusers"
+						},
+						"Freetopaidconversion":{
+							"value":"6",
+							"yoy":"1.2",
+							"name":"Free to Paid Conversion",
+							"id":"activeUsersTrendF2P"
+						},
+						"Engagementscore":{
+							"value":"62",
+							"yoy":"1",
+							"name":"Engagement Score",
+							"id":"activeUsersTrendEngagementScore"
+						}
+					}
+				},
+				"campaignCalender":{
+		        "tableData":[{
+		    		"CampaignID":"12",
+		            "userGroup":"Musicians - Professional Music Composers",
+		            "description":"Share HD quality files with your close network.",
+					"targetUsers":"135751",
+					"response":"31222",
+					"Impact":"Engagement score of Musicians will increase by 12 percent",
+		    		"startDate":"12/01/2015",
+		    		"endDate":"12/31/2015"
+		    	},{
+		    		"CampaignID":"23",
+		            "userGroup":"Teachers - Schools and colleges",
+		            "description":"Your students can play your video clippings at desired speed ensuring they grasp the content",
+		            "targetUsers":"416303",
+					"response":"99912",
+					"Impact":"Engagement score of Teachers will increase by 19 percent",
+		    		"startDate":"12/01/2015",
+		    		"endDate":"12/31/2015"
+		    	},{
+		    		"CampaignID":"99",
+		            "userGroup":"Creative Agencies",
+		            "description":"Secure forward your composition to your clients, ensuring the confidentiality of the work",
+		            "targetUsers":"380103",
+					"response":"38000",
+					"Impact":"Engagement score of Creative agencies will increase by 5 percent",
+		    		"startDate":"12/01/2015",
+		    		"endDate":"12/31/2015"
+		    	},{
+		    		"CampaignID":"5",
+		            "userGroup":"Office goers - Project Manager",
+		            "description":"Unite your team on a single platform where all their work is saved and shared",
+		            "targetUsers":"316752",
+					"response":"47512",
+		            "Impact":"Engagement score of Office goers will increase by 23 percent",
+		    		"startDate":"12/01/2015",
+		    		"endDate":"12/31/2015"
+		    	}]
+				},
+				"customInsights":{
+					"data":[
+					{"point":""},
+					{"point":""},
+					{"point":""},
+					{"point":""}
+					]
+				}
+		         
+		    }
+	    },
+	    "creativeagencies":{
+	    	"data": {
+		        "overall":{
+		        	"userTrend":{
+		        		"name":["Free Users", "Paid Users"],
+		        		"values":[96.8, 3.2],
+		        		"color":["#1B6395", "#999999"]
+		        	},
+					"data":{
+						"totalUser":{
+							"value":" 483,053",
+							"yoy":"3.10"
+						},
+						"freeUser":{
+							"value":" 467,595",
+							"yoy":"4.70"
+						},
+						"paidUser":{
+							"value":" 15,458",
+							"yoy":"3.2"
+						}
+					}
+		        	},
+		        	"productProfile":{
+		        	"users":{
+		        		"name":["Basic", "Enterprise"],
+		        		"values":[45, 55],
+		        		"color":["#1B6395", "#999999"]
+		        	},
+					"revenueTrend":{
+		        		"name":["Basic", "Enterprise"],
+		        		"values":[21, 79],
+		        		"color":["#1B6395", "#999999"]
+		        	}
+		        	},
+					"demographicProfile":{
+		        	"gender":{
+		        		"name":["Male", "Female"],
+		        		"values":[70, 30],
+		        		"color":["#1B6395", "#999999"]
+		        	},
+		        	"age":{
+		        		"name":["18yrs - 24yrs", "25yrs - 34yrs", "35yrs - 54yrs", "54yrs +"],
+		        		"values":[3.8, 34.3, 55.4, 6.5],
+		        		"color":["#1B6395", "#999999","#149AE3", "#56D8CA"]
+		        	},
+		        	"location":{
+		        		"name":["Northwest", "MidWest", "NorthEast", "South"],
+		        		"values":[17, 21, 34, 28],
+		        		"color":["#05395D", "#999999","#149AE3", "#1B6395"]
+		        	}
+		        	},
+					 "productUsage":{
+		        	"status":{
+		        		"name":["Complete", "Incomplete"],
+		        		"values":[40, 60],
+		        		"color":["#1B6395", "#999999"]
+		        	},
+		        	"trendingFeatures":{
+		        		"name":["Collaboration / Security","Automatic back-up","Mobile App","Microsoft 365 Integration","Workspace Share","Online video and audio streaming","Version Control"],
+		                "values":[22, 44, 59, 64, 67, 71, 80],
+		        		"color":"#fb7d7d"
+		        	},
+		        	"trendingActivities":{
+		        		"name":["Automatic Backup", "Visual collaboration", "Team Sign-ups", "Microsoft 365 Integration", "Workspace Share", "Share and stream using phone"],
+		                "values":[76.9, 68.6, 38.3, 27.9,35, 38.2 ],
+		        		"color":"#1b6395"
+		        	},
+		        	"login":{
+		        		"name":[">10", "5-10", "2-5", "Once a week"],
+		        		"values":[11, 25, 50, 14],
+		        		"color":"#05395d"
+		        	},
+		        	"loginDuration":{
+		        		"name" : ["<10 mins", "10-30 mins", "30-45 mins", ">45 mins"],
+		        		 "values":[27.6, 31, 32.2, 3.7, 5],
+		        		"color":"#05395d"
+		        	}
+		        	
+		        },
+				"engagementBehaviour":{
+		        	"activeUsersTrendRevenue":{
+		        		"legend":"Revenue",
+		        		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+		        		"values":[2.27, 3.17, 1.79, 2.59, 2.91, 2.27, 2.43, 3.14, 3.20],
+		        		"color":"#05395d"},
+					"activeUsersTrendPaidusers":{
+		        		"legend":"Paid Users",
+		        		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+		        		"values":[1290,1155,1630,1786,2114,2700,3729,4284,4707],
+		        		"color":"#05395d"},
+		        	"activeUsersTrendEngagementScore":{
+		        		"legend":"Engagement Score",
+		        		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+		        		"values":[62.9,61.0,61.4,61.9,60.1,58.0,55.2,53.6,52.3],
+		        		"color":"#05395d"},
+		        	"activeUsersTrendF2P":{
+		        		"legend":"Conversion Rate",
+		        		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+		        		"values":[3.1,3.2,3.0,2.8,2.7,2.6,2.3,2.2,2.1],
+		        		"color":"#05395d"},
+						"data":{
+						"TotalRevenue":{
+							"value":"$613,827",
+							"yoy":"2",
+							"name":"Total Revenue",
+							"id":"activeUsersTrendRevenue"
+						},
+						"PaidUser":{
+							"value":" 15,458",
+							"yoy":"4",
+							"name":"Paid Users",
+							"id":"activeUsersTrendPaidusers"
+						},
+						"Freetopaidconversion":{
+							"value":"3",
+							"yoy":"1.2",
+							"name":"Free to Paid Conversion",
+							"id":"activeUsersTrendF2P"
+						},
+						"Engagementscore":{
+							"value":"54",
+							"yoy":"1",
+							"name":"Engagement Score",
+							"id":"activeUsersTrendEngagementScore"
+						}
+					}
+				},
+				"campaignCalender":{
+		        "tableData":[{
+		    		"CampaignID":"60",
+		    		"userGroup":"Creative Agencies",
+		    		"description":"Edit, control and manage your work without errors, using Version control   ",
+					"targetUsers":"135751",
+					"response":"31222",
+					"Impact":"Engagement score of Creative Agencies will increase by 9 percent",
+		    		"startDate":"12/01/2015",
+		    		"endDate":"12/31/2015"
+		    	},{
+		    		"CampaignID":"53",
+		    		"userGroup":" Creative Agencies",
+		    		"description":"Securely share your documents with your colleagues Work space share",
+					"targetUsers":"416303",
+					"response":"99912",
+					"Impact":"Engagement score of Creative Agencies will increase by 15 percent",
+		    		"startDate":"12/01/2015",
+		    		"endDate":"12/31/2015"
+		    	},{
+		    		"CampaignID":"57",
+		    		"userGroup":"Creative Agencies",
+		    		"description":"Never worry about deleting files with increased storage space",
+					"targetUsers":"380103",
+					"response":"38000",
+					"Impact":"Engagement score of Creative Agencies will increase by 9 percent",
+		    		"startDate":"12/01/2015",
+		    		"endDate":"12/31/2015"
+		    	},{
+		    		"CampaignID":"51",
+		    		"userGroup":" Creative Agencies",
+		    		"description":"Add personal and official signature to your content",
+					"targetUsers":"316752",
+					"response":"47512",
+					"Impact":"Engagement score of Creative Agencies will increase by 7 percent",
+		    		"startDate":"12/01/2015",
+		    		"endDate":"12/31/2015"
+		    	}]
+				},
+				"customInsights":{
+					"data":[
+					{"point":""},
+					{"point":""},
+					{"point":""},
+					{"point":""}
+					]
+				}
+		         
+		    }
+    	},
+    	"officegoers":{
+    		"data": {
+		        "overall":{
+		        	"userTrend":{
+		        		"name":["Free Users", "Paid Users"],
+		        		"values":[95.5, 4.5],
+		        		"color":["#1B6395", "#999999"]
+		        	},
+					"data":{
+						"totalUser":{
+							"value":"268,363",
+							"yoy":"2.10"
+						},
+						"freeUser":{
+							"value":" 256,287",
+							"yoy":"2.30"
+						},
+						"paidUser":{
+							"value":" 12,076",
+							"yoy":"4.5"
+						}
+					}
+		        	},
+		        	"productProfile":{
+		        	"users":{
+		        		"name":["Basic", "Enterprise"],
+		        		"values":[45, 55],
+		        		"color":["#1B6395", "#999999"]
+		        	},
+					"revenueTrend":{
+		        		"name":["Basic", "Enterprise"],
+		        		"values":[21, 79],
+		        		"color":["#1B6395", "#999999"]
+		        	}
+		        	},
+					"demographicProfile":{
+		        	"gender":{
+		        		"name":["Male", "Female"],
+		        		"values":[70, 30],
+		        		"color":["#1B6395", "#999999"]
+		        	},
+		        	"age":{
+		        		"name":["18yrs - 24yrs", "25yrs - 34yrs", "35yrs - 54yrs", "54yrs +"],
+		        		"values":[3.8, 34.3, 55.4, 6.5],
+		        		"color":["#1B6395", "#999999","#149AE3", "#56D8CA"]
+		        	},
+		        	"location":{
+		        		"name":["Northwest", "MidWest", "NorthEast", "South"],
+		        		"values":[22, 18, 31, 29],
+		        		"color":["#05395D", "#999999","#149AE3", "#1B6395"]
+		        	}
+		        	},
+					 "productUsage":{
+		        	"status":{
+		        		"name":["Complete", "Incomplete"],
+		        		"values":[40, 60],
+		        		"color":["#1B6395", "#999999"]
+		        	},
+		        	"trendingFeatures":{
+		        		"name":["Automatic back-up","Mobile App","Version Control","eSign","Visual Collaboration","Collaboration","Online Video and Audio Streaming"],
+		        		"values":[22, 44, 59, 64, 67, 71, 80],
+		        		"color":"#fb7d7d"
+		        	},
+		        	"trendingActivities":{
+		        		"name":["Automatic Backup", "Visual collaboration", "Team Sign-ups", "Microsoft 365 Integration", "Workspace Share", "Share and stream using phone"],
+		        		"values":[76.9, 68.6, 38.3, 27.9,35, 38.2 ],
+		        		"color":"#1b6395"
+		        	},
+		        	"login":{
+		        		"name":[">10", "5-10", "2-5", "Once a week"],
+		        		"values":[11, 25, 50, 14],
+		        		"color":"#05395d"
+		        	},
+		        	"loginDuration":{
+		        		"name" : ["<10 mins", "10-30 mins", "30-45 mins", ">45 mins"],
+		        		 "values":[27.6, 31, 32.2, 3.7, 5],
+		        		"color":"#05395d"
+		        	}
+		        	
+		        },
+				"engagementBehaviour":{
+		        	"activeUsersTrendRevenue":{
+		        		"legend":"Revenue",
+		        		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+		        		"values":[3.83, 4.10, 2.52, 3.65, 3.47, 2.88, 3.42, 4.41, 4.50],
+		        		"color":"#05395d"},
+					"activeUsersTrendPaidusers":{
+		        		"legend":"Paid Users",
+		        		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+		        		"values":[1290,1155,1630,1786,2114,2700,3729,4284,4707],
+		        		"color":"#05395d"},
+		        	"activeUsersTrendEngagementScore":{
+		        		"legend":"Engagement Score",
+		        		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+		        		"values":[62.9,61.0,61.4,61.9,60.1,58.0,55.2,53.6,52.3],
+		        		"color":"#05395d"},
+		        	"activeUsersTrendF2P":{
+		        		"legend":"Conversion Rate",
+		        		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+		        		"values":[3.1,3.2,3.0,2.8,2.7,2.6,2.3,2.2,2.1],
+		        		"color":"#05395d"},
+						"data":{
+						"TotalRevenue":{
+							"value":"$540,121",
+							"yoy":"2",
+							"name":"Total Revenue",
+							"id":"activeUsersTrendRevenue"
+						},
+						"PaidUser":{
+							"value":" 12,076",
+							"yoy":"4",
+							"name":"Paid Users",
+							"id":"activeUsersTrendPaidusers"
+						},
+						"Freetopaidconversion":{
+							"value":"5",
+							"yoy":"1.2",
+							"name":"Free to Paid Conversion",
+							"id":"activeUsersTrendF2P"
+						},
+						"Engagementscore":{
+							"value":"62",
+							"yoy":"1",
+							"name":"Engagement score",
+							"id":"activeUsersTrendEngagementScore"
+						}
+					}
+				},
+				"campaignCalender":{
+		        "tableData":[{
+		    		"CampaignID":"21",
+		    		"userGroup":" Office goers - Bankers",
+		    		"description":"Share confidential financial reports with your clients with high level of data security in place",
+					"targetUsers":"135751",
+					"response":"31222",
+					"Impact":"Engagement score of Office goers will increase by 24 percent",
+		    		"startDate":"12/01/2015",
+		    		"endDate":"12/31/2015"
+		    	},{
+		    		"CampaignID":"34",
+		    		"userGroup":"Office goers - Operations teams",
+		    		"description":"Update your files online without losing any previous version. Our in-built version control takes care",
+					"targetUsers":"416303",
+					"response":"99912",
+					"Impact":"Engagement score of Teachers will increase by 19 percent",
+		    		"startDate":"12/01/2012",
+		    		"endDate":"12/31/2012"
+		    	},{
+		    		"CampaignID":"61",
+		    		"userGroup":"Office goers - Project Managers",
+		    		"description":"Focus on creating great work and not on managing feedback. Collaborate with your team anywhere anytime.",
+					"targetUsers":"380103",
+					"response":"38000",
+					"Impact":"Engagement score of Office goers will increase by 18 percent",
+		    		"startDate":"12/01/2015",
+		    		"endDate":"12/31/2015"
+		    	},{
+		    		"CampaignID":"5",
+		    		"userGroup":"Office goers - Project Manager",
+		    		"description":"Unite your team on a single platform where all their work is saved and shared",
+					"targetUsers":"316752",
+					"response":"47512",
+					"Impact":"Engagement score of Office goers will increase by 23 percent",
+		    		"startDate":"12/01/2015",
+		    		"endDate":"12/31/2015"
+		    	}]
+				},
+				"customInsights":{
+					"data":[
+					{"point":""},
+					{"point":""},
+					{"point":""},
+					{"point":""}
+					]
+				}
+		         
+		    }
+		},
+		"teachers":{
+			"data": {
+		        "overall":{
+		        	"userTrend":{
+		        		"name":["Free Users", "Paid Users"],
+		        		"values":[94.9, 5.1],
+		        		"color":["#1B6395", "#999999"]
+		        	},
+					"data":{
+						"totalUser":{
+							"value":" 805,088",
+							"yoy":"4.20"
+						},
+						"freeUser":{
+							"value":" 764,029",
+							"yoy":"3.90"
+						},
+						"paidUser":{
+							"value":"41,059 ",
+							"yoy":"5.1"
+						}
+					}
+		        	},
+		        	"productProfile":{
+		        	"users":{
+		        		"name":["Basic", "Enterprise"],
+		        		"values":[45, 55],
+		        		"color":["#1B6395", "#999999"]
+		        	},
+					"revenueTrend":{
+		        		"name":["Basic", "Enterprise"],
+		        		"values":[21, 79],
+		        		"color":["#1B6395", "#999999"]
+		        	}
+		        	},
+					"demographicProfile":{
+		        	"gender":{
+		        		"name":["Male", "Female"],
+		        		"values":[70, 30],
+		        		"color":["#1B6395", "#999999"]
+		        	},
+		        	"age":{
+		        		"name":["18yrs - 24yrs", "25yrs - 34yrs", "35yrs - 54yrs", "54yrs +"],
+		        		"values":[3.8, 34.3, 55.4, 6.5],
+		        		"color":["#1B6395", "#999999","#149AE3", "#56D8CA"]
+		        	},
+		        	"location":{
+		        		"name":["Northwest", "MidWest", "NorthEast", "South"],
+		        		"values":[17, 33, 27, 23],
+		        		"color":["#05395D", "#999999","#149AE3", "#1B6395"]
+		        	}
+		        	},
+					 "productUsage":{
+		        	"status":{
+		        		"name":["Complete", "Incomplete"],
+		        		"values":[40, 60],
+		        		"color":["#1B6395", "#999999"]
+		        	},
+		        	"trendingFeatures":{
+		        		"name":["Collaboration / Security","Automatic back-up","Mobile App","Microsoft 365 Integration","Workspace Share","Version Control","Online video and audio streaming"],
+		        		"values":[22, 44, 59, 64, 67, 71, 80],
+		        		"color":"#fb7d7d"
+		        	},
+		        	"trendingActivities":{
+		        		"name":["Automatic Backup", "Visual collaboration", "Team Sign-ups", "Microsoft 365 Integration", "Workspace Share", "Share and stream using phone"],
+		        		"values":[76.9, 68.6, 38.3, 27.9,35, 38.2 ],
+		        		"color":"#1b6395"
+		        	},
+		        	"login":{
+		        		"name":[">10", "5-10", "2-5", "Once a week"],
+		        		"values":[11, 25, 50, 14],
+		        		"color":"#05395d"
+		        	},
+		        	"loginDuration":{
+		        		"name" : ["<10 mins", "10-30 mins", "30-45 mins", ">45 mins"],
+		        		 "values":[27.6, 31, 32.2, 3.7, 5],
+		        		"color":"#05395d"
+		        	}
+		        	
+		        },
+				"engagementBehaviour":{
+		        	"activeUsersTrendRevenue":{
+		        		"legend":"Revenue",
+		        		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+		        		"values":[3.62, 2.24, 2.86, 4.13, 3.93, 3.26, 3.88, 5.00, 5.10],
+		        		"color":"#05395d"},
+					"activeUsersTrendPaidusers":{
+		        		"legend":"Paid Users",
+		        		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+		        		"values":[1290,1155,1630,1786,2114,2700,3729,4284,4707],
+		        		"color":"#05395d"},
+		        	"activeUsersTrendEngagementScore":{
+		        		"legend":"Engagement Score",
+		        		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+		        		"values":[62.9,61.0,61.4,61.9,60.1,58.0,55.2,53.6,52.3],
+		        		"color":"#05395d"},
+		        	"activeUsersTrendF2P":{
+		        		"legend":"Conversion Rate",
+		        		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+		        		"values":[3.1,3.2,3.0,2.8,2.7,2.6,2.3,2.2,2.1],
+		        		"color":"#05395d"},
+						"data":{
+						"TotalRevenue":{
+							"value":"$1.84 Million",
+							"yoy":"2",
+							"name":"Total Revenue",
+							"id":"activeUsersTrendRevenue"
+						},
+						"PaidUser":{
+							"value":"41,059",
+							"yoy":"4",
+							"name":"Paid Users",
+							"id":"activeUsersTrendPaidusers"
+						},
+						"Freetopaidconversion":{
+							"value":"5",
+							"yoy":"1.2",
+							"name":"Free to Paid Conversion",
+							"id":"activeUsersTrendF2P"
+						},
+						"Engagementscore":{
+							"value":"44",
+							"yoy":"1",
+							"name":"Engagement score",
+							"id":"activeUsersTrendEngagementScore"
+						}
+					}
+				},
+				"campaignCalender":{
+		        "tableData":[{
+		    		"CampaignID":"12",
+		    		"userGroup":"Musicians - Professional Music Composers",
+		    		"description":"Share HD quality files with your close network.",
+					"targetUsers":"135751",
+					"response":"31222",
+					"Impact":"Engagement score of Musicians will increase by 12 percent",
+		    		"startDate":"12/01/2015",
+		    		"endDate":"12/31/2015"
+		    	},{
+		    		"CampaignID":"23",
+		    		"userGroup":"Teachers - Schools and colleges",
+		    		"description":"Your students can play your video clippings at desired speed ensuring they grasp the content",
+					"targetUsers":"416303",
+					"response":"99912",
+					"Impact":"Engagement score of Teachers will increase by 19 percent",
+		    		"startDate":"12/01/2012",
+		    		"endDate":"12/31/2012"
+		    	},{
+		    		"CampaignID":"99",
+		    		"userGroup":"Creative Agencies",
+		    		"description":"Secure forward your composition to your clients, ensuring the confidentiality of the work",
+					"targetUsers":"380103",
+					"response":"38000",
+					"Impact":"Engagement score of Creative agencies will increase by 5 percent",
+		    		"startDate":"12/01/2015",
+		    		"endDate":"12/31/2015"
+		    	},{
+		    		"CampaignID":"5",
+		    		"userGroup":"Office goers - Project Manager",
+		    		"description":"Unite your team on a single platform where all their work is saved and shared",
+					"targetUsers":"316752",
+					"response":"47512",
+					"Impact":"Engagement score of Office goers will increase by 23 percent",
+		    		"startDate":"12/01/2015",
+		    		"endDate":"12/31/2015"
+		    	}]
+				},
+				"customInsights":{
+					"data":[
+					{"point":""},
+					{"point":""},
+					{"point":""},
+					{"point":""}
+					]
+				}
+		         
+		    }
+		},
+		"musicians":{
+			"data": {
+		        "overall":{
+		        	"userTrend":{
+		        		"name":["Free Users", "Paid Users"],
+		        		"values":[97.9, 2.1],
+		        		"color":["#1B6395", "#999999"]
+		        	},
+					"data":{
+						"totalUser":{
+							"value":" 912,433",
+							"yoy":"1.90"
+						},
+						"freeUser":{
+							"value":" 893,272",
+							"yoy":"5.10"
+						},
+						"paidUser":{
+							"value":" 19,161",
+							"yoy":"2.1"
+						}
+					}
+		        	},
+		        	"productProfile":{
+		        	"users":{
+		        		"name":["Basic", "Enterprise"],
+		        		"values":[80, 20],
+		        		"color":["#1B6395", "#999999"]
+		        	},
+					"revenueTrend":{
+		        		"name":["Basic", "Enterprise"],
+		        		"values":[57, 42],
+		        		"color":["#1B6395", "#999999"]
+		        	}
+		        	},
+					"demographicProfile":{
+		        	"gender":{
+		        		"name":["Male", "Female"],
+		        		"values":[43, 57],
+		        		"color":["#1B6395", "#999999"]
+		        	},
+		        	"age":{
+		        		"name":["18yrs - 24yrs", "25yrs - 34yrs", "35yrs - 54yrs", "54yrs +"],
+		        		"values":[45.8, 34.3, 13.4, 6.5],
+		        		"color":["#1B6395", "#999999","#149AE3", "#56D8CA"]
+		        	},
+		        	"location":{
+		        		"name":["Northwest", "MidWest", "NorthEast", "South"],
+		        		"values":[23, 29, 31, 17],
+		        		"color":["#05395D", "#999999","#149AE3", "#1B6395"]
+		        	}
+		        	},
+					 "productUsage":{
+		        	"status":{
+		        		"name":["Complete", "Incomplete"],
+		        		"values":[45, 50],
+		        		"color":["#1B6395", "#999999"]
+		        	},
+		        	"trendingFeatures":{
+		        		"name":["Collaboration / Security","Automatic back-up","Mobile App","Microsoft 365 Integration","Workspace Share","Version Control","Online video and audio streaming"],
+		                "values":[22, 44, 59, 64, 67, 71, 80],
+		        		"color":"#fb7d7d"
+		        	},
+		        	"trendingActivities":{
+		        		"name":["Automatic Backup", "Visual collaboration", "Team Sign-ups", "Microsoft 365 Integration", "Workspace Share", "Share and stream using phone"],
+		                "values":[76.9, 68.6, 38.3, 27.9,35, 38.2 ],
+		        		"color":"#1b6395"
+		        	},
+		        	"login":{
+		        		"name":[">10", "5-10", "2-5", "Once a week"],
+		        		"values":[6, 15, 45, 34],
+		        		"color":"#05395d"
+		        	},
+		        	"loginDuration":{
+		        		"name" : ["<10 mins", "10-30 mins", "30-45 mins", ">45 mins"],
+		        		 "values":[52.6, 26, 12.2, 3.7, 5.5],
+		        		"color":"#05395d"
+		        	}
+		        	
+		        },
+				"engagementBehaviour":{
+		        	"activeUsersTrendRevenue":{
+		        		"legend":"Revenue",
+		        		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+		        		"values":[1.49, 2.08, 1.18, 1.70,1.83, 1.49, 1.60, 2.06, 2.10],
+		        		"color":"#05395d"},
+					"activeUsersTrendPaidusers":{
+		        		"legend":"Paid Users",
+		        		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+		        		"values":[16290,16155,16730,17186,17814,17000,17729,18284,9707],
+		        		"color":"#05395d"},
+		        	"activeUsersTrendEngagementScore":{
+		        		"legend":"Engagement Score",
+		        		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+		        		"values":[62.9,61.0,61.4,61.9,62.1,63.0,63.2,63.6,63.3],
+		        		"color":"#05395d"},
+		        	"activeUsersTrendF2P":{
+		        		"legend":"Conversion Rate",
+		        		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+		        		"values":[3.1,3.2,3.3,3.6,4.3,3.6,3.4,3.3,3.2],
+		        		"color":"#05395d"},
+						"data":{
+						"TotalRevenue":{
+							"value":"$861,982",
+							"yoy":"2",
+							"name":"Total Revenue",
+							"id":"activeUsersTrendRevenue"
+						},
+						"PaidUser":{
+							"value":" 19,161",
+							"yoy":"4",
+							"name":"Paid Users",
+							"id":"activeUsersTrendPaidusers"
+						},
+						"Freetopaidconversion":{
+							"value":"2",
+							"yoy":"1.2",
+							"name":"Free to Paid Conversion",
+							"id":"activeUsersTrendF2P"
+						},
+						"Engagementscore":{
+							"value":"63",
+							"yoy":"1",
+							"name":"Engagement score",
+							"id":"activeUsersTrendEngagementScore"
+						}
+					}
+				},
+				"campaignCalender":{
+		        "tableData":[{
+		    		"CampaignID":"12",
+		            "userGroup":"Musicians - Professional Music Composers",
+		            "description":"Share HD quality files with your close network.",
+		            "targetUsers":"135751",
+					"response":"31222",
+					"Impact":"Engagement score of Musicians will increase by 12 percent",
+		    		"startDate":"12/01/2015",
+		    		"endDate":"12/31/2015"
+		    	},{
+		    		"CampaignID":"25",
+		            "userGroup":"Musicians - Budding Artists",
+		            "description":"Share music recorded on phone. Recipients can listen to your music without loss of quality.",
+		            "targetUsers":"416303",
+					"response":"99912",
+					"Impact":"Engagement score of Teachers will increase by 17 percent",
+		    		"startDate":"12/01/2015",
+		    		"endDate":"12/31/2015"
+		    	},{
+		    		"CampaignID":"33",
+		            "userGroup":"   Musicians - Professional Music Composers",
+		            "description":"Recipients can stream your music on any device without perceivable loss of quality",
+		            "targetUsers":"380103",
+					"response":"38000",
+		            "Impact":"Engagement score of musicians will increase by 8 percent",
+		    		"startDate":"12/01/2015",
+		    		"endDate":"12/31/2015"
+		    	}]
+				},
+				"customInsights":{
+					"data":[
+					{"point":""},
+					{"point":""},
+					{"point":""},
+					{"point":""}
+					]
+				}
+		         
+		    }
+		},
+		"friendsandfamily":{
+			"data": {
+		        "overall":{
+		        	"userTrend":{
+		        		"name":["Free Users", "Paid Users"],
+		        		"values":[98.5, 1.5],
+		        		"color":["#1B6395", "#999999"]
+		        	},
+					"data":{
+						"totalUser":{
+							"value":" 2,790,972",
+							"yoy":"2.10"
+						},
+						"freeUser":{
+							"value":" 2,749,107",
+							"yoy":"2.30"
+						},
+						"paidUser":{
+							"value":" 41,865",
+							"yoy":"1.5"
+						}
+					}
+		        	},
+		        	"productProfile":{
+		        	"users":{
+		        		"name":["Basic", "Enterprise"],
+		        		"values":[45, 55],
+		        		"color":["#1B6395", "#999999"]
+		        	},
+					"revenueTrend":{
+		        		"name":["Basic", "Enterprise"],
+		        		"values":[21, 79],
+		        		"color":["#1B6395", "#999999"]
+		        	}
+		        	},
+					"demographicProfile":{
+		        	"gender":{
+		        		"name":["Male", "Female"],
+		        		"values":[70, 30],
+		        		"color":["#1B6395", "#999999"]
+		        	},
+		        	"age":{
+		        		"name":["18yrs - 24yrs", "25yrs - 34yrs", "35yrs - 54yrs", "54yrs +"],
+		        		"values":[3.8, 34.3, 55.4, 6.5],
+		        		"color":["#1B6395", "#999999","#149AE3", "#56D8CA"]
+		        	},
+		        	"location":{
+		        		"name":["Northwest", "MidWest", "NorthEast", "South"],
+		        		"values":[33, 17, 23, 27],
+		        		"color":["#05395D", "#999999","#149AE3", "#1B6395"]
+		        	}
+		        	},
+					 "productUsage":{
+		        	"status":{
+		        		"name":["Complete", "Incomplete"],
+		        		"values":[40, 60],
+		        		"color":["#1B6395", "#999999"]
+		        	},
+		        	"trendingFeatures":{
+		        		"name":["Collaboration / Security","Automatic back-up","Mobile App","Microsoft 365 Integration","Workspace Share","Online video and audio streaming","Version Control"],
+		        		"values":[22, 44, 59, 64, 67, 71, 80],
+		        		"color":"#fb7d7d"
+		        	},
+		        	"trendingActivities":{
+		        		"name":["Automatic Backup", "Visual collaboration", "Team Sign-ups", "Microsoft 365 Integration", "Workspace Share", "Share and stream using phone"],
+		        		"values":[76.9, 68.6, 38.3, 27.9,35, 38.2 ],
+		        		"color":"#1b6395"
+		        	},
+		        	"login":{
+		        		"name":[">10", "5-10", "2-5", "Once a week"],
+		        		"values":[11, 25, 50, 14],
+		        		"color":"#05395d"
+		        	},
+		        	"loginDuration":{
+		        		"name" : ["<10 mins", "10-30 mins", "30-45 mins", ">45 mins"],
+		        		 "values":[27.6, 31, 32.2, 3.7, 5],
+		        		"color":"#05395d"
+		        	}
+		        	
+		        },
+				"engagementBehaviour":{
+		        	"activeUsersTrendRevenue":{
+		        		"legend":"Revenue",
+		        		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+		        		"values":[1.07, 1.49, 0.84, 1.22, 1.37, 1.07, 1.14, 1.47, 1.50],
+		        		"color":"#05395d"},
+					"activeUsersTrendPaidusers":{
+		        		"legend":"Paid Users",
+		        		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+		        		"values":[1290,1155,1630,1786,2114,2700,3729,4284,4707],
+		        		"color":"#05395d"},
+		        	"activeUsersTrendEngagementScore":{
+		        		"legend":"Engagement Score",
+		        		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+		        		"values":[62.9,61.0,61.4,61.9,60.1,58.0,55.2,53.6,52.3],
+		        		"color":"#05395d"},
+		        	"activeUsersTrendF2P":{
+		        		"legend":"Conversion Rate",
+		        		"name":["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+		        		"values":[3.1,3.2,3.0,2.8,2.7,2.6,2.3,2.2,2.1],
+		        		"color":"#05395d"},
+						"data":{
+						"TotalRevenue":{
+							"value":"$1.87 Million",
+							"yoy":"2",
+							"name":"Total Revenue",
+							"id":"activeUsersTrendRevenue"
+						},
+						"PaidUser":{
+							"value":" 41,865",
+							"yoy":"4",
+							"name":"Paid Users",
+							"id":"activeUsersTrendPaidusers"
+						},
+						"Freetopaidconversion":{
+							"value":"2",
+							"yoy":"1.2",
+							"name":"Free to Paid Conversion",
+							"id":"activeUsersTrendF2P"
+						},
+						"Engagementscore":{
+							"value":"61",
+							"yoy":"1",
+							"name":"Engagement score",
+							"id":"activeUsersTrendEngagementScore"
+						}
+					}
+				},
+				"campaignCalender":{
+		        "tableData":[{
+		    		"CampaignID":"36",
+		    		"userGroup":" Friends And Family",
+		    		"description":"Never lose your cherished memories. Automatic back-up of your photos from all devices",
+					"targetUsers":"135751",
+					"response":"31222",
+					"Impact":"Engagement score of Friends And Family will increase by 5 percent",
+		    		"startDate":"12/01/2015",
+		    		"endDate":"12/31/2015"
+		    	},{
+		    		"CampaignID":"39",
+		    		"userGroup":"Friends And Family",
+		    		"description":"Single account for your entire family",
+					"targetUsers":"416303",
+					"response":"99912",
+					"Impact":"Engagement score of Friends And Family will increase by 4 percent",
+		    		"startDate":"12/01/2012",
+		    		"endDate":"12/31/2012"
+		    	},{
+		    		"CampaignID":"46",
+		    		"userGroup":"Friends And Family",
+		    		"description":"Never worry about deleting files with increased storage space",
+					"targetUsers":"380103",
+					"response":"38000",
+					"Impact":"Engagement score of Friends and family will increase by 7 percent",
+		    		"startDate":"12/01/2015",
+		    		"endDate":"12/31/2015"
+		    	},{
+		    		"CampaignID":"59",
+		    		"userGroup":"Friends and family - Leisure photographers",
+		    		"description":"Never worry about deleting files with increased storage space",
+					"targetUsers":"316752",
+					"response":"47512",
+					"Impact":"Engagement score of Leisure photographers will increase by 12 percent",
+		    		"startDate":"12/01/2015",
+		    		"endDate":"12/31/2015"
+		    	}]
+				},
+				"customInsights":{
+					"data":[
+					{"point":""},
+					{"point":""},
+					{"point":""},
+					{"point":""}
+					]
+				}
+		         
+		    }
+		}
+    }
+}

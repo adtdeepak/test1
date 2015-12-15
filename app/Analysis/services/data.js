@@ -51,11 +51,12 @@ angular.module('Analysis')
 	
 	this.getSegmentDeepdiveData = function(reqData, userGroup, success, fail) {
 		var requestWS = postRequestWS(
-				'http://jsonstub.com/analysis/segment/deepdive/'+userGroup, 
+				'http://jsonstub.com/analysis/customer/analysis/all',  
 				reqData,
 				success, 
 				fail,
 				function(result) {
+					result = result.data[userGroup];
 					return result;
 				}
 		);
@@ -66,11 +67,12 @@ angular.module('Analysis')
 	
 	this.getCustomerAnalysisData = function(reqData, success, fail) {
 		var requestWS = postRequestWS(
-				'http://jsonstub.com/analysis/customer/analysis', 
+				'http://jsonstub.com/analysis/customer/analysis/all', 
 				reqData,
 				success, 
 				fail,
 				function(result) {
+					result = result.data['allusers'];
 					return result;
 				}
 		);

@@ -106,14 +106,16 @@ angular.module('Tracking')
 
 	this.getBusinessImpactTrendData = function(reqData, success, fail) {
 		var cacheKey = "BITrend" + JSON.stringify(reqData);
-		
+				// alert(reqData.groupBy);
+		 var group = reqData.groupBy;
 		var requestWS = postRequestWS(
-				RequestConstantsFactory['TRAC_URL'].GET_BI_DATE_BY_TIME +"/"+reqData.groupBy, 
+				RequestConstantsFactory['TRAC_URL'].GET_BI_DATE_BY_TIME, 
 				reqData,
 				success, 
 				fail,
 				function(result) {
-					var cData = DataConversionService.toBusinessImpactTrend(result);
+					console.log(result.data[group]);
+					var cData = DataConversionService.toBusinessImpactTrend(result.data[group]);
 					//StorageService.put(cacheKey, cData, StorageService.getCache("business-impactCache"));
 					return cData;
 				}
@@ -183,15 +185,17 @@ angular.module('Tracking')
 
 	this.getEngagementActivityTrendData = function(reqData, success, fail) {
 		var cacheKey = "EATrend" + JSON.stringify(reqData);
+		// alert(reqData.groupBy);
 		var requestWS = postRequestWS(
-				'http://jsonstub.com/track/getEATrend/'+reqData.groupBy, 
+				'http://jsonstub.com/track/getEATrend/All', 
 				reqData,
 				success, 
 				fail,
 				function(result) {
+					console.log(result.data[reqData.groupBy]);
 					//var cData = DataConversionService.toGetEngagementActivityTrendData(result);
 					//StorageService.put(cacheKey, cData, StorageService.getCache("engagement-activityCache"));
-					var cData = DataConversionService.toGetEAScoreTrend(result, "Count Of Users");
+					var cData = DataConversionService.toGetEAScoreTrend(result.data[reqData.groupBy], "Count Of Users");
 					return cData;
 				}
 		);
@@ -293,13 +297,13 @@ angular.module('Tracking')
 		
 		var requestWS = postRequestWS(
 				//RequestConstantsFactory['TRAC_URL'].GET_GRP_ACQUISITION_TREND,
-				'http://jsonstub.com/track/getUGTrend/'+reqData.groupBy,
+				'http://jsonstub.com/track/getUGTrend',
 				reqData,
 				success, 
 				fail,
 				function(result) {
 					//var cData = DataConversionService.toGetUserGroupTrendData(result);
-					var cData = DataConversionService.toUGTrend(result);
+					var cData = DataConversionService.toUGTrend(result.data[reqData.groupBy]);
 					StorageService.put(cacheKey, cData, StorageService.getCache("user-group-engagementCache"));
 					return cData;
 				}

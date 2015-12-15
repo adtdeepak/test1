@@ -1,0 +1,1125 @@
+{
+    "status": "OK",
+    "message": "Request Processed Successfully",
+    "data":{
+        "CostofAcquisition" :{
+            "groupBy": "CostofAcquisition",
+            "yAxisTitle":"",
+            "timeRanges": [
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "weekly",
+                    "reportingInterval": "daily",
+                    "data": [
+                        {            
+                            "startDate": "08-23-2015",
+                            "actual": 14.08,
+                            "target": 13.5
+                        },
+                        {
+                            "startDate": "08-30-2015",
+                            "actual": 14.08,
+                            "target": 13.5
+                        },
+                        {
+                            "startDate": "09-06-2015",
+                            "actual": 14.08,
+                            "target": 13.5
+                        },
+                        {
+                            "startDate": "09-13-2015",
+                            "actual": 14.08,
+                            "target": 13.5
+                        },
+                        {
+                            "startDate": "09-20-2015",
+                            "actual": 14.08,
+                            "target": 13.5
+                        }
+                    ]
+                },
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "monthly",
+                    "reportingInterval": "weekly",
+                    "data": [
+                        {            
+                            "startDate": "7-1-2015",
+                            "actual": 14.08,
+                            "target": 13.5
+                        },
+                        {
+                            "startDate": "8-1-2015",
+                            "actual": 14.08,
+                            "target": 13.5
+                        },
+                        {
+                            "startDate": "9-1-2015",
+                            "actual": 14.08,
+                            "target": 13.5
+                        },
+                        {
+                            "startDate": "10-1-2015",
+                            "actual": 14.08,
+                            "target": 13.5
+                        },
+                        {
+                            "startDate": "11-1-2015",
+                            "actual": 14.08,
+                            "target": 13.5
+                        }
+                    ]
+                },
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "quarterly",
+                    "reportingInterval": "monthly",
+                    "data": [
+                        {          
+                            "startDate": "1-1-2015",
+                            "actual": 14.08,
+                            "target": 13.5
+                        },
+                        {
+                            "startDate": "4-1-2015",
+                            "actual": 14.08,
+                            "target": 13.5
+                        },
+                        {
+                            "startDate": "7-1-2015",
+                            "actual": 14.08,
+                            "target": 13.5
+                        },
+                        {
+                            "startDate": "10-1-2015",
+                            "actual": 14.08,
+                            "target": 13.5
+                        },
+                        {
+                            "startDate": "1-1-2016",
+                            "actual": 14.08,
+                            "target": 13.5
+                        }
+                    ]
+                },
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "yearly",
+                    "reportingInterval": "monthly",
+                    "data": [
+                        {
+                            "startDate": "1-1-2013",
+                            "actual": 9,
+                            "target": 8
+                        },
+                        {
+                            "startDate": "1-1-2014",
+                            "actual": 12.5,
+                            "target": 11
+                        },
+                        {
+                            "startDate": "1-1-2015",
+                            "actual": 14.08,
+                            "target": 13.5
+                        },
+                        {
+                            "startDate": "1-1-2016",
+                            "actual": 14.08,
+                            "target": 14.08
+                        }
+                    ]
+                }
+            ]
+        },
+        "Revenue" : {
+            "groupBy": "Revenue",
+            "yAxisTitle":"",
+            "timeRanges": [
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "weekly",
+                    "reportingInterval": "daily",
+                    "data": [
+                        {
+                            "startDate": "08-23-2015",
+                            "actual": 1627133.25,
+                            "target": 1750000
+                        },
+                        {
+                            "startDate": "08-30-2015",
+                            "actual": 1630253,
+                            "target": 1770000 
+                        },
+                        {
+                            "startDate": "09-06-2015",
+                            "actual": 1648493,
+                            "target": 1800000
+                        },
+                        {
+                            "startDate": "09-13-2015",
+                            "actual": 1740173 ,
+                            "target": 1810000
+                        },
+                        {
+                            "startDate": "09-20-2015",
+                            "actual": 1753293,
+                            "target": 1840000
+                        }
+                    ]
+                },
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "monthly",
+                    "reportingInterval": "weekly",
+                    "data": [
+                        { "startDate": "7-1-2015",
+                            "actual": 6763992.92,
+                            "target": 7000000
+                        },
+                        {
+                            "startDate": "8-1-2015",
+                            "actual": 6310709.363,
+                            "target": 7080000
+                        },
+                        {
+                            "startDate": "9-1-2015",
+                            "actual": 6453850.095,
+                            "target": 7200000
+                        },
+                        {
+                            "startDate": "10-1-2015",
+                            "actual": 7051180.996,
+                            "target": 7240000
+                        },
+                        {
+                            "startDate": "11-1-2015",
+                            "actual": 6923754.057,
+                            "target": 7360000
+                        }
+                    ]
+                },
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "quarterly",
+                    "reportingInterval": "monthly",
+                    "data": [
+                        {
+                          "startDate": "1-1-2015",
+                            "actual": 20995434.024456,
+                            "target": 21000000
+                        },
+                        {
+                            "startDate": "4-1-2015",
+                            "actual": 19720471.891304,
+                            "target": 21240000
+                        },
+                        {
+                            "startDate": "7-1-2015",
+                            "actual": 19251834.833385,
+                            "target": 21600000
+                        },
+                        {
+                            "startDate": "10-1-2015",
+                            "actual": 21280464.245928,
+                            "target": 21720000
+                        },
+                        {
+                            "startDate": "1-1-2016",
+                            "actual": 20217361.84644,
+                            "target": 22080000
+                        }
+                    ]
+                },
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "yearly",
+                    "reportingInterval": "monthly",
+                    "data": [
+                        { 
+                            "startDate": "1-1-2013",
+                            "actual": 86774128.8230767,
+                            "target": 84000000
+                        },
+                        {
+                            "startDate": "1-1-2014",
+                            "actual": 79894367.7867377,
+                            "target": 84960000
+                        },
+                        {
+                            "startDate": "1-1-2015",
+                            "actual": 80780698.9608835,
+                            "target": 86400000
+                        },
+                        {
+                            "startDate": "1-1-2016",
+                            "actual": 81078568.7769857,
+                            "target": 86880000
+                        },
+                        {
+                            "startDate": "1-1-2016",
+                            "actual": 80465100.1488312,
+                            "target": 88320000
+                        }
+                    ]
+                }
+            ]    
+        },
+        "freeToPaidConversion":{
+            "groupBy": "freeToPaidConversion",
+            "yAxisTitle":"",
+            "timeRanges": [
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "weekly",
+                    "reportingInterval": "daily",
+                    "data": [
+                        {          
+                            "startDate": "08-23-2015",
+                            "actual": 6.5,
+                            "target": 5.9
+                        },
+                        {
+                            "startDate": "08-30-2015",
+                            "actual": 6.3,
+                            "target": 6.2
+                        },
+                        {
+                            "startDate": "09-06-2015",
+                            "actual": 6.4,
+                            "target": 6.5
+                        },
+                        {
+                            "startDate": "09-13-2015",
+                            "actual": 6.2,
+                            "target": 6.5
+                        },
+                        {
+                            "startDate": "09-20-2015",
+                            "actual": 6.0,
+                            "target": 6.5
+                        }
+                    ]
+                },
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "monthly",
+                    "reportingInterval": "monthly",
+                    "data": [
+                        {          
+                            "startDate": "7-1-2015",
+                            "actual": 6.0,
+                            "target": 5.9
+                        },
+                        {
+                            "startDate": "8-1-2015",
+                            "actual": 5.9,
+                            "target": 6.2
+                        },
+                        {
+                            "startDate": "9-1-2015",
+                            "actual": 5.8,
+                            "target": 6.5
+                        },
+                        {
+                            "startDate": "10-1-2015",
+                            "actual": 5.6,
+                            "target": 6.5
+                        },
+                        {
+                            "startDate": "11-1-2015",
+                            "actual": 5.3,
+                            "target": 6.5
+                        }
+                    ]
+                },
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "quarterly",
+                    "reportingInterval": "quarterly",
+                    "data": [
+                        {          
+                            "startDate": "1-1-2015",
+                            "actual": 6.4,
+                            "target": 5.9
+                        },
+                        {
+                            "startDate": "4-1-2015",
+                            "actual": 6.2,
+                            "target": 6.2
+                        },
+                        {
+                            "startDate": "7-1-2015",
+                            "actual": 6.4,
+                            "target": 6.5
+                        },
+                        {
+                            "startDate": "10-1-2015",
+                            "actual": 6.0,
+                            "target":  6.5
+                        },
+                        {
+                            "startDate": "1-1-2016",
+                            "actual": 5.8,
+                            "target": 6.5
+                        }
+                    ]
+                },
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "yearly",
+                    "reportingInterval": "monthly",
+                    "data": [
+                        {   
+                            "startDate": "1-1-2013",
+                            "actual": 5.5,
+                            "target": 5.9
+                        },
+                        {
+                            "startDate": "1-1-2014",
+                            "actual": 5.4,
+                            "target": 6.2
+                        },
+                        {
+                            "startDate": "1-1-2015",
+                            "actual": 5.3,
+                            "target": 6.5
+                        },
+                        {
+                            "startDate": "1-1-2016",
+                            "actual": 5.2,
+                            "target": 6.5
+                        },
+                        {
+                            "startDate": "1-1-2016",
+                            "actual": 5.0,
+                            "target": 6.5
+                        }
+                    ]
+                }
+            ]
+        },
+        "Registrations":{
+            "groupBy": "Registrations",
+            "yAxisTitle":"Count of users",
+            "timeRanges": [
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "weekly",
+                    "reportingInterval": "daily",
+                    "data": [
+                        {
+                            "startDate": "08-23-2015",
+                            "actual":  95000,
+                            "target": 92000
+                        },
+                        {
+                            "startDate": "08-30-2015",
+                            "actual":  96171,
+                            "target":  96000 
+
+                        },
+                        {
+                            "startDate": "09-06-2015",
+                            "actual":  96534,
+                            "target":  100000 
+
+                        },
+                        {
+                            "startDate": "09-13-2015",
+                            "actual":  96700,
+                            "target":  110000 
+
+                        },
+                        {
+                            "startDate": "09-20-2015",
+                            "actual":  96750,
+                            "target":  121000 
+
+                        }
+                    ]
+                },
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "monthly",
+                    "reportingInterval": "weekly",
+                    "data": [
+                        {
+                            "startDate": "7-1-2015",
+                            "actual":  364415,
+                            "target":  363000 
+
+                        },
+                        {
+                            "startDate": "8-1-2015",
+                            "actual":  356362,
+                            "target":  381000 
+
+                        },
+                        {
+                            "startDate": "9-1-2015",
+                            "actual":  383252,
+                            "target":  400000 
+
+                        },
+                        {
+                            "startDate": "11-1-2015",
+                            "actual":  383254,
+                            "target":  440000 
+
+                        },
+                        {
+                            "startDate": "11-1-2015",
+                            "actual":  383341,
+                            "target":  484000 
+
+                        }
+                    ]
+                },
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "quarterly",
+                    "reportingInterval": "monthly",
+                    "data": [
+                        {          
+                            "startDate": "1-1-2015",
+                            "actual":  1275349,
+                            "target":  1089000 
+
+                        },
+                        {
+                            "startDate": "4-1-2015",
+                            "actual":  1242926,
+                            "target":  1143000 
+
+                        },
+                        {
+                            "startDate": "7-1-2015",
+                            "actual":  1124029,
+                            "target":  1200000 
+
+                        },
+                        {
+                            "startDate": "10-1-2015",
+                            "actual":  1005194,
+                            "target":  1320000 
+
+                        },
+                        {
+                            "startDate": "1-1-2016",
+                            "actual":  970465,
+                            "target":  1452000 
+
+                        }
+                    ]
+                },
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "yearly",
+                    "reportingInterval": "monthly",
+                    "data": [
+                        {
+                            "startDate": "1-1-2013",
+                            "actual":  5778498,
+                            "target":  4355000 
+
+                        },
+                        {
+                            "startDate": "1-1-2014",
+                            "actual":  4858264,
+                            "target":  4572000 
+
+                        },
+                        {
+                            "startDate": "1-1-2015",
+                            "actual":  4456493,
+                            "target":  4800000 
+
+                        },
+                        {
+                            "startDate": "1-1-2016",
+                            "actual":  4235402,
+                            "target":  5280000 
+
+                        },
+                        {
+                            "startDate": "1-1-2017",
+                            "actual":  3529462,
+                            "target":   5808000 
+
+                        }
+                    ]
+                }
+            ]
+        },
+        "NewPaidUsers":{
+             "groupBy": "NewPaidUsers",
+            "yAxisTitle":"Count of users",
+            "timeRanges": [
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "weekly",
+                    "reportingInterval": "daily",
+                    "data": [
+                        {          
+                            "startDate": "08-23-2015",
+                            "actual":  4370,
+                            "target": 5000
+                        },
+                        {
+                            "startDate": "08-30-2015",
+                            "actual":  6520,
+                            "target":  6000 
+
+                        },
+                        {
+                            "startDate": "09-06-2015",
+                            "actual":  6217,
+                            "target":  6500 
+
+                        },
+                        {
+                            "startDate": "09-13-2015",
+                            "actual":  5580,
+                            "target":  7000 
+
+                        },
+                        {
+                            "startDate": "09-20-2015",
+                            "actual":  6705,
+                            "target":  7500 
+
+                        }
+                    ]
+                },
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "monthly",
+                    "reportingInterval": "monthly",
+                    "data": [
+                        {       
+                            "startDate": "7-1-2015",
+                            "actual":  21464,
+                            "target": 20000
+                        },
+                        {
+                            "startDate": "8-1-2015",
+                            "actual":  17961,
+                            "target":  24000 
+
+                        },
+                        {
+                            "startDate": "9-1-2015",
+                            "actual":  22382,
+                            "target":  26000 
+
+                        },
+                        {
+                            "startDate": "10-1-2015",
+                            "actual":  24567,
+                            "target":  28000 
+
+                        },
+                        {
+                            "startDate": "11-1-2015",
+                            "actual":  25186,
+                            "target":  30000 
+
+                        }
+                    ]
+                },
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "quarterly",
+                    "reportingInterval": "quarterly",
+                    "data": [
+                        {         
+                            "startDate": "1-1-2015",
+                            "actual":  59304,
+                            "target":  60000 
+
+                        },
+                        {
+                            "startDate": "4-1-2015",
+                            "actual":  64881,
+                            "target":  72000 
+
+                        },
+                        {
+                            "startDate": "7-1-2015",
+                            "actual":  72387,
+                            "target":  78000 
+
+                        },
+                        {
+                            "startDate": "10-1-2015",
+                            "actual":  65639,
+                            "target":  84000 
+
+                        },
+                        {
+                            "startDate": "1-1-2016",
+                            "actual":  58034,
+                            "target": 90000
+                        }
+                    ]
+                },
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "yearly",
+                    "reportingInterval": "monthly",
+                    "data": [
+                        {
+                            "startDate": "1-1-2013",
+                            "actual":  298170,
+                            "target":  240000
+
+                        },
+                        {
+                            "startDate": "1-1-2014",
+                            "actual":  228338,
+                            "target":  288000 
+
+                        },
+                        {
+                            "startDate": "1-1-2015",
+                            "actual":  235748,
+                            "target":  312000 
+
+                        },
+                        {
+                            "startDate": "1-1-2016",
+                            "actual":  203723,
+                            "target":  336000 
+
+                        },
+                        {
+                            "startDate": "1-1-2016",
+                            "actual":   240003,
+                            "target":   360000 
+
+                        }
+                    ]
+                }
+            ]
+        },
+        "ARPU":{
+            "groupBy": "ARPU",
+            "yAxisTitle":"",
+            "timeRanges": [
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "weekly",
+                    "reportingInterval": "daily",
+                    "data": [
+                        {           
+                            "startDate": "08-23-2015",
+                            "actual": 80,
+                            "target": 80
+                        },
+                        {
+                            "startDate": "08-30-2015",
+                            "actual": 80,
+                            "target": 80
+                        },
+                        {
+                            "startDate": "09-06-2015",
+                            "actual": 80,
+                            "target": 80
+                        },
+                        {
+                            "startDate": "09-13-2015",
+                            "actual": 80,
+                            "target": 80
+                        },
+                        {
+                            "startDate": "09-20-2015",
+                            "actual": 80,
+                            "target": 80
+                        }
+                    ]
+                },
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "monthly",
+                    "reportingInterval": "weekly",
+                    "data": [
+                        {         
+                            "startDate": "7-1-2015",
+                            "actual": 79,
+                            "target": 79
+                        },
+                        {
+                            "startDate": "8-1-2015",
+                            "actual": 80,
+                            "target": 80
+                        },
+                        {
+                            "startDate": "9-1-2015",
+                            "actual": 80,
+                            "target": 80
+                        },
+                        {
+                            "startDate": "10-1-2015",
+                            "actual": 80,
+                            "target": 80
+                        },
+                        {
+                            "startDate": "11-1-2015",
+                            "actual": 81,
+                            "target": 81
+                        }
+                    ]
+                },
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "quarterly",
+                    "reportingInterval": "monthly",
+                    "data": [
+                        {
+                            "startDate": "1-1-2015",
+                            "actual": 78,
+                            "target": 78
+                        },
+                        {
+                            "startDate": "4-1-2015",
+                            "actual": 80,
+                            "target": 80
+                        },
+                        {
+                            "startDate": "7-1-2015",
+                            "actual": 80,
+                            "target": 80
+                        },
+                        {
+                            "startDate": "10-1-2015",
+                            "actual": 82,
+                            "target": 82
+                        },
+                        {
+                            "startDate": "1-1-2016",
+                            "actual": 82,
+                            "target": 82
+                        }
+                    ]
+                },
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "yearly",
+                    "reportingInterval": "monthly",
+                    "data": [
+                        {
+                            "startDate": "1-1-2013",
+                            "actual": 70,
+                            "target": 70
+                        },
+                        {
+                            "startDate": "1-1-2014",
+                            "actual": 76,
+                            "target": 76
+                        },
+                        {
+                            "startDate": "1-1-2015",
+                            "actual": 80,
+                            "target": 80
+                        },
+                        {
+                            "startDate": "1-1-2016",
+                            "actual": 90,
+                            "target": 90
+                        }
+                    ]
+                }
+            ]
+        },
+        "NewRevenue":{
+            "groupBy": "NewRevenue",
+            "yAxisTitle":"",
+            "timeRanges": [
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "weekly",
+                    "reportingInterval": "daily",
+                    "data": [
+                        {              
+                            "startDate": "08-23-2015",
+                            "actual": 385360,
+                            "target": 350000
+                        },
+                        {
+                            "startDate": "08-30-2015",
+                            "actual": 373120,
+                            "target": 380000
+                        },
+                        {
+                            "startDate": "09-06-2015",
+                            "actual": 388240,
+                            "target": 400000
+                        },
+                        {
+                            "startDate": "09-13-2015",
+                            "actual": 391680,
+                            "target": 450000
+                        },
+                        {
+                            "startDate": "09-20-2015",
+                            "actual": 413120,
+                            "target": 480000
+                        }
+                    ]
+                },
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "monthly",
+                    "reportingInterval": "monthly",
+                    "data": [
+                        {       
+                            "startDate": "7-1-2015",
+                            "actual": 1400616,
+                            "target": 3326240
+                        },
+                        {
+                            "startDate": "8-1-2015",
+                            "actual": 1462709,
+                            "target": 2925624
+                        },
+                        {
+                            "startDate": "9-1-2015",
+                            "actual": 776560,
+                            "target": 2462915
+                        },
+                        {
+                            "startDate": "10-1-2015",
+                            "actual": 1598177,
+                            "target": 2686355
+                        },
+                        {
+                            "startDate": "11-1-2015",
+                            "actual": 1740146,
+                            "target": 2088178
+                        }
+                    ]
+                },
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "quarterly",
+                    "reportingInterval": "quarterly",
+                    "data": [
+                        {          
+                            "startDate": "1-1-2015",
+                            "actual": 3787908,
+                            "target": 4978721
+                        },
+                        {
+                            "startDate": "4-1-2015",
+                            "actual": 4209019,
+                            "target": 6190813
+                        },
+                        {
+                            "startDate": "7-1-2015",
+                            "actual": 2329680,
+                            "target": 6981794
+                        },
+                        {
+                            "startDate": "10-1-2015",
+                            "actual": 5010754,
+                            "target": 9652114
+                        },
+                        {
+                            "startDate": "1-1-2016",
+                            "actual": 5386519,
+                            "target": 9641360
+                        }
+                    ]
+                },
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "yearly",
+                    "reportingInterval": "monthly",
+                    "data": [
+                        {
+                            "startDate": "1-1-2013",
+                            "actual": 9604137,
+                            "target": 26000000
+                        },
+                        {
+                            "startDate": "1-1-2014",
+                            "actual": 15161544,
+                            "target": 24914884
+                        },
+                        {
+                            "startDate": "1-1-2015",
+                            "actual": 11778000,
+                            "target": 27667000
+                        },
+                        {
+                            "startDate": "1-1-2016",
+                            "actual": 36848840,
+                            "target": 43317050
+                        }
+                    ]
+                }
+            ]
+        },
+        "RecurringRevenue":{
+            "groupBy": "RecurringRevenue",
+            "yAxisTitle":"",
+            "timeRanges": [
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "weekly",
+                    "reportingInterval": "daily",
+                    "data": [
+                        {            
+                            "startDate": "08-23-2015",
+                            "actual": 418439,
+                            "target": 418440
+                        },
+                        {
+                            "startDate": "08-30-2015",
+                            "actual": 803800,
+                            "target": 803800
+                        },
+                        {
+                            "startDate": "09-06-2015",
+                            "actual": 1176920,
+                            "target": 1176920
+                        },
+                        {
+                            "startDate": "09-13-2015",
+                            "actual": 1565160,
+                            "target": 1565160
+                        },
+                        {
+                            "startDate": "09-20-2015",
+                            "actual": 1956840,
+                            "target": 1956840
+                        }
+                    ]
+                },
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "monthly",
+                    "reportingInterval": "monthly",
+                    "data": [
+                        {          
+                            "startDate": "7-1-2015",
+                            "actual": 1673760,
+                            "target": 1673760
+                        },
+                        {
+                            "startDate": "8-1-2015",
+                            "actual": 3074376,
+                            "target": 3074376
+                        },
+                        {
+                            "startDate": "9-1-2015",
+                            "actual": 4537085,
+                            "target": 4537085
+                        },
+                        {
+                            "startDate": "10-1-2015",
+                            "actual": 5313645,
+                            "target": 5313645
+                        },
+                        {
+                            "startDate": "11-1-2015",
+                            "actual": 6911822,
+                            "target": 6911822
+                        }
+                    ]
+                },
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "quarterly",
+                    "reportingInterval": "quarterly",
+                    "data": [
+                        {            
+                            "startDate": "1-1-2015",
+                            "actual": 5021279,
+                            "target": 5021279
+                        },
+                        {
+                            "startDate": "4-1-2015",
+                            "actual": 8809187,
+                            "target": 8809187
+                        },
+                        {
+                            "startDate": "7-1-2015",
+                            "actual": 13018206,
+                            "target": 13018206
+                        },
+                        {
+                            "startDate": "10-1-2015",
+                            "actual": 15347886,
+                            "target": 15347886
+                        },
+                        {
+                            "startDate": "1-1-2016",
+                            "actual": 20358640,
+                            "target": 20358640
+                        }
+                    ]
+                },
+                {
+                    "periodFrom": "11012014",
+                    "periodTo": "11302014",
+                    "periodName": "yearly",
+                    "reportingInterval": "monthly",
+                    "data": [
+                        {
+                            "startDate": "1-1-2013",
+                            "actual": 11000000,
+                            "target": 11000000
+                        },
+                        {
+                            "startDate": "1-1-2014",
+                            "actual": 20085116,
+                            "target": 20085116
+                        },
+                        {
+                            "startDate": "1-1-2015",
+                            "actual": 30333000,
+                            "target": 30333000
+                        },
+                        {
+                            "startDate": "1-1-2016",
+                            "actual": 36682950,
+                            "target": 36682950
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
