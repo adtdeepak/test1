@@ -11,7 +11,7 @@
 <a style="color:#666;" href="home.htm">Home</a>
 </li>
 <li><a style="color:#666;" href="#campaign-index">Campaign Options</a></li>
-    <li class="active">Wishlist</li>
+    <li class="active">Saved Campaigns</li>
 </ul>
 </div>
     <div class="col-md-4-big">
@@ -78,6 +78,7 @@
 		<div class="row nopadding" style="margin-right: 23px;border:1px solid grey;">
 			<div class="collapseDiv">
 				<div class="panel-heading"> Best Campaign Options for {{groupHeading}}
+					<span style="float:right;color:#fff;cursor:pointer" ng-click="runall()">Run All</span>
 				</div>
 			</div>
 			<div class="panel-heading" ng-if="!isWishlistThere" style="text-align: center;">
@@ -106,9 +107,9 @@
 				      </tr>
 				    </thead>
 				</table>
-					<div class="pull-right" style="margin: 10px 10px 10px 0px;text-decoration: underline;">
+					<!-- <div class="pull-right" style="margin: 10px 10px 10px 0px;text-decoration: underline;">
 						<a href="#/custom-filter">Custom decision option</a>
-					</div>
+					</div> -->
 			</div>
 		</div>
 		<!-- <div id="demo">

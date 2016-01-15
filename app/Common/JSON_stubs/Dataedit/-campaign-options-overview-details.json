@@ -1915,8 +1915,8 @@
 								"color":"#1b6395"
 							},
 							"targetedUsers":[
-							{"size": "456,049" ,"male":"55%","female":"45%","activeUsers":"249,057","appUsersPercentage":"46%","appUsers": "209,782" ,
-							"name":"Professional Music Composers","imageClass":"musicians-image",
+							{"size": "8,19,097" ,"male":"55%","female":"45%","activeUsers":"349,057","appUsersPercentage":"46%","appUsers": "209,782" ,
+							"name":"Musicians - Professional Artists","imageClass":"musicians-image",
 							"gender":{
 						        		"name":["male","female"],
 						        		"values":[55, 45],
@@ -1981,8 +1981,8 @@
 								"color":"#1b6395"
 							},
 							"targetedUsers":[
-							{"size": "456,049" ,"male":"55%","female":"45%","activeUsers":"249,057","appUsersPercentage":"46%","appUsers": "209,782" ,
-							"name":"Professional Music Composers","imageClass":"musicians-image",
+							{"size": "8,19,097" ,"male":"55%","female":"45%","activeUsers":"349,057","appUsersPercentage":"46%","appUsers": "209,782" ,
+							"name":"Musicians - Professional Artists","imageClass":"musicians-image",
 							"gender":{
 						        		"name":["male","female"],
 						        		"values":[55, 45],
@@ -2014,15 +2014,15 @@
 								"color":"#1b6395"
 							},
 							"targetedUsers":[
-							{"size": "456,049" ,"male":"55%","female":"45%","activeUsers":"249,057","appUsersPercentage":"46%","appUsers": "209,782" ,
-							"name":"Professional Music Composers","imageClass":"musicians-image",
+							{"size": "8,19,097" ,"male":"55%","female":"45%","activeUsers":"349,057","appUsersPercentage":"46%","appUsers": "209,782" ,
+							"name":"Musicians - Professional Artists","imageClass":"musicians-image",
 							"gender":{
 						        		"name":["male","female"],
 						        		"values":[55, 45],
 						        		"color":["#F5874F", "#ADADAD"]
 						        	}
         					}],
-							"incrementalImpact":[{"revenue":"53,743","paidUsers":672,"F2PconversionRate":"5%","EGScore":"8%"}],
+							"incrementalImpact":[{"revenue":"59,714","paidUsers":747,"F2PconversionRate":"5%","EGScore":"8%"}],
 							"reasons":["Additional 12% of Professional Composers (31500 users) are expected to play music as per network speed", "Average engagement of Professional Composers who use the 'play as per network' speed function is 26% percent points higher than other users"]
 						},
 						"tableData":{
@@ -2311,7 +2311,7 @@
 								"color":"#1b6395"
 							},
 							"targetedUsers":[
-                            {"size": "31,265" ,"male":"61%","female":"39%","activeUsers":"35%","appUsersPercentage":"15%","appUsers": "4743" ,
+                            {"size": "2,19,016" ,"male":"36%","female":"64%","activeUsers":"54,198","appUsersPercentage":"15%","appUsers": "47,430" ,
                             "name":"School and College Teachers","imageClass":"project-manager-image",
                                 "gender":{
                                             "name":["male","female"],
@@ -2319,7 +2319,7 @@
                                             "color":["#F5874F", "#ADADAD"]
                                         }
                             }],
-							"incrementalImpact":[{"revenue":"31,118","paidUsers":401,"F2PconversionRate":"4%","EGScore":"24%"}],
+							"incrementalImpact":[{"revenue":"115,846","paidUsers":1449,"F2PconversionRate":"9.7%","EGScore":"19%"}],
                             "reasons":["Additional 15% Bankers are expected to adopt Data Security features", "Adoption of Data Security leads to additional 61% activity and in-turn 24% overall increase in conversion for the UG"]
                         },
                         "tableData":{
@@ -2410,15 +2410,15 @@
 								"color":"#1b6395"
 							},
 							"targetedUsers":[
-                            {"size": "31,265" ,"male":"61%","female":"39%","activeUsers":"35%","appUsersPercentage":"15%","appUsers": "4743" ,
-                            "name":"C-level executives","imageClass":"project-manager-image",
+                            {"size": "2,19,061" ,"male":"36%","female":"64%","activeUsers":"54,198","appUsersPercentage":"15%","appUsers": "47430" ,
+                            "name":"School and College Teachers","imageClass":"project-manager-image",
                                 "gender":{
                                             "name":["male","female"],
                                             "values":[61, 39],
                                             "color":["#F5874F", "#ADADAD"]
                                         }
                             }],
-							"incrementalImpact":[{"revenue":"31,118","paidUsers":401,"F2PconversionRate":"4%","EGScore":"24%"}],
+							"incrementalImpact":[{"revenue":"93,737","paidUsers":1210,"F2PconversionRate":"8.1%","EGScore":"13%"}],
                             "reasons":["Additional 15% Bankers are expected to adopt Data Security features", "Adoption of Data Security leads to additional 61% activity and in-turn 24% overall increase in conversion for the UG"]
                         },
                         "tableData":{
@@ -2641,15 +2641,15 @@
 								"color":"#1b6395"
 							},
 							"targetedUsers":[
-                            {"size": "31,265" ,"male":"61%","female":"39%","activeUsers":"35%","appUsersPercentage":"15%","appUsers": "4743" ,
-                            "name":"C-level executives","imageClass":"project-manager-image",
+                            {"size": "1,03,761" ,"male":"41%","female":"59%","activeUsers":"23,765","appUsersPercentage":"26%","appUsers": "35,647" ,
+                            "name":"Creative Agencies","imageClass":"project-manager-image",
                                 "gender":{
                                             "name":["male","female"],
                                             "values":[61, 39],
                                             "color":["#F5874F", "#ADADAD"]
                                         }
                             }],
-							"incrementalImpact":[{"revenue":"31,118","paidUsers":401,"F2PconversionRate":"4%","EGScore":"24%"}],
+							"incrementalImpact":[{"revenue":"50,160","paidUsers":627,"F2PconversionRate":"4.2%","EGScore":"5%"}],
                             "reasons":["Additional 15% Bankers are expected to adopt Data Security features", "Adoption of Data Security leads to additional 61% activity and in-turn 24% overall increase in conversion for the UG"]
                         },
                         "tableData":{
@@ -3732,14 +3732,14 @@
 							},
 							"targetedUsers":[
 							{"size": "456,384" ,"male":"42%","female":"58%","activeUsers":"261,905","appUsersPercentage":"32%","appUsers": "145,872" ,
-							"name":"Budding Artists","imageClass":"musicians-image",
+							"name":"Musicians - Budding Artists","imageClass":"musicians-image",
 							"gender":{
 						        		"name":["male","female"],
 						        		"values":[42, 58],
 						        		"color":["#F5874F", "#ADADAD"]
 						        	}
         					}],
-							"incrementalImpact":[{"revenue":"107,486","paidUsers":1344,"F2PconversionRate":"9%","EGScore":"17%"}],
+							"incrementalImpact":[{"revenue":"1,07,486","paidUsers":1344,"F2PconversionRate":"9%","EGScore":"17%"}],
 							"reasons":["Additional 21% of Budding Artists (55000 users) are expected to start sharing/streaming music using phone", "Average engagement of Budding Artists who share and stream using phone is 37% percent points higher than non-phone users"]
 						},
 						"tableData":{
@@ -3797,15 +3797,15 @@
 								"color":"#1b6395"
 							},
 							"targetedUsers":[
-                            {"size": "31,265" ,"male":"61%","female":"39%","activeUsers":"35%","appUsersPercentage":"15%","appUsers": "4743" ,
-                            "name":"C-level executives","imageClass":"project-manager-image",
+                            {"size": "2,19,016" ,"male":"64%","female":"36%","activeUsers":"54,198","appUsersPercentage":"15%","appUsers": "47430" ,
+                            "name":"School and College Teachers","imageClass":"project-manager-image",
                                 "gender":{
                                             "name":["male","female"],
                                             "values":[61, 39],
                                             "color":["#F5874F", "#ADADAD"]
                                         }
                             }],
-							"incrementalImpact":[{"revenue":"31,118","paidUsers":401,"F2PconversionRate":"4%","EGScore":"24%"}],
+							"incrementalImpact":[{"revenue":"96,737","paidUsers":1210,"F2PconversionRate":"8.1%","EGScore":"13%"}],
                             "reasons":["Additional 15% Bankers are expected to adopt Data Security features", "Adoption of Data Security leads to additional 61% activity and in-turn 24% overall increase in conversion for the UG"]
                         },
                         "tableData":{

@@ -1,12 +1,13 @@
 angular.module('DecisionWorkbench')
 
-.controller( "wishlistController", function($scope, DataService,$timeout, CustomService, ChartOptionsService, $rootScope, UtilitiesService, chartsService, $location, DataConversionService ) {	
+.controller( "wishlistController", function($route,$scope, DataService,$timeout, CustomService, ChartOptionsService, $rootScope, UtilitiesService, chartsService, $location, DataConversionService ) {	
 	
 	$scope.selectedGroup = [{"key":"All Users","selected":false,"index":0},{"key":"Office Goers","selected": false,"index":1},{"key":"Teachers","selected": false,"index":2},
 	                        {"key":"Musicians","selected": false,"index":3},{"key":"Creative Agencies","selected": false,"index":4},{"key":"Family And Friends","selected": false,"index":5}];
 
 	var initialExpand  = true;
 	var urlSelectedRowId = '';
+	var totaldata ;
 	function setSelectedAsAllUsers(){
 		var urlIndex = $location.search();
 		$.each($scope.selectedGroup, function(key, value){
@@ -19,7 +20,7 @@ angular.module('DecisionWorkbench')
 		$scope.selectedRowId = urlIndex.selectedId;
 		urlSelectedRowId = urlIndex.selectedId;
 		$scope.addData($scope.overallResponse["All Users"]);
-		
+		totaldata=$scope.overallResponse["All Users"];
 	}
 	
 	$scope.wishlistSelected = function(attribute, isSelected){
@@ -45,9 +46,11 @@ angular.module('DecisionWorkbench')
 			}
 		})
 		localStorage.setItem('OverviewDetails', JSON.stringify($scope.fullResponse));
+		 $route.reload();	
 	}
 	
 	$scope.executeSelected = function(attribute, isSelected){
+		// alert(isSelected);
 		var selectedGroup;
 		$.each($scope.overallResponse, function(key, value){
 			if(key == "All Users"){
@@ -70,6 +73,7 @@ angular.module('DecisionWorkbench')
 			}
 		})
 		localStorage.setItem('OverviewDetails', JSON.stringify($scope.fullResponse));
+		
 	}
 	
 	$scope.broadcastselectedGroup = function (selectedGroup, index) {
@@ -81,6 +85,7 @@ angular.module('DecisionWorkbench')
 		});
 		$scope.groupHeading = selectedGroup;
 		$scope.addData($scope.overallResponse[selectedGroup]);
+		totaldata = $scope.overallResponse[selectedGroup];
 	};
 	
 	$scope.expand = function(item)
@@ -230,7 +235,7 @@ angular.module('DecisionWorkbench')
 				if(obj.wishlist == "yes"){
 					var executeSection = "<div class='execute-unselected'></div>";
 					if(obj.selected == "yes"){
-						var executeSection = "<div class='execute-unselected execute-selected'></div>";
+						var executeSection = "<a href='resources/selected_campaign_info.xlsx' download><div class='execute-unselected execute-selected'></div></a>";
 					}
 					$scope.options.aaData.push([obj.id, obj.userGroup, obj.featurePromoted,  obj.description, obj.impact,
 					   "<div class='wishlist-unselected wishlist-selected'></div>", executeSection]);
@@ -244,7 +249,26 @@ angular.module('DecisionWorkbench')
 			$scope.fail(errorConstants.DATA_ERR);
 		}
 	};
-	
+	$scope.runall =function(){
+		$.each(totaldata, function(key, obj) {
+
+				if(obj.wishlist == "yes"){
+					// var executeSection = "<div class='execute-unselected'></div>";
+					// if(obj.selected == "yes"){
+					// 	var executeSection = "<a href='resources/selected_campaign_info.xlsx' download><div class='execute-unselected execute-selected'></div></a>";
+					// }
+					// $scope.options.aaData.push([obj.id, obj.userGroup, obj.featurePromoted,  obj.description, obj.impact,
+					//    "<div class='wishlist-unselected wishlist-selected'></div>", executeSection]);
+						window.open('resources/selected_campaign_info.xlsx');
+						$scope.executeSelected(obj.id,'yes');
+						$(".execute-unselected").addClass('execute-selected');
+				}
+					
+				})
+	    // window.open('resources/selected_campaign_info.xlsx');
+	    // window.open('resources/selected_campaign_info.xlsx');
+	    // window.open('resources/selected_campaign_info.xlsx');
+	}
 	function getAllUserTableData() {
 		if(localStorage.getItem('OverviewDetails')){
 			$scope.overallDataSuccess(JSON.parse(localStorage.getItem('OverviewDetails'))); 

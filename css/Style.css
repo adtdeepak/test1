@@ -8858,6 +8858,14 @@ div#progressBar {
     margin-right: 50px;
     margin-left: 10px;
 }
+.wishlist{
+	font-size: 20px;
+    height: 44px;
+    background-repeat: no-repeat;
+    background-position: 0px -90px;
+    margin-right: 50px;
+    margin-left: 20px;
+}
 .wishlist-unselected:hover{
 	background: url('../images/execute-icon.png');
     height: 44px;
